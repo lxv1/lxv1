@@ -1,0 +1,1324 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="1894.7">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 16.0px Helvetica; color: #000000; -webkit-text-stroke: #000000}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; color: #000000; -webkit-text-stroke: #000000}
+    p.p3 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 17.0px Helvetica; color: #000000; -webkit-text-stroke: #000000}
+    p.p4 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; color: #000000; -webkit-text-stroke: #000000}
+    p.p5 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; color: #00000b; -webkit-text-stroke: #00000b}
+    p.p6 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; color: #000000; -webkit-text-stroke: #000000; min-height: 18.0px}
+    p.p7 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 22.0px Times; color: #000000; -webkit-text-stroke: #000000}
+    p.p8 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 12.0px Times; color: #00000b; -webkit-text-stroke: #00000b}
+    p.p9 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; color: #0000e9; -webkit-text-stroke: #00000b}
+    p.p10 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 12.0px Times; color: #000000; -webkit-text-stroke: #000000}
+    p.p11 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; color: #0000e9; -webkit-text-stroke: #000000}
+    p.p12 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; color: #0000e9; -webkit-text-stroke: #00000b; min-height: 14.0px}
+    p.p13 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 12.0px Times; color: #000000; -webkit-text-stroke: #000000; min-height: 14.0px}
+    p.p14 {margin: 0.0px 0.0px 1.3px 0.0px; font: 12.0px Times; color: #000000; -webkit-text-stroke: #000000}
+    p.p15 {margin: 0.0px 0.0px 1.3px 0.0px; font: 12.0px Times; color: #0b0b0b; -webkit-text-stroke: #09000b}
+    p.p16 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; color: #0b000b; -webkit-text-stroke: #0a000b}
+    p.p17 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; color: #0b0b0b; -webkit-text-stroke: #0b0b0b}
+    p.p18 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; color: #00000b; -webkit-text-stroke: #000000}
+    p.p19 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; color: #0000e9; -webkit-text-stroke: #0a000b}
+    p.p20 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; color: #0a003f; -webkit-text-stroke: #0a003f}
+    p.p21 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; color: #141516; -webkit-text-stroke: #141516}
+    p.p22 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; color: #101111; -webkit-text-stroke: #101111}
+    p.p24 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 24.0px Times; color: #000000; -webkit-text-stroke: #000000}
+    p.p25 {margin: 0.0px 0.0px 0.0px 0.0px; font: 20.0px Arial; color: #0000e9; -webkit-text-stroke: #0a000b}
+    p.p26 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Arial; color: #0000e9; -webkit-text-stroke: #0b0b0b; min-height: 16.0px}
+    p.p27 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 20.0px Times; color: #000000; -webkit-text-stroke: #000000}
+    p.p28 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; color: #0000af; -webkit-text-stroke: #00000b}
+    p.p29 {margin: 0.0px 0.0px 0.0px 0.0px; font: 20.0px Arial; color: #0a0030; -webkit-text-stroke: #0a0030; background-color: #ffffff}
+    p.p30 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Arial; color: #0000e9; -webkit-text-stroke: #0b0b0b}
+    p.p31 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Arial; color: #0a0030; -webkit-text-stroke: #0a0030}
+    p.p32 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Arial; color: #0e0e0e; -webkit-text-stroke: #0e0e0e; background-color: #ffffff}
+    p.p33 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Arial; color: #0e0e0e; -webkit-text-stroke: #0e0e0e}
+    p.p34 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; color: #000000; -webkit-text-stroke: #000000}
+    p.p35 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; color: #00000b; -webkit-text-stroke: #000000}
+    p.p36 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Arial; color: #0b0b0b; -webkit-text-stroke: #0b0b0b}
+    p.p37 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Arial; color: #0a0015; -webkit-text-stroke: #0a0015}
+    p.p38 {margin: 0.0px 0.0px 0.0px 0.0px; font: 10.0px Arial; color: #0a001b; -webkit-text-stroke: #0a001b}
+    p.p39 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; color: #0000e9; -webkit-text-stroke: #0a001b; background-color: #ffffff}
+    p.p40 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; color: #0c0c0c; -webkit-text-stroke: #0c0c0c}
+    p.p41 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; color: #0a001b; -webkit-text-stroke: #0a001b}
+    p.p42 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; color: #0b0b0b; -webkit-text-stroke: #0b0b0b; background-color: #ffffff}
+    p.p43 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; color: #0e0e0e; -webkit-text-stroke: #0e0e0e}
+    p.p44 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; color: #0000e9; -webkit-text-stroke: #0b0b0b}
+    p.p45 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; color: #0a0024; -webkit-text-stroke: #0a0024; background-color: #ffffff}
+    p.p46 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; color: #0000e9; -webkit-text-stroke: #0a0024}
+    p.p47 {margin: 0.0px 0.0px 0.0px 0.0px; font: 20.0px Arial; color: #0a0050; -webkit-text-stroke: #0a0050}
+    p.p48 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Arial; color: #1a1b1d; -webkit-text-stroke: #1a1b1d}
+    p.p49 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Arial; color: #0c0c0c; -webkit-text-stroke: #0c0c0c}
+    p.p50 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px Arial; color: #0c0c0c; -webkit-text-stroke: #0c0c0c}
+    p.p51 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Arial; color: #141516; -webkit-text-stroke: #141516}
+    p.p52 {margin: 0.0px 0.0px 0.0px 0.0px; font: 20.0px Arial; color: #1a003d; -webkit-text-stroke: #0a0050}
+    p.p53 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Arial; color: #0000e9; -webkit-text-stroke: #0c0c0c}
+    p.p54 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 12.0px Times; color: #0000e9; -webkit-text-stroke: #00000b}
+    p.p55 {margin: 0.0px 0.0px 0.0px 36.0px; text-indent: -36.0px; font: 12.0px Times; color: #000000; -webkit-text-stroke: #000000}
+    p.p56 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 16.0px Times; color: #000000; -webkit-text-stroke: #000000}
+    p.p57 {margin: 0.0px 0.0px 16.1px 0.0px; font: 12.0px Times; color: #0000e9; -webkit-text-stroke: #000000}
+    p.p58 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; color: #000000; -webkit-text-stroke: #000000; min-height: 14.0px}
+    p.p59 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; color: #000054; -webkit-text-stroke: #000000}
+    p.p60 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; color: #000033; -webkit-text-stroke: #00000b}
+    p.p63 {margin: 0.0px 0.0px 16.1px 0.0px; text-align: center; font: 24.0px Times; color: #00000b; -webkit-text-stroke: #000000}
+    p.p64 {margin: 0.0px 0.0px 0.0px 0.0px; font: 15.1px Helvetica; color: #0000e9; -webkit-text-stroke: #09000b; background-color: #ffffff}
+    p.p65 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Helvetica; color: #0b0b0b; -webkit-text-stroke: #0b0b0b; background-color: #ffffff}
+    p.p66 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Helvetica; color: #0b0b0b; -webkit-text-stroke: #0b0b0b}
+    p.p67 {margin: 0.0px 0.0px 16.1px 0.0px; font: 19.0px Times; color: #00000b; -webkit-text-stroke: #000000}
+    p.p68 {margin: 0.0px 0.0px 0.0px 0.0px; font: 18.0px Times; color: #0000e9; -webkit-text-stroke: #00000b; min-height: 23.0px}
+    p.p69 {margin: 0.0px 0.0px 16.1px 0.0px; text-align: center; font: 29.0px Times; color: #000000; -webkit-text-stroke: #000000}
+    p.p72 {margin: 0.0px 0.0px 16.1px 0.0px; text-align: center; font: 24.0px Times; color: #000000; -webkit-text-stroke: #000000}
+    p.p73 {margin: 0.0px 0.0px 0.0px 0.0px; font: 24.0px Times; color: #000000; -webkit-text-stroke: #000000}
+    p.p74 {margin: 0.0px 0.0px 0.0px 0.0px; font: 24.0px 'Kohinoor Bangla'; color: #000000; -webkit-text-stroke: #000000}
+    p.p75 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 29.0px Times; color: #000000; -webkit-text-stroke: #000000}
+    p.p76 {margin: 0.0px 0.0px 0.0px 0.0px; font: 24.0px 'Oriya MN'; color: #000000; -webkit-text-stroke: #000000}
+    p.p77 {margin: 0.0px 0.0px 0.0px 0.0px; font: 24.0px 'Kohinoor Telugu'; color: #000000; -webkit-text-stroke: #000000}
+    p.p78 {margin: 0.0px 0.0px 16.1px 0.0px; font: 12.0px Times; color: #000000; -webkit-text-stroke: #000000}
+    p.p79 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 21.0px Helvetica; color: #000000; -webkit-text-stroke: #000000}
+    p.p80 {margin: 0.0px 0.0px 0.0px 0.0px; font: 28.8px 'Songti SC'; color: #0000e9; -webkit-text-stroke: #000000}
+    p.p81 {margin: 0.0px 0.0px 0.0px 0.0px; font: 15.0px 'PingFang SC'; color: #0000e9; -webkit-text-stroke: #0b0b0b}
+    p.p82 {margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px Times; color: #000000; -webkit-text-stroke: #000000}
+    p.p83 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 14.0px Times; color: #00000b; -webkit-text-stroke: #00000b}
+    p.p85 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; color: #0000e9; -webkit-text-stroke: #00000b}
+    p.p86 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; color: #00000b; -webkit-text-stroke: #00000b}
+    p.p87 {margin: 0.0px 0.0px 0.0px 0.0px; font: 9.0px Times; color: #0000bd; -webkit-text-stroke: #00000b}
+    p.p88 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 17.0px Times; color: #0000e9; -webkit-text-stroke: #00000b}
+    p.p89 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; color: #0000e9; -webkit-text-stroke: #0b0a0b}
+    p.p90 {margin: 0.0px 0.0px 12.0px 0.0px; font: 12.0px Times; color: #000000; -webkit-text-stroke: #000000}
+    p.p91 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 18.0px Times; color: #00000b; -webkit-text-stroke: #00000b}
+    p.p92 {margin: 0.0px 0.0px 0.0px 0.0px; font: 18.0px Times; color: #0000e9; -webkit-text-stroke: #00000b}
+    p.p93 {margin: 0.0px 0.0px 0.0px 0.0px; font: 10.7px Times; color: #000000; -webkit-text-stroke: #000000}
+    p.p94 {margin: 0.0px 0.0px 0.0px 0.0px; font: 15.0px Arial; color: #0000e9; -webkit-text-stroke: #0a000b}
+    p.p95 {margin: 0.0px 0.0px 0.0px 0.0px; font: 8.0px Arial; color: #0000e9; -webkit-text-stroke: #0b0b0b}
+    p.p96 {margin: 0.0px 0.0px 0.0px 0.0px; font: 9.0px Arial; color: #0b0b0b; -webkit-text-stroke: #0b0b0b}
+    p.p97 {margin: 0.0px 0.0px 0.0px 0.0px; font: 5.7px Times; color: #000000; -webkit-text-stroke: #000000}
+    p.p98 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; color: #0000e9; -webkit-text-stroke: #000000}
+    p.p99 {margin: 0.0px 0.0px 0.0px 0.0px; font: 18.0px Times; color: #000000; -webkit-text-stroke: #000000}
+    p.p100 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 17.0px Times; color: #000000; -webkit-text-stroke: #000000}
+    p.p101 {margin: 0.0px 0.0px 14.0px 0.0px; text-align: center; font: 17.0px Times; color: #00000b; -webkit-text-stroke: #000000}
+    p.p102 {margin: 0.0px 0.0px 14.0px 0.0px; font: 14.0px Times; color: #0000e9; -webkit-text-stroke: #000000}
+    p.p103 {margin: 0.0px 0.0px 14.0px 0.0px; font: 12.0px Times; color: #000000; -webkit-text-stroke: #000000}
+    p.p104 {margin: 0.0px 0.0px 14.0px 0.0px; text-align: center; font: 17.0px Times; color: #000000; -webkit-text-stroke: #000000}
+    p.p105 {margin: 0.0px 0.0px 14.0px 0.0px; text-align: center; font: 12.0px Times; color: #000000; -webkit-text-stroke: #000000}
+    p.p106 {margin: 0.0px 0.0px 14.0px 0.0px; text-align: center; font: 14.0px Times; color: #000000; -webkit-text-stroke: #000000}
+    p.p107 {margin: 0.0px 0.0px 0.0px 0.0px; font: 6.0px Times; color: #0000e9; -webkit-text-stroke: #000000}
+    p.p108 {margin: 0.0px 0.0px 0.0px 0.0px; font: 6.0px Times; color: #000000; -webkit-text-stroke: #000000}
+    p.p109 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 12.0px Helvetica; color: #000000; -webkit-text-stroke: #000000}
+    p.p110 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; color: #202835}
+    p.p111 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; color: #202835; -webkit-text-stroke: #202835; background-color: #c7d0db; background-color: rgba(199, 208, 219, 0.15)}
+    p.p112 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; color: #202835; -webkit-text-stroke: #202835}
+    p.p113 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; color: #000015; -webkit-text-stroke: #000015; min-height: 14.0px}
+    p.p114 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; color: #000015; -webkit-text-stroke: #000015}
+    p.p115 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; color: #00000b; -webkit-text-stroke: #00000b; min-height: 14.0px}
+    p.p116 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 21.0px Times; color: #000000; -webkit-text-stroke: #000000}
+    p.p117 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 22.0px Times; color: #00000b; -webkit-text-stroke: #00000b}
+    p.p118 {margin: 0.0px 0.0px 0.0px 0.0px; font: 8.0px Arial; color: #0b0b0b; -webkit-text-stroke: #0b0b0b}
+    p.p119 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 14.0px Arial; color: #0b0b0b; -webkit-text-stroke: #0b0b0b}
+    p.p120 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 9.0px Times; color: #0000e9; -webkit-text-stroke: #0b0b0b}
+    p.p121 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 9.0px Times; color: #00000b; -webkit-text-stroke: #0b0b0b}
+    p.p122 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 9.0px Times; color: #00000b; -webkit-text-stroke: #00000b}
+    p.p123 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 7.0px Times; color: #0000e9; -webkit-text-stroke: #00000b}
+    p.p124 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 7.0px Times; color: #000000; -webkit-text-stroke: #000000}
+    p.p125 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 19.0px Arial; color: #0b0b0b; -webkit-text-stroke: #0b0b0b}
+    p.p129 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; color: #0000e9; -webkit-text-stroke: #00000e}
+    p.p130 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 17.0px Times; color: #0000e9; -webkit-text-stroke: #000000}
+    p.p132 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: right; font: 12.0px Arial; color: #000000; -webkit-text-stroke: #000000}
+    p.p133 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Arial; color: #0000e9; -webkit-text-stroke: #00000b}
+    p.p134 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Arial; color: #00000b; -webkit-text-stroke: #00000b}
+    p.p135 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 20.0px Arial; color: #0000e9; -webkit-text-stroke: #00000e}
+    p.p136 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Arial; color: #000000; -webkit-text-stroke: #000000}
+    p.p137 {margin: 0.0px 0.0px 0.0px 0.0px; font: 20.0px Arial; color: #0b000b; -webkit-text-stroke: #0a000b}
+    p.p138 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 14.0px Times; color: #0000e9; -webkit-text-stroke: #000011}
+    p.p139 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; color: #00000e; -webkit-text-stroke: #00000e}
+    p.p141 {margin: 0.0px 0.0px 0.0px 0.0px; font: 17.0px Times; color: #000000; -webkit-text-stroke: #000000}
+    p.p142 {margin: 0.0px 0.0px 14.0px 0.0px; text-align: center; font: 19.0px Times; color: #0000e9; -webkit-text-stroke: #00000e}
+    p.p144 {margin: 0.0px 0.0px 0.0px 0.0px; font: 20.0px Arial; color: #0000e9; -webkit-text-stroke: #0b000b}
+    p.p145 {margin: 0.0px 0.0px 0.0px 0.0px; font: 10.0px Arial; color: #0b000b; -webkit-text-stroke: #0b000b}
+    p.p146 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Arial; color: #0b0b0b; -webkit-text-stroke: #0b0b0b; background-color: #ffffff}
+    p.p147 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 20.0px Arial; color: #0b000b; -webkit-text-stroke: #0b000b}
+    p.p148 {margin: 0.0px 0.0px 0.0px 0.0px; font: 20.0px Arial; color: #0b000b; -webkit-text-stroke: #0b000b}
+    p.p149 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 15.0px Arial; color: #0a0024; -webkit-text-stroke: #0a0024}
+    p.p150 {margin: 0.0px 0.0px 0.0px 0.0px; font: 10.0px Arial; color: #0a0024; -webkit-text-stroke: #0a0024}
+    p.p151 {margin: 0.0px 0.0px 0.0px 0.0px; font: 20.0px Arial; color: #0000e9; -webkit-text-stroke: #0a0024; background-color: #ffffff}
+    p.p152 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Arial; color: #0a0024; -webkit-text-stroke: #0a0024}
+    p.p153 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Arial; color: #0c0c0c; -webkit-text-stroke: #0c0c0c; background-color: #ffffff}
+    p.p154 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 14.0px Arial; color: #0000e9; -webkit-text-stroke: #0e0e0e}
+    p.p155 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 10.0px Arial; color: #0a0024; -webkit-text-stroke: #0a0024}
+    p.p156 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; color: #0a0024; -webkit-text-stroke: #0a0024}
+    p.p157 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 20.0px Arial; color: #0000e9; -webkit-text-stroke: #0a0030}
+    p.p158 {margin: 0.0px 0.0px 0.0px 0.0px; font: 20.0px Arial; color: #0000e9; -webkit-text-stroke: #0a0030; background-color: #ffffff}
+    p.p159 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Arial; color: #0a0030; -webkit-text-stroke: #0a0030; background-color: #ffffff}
+    p.p160 {margin: 0.0px 0.0px 0.0px 0.0px; font: 10.0px Arial; color: #0b0b0b; -webkit-text-stroke: #0b0b0b}
+    p.p161 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 20.0px Arial; color: #0000e9; -webkit-text-stroke: #0000dc}
+    p.p162 {margin: 0.0px 0.0px 0.0px 0.0px; font: 20.0px Arial; color: #0000e9; -webkit-text-stroke: #0a0063}
+    p.p163 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Arial; color: #232426; -webkit-text-stroke: #232426}
+    p.p164 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Arial; color: #0000e9; -webkit-text-stroke: #0a0063}
+    p.p165 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Arial; color: #1a1c1d; -webkit-text-stroke: #1a1c1d}
+    p.p166 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 20.0px Arial; color: #0a0063; -webkit-text-stroke: #0a0063}
+    p.p167 {margin: 0.0px 0.0px 0.0px 0.0px; font: 20.0px Arial; color: #0a0063; -webkit-text-stroke: #0a0063}
+    p.p168 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Arial; color: #2c2f33; -webkit-text-stroke: #2c2f33; background-color: #ffffff}
+    p.p169 {margin: 0.0px 0.0px 0.0px 0.0px; font: 20.0px Arial; color: #0a0063; -webkit-text-stroke: #0a0063; min-height: 23.0px}
+    p.p170 {margin: 0.0px 0.0px 0.0px 0.0px; font: 20.0px Arial; color: #0000e9; -webkit-text-stroke: #0a0063; min-height: 23.0px}
+    p.p171 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px Arial; color: #0e0e0e; -webkit-text-stroke: #0e0e0e}
+    p.p172 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Arial; color: #1a1c1d; -webkit-text-stroke: #1a1c1d; min-height: 16.0px}
+    p.p173 {margin: 0.0px 0.0px 0.0px 0.0px; font: 20.0px Helvetica; color: #2c2f33; -webkit-text-stroke: #2c2f33}
+    p.p174 {margin: 0.0px 0.0px 14.0px 0.0px; font: 18.0px Times; color: #000000; -webkit-text-stroke: #000000}
+    p.p176 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; color: #0000e9; -webkit-text-stroke: #00000e}
+    li.li23 {margin: 0.0px 0.0px 2.0px 0.0px; font: 14.0px 'Helvetica Neue'; color: #2e3134; -webkit-text-stroke: #2e3134}
+    li.li62 {margin: 0.0px 0.0px 1.4px 0.0px; font: 12.0px Times; color: #0b0b0b; -webkit-text-stroke: #0b0b0b}
+    span.s1 {font-kerning: none}
+    span.s2 {text-decoration: underline ; font-kerning: none; color: #0000e9; -webkit-text-stroke: 0px #00000b}
+    span.s3 {font: 12.0px Times; font-kerning: none}
+    span.s4 {text-decoration: underline ; font-kerning: none}
+    span.s5 {text-decoration: underline ; font-kerning: none; color: #00000b}
+    span.s6 {font-kerning: none; color: #000000; -webkit-text-stroke: 0px #000000}
+    span.s7 {text-decoration: underline ; font-kerning: none; color: #00000b; -webkit-text-stroke: 0px #00000b}
+    span.s8 {font: 12.0px Times; text-decoration: underline ; font-kerning: none; color: #00000b; -webkit-text-stroke: 0px #00000b}
+    span.s9 {font-kerning: none; direction: ltr; unicode-bidi: embed}
+    span.s10 {text-decoration: underline ; font-kerning: none; -webkit-text-stroke: 0px #000000}
+    span.s11 {font: 1.2px Times; font-kerning: none}
+    span.s12 {font: 1.2px Times; text-decoration: underline ; font-kerning: none; color: #00000b; -webkit-text-stroke: 0px #00000b}
+    span.s13 {text-decoration: underline ; font-kerning: none; color: #0000e9; background-color: #ffffff; -webkit-text-stroke: 0px #09000b}
+    span.s14 {text-decoration: underline ; font-kerning: none; color: #000000; -webkit-text-stroke: 0px #000000}
+    span.s15 {text-decoration: underline ; font-kerning: none; color: #0000e9; background-color: #ffffff}
+    span.s16 {font-kerning: none; background-color: #ffffff; -webkit-text-stroke: 0px #0b0b0b}
+    span.s17 {text-decoration: underline ; font-kerning: none; color: #09000b; -webkit-text-stroke: 0px #09000b}
+    span.s18 {text-decoration: underline ; font-kerning: none; color: #0b0a0b; -webkit-text-stroke: 0px #0b0a0b}
+    span.s19 {font-kerning: none; color: #00000b; -webkit-text-stroke: 0px #000000}
+    span.s20 {font: 12.0px Times; text-decoration: underline ; font-kerning: none; color: #0b000b; -webkit-text-stroke: 0px #0a000b}
+    span.s21 {font: 12.0px Symbol; font-kerning: none}
+    span.s22 {text-decoration: underline ; font-kerning: none; color: #0000e9}
+    span.s23 {text-decoration: underline ; font-kerning: none; -webkit-text-stroke: 0px #0a000b}
+    span.s24 {text-decoration: underline ; font-kerning: none; color: #0b000b; -webkit-text-stroke: 0px #0a000b}
+    span.s25 {text-decoration: underline ; font-kerning: none; color: #0b0b0b; -webkit-text-stroke: 0px #0b0b0b}
+    span.s26 {font: 12.0px 'Lucida Grande'; font-kerning: none}
+    span.s27 {font: 12.0px Times; text-decoration: underline ; font-kerning: none; color: #0a003f; -webkit-text-stroke: 0px #0a003f}
+    span.s28 {text-decoration: underline ; font-kerning: none; color: #0000e9; -webkit-text-stroke: 0px #0b0b0b}
+    span.s29 {text-decoration: underline ; font-kerning: none; color: #141516; -webkit-text-stroke: 0px #141516}
+    span.s30 {font-kerning: none; color: #0b0b0b; -webkit-text-stroke: 0px #0b0b0b}
+    span.s31 {font-kerning: none; color: #141516; -webkit-text-stroke: 0px #141516}
+    span.s32 {font: 20.0px 'Helvetica Neue'; color: #0000e9; -webkit-text-stroke: 0px #000000}
+    span.s33 {text-decoration: underline ; font-kerning: none; -webkit-text-stroke: 0px #0e0089}
+    span.s34 {font: 20.0px 'Helvetica Neue'; font-kerning: none; color: #0d0e10; -webkit-text-stroke: 0px #0d0e10}
+    span.s35 {font-kerning: none; color: #131315; -webkit-text-stroke: 0px #131315}
+    span.s36 {font: 13.0px 'Helvetica Neue'; font-kerning: none}
+    span.s37 {font: 20.0px Arial; text-decoration: underline ; font-kerning: none; -webkit-text-stroke: 0px #0a000b}
+    span.s38 {font: 14.0px Arial; text-decoration: underline ; font-kerning: none; -webkit-text-stroke: 0px #0b0b0b}
+    span.s39 {font: 20.0px Arial; text-decoration: underline ; font-kerning: none; color: #0a0030; -webkit-text-stroke: 0px #0a0030}
+    span.s40 {text-decoration: underline ; font-kerning: none; background-color: #ffffff}
+    span.s41 {text-decoration: underline ; font-kerning: none; color: #101111; -webkit-text-stroke: 0px #101111}
+    span.s42 {font: 10.0px Arial; font-kerning: none; color: #0b0b0b; background-color: #ffffff; -webkit-text-stroke: 0px #0b0b0b}
+    span.s43 {font: 14.0px Arial; text-decoration: underline ; font-kerning: none; color: #0a0030; -webkit-text-stroke: 0px #0a0030}
+    span.s44 {font: 14.0px Arial; font-kerning: none; color: #0b0b0b; -webkit-text-stroke: 0px #0b0b0b}
+    span.s45 {font-kerning: none; color: #000000}
+    span.s46 {font: 14.0px Arial; text-decoration: underline ; font-kerning: none; color: #0b0b0b; -webkit-text-stroke: 0px #0b0b0b}
+    span.s47 {font: 14.0px Arial; text-decoration: underline ; font-kerning: none; color: #0a0015; -webkit-text-stroke: 0px #0a0015}
+    span.s48 {font-kerning: none; background-color: #ffffff}
+    span.s49 {text-decoration: underline ; font-kerning: none; -webkit-text-stroke: 0px #0a001b}
+    span.s50 {text-decoration: underline ; font-kerning: none; color: #0000e9; background-color: #ffffff; -webkit-text-stroke: 0px #0b0b0b}
+    span.s51 {text-decoration: underline ; font-kerning: none; color: #0c0c0c; -webkit-text-stroke: 0px #0c0c0c}
+    span.s52 {font-kerning: none; color: #0b0b0b; background-color: #ffffff; -webkit-text-stroke: 0px #0b0b0b}
+    span.s53 {text-decoration: underline ; font-kerning: none; color: #0a001b; -webkit-text-stroke: 0px #0a001b}
+    span.s54 {font-kerning: none; color: #0c0c0c; -webkit-text-stroke: 0px #0c0c0c}
+    span.s55 {font: 12.0px Times; text-decoration: underline ; font-kerning: none; color: #0e0e0e; -webkit-text-stroke: 0px #0e0e0e}
+    span.s56 {text-decoration: underline ; font-kerning: none; color: #0a0024; -webkit-text-stroke: 0px #0a0024}
+    span.s57 {font: 12.0px Times; text-decoration: underline ; font-kerning: none; -webkit-text-stroke: 0px #0a0024}
+    span.s58 {font-kerning: none; color: #101011; background-color: #ffffff; -webkit-text-stroke: 0px #101011}
+    span.s59 {font: 14.0px Arial; font-kerning: none; color: #0c0c0c; -webkit-text-stroke: 0px #0c0c0c}
+    span.s60 {font: 20.0px Arial; text-decoration: underline ; font-kerning: none; color: #0a0050; -webkit-text-stroke: 0px #0a0050}
+    span.s61 {text-decoration: underline ; font-kerning: none; color: #0000e9; -webkit-text-stroke: 0px #0c0c0c}
+    span.s62 {text-decoration: underline ; font-kerning: none; color: #1a1b1d; -webkit-text-stroke: 0px #1a1b1d}
+    span.s63 {font-kerning: none; color: #1a1b1d; -webkit-text-stroke: 0px #1a1b1d}
+    span.s64 {font: 13.0px Arial; font-kerning: none}
+    span.s65 {font: 14.0px Arial; text-decoration: underline ; font-kerning: none; color: #0a0050; -webkit-text-stroke: 0px #0a0050}
+    span.s66 {font-kerning: none; color: #212326; -webkit-text-stroke: 0px #212326}
+    span.s67 {font: 20.0px Arial; text-decoration: underline ; font-kerning: none; color: #1a003d; -webkit-text-stroke: 0px #0a0050}
+    span.s68 {font: 14.0px Arial; text-decoration: underline ; font-kerning: none; color: #1a1b1d; -webkit-text-stroke: 0px #1a1b1d}
+    span.s69 {font: 12.0px Times; text-decoration: underline ; font-kerning: none; color: #00000b}
+    span.s70 {font: 12.0px Times; text-decoration: underline ; font-kerning: none; color: #000054}
+    span.s71 {background-color: #ffffff; -webkit-text-stroke: 0px #000000}
+    span.s72 {font: 15.1px Helvetica; text-decoration: underline ; font-kerning: none; -webkit-text-stroke: 0px #09000b}
+    span.s73 {font: 19.0px Times; text-decoration: underline ; font-kerning: none; color: #00000b}
+    span.s74 {font: 18.0px Times; text-decoration: underline ; font-kerning: none}
+    span.s75 {font: 21.6px Georgia; text-decoration: underline ; font-kerning: none; -webkit-text-stroke: 0px #000000}
+    span.s76 {font: 24.0px Times; font-kerning: none}
+    span.s77 {font: 12.0px 'Kohinoor Bangla'; font-kerning: none}
+    span.s78 {font: 12.0px 'Kohinoor Bangla'; text-decoration: underline ; font-kerning: none; color: #00001c; -webkit-text-stroke: 0px #00001c}
+    span.s79 {font: 12.0px Times; text-decoration: underline ; font-kerning: none; color: #00001c; -webkit-text-stroke: 0px #00001c}
+    span.s80 {font: 24.0px 'Hiragino Mincho ProN'; text-decoration: underline ; font-kerning: none; color: #0000e9}
+    span.s81 {font: 24.0px 'Hiragino Mincho ProN'; font-kerning: none}
+    span.s82 {font: 20.0px Times; font-kerning: none}
+    span.s83 {font: 13.0px 'PingFang SC'; text-decoration: underline ; font-kerning: none; color: #00009f; -webkit-text-stroke: 0px #000000}
+    span.s84 {font: 13.0px 'PingFang SC'; text-decoration: underline ; font-kerning: none; color: #09000b; -webkit-text-stroke: 0px #09000b}
+    span.s85 {font: 15.0px 'PingFang SC'; text-decoration: underline ; font-kerning: none}
+    span.s86 {font: 12.0px 'Songti SC'; text-decoration: underline ; font-kerning: none; color: #0000e9}
+    span.s87 {font: 12.0px Times; text-decoration: underline ; font-kerning: none}
+    span.s88 {font: 12.0px 'Songti SC'; font-kerning: none}
+    span.s89 {font: 12.0px Times; font-kerning: none; color: #000000; -webkit-text-stroke: 0px #000000}
+    span.s90 {font: 14.0px Times; text-decoration: underline ; font-kerning: none; -webkit-text-stroke: 0px #000015}
+    span.s91 {font: 14.0px Times; text-decoration: underline ; font-kerning: none}
+    span.s92 {font: 14.0px Times; text-decoration: underline ; font-kerning: none; color: #00000b}
+    span.s93 {font: 9.0px Times; text-decoration: underline ; font-kerning: none; color: #0000bd}
+    span.s94 {font: 17.0px Times; text-decoration: underline ; font-kerning: none}
+    span.s95 {font: 18.0px Times; text-decoration: underline ; font-kerning: none; color: #0000e9; -webkit-text-stroke: 0px #00000b}
+    span.s96 {font: 15.0px Arial; text-decoration: underline ; font-kerning: none; -webkit-text-stroke: 0px #0a000b}
+    span.s97 {font: 8.0px Arial; text-decoration: underline ; font-kerning: none; color: #0b0b0b; -webkit-text-stroke: 0px #0b0b0b}
+    span.s98 {font: 5.0px Arial; font-kerning: none}
+    span.s99 {font: 5.7px 'Lucida Grande'; font-kerning: none}
+    span.s100 {font-kerning: none; color: #00000b}
+    span.s101 {font: 14.0px Times; text-decoration: underline ; font-kerning: none; -webkit-text-stroke: 0px #000000}
+    span.s102 {font: 6.0px Times; text-decoration: underline ; font-kerning: none; color: #00000b}
+    span.s103 {font: 6.0px Times; text-decoration: underline ; font-kerning: none; color: #00000b; -webkit-text-stroke: 0px #000000}
+    span.s104 {font: 6.0px Times; text-decoration: underline ; font-kerning: none; color: #00000b; -webkit-text-stroke: 0px #00000b}
+    span.s105 {text-decoration: underline ; font-kerning: none; color: #125eb6; background-color: #ffffff}
+    span.s106 {font-kerning: none; background-color: #f9f9f9}
+    span.s107 {text-decoration: line-through ; font-kerning: none}
+    span.s108 {font-kerning: none; color: #00000b; -webkit-text-stroke: 0px #00000b}
+    span.s109 {font: 9.0px Arial; text-decoration: underline ; font-kerning: none; color: #0a000b; -webkit-text-stroke: 0px #0a000b}
+    span.s110 {font: 9.0px Times; text-decoration: underline ; font-kerning: none; -webkit-text-stroke: 0px #0b0b0b}
+    span.s111 {font: 9.0px Arial; font-kerning: none; color: #0b0b0b; -webkit-text-stroke: 0px #0b0b0b}
+    span.s112 {font: 9.0px Times; text-decoration: underline ; font-kerning: none; color: #00000b; -webkit-text-stroke: 0px #00000b}
+    span.s113 {font: 7.0px Times; text-decoration: underline ; font-kerning: none}
+    span.s114 {font: 13.6px Verdana; text-decoration: underline ; font-kerning: none; -webkit-text-stroke: 0px #00000c}
+    span.s115 {font: 14.0px Times; text-decoration: underline ; font-kerning: none; -webkit-text-stroke: 0px #00000e}
+    span.s116 {font: 17.0px Times; text-decoration: underline ; font-kerning: none; -webkit-text-stroke: 0px #000000}
+    span.s117 {font: 12.0px Arial; text-decoration: underline ; font-kerning: none}
+    span.s118 {font: 12.0px Arial; text-decoration: underline ; font-kerning: none; color: #00000b}
+    span.s119 {font: 20.0px Arial; text-decoration: underline ; font-kerning: none; -webkit-text-stroke: 0px #00000e}
+    span.s120 {font: 20.0px Arial; text-decoration: underline ; font-kerning: none; color: #0b000b; -webkit-text-stroke: 0px #0a000b}
+    span.s121 {font: 20.0px Arial; text-decoration: underline ; font-kerning: none; color: #0a000b; -webkit-text-stroke: 0px #0a000b}
+    span.s122 {font: 14.0px Times; text-decoration: underline ; font-kerning: none; -webkit-text-stroke: 0px #000011}
+    span.s123 {text-decoration: underline ; font-kerning: none; color: #00000e}
+    span.s124 {text-decoration: underline ; font-kerning: none; color: #000011}
+    span.s125 {font: 19.0px Times; text-decoration: underline ; font-kerning: none; -webkit-text-stroke: 0px #00000e}
+    span.s126 {font: 20.0px Arial; text-decoration: underline ; font-kerning: none; -webkit-text-stroke: 0px #0b000b}
+    span.s127 {font: 20.0px Arial; text-decoration: underline ; font-kerning: none; color: #0b000b; background-color: #ffffff; -webkit-text-stroke: 0px #0b000b}
+    span.s128 {font: 20.0px Arial; font-kerning: none; color: #0b000b; -webkit-text-stroke: 0px #0b000b}
+    span.s129 {font: 20.0px Arial; text-decoration: underline ; font-kerning: none; -webkit-text-stroke: 0px #0a0024}
+    span.s130 {text-decoration: underline ; font-kerning: none; color: #0e0e0e; -webkit-text-stroke: 0px #0e0e0e}
+    span.s131 {font: 14.0px Arial; text-decoration: underline ; font-kerning: none; color: #0a0024; -webkit-text-stroke: 0px #0a0024}
+    span.s132 {font-kerning: none; color: #0e0e0e; background-color: #ffffff}
+    span.s133 {font: 10.0px Arial; font-kerning: none; color: #0a0024; -webkit-text-stroke: 0px #0a0024}
+    span.s134 {text-decoration: underline ; font-kerning: none; -webkit-text-stroke: 0px #0a0024}
+    span.s135 {font: 12.0px Times; font-kerning: none; color: #0b0b0b; -webkit-text-stroke: 0px #0b0b0b}
+    span.s136 {font: 20.0px Arial; text-decoration: underline ; font-kerning: none; -webkit-text-stroke: 0px #0a0030}
+    span.s137 {font: 10.0px Arial; font-kerning: none; color: #0b0b0b; -webkit-text-stroke: 0px #0b0b0b}
+    span.s138 {font: 20.0px Arial; text-decoration: underline ; font-kerning: none; -webkit-text-stroke: 0px #0a0063}
+    span.s139 {text-decoration: underline ; font-kerning: none; color: #0000e9; background-color: #ffffff; -webkit-text-stroke: 0px #0e0e0e}
+    span.s140 {text-decoration: underline ; font-kerning: none; color: #232426; -webkit-text-stroke: 0px #232426}
+    span.s141 {font-kerning: none; color: #0e0e0e; background-color: #ffffff; -webkit-text-stroke: 0px #0e0e0e}
+    span.s142 {text-decoration: underline ; font-kerning: none; -webkit-text-stroke: 0px #0a0063}
+    span.s143 {font-kerning: none; color: #232426; background-color: #ffffff; -webkit-text-stroke: 0px #232426}
+    span.s144 {font: 14.0px Arial; text-decoration: underline ; font-kerning: none; color: #0e0e0e; -webkit-text-stroke: 0px #0e0e0e}
+    span.s145 {font: 14.0px Arial; text-decoration: underline ; font-kerning: none; color: #232426; -webkit-text-stroke: 0px #232426}
+    span.s146 {font-kerning: none; color: #2c2f33; background-color: #ffffff; -webkit-text-stroke: 0px #2c2f33}
+    span.s147 {font: 14.0px Arial; text-decoration: underline ; font-kerning: none; color: #0a0063; -webkit-text-stroke: 0px #0a0063}
+    span.s148 {font: 14.0px Times; text-decoration: underline ; font-kerning: none; color: #0000e9; -webkit-text-stroke: 0px #00000b}
+    span.s149 {font: 14.0px Times; text-decoration: underline ; font-kerning: none; color: #0000d3; -webkit-text-stroke: 0px #00000b}
+    span.s150 {font: 14.0px 'PingFang SC'; font-kerning: none; color: #0b0b0b; background-color: #ffffff; -webkit-text-stroke: 0px #0b0b0b}
+    span.s151 {font-kerning: none; -webkit-text-stroke: 0px #00000b}
+    span.s152 {text-decoration: underline ; font-kerning: none; -webkit-text-stroke: 0px #00000e}
+    table.t1 {width: 720.3px; background-color: #ffffff}
+    table.t2 {width: 705.6px; background-color: #ffffff}
+    td.td1 {width: 6.7px; padding: 2.0px 2.0px 2.0px 2.0px}
+    td.td2 {width: 705.6px; padding: 2.0px 2.0px 2.0px 2.0px}
+    td.td3 {width: 701.6px; padding: 2.0px 2.0px 2.0px 2.0px}
+    ul.ul1 {list-style-type: none}
+    ul.ul2 {list-style-type: disc}
+  </style>
+</head>
+<body>
+<p class="p1"><span class="s1">VinEncyclopedia.html</span></p>
+<p class="p2"><span class="s1"><br>
+</span></p>
+<p class="p2"><span class="s1">see VinBooks.html</span></p>
+<p class="p2"><span class="s1"><br>
+</span></p>
+<p class="p2"><span class="s1"><br>
+</span></p>
+<p class="p3"><span class="s1">wiki (en.data,ru,fr,de,it, uk, as,ja, …,zh) 28+1+11+9+6+ 4+1+2+1+1+1+1+1+2= 67</span></p>
+<p class="p3"><span class="s1">others<span class="Apple-converted-space">  </span>12+ 1+ 7+1 +1+1+1+8+1+1+1+1+1+2+1+1+1+7 +1 +2 +1+1+1+1+1+2+1+1 =<span class="Apple-converted-space">  </span>62 <span class="Apple-converted-space"> </span></span></p>
+<p class="p3"><span class="s1">1+1+1+1+1 +1 + 1<span class="Apple-converted-space">  </span>= 7</span></p>
+<p class="p3"><span class="s1">136<span class="Apple-converted-space">  </span>total</span></p>
+<p class="p4"><span class="s1"><br>
+</span></p>
+<p class="p5"><span class="s1"><br>
+</span></p>
+<p class="p6"><span class="s2"><a href="http://books.google.com/books?id=-uKucQAACAAJ&amp;dq=wasserstein+distance+OR+metric+OR+space+-wendy&amp;hl=en&amp;sa=X&amp;ei=UJTlUJ_SPMqt0AHj_YDIBg&amp;ved=0CEUQ6AEwAzge"><b><span class="Apple-converted-space"> </span></b></a></span><span class="s3"><span class="Apple-converted-space"> </span></span></p>
+<p class="p7"><span class="s1"><span class="Apple-converted-space">  </span>English wiki<span class="Apple-converted-space">  </span>(en.wiki)<span class="Apple-converted-space">  </span>28 articles</span></p>
+<p class="p8"><span class="s1"><br>
+</span></p>
+<p class="p9"><span class="s4"><a href="https://en.wikipedia.org/wiki/Lists_of_mathematicians"><b>Lists of mathematicians - Wikipedi</b></a></span><span class="s5"><b>a</b></span></p>
+<p class="p4"><span class="s1"><i>Lists of mathematicians</i> cover notable <i>mathematicians</i> by nationality, ethnicity, religion, ... Mathematicians. A · B · C · D · E · F · G · H · I · J · K · L · M · N · O · P · Q · R · S · T · U · V · W · X · Y · Z. Navigation. Lists · Outline · Portal · Areas · v · t · e ...</span></p>
+<p class="p5"><span class="s6">‎<a href="https://en.wikipedia.org/wiki/List_of_Indian_mathematicians"><span class="s7">Indian mathematicians</span></a> · ‎<a href="https://en.wikipedia.org/wiki/List_of_American_mathematicians"><span class="s7">American mathematicians</span></a> · ‎<a href="https://en.wikipedia.org/wiki/List_of_Greek_mathematicians"><span class="s7">Greek mathematicians</span></a></span></p>
+<p class="p5"><span class="s1"><br>
+</span></p>
+<p class="p9"><span class="s4"><a href="https://en.wikipedia.org/wiki/Quillen%E2%80%93Suslin_theorem"><b>Quillen–Suslin theorem - Wikipedia</b></a></span></p>
+<p class="p4"><span class="s1">for his proof of the Serre conjecture. <a href="https://en.wikipedia.org/wiki/Leonid_Vaser%C5%A1te%C4%ADn"><span class="s8">Leonid Vaseršteĭn</span></a> later gave a simpler and much shorter proof of the theorem which ca</span></p>
+<p class="p10"><span class="s1"><br>
+</span></p>
+<p class="p5"><span class="s6"><span class="Apple-converted-space"> </span><a href="https://en.wikipedia.org/wiki/Marginal_distribution"><span class="s7"><b>Marginal distribution - Wikipedia</b></span></a></span></p>
+<p class="p4"><span class="s1">In probability theory and statistics, the marginal distribution of a subset of a collection of random variables is the probability distribution of the variables contained ..</span></p>
+<p class="p4"><span class="s1">Wasserstein metric</span></p>
+<p class="p10"><span class="s1"><br>
+</span></p>
+<p class="p9"><span class="s4"><a href="https://en.wikipedia.org/wiki/Radon_measure"><b>Radon measure - Wikipedia</b></a></span></p>
+<p class="p4"><span class="s1">measures will have a subsequence that is convergent with respect to the Radon metric, which presents difficulties in certain applications. On the other hand, if </span><span class="s9"><i>X</i></span><span class="s1"> is a compact metric space, then the <a href="https://en.academic.ru/dic.nsf/enwiki/3433818"><span class="s8">Wasserstein metric</span></a> turns<span class="Apple-converted-space">  </span>into a compact metric space.</span></p>
+<p class="p4"><span class="s1"><br>
+</span></p>
+<p class="p11"><span class="s4"><a href="https://en.wikipedia.org/wiki/Transportation_theory_(mathematics)"><b>Transportation theory (mathematics)</b><span class="s10"><b></b></span></a></span></p>
+<p class="p4"><span class="s1">the definition of the <a href="https://en.wikipedia.org/wiki/Wasserstein_metric"><span class="s8">Wasserstein metric</span></a> <i>W</i></span><span class="s11"><sub>1</sub></span><span class="s1"> on the space of probability</span></p>
+<p class="p12"><span class="s4"><a href="https://en.wikipedia.org/wiki/Deep_learning_in_photoacoustic_imaging"><span class="Apple-converted-space"> </span></a></span></p>
+<p class="p11"><span class="s4"><a href="https://en.wikipedia.org/wiki/Deep_learning_in_photoacoustic_imaging"><b>Deep learning in photoacoustic imaging</b><span class="s10"><b></b></span></a></span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space"> </span>remove limited-bandwidth artifacts have been WGAN-GP<a href="https://en.wikipedia.org/wiki/Deep_learning_in_photoacoustic_imaging#cite_note-:7-14"><span class="s12"><sup>[14]</sup></span></a> and<span class="Apple-converted-space"> </span></span></p>
+<p class="p4"><span class="s1">with the Wasserstein metric and gradient penalty to stabilize training (WGAN-GP). The limited-bandwidth problem occurs as a result of the ultrasound transducer</span></p>
+<p class="p13"><span class="s1"><span class="Apple-converted-space"> </span></span></p>
+<p class="p9"><span class="s4"><a href="https://en.wikipedia.org/wiki/Stein%27s_method"><b>Stein's method - Wikipedia</b></a></span></p>
+<p class="p9"><span class="s4"><a href="https://en.wikipedia.org/wiki/Wasserstein_metric">Wasserstein; Kantorovich) metric</a></span><span class="s6">,</span></p>
+<p class="p4"><span class="s1"><br>
+<br>
+</span></p>
+<p class="p14"><span class="s13"><a href="https://en.wikipedia.org/wiki/Ronald_Graham"><span class="Apple-converted-space"> </span><span class="s14">Ronald Graham-Wikipedia</span></a></span></p>
+<p class="p15"><span class="s15"><a href="https://en.wikipedia.org/wiki/Leonid_Vaser%C5%A1te%C4%ADn">Vaseršteĭn, L. N.</a></span><span class="s16"> (September 1982). <a href="https://en.wikipedia.org/wiki/Bulletin_of_the_London_Mathematical_Society"><span class="s17"><i>Bulletin of the London Mathematical Society</i></span></a>. Wiley. <b>14</b> (5): 458–460. <a href="https://en.wikipedia.org/wiki/Doi_(identifier)"><span class="s17">doi</span></a>:<a href="https://doi.org/10.1112%2Fblms%2F14.5.458"><span class="s18">10.1112/blms/14.5.458</span></a>.</span></p>
+<p class="p4"><span class="s1"><br>
+</span></p>
+<p class="p9"><span class="s4"><a href="https://en.wikipedia.org/wiki/L%C3%A9vy%E2%80%93Prokhorov_metric"><b>Lévy–Prokhorov metric - Wikipedia</b></a></span></p>
+<p class="p4"><span class="s1">In <i>mathematics</i>, the Lévy–<i>Prokhorov</i> metric is a metric on the collection of probability measures ... Lévy metric · <i>Prokhorov's</i> theorem · Tightness of measures · weak convergence of measures · <i>Wasserstein</i> metric · Radon ... Zolotarev, V.M. (2001) [1994], "Lévy–<i>Prokhorov</i> metric", <i>Encyclopedia</i> of <i>Mathematics</i>, EMS Press.</span></p>
+<p class="p4"><span class="s1"><br>
+</span></p>
+<p class="p11"><span class="s4"><a href="https://en.wikipedia.org/wiki/Gaspard_Monge"><b>Gaspard Monge</b></a></span><span class="s5"><b>-Wiki[edia</b></span></p>
+<p class="p5"><span class="s6">such as <a href="https://en.wikipedia.org/wiki/L._V._Kantorovich"><span class="s7">L. V. Kantorovich</span></a>, <a href="https://en.wikipedia.org/wiki/Paul_L%C3%A9vy_(mathematician)"><span class="s7">Paul Lévy</span></a>, <a href="https://en.wikipedia.org/wiki/Leonid_Vaser%C5%A1te%C4%ADn"><span class="s7">Leonid Vaseršteĭn</span></a>, and others<br>
+</span></p>
+<p class="p9"><span class="s4"><a href="https://en.wikipedia.org/wiki/Generative_adversarial_network"><b>Generative adversarial network - Wikipedia</b></a></span></p>
+<p class="p4"><span class="s1">Glossary of <i>artificial intelligence</i>[show]. Glossary of <i>artificial intelligence</i>. Related articles[show]. List of datasets for machine-learning research · Outline of machine learning · v · t · e. A generative adversarial network (GAN) is a class of machine learning frameworks designed by ... Calorimeter Showers Using a <i>Wasserstein</i> Generative Adversarial Network".</span></p>
+<p class="p10"><span class="s1"><br>
+</span></p>
+<p class="p9"><span class="s4"><a href="https://en.wikipedia.org/wiki/Wasserstein_metric"><b>Wasserstein metric - Wikipedia</b></a></span></p>
+<p class="p9"><span class="s4"><a href="https://ru.wikipedia.org/wiki/%D0%9C%D0%B5%D1%82%D1%80%D0%B8%D0%BA%D0%B0_%D0%92%D0%B0%D1%81%D0%B5%D1%80%D1%88%D1%82%D0%B5%D0%B9%D0%BD%D0%B0">Метрика Васерштейна</a></span></p>
+<p class="p5"><span class="s1"><br>
+</span></p>
+<p class="p9"><span class="s4"><a href="https://en.wikipedia.org/wiki/Leonid_Vaserstein"><b>Leonid Vaseršteĭn - Wikipedia</b></a></span></p>
+<p class="p4"><span class="s1">Leonid <i>Vaseršteĭn</i> is a Russian-American mathematician, currently Professor of Mathematics at ... Leonid Vaseršteĭn. From Wikipedia, the free encyclopedia.</span></p>
+<p class="p9"><span class="s4"><a href="https://en.wikipedia.org/wiki/Superstrong_approximation"><b>Superstrong approximation - Wikipedia</b></a></span></p>
+<p class="p4"><span class="s1"><i>Matthews, C. R.; Vaserstein, L. N.; Weisfeiler, B. (1984),<span class="Apple-converted-space"> </span></i></span></p>
+<p class="p16"><span class="s19"><br>
+</span><span class="s1">W<a href="https://www.google.com/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=&amp;ved=2ahUKEwjorO2h_cfsAhUtTt8KHbUYDzUQFjACegQIARAC&amp;url=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FWasserstein&amp;usg=AOvVaw3a6CcpwglnMge0k79iK5Ii"><span class="s20">asserstein - Wikipedia</span></a></span></p>
+<p class="p17"><span class="s1">Leonid Nasonovich <b>Vasershtein</b>, a Russian-American mathematician. It is also used to name: Wasserstein metric, a mathematical distance measure ...</span></p>
+<p class="p18"><span class="s1"><br>
+</span></p>
+<p class="p11"><span class="s4"><a href="https://en.wikipedia.org/wiki/Abelianization"><b>Commutator subgroup - Wikipedia</b><span class="s10"><b></b></span></a></span></p>
+<p class="p18"><span class="s4"><b>???</b></span><span class="s1"><br>
+</span></p>
+<p class="p11"><span class="s4"><a href="https://en.wikipedia.org/wiki/Wikipedia:Wikipedians_by_Erd%C5%91s_number"><b>Wikipedia:Wikipedians by Erdős number - Wikipedia</b><span class="s10"><b></b></span></a></span></p>
+<p class="p4"><span class="s1">... Chlipala · Aetheling · AliceTaniyama · Billlion · Bsradams · Buridan · Cj67 · Charles Matthews </span><span class="s21">→</span><span class="s1"> L. N. <i>Vaserstein</i> </span><span class="s21">→</span><span class="s1"> Jorgen Cherly </span><span class="s21">→</span><span class="s1"> Jean-Marc Deshouillers.</span></p>
+<p class="p4"><span class="s1"><br>
+</span></p>
+<p class="p11"><span class="s4"><a href="https://en.wikipedia.org/wiki/Neena_Gupta_%28mathematician%29"><b>Neena Gupta (mathematician) - Wikipedia</b><span class="s10"><b></b></span></a></span></p>
+<p class="p4"><span class="s1">Neena Gupta is an Assistant Professor at the Statistics and Mathematics Unit of the Indian ... Compositio Mathematica, June 2014; With Dhvanita R. Rao, On the non-injectivity of the <i>Vaserstein</i> symbol in dimension three, Journal of Algebra, ...</span></p>
+<p class="p4"><span class="s1"><br>
+</span></p>
+<p class="p11"><span class="s4"><a href="https://en.wikipedia.org/wiki/Topological_data_analysis"><b>Topological data analysis - Wikipedia</b><span class="s10"><b></b></span></a></span></p>
+<p class="p4"><span class="s1">The <a href="https://en.wikipedia.org/wiki/Wasserstein_metric"><span class="s8"><b>Wasserstein distance</b></span></a> between two persistence diagram</span></p>
+<p class="p18"><span class="s1"><br>
+</span></p>
+<p class="p18"><span class="s22"><a href="https://en.wikipedia.org/?title=Wasserstein_distance&amp;redirect=no"><b><span class="Apple-converted-space"> </span></b></a><a href="https://en.wikipedia.org/wiki/Earth_mover%27s_distance"><span class="s5"><b>Earth mover's distance</b></span></a></span><span class="s4"><b>-Wikipedia</b></span></p>
+<p class="p4"><span class="s1">In mathematics, this is known as the <a href="https://en.wikipedia.org/wiki/Wasserstein_metric"><span class="s8">Wasserstein metric</span></a>. I</span></p>
+<p class="p4"><span class="s1"><br>
+</span></p>
+<p class="p11"><span class="s4"><a href="https://en.wikipedia.org/wiki/Sums_of_three_cubes"><b>Sums of three cubes</b></a></span><span class="s5"><b>-Wikipedia</b></span></p>
+<p class="p4"><span class="s1"><i>Conn, W.; </i><a href="https://en.wikipedia.org/wiki/Leonid_Vaser%C5%A1te%C4%ADn"><span class="s8"><i>Vaserstein, L. N.</i></span></a><i> (1994),</i></span></p>
+<p class="p4"><span class="s1"><br>
+</span></p>
+<p class="p5"><span class="s4"><b>St</b><a href="https://en.wikipedia.org/wiki/Statistical_distance"><span class="s5"><b>atistical distance - Wikipedia</b></span></a></span></p>
+<p class="p4"><span class="s1">From Wikipedia, the free <i>encyclopedia</i>. Jump to navigation Jump to search. In <i>statistics</i>, probability theory, and information theory, a <i>statistical</i> distance quantifies the ... <i>Wasserstein</i> metric: also known as the Kantorovich metric, or earth mover's distance; The Kolmogorov–Smirnov <i>statistic</i> represents a distance between two ...</span></p>
+<p class="p4"><span class="s1"><br>
+</span></p>
+<p class="p9"><span class="s4"><a href="https://en.wikipedia.org/wiki/Linear_function"><b>Linear function - Wikipedia</b></a></span></p>
+<p class="p4"><span class="s1">In mathematics, the term linear <i>function</i> refers to two distinct but related notions: In calculus and related areas, a linear <i>function</i> is a <i>function</i> whose graph is a straight line, that is, a polynomial <i>function</i> of degree zero or one. For distinguishing such a linear <i>function</i> from the other concept, the term <i>affine function</i> is often used. ...<span class="Apple-converted-space"> </span></span></p>
+<p class="p4"><span class="s1">Leonid N. <i>Vaserstein</i> (2006), "Linear ...</span></p>
+<p class="p5"><span class="s6">‎<a href="https://en.wikipedia.org/wiki/Linear_function#As_a_polynomial_function"><span class="s7">As a polynomial function</span></a> - ‎<a href="https://en.wikipedia.org/wiki/Linear_function#As_a_linear_map"><span class="s7">As a linear map</span></a> - ‎<a href="https://en.wikipedia.org/wiki/Linear_function#Notes"><span class="s7">Notes</span></a></span></p>
+<p class="p5"><span class="s1"><br>
+</span></p>
+<p class="p19"><span class="s4"><a href="https://en.wikipedia.org/wiki/Aleksandr_Khazanov">Aleksandr Khazanov - Wikipedia<span class="s23"></span></a></span></p>
+<p class="p17"><span class="s1">... mentored by Leonid <b>Vaserstein</b>, a math professor at Penn State University also from Russia. He represented the United States for the second time in the 1995 ...</span></p>
+<p class="p4"><span class="s1"><br>
+</span></p>
+<p class="p16"><span class="s6"><br>
+<span class="Apple-converted-space">  </span><a href="https://www.google.com/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=&amp;ved=2ahUKEwjorO2h_cfsAhUtTt8KHbUYDzUQFjADegQIAxAC&amp;url=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FTalk%253AWasserstein_metric&amp;usg=AOvVaw3GtIYl1VgZ9X6Y4wmPCe93"><span class="s24">Talk:Wasserstein metric - Wikipedia</span></a></span></p>
+<p class="p17"><span class="s22"><a href="https://www.google.com/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=&amp;ved=2ahUKEwjorO2h_cfsAhUtTt8KHbUYDzUQFjADegQIAxAC&amp;url=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FTalk%253AWasserstein_metric&amp;usg=AOvVaw3GtIYl1VgZ9X6Y4wmPCe93">en.wikipedia.org<span class="s25"> › wiki › Talk:Wasserstein_metric</span></a></span></p>
+<p class="p17"><span class="s1">en.wikipedia.org › wiki › Talk:Wasserstein_metric</span></p>
+<p class="p17"><span class="s1">As I understand, "<b>Vasershtein</b>" is a form of transliteration while "Wasserstein" is a ... does not use Wasserstein or <b>Vasershtein</b> or even <b>Vaseršteĭn</b> but <b>Vaserstein</b>.</span></p>
+<p class="p4"><span class="s1">The name is of Germanic origin, so somehow "Wasserstein" (or possibly "<i>Waßerstein</i>") seems to be the "correct" spelling. The issue is complicated by the fact ...</span></p>
+<p class="p4"><span class="s1"><br>
+<span class="Apple-converted-space">  </span></span></p>
+<p class="p9"><span class="s4"><a href="https://en.wikipedia.org/wiki/Wikipedia:Wikipedians_by_Erd%C5%91s_number"><b>Wikipedia:Wikipedians by Erdős number - Wikipedia</b></a></span></p>
+<p class="p4"><span class="s1">The Erdős number (<i>Hungarian</i> pronunciation: [</span><span class="s26">ˈɛ</span><span class="s1">rdø</span><span class="s26">ːʃ</span><span class="s1">]) describes the ... Charles Matthews </span><span class="s21">→</span><span class="s1"> L. N. <i>Vaserstein</i> </span><span class="s21">→</span><span class="s1"> Jorgen Cherly </span><span class="s21">→</span><span class="s1"> Jean-Marc Deshouillers.</span></p>
+<p class="p5"><span class="s1"><br>
+</span></p>
+<p class="p9"><span class="s4"><a href="https://en.wikipedia.org/wiki/List_of_Guggenheim_Fellowships_awarded_in_1984"><b>List of Guggenheim Fellowships awarded in 1984 - Wikipedia</b></a></span></p>
+<p class="p4"><span class="s1">List of Guggenheim Fellowships awarded in 1984. Fellow, Category, Field of Study. Michael P. ... Manuel <i>da</i> Costa Fontes, Humanities, Folklore &amp; Popular Culture. Ronald Forrest Fox ... Leonid Nison <i>Vaserstein</i>, Natural Sciences, Mathematics</span></p>
+<p class="p20"><span class="s6"><br>
+</span><span class="s1">T<a href="https://en.wikipedia.org/wiki/Total_variation_distance_of_probability_measures"><span class="s27">otal variation distance of probability measures - Wikipedia</span></a></span></p>
+<p class="p21"><span class="s28"><a href="https://en.wikipedia.org/wiki/Total_variation_distance_of_probability_measures">https://en.wikipedia.org<span class="s29"> › wiki › Total_variation_distan...</span></a></span></p>
+<p class="p21"><span class="s30">https://en.wikipedia.org</span><span class="s1"> › wiki › Total_variation_distan...</span></p>
+<p class="p22"><span class="s1">In probability theory, the total variation distance is a distance measure for probability ... Total variation · Kolmogorov–Smirnov test · </span><span class="s31"><b>Wasserstein</b></span><span class="s1"> metric ...</span></p>
+<p class="p22"><span class="s1"><br>
+</span></p>
+<ul class="ul1">
+  <li class="li23"><span class="s32"><a href="https://en.wikipedia.org/wiki/Wasserstein_GAN"><span class="s33">Wasserstein GAN - Wikipedia</span></a></span><span class="s34"><br>
+</span><span class="s35">en.wikipedia.org › wiki › Wasserstein_GAN <br>
+</span><span class="s36"><br>
+</span><span class="s1">The Wasserstein Generative Adversarial Network is a variant of generative adversarial network proposed in 2017 that aims to "improve the stability of learning, get rid of problems like mode collapse, and provide meaningful learning curves useful for debugging and hyperparameter searches". Compared with the original GAN discriminator, the<b> Wasserstein GAN</b> discriminator provides a better learning signal to the generator. This allows the training to be more stable when generator is learning distribu </span><span class="s36"><br>
+</span></li>
+</ul>
+<p class="p22"><span class="s1"><br>
+</span></p>
+<p class="p4"><span class="s1"><br>
+</span></p>
+<p class="p24"><span class="s1">wikidata <span class="Apple-converted-space"> </span></span></p>
+<p class="p4"><span class="s1"><br>
+</span></p>
+<p class="p25"><span class="s4"><a href="https://www.wikidata.org/wiki/Q6526507">Leonid Vaseršteĭn - Wikidata<span class="s37"></span></a></span></p>
+<p class="p26"><span class="s4"><a href="https://www.google.com/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=&amp;ved=2ahUKEwjorO2h_cfsAhUtTt8KHbUYDzUQFjAGegQIChAC&amp;url=https%3A%2F%2Fwww.wikidata.org%2Fwiki%2FQ6526507&amp;usg=AOvVaw3faRw8ckMkd9DywdCiT_XF"><span class="Apple-converted-space"> </span><span class="s38"></span></a></span></p>
+<p class="p4"><span class="s1"><br>
+</span></p>
+<p class="p4"><span class="s1"><br>
+</span></p>
+<p class="p4"><span class="s1"><br>
+</span></p>
+<p class="p27"><span class="s1">Russian wiki (ru.wki) <span class="Apple-converted-space">  </span>11<span class="Apple-converted-space">    </span>articles</span></p>
+<p class="p10"><span class="s1"><br>
+</span></p>
+<p class="p28"><span class="s1"><br>
+</span></p>
+<p class="p28"><span class="s1"><br>
+</span></p>
+<p class="p29"><span class="s22"><a href="https://star-wiki.ru/wiki/Leonid_Vaser%C5%A1te%C4%ADn">Le<span class="s39">онид Васерштейн - Leonid Vaseršteĭn - Википедия</span></a></span></p>
+<p class="p30"><span class="s40"><a href="https://star-wiki.ru/wiki/Leonid_Vaser%C5%A1te%C4%ADn">https://star-wiki.ru<span class="s41"> › wiki › Leonid_...</span></a></span></p>
+<p class="p31"><span class="s42">· <a href="https://translate.google.com/translate?hl=en&amp;sl=ru&amp;u=https://star-wiki.ru/wiki/Leonid_Vaser%25C5%25A1te%25C4%25ADn&amp;prev=search&amp;pto=aue"><span class="s43">Translate this page</span></a></span></p>
+<p class="p32"><span class="s1">Леонид Васерштейн - Leonid Vaseršteĭn ... Леонид Васерштейн - русский-американскийматематик , в настоящее время профессор из математики в Государственный ...</span></p>
+<p class="p33"><span class="s1"><br>
+</span></p>
+<p class="p28"><span class="s44"><span class="Apple-converted-space"> </span></span><span class="s1">,</span></p>
+<p class="p4"><span class="s2"><a href="https://ru.wikipedia.org/wiki/%D0%9C%D0%B5%D1%82%D1%80%D0%B8%D0%BA%D0%B0_%D0%92%D0%B0%D1%81%D0%B5%D1%80%D1%88%D1%82%D0%B5%D0%B9%D0%BD%D0%B0">Метрика Васерштейна</a></span><span class="s1"> <br>
+надо перетащить. Название «метрика Васерштейна» было предложено Добрушиным в 1970 году, в честь Леонида Васерштейна (англ. Leonid Vaseršteĭn), который<br>
+6 Кб (428 слов) - 09:20, 13 июля 2019<br>
+</span></p>
+<p class="p4"><span class="s2"><a href="https://ru.wikipedia.org/wiki/%D0%9C%D0%B5%D1%82%D1%80%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%BE%D0%B5_%D0%BF%D1%80%D0%BE%D1%81%D1%82%D1%80%D0%B0%D0%BD%D1%81%D1%82%D0%B2%D0%BE">Метрическое пространство</a></span><span class="s1"> <br>
+расстояние с помощью так называемой метрики Громова — Хаусдорфа. Метрика Васерштейна определяет расстояние между двумя распределениями вероятностей. Декартово<br>
+34 Кб (3202 слова) - 22:17, 10 июля 2020<br>
+</span></p>
+<p class="p4"><span class="s2"><a href="https://ru.wikipedia.org/wiki/%D0%A2%D0%B5%D0%BE%D1%80%D0%B5%D0%BC%D0%B0_%D0%9A%D0%B2%D0%B8%D0%BB%D0%BB%D0%B5%D0%BD%D0%B0_%E2%80%94_%D0%A1%D1%83%D1%81%D0%BB%D0%B8%D0%BD%D0%B0">Теорема Квиллена — Суслина</a></span><span class="s1"> <br>
+Квиллена[en] — по состоянию на 2018 год является открытой проблемой. Васерштейн Л. Н., Суслин А. А. Проблема Серра о проективных модулях над кольцами<br>
+3 Кб (139 слов) - 21:29, 4 марта 2018</span></p>
+<p class="p34"><span class="s1"><br>
+</span></p>
+<p class="p35"><span class="s45">Т<a href="https://ru.wikipedia.org/wiki/%D0%A2%D0%B5%D0%BE%D1%80%D0%B5%D0%BC%D0%B0_%D0%9A%D0%B2%D0%B8%D0%BB%D0%BB%D0%B5%D0%BD%D0%B0_%E2%80%94_%D0%A1%D1%83%D1%81%D0%BB%D0%B8%D0%BD%D0%B0"><span class="s5"><b>орема Квиллена — Суслина — Википедия</b></span></a></span></p>
+<p class="p11"><span class="s4"><a href="https://translate.google.com/translate?hl=en&amp;sl=ru&amp;u=https://ru.wikipedia.org/wiki/%25D0%25A2%25D0%25B5%25D0%25BE%25D1%2580%25D0%25B5%25D0%25BC%25D0%25B0_%25D0%259A%25D0%25B2%25D0%25B8%25D0%25BB%25D0%25BB%25D0%25B5%25D0%25BD%25D0%25B0_%25E2%2580%2594_%25D0%25A1%25D1%2583%25D1%2581%25D0%25BB%25D0%25B8%25D0%25BD%25D0%25B0&amp;prev=search">Translate this page<span class="s10"></span></a></span></p>
+<p class="p4"><span class="s1">Теорема Квиллена — Суслина (проблема Серра, гипотеза Серра) — утверждение о ... Обобщение теоремы на проективные <i>модули</i> над произвольными регулярными нётеровыми кольцами и кольцами ... <i>Васерштейн</i> Л. Н., Суслин А. А. Проблема Серра о проективных модулях над кольцами многочленов и ...</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space"> </span><br>
+</span></p>
+<p class="p4"><span class="s2"><a href="https://ru.wikipedia.org/wiki/%D0%A1%D1%83%D0%BC%D0%BC%D0%B0_%D1%82%D1%80%D1%91%D1%85_%D0%BA%D1%83%D0%B1%D0%BE%D0%B2">Сумма трёх кубов</a></span><span class="s1"> <br>
+Mathematics of Computation Т. 18 (87): 408–413, DOI 10.2307/2003763  Conn, W. &amp; Vaserstein, L. N. (1994), On sums of three integral cubes, The Rademacher legacy<br>
+26 Кб (2653 слова) - 08:15, 14 июня 2020</span></p>
+<p class="p4"><span class="s1"><br>
+</span></p>
+<p class="p36"><span class="s15"><a href="http://neerc.ifmo.ru/wiki/index.php?title=Generative_Adversarial_Nets_(GAN)">neerc.ifmo.ru<span class="s46"> › wiki › title=Generati...</span></a></span></p>
+<p class="p37"><span class="s42">· <a href="http://neerc.ifmo.ru/wiki/index.php?title=Generative_Adversarial_Nets_(GAN)"><span class="s47">Translate this page</span></a></span></p>
+<p class="p36"><span class="s48">Как показано на рисунке 2, <b>генеративные состязательные сети</b> ... Источник: https://lilianweng.github.io/lil-log/2017/08/20/from-GAN-to-<b>WGAN</b>.html.</span></p>
+<p class="p4"><span class="s1"><br>
+</span></p>
+<p class="p38"><span class="s1"><br>
+</span></p>
+<p class="p39"><span class="s4"><a href="http://neerc.ifmo.ru/wiki/index.php?title=Generative_Adversarial_Nets_(GAN)">Generative Adversarial Nets (GAN) — Викиконспекты<span class="s49"></span></a></span></p>
+<p class="p40"><span class="s50"><a href="http://neerc.ifmo.ru/wiki/index.php?title=Generative_Adversarial_Nets_(GAN)">neerc.ifmo.ru<span class="s51"> › wiki › title=Generati...</span></a></span></p>
+<p class="p41"><span class="s52">· <a href="https://translate.google.com/translate?hl=en&amp;sl=ru&amp;u=http://neerc.ifmo.ru/wiki/index.php%3Ftitle%3DGenerative_Adversarial_Nets_(GAN)&amp;prev=search&amp;pto=aue"><span class="s53">Translate this page</span></a></span></p>
+<p class="p42"><span class="s1">Рисунок 2. Иллюстрация процесса тренировки порождающих состязательных </span><span class="s54">сетей</span><span class="s1"> GAN. ... WGAN — использование метрики </span><span class="s54">Вассерштейна</span><span class="s1"> (англ.</span></p>
+<p class="p43"><span class="s48">You visited this page on 3/7/21.</span></p>
+<p class="p36"><span class="s1"><br>
+</span></p>
+<p class="p44"><span class="s40"><a href="https://ru.abcdef.wiki/wiki/Leonid_Vaser%C5%A1te%C4%ADn">https://ru.abcdef.wiki<span class="s55"> › wiki › Leoni...</span></a></span></p>
+<p class="p45"><span class="s30">· <a href="https://translate.google.com/translate?hl=en&amp;sl=ru&amp;u=https://ru.abcdef.wiki/wiki/Leonid_Vaser%25C5%25A1te%25C4%25ADn&amp;prev=search&amp;pto=aue"><span class="s56">Translate this page</span></a></span></p>
+<p class="p46"><span class="s40"><a href="https://ru.abcdef.wiki/wiki/Leonid_Vaser%C5%A1te%C4%ADn">Леонид Васерштейн - Leonid Vaserstein - abcdef.wiki<span class="s57"></span></a></span></p>
+<p class="p40"><span class="s58">May 31, 2021 — </span><span class="s48">Леонид Васерштейн (рус: Леонид Нисонович Васерштейн) является русский - американский математик ,настоящее время профессор по математике в ...</span></p>
+<p class="p36"><span class="s1"><br>
+</span></p>
+<p class="p47"><span class="s59"><br>
+<a href="http://wiki-org.ru/wiki/%D0%9C%D0%B5%D1%82%D1%80%D0%B8%D0%BA%D0%B0_%D0%92%D0%B0%D1%81%D0%B5%D1%80%D1%88%D1%82%D0%B5%D0%B9%D0%BD%D0%B0"><span class="s60">Метрика Васерштейна — Википедия (с комментариями)</span></a></span></p>
+<p class="p48"><span class="s61"><a href="http://wiki-org.ru/wiki/%D0%9C%D0%B5%D1%82%D1%80%D0%B8%D0%BA%D0%B0_%D0%92%D0%B0%D1%81%D0%B5%D1%80%D1%88%D1%82%D0%B5%D0%B9%D0%BD%D0%B0">http://wiki-org.ru<span class="s62"> › wiki › Метрика_...</span></a></span></p>
+<p class="p49"><span class="s1">http://wiki-org.ru</span><span class="s63"> › wiki › Метрика_...</span><span class="s64"> · <a href="https://translate.google.com/translate?hl=en&amp;sl=ru&amp;u=http://wiki-org.ru/wiki/%25D0%259C%25D0%25B5%25D1%2582%25D1%2580%25D0%25B8%25D0%25BA%25D0%25B0_%25D0%2592%25D0%25B0%25D1%2581%25D0%25B5%25D1%2580%25D1%2588%25D1%2582%25D0%25B5%25D0%25B9%25D0%25BD%25D0%25B0&amp;prev=search&amp;pto=aue"><span class="s65">Translate this page</span></a></span></p>
+<p class="p50"><span class="s1"><br>
+</span></p>
+<p class="p51"><span class="s66">Jul 3, 2016 — </span><span class="s1">Сходимость в этой метрике &lt;math&gt;W_p&lt;/math&gt; эквивалентна слабой сходимости мер плюс сходимость первого p-ого момента. Дуальное определение W1 ...</span></p>
+<p class="p49"><span class="s1"><br>
+</span></p>
+<p class="p52"><span class="s44"><br>
+<a href="https://www.google.com/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=&amp;ved=2ahUKEwiwoIihovD1AhVikIkEHTxCAUkQFnoECCcQAQ&amp;url=https%3A%2F%2Fru.unionpedia.org%2F%25D0%259C%25D0%25B5%25D1%2582%25D1%2580%25D0%25B8%25D0%25BA%25D0%25B0_%25D0%2592%25D0%25B0%25D1%2581%25D0%25B5%25D1%2580%25D1%2588%25D1%2582%25D0%25B5%25D0%25B9%25D0%25BD%25D0%25B0&amp;usg=AOvVaw3sqXptiIIE8lMyCQAkZbst"><span class="s67">Метрика Васерштейна - Юнионпедия</span></a></span></p>
+<p class="p53"><span class="s4"><a href="https://www.google.com/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=&amp;ved=2ahUKEwiwoIihovD1AhVikIkEHTxCAUkQFnoECCcQAQ&amp;url=https%3A%2F%2Fru.unionpedia.org%2F%25D0%259C%25D0%25B5%25D1%2582%25D1%2580%25D0%25B8%25D0%25BA%25D0%25B0_%25D0%2592%25D0%25B0%25D1%2581%25D0%25B5%25D1%2580%25D1%2588%25D1%2582%25D0%25B5%25D0%25B9%25D0%25BD%25D0%25B0&amp;usg=AOvVaw3sqXptiIIE8lMyCQAkZbst">https://ru.unionpedia.org<span class="s68"> › Метрика...</span></a></span></p>
+<p class="p49"><span class="s1">https://ru.unionpedia.org</span><span class="s63"> › Метрика...</span><span class="s64"> · <a href="https://translate.google.com/translate?hl=en&amp;sl=ru&amp;u=https://ru.unionpedia.org/%25D0%259C%25D0%25B5%25D1%2582%25D1%2580%25D0%25B8%25D0%25BA%25D0%25B0_%25D0%2592%25D0%25B0%25D1%2581%25D0%25B5%25D1%2580%25D1%2588%25D1%2582%25D0%25B5%25D0%25B9%25D0%25BD%25D0%25B0&amp;prev=search&amp;pto=aue"><span class="s65">Translate this page</span></a></span></p>
+<p class="p50"><span class="s1"><br>
+</span></p>
+<p class="p51"><span class="s1">Springer Science+Business Media (до 1999 г. — Springer-Verlag) — международная издательская компания, специализирующаяся на издании академических журналов и ...</span></p>
+<p class="p36"><span class="s1"><br>
+</span></p>
+<p class="p4"><span class="s1"><br>
+</span></p>
+<p class="p10"><span class="s1"><br>
+</span></p>
+<p class="p7"><span class="s1">French wiki (fr.wiki)<span class="Apple-converted-space">  </span>9 articles</span></p>
+<p class="p5"><span class="s1"><br>
+</span></p>
+<p class="p9"><span class="s4"><a href="https://fr.wikipedia.org/wiki/In%C3%A9galit%C3%A9_de_r%C3%A9arrangement">Inégalité de réarrangement — Wikipédia</a></span></p>
+<p class="p4"><span class="s1">En mathématiques, l'inégalité de réarrangement est un résultat numérique sur l'ordre de produits d'une suite de nombres réels. Sommaire. 1 Énoncé; 2 Démonstration; 3 Applications. 3.1 Job-shop à une machine; 3.2 Tri sans stratégie; 3.3 Inégalité de Tchebychev pour les sommes; 3.4 Distance de Wasserstein L2.</span></p>
+<p class="p8"><span class="s1"><br>
+</span></p>
+<p class="p54"><span class="s4"><a href="https://fr.wikipedia.org/wiki/Fonction_de_r%C3%A9partition">Fonction de répartition — Wikipédia</a></span></p>
+<p class="p4"><span class="s1">, mais c'est un exemple privilégié. Ses utilisations sont nombreuses, allant de propriétés de l'ordre stochastique, à des propriétés de la <a href="https://fr.academic.ru/dic.nsf/frwiki/828967"><span class="s8">distance de Wasserstein</span></a> <a href="http://eom.springer.de/w/w120020.htm"><span class="s8">[1]</span></a>, en passant par le théorème de représentation de Skorohod, voir section suivante.</span></p>
+<p class="p4"><span class="s1"><br>
+</span></p>
+<p class="p11"><span class="s4"><a href="https://fr.wikipedia.org/wiki/Th%C3%A9orie_du_transport">Théorie du transport<span class="s10"></span></a></span></p>
+<p class="p55"><span class="s1">à espérances et variances bornées (ce qui est assuré par la nature des espaces de Radon<span class="Apple-converted-space">  </span>et ). (Comparer cette formulation avec la définition de la <a href="https://fr.wikipedia.org/wiki/M%C3%A9trique_de_Wasserstein"><span class="s69">métrique de Wasserstein</span></a><span class="Apple-converted-space">  </span>sur l'espace des mesures de probabilité.) <br>
+</span></p>
+<p class="p11"><span class="s4"><a href="https://fr.wikipedia.org/wiki/M%C3%A9thode_de_Stein">Méthode de Stein<span class="s10"></span></a></span></p>
+<p class="p4"><span class="s2"><a href="https://fr.wikipedia.org/wiki/M%C3%A9trique_de_Wasserstein">Wasserstein</a></span><span class="s1"> où l'espace mesurable est lui-même</span></p>
+<p class="p4"><span class="s1"><br>
+</span></p>
+<p class="p9"><span class="s4"><a href="https://fr.wikipedia.org/wiki/Somme_de_trois_cubes">Somme de trois cubes</a></span><span class="s6"><span class="Apple-converted-space"> </span></span></p>
+<p class="p4"><span class="s1">(DOI 10.2307/2003763, JSTOR 2003763, Math Reviews 0175843) W. Conn et L. N. Vaserstein, « On sums of three integral cubes », dans The Rademacher legacy to mathematics</span></p>
+<p class="p4"><span class="s1">34 Kio (4 082 mots) - 10 juillet 2020 à 08:21</span></p>
+<p class="p4"><span class="s1"><br>
+</span></p>
+<p class="p9"><span class="s4"><a href="https://fr.wikipedia.org/wiki/K-th%C3%A9orie_alg%C3%A9brique">K-théorie algébrique</a></span><span class="s6"><span class="Apple-converted-space"> </span></span></p>
+<p class="p4"><span class="s1">exceptions répertoriées, K1(A) est isomorphe à l'abélianisé de A× : (en) L. N. Vaserstein (en), « On the Whitehead determinant for semi-local rings », J. Algebra</span></p>
+<p class="p4"><span class="s1">40 Kio (4 655 mots) - 18 septembre 2020 à 12:45</span></p>
+<p class="p4"><span class="s1"><br>
+</span></p>
+<p class="p9"><span class="s4"><a href="https://fr.wikipedia.org/wiki/Nicola_Gigli">Nicola Gigli</a></span><span class="s6"><span class="Apple-converted-space"> </span></span></p>
+<p class="p4"><span class="s1">Struktur von Wasserstein-Räumen (wo eine nach Leonid Wasserstein (Leonid Vaseršteĭn) benannte Metrik zwischen Wahrscheinlichkeitsverteilungen in metrischen</span></p>
+<p class="p4"><span class="s1">3 Kio (350 mots) - 3 octobre 2017 à 01:31</span></p>
+<p class="p4"><span class="s1"><br>
+</span></p>
+<p class="p9"><span class="s4"><a href="https://fr.wikipedia.org/wiki/Neena_Gupta_(math%C3%A9maticienne)">Neena Gupta (mathématicienne)</a></span><span class="s6"><span class="Apple-converted-space"> </span></span></p>
+<p class="p4"><span class="s1">Mathematica, June 2014 avec Dhvanita R. Rao, On the non-injectivity of the Vaserstein symbol in dimension three, Journal of Algebra, février 2014 On Zariski's</span></p>
+<p class="p4"><span class="s1">8 Kio (900<span class="Apple-converted-space"> </span></span></p>
+<p class="p4"><span class="s1"><br>
+</span></p>
+<p class="p11"><span class="s4"><a href="https://fr.wikipedia.org/wiki/Distance_statistique">Distance statistique<span class="s10"></span></a></span></p>
+<p class="p4"><span class="s1">Wasserstein</span></p>
+<p class="p4"><span class="s1"><br>
+</span></p>
+<p class="p4"><span class="s1"><br>
+</span></p>
+<p class="p56"><span class="s3"><br>
+</span><span class="s1">German wiki<span class="Apple-converted-space">  </span>(de.wiki)<span class="Apple-converted-space">  </span>6 articles</span></p>
+<p class="p56"><span class="s1"><br>
+</span></p>
+<p class="p57"><span class="s4"><a href="https://de.wikipedia.org/wiki/Leonid_Vaser%C5%A1te%C4%ADn">Leonid Vaseršteĭn<span class="s10"></span></a></span></p>
+<p class="p11"><span class="s4"><a href="https://de.wikipedia.org/wiki/Generative_Adversarial_Networks">Generative Adversarial Networks<span class="s10"></span></a></span></p>
+<p class="p4"><span class="s1">Martin Erdmann, Jonas Glombitza, Thorben Quast: Precise Simulation of Electromagnetic Calorimeter Showers Using a Wasserstein Generative Adversarial Network. In: Computing and Software for Big Science. 3, 2019, S. 4. <a href="https://de.wikipedia.org/wiki/ArXiv"><span class="s8">arxiv</span></a>:<a href="https://arxiv.org/abs/1807.01954"><span class="s8"><span class="Apple-converted-space"> </span></span></a></span></p>
+<p class="p5"><span class="s1"><br>
+</span></p>
+<p class="p9"><span class="s4"><a href="https://de.wikipedia.org/wiki/Wasserstein-Metrik">Wasserstein-Metrik</a></span><span class="s6"><span class="Apple-converted-space"> </span></span></p>
+<p class="p4"><span class="s1">Die Wasserstein-Metrik (auch Vaserstein-Metrik) ist eine Metrik zwischen Wahrscheinlichkeitsmaßen auf einem gegebenen metrischen Raum. Intuitiv kann man</span></p>
+<p class="p4"><span class="s1">8 KB (1.397 Wörter) - 17:54, 21. Mai 2019</span></p>
+<p class="p58"><span class="s1"><span class="Apple-converted-space"> </span></span></p>
+<p class="p11"><span class="s4"><a href="https://it.wikipedia.org/wiki/Nicola_Gigli_(matematico)">Nicola Gigli<span class="s10"></span></a></span></p>
+<p class="p4"><span class="s1">Er befasste sich mit Existenz- und Eindeutigkeitsfragen zu <a href="https://de.wikipedia.org/w/index.php?title=Gradientenfluss&amp;action=edit&amp;redlink=1"><span class="s8">Gradientenflüssen</span></a> in <a href="https://de.wikipedia.org/wiki/Metrischer_Raum"><span class="s8">metrischen Räumen</span></a>, Struktur von <a href="https://de.wikipedia.org/wiki/Wasserstein-Raum"><span class="s8">Wasserstein-Räumen</span></a> (wo eine nach <a href="https://de.wikipedia.org/wiki/Leonid_Vaser%C5%A1te%C4%ADn"><span class="s8">Leonid Wasserstein</span></a> (Leonid Vaseršteĭn) benannte <a href="https://de.wikipedia.org/wiki/Wasserstein-Metrik"><span class="s8">Metrik</span></a> zwischen</span></p>
+<p class="p5"><span class="s1"><br>
+</span></p>
+<p class="p59"><span class="s2"><a href="https://fr.wikipedia.org/wiki/K-th%C3%A9orie_alg%C3%A9brique"><span class="Apple-converted-space"> </span></a></span><span class="s45"> <a href="https://de.wikipedia.org/wiki/Summe_von_drei_Kubikzahlen"><span class="s70">Summe von drei Kubikzahlen</span></a></span></p>
+<p class="p4"><span class="s1">Conn, Vaserstein</span></p>
+<p class="p60"><span class="s1"><br>
+</span></p>
+<h1 style="margin: 0.0px 0.0px 5.4px 0.0px; font: 12.0px Times; color: #0000e9; -webkit-text-stroke: #000000"><span class="s4"><a href="https://de.wikipedia.org/wiki/Boris_Weisfeiler">Boris Weisfeiler<span class="s10"></span></a></span></h1>
+<ul class="ul2">
+  <li class="li62"><span class="s71"></span><span class="s48">mit Matthews, Vaserstein: Congruence properties of Zariski-dense subgroups. I. Proc. London Math. Soc. (3) 48 (1984), no. 3, 514–532.</span></li>
+</ul>
+<p class="p4"><span class="s1"><br>
+</span></p>
+<p class="p63"><span class="s1">Italian wiki (it.wiki) <span class="Apple-converted-space">  </span>4</span></p>
+<p class="p9"><span class="s4"><a href="https://it.wikipedia.org/wiki/Funzione_lineare">Funzione lineare</a></span><span class="s6"><span class="Apple-converted-space"> </span></span></p>
+<p class="p4"><span class="s1">Transcendentals, edition 7E, Brooks/Cole. ISBN 978-0-538-49790-9 (EN) Leonid N. Vaserstein (2006), "Linear Programming", in Leslie Hogben, ed., Handbook of Linear</span></p>
+<p class="p4"><span class="s1">5 KB (977 parole) - 20:11, 9 ott 2018</span></p>
+<p class="p4"><span class="s1"><br>
+</span></p>
+<p class="p64"><span class="s4"><a href="https://it.wikipedia.org/wiki/Distribuzione_marginale">Distribuzione marginale<span class="s72"></span></a></span></p>
+<p class="p65"><span class="s1">Metrica di <b>Wasserstein</b></span></p>
+<p class="p66"><span class="s1"><br>
+</span></p>
+<p class="p64"><span class="s4"><a href="https://it.wikipedia.org/wiki/Confronto_tra_campioni_indipendenti">Confronto tra campioni indipendenti<span class="s72"></span></a></span></p>
+<p class="p65"><span class="s1">distanza di <b>Vaseršteĭn</b></span></p>
+<p class="p66"><span class="s1"><br>
+</span></p>
+<p class="p64"><span class="s4"><a href="https://de.wikipedia.org/wiki/Wasserstein-Metrik">Wasserstein-Metrik<span class="s72"></span></a></span></p>
+<p class="p65"><span class="s1">Die Wasserstein-Metrik (auch <b>Vaserstein</b>-Metrik) ist eine Metrik zwischen Wahrscheinlichkeitsmaßen auf einem gegebenen metrischen Raum. Intuitiv kann man</span></p>
+<p class="p4"><span class="s1"><br>
+</span></p>
+<p class="p63"><span class="s1"><br>
+Swedish wiki (sw.wiki) <span class="Apple-converted-space"> </span></span></p>
+<p class="p67"><span class="s22"><a href="https://sv.wikipedia.org/wiki/Algebraisk_K-teori"><b><i>K</i></b><span class="s73"><b>-théorie algébrique</b></span></a></span></p>
+<p class="p68"><span class="s4"><a href="https://fr.wikipedia.org/wiki/Somme_de_trois_cubes"><span class="Apple-converted-space"> </span><span class="s74"></span></a></span></p>
+<p class="p69"><span class="s1">Ukrainian wiki (uk.wiki) 2</span></p>
+<p class="p9"><span class="s4"><a href="https://uk.wikipedia.org/wiki/%D0%9F%D0%B5%D1%80%D0%B5%D1%82%D0%B2%D0%BE%D1%80%D0%B5%D0%BD%D0%BD%D1%8F_%D0%A0%D0%B0%D0%B4%D0%BE%D0%BD%D0%B0">Перетворення Радона</a></span><span class="s6"><span class="Apple-converted-space"> </span></span></p>
+<p class="p4"><span class="s1">Bonneel, N.; Rabin, J.; Peyre, G.; Pfister, H. (2015). Sliced and Radon Wasserstein Barycenters of Measures. Journal of Mathematical Imaging and Vision 51:</span></p>
+<p class="p4"><span class="s1">32 КБ (3082 слова) - 01:56, 12 червня 2020</span></p>
+<p class="p4"><span class="s1"><br>
+</span></p>
+<h1 style="margin: 0.0px 0.0px 5.4px 0.0px; font: 21.6px Georgia; color: #0000e9; -webkit-text-stroke: #000000"><span class="s4"><a href="https://uk.wikipedia.org/wiki/%D0%A1%D1%83%D0%BC%D0%B0_%D1%82%D1%80%D1%8C%D0%BE%D1%85_%D0%BA%D1%83%D0%B1%D1%96%D0%B2">Сума трьох кубів<span class="s75"></span></a></span></h1>
+<h1 style="margin: 0.0px 0.0px 5.4px 0.0px; font: 21.6px Georgia; color: #000000; -webkit-text-stroke: #000000"><span class="s1"><span class="Apple-converted-space"> </span>Conn, Vaserstein</span></h1>
+<p class="p4"><span class="s1"><br>
+</span></p>
+<p class="p72"><span class="s1"><br>
+</span></p>
+<p class="p69"><span class="s1">Assamese wiki (as.wiki)</span></p>
+<p class="p73"><span class="s1"><br>
+</span></p>
+<p class="p74"><span class="s1"><b>নীনা</b></span><span class="s76"><b> </b></span><span class="s1"><b>গুপ্তা</b></span><span class="s76"><b> (</b></span><span class="s1"><b>গণিতজ্ঞ</b></span><span class="s76"><b>) [</b><a href="https://as.wikipedia.org/wiki/%E0%A6%A8%E0%A7%80%E0%A6%A8%E0%A6%BE_%E0%A6%97%E0%A7%81%E0%A6%AA%E0%A7%8D%E0%A6%A4%E0%A6%BE_(%E0%A6%97%E0%A6%A3%E0%A6%BF%E0%A6%A4%E0%A6%9C%E0%A7%8D%E0%A6%9E)"><span class="s5"><b>Gupta</b></span></a><b>]</b></span></p>
+<p class="p73"><span class="s1"><b>Vaserstein</b></span></p>
+<p class="p73"><span class="s1"><br>
+</span></p>
+<p class="p75"><span class="s1">Bengali wiki (bn.wiki)</span></p>
+<p class="p73"><span class="s1"><br>
+</span></p>
+<p class="p74"><span class="s1"><b>নীনা</b></span><span class="s76"><b> </b></span><span class="s1"><b>গুপ্তা</b></span><span class="s76"><b> (</b></span><span class="s1"><b>গণিতবিদ</b></span><span class="s76"><b>) <span class="Apple-converted-space">    </span></b><a href="https://bn.wikipedia.org/wiki/%E0%A6%A8%E0%A7%80%E0%A6%A8%E0%A6%BE_%E0%A6%97%E0%A7%81%E0%A6%AA%E0%A7%8D%E0%A6%A4%E0%A6%BE_(%E0%A6%97%E0%A6%A3%E0%A6%BF%E0%A6%A4%E0%A6%AC%E0%A6%BF%E0%A6%A6)"><span class="s5"><b>Gupta</b></span></a></span></p>
+<p class="p73"><span class="s1"><b>Vaserstein</b></span></p>
+<p class="p4"><span class="s1"><i>Rao, Dhvanita R.; Gupta, Neena (</i></span><span class="s77">২০১৪</span><span class="s1"><i>-</i></span><span class="s77">০২</span><span class="s1"><i>-</i></span><span class="s77">০১</span><span class="s1"><i>)</i></span><span class="s77">।</span><span class="s1"><i> "On the non-injectivity of the Vaserstein symbol in dimension three"</i></span><span class="s77">।</span><span class="s1"><i> Journal of Algebra</i></span><span class="s77">।</span><span class="s1"><i> </i><b><i>399</i></b><i>: 378–388</i></span><span class="s77">।</span><span class="s1"><i> </i><a href="https://bn.wikipedia.org/wiki/%E0%A6%86%E0%A6%A8%E0%A7%8D%E0%A6%A4%E0%A6%B0%E0%A7%8D%E0%A6%9C%E0%A6%BE%E0%A6%A4%E0%A6%BF%E0%A6%95_%E0%A6%AE%E0%A6%BE%E0%A6%A8_%E0%A6%95%E0%A7%8D%E0%A6%B0%E0%A6%AE%E0%A6%BF%E0%A6%95_%E0%A6%B8%E0%A6%82%E0%A6%96%E0%A7%8D%E0%A6%AF%E0%A6%BE"><span class="s78">আইএসএসএন</span></a><i> </i><a href="https://www.worldcat.org/issn/0021-8693"><span class="s79"><i>0021-8693</i></span></a></span><span class="s77">।</span><span class="s1"><i> </i><a href="https://bn.wikipedia.org/wiki/%E0%A6%A1%E0%A6%BF%E0%A6%9C%E0%A6%BF%E0%A6%9F%E0%A6%BE%E0%A6%B2_%E0%A6%85%E0%A6%AC%E0%A6%9C%E0%A7%87%E0%A6%95%E0%A7%8D%E0%A6%9F_%E0%A6%86%E0%A6%87%E0%A6%A1%E0%A7%87%E0%A6%A8%E0%A7%8D%E0%A6%9F%E0%A6%BF%E0%A6%AB%E0%A6%BE%E0%A6%AF%E0%A6%BC%E0%A6%BE%E0%A6%B0"><span class="s78">ডিওআই</span></a><i>:</i><a href="https://doi.org/10.1016%2Fj.jalgebra.2013.09.049"><span class="s79"><i>10.1016/j.jalgebra.2013.</i></span></a></span></p>
+<p class="p4"><span class="s1">With Dhvanita R. Rao, <i>On the non-injectivity of the Vaserstein symbol in dimension three</i>, Journal of Algebra, February 20</span></p>
+<p class="p73"><span class="s1"><br>
+</span></p>
+<p class="p75"><span class="s1">Odia wiki (or.wiki)</span></p>
+<p class="p73"><span class="s1"><br>
+</span></p>
+<p class="p76"><span class="s1">ନୀନା</span><span class="s76"><b> </b></span><span class="s1">ଗୁପ୍ତା</span><span class="s76"><b> (</b></span><span class="s1">ଗଣିତଜ୍ଞ</span><span class="s76"><b>) <span class="Apple-converted-space">  </span></b><a href="https://or.wikipedia.org/wiki/%E0%AC%A8%E0%AD%80%E0%AC%A8%E0%AC%BE_%E0%AC%97%E0%AD%81%E0%AC%AA%E0%AD%8D%E0%AC%A4%E0%AC%BE_(%E0%AC%97%E0%AC%A3%E0%AC%BF%E0%AC%A4%E0%AC%9C%E0%AD%8D%E0%AC%9E)"><span class="s5"><b>Gupta</b></span></a></span></p>
+<p class="p73"><span class="s1"><b>Vaserstein</b></span></p>
+<p class="p73"><span class="s1"><br>
+</span></p>
+<p class="p73"><span class="s1"><br>
+</span></p>
+<p class="p75"><span class="s1">Telugu wiki (te.wiki)</span></p>
+<p class="p24"><span class="s1"><br>
+</span></p>
+<p class="p77"><span class="s1"><b>నీనా</b></span><span class="s76"><b> </b></span><span class="s1"><b>గుప్తా</b></span><span class="s76"><b> (</b></span><span class="s1"><b>గణిత</b></span><span class="s76"><b> </b></span><span class="s1"><b>శాస్త్రవేత్త</b></span><span class="s76"><b>)<span class="Apple-converted-space">  </span></b><a href="https://te.wikipedia.org/wiki/%E0%B0%A8%E0%B1%80%E0%B0%A8%E0%B0%BE_%E0%B0%97%E0%B1%81%E0%B0%AA%E0%B1%8D%E0%B0%A4%E0%B0%BE_(%E0%B0%97%E0%B0%A3%E0%B0%BF%E0%B0%A4_%E0%B0%B6%E0%B0%BE%E0%B0%B8%E0%B1%8D%E0%B0%A4%E0%B1%8D%E0%B0%B0%E0%B0%B5%E0%B1%87%E0%B0%A4%E0%B1%8D%E0%B0%A4)"><span class="s5"><b>Gupta</b></span></a></span></p>
+<p class="p73"><span class="s1"><b>Vaserstein</b></span></p>
+<p class="p73"><span class="s1"><br>
+</span></p>
+<p class="p73"><span class="s1"><br>
+</span></p>
+<p class="p24"><span class="s1"><b>Japanese wiki (ja.wiki)<span class="Apple-converted-space"> </span></b></span></p>
+<p class="p73"><span class="s1"><br>
+</span></p>
+<p class="p78"><span class="s80"><a href="https://ja.wikipedia.org/wiki/%E3%83%AF%E3%83%83%E3%82%B5%E3%83%BC%E3%82%B9%E3%82%BF%E3%82%A4%E3%83%B3%E8%A8%88%E9%87%8F"><b>ワッサースタイン計量 </b></a></span><span class="s81"><b><span class="Apple-converted-space">    </span></b></span><span class="s1">Wasserstein metric</span></p>
+<p class="p1"><span class="s76"><span class="Apple-converted-space"> </span></span><span class="s82"> </span><span class="s1"><br>
+</span></p>
+<p class="p1"><span class="s1"><br>
+</span></p>
+<p class="p79"><span class="s1">Chinese wiki (zh.wiki)<span class="Apple-converted-space">  </span>2 articles</span></p>
+<p class="p1"><span class="s1"><br>
+</span></p>
+<p class="p80"><span class="s40"><a href="https://zh.wikipedia.org/wiki/%E4%B8%89%E7%AB%8B%E6%96%B9%E6%95%B0%E5%92%8C">三立方数和<span class="s83">[</span><span class="s84">编辑</span><span class="s83">]</span></a></span></p>
+<p class="p81"><span class="s40"><a href="https://zh.wikipedia.org/wiki/%E4%B8%89%E7%AB%8B%E6%96%B9%E6%95%B0%E5%92%8C">维基百科，自由的百科全书<span class="s85"></span></a></span></p>
+<p class="p1"><span class="s1">[three cubes]</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space"> </span>Conn, W.; Vaserstein, L. N., On sums of three integral cubes, The Rademacher legacy to mathematics (University Park, PA, 1992), Contemporary Mathematics 166, Providence, Rhode Island: American<span class="Apple-converted-space"> </span></span></p>
+<p class="p4"><span class="s1"><br>
+</span></p>
+<p class="p4"><span class="s86"><a href="https://zh.wikipedia.org/wiki/%E5%8A%A0%E6%96%AF%E5%B8%95%E5%B0%94%C2%B7%E8%92%99%E6%97%A5"><b>斯帕</b><span class="s87"><b>·</b></span><span class="s4"><b>蒙日，佩吕斯伯爵</b></span></a></span><span class="s88">（</span><span class="s1"><b>Gaspard Monge</b></span><span class="s88">，</span></p>
+<p class="p4"><span class="s1">L. V. Kantorovich, P. Levy, L. N. Wasserstein</span></p>
+<p class="p82"><span class="s1"><br>
+</span></p>
+<p class="p4"><span class="s1"><br>
+</span></p>
+<p class="p83"><span class="s89"><b><span class="Apple-converted-space"> </span></b></span><span class="s4"><b>Encyclopedia of Mathematics<span class="Apple-converted-space">  </span>12 articles</b></span></p>
+<p class="p83"><span class="s1"><br>
+</span></p>
+<p class="p83"><span class="s1"><br>
+</span></p>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; color: #0000e9; -webkit-text-stroke: #000015"><span class="s4"><a href="https://books.google.com/books?id=IUPsCAAAQBAJ&amp;pg=PA584&amp;dq=minlos+wasserstein&amp;hl=en&amp;newbks=1&amp;newbks_redir=1&amp;sa=X&amp;ved=2ahUKEwi2yrXsv5btAhWyslkKHQe5DNkQ6AEwAXoECAYQAg"><b>Encyclopaedia of Mathematics: Supplement Volume II - Page 584</b><span class="s90"><b></b></span></a></span></h3>
+<p class="p4"><span class="s1">Michiel Hazewinkel · 2012</span></p>
+<p class="p4"><span class="s1">Found inside – Page 584</span></p>
+<p class="p4"><span class="s1">... temperate —; variable —; Vasershtei n —; <i>Wasserstein</i> –; Weyl canonical form of a space-time — metric algorithm see: ... Minkowski sum [52AO5] (see: Minkowski addition) Minkowski theorem see: Hasse—— <i>Minlos</i> theorem [81T05] (see:</span></p>
+<p class="p83"><span class="s1"><br>
+</span></p>
+<p class="p85"><span class="s4"><a href="https://books.google.com/books?id=1ttmCRCerVUC&amp;pg=PR2&amp;dq=vaserstein,ln&amp;hl=en&amp;newbks=1&amp;newbks_redir=1&amp;sa=X&amp;ved=2ahUKEwj9p8H2xuTsAhWEl3IEHZOfBh84ChDoATAHegQIAhAC"><b>Encyclopaedia of Mathematics: Stochastic Approximation — ... - Page ii</b><span class="s91"><b></b></span></a></span></p>
+<p class="p4"><span class="s1">Michiel Hazewinkel · 1993</span></p>
+<p class="p4"><span class="s1">Found inside – Page ii</span></p>
+<p class="p4"><span class="s1">... L. Streit, K. Stromberg, L. G. Suttorp, D. Tabak, F. Takens, R. J. Takens, N. M. Temme, S. H. Tijs, B. Trakhtenbrot, <i>L. N. Vaserstein</i>, M. L. J. van de Vel, F. D. Veldkamp, P. M. B. Vitanyi, N. J. Vlaar, H. A. van der Vorst, J. de Vries, F. Waldhausen, </span></p>
+<p class="p4"><span class="s1"><br>
+</span></p>
+<p class="p85"><span class="s4"><a href="https://books.google.com/books?id=PE1a-EIG22kC&amp;pg=PR2&amp;dq=vaserstein,ln&amp;hl=en&amp;newbks=1&amp;newbks_redir=1&amp;sa=X&amp;ved=2ahUKEwj9p8H2xuTsAhWEl3IEHZOfBh84ChDoATAIegQIARAC"><b>Encyclopaedia of Mathematics (set) - Page ii</b><span class="s91"><b></b></span></a></span></p>
+<p class="p4"><span class="s1">Michiel Hazewinkel · 1994</span></p>
+<p class="p4"><span class="s1">Found inside – Page ii</span></p>
+<p class="p4"><span class="s1">... J. H. M. Steenbrink , J. D. Stegeman , F. W. Steutel , P. Stevenhagen , I. Stewart , R. Stong , L. Streit , K. Stromberg , L. G. Suttorp , D. Tabak , F. Takens , R. J. Takens , N. M. Temme , S. H. Tijs , B. Trakhtenbrot , <i>L. N. Vaserstein</i> , M. L. J. van de ...</span></p>
+<p class="p86"><span class="s1"><br>
+</span></p>
+<p class="p85"><span class="s4"><a href="https://link.springer.com/content/pdf/bfm%3A978-94-015-1233-6%2F1.pdf"><b>ENCYCLOPAEDIA OF MATHEMATICS</b><span class="s91"><b></b></span></a></span></p>
+<p class="p86"><span class="s1"><b>Scientific Board</b></span></p>
+<p class="p4"><span class="s1">… N. M. Temme, S. H. Tijs, B. Trakhtenbrot, L. N. <i>Vaserstein</i>, M. L. J. van de Vel, F. D.. Veldkamp, P. M. B. Vitanyi, N. J. Vlaar, H. A. van der Vorst, J. de Vries, ...</span></p>
+<p class="p8"><span class="s1"><br>
+</span></p>
+<p class="p85"><span class="s4"><a href="https://www.encyclopediaofmath.org/index.php/Wasserstein_metric"><b>Wasserstein metric - Encyclopedia of Mathematics</b><span class="s91"><b></b></span></a></span></p>
+<p class="p4"><span class="s1">Jun 21, 2014 - <i>Wasserstein</i> metric. From <i>Encyclopedia</i> of Mathematics. Jump to: navigation, search. Vasershtein metric. The "<i>Wasserstein</i> metric" has a ...</span></p>
+<p class="p58"><span class="s1"><span class="Apple-converted-space"> </span></span></p>
+<p class="p85"><span class="s4"><a href="https://encyclopediaofmath.org/wiki/Wasserstein_metric"><b>Wasserstein metric - Encyclopedia of Mathematics</b><span class="s91"><b></b></span></a></span></p>
+<p class="p4"><span class="s1">Jul 1, 2020 — <i>Wasserstein</i> metric. From <i>Encyclopedia</i> of Mathematics. Jump to: navigation, search. Vasershtein metric. The "<i>Wasserstein</i> metric" has ...</span></p>
+<p class="p5"><span class="s1"><br>
+</span></p>
+<p class="p86"><span class="s4"><b>T</b><a href="https://encyclopediaofmath.org/wiki/Talk:Wasserstein_metric"><span class="s92"><b>alk:Wasserstein metric - Encyclopedia of Mathematics</b></span></a></span></p>
+<p class="p4"><span class="s1">Jun 22, 2014 — Talk:<i>Wasserstein</i> metric. From <i>Encyclopedia of Mathematics</i>. Jump to: navigation, search. I was trying to cite some of the bibliographical ...</span></p>
+<p class="p5"><span class="s1"><br>
+</span></p>
+<p class="p85"><span class="s4"><a href="https://books.google.com/books?id=IUPsCAAAQBAJ&amp;pg=PA487&amp;dq=wasserstein+Word+problems+vaserstein&amp;hl=en&amp;newbks=1&amp;newbks_redir=1&amp;sa=X&amp;ved=2ahUKEwjqrozK3NfsAhW2j3IEHX12DukQ6AEwAnoECAUQAg"><b>Encyclopaedia of Mathematics: Supplement Volume II - Page 487</b><span class="s91"><b></b></span></a></span></p>
+<p class="p4"><span class="s1">Michiel Hazewinkel · 2012</span></p>
+<p class="p4"><span class="s1">Found inside – Page 487</span></p>
+<p class="p4"><span class="s1">[3] FRENKEL, E., KAC, V., RADUL, A., AND WANG, W.: “W1+ce and W(gln) with central charge N', Comm. <i>Math</i>. Phys. ... Martin Schlichenmaier MSC 1991: 17B68, 17B81, 81R10 <i>WASSERSTEIN</i> METRIC, <i>Vasershtein</i> metric – The '<i>Wasserstein</i> ... This work was motivated by the classical Monge transportation <i>problem</i>.</span></p>
+<p class="p4"><span class="s1">Found inside – Page 487</span></p>
+<p class="p4"><span class="s1"><i>Math</i>. Phys. 170 (1995), 337–357. [4] KAC, V.G., AND PETERSON, D.H.: “Spin and wedge representations of infinite-dimensional Lie algebras and groups', Proc. Nat. Acad. Sci. USA 78 (1981), 3308–3312. <i>WASSERSTEIN METRIC</i> [5] KAC, ...</span></p>
+<p class="p4"><span class="s1">Found inside – Page 488</span></p>
+<p class="p4"><span class="s1">Maybe historically the name Gini-Dall'Aglio–Kantorovich– <i>Vasershtein</i>–Mallows metric would be correct for this <i>class</i> of metrics. ... [5] GRAY, R.M., NEUHoFF, D.L., AND SHIELDs, <i>P.C.</i>: “A generalization to Ornstein's d-distance with applications to information theory', Ann. Probab. ... [8] MALLOWS, C.L.: “A <i>note on</i> asymptotic joint normality”, Ann. Math. ... [10] <i>WASSERSTEIN</i>, L.N.: “Markov processes over denumerable products of spaces describing large systems of automata', Probl.</span></p>
+<p class="p4"><span class="s1"><br>
+</span></p>
+<p class="p5"><span class="s1"><br>
+</span></p>
+<p class="p85"><span class="s4"><a href="https://encyclopediaofmath.org/wiki/Stable_rank"><b>Stable rank - Encyclopedia of Mathematic</b><span class="s91"><b></b></span></a></span></p>
+<p class="p4"><span class="s1">Jun 6, 2020 — The left <i>stable</i> rank of R is the least integer n such that for each m&gt;n and left unimodular ... Both Bass' and <i>Vaserstein's</i> theorem indicate that st.r. ... (Such a property is referred to as a <i>stable range</i> condition, cf., e.g., [a4]).</span></p>
+<p class="p4"><span class="s1"><br>
+</span></p>
+<p class="p5"><span class="s1"><br>
+</span></p>
+<p class="p85"><span class="s4"><a href="https://encyclopediaofmath.org/wiki/Stability_theorems_in_algebraic_K-theory"><b>Stability theorems in algebraic K-theory - Encyclopedia of </b></a></span><span class="s5"><b>Mathematics</b></span></p>
+<p class="p4"><span class="s1">Jan 17, 2020 — [a2], L.N. <i>Vaserstein</i>, " -theory and the <i>congruence</i> subgroup problem" Math. ... URL: http://<i>encyclopediaofmath</i>.org/index.php?title= ... (originator), which appeared in <i>Encyclopedia</i> of <i>Mathematics</i> - ISBN 1402006098.</span></p>
+<p class="p4"><span class="s1"><br>
+</span></p>
+<p class="p87"><span class="s92"><b>Encyclop</b><a href="https://link.springer.com/content/pdf/bfm%3A978-94-015-1233-6%2F1.pdf"><span class="s93"><b>EDIA OF MATHEMATICS</b></span></a></span></p>
+<p class="p4"><span class="s1">Bardos, H. Bart, H. <i>Bass</i>, A. Bensoussan, M. Bercovier, L. Berkovitz, M. Berger ... N. M. Temme, S. H. Tijs, B. Trakhtenbrot, L. N. <i>Vaserstein</i>, M. L. J. van de Vel, F. D. ... This <i>ENCYCLOPAEDIA</i> OF <i>MATHEMATICS</i> aims to be a reference work for ...</span></p>
+<p class="p4"><span class="s1"><br>
+</span></p>
+<p class="p85"><span class="s4"><a href="https://books.google.com/books?id=nszrCAAAQBAJ&amp;pg=PA472&amp;lpg=PA472&amp;dq=mathematics+encyclopedia++++%22vaserstein%22++bass&amp;source=bl&amp;ots=Sd6noc7AN0&amp;sig=ACfU3U0_R_SJWW5dNLVA8kUZfPw3BhIA1g&amp;hl=en&amp;sa=X&amp;ved=2ahUKEwiS5qC5oeXsAhXAg3IEHfgXAdUQ6AEwB3oECAgQAg"><b>cyclopaedia of Mathematics: Reaction-Diffusion Equation - ...</b><span class="s91"><b></b></span></a></span></p>
+<p class="p4"><span class="s1">(RIX1, . . . , X,j)sm + n + 1 (<i>Bass</i>' theorem). Let X be a topological space, Y a ... Both <i>Bass</i>' and <i>Vaserstein's</i> theorem indicate that st.r.(R)-1 is a good dimension ...</span></p>
+<p class="p4"><span class="s1">Michiel Hazewinkel · 2012 · ‎Mathematics</span></p>
+<p class="p4"><span class="s1"><br>
+</span></p>
+<p class="p82"><span class="s1"><br>
+</span></p>
+<p class="p88"><span class="s4"><a href="https://plato.stanford.edu/index.html">Stanford Encyclopedia of Philosophy<span class="s94"></span></a></span></p>
+<p class="p5"><span class="s1"><br>
+</span></p>
+<p class="p9"><span class="s4"><a href="https://plato.stanford.edu/search/r?entry=/entries/qt-uncertainty/&amp;page=1&amp;total_hits=3&amp;pagesize=10&amp;archive=None&amp;rank=0&amp;query=wasserstein">The Uncertainty Principle<span class="Apple-converted-space"> </span></a></span></p>
+<p class="p4"><span class="s1">\(\nu(p)\). The distance they chose is the <b>Wasserstein</b>-2 distance, a.k.a. (a variation on) the earth-movers<b>...</b>earth-movers distance. Definition (<b>Wasserstein</b>-2 distance) Let \(\mu(x)\) and \(\mu'(y)\) be any two probability<b>...</b><span class="Apple-converted-space"> </span></span></p>
+<p class="p4"><span class="s1">Jan Hilgevoord and Jos Uffink<span class="Apple-converted-space"> </span></span></p>
+<p class="p89"><span class="s4"><a href="https://plato.stanford.edu/search/r?entry=/entries/qt-uncertainty/&amp;page=1&amp;total_hits=3&amp;pagesize=10&amp;archive=None&amp;rank=0&amp;query=wasserstein">https://plato.stanford.edu/entries/qt-uncertainty/</a></span><span class="s6"><span class="Apple-converted-space"> </span></span></p>
+<p class="p90"><span class="s1">The distance they chose is the Wasserstein-2 distance, a.k.a. (a variation on) the earth-movers distance.</span></p>
+<p class="p90"><span class="s1"><i>Definition</i> (Wasserstein-2 distance)<span class="Apple-converted-space"> </span></span></p>
+<p class="p5"><span class="s1"><br>
+</span></p>
+<p class="p91"><span class="s3"><br>
+</span><span class="s1">Encyclopedia of distances <span class="Apple-converted-space">  </span>7 editions</span></p>
+<p class="p18"><span class="s45"><br>
+</span><span class="s91"><b><span class="Apple-converted-space"> </span></b></span></p>
+<p class="p4"><span class="s95"><a href="https://www.google.com/books/edition/Dictionary_of_Distances/I-PQH8gcOjUC?">Dictionary<span class="Apple-converted-space">  </span>of distances</a></span><span class="s1"> Pages 188, 384, 39198 <span class="Apple-converted-space"> </span></span></p>
+<p class="p9"><span class="s4"><a href="https://www.google.com/search?tbm=bks&amp;tbm=bks&amp;q=inauthor:%22Michel-Marie+Deza%22&amp;sa=X&amp;ved=2ahUKEwjTho7xwNfsAhVVlnIEHfknC1UQ9AgwA3oECAQQBQ">Michel-Marie Deza</a></span><span class="s6">, ‎<a href="https://www.google.com/search?tbm=bks&amp;tbm=bks&amp;q=inauthor:%22Elena+Deza%22&amp;sa=X&amp;ved=2ahUKEwjTho7xwNfsAhVVlnIEHfknC1UQ9AgwA3oECAQQBg"><span class="s7">Elena Deza</span></a> · 2006</span></p>
+<p class="p5"><span class="s6">First edition 2006 <span class="Apple-converted-space">  </span><a href="https://www.google.com/search?q=inpublisher:%22Elsevier+Science%22&amp;tbm=bks&amp;sa=X&amp;ved=2ahUKEwiaqceJsNfsAhVTl3IEHWcDBLkQmxMoADAIegQIJhAC"><span class="s7">lsevier Science</span></a></span><span class="s4"> Nov 16, 2006</span></p>
+<p class="p4"><span class="s1">Found inside – Page 188</span></p>
+<p class="p4"><span class="s1">It is equal to 1 if X and Y are independent. (Cf. a different one, normalized information <i>distance</i>). • Kantorovich–Mallows–Monge–<i>Wasserstein</i> metric Given a metric space (X,d), the Kantorovich–Mallows–Monge–<i>Wasserstein</i> metric is defined ...</span></p>
+<p class="p4"><span class="s1"><br>
+</span></p>
+<p class="p92"><span class="s4"><a href="file:///Users/LV/Desktop/A-Zpapers.f/V.f/Vaserstein.f/deza-elena-deza.pdf">Encyclopedia of distances </a></span><span class="s89"><br>
+Springer 2009<span class="Apple-converted-space">    </span>pdf</span></p>
+<p class="p93"><span class="s1">Wasserstein metric, 254<span class="Apple-converted-space"> </span></span></p>
+<p class="p93"><span class="s1">Kantorovich–Mallows–Monge–Wasserstein<span class="Apple-converted-space"> </span></span><span class="s3"> </span><span class="s1">metric, 253 </span><span class="s3"><br>
+</span></p>
+<p class="p94"><span class="s4"><a href="https://www.google.com/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=&amp;ved=2ahUKEwjX5Ouz7tDsAhUmTt8KHfKsAB4QFjAJegQIChAC&amp;url=https%3A%2F%2Fmineracaodedados.files.wordpress.com%2F2012%2F06%2Fencyclopedia-of-distances-michel-marie-deza-elena-deza.pdf&amp;usg=AOvVaw0HVImpGW-7OKhpa3nf2u3F">Encyclopedia of Distances - Data Mining / Machine Learning ...<span class="s96"></span></a></span></p>
+<p class="p95"><span class="s4"><a href="https://www.google.com/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=&amp;ved=2ahUKEwjX5Ouz7tDsAhUmTt8KHfKsAB4QFjAJegQIChAC&amp;url=https%3A%2F%2Fmineracaodedados.files.wordpress.com%2F2012%2F06%2Fencyclopedia-of-distances-michel-marie-deza-elena-deza.pdf&amp;usg=AOvVaw0HVImpGW-7OKhpa3nf2u3F">mineracaodedados.files.wordpress.com<span class="s97"> › 2012/06 › encyc...</span></a></span></p>
+<p class="p96"><span class="s1">mineracaodedados.files.wordpress.com › 2012/06 › encyc...</span><span class="s98">PDF</span></p>
+<p class="p96"><span class="s1">Preface. <b>Encyclopedia</b> of Distances is the result of re-writing and extending ... Part IV Distances in <b>Applied</b> Mathematics ... Mallows–Monge–<b>Wasserstein</b> metric .</span></p>
+<p class="p97"><span class="s99">⃝</span><span class="s1">c Springer-Verlag Berlin Heidelberg 2009<br>
+</span><span class="s3"><br>
+</span></p>
+<p class="p85"><span class="s4"><a href="http://books.google.com/books?id=QxX2CX5OVMsC&amp;pg=PA245&amp;dq=Kantorovich-Wasserstein&amp;hl=en&amp;sa=X&amp;ei=IKPAUsCuIsnlsAT7n4GIDQ&amp;ved=0CCwQ6AEwADg8"><b>Encyclopedia of Distances - Page 53, 143, 245</b></a></span><span class="s100"><b>, 638, 649</b></span></p>
+<p class="p4"><span class="s2"><a href="https://www.google.com/search?sa=N&amp;biw=1231&amp;bih=1094&amp;tbm=bks&amp;tbm=bks&amp;q=inauthor:%22Michel+Marie+Deza%22&amp;ei=IKPAUsCuIsnlsAT7n4GIDQ&amp;ved=0CC4Q9AgwADg8">Michel Marie Deza</a></span><span class="s1">, ‎<a href="https://www.google.com/search?sa=N&amp;biw=1231&amp;bih=1094&amp;tbm=bks&amp;tbm=bks&amp;q=inauthor:%22Elena+Deza%22&amp;ei=IKPAUsCuIsnlsAT7n4GIDQ&amp;ved=0CC8Q9AgwADg8"><span class="s8">Elena Deza</span></a> - 2012<span class="Apple-converted-space">  </span></span><span class="s9">3642309585, 9783642309588</span><span class="s1"><span class="Apple-converted-space">  </span>650 pages</span></p>
+<p class="p4"><span class="s1">11). o KMMW metric Given a metric space (X, d), the <i>Kantorovich</i>-Mallows-Monge-<i>Wasserstein</i> metric, or KMMW metric, for short, or transportation distance, is defined by W1(P1,P2)Iinf1ES[d(X,Y)]Iinf/ d(X, Y)dS(X, Y), 5 (X,Y)GXXX where the <b>... </b><a href="http://psu.summon.serialssolutions.com/2.0.0/link/0/eLvHCXMwbR1NT4Mw9MXNi8RE3fzAYUK846ClpSTLLrrFxHjzTsoAY5xjGcz4832ljGyMY3mPlL6G9_0BQMmT67R4ApeMskXAYy9hJCE85FkoaEaklDwWCd1Vj9XpULvUVWXqFx2GY7qpfduF7iRx3ELxOBVgrBMBUN92KOoVwhE96AlPjXtw3oLGL-MGoWBCGXAUUStMphv1NGthgCGLb2RCyKDKAmWXckAkeVeo86CGyYBzlEcb-ZN8faqRIE2nQlrLs_klnKaqyOEKTtLVAC52ox3s-k8fgPHetHMthmDPkAUvlvlalZnYeWZP4umLUjxVDvZkHE-vYTSffTy_OrhRVHuEIhn6Qk2WozfQX-Wr9A5s5JeMuFSifUZ9lGpiIbws8H0WBCIOODfhce_I0e-yOmARHdDFhJGmRLTWrTIivWQqvOmZYGnyNNDWy9Y-0RokTxmxLn7AbdoGcKLCrLhrC1L-lXtQ64DmDZKPipHPTBh2Uea--_EIzkg1DkO5YCzol5tt-lBd4j8c6dpf"><span class="s8">Full Text Online</span></a></span></p>
+<p class="p4"><span class="s1">Found inside – Page 245</span></p>
+<p class="p4"><span class="s1">Michel Marie <i>Deza</i>, Elena <i>Deza</i> ... 11). o KMMW metric Given a metric space (X, d), the Kantorovich-Mallows-Monge-<i>Wasserstein</i> metric, or KMMW metric, for short, or transportation distance, is defined by W1(P1,P2)Iinf1ES[d(X,Y)]Iinf/ d(X,<br>
+</span></p>
+<p class="p98"><span class="s4"><a href="http://www.uco.es/users/ma1fegan/Comunes/asignaturas/vision/Encyclopedia-of-distances-2009.pdf"><b>Encyclopedia of Distances - Uco</b><span class="s101"><b></b></span></a></span></p>
+<p class="p4"><span class="s1">PDF 5MB 2013</span></p>
+<p class="p4"><span class="s1">Mallows–Monge–<i>Wasserstein</i> metric. An analog of the Lipschitz distance between measures for the state space of unital C. </span><span class="s21">∗</span><span class="s1">. -algebra is the Connes metric.</span></p>
+<p class="p58"><span class="s1"><span class="Apple-converted-space"> </span></span></p>
+<p class="p85"><span class="s4"><a href="https://books.google.com/books?id=q_7FBAAAQBAJ&amp;pg=PA396&amp;dq=Encyclopedia+of+Distances+wasserstein&amp;hl=en&amp;sa=X&amp;ved=0CB4Q6AEwAGoVChMIxpPurYC9xwIVjDw-Ch0EXQJ5"><b>Encyclopedia of Distances - Page 270, 271, 396</b></a></span><span class="s100"><b>, 709, 732</b></span></p>
+<p class="p4"><span class="s2"><a href="https://www.google.com/search?hl=en&amp;tbm=bks&amp;tbm=bks&amp;q=inauthor:%22Michel+Marie+Deza%22&amp;sa=X&amp;ved=0CCAQ9AgwAGoVChMIxpPurYC9xwIVjDw-Ch0EXQJ5">Michel Marie Deza</a></span><span class="s1">, ‎<a href="https://www.google.com/search?hl=en&amp;tbm=bks&amp;tbm=bks&amp;q=inauthor:%22Elena+Deza%22&amp;sa=X&amp;ved=0CCEQ9AgwAGoVChMIxpPurYC9xwIVjDw-Ch0EXQJ5"><span class="s8">Elena Deza</span></a> - Springer 2014<span class="Apple-converted-space">  </span></span><span class="s9">3662443422, 9783662443422</span><span class="s1"> <span class="Apple-converted-space">  </span>733 pages</span></p>
+<p class="p4"><span class="s1">Petitjean, 2002, extended the L2-<i>Wasserstein distance</i> (cf. Chap. 14) to colored mixtures, i.e., ordinary mixtures of random vectors, for which an new axis (the space of colors) has been added. He remarked that the Procrustes <i>distance</i> is an ...</span></p>
+<p class="p99"><span class="s1"><br>
+</span></p>
+<p class="p85"><span class="s4"><a href="https://books.google.com/books?id=KQHdDAAAQBAJ&amp;pg=PA273&amp;dq=Encyclopedia+of+Distances++wasserstein&amp;hl=en&amp;sa=X&amp;ved=0ahUKEwjP_fb3oJbYAhXHRN8KHR7eDIwQ6AEIJzAA"><b>Encyclopedia of Distances - Page 273</b></a></span><span class="s100"><b> (4 pages)</b></span></p>
+<p class="p5"><span class="s22"><a href="https://www.google.com/search?hl=en&amp;tbm=bks&amp;tbm=bks&amp;q=inauthor:%22Michel+Marie+Deza%22&amp;sa=X&amp;ved=0ahUKEwjP_fb3oJbYAhXHRN8KHR7eDIwQ9AgIKTAA">Michel Marie Deza</a></span><span class="s6">, ‎<a href="https://www.google.com/search?hl=en&amp;tbm=bks&amp;tbm=bks&amp;q=inauthor:%22Elena+Deza%22&amp;sa=X&amp;ved=0ahUKEwjP_fb3oJbYAhXHRN8KHR7eDIwQ9AgIKjAA"><span class="s7">Elena Deza</span></a> - 2016 - ‎<a href="https://books.google.com/books?id=KQHdDAAAQBAJ&amp;pg=PA273&amp;dq=Encyclopedia+of+Distances++wasserstein&amp;hl=en&amp;sa=X&amp;ved=0ahUKEwjP_fb3oJbYAhXHRN8KHR7eDIwQuwUIKzAA"><span class="s7">Preview</span></a> - ‎<a href="https://www.google.com/search?hl=en&amp;tbm=bks&amp;q=editions:lp5nV9tbdYAC&amp;sa=X&amp;ved=0ahUKEwjP_fb3oJbYAhXHRN8KHR7eDIwQmBYILDAA"><span class="s7">More editions</span></a></span></p>
+<p class="p4"><span class="s1">17 and the normalized information <i>distance</i> in Chap. 11. Now, maxfH.X/;H.Y/g I.XIY/ is also a metric. • Transportation <i>distance</i> Given a metric space .X;d/, the transportation <i>distance</i> (and/or, according to Villani, 2009, Monge–Kantorovich–<i>Wasserstein</i>–Rubinstein–Ornstein– Gini–Dall'Aglio–Mallows–Tanaka <i>distance</i>) is the metric defined by W1 .P1 ;P2/ D inf ESŒd.X;Y/ D infS Z .X;Y/2X X d.X;Y/dS.X;Y/; where the infimum is taken over all joint distributions S of pairs .X;Y/ of random ...</span></p>
+<p class="p4"><span class="s1"><br>
+</span></p>
+<p class="p100"><span class="s1"><br>
+</span></p>
+<p class="p18"><span class="s1"><br>
+</span></p>
+<p class="p101"><span class="s1">WikiVisually</span></p>
+<p class="p102"><span class="s4"><a href="https://wikivisually.com/wiki/Leonid_Vaser%C5%A1te%C4%ADn"><b>Leonid Vaseršteĭn - WikiVisually</b><span class="s101"><b></b></span></a></span></p>
+<p class="p4"><span class="s1"><i>Vaserstein</i>, L. N. (1988). "Normal subgroups of orthogonal groups over commutative rings". Amer. J. Math. 110 (5): 955–973. doi ..</span></p>
+<p class="p103"><span class="s1"><br>
+</span></p>
+<p class="p103"><span class="s1"><br>
+</span></p>
+<p class="p104"><span class="s1">On-Line <i>Encyclopedia</i> of Integer Sequences!)</span></p>
+<p class="p102"><span class="s4"><a href="http://oeis.org/A060465"><b>A060465 - OEIS</b><span class="s101"><b></b></span></a></span></p>
+<p class="p105"><span class="s1">Hints. (Greetings from The On-Line <i>Encyclopedia</i> of Integer Sequences!) ...<span class="Apple-converted-space"> </span></span></p>
+<p class="p105"><span class="s1">B. Conn, L. <i>Vaserstein</i>, On sums of three integral cubes, Contemp. Math 166 (1994) ...</span></p>
+<p class="p105"><span class="s1"><br>
+</span></p>
+<p class="p106"><span class="s1">a.i.wiki</span></p>
+<p class="p11"><span class="s4"><a href="https://wiki.pathmind.com/generative-adversarial-network-gan"><b>A Beginner's Guide to Generative Adversarial Networks (GANs)</b><span class="s10"><b></b></span></a></span></p>
+<p class="p107"><span class="s4"><a href="https://wiki.pathmind.com/generative-adversarial-network-gan">[Improved Training of Wasserstein GANs] <span class="s102">[Paper][Code]</span><span class="s103"><span class="Apple-converted-space"> </span></span></a></span></p>
+<p class="p108"><span class="s1">[Wasserstein GAN] <a href="https://arxiv.org/abs/1701.07875"><span class="s104">[Paper]</span></a><a href="https://github.com/martinarjovsky/WassersteinGAN"><span class="s104">[Code]</span></a></span></p>
+<p class="p4"><span class="s1">[Improved Training of Wasserstein GANs] <a href="https://arxiv.org/abs/1704.00028"><span class="s8">[Paper]</span></a><a href="https://github.com/igul222/improved_wgan_training"><span class="s8">[Code]</span></a>(The improve of wgan)</span></p>
+<p class="p4"><span class="s1"><br>
+</span></p>
+<p class="p100"><span class="s1">Encyclopedia of mathematical physics <span class="Apple-converted-space"> </span></span></p>
+<p class="p4"><span class="s1"><br>
+</span></p>
+<p class="p85"><span class="s4"><a href="https://books.google.com/books?id=jxQ6AQAAIAAJ&amp;q=Encyclopedia+of+Distances+wasserstein&amp;dq=Encyclopedia+of+Distances+wasserstein&amp;hl=en&amp;sa=X&amp;ved=0CCUQ6AEwAWoVChMIxpPurYC9xwIVjDw-Ch0EXQJ5"><b>Encyclopedia of mathematical physics - Volume 3 - Page 204, 636</b><span class="s91"><b></b></span></a></span></p>
+<p class="p4"><span class="s1">Jean-Pierre Françoise, ‎Gregory L. Naber, ‎Sheung Tsun Tsou - 2006<span class="Apple-converted-space"> </span></span></p>
+<p class="p4"><span class="s1">The <i>Wasserstein Distance</i> Optimal transportation theory is strongly related to the geometric analysis of probability measures. For simplicity, let us just consider the space Prob(B) of all Borel probability measures p supported by some fixed ball ...</span></p>
+<p class="p4"><span class="s1">Found inside – Page 523</span></p>
+<p class="p4"><span class="s1">... <i>Wasserstein</i> distance 3 : 636 Optimal transportation maps with convex potentials 3 : 632 isoperimetric inequality proof 3 ... Clifford algebras 1 : 524 Orthogonal wavelets , and multiresolution analysis 5 : 429 Orthonormal bases , and <i>quantum</i> ...</span></p>
+<p class="p4"><span class="s1">Found inside – Page 523</span></p>
+<p class="p4"><span class="s1">Optimal control , ordinary differential equations 1 : 638 Optimal transportation Kantorovich problem 3 : 634 Monge ' s problem 3 : 634 overview 3 : 632 - 636 <i>Wasserstein distance</i> 3 : 636 Optimal transportation maps with convex potentials 3 ...</span></p>
+<p class="p4"><span class="s1"><br>
+</span></p>
+<p class="p109"><span class="s1"><br>
+</span></p>
+<p class="p10"><span class="s1"><br>
+</span></p>
+<p class="p100"><span class="s1">Encyclopedia of Statistical Sciences: 8 articles</span></p>
+<p class="p100"><span class="s1"><br>
+</span></p>
+<p class="p110"><span class="s105"><a href="https://www.worldcat.org/title/7980510009"><b>WASSERSTEIN DISTANCE</b></a></span><span class="s1"><br>
+</span><span class="s48"><b>Downloadable Article</b>, 2005</span><span class="s1"><br>
+</span><span class="s48"><b>Publication:</b>Encyclopedia of Statistical Sciences, 2005</span><span class="s1"><br>
+</span><span class="s48"><b>Publisher:</b>2005</span></p>
+<p class="p111"><span class="s1">ncyclopedia of Statistical Sciences, 2005</span></p>
+<p class="p112"><span class="s106">ISBN 78047166719</span></p>
+<p class="p113"><span class="s1"></span><br></p>
+<p class="p114"><span class="s1"><br>
+</span></p>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; color: #0000e9; -webkit-text-stroke: #000015"><span class="s4"><a href="https://books.google.com/books?id=VsdUAAAAYAAJ&amp;pg=PA9038&amp;dq=dobrushin++wasserstein&amp;hl=en&amp;newbks=1&amp;newbks_redir=1&amp;sa=X&amp;ved=2ahUKEwjS_4fSmZbtAhUQjVkKHV87DM8Q6AEwCXoECAAQAg"><b>Encyclopedia of Statistical Sciences, Volume 15 - Page 9038</b><span class="s90"><b></b></span></a></span></h3>
+<p class="p4"><span class="s1">2005 · ‎No preview</span></p>
+<p class="p10"><span class="s1"><br>
+</span></p>
+<p class="p10"><span class="s1"><br>
+</span></p>
+<p class="p85"><span class="s4"><a href="https://books.google.com/books?id=_t_OgqZ7WI0C&amp;pg=PA533&amp;dq=Encyclopedia+of+Statistical+Sciences++wasserstein&amp;hl=en&amp;newbks=1&amp;newbks_redir=1&amp;sa=X&amp;ved=2ahUKEwj96KL_trvsAhXDtVkKHZXjA7QQ6AEwAXoECAUQAg"><b>Encyclopedia of Statistical Sciences:</b><span class="s92"><b> Strata chart to ... - Page 533</b></span></a></span></p>
+<p class="p4"><span class="s1">1982 · ‎No preview</span></p>
+<p class="p4"><span class="s1"><br>
+</span></p>
+<p class="p85"><span class="s4"><a href="http://books.google.com/books?id=2JBFAAAAYAAJ&amp;pg=PA380&amp;dq=wasserstein+subject:%22mathematics%22&amp;hl=en&amp;ei=i9rkToa1D4nq0gHo6YDsBQ&amp;sa=X&amp;oi=book_result&amp;ct=result&amp;resnum=9&amp;ved=0CF8Q6AEwCA"><b>Encyclopedia of statistical sciences: Volume 9</b><span class="s91"><b></b></span></a></span></p>
+<p class="p4"><span class="s2"><a href="http://www.google.com/search?hl=en&amp;sa=X&amp;biw=1233&amp;bih=826&amp;tbs=cdr:1,cd_min:Jan+1_2+1987,cd_max:Dec+31_2+1988&amp;tbm=bks&amp;tbm=bks&amp;q=inauthor:%22Samuel+Kotz%22&amp;ei=i9rkToa1D4nq0gHo6YDsBQ&amp;ved=0CGAQ9Ag">Samuel Kotz</a></span><span class="s1">, Norman Lloyd Johnson, Campbell B. Read - 1988</span></p>
+<p class="p10"><span class="s1"><br>
+</span></p>
+<p class="p85"><span class="s4"><a href="https://books.google.com/books?id=CeI4ReD0E7MC&amp;pg=PA848&amp;dq=Encyclopedia+of+Distances+wasserstein&amp;hl=en&amp;sa=X&amp;ved=0CC0Q6AEwA2oVChMIxpPurYC9xwIVjDw-Ch0EXQJ5"><b>Encyclopedia of Statistical Sciences , Update - Page 848</b><span class="s91"><b></b></span></a></span></p>
+<p class="p5"><span class="s22"><a href="https://www.google.com/search?hl=en&amp;tbm=bks&amp;tbm=bks&amp;q=inauthor:%22Samuel+Kotz%22&amp;sa=X&amp;ved=0CC8Q9AgwA2oVChMIxpPurYC9xwIVjDw-Ch0EXQJ5">Samuel Kotz</a></span><span class="s6">, ‎<a href="https://www.google.com/search?hl=en&amp;tbm=bks&amp;tbm=bks&amp;q=inauthor:%22Campbell+B.+Read%22&amp;sa=X&amp;ved=0CDAQ9AgwA2oVChMIxpPurYC9xwIVjDw-Ch0EXQJ5"><span class="s7">Campbell B. Read</span></a>, ‎<a href="https://www.google.com/search?hl=en&amp;tbm=bks&amp;tbm=bks&amp;q=inauthor:%22David+L.+Banks%22&amp;sa=X&amp;ved=0CDEQ9AgwA2oVChMIxpPurYC9xwIVjDw-Ch0EXQJ5"><span class="s7">David L. Banks</span></a> - 1999</span></p>
+<p class="p4"><span class="s1">Found inside – Page 733</span></p>
+<p class="p4"><span class="s1">... ( MME ) estimators , v2 : 512 Metrics : Mallows ' distances , v2 : 377 - 378 <i>Wasserstein</i> distance , v2 : 377 Michaelis - Menten equation , v2 : 672 Michaelis - Menten model , v2 : 87 Minimum - covariance determinant ( MCD ) , v1 : 491 , v2 : 405 ..</span></p>
+<p class="p4"><span class="s1"><br>
+</span></p>
+<p class="p85"><span class="s4"><a href="https://books.google.com/books?id=AsdUAAAAYAAJ&amp;dq=Encyclopedia+of+Statistical+Sciences++wasserstein&amp;hl=en&amp;newbks=1&amp;newbks_redir=1&amp;sa=X&amp;ved=2ahUKEwj96KL_trvsAhXDtVkKHZXjA7QQ6AEwAHoECAAQAg"><b>Encyclopedia of Statistical Sciences, Volume 4 - Page 2175</b><span class="s91"><b></b></span></a></span></p>
+<p class="p4"><span class="s1">2005 · ‎No preview</span></p>
+<p class="p4"><span class="s1"><br>
+</span></p>
+<p class="p85"><span class="s4"><a href="https://books.google.com/books?id=VsdUAAAAYAAJ&amp;pg=PA9038&amp;dq=Encyclopedia+of+Statistical+Sciences++wasserstein&amp;hl=en&amp;newbks=1&amp;newbks_redir=1&amp;sa=X&amp;ved=2ahUKEwj96KL_trvsAhXDtVkKHZXjA7QQ6AEwAnoECAIQAg"><b>Encyclopedia of Statistical Sciences, Volume 15 - Page 9038</b><span class="s91"><b></b></span></a></span></p>
+<p class="p85"><span class="s4"><a href="https://books.google.com/books?id=z8ZUAAAAYAAJ&amp;pg=PA8168&amp;dq=Encyclopedia+of+Statistical+Sciences++wasserstein&amp;hl=en&amp;newbks=1&amp;newbks_redir=1&amp;sa=X&amp;ved=2ahUKEwj96KL_trvsAhXDtVkKHZXjA7QQ6AEwA3oECAEQAg"><b>Encyclopedia of Statistical Sciences, Volume 13 - Page 8168</b><span class="s91"><b></b></span></a></span></p>
+<p class="p4"><span class="s1">2005 · ‎No preview</span></p>
+<p class="p4"><span class="s1"><br>
+</span></p>
+<p class="p85"><span class="s4"><a href="https://books.google.com/books?id=LMdUAAAAYAAJ&amp;q=Encyclopedia+of+Statistical+Sciences++wasserstein&amp;dq=Encyclopedia+of+Statistical+Sciences++wasserstein&amp;hl=en&amp;newbks=1&amp;newbks_redir=1&amp;printsec=frontcover&amp;sa=X&amp;ved=2ahUKEwj96KL_trvsAhXDtVkKHZXjA7QQ6AEwBHoECAMQAg"><b>Encyclopedia of Statistical Sciences - Volume 14 - Page 8812</b><span class="s91"><b></b></span></a></span></p>
+<p class="p4"><span class="s2"><a href="https://www.google.com/search?tbm=bks&amp;tbm=bks&amp;q=inauthor:%22Samuel+Kotz%22&amp;sa=X&amp;ved=2ahUKEwj96KL_trvsAhXDtVkKHZXjA7QQ9AgwBHoECAMQBQ">Samuel Kotz</a></span><span class="s1"> · 2005 · ‎Snippet view</span></p>
+<p class="p4"><span class="s1">Found inside – Page 8812</span></p>
+<p class="p4"><span class="s1">Institute of Mathematical <i>Statistics</i> Lecture Notes-Monograph Series, 11. ... Levy Distance (Metric); Metrics and Distances on Probability Spaces; Spearman Rank Correlation Coefficient; Total Variation, Distance of; and <i>Wasserstein</i> Distance.</span></p>
+<p class="p4"><span class="s1"><br>
+</span></p>
+<p class="p4"><span class="s1"><br>
+</span></p>
+<p class="p85"><span class="s4"><a href="https://books.google.com/books?id=dMhUAAAAYAAJ&amp;q=Encyclopedia+of+Statistical+Sciences++wasserstein&amp;dq=Encyclopedia+of+Statistical+Sciences++wasserstein&amp;hl=en&amp;newbks=1&amp;newbks_redir=1&amp;printsec=frontcover&amp;sa=X&amp;ved=2ahUKEwj96KL_trvsAhXDtVkKHZXjA7QQ6AEwBnoECAQQAg"><b>Encyclopedia of Statistical Sciences, Volume 7 - Page 4462</b><span class="s91"><b></b></span></a></span></p>
+<p class="p4"><span class="s1">2005 · ‎Snippet view</span></p>
+<p class="p4"><span class="s1">Found inside – Page 4462</span></p>
+<p class="p4"><span class="s1">Institute of Mathematical <i>Statistics</i> , Hayward , Calif . ( For general theory of ... ( 6,5 ) , also known as the <i>Wasserstein</i> distance between F and G. For random X and Y having marginals F and G , respectively , we define pr ( X , Y ) = pr ( F , G ) .</span></p>
+<p class="p86"><span class="s1"><br>
+</span></p>
+<p class="p85"><span class="s4"><a href="https://books.google.com/books?id=DMpUAAAAYAAJ&amp;pg=PA9415&amp;dq=Encyclopedia+of+Statistical+Sciences++wasserstein&amp;hl=en&amp;newbks=1&amp;newbks_redir=1&amp;sa=X&amp;ved=2ahUKEwj96KL_trvsAhXDtVkKHZXjA7QQ6AEwB3oECAcQAg"><b>Encyclopedia of Statistical Sciences, Index, Volume 16 - Page 9415</b><span class="s91"><b></b></span></a></span></p>
+<p class="p4"><span class="s1">2005 · ‎No preview</span></p>
+<p class="p4"><span class="s1"><br>
+</span></p>
+<p class="p4"><span class="s1"><br>
+</span></p>
+<p class="p10"><span class="s1">Encyclopedia of biostatistics<span class="Apple-converted-space"> </span></span></p>
+<p class="p4"><span class="s1"><br>
+</span></p>
+<p class="p85"><span class="s4"><a href="https://books.google.com/books?id=cQk6AQAAIAAJ&amp;q=encyclopedia+of+biostatistics+wasserstein&amp;dq=encyclopedia+of+biostatistics+wasserstein&amp;hl=en&amp;newbks=1&amp;newbks_redir=1&amp;printsec=frontcover&amp;sa=X&amp;ved=2ahUKEwiesK3AqsPsAhWjnuAKHa-7BJwQ6AEwAHoECAYQAg"><b>Encyclopedia of biostatistics: SPI-Z, Index - Volume 6 - Page 4569</b><span class="s91"><b></b></span></a></span></p>
+<p class="p4"><span class="s1">Peter Armitage, ‎Theodore Colton · 1998 ·<span class="Apple-converted-space">  </span><a href="https://www.google.com/search?hl=en&amp;q=inpublisher:%22J.+Wiley%22&amp;tbm=bks&amp;sa=X&amp;ved=2ahUKEwjfq96ZpMPsAhWNlXIEHXPFAmgQmxMoADAGegQIHhAC"><span class="s8">J. Wiley</span></a></span><span class="s7"><span class="Apple-converted-space"> </span></span></p>
+<p class="p4"><span class="s1">Found inside – Page 4569</span></p>
+<p class="p4"><span class="s1">They used the so-called Lp <i>Wasserstein</i> metrics, dp(-, •). as the measure of discrepancy between the two survival functions. Specifically, for p = 1, the <i>Wasserstein</i> distance, d\(S\^, Sr), between two Kaplan-Meier curves, Sl and ...</span></p>
+<p class="p5"><span class="s22"><a href="https://www.google.com/books/edition/Encyclopedia_of_biostatistics/cQk6AQAAIAAJ?hl=en&amp;gbpv=1&amp;bsq=wasserstein">Page 4569 </a></span><span class="s1">Wasserstein metrics</span></p>
+<p class="p4"><span class="s1"><br>
+</span></p>
+<p class="p10"><span class="s1">Encyclopedia of business information</span></p>
+<p class="p115"><span class="s4"><span class="Apple-converted-space"> </span></span></p>
+<p class="p5"><span class="s1"><br>
+</span></p>
+<p class="p85"><span class="s4"><a href="http://books.google.com/books?id=XnJQAQAAIAAJ&amp;q=Vaserstein+-Bruce+-Wendy&amp;dq=Vaserstein+-Bruce+-Wendy&amp;hl=en&amp;sa=X&amp;ei=8ILbUJKRBJC70AHliIHwAw&amp;ved=0CFcQ6AEwBg"><b>Encyclopedia of business information sources - Volume 2 - Page 553</b><span class="s91"><b></b></span></a></span></p>
+<p class="p4"><span class="s1">Virgil L. Burton - 2010<span class="Apple-converted-space"> </span></span></p>
+<p class="p4"><span class="s1">Leonid N. <i>Vaserstein</i> and others. Prentice Hall. ' 2002. $8l.0O. Publisher: "...enables those with little mathematical background to learn to use linear programming in their respective fields (business. economics. operations research. etc.).".</span></p>
+<p class="p10"><span class="s1"><br>
+</span></p>
+<p class="p10"><span class="s1"><br>
+</span></p>
+<p class="p100"><span class="s1">techno-edina</span></p>
+<p class="p10"><span class="s1"><br>
+</span></p>
+<p class="p10"><span class="s1"><br>
+</span></p>
+<p class="p86"><span class="s4"><b>What </b><a href="https://www.techopedia.com/definition/33214/wasserstein-gan-wgan"><span class="s92"><b>is the Wasserstein GAN (WGAN)? - Definition from ...</b></span></a></span></p>
+<p class="p4"><span class="s1">Mar 7, 2018 — The Wasserstein <i>GAN</i> (<i>WGAN</i>) is an algorithm introduced in a paper written by Martin Arjovsky, Soumith Chintala and Léon Bottou at the ...</span></p>
+<p class="p4"><span class="s1">Missing: </span><span class="s107">encyclopedia</span><span class="s1"> ‎| Must include: <a href="https://www.google.com/search?client=firefox-b-1-d&amp;q=%22encyclopedia%22+wgan+gan&amp;sa=X&amp;ved=2ahUKEwjApsDUq8TsAhX7oXIEHX9qCusQ5t4CMAV6BAgFEAo"><span class="s8">encyclopedia</span></a></span></p>
+<p class="p10"><span class="s1"><br>
+</span></p>
+<p class="p10"><span class="s1"><br>
+</span></p>
+<p class="p116"><span class="s1">newikes</span></p>
+<p class="p10"><span class="s1"><br>
+</span></p>
+<p class="p25"><span class="s4"><a href="https://www.google.com/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=&amp;ved=2ahUKEwjK8O-ZisjsAhXFTN8KHRaCBcM4HhAWMAV6BAgFEAI&amp;url=https%3A%2F%2Fnewikis.com%2Fen%2FLeonid_Vaser%25C5%25A1te%25C4%25ADn&amp;usg=AOvVaw0P5ecc_MreGJ86Q5uvd9Lk">Leonid Vaseršteĭn - Newikis<span class="s37"></span></a></span></p>
+<p class="p36"><span class="s22"><a href="https://www.google.com/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=&amp;ved=2ahUKEwjK8O-ZisjsAhXFTN8KHRaCBcM4HhAWMAV6BAgFEAI&amp;url=https%3A%2F%2Fnewikis.com%2Fen%2FLeonid_Vaser%25C5%25A1te%25C4%25ADn&amp;usg=AOvVaw0P5ecc_MreGJ86Q5uvd9Lk">newikis.com<span class="s46"> › Leonid_Vaseršteĭn</span></a></span></p>
+<p class="p36"><span class="s1">newikis.com › Leonid_Vaseršteĭn</span></p>
+<p class="p36"><span class="s1">Leonid <b>Vaseršteĭn</b> is a Russian-American mathematician, currently Professor of ... Uses material from the <b>Wikipedia</b> article Leonid <b>Vaseršteĭn</b>, released under ...</span></p>
+<p class="p10"><span class="s1"><br>
+</span></p>
+<p class="p10"><span class="s1"><br>
+</span><span class="s108"><br>
+</span></p>
+<p class="p5"><span class="s1"><br>
+</span></p>
+<p class="p117"><span class="s1">MathWorld</span></p>
+<p class="p5"><span class="s1"><br>
+</span></p>
+<p class="p94"><span class="s4"><a href="https://mathworld.wolfram.com/CubicNumber.html">Cubic Number -- from Wolfram MathWorld<span class="s96"></span></a></span></p>
+<p class="p95"><span class="s4"><a href="https://mathworld.wolfram.com/CubicNumber.html">mathworld.wolfram.com<span class="s97"> › CubicNumber</span></a></span></p>
+<p class="p118"><span class="s1">mathworld.wolfram.com › CubicNumber</span></p>
+<p class="p96"><span class="s1">DOWNLOAD <b>Mathematica</b> Notebook Contribute to this entry CubicNumber. A cubic number is ... Conn, B. and <b>Vaserstein</b>, L. "On Sums of Three Integral Cubes.</span></p>
+<p class="p96"><span class="s1">by EW Weisstein · ‎2002 · ‎<a href="https://scholar.google.com/scholar?client=safari&amp;rls=en&amp;oe=UTF-8&amp;um=1&amp;ie=UTF-8&amp;lr&amp;cites=14794897689566909592"><span class="s109">Cited by 17</span></a> · ‎<a href="https://scholar.google.com/scholar?client=safari&amp;rls=en&amp;oe=UTF-8&amp;um=1&amp;ie=UTF-8&amp;lr&amp;q=related:mBTi2g8JUs0mCM:scholar.google.com/"><span class="s109">Related articles</span></a></span></p>
+<p class="p36"><span class="s1"><br>
+</span></p>
+<p class="p5"><span class="s1">————————</span></p>
+<p class="p5"><span class="s1">2015</span></p>
+<p class="p25"><span class="s4"><a href="https://www.amazon.com/Encyclopedia-Applied-Computational-Mathematics-Engquist/dp/366252872X">Encyclopedia of Applied and Computational Mathematics ...<span class="s37"></span></a></span></p>
+<p class="p36"><span class="s22"><a href="https://www.amazon.com/Encyclopedia-Applied-Computational-Mathematics-Engquist/dp/366252872X">www.amazon.com<span class="s46"> › Encyclopedia-Applied-Computatio...</span></a></span></p>
+<p class="p36"><span class="s1">www.amazon.com › Encyclopedia-Applied-Computatio...</span></p>
+<p class="p36"><span class="s1">EACM is a comprehensive reference work covering the vast field of <b>applied</b> and computational <b>mathematics</b>. ... EACM emphasizes the strong links of <b>applied mathematics</b> with major areas of science, such as physics, chemistry, biology, and computer science, as well as specific fields like atmospheric ocean science.</span></p>
+<p class="p36"><span class="s1"><br>
+</span></p>
+<p class="p5"><span class="s1"><br>
+</span></p>
+<p class="p119"><span class="s1">Academic Kids</span></p>
+<p class="p10"><span class="s1">Free Online <i>educational</i> encyclopedia,</span></p>
+<p class="p36"><span class="s1"><br>
+</span></p>
+<p class="p85"><span class="s4"><a href="http://academickids.com/encyclopedia/index.php/Quillen-Suslin_theorem"><b>Quillen-Suslin theorem - Academic Kids</b><span class="s91"><b></b></span></a></span></p>
+<p class="p4"><span class="s1">Quillen was awarded the Fields Medal in 1978 in part for his proof. Soon after Quillen's and <i>Suslin's</i> proofs, Leonid <i>Vaserstein</i> gave a substantially simpler proof.</span></p>
+<p class="p36"><span class="s1"><br>
+</span></p>
+<p class="p120"><span class="s4"><a href="https://dic.academic.ru/dic.nsf/enwiki/3433818"><b>Словари и энциклопедии на Академике</b><span class="s110"><b></b></span></a></span></p>
+<p class="p121"><span class="s4"><b>[Russian<span class="Apple-converted-space">  </span>Dictionaries and encyclopedia, academic]</b></span></p>
+<p class="p122"><span class="s111"><br>
+<a href="https://dic.academic.ru/dic.nsf/enwiki/3433818"><span class="s112"><b>Wasserstein metric - Словари и энциклопедии на Академике</b></span></a></span></p>
+<p class="p123"><span class="s4"><a href="https://dic.academic.ru/dic.nsf/enwiki/3433818"><i>dic.academic.ru › dic.nsf › enwiki</i><span class="s113"><i></i></span></a></span></p>
+<p class="p124"><span class="s1">In mathematics, the <i>Wasserstein</i> (or Vasershtein) metric is a distance function ... <i>Wikipedia</i>. <i>Fonction De Répartition</i> — <i>Fonctions de répartition</i> d une variable ..</span><span class="s3">.</span></p>
+<p class="p36"><span class="s1"><br>
+</span></p>
+<p class="p36"><span class="s1"><br>
+</span></p>
+<p class="p125"><span class="s1">Directory<span class="Apple-converted-space">  </span>7</span></p>
+<p class="p125"><span class="s1"><br>
+</span></p>
+<p class="p85"><span class="s4"><a href="https://books.google.com/books?id=UevuAAAAMAAJ&amp;q=vaserstein&amp;dq=vaserstein&amp;hl=en&amp;sa=X&amp;ei=SrqaVPjlDMTuggSbzYHoDA&amp;ved=0CDcQ6AEwBg"><b>World directory of mathematicians - Page 851</b><span class="s91"><b></b></span></a></span></p>
+<p class="p5"><span class="s22"><a href="https://www.google.com/search?biw=1646&amp;bih=1228&amp;tbs=cdr:1,cd_min:Jan+1_2+1998,cd_max:Dec+31_2+1998&amp;tbm=bks&amp;tbm=bks&amp;q=inauthor:%22International+Mathematical+Union%22&amp;sa=X&amp;ei=SrqaVPjlDMTuggSbzYHoDA&amp;ved=0CDkQ9AgwBg">International Mathematical Union</a></span><span class="s6">, ‎<a href="https://www.google.com/search?biw=1646&amp;bih=1228&amp;tbs=cdr:1,cd_min:Jan+1_2+1998,cd_max:Dec+31_2+1998&amp;tbm=bks&amp;tbm=bks&amp;q=inauthor:%22Tata+Institute+of+Fundamental+Research%22&amp;sa=X&amp;ei=SrqaVPjlDMTuggSbzYHoDA&amp;ved=0CDoQ9AgwBg"><span class="s7">Tata Institute of Fundamental Research</span></a>, ‎<a href="https://www.google.com/search?biw=1646&amp;bih=1228&amp;tbs=cdr:1,cd_min:Jan+1_2+1998,cd_max:Dec+31_2+1998&amp;tbm=bks&amp;tbm=bks&amp;q=inauthor:%22Tata+Institute+of+Fundamental+Research.+School+of+Mathematics%22&amp;sa=X&amp;ei=SrqaVPjlDMTuggSbzYHoDA&amp;ved=0CDsQ9AgwBg"><span class="s7">Tata Institute of Fundamental Research. School of Mathematics</span></a> - 1998<span class="Apple-converted-space"> </span></span></p>
+<p class="p4"><span class="s1"><i>Vaserstein</i>, Leonid N..</span></p>
+<p class="p4"><span class="s1"><br>
+</span></p>
+<p class="p85"><span class="s4"><a href="https://books.google.com/books?id=j-LuAAAAMAAJ&amp;q=curtis+vaserstein&amp;dq=curtis+vaserstein&amp;hl=en&amp;newbks=1&amp;newbks_redir=1&amp;printsec=frontcover&amp;sa=X&amp;ved=2ahUKEwirlNC00e7sAhV8lHIEHbbdBUw4ChDoATAAegQIAhAC"><b>World Directory of Mathematicians - Page 864</b><span class="s91"><b></b></span></a></span></p>
+<p class="p4"><span class="s1">1994 · ‎Snippet view</span></p>
+<p class="p4"><span class="s1">Found inside – Page 864</span></p>
+<p class="p4"><span class="s1">... Pramod K. Varvel , Donald Vasconcelos , Wolmer V. <i>Vaserstein</i> , Leonid N. Vassalotti , Alfred G Vassilevski , Panayot ... Kiem Phong Vogan , David A. , Jr Vogel , <i>Curtis</i> R. Vogel , Pierre Vogel , Thomas I. Vogelius , Michael Steenstrup Vogt ...</span></p>
+<p class="p4"><span class="s1"><br>
+</span></p>
+<p class="p85"><span class="s4"><a href="https://books.google.com/books?id=QPmI3hLV4xYC&amp;q=curtis+vaserstein&amp;dq=curtis+vaserstein&amp;hl=en&amp;newbks=1&amp;newbks_redir=1&amp;printsec=frontcover&amp;sa=X&amp;ved=2ahUKEwirlNC00e7sAhV8lHIEHbbdBUw4ChDoATADegQIARAC"><b>American Men &amp; Women of Science: A Biographical Directory of ...</b><span class="s91"><b></b></span></a></span></p>
+<p class="p4"><span class="s1">2003 · ‎Snippet view</span></p>
+<p class="p4"><span class="s1">Found inside – Page 449</span></p>
+<p class="p4"><span class="s1">... Judah Ben MISSISSIPPI Boyle , Carolyn Redding Butler , Charles Morgan MISSOURI Frisby , James <i>Curtis</i> Mukai ... Gerald Luther <i>Vaserstein</i> , Leonid IV Weindling , Joachim I ( gnace ) Wolfe , Harvey RHODE ISLAND Jarrett , Jeffrey E</span></p>
+<p class="p4"><span class="s1"><br>
+</span></p>
+<p class="p85"><span class="s4"><a href="https://alumnius.net/lomonosov_moscow_sta-6631-year-1953-1973"><b>Lomonosov Moscow State University (MSU ... - Alumni US</b><span class="s91"><b></b></span></a></span></p>
+<p class="p4"><span class="s1">https://alumnius.net/search?q=vaserstein#gsc.tab=0&amp;gsc.q=vaserstein&amp;gsc.page=1</span></p>
+<p class="p4"><span class="s1">HistogramMatchDistanceFunction\ L. N. <i>Vaserstein</i>\ Markov processes over denumerable products of spaces describing large systems of automata\ In: Problemy ...</span></p>
+<p class="p4"><span class="s1">69 reviews</span></p>
+<p class="p4"><span class="s1">Leon <b>Vaserstein</b></span></p>
+<p class="p4"><span class="s1"><br>
+</span></p>
+<h4 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 13.6px Verdana; color: #0000e9; -webkit-text-stroke: #00000c; background-color: #ffff15"><span class="s4"><a href="http://www.numbertheory.org/ntw/number_theorists.html"><b>Number theorists' Home Pages/Departmental listings</b><span class="s114"><b></b></span></a></span></h4>
+<h4 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 13.6px Verdana; color: #00000c; -webkit-text-stroke: #00000c; background-color: #ffff15"><span class="s4"><b>Vaserstein</b></span></h4>
+<h4 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 13.6px Verdana; color: #00000c; -webkit-text-stroke: #00000c"><span class="s1"><br>
+</span></h4>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; color: #0000e9; -webkit-text-stroke: #00000e"><span class="s4"><a href="http://www.numbertheory.org/ntw/names_v.html"><b>UMBER THEORIST NAMES:V</b><span class="s115"><b></b></span></a></span></h3>
+<p class="p4"><span class="s1">Jul 25, 2020 — Nóra Varga · <i>Leonid Vaserstein</i> · Oleg Nikolaevich Vasilenko · Number-Theoretic Algorithms in Cryptography, Oleg Vasilenko, Translations of ...</span></p>
+<p class="p4"><span class="s1"><br>
+</span></p>
+<p class="p4"><span class="s1"><br>
+</span></p>
+<p class="p85"><span class="s4"><a href="https://www.thefreedictionary.com/central+limit+theorem"><b>Central limit theorem - The Free Dictionary</b><span class="s91"><b></b></span></a></span></p>
+<p class="p9"><span class="s4"><a href="https://www.thefreedictionary.com/central+limit+theorem"><i>www.thefreedictionary.com › central+limit+theorem</i></a></span></p>
+<p class="p4"><span class="s1">Also found in: Medical, Financial, Acronyms, <i>Wikipedia</i>. ... Fournier [8] uses the quadratic <i>Vaserstein</i> distance for the approximation of the Euler scheme and the ...</span></p>
+<p class="p4"><span class="s1"><br>
+</span></p>
+<p class="p4"><span class="s1"><br>
+</span></p>
+<p class="p130"><span class="s4"><a href="https://en.wikipedia.org/wiki/Mathematics_Genealogy_Project">Mathematics Genealogy Project<span class="s116"></span></a></span></p>
+<p class="p10"><span class="s1"><br>
+</span></p>
+<p class="p9"><span class="s4"><a href="https://mathgenealogy.org/id.php?id=23171">Leonid Vaseršteĭn</a></span><span class="s6"> <span class="Apple-converted-space"> </span></span></p>
+<p class="p4"><span class="s1"><br>
+</span></p>
+<p class="p4"><span class="s1"><br>
+</span></p>
+<p class="p4"><span class="s1"><br>
+</span></p>
+<p class="p4"><span class="s1"><br>
+</span></p>
+<h2 style="margin: 0.0px 0.0px 14.9px 0.0px; text-align: center; font: 18.0px Arial; color: #000000; -webkit-text-stroke: #000000; background-color: #ffffff"><span class="s1"><b>Math-Net.Ru<span class="Apple-converted-space">  </span>2</b></span></h2>
+<p class="p4"><span class="s1"><br>
+</span></p>
+<p class="p4"><span class="s1"><br>
+</span></p>
+<table width="720.3" cellspacing="0" cellpadding="0" class="t1">
+  <tbody>
+    <tr>
+      <td valign="top" class="td1">
+        <p class="p132"><span class="s1">1</span></p>
+      </td>
+      <td valign="top" class="td2">
+        <p class="p133"><span class="s4"><a href="http://www.mathnet.ru/php/person.phtml?option_lang=eng&amp;personid=23042">Vaserstein Leonid Nisonovich<span class="s117"></span></a></span></p>
+        <p class="p134"><span class="s1"><br>
+</span></p>
+        <table width="705.6" cellspacing="0" cellpadding="0" class="t2">
+          <tbody>
+            <tr>
+              <td valign="top" class="td3">
+                <p class="p134"><span class="s4">2. <a href="http://www.mathnet.ru/php/person.phtml?option_lang=rus&amp;personid=23042"><span class="s118">Васерштейн Леонид Нисонович</span></a></span></p>
+                <p class="p134"><span class="s1"><br>
+</span></p>
+                <p class="p134"><span class="s1"><br>
+</span></p>
+                <p class="p134"><span class="s1"><br>
+</span></p>
+                <p class="p135"><span class="s4"><a href="https://www.google.com/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=&amp;ved=2ahUKEwjgkeu05vvsAhVLGVkFHabrDSsQFjAAegQIBxAC&amp;url=https%3A%2F%2Fwww.depthfirstlearning.com%2F2019%2FWassersteinGAN&amp;usg=AOvVaw3Eumo8RFD8m0P0g1LE-zwM">Depth First Learning<span class="s119"></span></a></span></p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <p class="p136"><span class="s1"><br>
+</span></p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<p class="p5"><span class="s1"><br>
+</span></p>
+<p class="p137"><span class="s1">W<a href="https://www.google.com/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=&amp;ved=2ahUKEwjgkeu05vvsAhVLGVkFHabrDSsQFjAAegQIBxAC&amp;url=https%3A%2F%2Fwww.depthfirstlearning.com%2F2019%2FWassersteinGAN&amp;usg=AOvVaw3Eumo8RFD8m0P0g1LE-zwM"><span class="s120">asserstein GAN · Depth First Learning</span></a></span></p>
+<p class="p30"><span class="s4"><a href="https://www.google.com/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=&amp;ved=2ahUKEwjgkeu05vvsAhVLGVkFHabrDSsQFjAAegQIBxAC&amp;url=https%3A%2F%2Fwww.depthfirstlearning.com%2F2019%2FWassersteinGAN&amp;usg=AOvVaw3Eumo8RFD8m0P0g1LE-zwM">www.depthfirstlearning.com<span class="s46"> › WassersteinGAN</span></a></span></p>
+<p class="p36"><span class="s1">www.depthfirstlearning.com › WassersteinGAN</span></p>
+<p class="p36"><span class="s1">May 2, 2019 — <b>Wasserstein</b> GAN. Want to make <b>DFL</b> better? We welcome suggestions and improvements. [Editor's Note: We are especially proud of this one.</span><span class="s89"><br>
+<a href="https://www.depthfirstlearning.com/"><span class="s121">Depth First Learning</span></a></span></p>
+<p class="p36"><span class="s1"><b>DFL</b> is a compendium of curricula to help you deeply understand Machine Learning. ... Want to stay up to date on future in-person or on-line <b>DFL</b> study groups? ... The <b>Wasserstein</b> GAN (WGAN) is a GAN variant which uses the 1- <b>Wasserstein</b> ...</span></p>
+<p class="p36"><span class="s1"><br>
+</span></p>
+<p class="p36"><span class="s1"><br>
+</span></p>
+<p class="p138"><span class="s4"><a href="https://www.gf.org/fellows/all-fellows/leonid-n-vaserstein/"><b>John Simon Guggenheim Foundation</b><span class="s122"><b></b></span></a></span></p>
+<p class="p36"><span class="s1"><br>
+</span></p>
+<p class="p129"><span class="s4"><a href="https://www.gf.org/fellows/all-fellows/leonid-n-vaserstein/"><b>Leonid N. Vaserstein - John Simon Guggenheim Foundation</b><span class="s115"><b></b></span></a></span></p>
+<p class="p4"><span class="s1">Leonid N. <i>Vaserstein</i>. <i>Fellow</i>: Awarded 1984. Field of Study: Mathematics. Competition: US &amp; Canada. Website: http://www.math.psu.edu/vstein/ ...</span></p>
+<p class="p4"><span class="s1"><br>
+</span></p>
+<p class="p58"><span class="s1"><span class="Apple-converted-space"> </span></span></p>
+<p class="p4"><span class="s1"><br>
+</span></p>
+<p class="p100"><span class="s1">Penn State</span></p>
+<p class="p139"><span class="s1"><br>
+</span></p>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; color: #0000e9; -webkit-text-stroke: #00000e"><span class="s4"><a href="https://www.coursicle.com/psu/professors/Leonid+Vaserstein/"><b>Leonid Vaserstein at Pennsylvania State University | Coursicle ...</b><span class="s115"><b></b></span></a></span></h3>
+<p class="p4"><span class="s1"><i>Leonid Vaserstein</i> at Pennsylvania State University (Penn State) in University Park, Pennsylvania has taught: MATH 486 - Mathematical Theory Of Games.<span class="Apple-converted-space"> </span></span></p>
+<p class="p4"><span class="s1"><br>
+</span></p>
+<p class="p4"><span class="s1"><br>
+</span></p>
+<p class="p100"><span class="s1">AMS/MR</span></p>
+<p class="p4"><span class="s1"><br>
+</span></p>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; color: #000011; -webkit-text-stroke: #00000e"><span class="s123"><b>Vase</b><a href="https://mathscinet.ams.org/mathscinet/MRAuthorID/177365"><span class="s124"><b>rstein, Leonid N. - 177365 - MR</b></span></a></span></h3>
+<p class="p4"><span class="s1">Full name in native script Email is invalid: Contact email address. Link is invalid: Personal website (Leave blank if none). Click to Edit. <i>Vaserstein</i>, <i>Leonid</i> N.</span></p>
+<p class="p4"><span class="s1"><br>
+</span></p>
+<p class="p4"><span class="s1"><br>
+</span></p>
+<p class="p141"><span class="s1"><br>
+</span></p>
+<p class="p142"><span class="s4"><a href="https://www.ias.edu/scholars/leonid-n-vaserstein"><b>Scholars | Institute for Advanced Study</b><span class="s125"><b></b></span></a></span></p>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; color: #0000e9; -webkit-text-stroke: #00000e"><span class="s4"><a href="https://www.ias.edu/scholars/leonid-n-vaserstein"><b>Leonid N. Vaserstein - Scholars | Institute for Advanced Study</b><span class="s115"><b></b></span></a></span></h3>
+<p class="p4"><span class="s1">Sep 1, 1984 — <i>Leonid</i> N. <i>Vaserstein</i>. Affiliation. Mathematics. Home Institution. Penn State University ...</span></p>
+<p class="p36"><span class="s1"><br>
+</span></p>
+<p class="p36"><span class="s1"><br>
+</span></p>
+<h1 style="margin: 0.0px 0.0px 5.4px 0.0px; text-align: center; font: 21.6px Georgia; color: #000000; -webkit-text-stroke: #000000"><span class="s1">On-Line Encyclopedia of Integer Sequences 2 entries</span></h1>
+<p class="p144"><span class="s40"><a href="https://oeis.org/A050792">A050792 - OEIS<span class="s126"></span></a></span></p>
+<p class="p36"><span class="s48">"One of the simplest cubic Diophantine equations is known to have an infinite number of solutions (Lehmer, 1956; Payne and <b>Vaserstein</b>, 1991). Any number of ...</span></p>
+<p class="p145"><span class="s1"><br>
+</span></p>
+<p class="p144"><span class="s40"><a href="https://oeis.org/A060465/internal">A060465 - OEIS<span class="s126"></span></a></span></p>
+<p class="p146"><span class="s1">10, 2015. %H B. Conn, L. <b>Vaserstein</b>, &lt;a href="https://bookstore.ams.org/conm-166"&gt;On sums of three integral cubes&lt;/a&gt;, Contemp. Math 166 (1994) &lt;a ...</span></p>
+<p class="p36"><span class="s1"><br>
+</span></p>
+<p class="p147"><span class="s1"><br>
+Techopedia</span></p>
+<p class="p148"><span class="s1"><br>
+<a href="https://www.techopedia.com/definition/33214/wasserstein-gan-wgan"><span class="s127">hat is the Wasserstein GAN (WGAN)? - Definition from ...</span></a></span></p>
+<p class="p36"><span class="s15"><a href="https://www.techopedia.com/definition/33214/wasserstein-gan-wgan">www.techopedia.com<span class="s46"> › definition › wasserstein-gan-wg...</span></a></span></p>
+<p class="p36"><span class="s48">The Wasserstein GAN (<b>WGAN</b>) is an algorithm introduced in a paper written by Martin Arjovsky, Soumith Chintala and Léon Bottou at the Courant Institute of ...</span></p>
+<p class="p36"><span class="s1"><br>
+</span></p>
+<p class="p149"><span class="s128">——————<br>
+</span><span class="s1">union-edina</span></p>
+<p class="p150"><span class="s1"><br>
+</span></p>
+<p class="p151"><span class="s4"><a href="https://ru.unionpedia.org/i/%D0%9C%D0%B5%D1%82%D1%80%D0%B8%D0%BA%D0%B0_%D0%92%D0%B0%D1%81%D0%B5%D1%80%D1%88%D1%82%D0%B5%D0%B9%D0%BD%D0%B0">Метрика Васерштейна - Юнионпедия<span class="s129"></span></a></span></p>
+<p class="p30"><span class="s40"><a href="https://ru.unionpedia.org/i/%D0%9C%D0%B5%D1%82%D1%80%D0%B8%D0%BA%D0%B0_%D0%92%D0%B0%D1%81%D0%B5%D1%80%D1%88%D1%82%D0%B5%D0%B9%D0%BD%D0%B0">https://ru.unionpedia.org<span class="s130"> › Метрика...</span></a></span></p>
+<p class="p152"><span class="s42">· <a href="https://translate.google.com/translate?hl=en&amp;sl=ru&amp;u=https://ru.unionpedia.org/i/%25D0%259C%25D0%25B5%25D1%2582%25D1%2580%25D0%25B8%25D0%25BA%25D0%25B0_%25D0%2592%25D0%25B0%25D1%2581%25D0%25B5%25D1%2580%25D1%2588%25D1%2582%25D0%25B5%25D0%25B9%25D0%25BD%25D0%25B0&amp;prev=search&amp;pto=aue"><span class="s131">Translate this page</span></a></span></p>
+<p class="p153"><span class="s1">Метрика Васерштейна — естественная метрика на пространстве вероятностных мер в метрическом пространстве. 0 отношения. Юнионпедия это понятие карту или ...</span></p>
+<p class="p148"><span class="s1"><br>
+</span></p>
+<p class="p148"><span class="s1"><br>
+</span></p>
+<p class="p154"><span class="s40"><a href="https://kartaslov.ru/%D0%BA%D0%B0%D1%80%D1%82%D0%B0-%D0%B7%D0%BD%D0%B0%D0%BD%D0%B8%D0%B9/%D0%9C%D0%B5%D1%82%D1%80%D0%B8%D0%BA%D0%B0+%D0%92%D0%B0%D1%81%D0%B5%D1%80%D1%88%D1%82%D0%B5%D0%B9%D0%BD%D0%B0">карта-знаний</a></span><span class="s132"><span class="Apple-converted-space">  </span></span><span class="s133">kartaslov</span></p>
+<p class="p150"><span class="s1"><br>
+</span></p>
+<p class="p151"><span class="s4"><a href="https://kartaslov.ru/%D0%BA%D0%B0%D1%80%D1%82%D0%B0-%D0%B7%D0%BD%D0%B0%D0%BD%D0%B8%D0%B9/%D0%9C%D0%B5%D1%82%D1%80%D0%B8%D0%BA%D0%B0+%D0%92%D0%B0%D1%81%D0%B5%D1%80%D1%88%D1%82%D0%B5%D0%B9%D0%BD%D0%B0">Метрика Васерштейна — Карта знаний<span class="s129"></span></a></span></p>
+<p class="p30"><span class="s40"><a href="https://kartaslov.ru/%D0%BA%D0%B0%D1%80%D1%82%D0%B0-%D0%B7%D0%BD%D0%B0%D0%BD%D0%B8%D0%B9/%D0%9C%D0%B5%D1%82%D1%80%D0%B8%D0%BA%D0%B0+%D0%92%D0%B0%D1%81%D0%B5%D1%80%D1%88%D1%82%D0%B5%D0%B9%D0%BD%D0%B0">https://kartaslov.ru<span class="s130"> › карта-знаний</span></a></span></p>
+<p class="p152"><span class="s42">· <a href="https://translate.google.com/translate?hl=en&amp;sl=ru&amp;u=https://kartaslov.ru/%25D0%25BA%25D0%25B0%25D1%2580%25D1%2582%25D0%25B0-%25D0%25B7%25D0%25BD%25D0%25B0%25D0%25BD%25D0%25B8%25D0%25B9/%25D0%259C%25D0%25B5%25D1%2582%25D1%2580%25D0%25B8%25D0%25BA%25D0%25B0%2B%25D0%2592%25D0%25B0%25D1%2581%25D0%25B5%25D1%2580%25D1%2588%25D1%2582%25D0%25B5%25D0%25B9%25D0%25BD%25D0%25B0&amp;prev=search&amp;pto=aue"><span class="s131">Translate this page</span></a></span></p>
+<p class="p153"><span class="s1">Метрика Васерштейна — естественная метрика на пространстве вероятностных мер в... Заходите на сайт, чтобы узнать подробнее.</span></p>
+<p class="p147"><span class="s1"><br>
+lexi-edina</span></p>
+<p class="p30"><span class="s40"><a href="https://ru.lexipedia.org/wiki/%D0%9C%D0%B5%D1%82%D1%80%D0%B8%D0%BA%D0%B0_%D0%92%D0%B0%D1%81%D0%B5%D1%80%D1%88%D1%82%D0%B5%D0%B9%D0%BD%D0%B0">https://ru.lexipedia.org<span class="s130"> › wiki › Мет...</span></a></span></p>
+<p class="p152"><span class="s42">· <a href="https://translate.google.com/translate?hl=en&amp;sl=ru&amp;u=https://ru.lexipedia.org/wiki/%25D0%259C%25D0%25B5%25D1%2582%25D1%2580%25D0%25B8%25D0%25BA%25D0%25B0_%25D0%2592%25D0%25B0%25D1%2581%25D0%25B5%25D1%2580%25D1%2588%25D1%2582%25D0%25B5%25D0%25B9%25D0%25BD%25D0%25B0&amp;prev=search&amp;pto=aue"><span class="s131">Translate this page</span></a></span></p>
+<p class="p49"><span class="s48">МетрикаВасерштейна — естественная метрика на пространстве вероятностных мер в метрическом пространстве. Интуитивно, если каждая мера измеряет распределение ...</span></p>
+<p class="p36"><span class="s1"><br>
+</span></p>
+<p class="p36"><span class="s1"><br>
+</span></p>
+<p class="p155"><span class="s1">freejournal</span></p>
+<p class="p150"><span class="s1"><br>
+</span></p>
+<p class="p151"><span class="s4"><a href="https://ru.freejournal.org/index.php/6153796/1/metrika-vasershteyna.html">Метрика Васерштейна - FreeJournal<span class="s129"></span></a></span></p>
+<p class="p30"><span class="s40"><a href="https://ru.freejournal.org/index.php/6153796/1/metrika-vasershteyna.html">https://ru.freejournal.org<span class="s130"> › index.php</span></a></span></p>
+<p class="p152"><span class="s42">· <a href="https://translate.google.com/translate?hl=en&amp;sl=ru&amp;u=https://ru.freejournal.org/index.php/6153796/1/metrika-vasershteyna.html&amp;prev=search&amp;pto=aue"><span class="s131">Translate this page</span></a></span></p>
+<p class="p153"><span class="s1">Метрика Васерштейна - естественная метрика на пространстве вероятностных мер в метрическом пространстве. Интуитивно, если каждая мера измеряет распределение ...</span></p>
+<p class="p36"><span class="s1"><br>
+</span></p>
+<p class="p36"><span class="s1"><br>
+</span></p>
+<p class="p155"><span class="s1">ИСТИНА</span></p>
+<p class="p155"><span class="s1"><br>
+</span></p>
+<p class="p46"><span class="s4"><a href="https://istina.msu.ru/workers/10615127/">Васерштейн Л.Н. - сотрудник | ИСТИНА ...<span class="s134"></span></a></span></p>
+<p class="p44"><span class="s4"><a href="https://istina.msu.ru/workers/10615127/">https://istina.msu.ru<span class="s130"> › workers</span></a></span></p>
+<p class="p156"><span class="s6">· <a href="https://translate.google.com/translate?hl=en&amp;sl=ru&amp;u=https://istina.msu.ru/workers/10615127/&amp;prev=search&amp;pto=aue"><span class="s56">Translate this page</span></a></span></p>
+<p class="p40"><span class="s1">1970 О нормальных подгруппах ортогональной группы над кольцом с инволюцией · Васерштейн Л.Н., Михалев А.В. в журнале Алгебра и логика, издательство Обществ.</span></p>
+<p class="p17"><span class="s1"><br>
+</span></p>
+<p class="p157"><span class="s40"><a href="http://www.mathnet.ru/rus/person23042">Персоналии</a></span><span class="s135"><br>
+</span></p>
+<p class="p158"><span class="s4"><a href="http://www.mathnet.ru/rus/person23042">Персоналии: Васерштейн Леонид Нисонович - MathNet.Ru<span class="s136"></span></a></span></p>
+<p class="p30"><span class="s40"><a href="http://www.mathnet.ru/rus/person23042">http://www.mathnet.ru<span class="s41"> › person23042</span></a></span></p>
+<p class="p159"><span class="s137">· <a href="https://translate.google.com/translate?hl=en&amp;sl=ru&amp;u=http://www.mathnet.ru/rus/person23042&amp;prev=search&amp;pto=aue"><span class="s43">Translate this page</span></a></span></p>
+<p class="p160"><span class="s1"><br>
+</span></p>
+<p class="p32"><span class="s1">алгебраическая К-теория, метрика Васерштейна. Коды УДК: 512.864, 513.83, 519.4, 519.443, 519.46, 519.27, 519.21. Основные темы научной работы. Классические ...</span></p>
+<p class="p33"><span class="s1"><br>
+</span></p>
+<p class="p36"><span class="s1"><br>
+</span></p>
+<p class="p161"><span class="s40"><a href="https://wikicsu.ru/wiki/Wasserstein_metric">Энциклопедия</a></span><span class="s135"><br>
+</span></p>
+<p class="p162"><span class="s40"><a href="https://wikicsu.ru/wiki/Wasserstein_metric">Метрика Вассерштейна - Wasserstein metric - Энциклопедия<span class="s138"></span></a></span></p>
+<p class="p163"><span class="s139"><a href="https://wikicsu.ru/wiki/Wasserstein_metric">https://wikicsu.ru<span class="s140"> › wiki › Wasserstei...</span></a></span></p>
+<p class="p163"><span class="s141">https://wikicsu.ru</span><span class="s48"> › wiki › Wasserstei...</span></p>
+<p class="p164"><span class="s40"><a href="https://translate.google.com/translate?hl=en&amp;sl=ru&amp;u=https://wikicsu.ru/wiki/Wasserstein_metric&amp;prev=search&amp;pto=aue">Translate this page<span class="s142"></span></a></span></p>
+<p class="p165"><span class="s48">В математика, то Расстояние </span><span class="s143"><b>Вассерштейна</b></span><span class="s48"> или же Метрика Канторовича – Рубинштейна ... «</span><span class="s143"><b>Вассерштейн</b></span><span class="s48">» (приписывается имени «Васерштейн» Немецкий источник).</span></p>
+<p class="p17"><span class="s1"><br>
+</span></p>
+<p class="p17"><span class="s1"><br>
+</span></p>
+<p class="p166"><span class="s48">The Uncertainty Principle (Stanford Encyclopedia of Philosophy)</span></p>
+<p class="p163"><span class="s30"><br>
+<a href="https://plato.stanford.edu/entries/qt-uncertainty/"><span class="s144">ttps://plato.stanford.edu</span><span class="s145"> › entries › qt-uncertainty</span></a></span></p>
+<p class="p167"><span class="s48">The Uncertainty Principle (Stanford Encyclopedia of Philosophy)</span></p>
+<p class="p165"><span class="s146">by J Higevoord · 2001 · Cited by 225 — </span><span class="s48">The distance they chose is the </span><span class="s143"><b>Wasserstein</b></span><span class="s48">-2 distance, a.k.a. (a variation on) the earth-movers distance. Definition (</span><span class="s143"><b>Wasserstein</b></span><span class="s48">-2 distance)</span></p>
+<p class="p168"><span class="s1">Missing: </span><span class="s107">Энциклопедия</span><span class="s1"> ‎| Must include: <a href="https://www.google.com/search?q=%22%D0%AD%D0%BD%D1%86%D0%B8%D0%BA%D0%BB%D0%BE%D0%BF%D0%B5%D0%B4%D0%B8%D1%8F%22+vaserstein+OR+wasserstein&amp;sa=X&amp;ved=2ahUKEwiB6_iPqor6AhVHj4kEHTd2DMoQ5t4CegQIHBAB"><span class="s147">Энциклопедия</span></a></span></p>
+<p class="p36"><span class="s1"><br>
+</span></p>
+<p class="p169"><span class="s48"><span class="Apple-converted-space"> </span></span></p>
+<p class="p170"><span class="s40"><a href="https://www.krugosvet.ru/enc/kultura_i_obrazovanie/literatura/VASSERSTIN_UENDI.html"><span class="Apple-converted-space"> </span><span class="s138"></span></a></span></p>
+<p class="p171"><span class="s1"><br>
+</span></p>
+<p class="p172"><span class="s48"><span class="Apple-converted-space"> </span></span></p>
+<p class="p173"><span class="s1"><br>
+</span></p>
+<p class="p36"><span class="s1"><br>
+</span></p>
+<p class="p174"><span class="s148"><a href="http://dl.booktolearn.com/ebooks2/computer/algorithms/9781489976857_encyclopedia_of_machine_learning_and_data_mining_a1a8.pdf"><b><span class="Apple-converted-space"> </span></b></a></span><span class="s149"><b>yyy</b></span><span class="s1">————————————— </span><span class="s3">unsorted <span class="Apple-converted-space"> </span></span></p>
+<p class="p174"><span class="s1">Chinese<span class="Apple-converted-space">  </span></span><span class="s150">列昂尼德·瓦塞斯坦</span></p>
+<p class="p103"><span class="s1">What is Wasserstein Barycenter?</span></p>
+<p class="p4"><span class="s1">How is Wasserstein distance calculated?</span></p>
+<p class="p18"><span class="s1"><br>
+</span></p>
+<p class="p86"><span class="s4"><b>A</b><a href="https://peoplepill.com/people/leonid-vaserstein/"><span class="s92"><b>bout Leonid Vaseršteĭn: Russian-American mathematician ...</b></span></a></span></p>
+<p class="p9"><span class="s4"><a href="https://peoplepill.com/people/leonid-vaserstein/"><i>peoplepill.com › people › leonid-vaserstein</i></a></span></p>
+<p class="p4"><span class="s1">... mathematician, Mathematician, From: Russia | Biography, Facts, Career, <i>Wiki</i>, ... Leonid <i>Vaseršteĭn</i> is a Russian-American mathematician, currently Professor ...</span></p>
+<p class="p18"><span class="s1"><br>
+<span class="Apple-converted-space"> </span></span><span class="s151"><br>
+</span></p>
+<p class="p85"><span class="s4"><a href="http://elki-project.github.io/related"><b>Publications Implemented or Referenced by ELKI</b><span class="s91"><b></b></span></a></span></p>
+<p class="p9"><span class="s4"><a href="http://elki-project.github.io/related"><i>elki-project.github.io › related</i></a></span></p>
+<p class="p4"><span class="s1"><br>
+</span></p>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; color: #0000e9; -webkit-text-stroke: #00000e"><span class="s4"><a href="http://www.worldcat.org/identities/lccn-n2002153793"><b>Vaserstein, Leonid Nison [WorldCat Identities]</b><span class="s115"><b></b></span></a></span></h3>
+<p class="p4"><span class="s1">Introduction to linear programming by <i>Leonid</i> Nison <i>Vaserstein</i>( Book ) 10 editions published between 2002 and 2005 in English and held by 105 WorldCat ...</span></p>
+<p class="p139"><span class="s1"><br>
+</span></p>
+<h3 style="margin: 0.0px 0.0px 14.0px 0.0px; font: 14.0px Times; color: #0000e9; -webkit-text-stroke: #00000e"><span class="s4"><a href="https://en.unionpedia.org/i/Leonid_Vaser%C5%A1te%C4%ADn"><b>Leonid Vaseršteĭn - Unionpedia, the concept map</b><span class="s115"><b></b></span></a></span></h3>
+<p class="p139"><span class="s1"><br>
+</span></p>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; color: #0000e9; -webkit-text-stroke: #00000e"><span class="s4"><a href="https://alchetron.com/Leonid-Vaser%C5%A1te%C4%ADn"><b>Leonid Vaseršteĭn - Alchetron, The Free Social Encyclopedia</b><span class="s115"><b></b></span></a></span></h3>
+<p class="p176"><span class="s4"><a href="https://alchetron.com/Leonid-Vaser%C5%A1te%C4%ADn"><i>alchetron.com › Leonid-Vaseršteĭn</i><span class="s152"><i></i></span></a></span></p>
+<p class="p4"><span class="s1">Feb 7, 2018 — <i>Leonid Vaseršteĭn</i> is a Russian-American mathematician, currently Professor of Mathematics at Penn State University. His research is focused </span></p>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; color: #00000e; -webkit-text-stroke: #00000e"><span class="s1"><br>
+<span class="Apple-converted-space"> </span></span><span class="s89"><span class="Apple-converted-space"> </span></span></h3>
+</body>
+</html>

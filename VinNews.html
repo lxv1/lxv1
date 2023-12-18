@@ -1,0 +1,606 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="1894.1">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; min-height: 18.0px}
+    p.p3 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; line-height: 14.0px; font: 22.0px Helvetica; color: #520087; -webkit-text-stroke: #520087}
+    p.p4 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; line-height: 14.0px; font: 22.0px Helvetica; color: #520087; -webkit-text-stroke: #520087; min-height: 26.0px}
+    p.p5 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 16.0px; font: 12.0px Arial; color: #2e3133}
+    p.p6 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 24.0px; font: 18.0px Helvetica; color: #5d6267; background-color: #ffffff}
+    p.p7 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 20.0px; font: 14.0px 'PingFang SC'; color: #5d6267}
+    p.p8 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 14.0px; font: 12.0px Helvetica; color: #5d6267}
+    p.p9 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 16.0px; font: 12.0px Arial; color: #2e3133; min-height: 14.0px}
+    p.p10 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 14.0px; font: 12.0px Helvetica; color: #5d6267; background-color: #ffffff}
+    p.p11 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 14.0px; font: 12.0px Helvetica; color: #5d6267; background-color: #ffffff; min-height: 14.0px}
+    p.p12 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 24.0px; font: 18.0px 'PingFang SC'; color: #5d6267; background-color: #ffffff}
+    p.p13 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 14.0px; font: 22.0px Helvetica; color: #520087; -webkit-text-stroke: #520087; min-height: 26.0px}
+    p.p14 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 14.0px; font: 12.0px Arial; color: #2e3133; min-height: 14.0px}
+    p.p15 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 14.0px; font: 12.0px Arial; color: #18191b; min-height: 14.0px}
+    p.p16 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 14.0px; font: 12.0px Helvetica; color: #5d6267; min-height: 14.0px}
+    p.p17 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 24.0px; font: 18.0px Helvetica; color: #175ae2; background-color: #ffffff}
+    p.p18 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 16.0px; font: 12.0px 'PingFang SC'; color: #2e3133}
+    p.p19 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 16.0px; font: 12.0px Helvetica; color: #5d6267; background-color: #ffffff}
+    p.p20 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 20.0px; font: 14.0px Helvetica; color: #5d6267}
+    p.p21 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 14.0px; font: 12.0px Helvetica; color: #520087; min-height: 14.0px}
+    p.p22 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 24.0px; font: 18.0px 'PingFang SC'; color: #175ae2; background-color: #ffffff}
+    p.p23 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 20.0px; font: 14.0px Helvetica; color: #5d6267; background-color: #ffffff}
+    p.p24 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 14.0px; font: 14.0px Helvetica; color: #5d6267; background-color: #ffffff; min-height: 17.0px}
+    p.p25 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 20.0px; font: 12.0px Helvetica; color: #5d6267; background-color: #ffffff; min-height: 14.0px}
+    p.p26 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 14.0px; font: 12.0px Times; color: #2e3133; min-height: 14.0px}
+    p.p27 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 16.0px; font: 12.0px 'Songti SC'; color: #2e3133}
+    p.p28 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 24.0px; font: 18.0px Helvetica; color: #5d6267}
+    p.p29 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 14.0px; font: 12.0px Times; color: #000000; min-height: 14.0px}
+    p.p30 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 14.0px; font: 12.0px Arial; color: #520087; min-height: 14.0px}
+    p.p31 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 16.0px; font: 12.0px Times; color: #000000; min-height: 14.0px}
+    p.p32 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 16.0px; font: 12.0px Times; color: #2e3133}
+    p.p33 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 16.0px; font: 12.0px Helvetica; color: #5d6267}
+    p.p34 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 16.0px; font: 12.0px Times; color: #2e3133; min-height: 14.0px}
+    p.p35 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 24.0px; font: 18.0px 'PingFang SC'; color: #5d6267}
+    p.p36 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 16.0px; font: 12.0px Helvetica; color: #5d6267; background-color: #ffffff; min-height: 14.0px}
+    p.p37 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 14.0px; font: 12.0px 'PingFang SC'; color: #2e3133}
+    p.p38 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 20.0px; font: 14.0px 'PingFang SC'; color: #5d6267; background-color: #ffffff}
+    p.p39 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 14.0px; font: 12.0px Arial; color: #520087}
+    p.p40 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 24.0px; font: 18.0px Arial; color: #18191b; -webkit-text-stroke: #18191b}
+    p.p41 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 14.0px; font: 12.0px Helvetica; color: #5d6267; -webkit-text-stroke: #18191b; background-color: #ffffff}
+    p.p42 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 14.0px; font: 22.0px Helvetica; color: #520087; -webkit-text-stroke: #520087}
+    p.p43 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 24.0px; font: 18.0px Helvetica; color: #175ae2; -webkit-text-stroke: #175ae2; background-color: #ffffff}
+    p.p44 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 20.0px; font: 14.0px Helvetica; color: #5d6267; -webkit-text-stroke: #5d6267}
+    p.p45 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 14.0px; font: 12.0px Helvetica; color: #5d6267; -webkit-text-stroke: #5d6267; background-color: #ffffff}
+    p.p46 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 14.0px; font: 12.0px Helvetica; color: #5d6267; -webkit-text-stroke: #5d6267; background-color: #ffffff; min-height: 14.0px}
+    p.p47 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 14.0px; font: 12.0px Helvetica; color: #520087}
+    p.p48 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 14.0px; font: 12.0px Helvetica; color: #520087; -webkit-text-stroke: #520087; min-height: 14.0px}
+    p.p49 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 16.0px; font: 12.0px AppleMyungjo; color: #2e3133}
+    p.p50 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 24.0px; font: 18.0px 'Apple SD Gothic Neo'; color: #5d6267}
+    p.p51 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 16.0px; font: 12.0px Arial; color: #2e3133; -webkit-text-stroke: #2e3133}
+    p.p52 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 14.0px; font: 12.0px Helvetica; color: #5d6267; -webkit-text-stroke: #5d6267}
+    p.p53 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 24.0px; font: 18.0px Helvetica; color: #175ae2; -webkit-text-stroke: #175ae2}
+    p.p54 {margin: 0.0px 0.0px 6.0px 0.0px; line-height: 25.0px; font: 16.0px Helvetica; color: #1f1f1f; -webkit-text-stroke: #1f1f1f}
+    p.p55 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 16.0px; font: 11.0px Helvetica; color: #2a7acb; -webkit-text-stroke: #2a7acb}
+    p.p56 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 18.0px; font: 11.0px Helvetica; color: #0f0f0f; -webkit-text-stroke: #0f0f0f}
+    p.p57 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 14.0px; font: 7.0px Helvetica; color: #520087; -webkit-text-stroke: #520087; min-height: 8.0px}
+    p.p58 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 18.0px; font: 11.0px Helvetica; color: #0f0f0f; -webkit-text-stroke: #0f0f0f; background-color: #ffffff}
+    p.p59 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 16.0px; font: 12.0px Arial; color: #2e3133; -webkit-text-stroke: #2e3133; min-height: 14.0px}
+    p.p60 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 16.0px; font: 12.0px 'PingFang SC'; color: #2e3133; -webkit-text-stroke: #2e3133}
+    p.p61 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 14.0px; font: 12.0px Arial; color: #18191b; -webkit-text-stroke: #18191b; min-height: 14.0px}
+    p.p62 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 14.0px; font: 12.0px Arial; color: #2e3133; -webkit-text-stroke: #2e3133; min-height: 14.0px}
+    p.p63 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 14.0px; font: 12.0px Times; color: #000000; -webkit-text-stroke: #000000; min-height: 14.0px}
+    p.p64 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 14.0px; font: 12.0px Times; color: #520087; -webkit-text-stroke: #520087; min-height: 14.0px}
+    p.p65 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 14.0px; font: 12.0px Arial; color: #520087; -webkit-text-stroke: #520087; min-height: 14.0px}
+    span.s1 {font: 17.0px 'Times New Roman'; font-kerning: none; color: #000000; -webkit-text-stroke: 0px #000000}
+    span.s2 {text-decoration: underline ; font-kerning: none; color: #00000b; -webkit-text-stroke: 0px #00000b}
+    span.s3 {font: 17.0px 'Times New Roman'; font-kerning: none; color: #00000b; -webkit-text-stroke: 0px #00000b}
+    span.s4 {text-decoration: underline ; font-kerning: none; color: #000033}
+    span.s5 {font-kerning: none}
+    span.s6 {font-kerning: none; background-color: #ffffff}
+    span.s7 {font: 18.0px 'PingFang SC'; font-kerning: none}
+    span.s8 {font: 18.0px Helvetica; font-kerning: none}
+    span.s9 {font: 14.0px Helvetica; font-kerning: none; color: #5d6267}
+    span.s10 {font: 14.0px 'PingFang SC'; font-kerning: none; color: #5d6267}
+    span.s11 {font: 12.0px Helvetica; font-kerning: none; color: #5d6267}
+    span.s12 {font: 12.0px Helvetica; font-kerning: none; color: #5d6267; -webkit-text-stroke: 0px #000000}
+    span.s13 {font: 18.0px Helvetica; font-kerning: none; color: #5d6267; -webkit-text-stroke: 0px #000000}
+    span.s14 {font: 18.0px 'PingFang SC'; font-kerning: none; color: #5d6267; -webkit-text-stroke: 0px #000000}
+    span.s15 {font: 18.0px Helvetica; font-kerning: none; color: #175ae2}
+    span.s16 {font: 12.0px 'PingFang SC'; font-kerning: none}
+    span.s17 {font: 14.0px Helvetica; font-kerning: none; background-color: #ffffff}
+    span.s18 {font: 14.0px 'PingFang SC'; font-kerning: none}
+    span.s19 {font: 14.0px 'PingFang SC'; font-kerning: none; background-color: #ffffff}
+    span.s20 {font: 14.0px Helvetica; font-kerning: none}
+    span.s21 {font: 18.0px Helvetica; font-kerning: none; color: #175ae2; -webkit-text-stroke: 0px #000000}
+    span.s22 {font-kerning: none; color: #175ae2}
+    span.s23 {font: 12.0px 'Songti SC'; font-kerning: none; color: #2e3133; -webkit-text-stroke: 0px #000000}
+    span.s24 {font: 18.0px Helvetica; font-kerning: none; background-color: transparent}
+    span.s25 {font-kerning: none; background-color: transparent}
+    span.s26 {font: 14.0px 'PingFang SC'; font-kerning: none; background-color: transparent}
+    span.s27 {font: 14.0px 'PingFang SC'; font-kerning: none; color: #5d6267; -webkit-text-stroke: 0px #000000}
+    span.s28 {font: 14.0px Helvetica; font-kerning: none; color: #5d6267; -webkit-text-stroke: 0px #000000}
+    span.s29 {font: 12.0px Helvetica; font-kerning: none; color: #5d6267; background-color: #ffffff}
+    span.s30 {font: 12.0px 'PingFang SC'; font-kerning: none; color: #2e3133}
+    span.s31 {font: 14.0px Helvetica; font-kerning: none; background-color: transparent}
+    span.s32 {font: 18.0px 'PingFang SC'; font-kerning: none; color: #175ae2; -webkit-text-stroke: 0px #000000}
+    span.s33 {font: 14.0px Helvetica; font-kerning: none; color: #5d6267; background-color: #ffffff; -webkit-text-stroke: 0px #000000}
+    span.s34 {font-kerning: none; background-color: #f6f7f9}
+    span.s35 {font: 4.0px Helvetica; font-kerning: none; color: #5d6267}
+    span.s36 {font: 12.0px Helvetica; font-kerning: none; color: #5d6267; -webkit-text-stroke: 0px #18191b}
+    span.s37 {font: 12.0px Arial; font-kerning: none; color: #2e3133}
+    span.s38 {font-kerning: none; color: #18191b}
+    span.s39 {font: 12.0px AppleMyungjo; font-kerning: none; color: #2e3133; -webkit-text-stroke: 0px #000000}
+    span.s40 {font: 18.0px 'Apple SD Gothic Neo'; font-kerning: none; color: #5d6267; -webkit-text-stroke: 0px #000000}
+    span.s41 {font: 14.0px 'Apple SD Gothic Neo'; font-kerning: none; color: #5d6267; -webkit-text-stroke: 0px #000000}
+    span.s42 {font: 12.0px Arial; font-kerning: none; -webkit-text-stroke: 0px #000000}
+    span.s43 {font: 9.0px Helvetica; font-kerning: none; color: #0f0f0f; -webkit-text-stroke: 0px #0f0f0f}
+    span.s44 {font: 9.0px Helvetica; font-kerning: none; color: #59626a; -webkit-text-stroke: 0px #59626a}
+    span.s45 {font: 11.0px Helvetica; font-kerning: none; color: #2a7acb; -webkit-text-stroke: 0px #2a7acb}
+    span.s46 {font: 12.0px Arial; font-kerning: none; color: #2e3133; -webkit-text-stroke: 0px #2e3133}
+    span.s47 {font: 14.0px Arial; font-kerning: none; color: #000000; -webkit-text-stroke: 0px #000000}
+    span.s48 {font: 12.0px Helvetica; font-kerning: none}
+    span.s49 {font: 14.0px Arial; font-kerning: none; color: #18191b; -webkit-text-stroke: 0px #18191b}
+    span.s50 {font-kerning: none; color: #18191b; -webkit-text-stroke: 0px #18191b}
+    span.s51 {font-kerning: none; color: #520087; -webkit-text-stroke: 0px #520087}
+    span.s52 {font-kerning: none; color: #2e3133; -webkit-text-stroke: 0px #2e3133}
+  </style>
+</head>
+<body>
+<p class="p1">VinNews.html</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space"> </span>25+29+10+14=88 news<span class="Apple-converted-space">  </span>items</p>
+<p class="p1">from google books.</p>
+<p class="p1">See also news items about<span class="Apple-converted-space">  </span>2,5K <span class="Apple-converted-space">   </span><span class="s1"> <a href="https://personal.science.psu.edu/lxv1/VinTitle2.html"><span class="s2">papers and preprints<span class="Apple-converted-space"> </span></span></a></span></p>
+<p class="p1">with my name in title</p>
+<p class="p1">and some news items in<span class="Apple-converted-space"> </span><span class="s3"> <a href="https://personal.science.psu.edu/lxv1/VinBooks.html"><span class="s4">books</span></a></span><span class="s1"> .</span></p>
+<p class="p2"><br></p>
+<p class="p3"><span class="s5">2017<span class="Apple-converted-space">  </span>25 items</span></p>
+<p class="p4"><span class="s5"></span><br></p>
+<p class="p5"><span class="s6"><a href="https://www.leiphone.com/news/201702/EU12GVIe2pNGtgEk.html">Leiphone<span class="s5"></span></a></span></p>
+<p class="p6"><span class="s7"><a href="https://www.leiphone.com/news/201702/EU12GVIe2pNGtgEk.html">令人拍案叫绝的<span class="s8">Wasserstein GAN</span></a></span></p>
+<p class="p7"><span class="s6"><a href="https://www.leiphone.com/news/201702/EU12GVIe2pNGtgEk.html">而今天的主角<span class="s9">Wasserstein GAN</span><span class="s10">（下面简称</span><span class="s9">WGAN</span><span class="s10">）成功地做到了以下爆炸性的几点：</span><span class="s9">. </span><span class="s10">彻底解决</span><span class="s9">GAN</span><span class="s10">训练不稳定的问题，不再需要小心平衡生成器</span><span class="s9"> ...</span></a></span></p>
+<p class="p8"><span class="s6"><a href="https://www.leiphone.com/news/201702/EU12GVIe2pNGtgEk.html">Feb 6, 2017<span class="s11"></span></a></span></p>
+<p class="p4"><span class="s5"></span><br></p>
+<p class="p9"><span class="s6"><a href="https://www.leiphone.com/news/201704/7IVQiiVMDR3XFfjt.html"><span class="Apple-converted-space"> </span><span class="s5"></span></a></span></p>
+<p class="p5"><span class="s6"><a href="https://www.leiphone.com/news/201704/7IVQiiVMDR3XFfjt.html">Leiphone<span class="s5"></span></a></span></p>
+<p class="p6"><span class="s7"><a href="https://www.leiphone.com/news/201704/7IVQiiVMDR3XFfjt.html">蒙特利尔大学研究者改进<span class="s8">Wasserstein GAN</span><span class="s5">，极大提高</span><span class="s8">GAN</span><span class="s5">训练</span><span class="s8"> ...</span></a></span></p>
+<p class="p7"><span class="s6"><a href="https://www.leiphone.com/news/201704/7IVQiiVMDR3XFfjt.html">最近提出的<span class="s9">Wasserstein GAN</span><span class="s10">（</span><span class="s9">WGAN</span><span class="s10">）在训练稳定性上有极大的进步，但是在某些设定下仍存在生成低质量的样本，或者不能收敛等问题。</span></a></span></p>
+<p class="p10"><span class="s5"><a href="https://www.leiphone.com/news/201704/7IVQiiVMDR3XFfjt.html">Apr 15, 2017<span class="s12"></span></a></span></p>
+<p class="p11"><span class="s5"></span><br></p>
+<p class="p9"><span class="s5"><a href="https://www.leiphone.com/news/201704/Gyr962QLwsMo2WVk.html"></a></span><br></p>
+<p class="p5"><span class="s6"><a href="https://www.leiphone.com/news/201704/Gyr962QLwsMo2WVk.html">Leiphone<span class="s5"></span></a></span></p>
+<p class="p12"><span class="s5"><a href="https://www.leiphone.com/news/201704/Gyr962QLwsMo2WVk.html">生成式对抗网络<span class="s13">GAN</span><span class="s14">最近在</span><span class="s13">NLP</span><span class="s14">领域有哪些应用？</span></a></span></p>
+<p class="p7"><span class="s6"><a href="https://www.leiphone.com/news/201704/Gyr962QLwsMo2WVk.html">直接把<span class="s9">GAN</span><span class="s10">应用到</span><span class="s9">NLP</span><span class="s10">领域（主要是生成序列），有两方面的问题：</span><span class="s9">. 1. ... </span><span class="s10">这里引用自知乎专栏：令人拍案叫绝的</span><span class="s9">Wasserstein GAN - </span><span class="s10">知乎专栏</span><span class="s9">.</span></a></span></p>
+<p class="p8"><span class="s6"><a href="https://www.leiphone.com/news/201704/Gyr962QLwsMo2WVk.html">Apr 16, 2017<span class="s11"></span></a></span></p>
+<p class="p13"><span class="s5"></span><br></p>
+<p class="p4"><span class="s5"></span><br></p>
+<p class="p5"><span class="s6"><a href="https://www.leiphone.com/news/201704/pQsvH7VN8TiLMDlK.html">Leiphone<span class="s5"></span></a></span></p>
+<p class="p12"><span class="s5"><a href="https://www.leiphone.com/news/201704/pQsvH7VN8TiLMDlK.html">掀起热潮的<span class="s13">Wasserstein GAN</span><span class="s14">，在近段时间又有哪些研究进展？</span></a></span></p>
+<p class="p7"><span class="s6"><a href="https://www.leiphone.com/news/201704/pQsvH7VN8TiLMDlK.html">中做了回答，介绍了<span class="s9">Wasserstein GAN</span><span class="s10">的最新进展。本文为郑华滨基于此回答向雷锋网供稿，未经许可不得转载。</span><span class="s9"> </span><span class="s10">前段时间，</span><span class="s9">Wasserstein GAN</span><span class="s10">以其</span><span class="s9"> ...</span></a></span></p>
+<p class="p10"><span class="s5"><a href="https://www.leiphone.com/news/201704/pQsvH7VN8TiLMDlK.html">Apr 24, 2017</a></span></p>
+<p class="p11"><span class="s5"><a href="https://www.leiphone.com/news/201704/pQsvH7VN8TiLMDlK.html"></a></span><br></p>
+<p class="p14"><span class="s5"><a href="https://www.leiphone.com/news/201704/K24dkB7EGuogc79M.html"></a></span><br></p>
+<p class="p5"><span class="s6"><a href="https://www.leiphone.com/news/201704/K24dkB7EGuogc79M.html">Leiphone<span class="s5"></span></a></span></p>
+<p class="p12"><span class="s5"><a href="https://www.leiphone.com/news/201704/K24dkB7EGuogc79M.html">一文详解深度神经网络中的对抗样本与学习<span class="s14"></span></a></span></p>
+<p class="p7"><span class="s6"><a href="https://www.leiphone.com/news/201704/K24dkB7EGuogc79M.html">雷锋网<span class="s9">(</span><span class="s10">公众号：雷锋网</span><span class="s9">)</span><span class="s10">相关文章：</span><span class="s9">. </span><span class="s10">生成式对抗网络</span><span class="s9">GAN</span><span class="s10">最近在</span><span class="s9">NLP</span><span class="s10">领域有哪些应用？</span><span class="s9"> </span><span class="s10">蒙特利尔大学研究者改进</span><span class="s9">Wasserstein GAN</span><span class="s10">，极大提高</span><span class="s9">GAN ...</span></a></span></p>
+<p class="p8"><span class="s6"><a href="https://www.leiphone.com/news/201704/K24dkB7EGuogc79M.html">Apr 24, 2017<span class="s11"></span></a></span></p>
+<p class="p15"><span class="s5"></span><br></p>
+<p class="p16"><span class="s6"><span class="Apple-converted-space"> </span></span></p>
+<p class="p5"><span class="s6"><a href="https://www.leiphone.com/news/201704/fcG0rTSZWqgI31eY.html">Leiphone<span class="s5"></span></a></span></p>
+<p class="p6"><span class="s5"><a href="https://www.leiphone.com/news/201704/fcG0rTSZWqgI31eY.html">Valse 2017 | <span class="s14">生成对抗网络（</span><span class="s13">GAN</span><span class="s14">）研究年度进展评述</span></a></span></p>
+<p class="p7"><span class="s6"><a href="https://www.leiphone.com/news/201704/fcG0rTSZWqgI31eY.html">等到了<span class="s9">Wasserstein GAN </span><span class="s10">的时候，它就明确解释了与</span><span class="s9">MMD </span><span class="s10">之间的联系，虽然论文里写的是一个「减」的关系，但我们看它的代码，它也是要加上</span><span class="s9"> ...</span></a></span></p>
+<p class="p8"><span class="s6"><a href="https://www.leiphone.com/news/201704/fcG0rTSZWqgI31eY.html">Apr 30, 2017<span class="s11"></span></a></span></p>
+<p class="p4"><span class="s5"></span><br></p>
+<p class="p5"><span class="s6"><a href="https://www.leiphone.com/news/201705/JTSEJKDHeETcYORh.html">Leiphone<span class="s5"></span></a></span></p>
+<p class="p17"><span class="s7"><a href="https://www.leiphone.com/news/201705/JTSEJKDHeETcYORh.html">带你漫游<span class="s15">Wasserstein GAN</span></a></span></p>
+<p class="p7"><span class="s6"><a href="https://www.leiphone.com/news/201705/JTSEJKDHeETcYORh.html">上次带大家写了原始版的<span class="s9">GAN</span><span class="s10">，只生成了高斯分布。但兔子哥哥发现在</span><span class="s9">GAN </span><span class="s10">论文的底下，有</span><span class="s9">GAN </span><span class="s10">生成图片的</span><span class="s9">example</span><span class="s10">。</span><span class="s9"> </span><span class="s10">带你漫游</span><span class="s9">Wasserstein ...</span></a></span></p>
+<p class="p10"><span class="s5"><a href="https://www.leiphone.com/news/201705/JTSEJKDHeETcYORh.html">May 25, 2017<span class="s12"></span></a></span></p>
+<p class="p11"><span class="s5"></span><br></p>
+<p class="p18"><span class="s6"><a href="http://www.sohu.com/a/144843442_473283">搜狐<span class="s16"></span></a></span></p>
+<p class="p12"><span class="s5"><a href="http://www.sohu.com/a/144843442_473283">贝叶斯生成对抗网络（<span class="s13">GAN</span><span class="s14">）：当下性能最好的端到端半监督</span><span class="s13"> ...</span></a></span></p>
+<p class="p7"><span class="s6"><a href="http://www.sohu.com/a/144843442_473283">研究提出了一个实用的贝叶斯公式，用<span class="s9">GAN</span><span class="s10">来进行无监督学习和半监督式学习。这种新提出的方法，简洁性是其最大的优势</span><span class="s9">——</span><span class="s10">推理是直接进行</span><span class="s9"> ...</span></a></span></p>
+<p class="p10"><span class="s5"><a href="http://www.sohu.com/a/144843442_473283">May 31, 2017<span class="s12"></span></a></span></p>
+<p class="p11"><span class="s5"></span><br></p>
+<p class="p14"><span class="s5"></span><br></p>
+<p class="p18"><span class="s6"><a href="http://www.sohu.com/a/145948571_465975">搜狐<span class="s16"></span></a></span></p>
+<p class="p12"><span class="s5"><a href="http://www.sohu.com/a/145948571_465975">教程<span class="s13">| </span><span class="s14">从硬件配置、软件安装到基准测试，</span><span class="s13">1700</span><span class="s14">美元深度学习</span><span class="s13"> ...</span></a></span></p>
+<p class="p7"><span class="s17"><a href="http://www.sohu.com/a/145948571_465975">Wasserstein GAN. GAN<span class="s18">（生成对抗网络）是一种训练模型使其生成图片的方法。其原理是将两种网络结构放在一起相互对抗：其生成器将学习</span><span class="s5"> ...</span></a></span></p>
+<p class="p19"><span class="s5"><a href="http://www.sohu.com/a/145948571_465975">Jun 4, 2017<span class="s12"></span></a></span></p>
+<p class="p14"><span class="s5"><a href="https://www.leiphone.com/news/201706/ty7H504cn7l6EVLd.html"></a></span><br></p>
+<p class="p5"><span class="s6"><a href="https://www.leiphone.com/news/201706/ty7H504cn7l6EVLd.html">Leiphone<span class="s5"></span></a></span></p>
+<p class="p12"><span class="s5"><a href="https://www.leiphone.com/news/201706/ty7H504cn7l6EVLd.html">最简单易懂的<span class="s13">GAN</span><span class="s14">（生成对抗网络）教程：从理论到实践（附</span><span class="s13"> ...</span></a></span></p>
+<p class="p20"><span class="s19"><a href="https://www.leiphone.com/news/201706/ty7H504cn7l6EVLd.html">要不<span class="s20">Yann Lecun </span><span class="s5">赞叹</span><span class="s20">GAN </span><span class="s5">是机器学习近十年来最有意思的想法。</span><span class="s20"> </span><span class="s5">雷锋网相关阅读：</span><span class="s20">. </span><span class="s5">从零教你写一个完整的</span><span class="s20">GAN · </span><span class="s5">带你漫游</span><span class="s20">Wasserstein GAN. </span><span class="s5">深度</span><span class="s20"> ...</span></a></span></p>
+<p class="p8"><span class="s6"><a href="https://www.leiphone.com/news/201706/ty7H504cn7l6EVLd.html">Jun 5, 2017<span class="s11"></span></a></span></p>
+<p class="p13"><span class="s5"></span><br></p>
+<p class="p5"><span class="s6"><a href="https://techcrunch.com/2017/06/20/gangogh/">TechCrunch<span class="s5"></span></a></span></p>
+<p class="p6"><span class="s5"><a href="https://techcrunch.com/2017/06/20/gangogh/">These undergrads built a Generative Adversarial Net that creates art</a></span></p>
+<p class="p20"><span class="s6"><a href="https://techcrunch.com/2017/06/20/gangogh/">... Kenny Jones and Derrick Bonafilia, were computer science students who stumbled across the Martin Arjovsky's Wasserstein GAN (WGAN) ...<span class="s9"></span></a></span></p>
+<p class="p10"><span class="s5"><a href="https://techcrunch.com/2017/06/20/gangogh/">Jun 20, 2017<span class="s12"></span></a></span></p>
+<p class="p11"><span class="s5"></span><br></p>
+<p class="p14"><span class="s5"><a href="https://jp.techcrunch.com/2017/06/21/20170620gangogh/"></a></span><br></p>
+<p class="p5"><span class="s6"><a href="https://jp.techcrunch.com/2017/06/21/20170620gangogh/">TechCrunch Japan<span class="s5"></span></a></span></p>
+<p class="p12"><span class="s5"><a href="https://jp.techcrunch.com/2017/06/21/20170620gangogh/">機械学習に<span class="s13">“</span><span class="s14">本物の芸術らしさ</span><span class="s13">”</span><span class="s14">を教育訓練できるか？、二人の学部学生がそんな</span><span class="s13">GAN</span><span class="s14">に挑戦</span></a></span></p>
+<p class="p7"><span class="s17"><a href="https://jp.techcrunch.com/2017/06/21/20170620gangogh/">Wasserstein<span class="s18">が改良した</span><span class="s5">GAN</span><span class="s18">は、アートと分かるようなものを作り出す程度の安定性はある。そこでチームは</span><span class="s5">WikiArt</span><span class="s18">のデータベースからラベル</span><span class="s5"> ...</span></a></span></p>
+<p class="p10"><span class="s5"><a href="https://jp.techcrunch.com/2017/06/21/20170620gangogh/">Jun 21, 2017</a></span></p>
+<p class="p11"><span class="s5"><a href="https://jp.techcrunch.com/2017/06/21/20170620gangogh/"></a></span><br></p>
+<p class="p5"><span class="s6"><a href="https://www.leiphone.com/news/201706/xwSoWmhNgkn34iGS.html">Leiphone<span class="s5"></span></a></span></p>
+<p class="p12"><span class="s5"><a href="https://www.leiphone.com/news/201706/xwSoWmhNgkn34iGS.html">深度学习下的医学图像分析（一）<span class="s14"></span></a></span></p>
+<p class="p20"><span class="s19"><a href="https://www.leiphone.com/news/201706/xwSoWmhNgkn34iGS.html">其他的一些论文，比如<span class="s20">Generative Adversarial Networks</span><span class="s5">和</span><span class="s20">Wasserstein GAN</span><span class="s5">，也已经为开发模型铺平了道路，这个模型能够创建出与输入数据</span><span class="s20"> ...</span></a></span></p>
+<p class="p10"><span class="s5"><a href="https://www.leiphone.com/news/201706/xwSoWmhNgkn34iGS.html">Jun 29, 2017</a></span></p>
+<p class="p11"><span class="s5"><a href="https://www.leiphone.com/news/201706/xwSoWmhNgkn34iGS.html"></a></span><br></p>
+<p class="p18"><span class="s6"><a href="http://www.sohu.com/a/154379784_390227">搜狐<span class="s16"></span></a></span></p>
+<p class="p12"><span class="s8"><a href="http://www.sohu.com/a/154379784_390227">GANs<span class="s7">为何引爆机器学习？这是篇基于</span><span class="s5">TensorFlow</span><span class="s7">教程</span></a></span></p>
+<p class="p7"><span class="s6"><a href="http://www.sohu.com/a/154379784_390227">那么，<span class="s9">GAN</span><span class="s10">到底如何实践？本文编译自</span><span class="s9">Medium</span><span class="s10">，该文作者以一朵玫瑰花为例，详细阐述了</span><span class="s9">GAN</span><span class="s10">的原理，以及基于谷歌</span><span class="s9">TensorFlow</span><span class="s10">的实现，文章略</span><span class="s9"> ...</span></a></span></p>
+<p class="p8"><span class="s6"><a href="http://www.sohu.com/a/154379784_390227">Jul 4, 2017<span class="s11"></span></a></span></p>
+<p class="p21"><span class="s5"><a href="https://jp.techcrunch.com/2017/06/21/20170620gangogh/"></a></span><br></p>
+<p class="p14"><span class="s5"><a href="https://gigazine.net/news/20170706-irasutoya-deep-learning/"></a></span><br></p>
+<p class="p5"><span class="s6"><a href="https://gigazine.net/news/20170706-irasutoya-deep-learning/">GIGAZINE<span class="s5"></span></a></span></p>
+<p class="p12"><span class="s5"><a href="https://gigazine.net/news/20170706-irasutoya-deep-learning/">自動でいらすとや風の画像が生成できる「いらすとや風人間画像生成モデル」を作る猛者が登場<span class="s14"></span></a></span></p>
+<p class="p20"><span class="s6"><a href="https://gigazine.net/news/20170706-irasutoya-deep-learning/">DCGAN<span class="s10">と</span><span class="s9">Wasserstein GAN</span><span class="s10">を用いて</span><span class="s9">Generator</span><span class="s10">と</span><span class="s9">Discriminator</span><span class="s10">を交互に学習させます。</span><span class="s9"> </span><span class="s10">·</span><span class="s9">Generator</span><span class="s10">の学習の場合</span><span class="s9">. Generator</span><span class="s10">の学習では、</span><span class="s9"> ...</span></a></span></p>
+<p class="p8"><span class="s6"><a href="https://gigazine.net/news/20170706-irasutoya-deep-learning/">Jul 6, 2017<span class="s11"></span></a></span></p>
+<p class="p11"><span class="s5"></span><br></p>
+<p class="p11"><span class="s5"></span><br></p>
+<p class="p5"><span class="s6"><a href="https://www.leiphone.com/news/201708/UPCaTRf9jmr4Tf4s.html">Leiphone<span class="s5"></span></a></span></p>
+<p class="p22"><span class="s5"><a href="https://www.leiphone.com/news/201708/UPCaTRf9jmr4Tf4s.html">太热了，雷锋网跑来悉尼避暑，顺便为你报道<span class="s21">ICML 2017</span></a></span></p>
+<p class="p23"><span class="s18"><a href="https://www.leiphone.com/news/201708/UPCaTRf9jmr4Tf4s.html">还记得<span class="s20">Wasserstein GAN</span><span class="s5">吗？不仅有</span><span class="s20">Facebook</span><span class="s5">参与，也果然被</span><span class="s20">ICML </span><span class="s5">接收</span><span class="s20">| ICML 2017. </span><span class="s5">杨晓凡</span><span class="s20"> 08</span><span class="s5">月</span><span class="s20">08</span><span class="s5">日</span><span class="s20">18:1</span></a></span></p>
+<p class="p23"><span class="s5">Aug 5, 2017</span></p>
+<p class="p7"><span class="s17"><a href="https://www.leiphone.com/news/201708/UPCaTRf9jmr4Tf4s.html">4. <span class="s18">不仅是白金赞助商，谷歌更是</span><span class="s5">ICML ...</span></a></span></p>
+<p class="p10"><span class="s5"><a href="https://www.leiphone.com/news/201708/UPCaTRf9jmr4Tf4s.html">Aug 5, 2017<span class="s12"></span></a></span></p>
+<p class="p11"><span class="s5"></span><br></p>
+<p class="p5"><span class="s6"><a href="https://www.leiphone.com/news/201708/gVdH8inVUEGx7VZc.html">Leiphone<span class="s5"></span></a></span></p>
+<p class="p6"><span class="s7"><a href="https://www.leiphone.com/news/201708/gVdH8inVUEGx7VZc.html">还记得<span class="s8">Wasserstein GAN</span><span class="s5">吗？不仅有</span><span class="s8">Facebook</span><span class="s5">参与，也果然被</span><span class="s8">ICML </span><span class="s5">接收</span><span class="s8">| ICML 2017</span></a></span></p>
+<p class="p20"><span class="s19"><a href="https://www.leiphone.com/news/201708/gVdH8inVUEGx7VZc.html">雷锋网<span class="s20">(</span><span class="s5">公众号：雷锋网</span><span class="s20">) AI </span><span class="s5">科技评论按：</span><span class="s20">Facebook</span><span class="s5">列出了自己的</span><span class="s20">9</span><span class="s5">篇</span><span class="s20">ICML 2017</span><span class="s5">论文，</span><span class="s20">Wasserstein GAN </span><span class="s5">赫然位列其中。</span><span class="s20"> </span><span class="s5">还记得</span><span class="s20">Wasserstein ...</span></a></span></p>
+<p class="p19"><span class="s5"><a href="https://www.leiphone.com/news/201708/gVdH8inVUEGx7VZc.html">Aug 8, 2017<span class="s12"></span></a></span></p>
+<p class="p24"><span class="s5"></span><br></p>
+<p class="p25"><span class="s5"></span><br></p>
+<p class="p5"><span class="s6"><a href="http://www.cjnews.com/news/canada/ex-chassids-case-government-go-ahead">Canadian Jewish News<span class="s5"></span></a></span></p>
+<p class="p6"><span class="s5"><a href="http://www.cjnews.com/news/canada/ex-chassids-case-government-go-ahead">Ex-Chassid's case against government to go ahead</a></span></p>
+<p class="p20"><span class="s6"><a href="http://www.cjnews.com/news/canada/ex-chassids-case-government-go-ahead">That never went any further. In May 2016, Lowen and his wife and co-plaintiff, Clara Wasserstein, who is also from the Tash community, along ...<span class="s9"></span></a></span></p>
+<p class="p10"><span class="s5"><a href="http://www.cjnews.com/news/canada/ex-chassids-case-government-go-ahead">Aug 15, 2017<span class="s12"></span></a></span></p>
+<p class="p11"><span class="s5"></span><br></p>
+<p class="p5"><span class="s6"><a href="https://www.leiphone.com/news/201710/AixG88EkKRDri7Vd.html">Leiphone<span class="s5"></span></a></span></p>
+<p class="p6"><span class="s7"><a href="https://www.leiphone.com/news/201710/AixG88EkKRDri7Vd.html">强化学习在生成对抗网络文本生成中扮演的角色（<span class="s8">Role of RL in Text Generation by GAN</span><span class="s5">）（上）</span></a></span></p>
+<p class="p7"><span class="s6"><a href="https://www.leiphone.com/news/201710/AixG88EkKRDri7Vd.html">不过<span class="s9">Wasserstein GAN</span><span class="s10">的原著放眼于对于</span><span class="s9">GAN</span><span class="s10">更加远大的改进意义，并没有着重给出关于文本生成等离散数据处理的实验，反倒是后来的一</span><span class="s9"> ...</span></a></span></p>
+<p class="p10"><span class="s5"><a href="https://www.leiphone.com/news/201710/AixG88EkKRDri7Vd.html">Oct 16, 2017<span class="s12"></span></a></span></p>
+<p class="p14"><span class="s5"><a href="http://www.sohu.com/a/198707136_473283"></a></span><br></p>
+<p class="p17"><span class="s7"><a href="http://www.sohu.com/a/198707136_473283">虚构的对抗，<span class="s15">GAN with the wind </span><span class="s22">，丘成桐团队近期研究成果</span></a></span></p>
+<p class="p7"><span class="s6"><a href="http://www.sohu.com/a/198707136_473283">通过理论验证，我们发现关于对抗生成模型的一些基本观念有待商榷：理论上，<span class="s9">Wasserstein GAN</span><span class="s10">中生成器和识别器的竞争是没有必要的，生成器</span><span class="s9"> ...</span></a></span></p>
+<p class="p8"><span class="s6"><a href="http://www.sohu.com/a/198707136_473283">Oct 18, 2017<span class="s11"></span></a></span></p>
+<p class="p9"><span class="s5"><a href="https://www.leiphone.com/news/201704/7IVQiiVMDR3XFfjt.html"></a></span><br></p>
+<p class="p9"><span class="s6"><a href="https://www.leiphone.com/news/201704/7IVQiiVMDR3XFfjt.html"><span class="Apple-converted-space"> </span><span class="s5"></span></a></span></p>
+<p class="p5"><span class="s6"><a href="https://www.leiphone.com/news/201710/tPXkf1dcoGDqv5HD.html">Leiphone<span class="s5"></span></a></span></p>
+<p class="p6"><span class="s5"><a href="https://www.leiphone.com/news/201710/tPXkf1dcoGDqv5HD.html">NVIDIA<span class="s14">论文：用</span><span class="s13">GAN</span><span class="s14">生成高清图像</span><span class="s13">| ICLR 2018</span></a></span></p>
+<p class="p7"><span class="s6"><a href="https://www.leiphone.com/news/201710/tPXkf1dcoGDqv5HD.html">摘要：在本文中，我们描述了生成对抗网络（<span class="s9">GAN</span><span class="s10">）的新的训练方法。</span><span class="s9"> ... </span><span class="s10">的</span><span class="s9">Wasserstein Loss</span><span class="s10">（关于用</span><span class="s9">Wasserstein GAN</span><span class="s10">生成图片请参阅雷锋网</span><span class="s9"> ...</span></a></span></p>
+<p class="p10"><span class="s5"><a href="https://www.leiphone.com/news/201710/tPXkf1dcoGDqv5HD.html">Oct 31, 2017<span class="s12"></span></a></span></p>
+<p class="p11"><span class="s5"></span><br></p>
+<p class="p26"><span class="s5"><a href="http://www.sohu.com/a/209219735_473283"></a></span><br></p>
+<p class="p27"><span class="s5"><a href="http://www.sohu.com/a/209219735_473283">搜狐<span class="s23"></span></a></span></p>
+<p class="p28"><span class="s7"><a href="http://www.sohu.com/a/209219735_473283">【<span class="s24">LeCun</span><span class="s25">再怼阿里】</span><span class="s24">NIPS</span><span class="s25">机器学习炼金术之争，</span><span class="s24">Twitter</span><span class="s25">机器</span><span class="s24"> ...</span></a></span></p>
+<p class="p7"><span class="s20"><a href="http://www.sohu.com/a/209219735_473283">GAN<span class="s26">可以说是一个非常有影响力的、伟大的新想法。如果这篇论文是在今天，很肯定能是没有人接收的，因为照片看起来不够漂亮。</span><span class="s25"> Wasserstein ...</span></a></span></p>
+<p class="p8"><span class="s5"><a href="http://www.sohu.com/a/209219735_473283">Dec 8, 2017<span class="s12"></span></a></span></p>
+<p class="p29"><span class="s5"></span><br></p>
+<p class="p11"><span class="s5"></span><br></p>
+<p class="p11"><span class="s5"></span><br></p>
+<p class="p5"><span class="s6"><a href="https://www.nature.com/articles/d41586-017-08493-x">Nature.com<span class="s5"></span></a></span></p>
+<p class="p6"><span class="s5"><a href="https://www.nature.com/articles/d41586-017-08493-x">2017 in news: The science events that shaped the year</a></span></p>
+<p class="p20"><span class="s6"><a href="https://www.nature.com/articles/d41586-017-08493-x">Wasserstein GAN [generative adversarial networks]. GW170104: Observation of a 50-solar-mass binary black hole coalescence at redshift 0.2.<span class="s9"></span></a></span></p>
+<p class="p10"><span class="s5"><a href="https://www.nature.com/articles/d41586-017-08493-x">Dec 18, 2017<span class="s12"></span></a></span></p>
+<p class="p11"><span class="s5"></span><br></p>
+<p class="p18"><span class="s6"><a href="http://www.sohu.com/a/213685822_465975">搜狐<span class="s16"></span></a></span></p>
+<p class="p12"><span class="s5"><a href="http://www.sohu.com/a/213685822_465975">机器之心年度盘点：<span class="s13">2017</span><span class="s14">年人工智能领域度备受关注的科研成果</span></a></span></p>
+<p class="p7"><span class="s6"><a href="http://www.sohu.com/a/213685822_465975">而<span class="s9">Wasserstein GAN </span><span class="s10">成功做到了以下几点：</span><span class="s9">. </span><span class="s10">彻底解决</span><span class="s9">GAN </span><span class="s10">训练不稳定的问题，不再需要小心平衡生成器和判别器的训练程度</span><span class="s9">. </span><span class="s10">基本解决了</span><span class="s9">collapse ...</span></a></span></p>
+<p class="p8"><span class="s6"><a href="http://www.sohu.com/a/213685822_465975">Dec 30, 2017<span class="s11"></span></a></span></p>
+<p class="p13"><span class="s5"></span><br></p>
+<p class="p3"><span class="s5">2018<span class="Apple-converted-space">  </span>29 items</span></p>
+<p class="p4"><span class="s5"></span><br></p>
+<p class="p5"><span class="s6"><a href="https://insidebigdata.com/2018/01/08/best-arxiv-org-ai-machine-learning-deep-learning-december-2017/">insideBIGDATA<span class="s5"></span></a></span></p>
+<p class="p6"><span class="s5"><a href="https://insidebigdata.com/2018/01/08/best-arxiv-org-ai-machine-learning-deep-learning-december-2017/">Best of arXiv.org for AI, Machine Learning, and Deep Learning – December 2017</a></span></p>
+<p class="p20"><span class="s6"><a href="https://insidebigdata.com/2018/01/08/best-arxiv-org-ai-machine-learning-deep-learning-december-2017/">... the Bayesian GAN avoids mode-collapse, produces interpretable and ... outperforming DCGAN, Wasserstein GANs, and DCGAN ensembles.<span class="s9"></span></a></span></p>
+<p class="p10"><span class="s5"><a href="https://insidebigdata.com/2018/01/08/best-arxiv-org-ai-machine-learning-deep-learning-december-2017/">Jan 8, 2018<span class="s12"></span></a></span></p>
+<p class="p11"><span class="s5"></span><br></p>
+<p class="p5"><span class="s6"><a href="https://www.leiphone.com/news/201801/eAnWKaiBBEFJUUvm.html">Leiphone<span class="s5"></span></a></span></p>
+<p class="p12"><span class="s8"><a href="https://www.leiphone.com/news/201801/eAnWKaiBBEFJUUvm.html">GANs <span class="s7">造假术领衔，看</span><span class="s5">2018 </span><span class="s7">最具落地潜力的</span><span class="s5">9 </span><span class="s7">大</span><span class="s5">AI </span><span class="s7">技术趋势</span></a></span></p>
+<p class="p7"><span class="s6"><a href="https://www.leiphone.com/news/201801/eAnWKaiBBEFJUUvm.html">但是这一点在今年有所改观，首先是新颖有趣的架构（如<span class="s9">CycleGAN</span><span class="s10">）的提出和理论性的提升（</span><span class="s9">Wasserstein GAN</span><span class="s10">）促使我在实践中尝试了生成</span><span class="s9"> ...</span></a></span></p>
+<p class="p8"><span class="s6"><a href="https://www.leiphone.com/news/201801/eAnWKaiBBEFJUUvm.html">Jan 10, 2018<span class="s11"></span></a></span></p>
+<p class="p4"><span class="s5"></span><br></p>
+<p class="p5"><span class="s6"><a href="https://blog.csdn.net/c2a2o2/article/details/79168731">CSDN<span class="s5"></span></a></span></p>
+<p class="p12"><span class="s5"><a href="https://blog.csdn.net/c2a2o2/article/details/79168731">深入浅出<span class="s13">GAN·</span><span class="s14">原理篇文字版（完整）</span><span class="s13">| </span><span class="s14">干货</span><span class="s13">_</span><span class="s14">人工智能安全机器人手术机器人</span></a></span></p>
+<p class="p20"><span class="s6"><a href="https://blog.csdn.net/c2a2o2/article/details/79168731">GAN <span class="s10">可以被用来学习生成各种各样的字体</span><span class="s9">——</span><span class="s10">也就是说，以后字迹辨认这</span><span class="s9"> ... Wasserstein GAN</span><span class="s10">，简称</span><span class="s9">WGAN </span><span class="s10">基于的是</span><span class="s9">Wasserstein Distance</span><span class="s10">，也</span><span class="s9"> ...</span></a></span></p>
+<p class="p8"><span class="s6"><a href="https://blog.csdn.net/c2a2o2/article/details/79168731">Jan 26, 2018<span class="s11"></span></a></span></p>
+<p class="p30"><span class="s5"><a href="https://www.forbes.com/sites/mariyayao/2018/02/05/12-amazing-deep-learning-breakthroughs-of-2017/"><span class="Apple-converted-space"> </span></a></span></p>
+<p class="p31"><span class="s5"></span><br></p>
+<p class="p32"><span class="s5"><a href="https://blog.csdn.net/omnispace/article/details/79168348">CSDN</a></span></p>
+<p class="p28"><span class="s5"><a href="https://blog.csdn.net/omnispace/article/details/79168348">Android O <span class="s14">前期预研之二：</span><span class="s13">HIDL</span><span class="s14">相关介绍</span><span class="s13">_omnispace</span><span class="s14">的博客</span></a></span></p>
+<p class="p20"><span class="s5"><a href="https://blog.csdn.net/omnispace/article/details/79168348">... <span class="s27">有向无环图（</span><span class="s28">DAG</span><span class="s27">）技术白话解读</span><span class="s28"> 32784 · </span><span class="s27">时间序列相关算法与分析步骤</span><span class="s28"> 28788 · </span><span class="s27">令人拍案叫绝的</span><span class="s28">Wasserstein GAN </span><span class="s27">及代码（</span><span class="s28">WGAN</span><span class="s27">两篇论文的</span><span class="s28"> ...</span></a></span></p>
+<p class="p33"><span class="s5"><a href="https://blog.csdn.net/omnispace/article/details/79168348">Jan 26, 2018<span class="s12"></span></a></span></p>
+<p class="p34"><span class="s5"><a href="https://blog.csdn.net/omnispace/article/details/79207655"></a></span><br></p>
+<p class="p32"><span class="s5"><a href="https://blog.csdn.net/omnispace/article/details/79207655">CSDN</a></span></p>
+<p class="p35"><span class="s5"><a href="https://blog.csdn.net/omnispace/article/details/79207655">区块链学堂（<span class="s13">2</span><span class="s14">）：最简单的智能合约</span><span class="s13">_omnispace</span><span class="s14">的博客</span></a></span></p>
+<p class="p20"><span class="s5"><a href="https://blog.csdn.net/omnispace/article/details/79207655">... <span class="s27">有向无环图（</span><span class="s28">DAG</span><span class="s27">）技术白话解读</span><span class="s28"> 32784 · </span><span class="s27">时间序列相关算法与分析步骤</span><span class="s28"> 28788 · </span><span class="s27">令人拍案叫绝的</span><span class="s28">Wasserstein GAN </span><span class="s27">及代码（</span><span class="s28">WGAN</span><span class="s27">两篇论文的</span><span class="s28"> ...</span></a></span></p>
+<p class="p8"><span class="s5"><a href="https://blog.csdn.net/omnispace/article/details/79207655">Jan 30, 2018<span class="s12"></span></a></span></p>
+<p class="p14"><span class="s5"><a href="https://www.forbes.com/sites/mariyayao/2018/02/05/12-amazing-deep-learning-breakthroughs-of-2017/"></a></span><br></p>
+<p class="p5"><span class="s6"><a href="https://www.forbes.com/sites/mariyayao/2018/02/05/12-amazing-deep-learning-breakthroughs-of-2017/">Forbes<span class="s5"></span></a></span></p>
+<p class="p6"><span class="s5"><a href="https://www.forbes.com/sites/mariyayao/2018/02/05/12-amazing-deep-learning-breakthroughs-of-2017/">12 Amazing Deep Learning Breakthroughs of 2017</a></span></p>
+<p class="p20"><span class="s6"><a href="https://www.forbes.com/sites/mariyayao/2018/02/05/12-amazing-deep-learning-breakthroughs-of-2017/">The Gan Zoo Continued To Grow. In January 2017, a team of AI researchers published a pivotal paper on Wasserstein GAN (WGAN), ...<span class="s9"></span></a></span></p>
+<p class="p10"><span class="s5"><a href="https://www.forbes.com/sites/mariyayao/2018/02/05/12-amazing-deep-learning-breakthroughs-of-2017/">Feb 5, 2018<span class="s12"></span></a></span></p>
+<p class="p11"><span class="s5"></span><br></p>
+<p class="p5"><span class="s6"><a href="https://www.heise.de/newsticker/meldung/Generative-Adversarial-Networks-erfinden-jetzt-auch-Ton-3972397.html">heise online<span class="s5"></span></a></span></p>
+<p class="p6"><span class="s5"><a href="https://www.heise.de/newsticker/meldung/Generative-Adversarial-Networks-erfinden-jetzt-auch-Ton-3972397.html">Generative Adversarial Networks erfinden jetzt auch Ton</a></span></p>
+<p class="p20"><span class="s6"><a href="https://www.heise.de/newsticker/meldung/Generative-Adversarial-Networks-erfinden-jetzt-auch-Ton-3972397.html">... Generative Adversarial Networks (GAN) kurze Audiosamples erzeugt. ... stattdessen die Wasserstein-1-Distanz zwischen den generierten ...<span class="s9"></span></a></span></p>
+<p class="p19"><span class="s5"><a href="https://www.heise.de/newsticker/meldung/Generative-Adversarial-Networks-erfinden-jetzt-auch-Ton-3972397.html">Feb 17, 2018<span class="s12"></span></a></span></p>
+<p class="p36"><span class="s5"></span><br></p>
+<p class="p32"><span class="s5"><a href="https://www.leiphone.com/news/201803/DybiDiLOTHCNh8MQ.html">Leiphone</a></span></p>
+<p class="p35"><span class="s5"><a href="https://www.leiphone.com/news/201803/DybiDiLOTHCNh8MQ.html">如何理解和评价机器学习中的表达能力、训练难度和泛化性能<span class="s14"></span></a></span></p>
+<p class="p7"><span class="s5"><a href="https://www.leiphone.com/news/201803/DybiDiLOTHCNh8MQ.html">最近<span class="s28">NVIDA </span><span class="s27">的工作改进了</span><span class="s28">Wasserstein GAN </span><span class="s27">使之对很多超参，</span><span class="s28"> </span><span class="s27">比如</span><span class="s28">BN </span><span class="s27">的参数、网络结构等不再敏感。模型的稳定性在实践和工业应用中非常</span><span class="s28"> ...</span></a></span></p>
+<p class="p8"><span class="s5"><a href="https://www.leiphone.com/news/201803/DybiDiLOTHCNh8MQ.html">Mar 5, 2018<span class="s12"></span></a></span></p>
+<p class="p36"><span class="s5"></span><br></p>
+<p class="p11"><span class="s5"></span><br></p>
+<p class="p11"><span class="s5"></span><br></p>
+<p class="p18"><span class="s6"><a href="http://www.sohu.com/a/226406742_390227">搜狐<span class="s16"></span></a></span></p>
+<p class="p12"><span class="s5"><a href="http://www.sohu.com/a/226406742_390227">斯坦福联合普林斯顿提出通过学习联合嵌入实现文本到<span class="s13">3D</span><span class="s14">形状</span><span class="s13"> ...</span></a></span></p>
+<p class="p7"><span class="s6"><a href="http://www.sohu.com/a/226406742_390227">使用我们的带有一个全新的条件性<span class="s9">Wasserstein GAN</span><span class="s10">框架的嵌入，我们从文本中生成了彩色</span><span class="s9">3D</span><span class="s10">形状。可以说，我们的方法是首次将自然语言文本与</span><span class="s9"> ...</span></a></span></p>
+<p class="p10"><span class="s5"><a href="http://www.sohu.com/a/226406742_390227">Mar 26, 2018<span class="s12"></span></a></span></p>
+<p class="p11"><span class="s5"></span><br></p>
+<p class="p37"><span class="s29"><span class="Apple-converted-space"> </span><a href="http://www.qianjia.com/html/2018-03/28_288233.html"><span class="s30">千家网</span></a></span></p>
+<p class="p12"><span class="s5"><a href="http://www.qianjia.com/html/2018-03/28_288233.html">【<span class="s13">AI</span><span class="s14">干货】计算机视觉必读：目标跟踪、网络压缩、图像分类</span><span class="s13"> ...</span></a></span></p>
+<p class="p20"><span class="s19"><a href="http://www.qianjia.com/html/2018-03/28_288233.html">生成式对抗网络<span class="s20">(generative adversarial networks, GAN)</span><span class="s5">由于学习数据分布十分困难，生成式</span><span class="s20"> ... Wasserstein generative adversarial networks.</span></a></span></p>
+<p class="p10"><span class="s5"><a href="http://www.qianjia.com/html/2018-03/28_288233.html">Mar 28, 2018<span class="s12"></span></a></span></p>
+<p class="p11"><span class="s5"></span><br></p>
+<p class="p18"><span class="s6"><a href="http://www.sohu.com/a/228883765_129720">搜狐<span class="s16"></span></a></span></p>
+<p class="p12"><span class="s5"><a href="http://www.sohu.com/a/228883765_129720">学界<span class="s13">| </span><span class="s14">用</span><span class="s13">GAN</span><span class="s14">自动生成法线贴图，让图形设计更轻松</span></a></span></p>
+<p class="p7"><span class="s6"><a href="http://www.sohu.com/a/228883765_129720">我们在我们的实现中使用了<span class="s9">Wasserstein </span><span class="s10">距离，以为网络更新提供更有效的引导和降低训练过程的不稳定性。</span><span class="s9"> </span><span class="s10">因为素描是形状的高度简化的表示，</span><span class="s9"> ...</span></a></span></p>
+<p class="p8"><span class="s6"><a href="http://www.sohu.com/a/228883765_129720">Apr 20, 2018<span class="s11"></span></a></span></p>
+<p class="p11"><span class="s5"></span><br></p>
+<p class="p10"><span class="s5">&lt;-10</span></p>
+<p class="p11"><span class="s5"></span><br></p>
+<p class="p5"><span class="s6"><a href="https://www.leiphone.com/news/201803/tzyNWACD2jzEhXgF.html">Leiphone<span class="s5"></span></a></span></p>
+<p class="p12"><span class="s5"><a href="https://www.leiphone.com/news/201803/tzyNWACD2jzEhXgF.html">用<span class="s13">Keras</span><span class="s14">搭建</span><span class="s13">GAN</span><span class="s14">：图像去模糊中的应用（附代码）</span></a></span></p>
+<p class="p7"><span class="s6"><a href="https://www.leiphone.com/news/201803/tzyNWACD2jzEhXgF.html">这篇文章主要介绍在<span class="s9">Keras</span><span class="s10">中搭建</span><span class="s9">GAN</span><span class="s10">实现图像去模糊。</span><span class="s9"> ... </span><span class="s10">第二个损失是对整个模型输出计算的</span><span class="s9">Wasserstein loss</span><span class="s10">，计算了两张图像的平均差值。</span></a></span></p>
+<p class="p10"><span class="s5"><a href="https://www.leiphone.com/news/201803/tzyNWACD2jzEhXgF.html">Apr 25, 2018<span class="s12"></span></a></span></p>
+<p class="p11"><span class="s5"></span><br></p>
+<p class="p34"><span class="s5"><a href="http://www.sohu.com/a/229976209_473283"></a></span><br></p>
+<p class="p28"><span class="s7"><a href="http://www.sohu.com/a/229976209_473283">【一文打尽<span class="s24">ICLR 2018</span><span class="s25">】</span><span class="s24">9</span><span class="s25">大演讲，</span><span class="s24">DeepMind</span><span class="s25">、谷歌最新干货</span><span class="s24"> ...</span></a></span></p>
+<p class="p20"><span class="s18"><a href="http://www.sohu.com/a/229976209_473283">通向平衡之路：<span class="s31">GAN</span><span class="s25">不需要在每一步中减少散度</span><span class="s31"> ... </span><span class="s25">口头报告：</span><span class="s31">. Wasserstein Auto-Encoders ... </span><span class="s25">多路径平衡：</span><span class="s31">GAN</span><span class="s25">不需要逐步减少散度</span><span class="s31">.</span></a></span></p>
+<p class="p8"><span class="s5"><a href="http://www.sohu.com/a/229976209_473283">Apr 30, 2018<span class="s12"></span></a></span></p>
+<p class="p14"><span class="s5"></span><br></p>
+<p class="p18"><span class="s6"><a href="http://www.sohu.com/a/232058010_610300">搜狐<span class="s16"></span></a></span></p>
+<p class="p22"><span class="s5"><a href="http://www.sohu.com/a/232058010_610300">怎样用<span class="s21">GAN</span><span class="s32">生成各种胖吉猫？谷歌大脑程序员教你撩妹神技</span></a></span></p>
+<p class="p7"><span class="s6"><a href="http://www.sohu.com/a/232058010_610300">当然，并不只是想想而已。<span class="s9"> </span><span class="s10">一切从这里</span><span class="s9">BEGAN. </span><span class="s10">生成对抗网络</span><span class="s9">(GAN) </span><span class="s10">是精分的</span><span class="s9">AI</span><span class="s10">，由两个神经网络组成，一是生成模型</span><span class="s9"> ...</span></a></span></p>
+<p class="p10"><span class="s5"><a href="http://www.sohu.com/a/232058010_610300">May 18, 2018<span class="s12"></span></a></span></p>
+<p class="p14"><span class="s5"><a href="https://boingboing.net/2018/11/02/reverse-entropy.html"></a></span><br></p>
+<p class="p18"><span class="s6"><a href="http://www.sohu.com/a/234430633_390227">搜狐<span class="s16"></span></a></span></p>
+<p class="p12"><span class="s5"><a href="http://www.sohu.com/a/234430633_390227">「<span class="s13">EEG-GAN</span><span class="s14">」：如何用生成式对抗网络生成「脑电图」脑信号</span></a></span></p>
+<p class="p7"><span class="s6"><a href="http://www.sohu.com/a/234430633_390227">我们对<span class="s9">Wasserstein GAN</span><span class="s10">的改进训练进行了修改，以稳定训练并研究一系列对时间序列生成至关重要的架构选择（最显著的是上采样（</span><span class="s9">up-sampling ...</span></a></span></p>
+<p class="p8"><span class="s6"><a href="http://www.sohu.com/a/234430633_390227">Jun 7, 2018<span class="s11"></span></a></span></p>
+<p class="p15"><span class="s5"></span><br></p>
+<p class="p5"><span class="s6"><a href="https://news.sophos.com/en-us/2018/07/06/generative-adversarial-networks-explained/">Naked Security<span class="s5"></span></a></span></p>
+<p class="p6"><span class="s5"><a href="https://news.sophos.com/en-us/2018/07/06/generative-adversarial-networks-explained/">Generative adversarial networks explained</a></span></p>
+<p class="p20"><span class="s6"><a href="https://news.sophos.com/en-us/2018/07/06/generative-adversarial-networks-explained/">Bottou, “Wasserstein gan,” ArXiv Prepr. ArXiv170107875, 2017. [4] M. Mirza and S. Osindero, “Conditional generative adversarial nets,” ArXiv ...<span class="s9"></span></a></span></p>
+<p class="p19"><span class="s5"><a href="https://news.sophos.com/en-us/2018/07/06/generative-adversarial-networks-explained/">Jul 6, 2018<span class="s12"></span></a></span></p>
+<p class="p36"><span class="s5"></span><br></p>
+<p class="p32"><span class="s5"><a href="https://buzzorange.com/techorange/2018/08/10/10-gans-ai/">TechOrange</a></span></p>
+<p class="p28"><span class="s7"><a href="https://buzzorange.com/techorange/2018/08/10/10-gans-ai/">給你<span class="s24">10 </span><span class="s25">個超火的</span><span class="s24">GANs </span><span class="s25">模組，讓你從</span><span class="s24">AI </span><span class="s25">凡人變神人！</span><span class="s24"> | TechOrange</span></a></span></p>
+<p class="p20"><span class="s18"><a href="https://buzzorange.com/techorange/2018/08/10/10-gans-ai/">【我們為什麼要挑選這篇文章】人工智慧首席科學家<span class="s31">Yann LeCun </span><span class="s25">將</span><span class="s31">GAN </span><span class="s25">稱</span><span class="s31"> ... </span><span class="s25">因此論文指出類似於</span><span class="s31">WGANs (Wasserstein GANs) </span><span class="s25">或者</span><span class="s31">BEGAN </span><span class="s25">等，</span><span class="s31"> ...</span></a></span></p>
+<p class="p8"><span class="s5"><a href="https://buzzorange.com/techorange/2018/08/10/10-gans-ai/">Aug 10, 2018<span class="s12"></span></a></span></p>
+<p class="p36"><span class="s5"></span><br></p>
+<p class="p5"><span class="s6"><a href="https://www.leiphone.com/news/201808/bkwYmUVe9RQwJxOb.html">Leiphone<span class="s5"></span></a></span></p>
+<p class="p12"><span class="s5"><a href="https://www.leiphone.com/news/201808/bkwYmUVe9RQwJxOb.html">当机器学习遇上运动鞋：摩擦，在这光滑的地上摩擦<span class="s14"></span></a></span></p>
+<p class="p38"><span class="s5"><a href="https://www.leiphone.com/news/201808/bkwYmUVe9RQwJxOb.html">我们利用无监督模型，如变分自动编码器（<span class="s28">VAE</span><span class="s27">），生成性对抗网络（</span><span class="s28">GAN</span><span class="s27">）和</span><span class="s28">Wasserstein </span><span class="s27">自动编码器（</span><span class="s28">WAE</span><span class="s27">）来</span></a></span></p>
+<p class="p7"><span class="s6"><a href="https://www.leiphone.com/news/201808/bkwYmUVe9RQwJxOb.html">学习这种流形，且无需代价<span class="s9"> ...</span></a></span></p>
+<p class="p10"><span class="s5"><a href="https://www.leiphone.com/news/201808/bkwYmUVe9RQwJxOb.html">Aug 27, 2018</a></span></p>
+<p class="p21"><span class="s5"><a href="https://buzzorange.com/techorange/2018/08/10/10-gans-ai/"></a></span><br></p>
+<p class="p26"><span class="s5"><a href="https://tech.sina.com.cn/roll/2018-08-26/doc-ihifuvph0787400.shtml"></a></span><br></p>
+<p class="p27"><span class="s5"><a href="https://tech.sina.com.cn/roll/2018-08-26/doc-ihifuvph0787400.shtml">新浪网<span class="s23"></span></a></span></p>
+<p class="p35"><span class="s5"><a href="https://tech.sina.com.cn/roll/2018-08-26/doc-ihifuvph0787400.shtml">不再使用人眼评估，你训练的<span class="s13">GAN</span><span class="s14">还</span><span class="s13">OK</span><span class="s14">吗？</span></a></span></p>
+<p class="p7"><span class="s5"><a href="https://tech.sina.com.cn/roll/2018-08-26/doc-ihifuvph0787400.shtml">本文认为现有指标不足以评估<span class="s28">GAN </span><span class="s27">模型，因此引入了两个基于图像分类</span><span class="s28"> ... SWD </span><span class="s27">是真实图像和生成图像间的</span><span class="s28">Wasserstein-1 </span><span class="s27">距离的估计值，它计算</span><span class="s28"> ...</span></a></span></p>
+<p class="p8"><span class="s5"><a href="https://tech.sina.com.cn/roll/2018-08-26/doc-ihifuvph0787400.shtml">Aug 26, 2018<span class="s12"></span></a></span></p>
+<p class="p29"><span class="s5"></span><br></p>
+<p class="p29"><span class="s5"></span><br></p>
+<p class="p26"><span class="s5"><a href="http://www.sohu.com/a/250907302_129720"></a></span><br></p>
+<p class="p27"><span class="s5"><a href="http://www.sohu.com/a/250907302_129720">搜狐<span class="s23"></span></a></span></p>
+<p class="p35"><span class="s5"><a href="http://www.sohu.com/a/250907302_129720">观点<span class="s13">| </span><span class="s14">机器学习</span><span class="s13">=</span><span class="s14">「新瓶装旧酒」的数据统计？</span><span class="s13">No</span><span class="s14">！</span><span class="s13">_</span><span class="s14">深度</span></a></span></p>
+<p class="p7"><span class="s5"><a href="http://www.sohu.com/a/250907302_129720">我们要完成的一个项目是在<span class="s28">TensorFlow </span><span class="s27">上实现和训练</span><span class="s28">Wasserstein GAN</span><span class="s27">。</span><span class="s28"> </span><span class="s27">当时我只修了一门必修的统计学入门课，但我很快就把大部分内容都忘</span><span class="s28"> ...</span></a></span></p>
+<p class="p8"><span class="s5"><a href="http://www.sohu.com/a/250907302_129720">Aug 30, 2018<span class="s12"></span></a></span></p>
+<p class="p16"><span class="s5"></span><br></p>
+<p class="p29"><span class="s5"><span class="Apple-converted-space"> </span></span></p>
+<p class="p32"><span class="s5"><a href="https://36kr.com/p/1722801356801">36kr</a></span></p>
+<p class="p35"><span class="s5"><a href="https://36kr.com/p/1722801356801">七张照片鉴别真假<span class="s13">AJ</span><span class="s14">？这家公司想教机器认识潮鞋</span><span class="s13">_</span><span class="s14">详细解读</span><span class="s13">_</span><span class="s14">最新资讯</span><span class="s13">_</span><span class="s14">热点事件</span></a></span></p>
+<p class="p7"><span class="s20"><a href="https://36kr.com/p/1722801356801">... <span class="s26">生成对抗网络（</span><span class="s25">GAN</span><span class="s26">）以及各种混合的非监督学习模型来学习流形。</span><span class="s25"> ... </span><span class="s26">例如，</span><span class="s25">β-VAE</span><span class="s26">和</span><span class="s25">Wasserstein</span><span class="s26">自动编码模型分别利用</span><span class="s25">KL</span><span class="s26">散度（又称相对</span><span class="s25"> ...</span></a></span></p>
+<p class="p8"><span class="s5"><a href="https://36kr.com/p/1722801356801">Sep 3, 2018<span class="s12"></span></a></span></p>
+<p class="p21"><span class="s5"><a href="https://www.leiphone.com/news/201808/bkwYmUVe9RQwJxOb.html"></a></span><br></p>
+<p class="p39"><span class="s5">&lt;—20</span></p>
+<p class="p9"><span class="s5"><a href="https://analyticsindiamag.com/heres-the-truth-gans-easily-can-fool-intrusion-detection-systems/"></a></span><br></p>
+<p class="p5"><span class="s6"><a href="https://analyticsindiamag.com/heres-the-truth-gans-easily-can-fool-intrusion-detection-systems/">Analytics India Magazine<span class="s5"></span></a></span></p>
+<p class="p6"><span class="s5"><a href="https://analyticsindiamag.com/heres-the-truth-gans-easily-can-fool-intrusion-detection-systems/">Here's The Truth, GANs Easily Can Fool Intrusion Detection ...</a></span></p>
+<p class="p20"><span class="s6"><a href="https://analyticsindiamag.com/heres-the-truth-gans-easily-can-fool-intrusion-detection-systems/">Goodfellow introduced the GAN (generative adversarial networks) a ... the Wasserstein loss hence the architecture called Wasserstein GAN.<span class="s9"></span></a></span></p>
+<p class="p10"><span class="s5"><a href="https://analyticsindiamag.com/heres-the-truth-gans-easily-can-fool-intrusion-detection-systems/">Sep 13, 2018<span class="s12"></span></a></span></p>
+<p class="p11"><span class="s5"></span><br></p>
+<p class="p12"><span class="s5"><a href="https://tech.sina.com.cn/roll/2018-09-15/doc-ifxeuwwr4552427.shtml">学界<span class="s13">| </span><span class="s14">综述论文：四大类深度迁移学习</span></a></span></p>
+<p class="p38"><span class="s5"><a href="https://tech.sina.com.cn/roll/2018-09-15/doc-ifxeuwwr4552427.shtml">由<span class="s28">[2] </span><span class="s27">提出的</span><span class="s28">Wasserstein </span><span class="s27">距离可以用作域的新距离度量，以便找到更好的</span><span class="s28"> ... </span><span class="s27">基于对抗的深度迁移学习是指引入受生成对抗网络（</span><span class="s28">GAN</span><span class="s27">）</span><span class="s28">[7] </span><span class="s27">启发的</span><span class="s28"> ...</span></a></span></p>
+<p class="p40"><span class="s33"><a href="https://tech.sina.com.cn/roll/2018-09-15/doc-ifxeuwwr4552427.shtml">[Chinese<span class="Apple-converted-space">  </span></a></span><span class="s34">The Wasserstein distance proposed by [2] can be used as a new distance metric for the domain in order to find better.</span><span class="s35">]</span></p>
+<p class="p41"><span class="s5"><a href="https://tech.sina.com.cn/roll/2018-09-15/doc-ifxeuwwr4552427.shtml">Sep 15, 2018<span class="s36"></span></a></span></p>
+<p class="p11"><span class="s5"></span><br></p>
+<p class="p11"><span class="s5"></span><br></p>
+<p class="p12"><span class="s5"><a href="http://www.sohu.com/a/257656118_129720">深度<span class="s13">| </span><span class="s14">传说中的推土机距离基础，最优传输理论了解一下</span><span class="s13">_</span><span class="s14">概率性</span></a></span></p>
+<p class="p7"><span class="s6"><a href="http://www.sohu.com/a/257656118_129720">随着<span class="s9">Wasserstein GAN </span><span class="s10">和</span><span class="s9">Sinkhorn </span><span class="s10">散度的成功，最优传输理论迅速成为机器学习研究的重要理论工具。最优传输广泛应用于生成模型、概率性自</span><span class="s9"> ...</span></a></span></p>
+<p class="p10"><span class="s5"><a href="http://www.sohu.com/a/257656118_129720">Oct 4, 2018<span class="s12"></span></a></span></p>
+<p class="p11"><span class="s5"></span><br></p>
+<p class="p5"><span class="s6"><a href="https://boingboing.net/2018/11/02/reverse-entropy.html">Boing Boing<span class="s5"></span></a></span></p>
+<p class="p6"><span class="s5"><a href="https://boingboing.net/2018/11/02/reverse-entropy.html">DeOldify: a free/open photo-retoucher based on machine learning</a></span></p>
+<p class="p20"><span class="s6"><a href="https://boingboing.net/2018/11/02/reverse-entropy.html">... after trying desperately to get a Wasserstein GAN version to work. I liked the theory of Wasserstein GANs but it just didn't pan out in practice.<span class="s9"></span></a></span></p>
+<p class="p10"><span class="s5"><a href="https://boingboing.net/2018/11/02/reverse-entropy.html">Nov 2, 2018</a></span></p>
+<p class="p11"><span class="s5"><a href="https://boingboing.net/2018/11/02/reverse-entropy.html"></a></span><br></p>
+<p class="p5"><span class="s6"><a href="https://www.institutionalinvestor.com/article/b1bt70t9gqz88y/Fintech-Finance-s-Power-Players">Institutional Investor<span class="s5"></span></a></span></p>
+<p class="p6"><span class="s5"><a href="https://www.institutionalinvestor.com/article/b1bt70t9gqz88y/Fintech-Finance-s-Power-Players">Fintech Finance's Power Players</a></span></p>
+<p class="p20"><span class="s6"><a href="https://www.institutionalinvestor.com/article/b1bt70t9gqz88y/Fintech-Finance-s-Power-Players">... worked at BNP Paribas and Dresdner Kleinwort Wasserstein. ... for example, it has invested in Bento Technologies and GAN Integrity in ...<span class="s9"></span></a></span></p>
+<p class="p10"><span class="s5"><a href="https://www.institutionalinvestor.com/article/b1bt70t9gqz88y/Fintech-Finance-s-Power-Players">Nov 13, 2018<span class="s12"></span></a></span></p>
+<p class="p36"><span class="s5"></span><br></p>
+<p class="p5"><span class="s6"><a href="https://www.leiphone.com/news/201812/0kM6xRqHF9PVKLXS.html">Leiphone<span class="s5"></span></a></span></p>
+<p class="p12"><span class="s5"><a href="https://www.leiphone.com/news/201812/0kM6xRqHF9PVKLXS.html">成立<span class="s13">5 </span><span class="s14">周年：一文览尽</span><span class="s13">Facebook </span><span class="s14">人工智能研究院历年重要成果</span></a></span></p>
+<p class="p20"><span class="s6"><a href="https://www.leiphone.com/news/201812/0kM6xRqHF9PVKLXS.html">2017 <span class="s10">年，他们提出了</span><span class="s9">Wasserstein GAN (WGAN</span><span class="s10">，</span><span class="s9">https://arxiv.org/abs/1701.07875) </span><span class="s10">方法，该方法通过改进鉴别器使其变得更加「平滑」和高效，由</span><span class="s9"> ...</span></a></span></p>
+<p class="p10"><span class="s5"><a href="https://www.leiphone.com/news/201812/0kM6xRqHF9PVKLXS.html">Dec 10, 2018<span class="s12"></span></a></span></p>
+<p class="p10"><span class="s5">]</span></p>
+<p class="p5"><span class="s6"><a href="https://www.leiphone.com/news/201812/tWk6LHv4v2z5nwjW.html">Leiphone<span class="s5"></span></a></span></p>
+<p class="p6"><span class="s7"><a href="https://www.leiphone.com/news/201812/tWk6LHv4v2z5nwjW.html">顶会见闻系列：<span class="s8">NeurIPS 2018 </span><span class="s5">论文精选</span></a></span></p>
+<p class="p20"><span class="s19"><a href="https://www.leiphone.com/news/201812/tWk6LHv4v2z5nwjW.html">《<span class="s20">Banach Wasserstein GAN</span><span class="s5">》，</span><span class="s20">Jonas Adler, Sebastian Lunz ... </span><span class="s5">这篇论文介绍了</span><span class="s20">Banach Wasserstein </span><span class="s5">生成式对抗网络（</span><span class="s20">BWGANs</span><span class="s5">），它是对</span><span class="s20"> ...</span></a></span></p>
+<p class="p10"><span class="s5"><a href="https://www.leiphone.com/news/201812/tWk6LHv4v2z5nwjW.html">Dec 14, 2018<span class="s12"></span></a></span></p>
+<p class="p11"><span class="s5"></span><br></p>
+<p class="p36"><span class="s37"><a href="https://www.leiphone.com/news/201812/0kM6xRqHF9PVKLXS.html"><span class="Apple-converted-space"> </span></a></span><span class="s5"><span class="Apple-converted-space"> </span></span></p>
+<p class="p5"><span class="s6"><a href="https://www.leiphone.com/news/201812/MtFkYKRrhUftiCGV.html">Leiphone<span class="s5"></span></a></span></p>
+<p class="p6"><span class="s5"><a href="https://www.leiphone.com/news/201812/MtFkYKRrhUftiCGV.html">NeurIPS 2017 <span class="s14">论文</span><span class="s13">2018 </span><span class="s14">年引用量排名揭晓，这里是排名前三</span><span class="s13"> ...</span></a></span></p>
+<p class="p20"><span class="s19"><a href="https://www.leiphone.com/news/201812/MtFkYKRrhUftiCGV.html">前段时间，<span class="s20">Arjovsky </span><span class="s5">等研究者对</span><span class="s20">GAN </span><span class="s5">值函数的收敛性进行了深入的分析，并提出了</span><span class="s20">Wasserstein GAN</span><span class="s5">（</span><span class="s20">WGAN</span><span class="s5">），利用</span><span class="s20">Wasserstein </span><span class="s5">距离产生一个</span><span class="s20"> ...</span></a></span></p>
+<p class="p10"><span class="s5"><a href="https://www.leiphone.com/news/201812/MtFkYKRrhUftiCGV.html">Dec 19, 2018<span class="s12"></span></a></span></p>
+<p class="p11"><span class="s5"></span><br></p>
+<p class="p8"><span class="s6">&lt;—27</span></p>
+<p class="p42"><span class="s5"><span class="Apple-converted-space"> </span>———end 2018</span></p>
+<p class="p4"><span class="s5"></span><br></p>
+<p class="p4"><span class="s5"></span><br></p>
+<p class="p3"><span class="s5">2019<span class="Apple-converted-space">  </span>10 items</span></p>
+<p class="p9"><span class="s5"><a href="https://www.leiphone.com/news/201902/syUueGzpgdS129b3.html"></a></span><br></p>
+<p class="p5"><span class="s6"><a href="https://www.leiphone.com/news/201902/syUueGzpgdS129b3.html">Leiphone<span class="s5"></span></a></span></p>
+<p class="p12"><span class="s5"><a href="https://www.leiphone.com/news/201902/syUueGzpgdS129b3.html">生成对抗网络的最新研究进展<span class="s14"></span></a></span></p>
+<p class="p20"><span class="s6"><a href="https://www.leiphone.com/news/201902/syUueGzpgdS129b3.html">Lipschitz <span class="s10">连续性对</span><span class="s9">GAN </span><span class="s10">网络来说是必须的，因为它们会限制判别器的斜率。另外，</span><span class="s9">Kantorovich-Rubinstein </span><span class="s10">对偶性要求它是</span><span class="s9">Wasserstein GAN</span><span class="s10">。</span></a></span></p>
+<p class="p8"><span class="s6"><a href="https://www.leiphone.com/news/201902/syUueGzpgdS129b3.html">Feb 6, 2019<span class="s11"></span></a></span></p>
+<p class="p4"><span class="s5"></span><br></p>
+<p class="p5"><span class="s6"><a href="https://www.cjnews.com/news/canada/former-hasidic-students-win-right-to-sue-schools-and-quebec-govt">Canadian Jewish News<span class="s5"></span></a></span></p>
+<p class="p6"><span class="s5"><a href="https://www.cjnews.com/news/canada/former-hasidic-students-win-right-to-sue-schools-and-quebec-govt">Former Hasidic students win right to sue schools and Quebec ...</a></span></p>
+<p class="p20"><span class="s6"><a href="https://www.cjnews.com/news/canada/former-hasidic-students-win-right-to-sue-schools-and-quebec-govt">In May 2017, Superior Court dismissed motions filed by the defendants to have Lowen and Wasserstein's application thrown out, ruling that the ...<span class="s9"></span></a></span></p>
+<p class="p10"><span class="s5"><a href="https://www.cjnews.com/news/canada/former-hasidic-students-win-right-to-sue-schools-and-quebec-govt">Mar 4, 2019<span class="s12"></span></a></span></p>
+<p class="p11"><span class="s5"></span><br></p>
+<p class="p18"><span class="s6"><a href="http://blog.sciencenet.cn/blog-2472277-1167769.html">科学时报<span class="s16"></span></a></span></p>
+<p class="p12"><span class="s5"><a href="http://blog.sciencenet.cn/blog-2472277-1167769.html">科学网<span class="s13">—</span><span class="s14">计算机应用中存在性证明的代数拓扑方法</span><span class="s13">- </span><span class="s14">顾险峰的博文</span></a></span></p>
+<p class="p7"><span class="s6"><a href="http://blog.sciencenet.cn/blog-2472277-1167769.html">例如，在<span class="s9">Wasserstein GAN</span><span class="s10">中，有一个广为人知的困难：如果概率分布的支集（</span><span class="s9">support</span><span class="s10">）具有多个连通分支，那么</span><span class="s9">GAN</span><span class="s10">的训练收敛非常困难。</span></a></span></p>
+<p class="p10"><span class="s5"><a href="http://blog.sciencenet.cn/blog-2472277-1167769.html">Mar 15, 2019<span class="s12"></span></a></span></p>
+<p class="p11"><span class="s5"></span><br></p>
+<p class="p18"><span class="s6"><a href="http://blog.sciencenet.cn/blog-2472277-1169968.html">科学时报<span class="s16"></span></a></span></p>
+<p class="p6"><span class="s7"><a href="http://blog.sciencenet.cn/blog-2472277-1169968.html">科学网<span class="s8">—</span><span class="s5">虚构的对抗，</span><span class="s8">GAN with the wind - </span><span class="s5">顾险峰的博文</span></a></span></p>
+<p class="p7"><span class="s6"><a href="http://blog.sciencenet.cn/blog-2472277-1169968.html">通过理论验证，我们发现关于对抗生成模型的一些基本观念有待商榷：理论上，<span class="s9">Wasserstein GAN</span><span class="s10">中生成器和识别器的竞争是没有必要的，生成器</span><span class="s9"> ...</span></a></span></p>
+<p class="p8"><span class="s6"><a href="http://blog.sciencenet.cn/blog-2472277-1169968.html">Mar 27, 2019<span class="s11"></span></a></span></p>
+<p class="p2"><br></p>
+<p class="p1">Analytics India Magazine</p>
+<p class="p43"><span class="s5"><a href="https://analyticsindiamag.com/how-to-establish-domain-transferability-in-neural-models/">How To Establish Domain Transferability In Neural Models</a></span></p>
+<p class="p44"><span class="s6"><a href="https://analyticsindiamag.com/how-to-establish-domain-transferability-in-neural-models/">Named after Russian mathematician Leonard Vaserstein, Wasserstein metric is a distance function which is used to compare the probability ...<span class="s9"></span></a></span></p>
+<p class="p45"><span class="s5"><a href="https://analyticsindiamag.com/how-to-establish-domain-transferability-in-neural-models/">Jun 20, 2019 <span class="Apple-converted-space"> </span></a></span></p>
+<p class="p46"><span class="s5"><a href="https://analyticsindiamag.com/how-to-establish-domain-transferability-in-neural-models/"></a></span><br></p>
+<p class="p15"><span class="s5"></span><br></p>
+<p class="p14"><span class="s5"><a href="https://buzzorange.com/techorange/2019/06/26/what-to-do-if-your-idea-is-published/"></a></span><br></p>
+<p class="p5"><span class="s6"><a href="https://buzzorange.com/techorange/2019/06/26/what-to-do-if-your-idea-is-published/">TechOrange<span class="s5"></span></a></span></p>
+<p class="p12"><span class="s5"><a href="https://buzzorange.com/techorange/2019/06/26/what-to-do-if-your-idea-is-published/">【研究人員集體崩潰】工程師苦問：如果研究被搶先發表了，你<span class="s13"> ...</span></a></span></p>
+<p class="p7"><span class="s6"><a href="https://buzzorange.com/techorange/2019/06/26/what-to-do-if-your-idea-is-published/">但如果是像「分布式強化學習」或者「<span class="s9">Wasserstein GAN</span><span class="s10">」這樣豐滿的技術思想，就很難被其他人挖到了。</span><span class="s9"> </span><span class="s10">當然，對一個研究生來說，擁有</span><span class="s9"> ...</span></a></span></p>
+<p class="p10"><span class="s5"><a href="https://buzzorange.com/techorange/2019/06/26/what-to-do-if-your-idea-is-published/">Jun 26, 2019</a></span></p>
+<p class="p11"><span class="s5"><a href="https://buzzorange.com/techorange/2019/06/26/what-to-do-if-your-idea-is-published/"></a></span><br></p>
+<p class="p5"><span class="s6"><a href="https://www.leiphone.com/news/201907/Sv3AtCsT4w2W6roc.html">Leiphone<span class="s5"></span></a></span></p>
+<p class="p12"><span class="s5"><a href="https://www.leiphone.com/news/201907/Sv3AtCsT4w2W6roc.html">深度学习最强资源推荐：一文看尽<span class="s13">GAN </span><span class="s14">的前世今生</span></a></span></p>
+<p class="p7"><span class="s6"><a href="https://www.leiphone.com/news/201907/Sv3AtCsT4w2W6roc.html">因此，我将回顾几年来<span class="s9">GAN </span><span class="s10">研究中最酷结果背后的关键思想。</span><span class="s9"> </span><span class="s10">我不打算详细解释转置卷积和</span><span class="s9">Wasserstein </span><span class="s10">距离等概念。相反，我将提供一些最好的</span><span class="s9"> ...</span></a></span></p>
+<p class="p33"><span class="s6"><a href="https://www.leiphone.com/news/201907/Sv3AtCsT4w2W6roc.html">Jul 10, 2019<span class="s11"></span></a></span></p>
+<p class="p46"><span class="s5"><a href="https://analyticsindiamag.com/how-to-establish-domain-transferability-in-neural-models/"></a></span><br></p>
+<p class="p46"><span class="s5"><a href="https://analyticsindiamag.com/how-to-establish-domain-transferability-in-neural-models/"></a></span><br></p>
+<p class="p5"><span class="s6"><a href="https://syncedreview.com/2019/10/20/robots-to-handle-rubiks-cube-push-stuff-around-build-a-lunar-base/">Synced<span class="s5"></span></a></span></p>
+<p class="p6"><span class="s5"><a href="https://syncedreview.com/2019/10/20/robots-to-handle-rubiks-cube-push-stuff-around-build-a-lunar-base/">Robots to Handle Rubik’s Cube, Push Stuff Around, Build a Lunar Base</a></span></p>
+<p class="p20"><span class="s6"><a href="https://syncedreview.com/2019/10/20/robots-to-handle-rubiks-cube-push-stuff-around-build-a-lunar-base/">Connections Between Support Vector Machines, Wasserstein Distance ... recovery module called Liquid Warping GAN can give you a leg up.<span class="s9"></span></a></span></p>
+<p class="p10"><span class="s5"><a href="https://syncedreview.com/2019/10/20/robots-to-handle-rubiks-cube-push-stuff-around-build-a-lunar-base/">Oct 20, 2019</a></span></p>
+<p class="p11"><span class="s5"><a href="https://syncedreview.com/2019/10/20/robots-to-handle-rubiks-cube-push-stuff-around-build-a-lunar-base/"></a></span><br></p>
+<p class="p5"><span class="s6"><a href="https://syncedreview.com/2019/12/08/neurips-2019-opens-outstanding-paper-awards-and-2021-conference-announced/">Synced<span class="s5"></span></a></span></p>
+<p class="p17"><span class="s5"><a href="https://syncedreview.com/2019/12/08/neurips-2019-opens-outstanding-paper-awards-and-2021-conference-announced/">NeurIPS 2019 Opens; Outstanding Paper Awards and 2021 Conference Announced</a></span></p>
+<p class="p20"><span class="s6"><a href="https://syncedreview.com/2019/12/08/neurips-2019-opens-outstanding-paper-awards-and-2021-conference-announced/">... total variation distance, and generalizations of both Wasserstein and ... imply bounds on the statistical error of a GAN, showing, for example, ...<span class="s9"></span></a></span></p>
+<p class="p10"><span class="s5"><a href="https://syncedreview.com/2019/12/08/neurips-2019-opens-outstanding-paper-awards-and-2021-conference-announced/">Dec 8, 2019</a></span></p>
+<p class="p11"><span class="s5"><a href="https://syncedreview.com/2019/12/08/neurips-2019-opens-outstanding-paper-awards-and-2021-conference-announced/"></a></span><br></p>
+<p class="p5"><span class="s6"><a href="https://36kr.com/p/1724802416641">36kr<span class="s5"></span></a></span></p>
+<p class="p12"><span class="s8"><a href="https://36kr.com/p/1724802416641">NeurIPS 2019<span class="s7">：</span><span class="s5">1.3</span><span class="s7">万人参会，获奖论文公布，微软华人学者获经典论文奖</span><span class="s5">_</span><span class="s7">详细解读</span><span class="s5">_</span><span class="s7">最新资讯</span><span class="s5">_</span><span class="s7">热点事件</span></a></span></p>
+<p class="p20"><span class="s6"><a href="https://36kr.com/p/1724802416641">... <span class="s10">总变分距离，以及</span><span class="s9">Wasserstein </span><span class="s10">距离和</span><span class="s9">KolmogorovSmirnov </span><span class="s10">距离的泛华</span><span class="s9"> ... </span><span class="s10">因此，研究者展示了该结果如何表明</span><span class="s9">GAN </span><span class="s10">的统计误差边界，例如</span><span class="s9">GAN ...</span></a></span></p>
+<p class="p8"><span class="s6"><a href="https://36kr.com/p/1724802416641">Dec 8, 2019<span class="s11"></span></a></span></p>
+<p class="p47"><span class="s5">&lt;—10</span></p>
+<p class="p47"><span class="s5">——end 2019</span></p>
+<p class="p48"><span class="s5"><a href="https://analyticsindiamag.com/how-to-establish-domain-transferability-in-neural-models/"></a></span><br></p>
+<p class="p48"><span class="s5"></span><br></p>
+<p class="p48"><span class="s5"></span><br></p>
+<p class="p48"><span class="s5"></span><br></p>
+<p class="p3"><span class="s5">2020 <span class="Apple-converted-space">  </span>14 items</span></p>
+<p class="p4"><span class="s5"></span><br></p>
+<p class="p18"><span class="s6"><a href="http://tech.sina.com.cn/csj/2020-01-01/doc-iihnzhfz9647705.shtml">新浪网<span class="s16"></span></a></span></p>
+<p class="p12"><span class="s8"><a href="http://tech.sina.com.cn/csj/2020-01-01/doc-iihnzhfz9647705.shtml">“<span class="s7">深度学习</span><span class="s5">”</span><span class="s7">这十年：</span><span class="s5">52</span><span class="s7">篇大神级论文再现</span><span class="s5">AI</span><span class="s7">荣与光</span></a></span></p>
+<p class="p20"><span class="s6"><a href="http://tech.sina.com.cn/csj/2020-01-01/doc-iihnzhfz9647705.shtml">Wasserstein GAN &amp; Improved Training of Wasserstein GANs. A Style-Based Generator Architecture for Generative Adversarial Networks.<span class="s9"></span></a></span></p>
+<p class="p10"><span class="s5"><a href="http://tech.sina.com.cn/csj/2020-01-01/doc-iihnzhfz9647705.shtml">Jan 1, 2020<span class="s12"></span></a></span></p>
+<p class="p13"><span class="s5"></span><br></p>
+<p class="p5"><span class="s6"><a href="https://advances.sciencemag.org/content/6/1/eaax9324.full">Science Advances<span class="s5"></span></a></span></p>
+<p class="p6"><span class="s5"><a href="https://advances.sciencemag.org/content/6/1/eaax9324.full">Inverse design of porous materials using artificial neural ...</a></span></p>
+<p class="p20"><span class="s6"><a href="https://advances.sciencemag.org/content/6/1/eaax9324.full">(27) have suggested an improved version of GAN called Wasserstein GAN (WGAN). In WGAN, the discriminator is trained to estimate the Earth ...<span class="s9"></span></a></span></p>
+<p class="p10"><span class="s5"><a href="https://advances.sciencemag.org/content/6/1/eaax9324.full">Jan 3, 2020</a></span></p>
+<p class="p21"><span class="s5"><a href="https://advances.sciencemag.org/content/6/1/eaax9324.full"></a></span><br></p>
+<p class="p15"><span class="s5"></span><br></p>
+<p class="p30"><span class="s5"><a href="https://boingboing.net/2018/11/02/reverse-entropy.html"><span class="Apple-converted-space"> </span></a></span><span class="s38"><span class="Apple-converted-space"> </span></span></p>
+<p class="p18"><span class="s6"><a href="https://tech.sina.com.cn/roll/2020-01-27/doc-iihnzhha4898340.shtml">新浪网<span class="s16"></span></a></span></p>
+<p class="p12"><span class="s5"><a href="https://tech.sina.com.cn/roll/2020-01-27/doc-iihnzhha4898340.shtml">从<span class="s13">2019 AI</span><span class="s14">顶会最佳论文，看深度学习的理论基础</span></a></span></p>
+<p class="p20"><span class="s6"><a href="https://tech.sina.com.cn/roll/2020-01-27/doc-iihnzhha4898340.shtml">... <span class="s10">范数距离、总变分距离、</span><span class="s9">Wasserstein </span><span class="s10">距离、</span><span class="s9">Kolmogorov-Smirnov </span><span class="s10">距离等</span><span class="s9"> ... </span><span class="s10">对于</span><span class="s9">GAN </span><span class="s10">来说，如果生成器与判别器函数分别表示为</span><span class="s9">F </span><span class="s10">与</span><span class="s9">P</span><span class="s10">，那么</span><span class="s9"> ...</span></a></span></p>
+<p class="p8"><span class="s6"><a href="https://tech.sina.com.cn/roll/2020-01-27/doc-iihnzhha4898340.shtml">Jan 27, 2020<span class="s11"></span></a></span></p>
+<p class="p14"><span class="s5"><a href="https://www.cjnews.com/news/canada/trial-against-some-quebec-hasidic-schools-to-begin-in-february"></a></span><br></p>
+<p class="p5"><span class="s6"><a href="https://www.cjnews.com/news/canada/trial-against-some-quebec-hasidic-schools-to-begin-in-february">Canadian Jewish News<span class="s5"></span></a></span></p>
+<p class="p6"><span class="s5"><a href="https://www.cjnews.com/news/canada/trial-against-some-quebec-hasidic-schools-to-begin-in-february">Trial against some Quebec Hasidic schools to begin in February</a></span></p>
+<p class="p20"><span class="s6"><a href="https://www.cjnews.com/news/canada/trial-against-some-quebec-hasidic-schools-to-begin-in-february">Lowen and Wasserstein's current lawyer Clara Poissant-Lespérance, said the couple is not seeking damages. Their goal is to obtain a ...<span class="s9"></span></a></span></p>
+<p class="p10"><span class="s5"><a href="https://www.cjnews.com/news/canada/trial-against-some-quebec-hasidic-schools-to-begin-in-february">Jan 28, 2020<span class="s12"></span></a></span></p>
+<p class="p11"><span class="s5"></span><br></p>
+<p class="p5"><span class="s6"><a href="https://ainow.ai/2020/01/31/183040/">AINOW<span class="s16">編集部</span></a></span></p>
+<p class="p12"><span class="s8"><a href="https://ainow.ai/2020/01/31/183040/">2020<span class="s7">年</span><span class="s5">2</span><span class="s7">月の</span><span class="s5">AI</span><span class="s7">関連イベントまとめ</span></a></span></p>
+<p class="p20"><span class="s6"><a href="https://ainow.ai/2020/01/31/183040/">Wasserstein GAN<span class="s10">の原論文を完全に理解する</span><span class="s9">. </span><span class="s10">日時：</span><span class="s9">2020/02/01(</span><span class="s10">土</span><span class="s9">) </span><span class="s10">場所：水道橋駅周辺</span><span class="s9"> </span><span class="s10">千代田区西神田</span><span class="s9">2-7-14 YS</span><span class="s10">西神田ビル</span><span class="s9">2F. </span><span class="s10">イベント</span><span class="s9"> ...</span></a></span></p>
+<p class="p8"><span class="s6"><a href="https://ainow.ai/2020/01/31/183040/">Jan 31, 2020<span class="s11"></span></a></span></p>
+<p class="p11"><span class="s5"></span><br></p>
+<p class="p11"><span class="s5"></span><br></p>
+<p class="p5"><span class="s6"><a href="https://www.cjnews.com/news/canada/landmark-trial-places-hasidic-schools-under-scrutiny">Canadian Jewish News<span class="s5"></span></a></span></p>
+<p class="p6"><span class="s5"><a href="https://www.cjnews.com/news/canada/landmark-trial-places-hasidic-schools-under-scrutiny">Landmark trial places Hasidic schools under scrutiny</a></span></p>
+<p class="p20"><span class="s6"><a href="https://www.cjnews.com/news/canada/landmark-trial-places-hasidic-schools-under-scrutiny">In their deposition, Lowen and Wasserstein claim the schools they attended did not have a permit to operate, that the language of instruction ...<span class="s9"></span></a></span></p>
+<p class="p8"><span class="s6"><a href="https://www.cjnews.com/news/canada/landmark-trial-places-hasidic-schools-under-scrutiny">Feb 12, 2020<span class="s11"></span></a></span></p>
+<p class="p11"><span class="s5"></span><br></p>
+<p class="p11"><span class="s5"></span><br></p>
+<p class="p5"><span class="s6"><a href="https://www.cjnews.com/news/canada/hasidim-are-obeying-quebec-education-law-today-lawyers-argue-as-case-wraps-up">Canadian Jewish News<span class="s5"></span></a></span></p>
+<p class="p6"><span class="s5"><a href="https://www.cjnews.com/news/canada/hasidim-are-obeying-quebec-education-law-today-lawyers-argue-as-case-wraps-up">Hasidim are obeying Quebec education law today, lawyers ...</a></span></p>
+<p class="p20"><span class="s6"><a href="https://www.cjnews.com/news/canada/hasidim-are-obeying-quebec-education-law-today-lawyers-argue-as-case-wraps-up">Lowen and Wasserstein's suit alleges the laws being violated are the Education Act, the Act Respecting Private Education, the Charter of the ...<span class="s9"></span></a></span></p>
+<p class="p10"><span class="s5"><a href="https://www.cjnews.com/news/canada/hasidim-are-obeying-quebec-education-law-today-lawyers-argue-as-case-wraps-up">Feb 20, 2020<span class="s12"></span></a></span></p>
+<p class="p11"><span class="s5"></span><br></p>
+<p class="p11"><span class="s5"></span><br></p>
+<p class="p5"><span class="s6"><a href="https://www.straitstimes.com/business/banking/coronavirus-us-banks-urgently-pitch-investors-on-lending-to-needy-companies">The Straits Times<span class="s5"></span></a></span></p>
+<p class="p6"><span class="s5"><a href="https://www.straitstimes.com/business/banking/coronavirus-us-banks-urgently-pitch-investors-on-lending-to-needy-companies">Coronavirus: US banks urgently pitch investors on lending to ...</a></span></p>
+<p class="p20"><span class="s6"><a href="https://www.straitstimes.com/business/banking/coronavirus-us-banks-urgently-pitch-investors-on-lending-to-needy-companies">... president and chief investment officer of Wasserstein Debt Opportunities. "With people in quarantine, concerts and sporting events getting ...<span class="s9"></span></a></span></p>
+<p class="p10"><span class="s5"><a href="https://www.straitstimes.com/business/banking/coronavirus-us-banks-urgently-pitch-investors-on-lending-to-needy-companies">Mar 13, 2020<span class="s12"></span></a></span></p>
+<p class="p11"><span class="s5"></span><br></p>
+<p class="p11"><span class="s5"></span><br></p>
+<p class="p49"><span class="s5"><a href="https://dailydental.co.kr/news/article.html?no=110858">치의신보<span class="s39"></span></a></span></p>
+<p class="p50"><span class="s5"><a href="https://dailydental.co.kr/news/article.html?no=110858">치과의<span class="s13"> </span><span class="s40">새로운</span><span class="s13"> </span><span class="s40">어시스트</span><span class="s13">, AI</span><span class="s40">를</span><span class="s13"> </span><span class="s40">소개합니다</span></a></span></p>
+<p class="p20"><span class="s5"><a href="https://dailydental.co.kr/news/article.html?no=110858">... <span class="s41">저선량</span><span class="s28"> CT</span><span class="s41">이미지</span><span class="s28">, B: </span><span class="s41">저선량</span><span class="s28"> CT</span><span class="s41">이미지에</span><span class="s28"> m-GAN(modified Generative ... Artifact correction in low-dose dental CT imaging using Wasserstein ...</span></a></span></p>
+<p class="p8"><span class="s5"><a href="https://dailydental.co.kr/news/article.html?no=110858">Apr 10, 2020<span class="s12"></span></a></span></p>
+<p class="p11"><span class="s5"></span><br></p>
+<p class="p5"><span class="s6"><a href="https://analyticsindiamag.com/how-uber-outperformed-existing-gans-based-baselines-in-self-driving-cars/">Analytics India Magazine<span class="s5"></span></a></span></p>
+<p class="p6"><span class="s5"><a href="https://analyticsindiamag.com/how-uber-outperformed-existing-gans-based-baselines-in-self-driving-cars/">How Uber Outperformed Existing GANs-Based Baselines In ...</a></span></p>
+<p class="p20"><span class="s6"><a href="https://analyticsindiamag.com/how-uber-outperformed-existing-gans-based-baselines-in-self-driving-cars/">Unlike other GAN-based predictions that used vanilla cross-entropy loss as their GAN loss, the researchers used Wasserstein GAN loss with ...<span class="s9"></span></a></span></p>
+<p class="p10"><span class="s5"><a href="https://analyticsindiamag.com/how-uber-outperformed-existing-gans-based-baselines-in-self-driving-cars/">Apr 21, 2020<span class="s12"></span></a></span></p>
+<p class="p11"><span class="s5"></span><br></p>
+<p class="p10"><span class="s5">&lt;—10</span></p>
+<p class="p11"><span class="s5"></span><br></p>
+<p class="p5"><span class="s6"><a href="https://www.silicon.de/experten-tipp/ki-training-mit-personenbezogenen-daten-dsgvo-konform-dank-gan-methoden">silicon.de<span class="s5"></span></a></span></p>
+<p class="p6"><span class="s5"><a href="https://www.silicon.de/experten-tipp/ki-training-mit-personenbezogenen-daten-dsgvo-konform-dank-gan-methoden">KI-Training mit personenbezogenen Daten – DSGVO-konform ...</a></span></p>
+<p class="p20"><span class="s6"><a href="https://www.silicon.de/experten-tipp/ki-training-mit-personenbezogenen-daten-dsgvo-konform-dank-gan-methoden">... personenbezogenen Daten – DSGVO-konform dank GAN-Methoden ... (VAE) und Wasserstein GAN (WGAN-GP) – miteinander verglichen.<span class="s9"></span></a></span></p>
+<p class="p10"><span class="s5"><a href="https://www.silicon.de/experten-tipp/ki-training-mit-personenbezogenen-daten-dsgvo-konform-dank-gan-methoden">Jul 9, 2020<span class="s12"></span></a></span></p>
+<p class="p11"><span class="s5"></span><br></p>
+<p class="p30"><span class="s5"><a href="https://finance.sina.com.cn/stock/stockzmt/2020-08-28/doc-iivhvpwy3609484.shtml"><span class="Apple-converted-space"> </span><span class="s42"></span></a></span></p>
+<p class="p18"><span class="s6"><a href="https://finance.sina.com.cn/stock/stockzmt/2020-08-28/doc-iivhvpwy3609484.shtml">新浪网<span class="s16"></span></a></span></p>
+<p class="p12"><span class="s5"><a href="https://finance.sina.com.cn/stock/stockzmt/2020-08-28/doc-iivhvpwy3609484.shtml">【华泰金工林晓明团队】<span class="s13">WGAN</span><span class="s14">应用于金融时间序列生成</span><span class="s13"> ...</span></a></span></p>
+<p class="p7"><span class="s6"><a href="https://finance.sina.com.cn/stock/stockzmt/2020-08-28/doc-iivhvpwy3609484.shtml">原始<span class="s9">GAN</span><span class="s10">模型具有训练不同步、训练损失函数不收敛和模式崩溃的缺点。</span><span class="s9">WGAN</span><span class="s10">模型使用</span><span class="s9">Wasserstein</span><span class="s10">距离衡量真实分布与生成分布之间的距离，</span><span class="s9"> ...</span></a></span></p>
+<p class="p8"><span class="s6"><a href="https://finance.sina.com.cn/stock/stockzmt/2020-08-28/doc-iivhvpwy3609484.shtml">Aug 28, 2020<span class="s11"></span></a></span></p>
+<p class="p13"><span class="s5"></span><br></p>
+<p class="p4"><span class="s5"></span><br></p>
+<p class="p51"><span class="s6"><a href="https://analyticsindiamag.com/join-this-full-day-workshop-on-generative-adversarial-networks-from-scratch/">Analytics India Magazine<span class="s5"></span></a></span></p>
+<p class="p43"><span class="s5"><a href="https://analyticsindiamag.com/join-this-full-day-workshop-on-generative-adversarial-networks-from-scratch/">Join This Full-Day Workshop On Generative Adversarial ...</a></span></p>
+<p class="p44"><span class="s6"><a href="https://analyticsindiamag.com/join-this-full-day-workshop-on-generative-adversarial-networks-from-scratch/">... generators, discriminators, Wasserstein loss function etc. Along with these, attendees will also be able to learn building a vanilla GAN model, ...<span class="s9"></span></a></span></p>
+<p class="p52"><span class="s6"><a href="https://analyticsindiamag.com/join-this-full-day-workshop-on-generative-adversarial-networks-from-scratch/">Nov 11, 2020<span class="s11"></span></a></span></p>
+<p class="p4"><span class="s5"></span><br></p>
+<p class="p4"><span class="s5"></span><br></p>
+<p class="p42"><span class="s5">Newswise</span></p>
+<p class="p53"><span class="s6"><a href="https://www.newswise.com/coronavirus/machine-learning-model-for-covid-19-drug-discovery-is-a-gordon-bell-finalist">Machine learning model for COVID-19 drug discovery is a<span class="s15"></span></a></span></p>
+<p class="p54"><span class="s5">Machine learning model for COVID-19 drug discovery is a Gordon Bell finalist</span></p>
+<p class="p55"><span class="s43">18-Nov-2020 6:00 AM EST, </span><span class="s44">by<a href="https://www.newswise.com/institutions/newsroom/1131/"><span class="s45"> Lawrence Livermore National Laboratory</span></a></span></p>
+<p class="p56"><span class="s6">“For targeted drug design for COVID-19, you need a generative model that preserves reconstruction while increasing diversity of variations in the latent space,” Jacobs said. “We found the Wasserstein autoencoder is best suited for this task.”</span></p>
+<p class="p57"><span class="s5"></span><br></p>
+<p class="p56"><span class="s6">LLNL scientists said their multi-level parallel training approach performed well across multiple scales, including the entire 125 petaflop IBM/NVIDIA supercomputer Sierra with up to 97.7 percent efficiency. Using the Livermore Big Artificial Neural Network Toolkit (LBANN), which enables deep learning research at previously unobtainable scales, the team trained a novel Wasserstein autoencoder on a 1.613 billion molecule training set and a 1.01 million molecule test set, nearly an order of magnitude more chemical compounds than any other work reported to date.</span></p>
+<p class="p57"><span class="s5"></span><br></p>
+<p class="p58"><span class="s5">To train the model, LLNL computer scientist Sam Ade Jacobs and colleagues designed and implemented a character-based Wasserstein autoencoder (cWAE). In contrast to the state-of-the-art (baseline) molecular generative models like variational autoencoders (VAEs) and junction-tree variational autoencoders (JTVAEs), cWAE enforces a stronger constraint during training. These constraints lead to better continuous latent space, and therefore better reconstruction and sampling of molecules from latent space.</span></p>
+<p class="p58"><span class="s5">Nov 18, 2020</span></p>
+<p class="p58"><span class="s5">&lt;—14</span></p>
+<p class="p51"><span class="s5">———————————end 2020</span></p>
+<p class="p59"><span class="s5"></span><br></p>
+<p class="p59"><span class="s5"><a href="https://www.leiphone.com/news/201812/tWk6LHv4v2z5nwjW.html"><span class="Apple-converted-space">  </span></a><a href="https://www.tabletmag.com/sections/news/articles/beachhead"><span class="s46"><span class="Apple-converted-space"> </span></span></a><a href="http://www.sohu.com/a/145948571_465975"><span class="s46"> </span></a></span><span class="s47"><span class="Apple-converted-space"> </span></span></p>
+<p class="p48"><span class="s5"><a href="https://blog.csdn.net/omnispace/article/details/79207655"><span class="Apple-converted-space"> </span><span class="s48"></span></a></span></p>
+<p class="p60"><span class="s6"><a href="https://tech.sina.com.cn/roll/2018-09-15/doc-ifxeuwwr4552427.shtml">新浪网<span class="s16"></span></a></span></p>
+<p class="p48"><span class="s5"><a href="https://tech.sina.com.cn/roll/2018-09-15/doc-ifxeuwwr4552427.shtml"></a></span><br></p>
+<p class="p61"><span class="s5"></span><br></p>
+<p class="p61"><span class="s5"></span><br></p>
+<p class="p62"><span class="s5"><a href="http://www.qianjia.com/html/2018-03/28_288233.html"></a></span><br></p>
+<p class="p48"><span class="s5"><a href="http://www.qianjia.com/html/2018-03/28_288233.html"></a></span><br></p>
+<p class="p61"><span class="s5"></span><br></p>
+<p class="p61"><span class="s5"></span><br></p>
+<p class="p59"><span class="s5"><a href="https://kowalczyk.blog.polityka.pl/2015/04/02/wciaz-nienawrocony/"></a></span><br></p>
+<p class="p59"><span class="s6"><a href="https://kowalczyk.blog.polityka.pl/2015/04/02/wciaz-nienawrocony/"><span class="Apple-converted-space"> </span><span class="s5"></span></a></span></p>
+<p class="p63"><span class="s5"></span><br></p>
+<p class="p64"><span class="s5"><a href="https://www.leiphone.com/news/201803/DybiDiLOTHCNh8MQ.html"></a></span><br></p>
+<p class="p65"><span class="s48"><a href="http://www.sohu.com/a/229976209_473283"><span class="Apple-converted-space"> </span></a></span><span class="s49"> <a href="https://www.leiphone.com/news/201812/tWk6LHv4v2z5nwjW.html"><span class="s46"><span class="Apple-converted-space"> </span></span></a></span><span class="s50"> <a href="https://blog.csdn.net/c2a2o2/article/details/79168731"><span class="s51"><span class="Apple-converted-space"> </span></span></a><a href="http://www.cjnews.com/news/canada/ex-chassids-case-government-go-ahead"><span class="s52"> </span></a><span class="Apple-converted-space"> </span><a href="http://blog.sciencenet.cn/blog-2472277-1169968.html"><span class="s51"> </span></a><span class="Apple-converted-space"> </span></span></p>
+</body>
+</html>
