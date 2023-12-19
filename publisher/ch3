@@ -1,0 +1,1527 @@
+\magnification=1100
+\hsize=4.5 true in
+\vsize=7.5 true in
+
+\def\blackbox{\vrule height 1.2ex width 1.0ex depth -.2ex}
+
+\def\bmatrix#1{\left[\matrix{#1}\right]} %matrix with brackets []
+
+
+
+\font\ch=cmbx10 at 18truept
+\font\chtitle=cmbx10 at 21truept
+\font\fourteenbf=cmbx10 scaled\magstep2
+\font\twelvebf=cmbx10 scaled\magstep1
+%\magnification=\magstep1
+\catcode`\@=11
+\def\m@th{\mathsurround=0pt }
+
+%this is the code to write matrices 
+
+\def\matriz#1{\,\vcenter{\normabaselines\m@th
+\ialign{\hfil$##$\hfil&&\quad\hfil$##$\hfil\crcr
+\mathstrut\crcr\noalign{\kern-\baselineskip}
+#1\crcr\mathstrut\crcr\noalign{\kern-\baselineskip}}}\,}
+
+%this is the code to write tableaux with square brackets 
+ 
+\newdimen\p@renwd\setbox0=\hbox{\tenex B}\p@renwd=\wd0 
+\def\rowtab#1{\begingroup \m@th\setbox0=\vbox{\def\cr{\crcr\noalign{\kern2pt\global\let\cr=\endline}}
+\ialign{$##$\hfil\kern2pt\kern\p@renwd&\thinspace\hfil$##$\hfil
+&&\quad\hfil$##$\hfil\crcr
+\omit\strut\hfil\crcr\noalign{\kern-\baselineskip}
+#1\crcr\omit\strut\cr}}
+\setbox2=\vbox{\unvcopy0 \global\setbox1=\lastbox}
+\setbox2=\hbox{\unhbox1 \unskip \global\setbox1=\lastbox}
+\setbox2=\hbox{$\kern\wd1\kern-\p@renwd \left [ \kern-\wd1
+\global\setbox1=\vbox{\box1\kern2pt}
+\vcenter{\kern-\ht1 \unvbox0 \kern-\baselineskip} \,\right]$}
+\;\vbox{\kern\ht1\box2}\endgroup}
+
+\pageno=67
+
+\headline={\ifnum\pageno=67 \else\ifodd\pageno\rightheadline \else\leftheadline\fi\fi}
+%\def\title{\hfil{\fourteenbf Chapter III. Tableaux and pivoting}\hfil}
+
+\def\leftheadline{\tenrm{\bf\folio}\quad{\it Chapter 3  Tableaux and Pivoting} \hfil}
+\voffset=2\baselineskip
+
+\def\rightheadline{\tenrm\hfil{\it \S  7. Standard and Canonical Forms}\quad {\bf\folio}}
+\
+\bigskip
+\bigskip
+\bigskip
+\noindent {\ch  Chapter} {\chtitle 3}
+\bigskip
+\bigskip
+\noindent  {\chtitle  Tableaux and Pivoting}
+ \medskip
+\hrule
+ \bigskip
+\bigskip
+
+
+\noindent
+{\twelvebf \S   7. Standard and Canonical Forms}
+
+\noindent
+{\twelvebf for Linear Programs}
+\smallskip
+
+\noindent
+To save paper, we will write linear programs using matrix notation. Recall that a linear form 
+$c_1x_1+c_2x_2+\cdots+c_nx_n$  in $n$ variables $x_1,\ldots,x_n$ can be written as the matrix product  $cx,$  where $c = [c_1,\ldots, c_n]$ is a row of coefficients and
+$x= [x_1,\ldots, x_n]^T$ is the column of variables.
+  If it is understood from the problem that the set of variables is given by the list $x_1, x_2,\ldots, x_n,$ then we see that a linear form is uniquely determined by the row  $c;$ that is, if $z=cx$ and $\hat z =\hat cx,$ then $z=\hat z$ for all $x$ if and only if $c=\hat c.$
+ 
+
+Recall that linear constraints were defined in \S 1 of Chapter 1 to be relations that can be written in the standard form 
+\smallskip
+\centerline{$ax=b,$ or $ax \le b,$ or $ax \ge b,$}
+\smallskip
+\noindent where $ax$ is a linear form in the   entries of $x.$ 
+
+Given a system of  inequalities of the same type,
+we can write all of them  in matrix form  $Ax \le b$ or  $Ax \ge b.$ 
+ It is a worthwhile exercise to verify that the foregoing is true.
+Note that  $b \le b'$ for two columns $b,b'$ of the same size means that
+every entry of $b$ is less than  or equal to  the corresponding entry of $b'.$
+We use a similar convention for rows. When  $b$ is a column or a row, $b \ge 0$ means that all entries of $b$ are nonnegative.
+
+ 
+
+\smallskip
+\noindent
+{\bf Example.} The set of linear constraints
+\ 
+\smallskip
+$\left\{\matrix{.3x_a &+& .35x_b &+& .5x_c &+& .4x_d &\ge& .4\cr.6x_a &+& .35x_b &+& .5x_c &+& .45x_d &\ge& .5\cr.1x_a &+& .3x_b& & \hfill &+& .15x_d &\ge&.1\cr} \right.$
+ 
+\smallskip
+\noindent
+can be written in matrix form as follows:
+ 
+\smallskip
+$\left[ \matrix{.3&.35&.5&.4\cr.6&.35&.5&.45\cr.1&.3&0&.15\cr}\right]\,\,\left[ \matrix{x_a\cr x_b\cr x_c\cr x_d\cr}\right]\,\,\ \matrix{\omit\cr\ge\cr\omit\cr} \,\,\left[ \matrix{.4\cr.5\cr.1\cr}\right].$ \hfill
+\blackbox
+\medskip
+
+The setting of a linear program  has been given as follows: 
+
+maximize (or minimize) an affine function (a linear form plus a constant) subject to a finite number of linear constraints.
+
+The main goal of this section is to develop a uniform way of writing linear programs, so that any linear program can be rewritten in this uniform  way. The importance of this uniformity is easily seen when we want to give a method of solving linear programs or state a theorem in linear programming. In its absence, we would have to consider all possible ways  to write a  linear program, making the writing of methods or proofs very cumbersome.  Solving  linear programs
+often involves using computers, so it is very important to be able
+to transform a linear program to a form acceptable for a given software.
+
+In the literature, different models of uniformity are often called
+standard, canonical, and normal forms. They do not necessarily mean the same thing in different publications.   In this section, we   first define 
+standard and  canonical forms for linear programs, 
+and then we will see how {\it any}  linear program can be written in  canonical form and in  standard form.
+
+\nopagenumbers % suppress footlines
+
+\smallskip
+ \noindent
+{\bf Definition 7.1.} A linear program is said to be in {\it standard form} if it is a minimization problem, all variables are required to be nonnegative,
+and all other constraints are linear equations. \hfill \blackbox
+
+In other words, using matrix notations, here is the standard form:
+ 
+\centerline {minimize  $cx+d,$ subject to $A x = b,\,\,x\ge 0,$}
+
+\noindent where  $c$ is a given row, $d$ a given number, $A$ a given matrix,
+$x$ a column of distinct variables, $b$ a given column.
+
+We can write this even shorter as follows:
+
+\centerline { $cx+d \rightarrow$ min, $A x = b,\,\,x\ge 0.$}
+\noindent
+Note that $Ax=b$ here is the standard form for a system of linear equations.
+ 
+\smallskip
+ \noindent
+{\bf Example.}  $2x+3y-z \rightarrow$ min, $x,y,z \ge 0, x+y+z=1$ is a linear program in standard form.  
+ 
+\smallskip
+ \noindent
+{\bf Definition 7.2.} The {\it canonical form} of a linear program  is the following: 
+% \smallskip
+Minimize  $cx+d,$ subject to $A x\le b,\,\, x\ge 0,$   
+
+\noindent where  $A,b,c,d,x$ are as before. \hfill \blackbox
+
+In other words, it is a minimization problem, all variables are required to be nonnegative,
+and all other constraints are of type $\le.$
+ 
+\smallskip
+ \noindent
+{\bf Example.}  $2x+3y-z \rightarrow$ min, $x,y,z \ge 0,z \le 2$ is a linear program in canonical form. \hfill \blackbox
+\smallskip
+
+
+In different books on linear programming, standard and canonical (as well as  normal) forms for linear programs are different. The {\it sign restrictions}
+ $x \ge 0$ are common for all of them,
+but some of them have max instead of min or (and)  $Ax \ge b$ instead of
+$Ax \le b$ or $Ax = b.$ 
+ Also different software packages use different input forms
+for linear programs. Some books and some software do not allow the constant $d$
+ in the objective function.
+
+So it is important to know how to go from one form to another.  We will give a few little tricks that allow us to convert any form to any other form.
+
+
+Using some elementary algebra, we can write any linear programming problem in a standard form as well as in a canonical form. 
+We will use some elementary facts, summarized in the next lemma.
+ 
+
+\smallskip
+ \noindent
+{\bf Lemma 7.3}\quad {\bf 1.} Let $a$ and $b$ be real numbers. Then
+\smallskip
+{\bf (a)} $a\le b$ if and only if $-a\ge -b.$
+
+\smallskip
+
+{\bf (b)} $a=b$ if and only if $a\le b\,\, {\rm and} -a\le -b.$
+\smallskip
+{\bf 2.} Minimization of a function $f$ is equivalent to the maximization of the function $-f,$ under the same constraints. That is,
+both optimization problems have the same feasible solutions and the same optimal solutions.
+The optimal values differ by  a sign; that is, the minimum value of $f$ equals the negative of the maximum value of $-f.$ 
+\smallskip
+{\bf 3.} Minimization of a function $f$ is equivalent to the minimization of the function $f+d,$ under the same constraints. That is,
+both optimization problems have the same feasible solutions and the same optimal solutions. The optimal values differ by  $d;$  that is, the minimum  of $f+d$ equals the minimum  of  $f$ plus $d.$ 
+
+\smallskip
+ \noindent
+{\bf Proof}
+ 
+(1.a) $a\le b$ if and only if $a-b\le 0$ if and only if $-(a-b)\ge 0$ if and only if $b-a\ge 0$ if and only if $-a\ge -b.$
+\smallskip
+(1.b) If $a=b,$ then certainly, $a\le b.$ Also, $-a=-b$ and from here it follows that $-a\le -b.$ For the converse, $a\le b$ and $-a\le -b$ are equivalent, by (1.a), to $a\le b$ and $a\ge b;$ it now follows that $a=b.$ 
+\smallskip
+2. Let $c$ be a point where $f$ attains its minimum; then $f(c)\le f(x)$ for any $x.$ Using (1.a), $-f(c)\ge -f(x)$ for any $x,$ which means that $-f$ attains its maximum value at $c.$
+\smallskip
+3. An exercise for the reader. \hfill \blackbox
+ 
+ 
+Using this lemma we can rewrite any linear programming problem in its  canonical or the standard form using the following ``tricks'' (here $f$ represents a linear form and $c$ is a constant).
+
+ \smallskip
+ \noindent
+{\bf Trick 7.4.}  By (1.a) from Lemma 7.3, the inequalities $f\le c$ and $-f\ge -c$  are equivalent. \hfill \blackbox
+
+Thus, by rewriting the inequalities of the form 
+$f\ge c,$ we can make some or  all the linear inequalities in our linear program  to be of the form $f\le c.$  Also, if it is desirable, we can arrange them to be of  the form $f\ge c.$ 
+ 
+\smallskip
+ \noindent
+{\bf Trick 7.5. }  By (1.b) of Lemma 7.3, the equality $f = c$ is equivalent  to the system of two inequalities $f\le c,\,\, -f\le -c.$ \hfill \blackbox
+
+So we can replace any linear equation by two  inequalities.
+We see now that, without loss of generality, we can assume that all the linear constraints in a linear programming problem are of the form $f\le c$ 
+or of the form  $f\ge c.$ 
+
+\smallskip
+ \noindent
+{\bf Trick 7.6.} By (2) of Lemma 7.3, we can convert a minimization problem to a maximization problem and vice versa
+by multiplying the objective function by $-1.$  \hfill \blackbox
+
+Do not forget that the optimal
+value changes its sign as well!
+
+Using  Tricks 7.4--7.6, we can write any linear program where all variables are required to be $\ge 0$  in a canonical form without changing the set of variables,
+the feasible region, and the optimality region. Namely, if our problem is a maximization problem, we convert it to a minimization problem by Trick 7.6.
+By Trick  7.5 we can convert the equality constraints (if any) to inequalities.
+Finally, by Trick  7.4 we can convert  the $\ge$ constraints  
+besides the sign restrictions (if any) to $\le$ constraints.
+In particular, the standard form   $cx+d \to \min, A x = b,\,\,x\ge 0,$
+can be converted to an equivalent   canonical form:
+$cx+d \to \min, A x \le  b,   -Ax \le -b     , x\ge 0,$
+
+
+
+
+
+\smallskip
+ \noindent
+{\bf Trick 7.7.}  A constraint  $f\le c$  can be written as two constraints  $f + s = c\,\,\hbox{and}\,\, s \ge 0$ with an additional ($slack$) variable $s.$  \hfill  \blackbox
+
+Thus, we can replace any constraint given by an inequality by a pair of constraints, one given by an equality and the second being a sign restriction. The slack  variable $s$ should be different from other variables in the problem.
+This trick can be inverted, and the converse trick  saves (eliminates)  a variable $s.$  This $s$ should be eliminated from all constraints and from the objective function to obtain a problem with one variable less.
+
+Combined with  Trick 7.4, Trick 7.7 can be used for $ \ge$ constraints:
+$f \ge c$ can be written as  $f-s=c, \ s \ge 0.$ In this case the new variable $s$ is often called a $surplus$ or $excess$ variable, but we will also call it
+a slack variable.
+
+
+Using  Trick 7.7 (and, if necessary, Trick 7.6), we can write any LP   where all variables are required to be $\ge 0$  in a standard form.  
+For example, the canonical form   $cx+d \to \min, A x \le b,\,\,x\ge 0,$
+can be written as the standard form   $cx+d \to \min, A x +u= b,\,\,x\ge 0,
+xu \ge 0,$  where $u$ is a column of slack variables (one slack variable for each inequality
+in the system $Ax \le b$). This standard form is special because its system
+of linear equations  is solved: $u = -Ax+b$ is a standard  form for the answer.
+
+Conversely, given any LP in standard form  $cx+d \to \min, A x = b,\,\,x\ge 0,$
+we can convert it to a canonical form by solving the system $Ax=b$ of linear equations. (If the system is inconsistent then the  program is infeasible
+and there is no need to write it in any form.)  In this way, we reduce the number of constraints and variables
+rather than doubling the number of constraints by Trick  7.5.
+
+Allowing  Trick 7.7 we may change  the set of variables in our program by adding slack variables or   eliminating some variables, so we cannot say that we do not
+change the feasible region. However, the change is   simple and explicit even after repeated use of the trick: The feasible region $S$ of the original program P and
+the feasible region  $S'$ of the new program P$'$ are in 1-1 correspondence
+under {\it affine transformations}
+$$x = Cx'+ B, x'= C'x+B',$$
+where $x$ is the column of $n$ variables of P, $x'$ the column of
+$n'$ variables in P$'$, and $C,B, C', B'$ are constant matrices of sizes
+$n \times n',$  $n \times 1,$  $n' \times n,$ and  $n'\times 1$,  respectively.
+Moreover, the   optimality regions are transformed to each other.
+So we could call these two programs {\it affinely equivalent.}
+
+For example,  the canonical form 
+ $cx+d \to \min, A x \le b,\,\,x\ge 0,$ and 
+  the standard form   $cx+d \to \min, A x +u= b,\,\,x\ge 0,
+xu \ge 0$  above are connected by the affine transformations
+$$x= [1_n \  0] \ \bmatrix{x \cr u}, \qquad
+\bmatrix{x \cr u}  = \bmatrix{1_n \cr -A}  
++   \bmatrix{0 \cr b}, $$
+where $n$ is the number of entries in the column $x$ and 0 stands for zero matrices of appropriate sizes.
+ 
+
+
+ 
+ \smallskip
+ \noindent
+{\bf Trick 7.8.}  We can write any variable $x$ in our linear program as the difference $x' - x''$ of two additional (artificial)  variables, $x'\,\, {\rm and}\,\, x'',$ subject to  $x'\ge 0,\ x'' \ge 0.$  \hfill  \blackbox
+
+The purpose of this trick is to   rid  the program of a variable that could be negative.
+If we know that   $x \le a,$  then a simpler substitution  $x= a-x''$  with $x'' \ge 0 $ works. 
+If we know that  $x \ge a, $ the substitution $ x= x'+a$  with $x' \ge 0 $ works. If we do not know any  bounds on  $x$ but $x$ occurs  (with nonzero coefficient) in  a linear equation,
+we can solve this equation for $x$ and eliminate $x$ completely from our linear program together with this equation.  Otherwise, we still can exclude $x$ from our constraints  by Fourier-Motzkin elimination (see the end of \S 6),
+but if $x$ occurs in many constraints, this method could be less practical than the standard Trick 7.8. If $x$ does not occur in our constraints but occurs in the objective function, our linear problem is infeasible or unbounded.
+
+Trick 7.8 is even dirtier (worse) than Trick 7.7 because not only do we change the set
+of variables, but we  lose  the affine equivalence.
+Although  the transformation  $x=x'-x''$ is affine, there is no affine transformation going the other way unless $x$ is bounded (in which case we can fix $x'$ or $x''$). There is a transformation given  by
+$$
+[x', x''] =\cases{  [x,\ 0] & when $x \ge 0,$ \cr
+[0,-x] & when $x \le 0,$ }$$
+but this is not an affine transformation. 
+
+
+Using  the preceeding five tricks any number of times results in  reduction of  our linear program P to
+another linear program P$'$ such that
+
+$\bullet$  every feasible solution to P gives easily a feasible solution to
+
+P$'$,  and vice versa, 
+
+\noindent and
+
+$\bullet$ every optimal solution to P gives easily an optimal solution 
+
+to P$'$,  and vice versa.
+
+\smallskip
+Combining Tricks 7.6, 7.7, and 7.8, we   see that 
+\smallskip
+\centerline{\it any linear program can be written in standard form.} 
+\smallskip
+Combining Tricks 7.4, 7.5, 7.6, and 7.8, we   see that 
+\smallskip
+\centerline{\it any linear program can be written in canonical form.} 
+ \smallskip
+ 
+ In some books and some software,
+the objective function of a linear program must be linear.
+By (3) of Lemma 7.3, this can be arranged. Do not forget that this changes the optimal value! Sometimes computer software is doing some   tricks for us.
+Even tricks increasing the number of variables and constraints
+are widely used in linear programming software when the size of the problem
+is   of no  concern.
+
+ We allow the constant term in the objective function,  because even if this term is not present in the beginning, it may appear in the
+process of solving the problem by simplex   or by any other method.
+  Here are some specific examples.
+ 
+\smallskip
+ \noindent
+{\bf Problem 7.9.}  Convert $2x+3y-z \rightarrow$ min, $x,y,z \ge 0, x+y+z=1$ to a canonical form.
+ 
+\smallskip
+ \noindent
+{\bf Solution.} By the  standard tricks, we obtain the canonical form
+$2x+3y-z \rightarrow$ min, $x,y,z \ge 0, x+y+z \le 1, -x-y-z \le -1.$ \blackbox
+
+Another way to do Problem 7.9  is to solve the equation for, say, $z.$ We obtain
+$z=1-x-y.$ Substituting this in the linear program we obtain the canonical form
+$x+2y-1 \rightarrow$ min, $x,y  \ge 0, x+y \le 1.$ Thus, we get a smaller canonical form,
+which can be easily solved:  min $= -1$ at $x=0, y=0, z=1.$
+
+\smallskip
+ \noindent
+{\bf Problem 7.10.}  Convert $f=2x+3y-z \rightarrow$ max , $x,y \ge 0,
+ x+y+z \ge 1$ to a canonical form.
+ 
+\smallskip
+ \noindent
+{\bf Solution.}  We multiply the objective function $f$ and the constraint
+ $x+y+z \ge 1$ by $-1$ and obtain
+ $-f=-2x-3y+z \rightarrow$ min, $x,y \ge 0,
+ -x-y-z \le -1.$ Then we set $z = z' - z''$ with $z',z'' \ge 0$ and obtain a canonical form
+$-f=-2x-3y+ z' - z'' \rightarrow$ min, $x,y \ge 0,
+ -x-y- z' + z'' \le -1.$  \hfill \blackbox
+
+Note that $z = z' - z''$  is not a part of the original problem or
+the canonical form  but a way to connect them.  
+ In general, before changing the objective function,
+you should name it. In the case when you are required to solve a linear program,
+the final answer should be given in   terms of the original problem.
+
+Rewriting a mathematical problem in one form or another  may help
+to solve it or prepare the problem to be dealt with using sophisticated
+mathematical tools or computers.  For example, to solve an equation
+$4 + x - 5x = 3- x$ for $x,$ we transform it first
+to a standard form   $-3x = -1$ using addition and subtraction
+and then solve it
+using division.
+
+\smallskip
+ \noindent
+{\bf Problem 7.11.}  Write the diet problem (Example 2.1) in    canonical
+and standard forms.
+
+ \smallskip
+ \noindent
+{\bf Solution.}  To obtain a canonical form, all we need to do is to multiply three
+constraints  of type  $\ge$ by $-1$:
+
+ \smallskip
+\noindent
+$\left\{\matrix{
+10a &+& 15b &+& 5c &+& 60d &+& 8e &\to&   \min \cr
+-0.3a& -& 1.2b &-& 0.7c   &-& 3.5d &-& 5.5e &\le& -50 \cr
+-73a &- & 96b  &-& 20253c &-& 890d & -& 279e  &\le&  -4000  \cr 
+-9.6a&- &  7b  &-& 19c &-& 57d &-&22e &\le& -1000 \cr
+a,  & & b,  && c,    && d,  && e  &\ge& 0.}\right. $
+\medskip
+
+To obtain a standard form, we add three slack variables corresponding
+to protein, vitamin A, and calcium:
+$$\left\{\matrix{
+10a + 15b + 5c + 60d + 8e \to   \min \cr
+-0.3a - 1.2b - 0.7c   - 3.5d - 5.5e +u_1= -50 \cr
+-73a -  96b  - 20253c - 890d  - 279e  +u_2=  -4000  \cr 
+-9.6a-   7b  - 19c - 57d -22e +u_3= -1000 \cr
+a  , b  , c    , d  , e , u_1,u_2,u_3  \ge 0. }\right. $$
+
+ 
+\smallskip
+ \noindent
+{\bf Problem 7.12.}  Write the blending problem (Example 2.2) in    canonical
+and standard forms.
+
+ \smallskip
+ \noindent
+{\bf Solution.} The problem already has a standard form:
+
+$$\left\{\matrix{
+ 1.2a &+& 1.4b &+& 1.7c &+& 1.9d   &\to& \min \cr  
+.9a &+& .8b &+& .7c &+& .6d &=& .75\cr
+.1a &+& .2b &+& .3c &+& .4d &=& .25\cr
+a, && b,  && c, && d &\ge & 0.  } \right. $$
+
+ We do not need to include explicitly the redundant constraint 
+                 $a + b  +  c +  d = 1.$ 
+Using matrices, the problem can be written as
+$$[1.2, 1.4, 1.7, 1.9] \left[ \matrix{a\cr b\cr c \cr d} \right]   \to \min,$$
+$$\left[ \matrix{ 0.9 & 0.8 & 0.7& 0.6 \cr
+0.1 & 0.2 & 0.3 & 0.4 }\right] \left[ \matrix{a\cr b\cr c \cr d} \right] = \left[ \matrix{0.75 \cr 0.25} \right]$$
+$$[a,b,c,d] \ge 0.$$
+
+	
+  To obtain a canonical form, we can replace every equation by two inequalities:
+ 
+$$\left\{\matrix{
+ 1.2a + 1.4b + 1.7c + 1.9d   \to \min \cr  
+.9a + .8b + .7c + .6d \le .75\cr
+-.9a - .8b - .7c - .6d \le -.75\cr
+.1a + .2b + .3c + .4d \le .25\cr
+-.1a - .2b - .3c - .4d \le -.25\cr
+a , b  , c , d \ge  0.  } \right. $$
+
+Another way to obtain a canonical form is to solve the system of two linear
+equations for $a,b$ and exclude $a,b$ from the linear program. Then we obtain a canonical form  with only two variables, $c,d$, and this linear program can be easily solved graphically.  
+
+\smallskip
+\noindent
+{\bf
+Remark.} 
+Gauss-Jordan elimination for systems of linear equations (see \S6 above) also can be
+considered as reduction of a system to    systems with smaller 
+sets of variables  with affine transformations between the solution sets
+giving a 1-1 correspondence.
+
+  However,  in the Fourier-Motzkin   elimination
+method for systems of inequalities (see \S6), we have a somewhat more complicated  relationship  between the systems. In Chapter 7 we will use a 
+  substitution  of variables that is not affine. Some recent methods, like Karmirkar's method, use transformations that are not affine.
+
+\bigskip
+{\centerline {\twelvebf Exercises}}
+ \parindent=0pt
+  
+
+{\bf 1--11.}  Rewrite the following optimization problems as a linear program in
+  a standard form  and as a linear program in a canonical form. The answer may be given using  matrices. You are not required to solve the linear programs.
+$Hint$: To get   smaller forms, solve linear equations and eliminate variables
+rather than adding new variables.
+
+\smallskip
+ {\bf \ 1.}
+$\left\{\matrix{
+\hbox{Maximize}\ 2x + 3y  \hfill \cr
+\hbox{subject to} \  x\ge 1,\,\, y\ge -1, x + y\le 5.}\right.$
+
+ \medskip
+
+{\bf \ 2.}   $ x  \rightarrow $ max,  $y= x+1,   x+y \le 9, y \ge 1$
+
+
+
+\smallskip
+ 
+{\bf \ 3.}  \
+$x_1 -5x_2+x_3+3x_4  \rightarrow $ min,
+
+$2x_2+x_3+3x_4 =3, \ x_1-x_2 +3x_4 \ge 3,$ \ 
+all $x_i \ge 0$
+\smallskip
+{\bf \ 4.} \   
+$x_1 -5x_2+x_3+3x_4  \rightarrow $ max,
+
+$2x_2+x_3+3x_4 =3,\ x_1-x_2 +3x_4 \ge 3,$ \
+ $x_1,x_2,x_3 \ge 0$
+ \smallskip
+
+{\bf 5--8.}   The linear programs in Examples 1.9--1.12.
+ 
+ 
+
+  \smallskip
+
+$$\left[ \matrix{1 & x & 2  \cr 0 & 5 & -1 }\right]
+ \left[ \matrix{y\cr-1 \cr x+z }\right] = 
+ \left[ \matrix{x\cr 0  \cr}\right],
+ \left[ \matrix{x \cr   y  \cr z}\right] \ge 0, x+y+z  \rightarrow  {\rm min} 
+\leqno  {\bf\ 9.} $$ 
+ 
+
+
+  \smallskip
+
+$$\left[ \matrix{1 & -2  & 2  \cr 0 & 5 & -1 }\right]
+ \left[ \matrix{y\cr-1   }\right] \ge 
+ \left[ \matrix{x\cr 0   \cr}\right],
+ \left[ \matrix{x \cr   y  \cr z}\right] \ge 0, x+y+z  \rightarrow  {\rm min} 
+\leqno  {\bf 10.} $$ 
+
+ 
+
+{\bf  11.}   
+
+$3x_1 -x_2+x_3+ 3x_4  +  x_5 -5x_6+x_7+3x_8 + x_9      \rightarrow \min,$
+
+$x_1 -5x_2+ 2x_3+2x_4  -  x_5 -x_6 -2x_7+3x_8 + x_9   \ge 3, $
+
+$-x_1 + x_2+x_3+ x_4  +  x_5 -x_6 -2x_7+3x_8 + x_9   \le -1, $
+
+$2x_1 -2x_2 -2x_3+2x_4  +  3x_5 -x_6 -2x_7+ x_8 + x_9   = 2, $
+
+$x_1   +  3x_5 -x_6 -2x_7  - x_9   = 0,  $  all $x_i \ge 0$
+
+
+
+
+ \parindent=20pt
+
+
+ \filbreak
+
+\noindent
+{\twelvebf\S   8. Pivoting Tableaux}
+
+\smallskip
+\noindent
+Consider the following system of linear equations:
+$$\left\{\matrix{ 2x_1 + 3x_2 = 4\cr5x_1 + 6x_2 = 7}\right. \eqno(8.1)$$  
+In matrix notation, the system can be written in standard form $Ax=b:$
+$$\left[ \matrix{2 &3\cr5&  6\cr}\right]  \left[ \matrix{x_1\cr x_2\cr}\right]=\left[ \matrix{4\cr7\cr}\right].$$
+
+ 
+
+Using {\it row tableaux,}  this system can be rewritten as
+
+$$\rowtab{&x_1&x_2\cr \omit&2&3\cr \omit&5&6\cr}\quad\matrix{=4\cr =7\cr}\eqno(8.2)$$
+
+ %$\matrix{\!\!\!\!\!\!\!x_1&\hfill&\!\!\!\!x_2&\omit}\atop\pmatrix{\omit& 2&\hfill& 3&\hfill\cr \omit& 5&\hfill& 6&\omit\cr}\matrix{=4\cr =7\cr}$%
+ \smallskip
+ 
+ or as
+$$\rowtab{&x_1&x_2&-1\cr \omit&2&3&4\cr \omit&5&6&7\cr}\quad\matrix{=0\cr =0\cr}$$
+
+
+%$\matrix{x_1&\hfill&\!\!x_2&\hfill& \,\,\,1&\hfill&\hfill}\atop\pmatrix{\omit& 2&\hfill& 3&\hfill&-4&\hfill\cr \omit& 5&\hfill& 6&\omit&-7&\hfill\cr} \matrix{=0\cr =0.\cr}$%    
+
+\smallskip
+The rows in    both tableaux correspond to the linear equations.
+The matrix in the first tableau is the coefficient matrix $A,$  and the matrix
+in the second tableau is the augmented matrix $[A | b].$  We wrote the names of variables at the top margin for both tableaux.
+
+
+Thus, a {\it tableau} is a matrix decorated (or marked) with additional information at the margins. Examples of the information we put at the margins are names of variables and constants.
+
+Now we write the same  system   in {\it column} tableaux
+representing linear equations by columns and putting the names of variables at the left margin:
+\vskip-5pt
+%$\matrix{x_1\cr x_2\cr}\pmatrix{\omit&2&\hfill&5\cr \omit&3&\hfill&6\cr}\atop\matrix{\>\>\>\>\,\,=4&=7}$% 
+\hskip 30pt  $\rowtab{&\omit&\omit\cr x_1&2&\hfill&5\cr x_2&3&\hfill&6\cr}\atop\matrix{\>\>\>\>\,\,=4& =7} $ \hskip 30pt
+or \hskip 30pt
+$\rowtab{&\omit&\omit\cr x_1&2&\hfill&5\cr x_2&3&\hfill&6\cr 1&-4&\hfill&-7}\atop\matrix{\>\>\>\>\,\,=0& \ =0}.$
+ 
+\smallskip
+  
+As you can see,   tableaux provide us with another way of representing systems of linear equations.  They can also be used to write out and handle the data of linear programs. The main advantage of using a tableau is that the variables need only be written out once,  at the margin of the tableau.
+Tableaux are  a ``short-hand" way to handle linear programs, saving writing, paper, and time. With practice, they are easier to read. 
+
+In this respect
+tableaux are very similar to matrices used to solve systems of linear equations.
+The columns of the coefficient matrix correspond to variables. Unless we 
+switch variables or  do other column operations corresponding to changes of variables, we do not
+need to write the names of variables at the top margin. In linear programming
+we put labels at margins of matrices  to avoid confusion and mix-ups.
+
+%\medskip
+%Recall from linear algebra that one can solve a linear system of equations by %obtaining the row echelon form of the matrix of coefficients.      
+\smallskip
+
+\def\rightheadline{\tenrm\hfil{\it\S   8. Pivoting Tableaux}\quad {\bf\folio}}
+
+We will use tableaux to explain the way the simplex method works. Tableaux can be used to solve, by hand, linear   programs with a small number of variables or constraints.  When   the matrix of data is sparse (i.e., it has many 
+zero entries), 
+other methods of handling data may be better than tableaux.
+
+ 
+\noindent
+{\bf Example 8.3.}  
+
+\noindent
+The standard form of a linear program  (see Definition 7.1) can be written as a row tableau in the following way:
+
+$$\rowtab{&x^T\cr \omit&A\cr \omit&c\cr}\quad\matrix{=& b\cr\rightarrow &\hbox{min,}\cr} \matrix{\omit\cr\quad x\ge 0.\cr}$$
+Here $A$ is the matrix of coefficients, $b$ is a column matrix, and $c$ is a row matrix. Note that the variables on the top are written as a row matrix ($x^T$ denotes the transpose of the column matrix of variables). The coefficients of the objective function, $c,$ are written in the last row of the tableau. The nonnegativity constraint, $x \ge 0,$ is written outside the tableau.
+
+ 
+\noindent
+{\bf Example 8.4.} 
+
+\noindent
+ The canonical form of a linear program 
+(see Definition 7.2)  can be written as a tableau as follows:
+\vskip-5pt
+$${{\rowtab{&\omit&\omit\cr x&-A^T&c^T\cr 1&b^T&d\cr}\atop\matrix{\omit&
+\qquad\,\,\downarrow}}\atop\matrix{\qquad\qquad\qquad\quad \ge 0&\,\,\hbox{min,}}
+\quad x\ge 0,\,\,y\ge 0}$$
+
+or
+$${{\rowtab{&\omit&\omit\cr x&-A^T&c^T\cr 1&b^T&d\cr}\atop\matrix{\omit&
+\qquad\,\,\downarrow}}\atop\matrix{\qquad\qquad\qquad\quad=y&\,\,\hbox{min,}}\quad x\ge 0,\,\,y\ge 0.}$$
+Here we used column tableaux. We have introduced new (slack) variables,
+ $y.$ \hfill \blackbox
+
+ 
+ 
+One step  of Gauss-Jordan elimination (see \S   6) 
+ can be explained as follows. To solve a system of linear equations,
+we  first solve one of equations (the pivot equation)  with respect to one of the variables (the pivot variable)
+and then we eliminate  this variable from  the other equations  by 
+ substitution. 
+
+Thus, we obtain
+a smaller system, one variable and one equation less. These steps are repeated
+(forward substitution), until no equations or no variables are left; see \S   6 for more details.
+
+Now we explain how this step, the {\it pivot step} works in   terms of tableaux. We start with a small example, 
+  the   system of linear equations (8.1) and 
+ the same system    written in a row tableau (8.2).
+ 
+
+A step of the  Gauss-Jordan elimination   
+ goes as follows:
+ 
+1. Solve one of the equations, say, $2x_1+ 3x_2 = 4$ for one of the unknowns, say $x_1$:
+\smallskip
+\centerline {$ x_1=4/2-(3/2)x_2.$}
+\medskip
+2. Substitute this expression for $x_1$ into the second equation:
+ $5x_1 + 6x_2 = 7$ that becomes
+
+\centerline  {$5(4/2-(3/2)x_2)  + 6x_2 = 7,$  or $5\cdot4/2 +(6 -5\cdot 3/2)x_2 =7.$}
+
+The new tableau is
+$$\rowtab{&4 &x_2\cr \omit& 1/2 & -3/2\cr \omit& 5/2 & 6- 3\cdot 5/2 \cr}\quad \matrix{=x_1 \cr =7 }. \eqno(8.5)$$
+
+
+Now we  replace the numbers 2, 3, 4, 5, 6, 7 in (8.1) and (8.2)  by
+   arbitrary numbers
+$\alpha, \beta, u, \gamma, \delta, v$  and rename the variables $x_1, x_2$ as  $x,y.$ That is, we consider an arbitrary system
+of two linear equations for  $x,y$:
+$$\left\{\matrix{\hfill \alpha x + \beta y = u\cr
+\gamma x + \delta y = v}\right. \eqno(8.6)$$
+
+and the corresponding tableau
+$$\rowtab{&x&y\cr \omit& \alpha^*  & \beta\cr \omit& \gamma & \delta \cr}\quad\matrix{=u\cr = v\cr}.\eqno(8.7)$$
+ 
+
+We assume now that the entry $\alpha$ marked by a star and called the {\it pivot entry} is not zero. Solving as before the first equation for $x$ and substituting into the second equation, we obtain the tableau
+
+$$\rowtab{&u &y\cr \omit& 1/\alpha  & -\beta/\alpha \cr \omit& \gamma/\alpha & \delta - \beta \gamma/\alpha \cr}\quad\matrix{=x\cr = v\cr}.\eqno(8.8)$$
+ 
+Going from    tableau (8.7) to tableau (8.8) is called  the {\it pivot step.}  So here is the pivot step for 2-by-2 tableaux: 
+$$\rowtab{&x&y\cr \omit& \alpha^*  & \beta\cr \omit& \gamma & \delta \cr}\quad\matrix{=u\cr = v\cr} \quad
+\mapsto \quad
+\rowtab{&u &y\cr \omit& 1/\alpha  & -\beta/\alpha \cr \omit& \gamma/\alpha & \delta - \beta \gamma/\alpha \cr}\quad\matrix{=x \cr = v\cr}.\eqno(8.9)$$
+
+Pivoting tableaux of an arbitrary size works similarly.
+Here are examples of pivot steps with tableaux of smaller size:
+
+$$\rowtab{&x \cr \omit& \alpha^*  \cr  }\quad\matrix{=u } \quad
+\rightarrow \quad
+\rowtab{& u \cr \omit& 1/\alpha  \cr  }\quad\matrix{=x }   , $$
+$$\rowtab{&x&y\cr \omit& \alpha^*  & \beta\cr }\quad\matrix{=u } \quad
+\mapsto \quad
+\rowtab{&u&y\cr \omit& 1/\alpha  & -\beta/\alpha \cr }\quad\matrix{=x\cr }. $$
+
+
+Here is an example of a bigger size:
+
+
+$$\rowtab{&x&y\cr  \omit& \gamma_1 & \delta_1 \cr
+\omit& \alpha^*  & \beta\cr \omit& \gamma_2 & \delta_2 \cr}\quad\matrix{=v_1\cr = u\cr= v_2} \quad
+\mapsto \quad
+\rowtab{&u&y\cr 
+ \omit& \gamma_1/\alpha & \delta_1 - \beta \gamma_1/\alpha \cr
+\omit& 1/\alpha  & -\beta/\alpha \cr
+ \omit& \gamma_2/\alpha & \delta_2 - \beta \gamma_2/\alpha \cr}\quad\matrix{=v_1 \cr =x\cr = v_2}.$$
+
+
+These examples indicate that for a tableau of
+ any size the pivot step looks as follows:
+
+\noindent
+{\bf Pivot Rules}
+
+$\bullet$ Switch the  labels of the pivot row and column ($x \leftrightarrow u;$ this is the only change on the top and left margins).
+
+$\bullet$ Replace the pivot entry  $\alpha \ne 0$ by 
+its multiplicative inverse
+$\alpha' =1/\alpha \ (\alpha \mapsto 1/\alpha).$
+
+$\bullet$ Divide every entry $\beta$ in the pivot row which is not in the pivot column by     $-\alpha$ (i.e.,  replace every such  $\beta$ by $\beta' = -\alpha'\beta).$
+
+$\bullet$ Replace every entry  $\delta$ outside   the pivot column and pivot row by
+$\delta- \beta \gamma/\alpha = \delta +\beta' \gamma,$ where  $\beta$ is
+in the pivot row and in the same column as $\delta$ (above or below $\delta$) and $\gamma$ is in the pivot column and in the same row as $\delta$ (on left or right of $\delta).$
+
+$\bullet$ Divide every entry $\gamma$ in the pivot column that is not in the pivot row by the  pivot entry  $\alpha$ (i.e.,  replace every such  $\gamma$ by $\gamma' =\alpha' \gamma).$ \hfill \blackbox
+
+So a pivot step on a tableau of size $m \times n$
+can be done in one switch of labels, one division, $mn-1$ multiplications, $mn-m-n+1$ additions, and $n-1$ sign changes.
+
+As an exercise, let us do a pivot step on the tableau (8.5) indicating the pivot entry $-3/2$ in the second row and second column by *:
+$$ 7 \leftrightarrow x_2 $$
+$$\alpha=-3/2 \mapsto \alpha'=1/\alpha=-2/3$$
+$$\beta =5/2 \mapsto \beta' = -\beta/\alpha = -\alpha' \beta= 5/3$$
+$$ \delta = 1/2   \mapsto = \delta -  \beta \gamma/\alpha  $$
+$$=  \delta +\beta' \gamma=1/2+ (5/3)(-3/2) = 1/2-5/2 = -2  $$
+$$\gamma \mapsto \gamma/\alpha = \gamma  \alpha' = 1$$
+$$\rowtab{&4 & x_2\cr \omit& 1/2 & -3/2\cr \omit& 5/2 & -3/2^*  \cr}\quad \matrix{=x_1 \cr =7 } \quad
+\mapsto \quad
+\rowtab{&4  &7 \cr \omit& -2 & 1 \cr \omit& 5/3 & -2/3 \cr}\quad \matrix{=x_1\cr =x_2}. $$
+
+Thus, we solved the system  (8.1):
+$$ x_1 = 4 \cdot (-2)  + 7\cdot 1 = -1,$$
+$$x_2=  4\cdot (5/3) +  7\cdot (-2/3) = 2.$$
+In fact, we solved a more general system with constant terms 3, 5 replaced by
+arbitrary numbers $u, v.$ The solution is
+$$ x_1 = -2u    + v ,$$
+$$x_2=  5u/3  -2v/3.$$
+
+In other words, we computed
+$$ \left[ \matrix{2 & 3   \cr 5 & 6  }  \right] ^{-1}  = 
+\left[ \matrix{-2 & 1   \cr5/3 & -2/3  } \right]  .$$
+
+   
+ Now we will verify the pivot rules for a tableau of arbitrary size.
+We consider a system of linear equations $AX=b$ given by a row tableau:
+
+$$\rowtab{&X^T\cr \omit&A\cr}\quad\matrix{=b} $$
+
+
+\noindent where $X^T=[x_1\quad\ldots\quad x_n]$ is a  row  of variables, $b$ is a  column  of constants (they also can be considered as variables),
+$b^T= [b_1,\ldots ,  b_m],$
+ and $A$ is the $m\times n$ coefficient matrix
+\smallskip
+$$A=\left[ \matrix{a_{11}& a_{12}&\cdots& a_{1n}\cr a_{21}& a_{22}&\cdots&a_{2n}\cr \vdots&\vdots&\ddots&\vdots\cr a_{m1}& a_{m2}&\cdots& a_{mn}\cr}\right].$$
+
+\smallskip
+Recall that   a long way of writing the system   $AX=b$  is  
+$$\displaylines{a_{11}x_1+a_{12}x_2+\cdots +a_{1n}x_n= b_1\cr a_{21}x_1+a_{22}x_2+\cdots +a_{2n}x_n= b_2\cr\ldots\cr\ldots\cr\ldots\cr a_{m1}x_1+a_{m2}x_2+\cdots +a_{mn}x_n= b_m}$$
+\smallskip
+Any nonzero entry in the matrix of coefficients, $A,$ can be chosen as a pivot entry (the reason for choosing a nonzero entry is because we need to divide by this number in some of the steps of the pivoting that we are about to describe).  This element is used to obtain a new tableau by pivoting as described next. We remark that the new tableau obtained by pivoting represents a system of   equations equivalent to the one we started out with; that is, any solution of the initial   system is a solution of the new   system and vice versa. 
+ 
+
+Let  $\alpha=a_{i,j}$  be the pivot entry (so $\alpha \ne 0$). Let  $x=x_j$  be the entry in the top margin of the same column (pivot column) as  $\alpha$  and $u=b_i$ the entry at the right margin in the same row (pivot row) as $\alpha.$ The following tableau describes this situation:  
+\smallskip
+$\rowtab{&*&x&*\cr\omit&*&*&*\cr\omit&*&\alpha&*\cr\omit&*&*&*\cr\omit&\vdots&\vdots&\vdots\cr} \quad\matrix{=*\cr =u\cr =*\cr\vdots.\cr}$
+\smallskip
+
+In particular, we have an equation of the form\quad $\cdots + \ \alpha x\  + \cdots = u$\quad   in our system of linear equations.  We use this equation to switch  $x$  and $ u$ at the margin by solving this equation for $x.$ We observe that  the number of $x_i$s on the top   is reduced by 1 and we get closer to  solving  our system of equations for $X.$  All entries of the coefficient matrix will undergo some changes, so we will obtain a new matrix of coefficients. 
+ 
+
+To fix ideas, we   assume that  $\alpha$  is in the first row and the first column (so $x=x_1, u=u_1$), and we concentrate our attention on the second row and the second column, setting $y=x_2, v=b_2$
+(the case when we have only one column or only one row is simpler, and we leave it as an exercise for the reader):
+
+\smallskip
+$\rowtab{&x&y&\ldots\cr
+\omit& \alpha & \beta &\ldots\cr
+\omit& \gamma &\delta &\ldots\cr
+\omit&\vdots&\vdots&\vdots\cr}\quad\matrix{=u\cr =v\cr \vdots.\cr}$
+
+\smallskip
+
+First we solve the equation\quad  $\alpha x + \beta y+\cdots = u$\quad  for $x.$ So $x = \displaystyle{u\over \alpha} -\displaystyle{ \beta \over \alpha} y - \cdots\,.$ Then we substitute this  expression for $x$ into all the other equations of the system.  In particular,  the second equation, \quad $\gamma x + \delta y+\cdots = v$\quad   takes the form
+  \quad $\gamma (\displaystyle{u\over  \alpha} -
+ \displaystyle{ \beta\over  \alpha} y - \cdots) + \delta y+\cdots = v.$ Thus, we obtain the following tableau:
+
+
+\smallskip
+$\rowtab{&u&y&\ldots\cr
+\omit& 1/\alpha &{}-\beta/\alpha &\ldots\cr
+\omit&\gamma/\alpha & \delta- \beta \gamma/\alpha &\ldots\cr
+\omit&\vdots&\vdots&\vdots\cr}\quad\matrix{=x\cr =v\cr \vdots.\cr}$
+
+\smallskip
+  This confirms the pivot rules given previously.   
+
+Computationally, pivoting tableaux, as just done, to solve systems of linear equations is not more efficient than using augmented matrices, as in \S  6. We will
+pivot tableaux to solve linear programs. 
+ 
+In this section, to practice pivoting, we will solve some systems of linear equations.  
+
+ 
+\smallskip
+\noindent 
+{\bf Example 8.10.}  Consider the system of linear equations:
+\smallskip
+
+$\left\{\matrix{\hfill x + 2y = 3\cr
+4x + 7y = 5.}\right.$
+
+\smallskip
+
+
+We can rewrite the system as the following tableau:
+\medskip
+$\rowtab{&x&y\cr\omit&1&2\cr\omit&4&7\cr}\quad\matrix{=3\cr =5.\cr}$
+\medskip
+Let us pick up the entry 1, located in the first row and the first column, as the pivot entry. It is an appropriate choice because $1 \ne 0.$ It is also a good choice because we avoid creating fractions as we execute the steps listed. We mark the pivot entry by a superscript *:
+
+
+\smallskip
+$\rowtab{&x&y\cr\omit&1^*&2\cr\omit&4&7\cr}\quad\matrix{=3\cr =5.\cr}$
+\smallskip
+	        	
+Step 1: The entries at the margins are switched:
+\smallskip
+$\rowtab{&3&y\cr\omit&1^*&2\cr\omit&4&7\cr}\quad\matrix{=x\cr =5\cr}$
+\smallskip
+Step 2: The pivot entry 1 is replaced by 1/1=1:
+\smallskip
+$\rowtab{&3&y\cr\omit&1^*&2\cr\omit&4&7\cr}\quad\matrix{=x\cr =5\cr}$
+\smallskip
+Step 3: The entry 2 appearing in the pivot row is replaced by ${}-2/1={}-2:$
+\smallskip
+$\rowtab{&3&y\cr\omit&1^*&-2\cr\omit&4&7\cr}\quad\matrix{=x\cr =5.\cr}$
+\smallskip
+
+Step 4: The entry 4 that appears in the pivot column is replaced by 4/1 = 4:
+\smallskip
+$\rowtab{&3&y\cr\omit&1^*&-2\cr\omit&4&7\cr}\quad\matrix{=x\cr =5.\cr}$
+ 
+\smallskip
+
+Step 5: The entry 7, which is the only entry outside the pivot row or the pivot column, is replaced by $7-2\cdot 4=-1$:
+\smallskip
+$\rowtab{&3&y\cr\omit&1^*&-2\cr\omit&4&-1\cr}\quad\matrix{=x\cr =5\cr}$
+\smallskip
+Notice that the new system of equations is
+\smallskip
+$\left\{\matrix{3-2y=x\cr 4\cdot 3-y=5}\right.$ 
+\smallskip
+\noindent 
+(compare with the steps of the substitution method). 
+\smallskip
+
+Now we pick  $-1$  as the pivot entry. Again, we mark the pivot entry by a superscript *: 
+\smallskip
+$\rowtab{&3&y\cr\omit&1&-2\cr\omit&4&-1^*\cr}\quad\matrix{=x\cr =5.\cr}$
+
+\smallskip
+By   pivoting, step by step, as we did before, we obtain the following tableau:
+\smallskip
+
+$\rowtab{&3&5\cr\omit&-7&2\cr\omit&4&-1\cr}\quad\matrix{=x\cr =y.\cr}$		
+\smallskip
+
+
+Here we make the following two remarks:
+\smallskip
+(a)\quad The matrix $\left[ -7\quad \quad 2\atop \quad\! 4\quad -1\right]$ is the inverse matrix of the matrix of coefficients $\left[ 1\quad 2\atop 4\quad 7\right]$; that is, 
+\smallskip
+
+$\left[ \matrix{1&2\cr 4&7\cr}\right]^{-1}=\left[ \matrix{-7&2\cr4&-1 }\right].$
+\smallskip
+
+(b)\quad We obtain a tableau that has no variables on the top margin. Therefore, we can combine the two columns into a single column, having the constant 1 in the top margin, as follows: $3\cdot -7 +5\cdot 2 =-11;\quad 3\cdot 4 + 5\cdot -1 =7.$ The final tableau gives the solution of the linear system of equations: 
+\smallskip
+$\rowtab{&1\cr\omit&-11\cr\omit&7\cr}\quad\matrix{=x\cr =y.\cr}$ 
+\smallskip
+It follows that the solution is  $x=-11\cdot 1=-11;\quad y=7\cdot 1=  7.$
+\smallskip
+Thus, we can use pivoting to invert matrices (if the matrix is invertible) and   to solve linear systems of equations.  This may not be the best or most efficient method to find the inverse of a matrix or to solve a linear system of equations, but it works. Here are more details about solving an arbitrary system of linear equations,  $AX = b,$  by pivoting. We write the system as a row tableau
+$$\rowtab{&X^T \cr\omit&A\cr}\quad\matrix{=b.\cr}$$
+
+Then by repeated   pivoting, we switch constants at the right margin with variables on the top until we cannot do so anymore. After this, we combine all constant columns   into the last column with a coefficient of 1 in the top margin; if there are no constant columns, we add one, consisting of a coefficient of 1 in the top margin and zeros in the remaining entries. Before looking at the final tableau, let us see how this constant column is formed.
+\smallskip
+Suppose that, after switching constants in the right margin with variables on the top, we have the following tableau:
+$$\rowtab{&y_1&c_1&y_2&c_2&\ldots\cr\omit&a_{11}&b_{11}&a_{12}&b_{12}&\ldots\cr\omit&a_{21}&b_{21}&a_{22}&b_{22}&\ldots\cr\omit&\vdots&\vdots&\vdots&\vdots&\vdots&\cr}\quad\matrix{=z_1\cr =z_2\cr\vdots,\cr}$$
+\smallskip
+\noindent where $y_i$ represents a row matrix of variables, $c_i$ represents a constant, $a_{ij}$ represents a matrix and $b_{ij}$ represents a column matrix. The columns having the constants $c_i$s in the top margin represent the constant columns. Thus, in the first equation of the new linear system of equations, the constant term is given by 
+
+\centerline{ $c_1\cdot b_{11} +  c_2\cdot b_{12} +\cdots =b'_1.$ }
+
+Similarly, the constant term in the second equation is 
+
+\centerline{$c_1\cdot b_{21} + c_2\cdot b_{22} +\cdots =b'_2,$}
+\noindent
+ and so  on. Writing this column as the last, with coefficient 1 in the top margin, we obtain our final tableau:
+$$\rowtab{&y&1\cr\omit&a&b'\cr\omit&c&d\cr}\quad\matrix{=z\cr =e.\cr}$$
+ 
+
+In this final tableau, the letters $y$ and $z$ represent a row matrix of variables and a column matrix of variables, respectively;  $a$ and $c$ represent matrices; and $d,  e,$  and $b'$ represent column matrices with constant entries. 
+ 
+Note that all entries of the matrix $c$ are zeros. The reason is the following: 
+If $c$ has a nonzero entry, we pivot on that entry to switch the corresponding variable from $y$ and the corresponding entry in $e.$ But since we are in the final tableau, no more of these switches are possible. Therefore, $c$ has no nonzero entries. Notice also that $c$ may not be present in the final tableau (see Example 8.10). 
+ 
+If  $d\ne e,$ then our system has no solutions (it is an {\it inconsistent} system). Otherwise, we can disregard the bottom portion (which yields the equality $d=e$) and now the system takes the form
+$$\rowtab{&y&1\cr\omit&a&b'\cr}\quad\matrix{=z,\cr }$$ 
+ 
+
+\noindent that is, $z = b' + ay.$ So the variables in $y$  (if any) can take arbitrary values and then the variables in  $z$ (if any)  take the corresponding values $z = b' + ay.$  
+ 
+
+{\bf Definition 8.11.}\quad The  number of variables in  $y$ is called the {\it dimension} of the set of solutions; that is, the dimension of the set of solutions is the number of columns in the matrix $a.$  \hfill \blackbox
+\smallskip
+Thus, any linear system can be solved by pivot steps. Can you see that the total number of pivot steps needed is at most the number of variables in the system? 
+ 	
+{\bf Remark 8.12.}  It is possible to generalize our pivot step by replacing a nonzero
+pivot entry $\alpha$  by an invertible submatrix  $\alpha.$ Taking
+care to write matrices in matrix products in correct order,
+we obtain the following  ``generalized pivot step":
+
+$$\rowtab{&x&y\cr \omit& \alpha^*  & \beta\cr \omit& \gamma & \delta \cr}\quad\matrix{=u\cr = v\cr} \quad
+\mapsto \quad
+\rowtab{&u^T &y\cr \omit&  \alpha^{-1}  & -\alpha^{-1}\beta \cr \omit& \gamma \alpha^{-1} & \delta -  \gamma \alpha^{-1} \beta \cr}\quad\matrix{= x^T \cr = v\cr}. $$
+
+This  step can be replaced  by  $k$ ordinary pivot steps and a permutation of rows or columns of the tableau, where $k \times k$ is the size of matrix $\alpha.$ 
+
+ 
+
+\smallskip
+{\centerline {\twelvebf Exercises}}
+\parindent=0pt
+
+{\bf 1--2.}  Using a row tableau, write 
+ 
+{\bf 1.}  The diet problem (Example 2.1). 
+ 
+{\bf 2.}  The blending problem (Example 2.2). \hfill \blackbox
+ 
+ 
+{\bf 3.}   Read the following tableau and rewrite it as
+a system of linear equations   $Ax=b,$ for $x',u,y,z$ with
+$x= [x',u,y,z]^T:$
+\smallskip
+
+$\rowtab{&x'&z&y&1\cr\omit&3&2&1&y\cr\omit&-1&3&0&1\cr\omit&0&-2&2&0\cr
+\omit&0&0&1&2\cr}\quad\matrix{=u\cr =z\cr= x'\cr= z.\cr}$
+
+\filbreak
+{\bf 4--7.} In the following optimization problems it is given that all variables  $x,y,z \ge 0,$
+and the rest of data are   given by  tableaux.
+Rewrite the problems as linear programs in standard and canonical forms.
+You are not required to solve the optimization problems.
+\smallskip
+{\bf 4.}
+$\rowtab{&x&y&z&1\cr
+\omit& 3& 2& 1&3\cr
+\omit&-1&3&0&1\cr
+\omit&0&-2&2&0\cr
+\omit &0&0&1&2\cr}\quad\matrix{\ge 0\cr =3\cr \le x \cr \rightarrow {\rm min}}$
+\smallskip
+{\bf 5.}
+$\rowtab{&x&3&y-5z&1\cr\omit&3&2&1&0\cr\omit&-1&3&0&1\cr\omit&0&-2&2&0\cr
+\omit&0&0&1&2\cr}\quad\matrix{\ge 3\cr = y\cr \ge 1\cr  \rightarrow {\rm min}}$
+\smallskip
+{\bf 6.}
+$\rowtab{&x&-y&z&-3\cr\omit&3&2&1&x\cr\omit&-1&3&0&1\cr\omit&0&-2&2&0\cr
+\omit&0&0&1&2\cr}\quad\matrix{=0\cr \ge 0\cr \le 0\cr \rightarrow {\rm max}}$
+\smallskip
+{\bf 7.}
+$\rowtab{&x&y&z&1\cr\omit&3&2&1& 2\cr\omit&-1&3&0&1\cr\omit&0&-2&2&0\cr
+\omit&-1&0&1&2\cr}\quad\matrix{\ge 0\cr \ge 0\cr \ge 0 \cr   \rightarrow {\rm min }}$  \hfill \blackbox
+\bigskip
+ 
+{\bf 8.}\quad In the following  tableau perform the steps of pivoting at the entry whose value is 1.
+
+
+\smallskip
+$\rowtab{&x'&x''&y&1\cr\omit&3&2&1&b\cr\omit&-1&3&0&1\cr\omit&0&-2&2&0\cr
+\omit&0&0&1&2\cr}\quad\matrix{=u\cr =a\cr= x'\cr= z\cr}$
+\smallskip
+\settabs 2 \columns
+\+ 
+(a)  In the first row
+&
+(b)\quad In the last row
+\cr
+\bigskip
+
+
+{\bf 9.}  Invert the matrix of Exercise 1 in four pivoting steps.
+
+\filbreak
+{\bf 10--17.}  In each of the following tableaux, perform the pivoting procedure in the entry marked with a superscript *.
+
+\medskip
+
+{\bf 10.} $\rowtab{&1&a&3&x\cr\omit&1^*&0&b&a\cr\omit&-1&2&3&1\cr}\quad\matrix{=y\cr =z\cr}$ 
+\hskip 30pt
+{\bf 11.}
+$\rowtab{&1&a&3&x\cr\omit&1&0&b&a\cr\omit&-1^*&2&3&1\cr}\quad\matrix{=y\cr =z\cr}$
+ 
+
+{\bf 12.} $\rowtab{&1&a&3&x\cr\omit&1&0&b&a\cr\omit&-1&2&3&1^*\cr}\quad\matrix{=y\cr =z\cr}$
+\hskip 30pt
+{\bf 13.} $\rowtab{&x\cr\omit&5^*\cr}\quad\matrix{=2\cr}$
+
+\medskip
+{\bf 14.} 
+$\rowtab{& 1 & a & 0 & x  & x\cr
+\omit& 1 & 0 & b & a & -3 \cr
+\omit&-1   & 2^* & 3 & 1  & 0\cr}
+\quad\matrix{ =y \cr  =z \cr}$
+\medskip
+
+{\bf 15.} 
+$\rowtab{& 1 & 0 & 0 & x  & 1\cr
+\omit& 1 & 0 & b & a & -3 \cr
+\omit&-1   & 2  & 3 & 1  & 0\cr
+\omit&-1   & 2^* & 3 & 1  & 1\cr
+\omit&-1   & 2 & 3 & 1  & 0\cr}
+\quad\matrix{ =y \cr  =z \cr = u \cr =v}$
+
+\medskip
+{\bf 16.} $\rowtab{& x_1 & x_2 & x_3 & x_4  & 1\cr
+\omit& 1 & 0 & 1 & 1 & -3 \cr
+\omit&-1   & 0  & 2 & 1  & 0\cr
+\omit&-1   & 2 & 3 & 1  & 1\cr
+\omit&-1   & 2 & 3^* & 1  & 0\cr
+\omit&-1   & 1 & 0 & 1  & 1\cr}
+\quad\matrix{ =x_5\cr  =x_6 \cr = x_7 \cr =x_8 \cr =v}$
+
+\medskip
+{\bf 17.} 
+ $\rowtab{& x_1 & x_2 & x_3 & x_4  &x_5 & x_6 & 1\cr
+\omit& 1   & 0 & 1 & 1  & -3^*  & 1 & 0 \cr
+\omit&-1   & 0  & 2 & 1  & 0  & 1 & -2 \cr
+\omit&-1   & 2 & 3 & 1  & 1 & 0 & 0 \cr
+\omit&-1   & 2 & 3  & 1  & 0 & 1 & 1\cr
+\omit&-1   & 1 & 0 & 1  & 1 & 2 & 3\cr}
+\quad\matrix{ =x_7\cr  =x_8 \cr = x_9 \cr = x_{10}\cr =v}$ 
+\hfill
+\blackbox
+
+\medskip
+{\bf 18.}  Suppose two systems of equations are given by two tableaux
+
+$\rowtab{&y \cr
+\omit&A \cr}\quad\matrix{=z\cr }$ 
+and $\rowtab{&y \cr
+\omit&A' \cr}\quad\matrix{=z\cr }$
+\medskip
+
+\noindent with the same variables $y$ on the top and the same variables
+$z$ at the right margin. Assume also that the systems are equivalent (i.e., have the same sets of solutions).
+Show that the matrices $A$ and $A'$ are equal.
+ 
+ \parindent=20pt
+\filbreak
+ 
+ \def\rightheadline{\tenrm\hfil{\it\S   9. Standard Row Tableaux}\quad {\bf\folio}}
+\noindent
+{\twelvebf\S   9. Standard Row Tableaux}
+
+ 
+ \smallskip
+\noindent
+In this section we  write linear programs in tableau form and then   use pivoting to solve them. We would like to find a method of choosing pivot entries that works for any linear program; that is, this method, when applied to a linear programming problem, would give the optimal value and an optimal solution (if they exist). This method of choosing pivot entries is, roughly speaking, what we mean when we use the phrase {\it simplex method}. 
+
+
+Using the algebraic tricks of \S 7,  we can arrange that all the variables in our linear program are nonnegative, with the possible exception of the objective variable.  We will not write these constraints in our tableaux,  but they must not be forgotten (write them near your tableau).  
+
+ \smallskip
+\noindent
+{\bf Definition 9.1.}\quad A standard row tableau has the form
+$$\rowtab{&x&1\cr\omit&A&b\cr\omit
+&c&d\cr}\quad\matrix{=u\hfill&\omit&\omit\cr=z\mapsto\hbox{min,}&x \ge 0, &u \ge 0,\cr}$$
+ where $A$  is the matrix of coefficients, $b$ is a column matrix representing the right-hand side of the linear constraints, $c$  is the row matrix representing the coefficients of the objective function, $d$  is a given number, $x$  is a row matrix of variables, $u$  is a column of variables and $z,$ which may or may not be written, is the objective variable; all variables in  $x,\,\, u,\,\, z$  are distinct.
+\medskip
+More precisely, a tableau is {\it standard}  if
+\smallskip
+$\bullet$ The coefficient matrix does not contain any unknowns (only given numbers or, sometimes, parameters).
+\smallskip
+$\bullet$ Every row represents a linear equation (rather than an inequality)  with the possible  exception of the last row.
+\smallskip
+$\bullet$ The last row represents the objective function to be minimized.
+\smallskip
+$\bullet$  All variables at the margins, with the possible exception of the objective variable, are nonnegative. (Recall that we will write these nonnegativity constraints near the tableau, but not as part of it.) 
+\smallskip
+$\bullet$ All variables at the margins are distinct independent variables. 
+\smallskip
+$\bullet$ There is exactly one constant at the top margin; it is 1 and it appears over the last column. \hfill \blackbox
+ 
+As we mentioned in Definition 9.1, the objective variable need not be written out in a standard tableau. 
+ 
+ 
+
+Thus, solving a linear program by a simplex method, after stating the problem precisely and collecting data, involves the following steps:
+\smallskip
+1. Write the problem as a standard tableau (here, if necessary, we change variables and include in the tableau only nonnegative variables, with the
+possible exception of the objective variable). 
+\smallskip
+2. Apply pivoting until we either obtain an optimal solution or find out that there are no solutions (how we choose pivot elements depends on the method; later we will discuss how to make these choices). 
+\smallskip
+3. Write the answer in terms of the original variables.  
+\smallskip
+4. Give an interpretation of the answer in terms of the original word problem.  Sometimes, if we find that the answer is not satisfactory, we adjust  the model, collect more data, solve the corresponding linear programming problem, and so on. 
+
+ 
+ \smallskip
+\noindent
+{\bf Example 9.2.}  Suppose that our linear program in variables 
+ $x,\, y, \, z,$  $ w$  is given by the following tableau (without any other constraints): 
+
+
+
+$$\rowtab{&2&-x&y&-1\cr \omit&z&0&1&2\cr \omit&0&0&1&0\cr\omit&z&0&0&0\cr\omit&1&2&3&4\cr}\quad\matrix{=w\rightarrow\hbox{max}\cr\ge 0\hfill\cr\ge 1\hfill\cr =y\hfill\cr}$$
+
+
+
+This tableau is not standard. In fact, every rule we have just discussed is broken. Namely,
+\medskip
+ 
+$\bullet$\quad We do not have the constraint $x \ge 0$
+\smallskip  
+$\bullet$\quad The variable $z$  is in the matrix (in standard tableaux, it belongs in the margins) 
+\smallskip  
+$\bullet$\quad The second row and the third row of the tableau have the $\ge$ sign
+\smallskip  
+$\bullet$\quad The objective function is represented by the first row of the matrix rather than the last one
+\smallskip  
+$\bullet$\quad We have a maximization problem instead of minimization
+\smallskip  
+$\bullet$\quad The variable  $y$  shows up twice; the variable $x$  occurs with coefficient $-1$ rather than 1
+\smallskip  
+$\bullet$\quad There are too many constants at the margin
+\smallskip  
+$\bullet$\quad The constant over the last column of the matrix is ${}-1$ rather than 1.
+\smallskip
+Can you see how to put this tableau in standard form?	
+\smallskip
+Actually, there are many ways to rewrite this linear programming problem using a standard row tableau. For example, we read the tableau and obtain
+$$\left\{\matrix{2z+y-2=w\rightarrow\hbox{max}\hfill\cr y \ge 0\hfill\cr 2z  \ge 1\hfill\cr 2 - 2x + 3y - 4 = y,}\right.$$
+or
+$$\left\{\matrix{-2z -y +  2 = -w\rightarrow\hbox{min}\cr y \ge 0\hfill\cr z \ge 1/2\hfill\cr x =  y - 1.\hfill\cr}\right.$$
+
+We introduce a {\it slack} variable $u$ to write $z - 1/2 = u \ge 0$ instead of  $z\ge 1/2.$  Now we write our problem in standard tableau form:
+$$\rowtab{&y&z&1\cr \omit&0&1&-1/2\cr \omit&-1&-2&2\cr}\quad\matrix{=u\hfill&\omit&\omit&\omit&\omit\cr =-w\to \hbox{min}}$$
+ with $y \ge 0, z \ge 0,  u \ge 0, x =  y - 1.$
+\smallskip
+
+Note that  the tableau does not include the variable $x$ and that the additional information ($\to \min,$  $y  \ge 0,\,\, z  \ge 0,\,\, u  \ge 0,\,\, x = y - 1)$ is written outside the tableau.
+
+ \smallskip
+\noindent
+{\bf Example 9.3.}   
+
+\noindent Suppose our linear problem is given as follows:
+$$\rowtab{&v&1&x&y&x&-2\cr
+\omit&0&1&2&3&4&5\cr
+\omit&0&0&-7&8&-9&1\cr
+\omit &0&0&0&1&0&0\cr
+\omit&0&3&1&0&2&0\cr
+\omit&0&3&1&0&2&0\cr
+\omit&1&0&0&2&1&0\cr
+\omit&0&0&1&0&2&0\cr
+\omit&1&0&0&0&-1&0\cr}\quad
+\matrix{=0\hfill\cr\ge 0\hfill\cr\ge 0 \hfill\cr\ge 0\hfill\cr\le 0\hfill\cr =z\rightarrow\hbox{max}\cr =u\hfill\cr=u.\hfill }$$
+
+ 
+
+Let us bring this tableau to the standard form.  We start by combining the constant columns (that is, the columns marked with 1 and $-2$ at the top margin) to get the column
+
+ 
+
+$1\cdot  1  +  (-2\cdot 5)  =-9$  
+
+$1\cdot  0  +  (-2\cdot 1)  =-2$
+
+$1\cdot  0  +  (-2\cdot 0)  =0$
+
+$1\cdot  3  +  (-2\cdot 0)  =3$
+
+$1\cdot  3  +  (-2\cdot 0)  =3$
+
+$1\cdot  0  +  (-2\cdot 0)  =0$
+
+$1\cdot  0  +  (-2\cdot 0)  =0$
+
+$1\cdot  0  +  (-2\cdot 0)  =0.$
+
+\smallskip
+ 
+We will write this constant column as the last column in the tableau, marked with a coefficient equal to 1 on the top.
+$$\rowtab{&v&x&y&x&1\cr\omit&0&2&3&4&-9\cr\omit&0&-7&8&-9&-2\cr\omit &0&0&1&0&0\cr\omit&0&1&0&2&3\cr\omit&0&1&0&2&3\cr\omit&1&0&2&1&0\cr\omit&0&1&0&2&0\cr\omit&1&0&0&-1&0\cr}\quad\matrix{=0\hfill\cr\ge 0\hfill\cr\ge 0 \hfill\cr\ge 0\hfill\cr\le 0\hfill\cr =z\rightarrow\hbox{max}\cr =u\hfill\cr=u.\hfill \cr}$$
+
+Then we can combine the two columns marked with $x$ to obtain a single column marked with $x;$ the column in the matrix of coefficients is obtained by adding the corresponding entries of the two columns
+ 
+ 
+$2+4=6$
+
+${}-7-9={}-16$
+
+$0+0=0$
+
+$1+2=3$
+
+$1+2=3$
+
+$0+1=1$
+
+$1+2=3$
+
+$0-1={}-1.$
+
+ 
+We obtain the following tableau:
+$$\rowtab{&v&y&x&1\cr\omit&0&3&6&-9\cr\omit&0&8&-16&-2\cr\omit &0&1&0&0\cr\omit&0&0&3&3\cr\omit&0&0&3&3\cr\omit&1&2&1&0\cr\omit&0&0&3&0\cr\omit&1&0&-1&0\cr}\quad\matrix{=0\hfill\cr\ge 0\hfill\cr\ge 0 \hfill\cr\ge 0\hfill\cr\le 0\hfill\cr =z\rightarrow\hbox{max}\cr =u\hfill\cr=u.\hfill \cr}$$
+
+Next, we write the coefficients of the objective function in the last row of the matrix:
+$$\rowtab{&v&y&x&1\cr\omit&0&3&6&-9\cr\omit&0&8&-16&-2\cr\omit &0&1&0&0\cr\omit&0&0&3&3\cr\omit&0&0&3&3\cr\omit&0&0&3&0\cr\omit
+&1&0&-1&0\cr\omit&1&2&1&0\cr}\quad\matrix{=0\hfill\cr\ge 0\hfill\cr\ge 0\hfill \cr\ge 0\hfill\cr\le 0\hfill\cr=u\hfill\cr=u\hfill \cr =z\rightarrow\hbox{max.}\cr}$$
+ 
+We can also subtract one $u$-row from the other. This gives us two rows $-$ one will be one of the original rows decorated with $u$ at the right margin and the other row will be marked with 0 at the right margin. We do this  because we want distinct variables at the margins:
+\vskip-10pt
+$$\rowtab{&v&y&x&1\cr\omit&0&3&6&-9\cr\omit&0&8&-16&-2\cr\omit &0&1&0&0\cr\omit&0&0&3&3\cr\omit&0&0&3&3\cr\omit&0&0&3&0\cr\omit
+&1&0&-4&0\cr\omit&1&2&1&0\cr}\quad\matrix{=0\hfill\cr\ge 0\hfill\cr\ge 0\hfill \cr\ge 0\hfill\cr\le 0\hfill\cr=u\hfill\cr=0\hfill \cr =z\rightarrow\hbox{max.}\cr}$$
+Now, since we do not want constants at the right margin, we introduce new non-negative (slack or surplus) variables $w_1$ and $w_2$ for the inequalities in the second and fourth rows of the preceding matrix. Note that since the inequality in the fifth row reads $3x+3\le 0$, we replace it by the equivalent inequality $-3x-3\ge 0$ and then introduce the nonnegative slack variable $w_3,$ so that we have the equality $-3x-3=w_3.$ Since the third row, $y\ge 0,$ is just the nonnegativity constraint for the variable $y,$ we write it separately near the tableau. We also swap the columns labeled with $x$ and $y.$ The new tableau is
+$$\rowtab{&v&x&y&1\cr\omit&0&6&3&-9\cr\omit&0&-16&8&-2\cr\omit&0&3&0&3\cr\omit&0&-3&0&-3\cr\omit&0&3&0&0\cr\omit
+&1&-4&0&0\cr\omit&1&1&2&0\cr}\quad\matrix{=0\hfill&\omit&\omit&\omit&\omit&\cr =w_1\hfill&\omit&\omit&\omit&\omit&\cr=w_2\hfill&\omit&\omit&\omit&\omit&\cr =w_3\hfill&\omit&\omit&\omit&\omit&\cr=u\hfill&\omit&\omit&\omit&\omit&\cr =0\hfill&\omit&\omit&\omit&\omit&\cr =z\rightarrow\hbox{max}}$$
+ with $y \ge 0,  w_1 \ge 0, w_2 \ge 0,  w_3 \ge 0.$
+
+
+Now we take the constraint $u=3x$ (fifth row of the matrix) out of the tableau and write it separately, near the tableau. We also permute the rows so that the rows marked with a constant at the right margin appear first:
+$$\rowtab{&v&x&y&1\cr\omit&0&6&3&-9\cr\omit
+&1&-4&0&0\cr\omit&0&-16&8&-2\cr\omit&0&3&0&3\cr\omit&0&-3&0&-3\cr\omit&1&1&2&0\cr}\quad\matrix{=0\hfill&\omit&\omit&\omit&\omit&\omit\cr =0\hfill&\omit&\omit&\omit&\omit&\omit\cr =w_1\hfill&\omit&\omit&\omit&\omit&\omit\cr =w_2\hfill&\omit&\omit&\omit&\omit&\omit\cr =w_3\hfill&\omit&\omit&\omit&\omit&\omit\cr=z\rightarrow\hbox{max}}$$
+with $y \ge 0,  w_1 \ge 0,  w_2 \ge 0, w_3 \ge 0,  u = 3x.$ 
+ 
+We still have  two constants at the right margin. We can fix this by pivoting at 1 in the second row and 6 in the first row, so that the constants will appear at the top margin:
+$$\rowtab{&0&0&y&1\cr\omit&0&1/6&-1/2&3/2\cr\omit&1&2/3&-2&6\cr\omit&0&-8/3&16&-26\cr\omit&0&1/2&-3/2&15/2\cr\omit&0&-1/2&3/2&-15/2\cr\omit&1&5/6&-1/2&15/2\cr}\quad\matrix{=x\hfill&\omit&\omit&\omit&\omit&\omit\cr=v\hfill&\omit&\omit&\omit&\omit\cr=w_1\hfill&\omit&\omit&\omit&\omit\cr=w_2\hfill&\omit&\omit&\omit&\omit\cr =w_3\hfill&\omit&\omit&\omit&\omit\cr=z\rightarrow\hbox{max}}$$
+ with $y \ge 0, w_1 \ge 0, w_2 \ge 0, w_3 \ge 0, u = 3x.$
+
+
+In order to have a minimization problem instead of a maximization problem, we  multiply the last row by ${}-1$:
+$$\rowtab{&0&0&y&1\cr\omit&0&1/6&-1/2&3/2\cr\omit
+&1&2/3&-2&6\cr\omit&0&-8/3&16&-26\cr\omit&0&1/2&-3/2&15/2\cr\omit&0&-1/2&3/2&-15/2\cr\omit&-1&-5/6&1/2&-15/2\cr}\quad\matrix{=x\hfill&\omit&\omit&\omit&\omit&\omit\cr =v\hfill&\omit&\omit&\omit&\omit\cr =w_1\hfill&\omit&\omit&\omit&\omit\cr =w_2\hfill&\omit&\omit&\omit&\omit\cr =w_3\hfill&\omit&\omit&\omit&\omit\cr =-z\rightarrow\hbox{min}}$$
+ with $y \ge 0,  w_1 \ge 0, w_2 \ge 0, w_3 \ge 0, u = 3x.$
+
+	
+The variables $x$ and $v$  are not required to be nonnegative, so they cannot be present in a standard tableau. On the other hand, we do not need to decide anything about these variables, so we put the first two constraints outside the tableau. The columns with 0 on the top margin can be dropped. The following is a standard tableau representing the linear program:
+$$\rowtab{&y&1\cr\omit&16&-26\cr\omit
+&-3/2&15/2\cr\omit
+&3/2&-15/2\cr\omit&1/2&-15/2\cr}\,\,\matrix{=w_1\hfill&\omit&\omit&\omit&\omit
+\cr =w_2\hfill&\omit &\omit&\omit& \omit\cr =w_3\hfill&\omit &\omit&\omit& \omit\cr =-z\rightarrow\hbox{min,}}$$
+
+\noindent $y \ge 0, w_1 \ge 0, w_2 \ge 0, w_3 \ge 0,\,u = 3x,\,x = 3/2 - y/2,\,v = 6 - 2y.$ \blackbox
+\medskip
+
+\noindent
+{\bf Going from General LP in Canonical Form}
+
+\noindent
+{\bf to Standard Tableau and Back}
+
+
+Usually, it takes less effort to write a linear program in a standard tableau.  For example, when our linear program is written in the canonical form  
+$$ \hbox{minimize}\,\,  cx+d,\,\, \hbox{subject to}\,\,  A  x \le b,\,\, x \ge 0,$$ 
+ we proceed as follows:
+\smallskip
+ 
+1.\quad Replace the constraints $A x\le b$ by the equivalent constraints 
+$ -A x \ge  -b.$
+\smallskip
+ 
+2.\quad The constraints $ -A x\ge  -b$ can be read as $-Ax +b \ge 0.$ In order to have equations rather than inequalities, we introduce the slack variables $u,$ defined as $u= Ax + b.$ Note that we now require $x\ge 0$ and $u \ge 0.$ The standard row tableau can be written right away:
+$$\rowtab{&x^T&1\cr\omit&-A&b\cr\omit
+&c&d\cr}\quad\matrix{=&u&\omit&\omit\cr\rightarrow&\hbox{min,}&x\ge 0,&u \ge 0\cr}$$
+  where  $u$  is the column matrix of slack variables (all variables in  $u$  are distinct and different from the variables in  the column matrix $x$). 
+
+ 
+ 
+It is also very easy to go from a standard tableau to a linear program in canonical form (we drop the variables at the right margin).  So there is almost no difference between standard tableaux and canonical forms.
+
+\medskip
+\noindent
+{\bf Going from General LP in Standard Form}
+
+\noindent{\bf to Standard Tableau and Back}
+\smallskip
+
+If our linear program is given in the standard form
+$$ \hbox{minimize}\,\,  cx+d,\,\, \hbox{subject to}\,\,  A x= b, x \ge 0:$$  
+then there are at least two ways to put it in a standard tableau.
+\smallskip
+
+(i)  (artificial variables) Reduce the problem to a canonical form 
+\smallskip
+ \centerline {minimize $cx+d$ subject to $A x \le  b, -A x \le  -b, x \ge 0$ }
+\smallskip
+\noindent and then proceed as before.
+\smallskip
+Thus, we obtain the standard tableau
+$$\rowtab{&x^T&1\cr
+\omit&-A&b\cr
+\omit&A&-b\cr
+\omit &c&d\cr}\quad\matrix{=&u&\omit&\omit\cr =&v&\omit&\omit\cr
+\rightarrow&\hbox{min,}&x\ge 0,&u, v \ge 0\cr}.$$
+The variables in the columns $u, v$  are called {\it artificial variables.}
+They are  connected with artificial variables in Trick  7.8 by duality; see     Chapter 4. 
+
+ 
+ (ii)  Solve the system  $A x = b$ (this can be done, for example, by pivoting, as we explained before). Then we either find that the system has no solutions, hence the linear program is infeasible, or we get an answer of the form $y = Dz+ e,$ where  $y$ are some variables in $x$ and $z$ is the rest of variables in $x.$  Then we express our objective function $cx+d = c'z+d'$ in terms of $z.$ Thus, we obtain the standard row tableau
+
+
+$$\rowtab{&z^T&1\cr\omit&D&e\cr\omit
+&c'&d'\cr}\quad\matrix{=&y&\omit&\omit\cr\rightarrow&\hbox{min,}&z\ge 0,&y\ge 0.\cr}$$
+
+It is even easier to go back from any standard tableau to 
+the corresponding linear program in standard form: Just take the variables at
+the right margin to the left-hand sides of the corresponding equations
+and take the constant terms to the right-hand sides of those equations. That is, rewrite $Ax + b =u$  in Definition 9.1 as $Ax-u=-b.$ \hfill
+\blackbox
+
+
+If we have a linear program  with some variables that are not required
+to be nonnegative, sometimes  we can easily eliminate them from the program to get a standard form.
+
+ \smallskip
+\noindent
+{\bf Example 9.4.}  Write in a standard tableau:
+
+$x + y + z \rightarrow$ min,  $2x + 3y + 4z \le 5,  x - y +4z = 3, x \ge 0, y \ge 0.$
+
+ \smallskip
+\noindent
+{\bf Solution.} We solve the equation for $z$ and eliminate it from the problem:
+ $z=(3-x+y)/4,$
+
+$x + y + z  = x + y + (3-x+y)/4 = 3x/4 + 5y/4 + 3/4 \rightarrow$ min, 
+$2x+3y+4z = 2x+3y+4(3-x+y)/4 = x + 4y + 3 \le 5,  x \ge 0, y \ge 0,$
+
+or
+
+$3x/4 + 5y/4 + 3/4 \rightarrow$ min, $  x + 4y  \le 2,  x \ge 0, y \ge 0.$
+
+
+ \smallskip
+The problem with two variables $x,y$ is in normal form, so can be written
+easily in a standard tableau:
+
+$\rowtab{& x  & y & 1 \cr
+\omit& -1   & -4 & 2 \cr
+\omit& 3/4   & 5/4  & 3/4   }
+\quad\matrix{ =u\cr \rightarrow {\rm min} }$,  $x \ge 0, y \ge 0,z=(3-x+y)/4.$ 
+
+\smallskip
+ We put $z=(3-x+y)/4$  on side, so the
+value of $z$ can be included in  the final answer. Although it was not required,
+it is now clear that the optimization problem has exactly one optimal solution:
+$x=0, y= 0, $ min$ = 3/4, z= 3/4.$ \hfill \blackbox
+
+ \smallskip
+\noindent
+ {\bf Example 9.5.}  Write in a standard tableau:
+
+ $\rowtab{& x_1 & x_2 & x_3 & x_4  &x_5 & x_6 & 3\cr
+\omit& 1   & 0 & 1 & 1  & -3   & 1 & 0 \cr
+\omit&-1   & 0  & 2 & 1  & 0  & 1 & -2 \cr
+\omit&-1   & 2 & 3 & 1  & 1 & 0 & 0 \cr
+\omit&-1   & 2 & 3  & 1  & 0 & 1 & 1\cr
+\omit&-1   & 1 & 0 & 1  & 1 & 2 & 3\cr }
+\quad\matrix{ =x_7\cr   =x_8 \cr = x_9 \cr = x_{10}\cr =v \rightarrow {\rm max}}$, 
+
+$x_1, x_2, x_3, x_4, x_5,  x_6,  x_7, x_{10} \ge 0.$
+
+ \smallskip
+\noindent
+{\bf Solution.}
+We eliminate $ x_8, x_9$ from the tableau, multiply the
+objective variable $v$ by $-1,$  and multiply the last column by 3:
+
+ $\rowtab{& x_1 & x_2 & x_3 & x_4  &x_5 & x_6 & 1\cr
+\omit& 1   & 0 & 1 & 1  & -3   & 1 & 0 \cr
+\omit&-1   & 2 & 3  & 1  & 0 & 1 & 3\cr
+\omit& 1   & -1 & 0 & -1  & -1 & -2 & -9\cr }
+\quad\matrix{ =x_7\cr = x_{10}\cr = -v \rightarrow {\rm min}}$, 
+
+$x_8 = -x_1+2x_3+x_4 +x_6-6,
+x_9 = -x_1+2x_2+3x_3+x_4 +x_5.$ \blackbox
+
+\bigskip
+
+\centerline {{\twelvebf Exercises}}
+\smallskip
+\parindent=0pt
+
+{\bf 1.}   Solve the linear program of Example 9.3 and give your answer in terms of the original variables $x,\,\,u\,\,\hbox{and}\,\, v.$
+	  
+
+{\bf 2--10.}  Rewrite the following optimization problems as linear
+programs  using standard row tableaux. Optimization is not required.
+$Hint$:  first write  your problem as a linear program in canonical form.
+\smallskip
+
+{\bf 2.} 
+ $\left\{\matrix{\hbox{Maximize}& P =  2x + 3y\cr\hbox{subject to}& x\ge 0,\,\, y\ge 0\cr\omit&4x + 5y \le 7.}\right.$
+
+\smallskip
+{\bf 3.}
+  $\left\{\matrix{\hbox{Maximize}& x\cr\hbox{subject to}& |x + y|\le 1 \cr\omit&|x - y| \le 1.}\right.$
+ 
+\smallskip
+{\bf 4.}
+ 
+ $\rowtab{& x_1 & x_2 & x_3 & x_4  &x_5 & x_6 & -1\cr
+\omit& 1   & 0 & 1 & 1  & -3  & 1 & 0 \cr
+\omit&-1   & 0  & 2 & 1  & 0  & 1 & -2 \cr
+\omit&-1   & 2 & 3 & 1  & 1 & 0 & 0 \cr
+\omit&-1   & 1 & 0 & 1  & 1 & 2 & 3\cr }
+\quad\matrix{ \ge 0\cr  =x_8 \cr =0 \cr =v \rightarrow {\rm min}}$
+
+$x_1, x_2, x_3, x_4, x_5,  x_6,  x_7, x_8, x_9,  x_{10} \ge 0.$
+
+
+ \smallskip
+{\bf 5.}
+  $\rowtab{& x_1 & x_2 & x_3 & x_4  &x_5 & x_6 & 1\cr
+\omit& 1   & 0 & 1 & 1  & -3  & 1 & 0 \cr
+\omit&-1   & 0  & 2 & 1  & 0  & 1 & -2 \cr
+\omit&-1   & 2 & 3 & 1  & 1 & 0 & 0 \cr
+\omit&0   & 2 & 3  & 1  & 0 & 1 & 1\cr
+\omit&-1   & 1 & 0 & 1  & 1 & 2 & 3\cr} \quad \matrix{ =x_7\cr  =x_8 \cr = x_9 \cr = x_2 \cr =v  \rightarrow {\rm max} }$
+
+$x_1, x_2, x_3, x_4, x_5,  x_6,  x_7  \ge 0.$
+
+\bigskip
+
+ \smallskip
+{\bf \ 6.}
+  $\rowtab{& 2x_1 & x_2 & -3x_1 & x_4  &x_5 & x_6 & 1\cr
+\omit& 1   & 0 & 1 & 1  & -3  & 1 & 0 \cr
+\omit&-1   & 0  & 2 & 1  & 0  & 1 & -2 \cr
+\omit& 0  & 2 & 3 & 1  & 1 & 0 & 0 \cr
+\omit&-1   & 2 & 3  & 1  & 0 & 1 & 1\cr
+\omit&-1   & 1 & 0 & 1  & 1 & 2 & 3\cr} \quad \matrix{ =x_7\cr  =x_7 \cr \le 0 \cr = x_3 \cr =v  \rightarrow {\rm min} }$
+
+$x_1, x_2, x_3, x_4, x_5,  x_6,  x_7  \ge 0.$
+
+\medskip
+{\bf \ 7.}
+ $\rowtab{& x_1 & x_2 & x_3 & x_4  &x_5 & x_6 & 1\cr
+\omit& 1   & 0 & 1 & 1  & -3  & 1 & 0 \cr
+\omit&-1   & 0  & 2 & 1  & 0  & 1 & -2 \cr
+\omit&-1   & 2 & 3 & 1  & 1 & 0 & 0 \cr}
+\quad\matrix{ = x_2 \cr  =x_4 \cr =v \rightarrow {\rm min}}$
+
+$x_1, x_2, x_3, x_4, x_5,  x_6,  x_7, x_8, x_9,  x_{10} \ge 0.$
+
+ 
+\medskip
+{\bf \ 8.}
+ $\rowtab{& x_1 & x_2 & x_3 & x_4  &x_5 & x_6 & -4\cr
+\omit& 1   & 0 & 1 & 1  & -3  & 1 & 0 \cr
+\omit&-1   & 0  & 2 & 1  & 0  & 1 & -2 \cr
+\omit&-1   & 2 & 3 & 1  & 1 & 0 & 0 \cr
+\omit&-1   & 2 & 3  & 1  & 0 & 1 & 1\cr
+\omit&-1   & 1 & 0 & 1  & 1 & 2 & 3\cr }
+\quad\matrix{ \ge 0\cr  =1 \cr =0 \cr = x_1 \cr =v \rightarrow {\rm min}}$
+
+$x_1, x_2, x_3, x_4, x_5,  x_6 \ge 0.$
+
+
+\medskip
+{\bf \ 9.}
+ $\rowtab{& x_7 & x_2 & x_3 & x_4  &x_5 & x_6 & 1\cr
+\omit& 1   & 0 & 1 & 1  & -3  & 1 & 0 \cr
+\omit&-1   & 0  & 2 & 1  & 0  & 1 & -2 \cr
+\omit&-1   & 2 & 3 & 1  & 1 & 0 & 0 \cr
+\omit&-1   & 2 & 3  & 1  & 0 & 1 & 1\cr
+\omit&-1   & 1 & 0 & 1  & 1 & 2 & 3\cr }
+\quad\matrix{ = 0\cr  =0  \cr =0 \cr = x_1 \cr =v \rightarrow {\rm min}}$
+
+$x_1, x_2, x_3, x_4, x_5,  x_6  \ge 0.$
+
+\medskip
+
+{\bf 10.}
+ $\rowtab{& x_1 & x_2 & x_3 & x_4  &x_5 & x_6 &-1\cr
+\omit& 1   & 0 & 1 & 1  & -3  & 1 & 0 \cr
+\omit&-1   & 0  & 2 & 1  & 0  & 1 & -2 \cr
+\omit&-1   & 2 & 3 & 1  & 1 & 0 & 0 \cr
+\omit&-1   & 2 & 3  & 1  & 0 & 1 & 1\cr
+\omit&-1   & 1 & 0 & 1  & 1 & 2 & 3\cr }
+\quad\matrix{ = x_1\hskip29.2pt \cr  = 2x_1\hskip24.2pt \cr =x_7\hskip29.2pt \cr = x_2\hskip29.2pt\cr =v \rightarrow {\rm max}}$
+
+$x_1, x_2, x_3, x_4, x_5,  x_6  \ge 0.$
+
+\end
+
+From ~vstein:
+
+cd www/publisher
+
+tex ch3
+
+dvips -o ch3.ps ch3.dvi
+
+ps2pdf ch3.ps

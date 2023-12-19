@@ -1,0 +1,78 @@
+This is TeX, Version 3.1415926 (TeX Live 2012) (format=tex 2012.7.9)  18 OCT 2012 09:46
+**ch6
+(./ch6 (/usr/local/texlive/2011/../texmf-local/tex/psfig/psfig.tex
+(/usr/local/texlive/2011/../texmf-local/tex/psfig/psfig.sty
+\@unused=\write0
+\fboxrule=\dimen16
+\fboxsep=\dimen17
+\ps@tempdima=\dimen18
+\ps@tempboxa=\box16
+\ps@stream=\read0
+\p@intvaluex=\dimen19
+\p@intvaluey=\dimen20
+
+psfig/tex 1.10-dvips
+))
+\p@renwd=\dimen21
+
+psfig: searching Fig.16.1.eps for bounding box
+psfig: including Fig.16.1.eps 
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+[]
+
+\hbox(8.5+0.0)x295.6491
+.\vbox(8.5+0.0)x0.0
+
+[166] [167] [168] [169] [170] [171] [172] [173]
+psfig: searching Fig.16.5b.eps for bounding box
+psfig: including Fig.16.5b.eps 
+[174]
+psfig: searching Fig.16.7b.eps for bounding box
+psfig: including Fig.16.7b.eps 
+
+Underfull \vbox (badness 2717) has occurred while \output is active
+\vbox(492.74959+1.94444)x295.6491, glue set 3.00903
+.\glue(\topskip) 2.5
+.\hbox(7.5+1.94444)x295.6491, glue set 0.09917
+..\hbox(0.0+0.0)x20.0
+..\tenrm W
+..\kern-0.83334
+..\tenrm e
+..\glue 3.33333 plus 1.66666 minus 1.11111
+..etc.
+.\penalty 150
+.\glue(\baselineskip) 2.55556
+.\hbox(7.5+2.5)x295.6491, glue set 0.73392
+..\tenrm p
+..\kern0.27779
+..\tenrm o
+..\tenrm s
+..\tenrm i
+..etc.
+.etc.
+
+ [175]
+[176] [177] [178] [179]
+psfig: searching Fig.17.3.eps for bounding box
+psfig: including Fig.17.3.eps 
+[180]
+psfig: searching Fig.17.5.eps for bounding box
+psfig: including Fig.17.5.eps 
+[181]
+psfig: searching ch6fig6.eps for bounding box
+psfig: including ch6fig6.eps 
+[182]
+psfig: searching Fig.17.10.eps for bounding box
+psfig: including Fig.17.10.eps 
+[183]
+psfig: searching ch6fig8.eps for bounding box
+psfig: including ch6fig8.eps 
+[184] [185] [186] [187] [188]
+psfig: searching Fig.17.23.eps for bounding box
+psfig: including Fig.17.23.eps 
+[189]
+psfig: searching Fig.17.24.eps for bounding box
+psfig: including Fig.17.24.eps 
+[190] [191] [192] [193] [194] [195] [196] [197] [198] )
+Output written on ch6.dvi (33 pages, 107288 bytes).

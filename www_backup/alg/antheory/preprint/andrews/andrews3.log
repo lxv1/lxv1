@@ -1,0 +1,144 @@
+This is TeX, Version 3.14159 (Web2C 7.4.5) (format=tex 2004.7.8)  11 APR 2005 19:53
+**abdrews3
+(./andrews3 (/usr/local/teTeX-2.0.2/share/texmf/tex/amstex/base/amstex.tex
+
+AmS-TeX- Version 2.2
+
+Loading definitions for misc utility macros, page layout, accents/punctuation,
+line and page breaks, figures, comments, math spacing, fractions,
+smash commands, large operator symbols, integrals, operator names,
+multilevel sub/superscripts, matrices, multiline displays,
+continued fractions, compound symbols, various kinds of dots,
+special superscripts, \text, math font commands, \newsymbol,
+bold Greek and bold symbols, Euler fonts, math accents, roots,
+commutative diagrams, poor man's bold, syntax check, ... finished)
+
+(/usr/local/teTeX-2.0.2/share/texmf/tex/amstex/base/amsppt.sty
+version 2.2 (2001/08/07): Loading utility definitions, more fonts,
+page dimension settings, top matter, section heads,
+theorems/proofs/definitions/remarks, rosters, footnotes, figures and captions,
+miscellaneous, references, end of document, output routine,
+\copyins=\insert252
+
+hyphenation exceptions (U.S. English)
+(/usr/local/teTeX-2.0.2/share/texmf/tex/amstex/config/amsppt.sti symbol names
+(/usr/local/teTeX-2.0.2/share/texmf/tex/plain/amsfonts/amssym.tex) ,)
+
+)
+Overfull \hbox (8.04869pt too wide) detected at line 71
+\tenrm (\teni q\tenrm )[](\teni a\tenrm )[](\teni b\tenrm )[] [] [] = [] []
+
+\hbox(17.50014+12.67783)x361.34999
+.\tenrm (
+.\teni q
+.\kern0.35878
+.\tenrm )
+.\hbox(3.01389+0.0)x8.47224, shifted 1.49998
+..\sevensy 1
+.etc.
+
+
+Overfull \vbox (34.64888pt too high) has occurred while \output is active
+\vbox(498.66255+1.72221)x361.34999, glue set - 1.0
+.\mark{\else \uppercasetext@ {{The Product of Partial Theta Function} }}
+.\mark{\uppercasetext@ {by \\ \\ \\ George E. Andrews \footnote {Partially s\ET
+C.}
+.\glue(\topskip) 41.13889
+.\vbox(6.86111+0.0)x360.0
+..\hbox(6.86111+0.0)x360.0, glue set 0.26947
+...\glue(\leftskip) 0.0 plus 143.9978
+...\hbox(0.0+0.0)x0.0
+...\tenbf T
+...\tenbf H
+...\tenbf E
+...etc.
+.\glue 30.0 plus 12.0
+.etc.
+
+
+[1]
+Overfull \hbox (7.40305pt too wide) in paragraph at lines 118--118
+[] 
+
+\hbox(7.0+4.0)x361.34999
+.\hbox(7.0+4.0)x368.75304, glue set 368.75304fill
+..\hbox(7.0+4.0)x0.0
+...\vbox(7.5+3.5)x0.0, shifted 0.5 []
+..\glue 0.0 plus 1.0fill
+.\penalty 10000
+.\glue(\parfillskip) 0.0 plus 1.0fil
+.\glue(\rightskip) 0.0
+
+
+Overfull \hbox (7.40305pt too wide) in alignment at lines 118--118
+ [][] []
+
+\hbox(0.0+0.0)x361.34999
+.\glue(\tabskip) 0.0 plus 1000.0
+.\unsetbox(0.0+0.0)x25.0528
+.\glue(\tabskip) 0.0
+.\unsetbox(0.0+0.0)x343.70024
+.\glue(\tabskip) 0.0 plus 1000.0
+.etc.
+
+
+Overfull \hbox (7.49347pt too wide) has occurred while \output is active
+[]$[]$[]\eightrm PARTIALLY SUP-PORTED BY NA-TIONAL SCI-ENCE FOUN-DA-TION GRANT 
+DMS 0200047
+
+\hbox(7.0+0.0)x361.34999, glue set - 1.0
+.\hbox(0.0+0.0)x12.0
+.\mathon
+.\hbox(3.86665+0.0)x4.16661, shifted -2.82333
+..\sixrm 2
+.\mathoff
+.\vbox(7.0+0.0)x0.0
+.etc.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active
+\vbox(498.66255+1.94444)x361.34999, glue set 5.8127
+.\glue(\topskip) 3.05556
+.\hbox(6.94444+0.0)x361.34999, glue set 297.82253fil
+..\tenbf T
+..\tenbf h
+..\tenbf e
+..\tenbf o
+..\tenbf r
+..etc.
+.\penalty 10000
+.\glue(\abovedisplayskip) 12.0 plus 3.0 minus 9.0
+.\glue(\lineskip) 1.0
+.etc.
+
+ [2]
+[3]
+Overfull \hbox (7.49347pt too wide) has occurred while \output is active
+[]$[]$[]\eightrm PARTIALLY SUP-PORTED BY NA-TIONAL SCI-ENCE FOUN-DA-TION GRANT 
+DMS 0200047
+
+\hbox(7.0+0.0)x361.34999, glue set - 1.0
+.\hbox(0.0+0.0)x12.0
+.\mathon
+.\hbox(3.86665+0.0)x4.16661, shifted -2.82333
+..\sixrm 3
+.\mathoff
+.\vbox(7.0+0.0)x0.0
+.etc.
+
+[4] [5]
+Overfull \hbox (7.49347pt too wide) has occurred while \output is active
+[]$[]$[]\eightrm PARTIALLY SUP-PORTED BY NA-TIONAL SCI-ENCE FOUN-DA-TION GRANT 
+DMS 0200047
+
+\hbox(7.0+0.0)x361.34999, glue set - 1.0
+.\hbox(0.0+0.0)x12.0
+.\mathon
+.\hbox(3.86665+0.0)x4.16661, shifted -2.82333
+..\sixrm 4
+.\mathoff
+.\vbox(7.0+0.0)x0.0
+.etc.
+
+[6] )
+Output written on andrews3.dvi (6 pages, 22208 bytes).

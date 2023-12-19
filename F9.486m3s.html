@@ -1,0 +1,794 @@
+<!DOCTYPE html PUBLIC "-//w3c//dtd html 4.0 transitional//en">
+<html xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:w="urn:schemas-microsoft-com:office:word" xmlns="http://www.w3.org/TR/REC-html40"><head>
+  <meta name="Title" content="Math 486 Game Theory Miderm 3 April 20, 2004">
+  <meta name="Keywords" content="">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="ProgId" content="Word.Document">
+  <meta name="Generator" content="Microsoft Word 11">
+  <meta name="Originator" content="Microsoft Word 11">
+  <link rel="File-List" href="S7.m3s_files/filelist.xml">
+  <link rel="Edit-Time-Data" href="S7.m3s_files/editdata.mso"><!--[if !mso]>
+<style>
+v\:* {behavior:url(#default#VML);}
+o\:* {behavior:url(#default#VML);}
+w\:* {behavior:url(#default#VML);}
+.shape {behavior:url(#default#VML);}
+</style>
+<![endif]-->
+
+  
+
+  <title>Math 486 Game Theory Miderm 3 April 20, 2004</title><!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Template>Normal</o:Template>
+  <o:Revision>2</o:Revision>
+  <o:Created>2007-04-26T00:09:00Z</o:Created>
+  <o:LastSaved>2007-04-26T00:09:00Z</o:LastSaved>
+  <o:Pages>2</o:Pages>
+  <o:Words>491</o:Words>
+  <o:Characters>2799</o:Characters>
+  <o:Lines>23</o:Lines>
+  <o:Paragraphs>5</o:Paragraphs>
+  <o:CharactersWithSpaces>3437</o:CharactersWithSpaces>
+  <o:Version>11.0</o:Version>
+ </o:DocumentProperties>
+ <o:OfficeDocumentSettings>
+  <o:AllowPNG/>
+ </o:OfficeDocumentSettings>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:Zoom>150</w:Zoom>
+ </w:WordDocument>
+</xml><![endif]--><style>
+<!--
+ /* Font Definitions */
+@font-face
+	{font-family:"Times New Roman";
+	panose-1:0 2 2 6 3 5 4 5 2 3;
+	mso-font-charset:0;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:50331648 0 0 0 1 0;}
+ /* Style Definitions */
+p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-parent:"";
+	margin-right:0in;
+	mso-margin-top-alt:auto;
+	mso-margin-bottom-alt:auto;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:Times;}
+a:link, span.MsoHyperlink
+	{color:blue;
+	text-decoration:underline;
+	text-underline:single;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:blue;
+	text-decoration:underline;
+	text-underline:single;}
+p
+	{margin-right:0in;
+	mso-margin-top-alt:auto;
+	mso-margin-bottom-alt:auto;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:Times;}
+table.MsoNormalTable
+	{mso-style-parent:"";
+	font-size:10.0pt;
+	font-family:"Times New Roman";}
+@page Section1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.25in 1.0in 1.25in;
+	mso-header-margin:.5in;
+	mso-footer-margin:.5in;
+	mso-paper-source:0;}
+div.Section1
+	{page:Section1;}
+-->
+  </style><!--[if gte mso 9]><xml>
+ <o:shapedefaults v:ext="edit" spidmax="1027"/>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <o:shapelayout v:ext="edit">
+  <o:idmap v:ext="edit" data="1"/>
+ </o:shapelayout></xml><![endif]--></head>
+<body style="" link="blue" bgcolor="white" lang="EN-US" vlink="blue">
+<div class="Section1">
+<p class="MsoNormal" style="margin: 0in 0in 0.0001pt;">Math 486&nbsp;
+Game
+Theory Miderm 3&nbsp; Dec.3, 2009.&nbsp; <br>
+Name______________________________________ </p>
+<p>Find the equilibria in pure strategies, the Pareto optimal solutions
+in pure
+strategies, <br>
+the characteristic function,&nbsp; the Nash bargaining solution, and
+the Shapley
+values. <br>
+&nbsp; <o:p></o:p></p>
+<p>1 (30 pts).&nbsp;&nbsp; Players: the row player Ann; the column
+player Bob. <o:p></o:p></p>
+<table style="width: 50%;" nosave="" border="1" cellpadding="0" cols="4" width="50%">
+  <tbody>
+    <tr>
+      <td style="padding: 0.75pt;">
+      <p class="MsoNormal" style="margin: 0in 0in 0.0001pt;">0, 1</p>
+      </td>
+      <td style="padding: 0.75pt;">
+      <p class="MsoNormal" style="margin: 0in 0in 0.0001pt;">1, 0</p>
+      </td>
+      <td style="padding: 0.75pt;">
+      <p class="MsoNormal" style="margin: 0in 0in 0.0001pt;">0, 0</p>
+      </td>
+      <td style="padding: 0.75pt;">
+      <p class="MsoNormal" style="margin: 0in 0in 0.0001pt;">1, 1</p>
+      </td>
+    </tr>
+    <tr>
+      <td style="padding: 0.75pt;">
+      <p class="MsoNormal" style="margin: 0in 0in 0.0001pt;">1, 1</p>
+      </td>
+      <td style="padding: 0.75pt;">
+      <p class="MsoNormal" style="margin: 0in 0in 0.0001pt;">1, 3</p>
+      </td>
+      <td style="padding: 0.75pt;">
+      <p class="MsoNormal" style="margin: 0in 0in 0.0001pt;">2, 4</p>
+      </td>
+      <td style="padding: 0.75pt;">
+      <p class="MsoNormal" style="margin: 0in 0in 0.0001pt;">2, 2</p>
+      </td>
+    </tr>
+    <tr>
+      <td style="padding: 0.75pt;">
+      <p class="MsoNormal" style="margin: 0in 0in 0.0001pt;">0, 3</p>
+      </td>
+      <td style="padding: 0.75pt;">
+      <p class="MsoNormal" style="margin: 0in 0in 0.0001pt;">0, 0</p>
+      </td>
+      <td style="padding: 0.75pt;">
+      <p class="MsoNormal" style="margin: 0in 0in 0.0001pt;">1, 3</p>
+      </td>
+      <td style="padding: 0.75pt;">
+      <p class="MsoNormal" style="margin: 0in 0in 0.0001pt;">3, 2</p>
+      </td>
+    </tr>
+    <tr>
+      <td style="padding: 0.75pt;">
+      <p class="MsoNormal" style="margin: 0in 0in 0.0001pt;">1, 0</p>
+      </td>
+      <td style="padding: 0.75pt;">
+      <p class="MsoNormal" style="margin: 0in 0in 0.0001pt;">0, 0</p>
+      </td>
+      <td style="padding: 0.75pt;">
+      <p class="MsoNormal" style="margin: 0in 0in 0.0001pt;">0, 0</p>
+      </td>
+      <td style="padding: 0.75pt;">
+      <p class="MsoNormal" style="margin: 0in 0in 0.0001pt;">1, 4</p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<p>(payoffs for&nbsp; Ann and Bob) <o:p></o:p></p>
+<p><i>Solution.</i><span style="font-style: normal;">&nbsp;&nbsp; One
+equilibrium
+in pure joint strategies, (row 2, column 3): 
+    <o:p></o:p></span></p>
+<table style="width: 50%;" nosave="" border="1" cellpadding="0" cols="4" width="50%">
+  <tbody>
+    <tr>
+      <td style="padding: 0.75pt;">
+      <p class="MsoNormal" style="margin: 0in 0in 0.0001pt;">0, 1*</p>
+      </td>
+      <td style="padding: 0.75pt;">
+      <p class="MsoNormal" style="margin: 0in 0in 0.0001pt;">1*, 0</p>
+      </td>
+      <td style="padding: 0.75pt;">
+      <p class="MsoNormal" style="margin: 0in 0in 0.0001pt;">0, 0</p>
+      </td>
+      <td style="padding: 0.75pt;">
+      <p class="MsoNormal" style="margin: 0in 0in 0.0001pt;">1, 1</p>
+      </td>
+    </tr>
+    <tr>
+      <td style="padding: 0.75pt;">
+      <p class="MsoNormal" style="margin: 0in 0in 0.0001pt;">1*, 1</p>
+      </td>
+      <td style="padding: 0.75pt;">
+      <p class="MsoNormal" style="margin: 0in 0in 0.0001pt;">1*, 3</p>
+      </td>
+      <td style="padding: 0.75pt;">
+      <p class="MsoNormal" style="margin: 0in 0in 0.0001pt;">2*, 4*</p>
+      </td>
+      <td style="padding: 0.75pt;">
+      <p class="MsoNormal" style="margin: 0in 0in 0.0001pt;">2, 2</p>
+      </td>
+    </tr>
+    <tr>
+      <td style="padding: 0.75pt;">
+      <p class="MsoNormal" style="margin: 0in 0in 0.0001pt;">0, 3*</p>
+      </td>
+      <td style="padding: 0.75pt;">
+      <p class="MsoNormal" style="margin: 0in 0in 0.0001pt;">0, 0</p>
+      </td>
+      <td style="padding: 0.75pt;">
+      <p class="MsoNormal" style="margin: 0in 0in 0.0001pt;">1, 3*</p>
+      </td>
+      <td style="padding: 0.75pt;">
+      <p class="MsoNormal" style="margin: 0in 0in 0.0001pt;">3*, 2</p>
+      </td>
+    </tr>
+    <tr>
+      <td style="padding: 0.75pt;">
+      <p class="MsoNormal" style="margin: 0in 0in 0.0001pt;">1*, 0</p>
+      </td>
+      <td style="padding: 0.75pt;">
+      <p class="MsoNormal" style="margin: 0in 0in 0.0001pt;">0, 0</p>
+      </td>
+      <td style="padding: 0.75pt;">
+      <p class="MsoNormal" style="margin: 0in 0in 0.0001pt;">0, 0</p>
+      </td>
+      <td style="padding: 0.75pt;">
+      <p class="MsoNormal" style="margin: 0in 0in 0.0001pt;">1, 4*</p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<p><span style="">&nbsp;</span><o:p></o:p></p>
+<p>Two Pareto optimal pure payoffs: (3, 2) and (2,4). 
+  <o:p></o:p></p>
+<p>v(Ann) = 1 = the value of the matrix game <span style="">&nbsp;</span><o:p></o:p></p>
+<table style="width: 50%;" nosave="" border="1" cellpadding="0" cols="4" width="50%">
+  <tbody>
+    <tr>
+      <td style="padding: 0.75pt;">
+      <p class="MsoNormal" style="margin: 0in 0in 0.0001pt;">0</p>
+      </td>
+      <td style="padding: 0.75pt;">
+      <p class="MsoNormal" style="margin: 0in 0in 0.0001pt;">1*</p>
+      </td>
+      <td style="padding: 0.75pt;">
+      <p class="MsoNormal" style="margin: 0in 0in 0.0001pt;">0</p>
+      </td>
+      <td style="padding: 0.75pt;">
+      <p class="MsoNormal" style="margin: 0in 0in 0.0001pt;">1</p>
+      </td>
+    </tr>
+    <tr>
+      <td style="padding: 0.75pt;">
+      <p class="MsoNormal" style="margin: 0in 0in 0.0001pt;">1</p>
+      </td>
+      <td style="padding: 0.75pt;">
+      <p class="MsoNormal" style="margin: 0in 0in 0.0001pt;">1*'</p>
+      </td>
+      <td style="padding: 0.75pt;">
+      <p class="MsoNormal" style="margin: 0in 0in 0.0001pt;">2*</p>
+      </td>
+      <td style="padding: 0.75pt;">
+      <p class="MsoNormal" style="margin: 0in 0in 0.0001pt;">2</p>
+      </td>
+    </tr>
+    <tr>
+      <td style="padding: 0.75pt;">
+      <p class="MsoNormal" style="margin: 0in 0in 0.0001pt;">0</p>
+      </td>
+      <td style="padding: 0.75pt;">
+      <p class="MsoNormal" style="margin: 0in 0in 0.0001pt;">0</p>
+      </td>
+      <td style="padding: 0.75pt;">
+      <p class="MsoNormal" style="margin: 0in 0in 0.0001pt;">1</p>
+      </td>
+      <td style="padding: 0.75pt;">
+      <p class="MsoNormal" style="margin: 0in 0in 0.0001pt;">3*</p>
+      </td>
+    </tr>
+    <tr>
+      <td style="padding: 0.75pt;">
+      <p class="MsoNormal" style="margin: 0in 0in 0.0001pt;">1</p>
+      </td>
+      <td style="padding: 0.75pt;">
+      <p class="MsoNormal" style="margin: 0in 0in 0.0001pt;">0</p>
+      </td>
+      <td style="padding: 0.75pt;">
+      <p class="MsoNormal" style="margin: 0in 0in 0.0001pt;">0</p>
+      </td>
+      <td style="padding: 0.75pt;">
+      <p class="MsoNormal" style="margin: 0in 0in 0.0001pt;">1</p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<p>v(Bob) = 1 = the value of the matrix game (where Bob is the row
+player) <o:p></o:p></p>
+<table style="width: 50%;" nosave="" border="1" cellpadding="0" cols="4" width="50%">
+  <tbody>
+    <tr>
+      <td style="padding: 0.75pt;">
+      <p class="MsoNormal" style="margin: 0in 0in 0.0001pt;">1*</p>
+      </td>
+      <td style="padding: 0.75pt;">
+      <p class="MsoNormal" style="margin: 0in 0in 0.0001pt;">1</p>
+      </td>
+      <td style="padding: 0.75pt;">
+      <p class="MsoNormal" style="margin: 0in 0in 0.0001pt;">3</p>
+      </td>
+      <td style="padding: 0.75pt;">
+      <p class="MsoNormal" style="margin: 0in 0in 0.0001pt;">0'</p>
+      </td>
+    </tr>
+    <tr>
+      <td style="padding: 0.75pt;">
+      <p class="MsoNormal" style="margin: 0in 0in 0.0001pt;">0’</p>
+      </td>
+      <td style="padding: 0.75pt;">
+      <p class="MsoNormal" style="margin: 0in 0in 0.0001pt;">3</p>
+      </td>
+      <td style="padding: 0.75pt;">
+      <p class="MsoNormal" style="margin: 0in 0in 0.0001pt;">0'</p>
+      </td>
+      <td style="padding: 0.75pt;">
+      <p class="MsoNormal" style="margin: 0in 0in 0.0001pt;">0'</p>
+      </td>
+    </tr>
+    <tr>
+      <td style="padding: 0.75pt;">
+      <p class="MsoNormal" style="margin: 0in 0in 0.0001pt;">0’</p>
+      </td>
+      <td style="padding: 0.75pt;">
+      <p class="MsoNormal" style="margin: 0in 0in 0.0001pt;">4*</p>
+      </td>
+      <td style="padding: 0.75pt;">
+      <p class="MsoNormal" style="margin: 0in 0in 0.0001pt;">3</p>
+      </td>
+      <td style="padding: 0.75pt;">
+      <p class="MsoNormal" style="margin: 0in 0in 0.0001pt;">0’</p>
+      </td>
+    </tr>
+    <tr>
+      <td style="padding: 0.75pt;">
+      <p class="MsoNormal" style="margin: 0in 0in 0.0001pt;">1*’</p>
+      </td>
+      <td style="padding: 0.75pt;">
+      <p class="MsoNormal" style="margin: 0in 0in 0.0001pt;">2</p>
+      </td>
+      <td style="padding: 0.75pt;">
+      <p class="MsoNormal" style="margin: 0in 0in 0.0001pt;">2</p>
+      </td>
+      <td style="padding: 0.75pt;">
+      <p class="MsoNormal" style="margin: 0in 0in 0.0001pt;">4*</p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<p>&nbsp;<o:p></o:p></p>
+<p>v(empty)=0, v(Ann,Bob) = 6. 
+  <o:p></o:p></p>
+<p>Nash bargaining:&nbsp;&nbsp; (u-1)(v-1) <span style="">&nbsp;</span>-&gt;
+max , u &gt;= 1, v &gt;= 1,&nbsp;&nbsp;&nbsp; (u, v) is
+a mixture of&nbsp; (3, 2) and (2,4)., <br>
+2u + v =8,&nbsp;&nbsp; 2(u – 1) + (v – 1) =5,&nbsp; 2(u-1)= v - 1=2.5;&nbsp;
+u=2.25, v=3.5&nbsp;
+optimal solution= Nash solution= <span style="">&nbsp;</span><span style="">&nbsp;</span>the arbitration pair.</p><p>This arbitration pair is a mixture of given payoffs: (2.25, 3.5) =(3/4)(2, 4) + (1/4)(3.2).</p><p>
+  <o:p></o:p>
+</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp; Ann&nbsp; <span style="">&nbsp;</span>Bob <br>
+Ann Bob&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="">&nbsp;&nbsp; </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5<br>
+Bob Ann&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="">&nbsp;&nbsp;
+</span>&nbsp;&nbsp;5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1
+<br>
+------------------ <br>
+Shapley values&nbsp;&nbsp; 3&nbsp;&nbsp;&nbsp;&nbsp; 3<br>
+&nbsp; <br>
+&nbsp; <o:p></o:p></p>
+<p>2 (45 pts).&nbsp;&nbsp; Players: A, B, C <br>
+<span style="font-size: 7.5pt;">strategies&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+payoffs</span> <br>
+1&nbsp; 1&nbsp;
+1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+0&nbsp; 1&nbsp; 2 <br>
+1&nbsp; 1&nbsp;
+2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+1&nbsp; 0&nbsp; 1 <br>
+1&nbsp; 2&nbsp;
+1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+2&nbsp; 3&nbsp; 3 <br>
+1&nbsp; 2&nbsp;
+2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+1&nbsp; 2&nbsp; 3 <br>
+2&nbsp; 1&nbsp;
+1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+0&nbsp; 0&nbsp; 1 <br>
+2&nbsp; 1&nbsp;
+2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+1&nbsp; 1&nbsp; 1 <br>
+2&nbsp; 2&nbsp;
+1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+2&nbsp; 3&nbsp; 3 <br>
+2&nbsp; 2&nbsp;
+2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+2&nbsp; 3&nbsp; 2 <br>
+3&nbsp; 1&nbsp;
+1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+0&nbsp; 0&nbsp; 0 <br>
+3&nbsp; 1&nbsp;
+2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+0&nbsp; 0&nbsp; 0 <br>
+3&nbsp; 2&nbsp;
+1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+1&nbsp; 1&nbsp; 1 <br>
+3&nbsp; 2&nbsp;
+2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+2&nbsp; 4&nbsp;0
+<o:p></o:p></p>
+<p><i>Solution.</i><span style="font-style: normal;"> <br>
+Two equilibria, two Pareto optimal triples: <br>
+</span><span style="font-size: 7.5pt;">strategies&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+payoffs</span> <br>
+1&nbsp; 1&nbsp;
+1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+0&nbsp; 1&nbsp; 2 <br>
+1&nbsp; 1&nbsp;
+2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+1&nbsp; 0&nbsp; 1 <br>
+1&nbsp; 2&nbsp;
+1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+2*&nbsp; 3*&nbsp; 3*&nbsp; equilibrium&nbsp;  Pareto optimal 
+<o:p></o:p>
+<br>
+1&nbsp; 2&nbsp;
+2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+1&nbsp; 2&nbsp; 3 <br>
+2&nbsp; 1&nbsp;
+1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+0&nbsp; 0&nbsp; 1 <br>
+2&nbsp; 1&nbsp;
+2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+1&nbsp; 1&nbsp; 1 <br>
+2&nbsp; 2&nbsp;
+1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+2*&nbsp; 3*&nbsp; 3*equilibrium   Pareto optimal 
+<o:p></o:p>
+<br>
+2&nbsp; 2&nbsp;
+2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+2&nbsp; 3&nbsp; 2 <br>
+3&nbsp; 1&nbsp;
+1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+0&nbsp; 0&nbsp; 0 <br>
+3&nbsp; 1&nbsp;
+2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+0&nbsp; 0&nbsp; 0 <br>
+3&nbsp; 2&nbsp;
+1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+1&nbsp; 1&nbsp; 1 <br>
+3&nbsp; 2&nbsp;
+2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+2&nbsp; 4 0&nbsp; &nbsp;&nbsp; Pareto optimal 
+<o:p></o:p></p>
+<p>v(empty)=0, v(A,B,C)) = 8. 
+  <o:p></o:p></p>
+<p><br>
+v(A) = 0 = the value of the matrix game <o:p></o:p></p>
+<table style="width: 50%;" nosave="" border="1" cellpadding="0" cols="4" width="50%">
+  <tbody>
+    <tr>
+      <td style="padding: 0.75pt;">
+      <p class="MsoNormal" style="margin: 0in 0in 0.0001pt;">0*'</p>
+      </td>
+      <td style="padding: 0.75pt;">
+      <p class="MsoNormal" style="margin: 0in 0in 0.0001pt;">1</p>
+      </td>
+      <td style="padding: 0.75pt;">
+      <p class="MsoNormal" style="margin: 0in 0in 0.0001pt;">2</p>
+      </td>
+      <td style="padding: 0.75pt;">
+      <p class="MsoNormal" style="margin: 0in 0in 0.0001pt;">1</p>
+      </td>
+    </tr>
+    <tr>
+      <td style="padding: 0.75pt;">
+      <p class="MsoNormal" style="margin: 0in 0in 0.0001pt;">0</p>
+      </td>
+      <td style="padding: 0.75pt;">
+      <p class="MsoNormal" style="margin: 0in 0in 0.0001pt;">1</p>
+      </td>
+      <td style="padding: 0.75pt;">
+      <p class="MsoNormal" style="margin: 0in 0in 0.0001pt;">2</p>
+      </td>
+      <td style="padding: 0.75pt;">
+      <p class="MsoNormal" style="margin: 0in 0in 0.0001pt;">2</p>
+      </td>
+    </tr>
+    <tr>
+      <td style="padding: 0.75pt;">
+      <p class="MsoNormal" style="margin: 0in 0in 0.0001pt;">0</p>
+      </td>
+      <td style="padding: 0.75pt;">
+      <p class="MsoNormal" style="margin: 0in 0in 0.0001pt;">0</p>
+      </td>
+      <td style="padding: 0.75pt;">
+      <p class="MsoNormal" style="margin: 0in 0in 0.0001pt;">1</p>
+      </td>
+      <td style="padding: 0.75pt;">
+      <p class="MsoNormal" style="margin: 0in 0in 0.0001pt;">2</p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<p>v(B) = 1 = the value of the matrix game <o:p></o:p></p>
+<table style="width: 40%;" nosave="" border="1" cellpadding="0" cols="6" width="40%">
+  <tbody>
+    <tr>
+      <td style="padding: 0.75pt;">
+      <p class="MsoNormal" style="margin: 0in 0in 0.0001pt;">1</p>
+      </td>
+      <td style="padding: 0.75pt;">
+      <p class="MsoNormal" style="margin: 0in 0in 0.0001pt;">0</p>
+      </td>
+      <td style="padding: 0.75pt;">
+      <p class="MsoNormal" style="margin: 0in 0in 0.0001pt;">0</p>
+      </td>
+      <td style="padding: 0.75pt;">
+      <p class="MsoNormal" style="margin: 0in 0in 0.0001pt;">1</p>
+      </td>
+      <td style="padding: 0.75pt;">
+      <p class="MsoNormal" style="margin: 0in 0in 0.0001pt;">0</p>
+      </td>
+      <td style="padding: 0.75pt;">
+      <p class="MsoNormal" style="margin: 0in 0in 0.0001pt;">0</p>
+      </td>
+    </tr>
+    <tr>
+      <td style="padding: 0.75pt;">
+      <p class="MsoNormal" style="margin: 0in 0in 0.0001pt;">3</p>
+      </td>
+      <td style="padding: 0.75pt;">
+      <p class="MsoNormal" style="margin: 0in 0in 0.0001pt;">2</p>
+      </td>
+      <td style="padding: 0.75pt;">
+      <p class="MsoNormal" style="margin: 0in 0in 0.0001pt;">3</p>
+      </td>
+      <td style="padding: 0.75pt;">
+      <p class="MsoNormal" style="margin: 0in 0in 0.0001pt;">3</p>
+      </td>
+      <td style="padding: 0.75pt;">
+      <p class="MsoNormal" style="margin: 0in 0in 0.0001pt;">1*'</p>
+      </td>
+      <td style="padding: 0.75pt;">
+      <p class="MsoNormal" style="margin: 0in 0in 0.0001pt;">4</p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<p>v(C) = 0 = the value of the matrix game <o:p></o:p></p>
+<table style="width: 40%;" nosave="" border="1" cellpadding="0" cols="6" width="40%">
+  <tbody>
+    <tr>
+      <td style="padding: 0.75pt;">
+      <p class="MsoNormal" style="margin: 0in 0in 0.0001pt;">2</p>
+      </td>
+      <td style="padding: 0.75pt;">
+      <p class="MsoNormal" style="margin: 0in 0in 0.0001pt;">3</p>
+      </td>
+      <td style="padding: 0.75pt;">
+      <p class="MsoNormal" style="margin: 0in 0in 0.0001pt;">1</p>
+      </td>
+      <td style="padding: 0.75pt;">
+      <p class="MsoNormal" style="margin: 0in 0in 0.0001pt;">3</p>
+      </td>
+      <td style="padding: 0.75pt;">
+      <p class="MsoNormal" style="margin: 0in 0in 0.0001pt;">0*'</p>
+      </td>
+      <td style="padding: 0.75pt;">
+      <p class="MsoNormal" style="margin: 0in 0in 0.0001pt;">1</p>
+      </td>
+    </tr>
+    <tr>
+      <td style="padding: 0.75pt;">
+      <p class="MsoNormal" style="margin: 0in 0in 0.0001pt;">1</p>
+      </td>
+      <td style="padding: 0.75pt;">
+      <p class="MsoNormal" style="margin: 0in 0in 0.0001pt;">3</p>
+      </td>
+      <td style="padding: 0.75pt;">
+      <p class="MsoNormal" style="margin: 0in 0in 0.0001pt;">1</p>
+      </td>
+      <td style="padding: 0.75pt;">
+      <p class="MsoNormal" style="margin: 0in 0in 0.0001pt;">2</p>
+      </td>
+      <td style="padding: 0.75pt;">
+      <p class="MsoNormal" style="margin: 0in 0in 0.0001pt;">0</p>
+      </td>
+      <td style="padding: 0.75pt;">
+      <p class="MsoNormal" style="margin: 0in 0in 0.0001pt;">0</p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<p>v(A,B) = 5= the value of the matrix game <o:p></o:p></p>
+<table style="width: 40%;" nosave="" border="1" cellpadding="0" cols="2" width="40%">
+  <tbody>
+    <tr>
+      <td style="padding: 0.75pt;">
+      <p class="MsoNormal" style="margin: 0in 0in 0.0001pt;">1</p>
+      </td>
+      <td style="padding: 0.75pt;">
+      <p class="MsoNormal" style="margin: 0in 0in 0.0001pt;">1</p>
+      </td>
+    </tr>
+    <tr>
+      <td style="padding: 0.75pt;">
+      <p class="MsoNormal" style="margin: 0in 0in 0.0001pt;">5</p>
+      </td>
+      <td style="padding: 0.75pt;">
+      <p class="MsoNormal" style="margin: 0in 0in 0.0001pt;">3</p>
+      </td>
+    </tr>
+    <tr>
+      <td style="padding: 0.75pt;">
+      <p class="MsoNormal" style="margin: 0in 0in 0.0001pt;">0</p>
+      </td>
+      <td style="padding: 0.75pt;">
+      <p class="MsoNormal" style="margin: 0in 0in 0.0001pt;">2</p>
+      </td>
+    </tr>
+    <tr>
+      <td style="padding: 0.75pt;">
+      <p class="MsoNormal" style="margin: 0in 0in 0.0001pt;">5*'</p>
+      </td>
+      <td style="padding: 0.75pt;">
+      <p class="MsoNormal" style="margin: 0in 0in 0.0001pt;">5</p>
+      </td>
+    </tr>
+    <tr>
+      <td style="padding: 0.75pt;">
+      <p class="MsoNormal" style="margin: 0in 0in 0.0001pt;">0</p>
+      </td>
+      <td style="padding: 0.75pt;">
+      <p class="MsoNormal" style="margin: 0in 0in 0.0001pt;">0</p>
+      </td>
+    </tr>
+    <tr>
+      <td style="padding: 0.75pt;">
+      <p class="MsoNormal" style="margin: 0in 0in 0.0001pt;">2</p>
+      </td>
+      <td style="padding: 0.75pt;">
+      <p class="MsoNormal" style="margin: 0in 0in 0.0001pt;">6</p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<p>v(A,C) = 2= the value of the matrix game <o:p></o:p></p>
+<table style="width: 30%;" nosave="" border="1" cellpadding="0" cols="2" width="30%">
+  <tbody>
+    <tr>
+      <td style="padding: 0.75pt;">
+      <p class="MsoNormal" style="margin: 0in 0in 0.0001pt;">2*'</p>
+      </td>
+      <td style="padding: 0.75pt;">
+      <p class="MsoNormal" style="margin: 0in 0in 0.0001pt;">5</p>
+      </td>
+    </tr>
+    <tr>
+      <td style="padding: 0.75pt;">
+      <p class="MsoNormal" style="margin: 0in 0in 0.0001pt;">2</p>
+      </td>
+      <td style="padding: 0.75pt;">
+      <p class="MsoNormal" style="margin: 0in 0in 0.0001pt;">4</p>
+      </td>
+    </tr>
+    <tr>
+      <td style="padding: 0.75pt;">
+      <p class="MsoNormal" style="margin: 0in 0in 0.0001pt;">1</p>
+      </td>
+      <td style="padding: 0.75pt;">
+      <p class="MsoNormal" style="margin: 0in 0in 0.0001pt;">5</p>
+      </td>
+    </tr>
+    <tr>
+      <td style="padding: 0.75pt;">
+      <p class="MsoNormal" style="margin: 0in 0in 0.0001pt;">2</p>
+      </td>
+      <td style="padding: 0.75pt;">
+      <p class="MsoNormal" style="margin: 0in 0in 0.0001pt;">4</p>
+      </td>
+    </tr>
+    <tr>
+      <td style="padding: 0.75pt;">
+      <p class="MsoNormal" style="margin: 0in 0in 0.0001pt;">0</p>
+      </td>
+      <td style="padding: 0.75pt;">
+      <p class="MsoNormal" style="margin: 0in 0in 0.0001pt;">2</p>
+      </td>
+    </tr>
+    <tr>
+      <td style="padding: 0.75pt;">
+      <p class="MsoNormal" style="margin: 0in 0in 0.0001pt;">0</p>
+      </td>
+      <td style="padding: 0.75pt;">
+      <p class="MsoNormal" style="margin: 0in 0in 0.0001pt;">2</p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<p>v(B,C) = 4 = the value of the matrix game 
+  <o:p></o:p></p>
+<table style="width: 60%;" nosave="" border="1" cellpadding="0" cols="5" width="60%">
+  <tbody>
+    <tr>
+      <td style="padding: 0.75pt;">
+      <p class="MsoNormal" style="margin: 0in 0in 0.0001pt;">B&amp;C vs
+A</p>      </td>
+      <td style="padding: 0.75pt;">
+      <p class="MsoNormal" style="margin: 0in 0in 0.0001pt;"><s>c1</s></p>      </td>
+      <td style="padding: 0.75pt;">
+      <p class="MsoNormal" style="margin: 0in 0in 0.0001pt;"><s>c2</s></p>      </td>
+      <td style="padding: 0.75pt;">
+      <p class="MsoNormal" style="margin: 0in 0in 0.0001pt;">c3</p>      </td>
+    </tr>
+    <tr>
+      <td style="padding: 0.75pt;">
+      <p class="MsoNormal" style="margin: 0in 0in 0.0001pt;"><s>r11</s></p>      </td>
+      <td style="padding: 0.75pt;">
+      <p class="MsoNormal" style="margin: 0in 0in 0.0001pt;">3</p>      </td>
+      <td style="padding: 0.75pt;">
+      <p class="MsoNormal" style="margin: 0in 0in 0.0001pt;">1</p>      </td>
+      <td style="padding: 0.75pt;">
+      <p class="MsoNormal" style="margin: 0in 0in 0.0001pt;">0</p>      </td>
+    </tr>
+    <tr>
+      <td style="padding: 0.75pt;">
+      <p class="MsoNormal" style="margin: 0in 0in 0.0001pt;"><s>r12</s></p>      </td>
+      <td style="padding: 0.75pt;">
+      <p class="MsoNormal" style="margin: 0in 0in 0.0001pt;">1</p>      </td>
+      <td style="padding: 0.75pt;">
+      <p class="MsoNormal" style="margin: 0in 0in 0.0001pt;">2</p>      </td>
+      <td style="padding: 0.75pt;">
+      <p class="MsoNormal" style="margin: 0in 0in 0.0001pt;">0</p>      </td>
+    </tr>
+    <tr>
+      <td style="padding: 0.75pt;">
+      <p class="MsoNormal" style="margin: 0in 0in 0.0001pt;">r21</p>      </td>
+      <td style="padding: 0.75pt;">
+      <p class="MsoNormal" style="margin: 0in 0in 0.0001pt;">6</p>      </td>
+      <td style="padding: 0.75pt;">
+      <p class="MsoNormal" style="margin: 0in 0in 0.0001pt;">6</p>      </td>
+      <td style="padding: 0.75pt;">
+      <p class="MsoNormal" style="margin: 0in 0in 0.0001pt;">2</p>      </td>
+    </tr>
+    <tr>
+      <td style="padding: 0.75pt;">
+      <p class="MsoNormal" style="margin: 0in 0in 0.0001pt;">r22</p>      </td>
+      <td style="padding: 0.75pt;">
+      <p class="MsoNormal" style="margin: 0in 0in 0.0001pt;">5</p>      </td>
+      <td style="padding: 0.75pt;">
+      <p class="MsoNormal" style="margin: 0in 0in 0.0001pt;">5</p>      </td>
+      <td style="padding: 0.75pt;">
+      <p class="MsoNormal" style="margin: 0in 0in 0.0001pt;">4*'</p>      </td>
+    </tr>
+  </tbody>
+</table>
+<p>order&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; contribution <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+A &nbsp; B &nbsp; C <br>
+ABC&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0 &nbsp;  5 &nbsp;  3 <br>
+ACB&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0 &nbsp; 6 &nbsp; 2 <br>
+BAC&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 4 &nbsp; 1&nbsp;  3<br>
+BCA&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 4 &nbsp;  1  &nbsp; 3 <br>
+CAB&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2  &nbsp; 6 &nbsp;  0 <br>
+CBA&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 4  &nbsp; 4 &nbsp;  0<br>
+  --------------- <br>
+  &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp; 7/3&nbsp; 23/6 &nbsp;  11/6&nbsp;&nbsp;&nbsp;&nbsp; Shapley
+  values.
+  <o:p></o:p>
+ The mixed Pareto optimal payoffs = <span style="">mixtures of &nbsp;</span>(2,4,0) and (2,3,3).
+&gt;Nash solution: the optimal solution of</p>
+  <p>a= 2, b &gt;= 1 = v(B), c &gt;= 0=v(C), (b-1)c -&gt; max, (b,c) a mixture of (4,0) and (3,3).</p>
+  <p>3b+c = 12, 3(b-1)+c= 9, 3(b-1) = c = 4.5,&nbsp;        b=2.5, c = 4.5. This optimal solution on the line  
+3b+c = 12 is outside the interval of Pareto optimal pairs. The closest point on the interval is (3,3).
+  </p><p>So the Nash solution is (2,3,3).  
+
+  </p><p>
+  </p></div></body></html>

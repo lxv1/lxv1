@@ -1,0 +1,116 @@
+From shx@psu.edu Mon Sep 20 11:44:15 2004
+Received: from f04n07.cac.psu.edu (f04s07.cac.psu.edu [128.118.141.35])
+	by math.psu.edu (8.12.10/8.12.10) with ESMTP id i8KFiEkC008624
+	for <vstein@math.psu.edu>; Mon, 20 Sep 2004 11:44:15 -0400 (EDT)
+Received: from sxu-laptop.psu.edu (net06pc71.smeal.psu.edu [146.186.139.71])
+	by f04n07.cac.psu.edu (8.12.11/8.12.11) with ESMTP id i8KFhhc8190016;
+	Mon, 20 Sep 2004 11:43:43 -0400
+Message-Id: <6.1.0.6.2.20040920114430.033da728@mail.psu.edu>
+X-Sender: shx@mail.psu.edu
+X-Mailer: QUALCOMM Windows Eudora Version 6.1.0.6
+Date: Mon, 20 Sep 2004 11:45:44 -0400
+To: "Rich Andrew" <WPA@psu.edu>, cea@psu.edu, sfa@psu.edu,
+        "Russell Barton" <barton@simplex.psu.edu>, byrne@games.arl.psu.edu,
+        Enrique del Castillo <exd13@psu.edu>, tmc7@psu.edu, mjc3@psu.edu,
+        k1c@psu.edu, cti@psu.edu, Sunmee Choi <sc128@psu.edu>, fyj@psu.edu,
+        "Lily Elefteriadou"<axe11@psu.edu>, eee1@psu.edu, eur@psu.edu,
+        fa2@psu.edu, i2v@psu.edu, mbf10@psu.edu, nxg11@psu.edu, rlg3@psu.edu,
+        mch@psu.edu, c1h@psu.edu, tharrison@psu.edu, jch@psu.edu, hzh@psu.edu,
+        kesidis@engr.psu.edu, j9l@psu.edu, hsl2@psu.edu, g5l@psu.edu,
+        costas@psu.edu, mpt@psu.edu, j93@psu.edu, DPassmore@psu.edu,
+        rvr@psu.edu, axr32@psu.edu, "Doug Thomas" <djt11@psu.edu>,
+        "William Rothwell"<wjr9@psu.edu>, mcs5@psu.edu, jss15@psu.edu,
+        "Timothy Simpson"<tws8@psu.edu>, ttc@psu.edu, jvt@psu.edu,
+        "Leonid Vaserstein"<vstein@math.psu.edu>, jav1@psu.edu, pnw@psu.edu,
+        avw@psu.edu, shx@psu.edu, edm3@psu.edu, bxy121@psu.edu, mlb336@psu.edu,
+        sib105@psu.edu, jdc220@psu.edu, clc16@psu.edu, cxc505@psu.edu,
+        sac164@psu.edu, vkd106@psu.edu, amd287@psu.edu, sud111@psu.edu,
+        jif1@psu.edu, jrf163@psu.edu, lug113@psu.edu, gmm17@psu.edu,
+        auj106@psu.edu, vmk111@psu.edu, kwanisai@stat.psu.edu, zilong@psu.edu,
+        ananth@psu.edu, sym110@psu.edu, hgm106@psu.edu, mxm74@psu.edu,
+        mxo203@psu.edu, aum144@psu.edu, sem203@psu.edu, nhprasad@psu.edu,
+        mxm74@psu.edu, sxo151@psu.edu, asp118@psu.edu, jkr143@psu.edu,
+        agr119@psu.edu, rvr4@psu.edu, bqr2@psu.edu, nazrul@psu.edu,
+        npt103@psu.edu, kst126@psu.edu, kxt178@psu.edu, sft108@psu.edu,
+        axt206@psu.edu, oav100@psu.edu, nuv104@psu.edu, ejw169@psu.edu,
+        lxw167@psu.edu, yxw133@psu.edu, mcw150@stat.psu.edu, yxw146@psu.edu,
+        sha1@psu.edu, yus100@psu.edu, mbz113@psu.edu, yxz11@psu.edu
+From: Susan Xu <shx@psu.edu>
+Subject: OR Colloquium, Sept 21. Speaker: Professor Duncan Fong
+Mime-Version: 1.0
+X-Virus-Scanned: by amavisd-new
+X-Virus-Status: No
+X-Spam-Checker-Version: SpamAssassin 2.60 (1.212-2003-09-23-exp) on 
+	leibniz.math.psu.edu
+X-Spam-Level: 
+X-Spam-Status: No, hits=-0.0 required=5.0 tests=BAYES_44 autolearn=ham 
+	version=2.60
+X-Lines: 65
+Status: RO
+
+Correction:
+
+The presentation date of Dr. Fong's seminar should be Sept 21, 2004.
+
+Thanks.
+
+Susan
+
+OR 590 COLLOQUIUM
+4:15-5:30 PM, September 21, 2004
+109 Walker Building
+
+Dr. Duncan K. H. Fong
+Professor of Marketing and Professor of Statistics
+Penn State University
+
+Bayesian Methodology for Detecting and Estimating Regime
+Change Points and Variable Selection in Multiple Regression Models
+for Marketing Research
+
+Abstract. Multiple regression is one of the most frequently utilized 
+multivariate statistical procedures applied in the Marketing Research arena 
+for examining the impact of one or more independent variables upon a 
+designated dependent variable. The estimated regression coefficients denote 
+the contribution of changes in the levels of the independent variables upon 
+the dependent variable. With time series or longitudinal data, these 
+contributions are typically assumed constant over the entire data collected 
+for the particular study at hand. However, as is known in many such 
+Marketing applications, the effects of such independent variables may 
+change over the course of the time period investigated. Also, in many 
+surveys involving repeated measures, fatigue, order effects, learning, 
+patterned responses, etc. may also lead to alterations in the contributions 
+of these independent variables over the sequence of administration. We 
+present a Bayesian change point multiple regression methodology for such 
+studies which, for a fixed number of change points, simultaneously 
+estimates the location of change points in time/sequence, the corresponding 
+relevant subset of independent variables per regime, and the associated 
+regression parameters of these selected independent variables per regime. 
+Furthermore, a probability based model selection heuristic, the Bayes 
+factor, is derived in this particular modeling context to determine the 
+appropriate number of change points in the data. An application involving 
+actual time series data involving prescription sales for an ethical drug is 
+utilized to demonstrate the methodology.  Finally, we discuss directions 
+for future research.
+
+Biography: Duncan K. H. Fong is Professor of Marketing and Professor of 
+Statistics at The Pennsylvania State University where he has been on the 
+faculty since 1987. He holds a Ph.D. in statistics from Purdue University. 
+His research interests include marketing research, Bayesian statistics, 
+experimental economics, forecasting and supply chain management. He is 
+currently working on several projects, which include the development of new 
+methodologies to perform conjoint analysis, the investigation of dynamic 
+evolution of consumer preferences, the study of regime changes with an 
+application to multiple regression analysis, among others. He has been 
+active in research and is the author or co-author of more than thirty 
+articles published in various academic journals. Professor Fong is an 
+Associate Editor of ISBA Bulletin, the official publication of the 
+International Society for Bayesian Analysis, from March 2001 to June 2004. 
+He is also a Founding member of the International Society for Bayesian 
+Analysis and served on the Board from 1992 to 1994. He has supervised four 
+doctoral dissertations, one master thesis and one undergraduate honors 
+thesis. Furthermore, he has served on seventeen Ph.D. and twelve MS 
+students' committees. He teaches business statistics and marketing research 
+courses to undergraduate, MBA, M.S. and Ph.D. students.
+
+

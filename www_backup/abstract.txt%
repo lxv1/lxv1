@@ -1,0 +1,15 @@
+Let  F is a polynomial in several variables with integral coefficients.
+If we are interested in integral or rational solutions of the equation  F=0
+then we talk about a Diophantine equation.
+We can ask whether there are solutions, whether there are infinitely
+many solutions, or how we can describe all solutions.  In general, these kind
+of questions are undecible.
+However for some  equations these questions can be answered.
+For example, when the total degree of F is 1, i.e., we have a linear equation
+with a nonzero F, then we can find a complete description of all integral
+(and all rational) solutions in finitely many steps. This is true even for
+any finite system of linear equations.
+The quadratic equations are more difficult, but also manageable, e.g.,
+x^2+y^2 =z^2.
+The main goal is to describe all rational and all integral
+solutions of the cubic equation in the title. This is a joint work with Rachel Gar-El.

@@ -1,0 +1,47 @@
+This is TeX, Version 3.14159 (Web2C 7.2) (format=latex 1998.11.21)  23 FEB 2001 17:12
+**text.wd
+(text.wd
+LaTeX2e <1998/06/01>
+Babel <v3.6j> and hyphenation patterns for english, french, german, ngerman, no
+hyphenation, loaded.
+TCILATEX Macros for Scientific Word 3.0 <19 May 1997>.
+NOTICE: This macro file is NOT proprietary and may be freely copied and distrib
+uted.
+\@hour=\count79
+\@minute=\count80
+\GRAPHICSTYPE=\count81
+\draft=\count82
+\dispkind=\count83
+\c@chapter=\count84
+\theight=\dimen102
+\c@theorem=\count85
+\c@axiom=\count86
+\c@remark=\count87
+\c@example=\count88
+\c@exercise=\count89
+\c@definition=\count90
+\c@equationnumber=\count91
+\intno@=\count92
+\ex@=\dimen103
+)
+*q
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+<*> q
+     
+? x
+ 
+Here is how much of TeX's memory you used:
+ 395 strings out of 10904
+ 3491 string characters out of 72396
+ 48295 words of memory out of 263001
+ 3403 multiletter control sequences out of 10000+0
+ 3640 words of font info for 14 fonts, out of 200000 for 1000
+ 15 hyphenation exceptions out of 1000
+ 11i,0n,14p,101b,17s stack positions out of 300i,100n,500p,30000b,4000s
+No pages of output.

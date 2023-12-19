@@ -1,0 +1,26 @@
+From: "Miranda Hickman" <mirandachickman@gmail.com>
+Date: December 4, 2008 12:25:07 PM EST
+To: lxv1@psu.edu
+Subject: Exam solutions
+
+1.� Saddle point.� --> Value of the game =7
+�
+2.� Reduce by domination.� (c1, r5, r3, r4, c3, c5, c6 dominated)
+Optimal row strategy:� (3*R1 + R2)/4
+Optimal col strategy:�� (3*C2 + C4)/4
+Value of the game = 7/4
+[See Kelsey's paper for the correct answer. -LV]
+
+3.�Reduce by domination. (c1, r1)
+Use graphing method...
+Optimal row strategy:�� (5*R3 + 3*R2)/8
+Optimal col strategy:�� (5*C3 + 3*C4)/8
+Value of the game = 15/8
+[See Kelsey's paper for the correct answer. -LV]
+
+4.� if t not equal to 1/4 -->� y = (6t-12)/(1-4t)� and x = 3 - t(6t-12)/(1-4t)
+���� if t = 0 --> y = -12 and x = 3
+���� if t = 1/4 --> infeasible [no slutions. -LV]
+�
+5. mean = 29/12, midrange = 4, central value =� 0
+

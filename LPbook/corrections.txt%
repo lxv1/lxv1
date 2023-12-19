@@ -1,0 +1,294 @@
+CORRECTIONS
+
+file   page      line          replace            by
+----------------------------------------------------------------
+dedication
+       iv                     my                our
+preface
+       vii         -1          Thus              Thus,
+
+ch1     7           6          2                  3
+ch1    11          12          36-42              36-43
+ch1    11         -10          57                 58
+ch1    11          -5          linear             a linear form
+ch1    11          -6          58                 59
+ch1    11          -4          59                 60
+ch1    14          -1          simplex            dual simplex
+ch1    14          -1          Chapter 4          Chapter 5
+ch1    17     (table)          Aarea              Area
+ch1    17     (table)          .6                 0.8
+ch1    21          14          to worker          for worker
+ch1    22          14          is not obvious     it is not obvious
+ch1    23        2, 5          §1 of Chapter 2    §3  
+ch1    23          16          2.6                2.5  
+ch1    28   1 after Fig 3.7    §3                 §12   
+ch1    30         -12          min                max
+ch1    31          -1          §3                 §12   
+ch1    33          -1          y + y              y+ z
+
+ch2    40        -8                 30            31 
+ch2    41        Ex.31         if and only if     means that
+ch2    50        3                  B             A 
+ch2    50   the last row of P       0 0 1         1 0 0
+ch2    50   the last row of D       4         
+ch2    50   the last row of D^{-1}  8             2
+ch2    51           matrices E and E^{-1}         their transposes                       ch2    52    Ex.12-14  in the sense               (see page 4)
+                      of Definition 1.3 
+ch2    53      Ex.44               !!
+ch2    54       5                 system          systems
+ch2    54      -10           set of  linear       linear
+ch2    56      19                  cz             -cz
+ch2    56      -4               a upper           an  upper
+ch2    57      -2                 system          systems
+ch2    58       4                 system          systems
+ch2    58     -14                  time           times
+ch2    58     -13                    a            an
+ch2    59       9                    a            an
+ch2    61      12                  -3/2           1/2
+               (left of third matrix)           
+ch2    61      -9                -71             7
+ch2    61      -5               - 71             + 7
+ch2    62     4,18               -71             7
+ch2    62        7               cannot to       cannot
+ch2    62       11             means exactly     exactly means
+ch2    62      -14                - 7/8          + 7/8
+ch2    64       -3                3              2
+ch2    66       19                36-38          36-39
+
+ch3    68       15             necessary           necessarily
+ch3    70      -13             equivalent the      equivalent
+ch3    70       -5             (eliminate)        (eliminates)
+ch3    71        3             Thick               Trick
+ch3    71       16             constraint          constraints
+ch3    71       18             adding              by adding
+ch3    71       -5             in the              is the
+ch3    72        1             rid off             get rid of
+ch3    72        4 know any upper or lower bonds   do not know any bounds
+ch3    72      -19             preeding            preceeding
+ch3    75       10             method              methods
+ch3    73      18,20           >= 1                <=-1
+ch3    77       2              system              systems
+ch3    80       1,2,3          beta                gamma
+ch3    90       18             ,z                  , z
+ch3    91    1st tableau       =w                  =-w
+ch3    97        3       Insert period after the the first tableau.
+ch3    97        9              Ax - u = b         Ax - u = -b
+ch3    99       -4              $x_7$              $ = x_7$
+
+ch4   105       4               isthe          is the
+ch4   105     -15               -2and          -2 and
+ch4   105      -8               2x_2           2x_3
+ch4   105      -6               min=           min =
+ch4   106    last row in        1 0 1 1        1 4 1 1
+             4th tableau            
+ch4   107      21               previosly       previously
+ch4   112     -9                column in       row in
+ch4   116     -15               in 10.4         in 10.10
+ch4   116     -9                Phase 2         Phase 1
+ch4   119       9               z be linear     z by linear
+ch4   120   Ex.10               with            that
+ch4   125     -12               t               T 
+ch4   125      -5               empty           is empty
+ch4   127      14               coulb be now    now could be
+ch4   127      16               that is         stated as
+
+ch5   135  Definition           associated to   associated with
+ch5   135     -1                min             max
+ch5   137  first paragraph      Delete the second sentence.  
+ch5   137      -9 (twice)       superscript t   superscript T           
+ch5   138       14              dv              d = v
+ch5   141   3 in 1st matrix     -2              2
+ch5   141   2 in 2nd matrix     -2              2
+ch5   143  last in (14.2)       respectivel,y   respectively,
+ch5   145  1st after (14.5)     tableu          tableau
+ch5   151     -12               row             raw
+ch5   152      -9               and            and, when parameters are in  c
+                                               (resp., in b),
+ch5   152      -9               minimun        minimum (resp., maximum)
+ch5   152      -8               concave        concave (resp., convex)
+ch5   153      -10              y >>= 0         y >= 0
+ch5   157     5.5               allx            all x  
+xh5   159      6                Is              Does
+xh5   159      7                follows         follow
+ch5   160     -14               van you to      can     
+ch5   160     -10               answer to       answer
+ch5   163   tableaux            105             122
+ch5   165        3              +-              -
+ch5   165     (Reduce hight of brackets in Exercises 9 and 10)
+
+ch6   166       -6             transpcrtation     transportation
+ch6   168       -3             2-by-3 table       2-by-2 table
+           above the last table
+ch6   170       3               15.2              15.7
+ch6   170       9               =                 >=
+ch6   170       10              =                 <=
+ch6   180       4               30) =             50) =
+ch6   184    4 after 17.11        e             epsilon
+ch6   189    top of 17.23       c = 25            c = 35
+ch6   192       7               then is then      is
+ch6   193       8               .The              . The   
+ch6   193       9               problem we may    problem may. 
+ch6   193   3 in Solution       .,  the           , the.
+ch6   194      8                 * * *              * * *  *
+ch6   194     12                |  *               |*
+ch6   195   the third table       * *                *  *
+                  last rows     * * * *           *  *
+ch6   195  first line           column            row
+           after third table    four              two    
+ch6   196   second row in
+            first two tables    (2) (3) (1)       (1) (2) (0) 
+ch6   196   second row in
+            third table         (3) (3) (2)       (2) (2) (1) 
+ch6   196   left margin
+            third table         6 2 1             5 3 2 
+ch6   197   first two rows      4|1 (-1) 0-e      4|1-e   (-1) 0   
+            in first table      3|(0)(0) (-7)     2|(-1)e (-1)(-2) 
+ch6   197 first line after
+             first table   (2, 3). Again +e=0.    (2, 1), and e=1.
+ch6   197 second line after (1, 3) (no other choice this time).
+               first table                         (2.4).
+ch6   197   first two rows      1 (0) (1) 0        0 (0) (1) 1  
+            in second table     (0) (1) 0  1       1 (1)  0 (1) 
+
+ch6   197   first two rows      *                          *
+             in last table                 *       *
+ch6   197   3 lines above                          The optimal value is
+              Remark 18.8                            min=10.
+ch6   197       -4              [                  (
+
+ch7   200       13              hin               him
+ch7   200       -7        "(paoff matrix).."      "(payoff matrix)." .
+ch7   201       -8           an unilateral        a unilateral
+ch7   205      -14          p = [0,1/2,1/2,0]     p = [1/2,0,0,1/2] 
+ch7   208        3           previosly            previously
+ch7   210       10              20    -6          20  0  -6    
+             (The empty entry in the last line of Exercise 10 means 0) 
+ch7   211       20              )                 ]
+ch7   211       -3              ]                 ]^T
+ch7   212       14              th                the
+ch7   212      -11             -1/2by             -1/2 by 
+ch7   213       -5              nodes             node.
+ch7   216 4 in paragraph 3      problem solved    problem is solved.
+ch7   217 2 after 1st matrix    lows              lows us.
+ch7   216 4 in 3nd paragraph    solved            is solved
+ch7   218        7              game              the game
+ch7   218       -1              solutions         strategies
+ch7   219       12              A                 M
+ch7   221      -12              game ?            game?
+ch7   221       -6              loose             lose
+ch7   223    2 from             with r3           with c3
+          the last matrix  
+ch7   226       -2              0.1               0, 1
+ch7   227        2              [1,1,1]           [1,2,1]   
+ch7   227        2              [0                [1  
+ch7   227        5              0.1               0, 1
+ch7   227    Ex. 5              games             game
+
+ch8   229   6                   we can          can we
+ch8   229   8                   it not          it is not
+ch8   230  17                   number          numbers
+ch8   231  -4                   tells that      tells us that
+ch8   232   9                   to with         to do with
+ch8   232  13                   suma            sumo
+ch8   232  -4                   5h + 75         5h - 200
+ch8   232  -4                   6h + 76         6h - 254
+ch8   232  -3                   75              -200
+ch8   232  -3                   76              -254
+ch8   233 -13                   we can          can we
+ch8   234   6 twice             d               dh
+ch8   234   7                   function        functions
+ch8   236  10                   l^1-approach    the l^1-approach
+ch8   238 -10                   solve system    solve a system 
+ch8   239   1                   assumptions on  assumptions of
+ch8   240   4, 10               literature      the  literature
+ch8   240  Ex. 9                p               $p$ 
+                                  (italize p  twice)  
+ch8   240    -6                 12              13
+ch8   240    -4                 13              14
+ch8   241    -4                 A               A^T
+ch8   241    -3                 w               w^T
+ch8   241    -1                   Switch a and b
+ch8   242     5                 A               A^T
+ch8   242     8                 b               a
+ch8   242     8                 a               c
+ch8   243    15                 consider        considered
+ch8   243   -12                 that e          that |e
+ch8   247    11                 etc            , etc
+ch8   247    18                 allowe          allow
+ch8   247   -12,-2              superscript t   superscript T
+ch8   248     4                 ({{             {{
+ch8   248     4                 })              }}
+ch8   248    11                 Maple :        Maple:
+ch8   249     6                 $p=3;$          $p=2;$
+ch8   249    14                 in trash        in the trash
+ch8   250    10                 best$l          best $l
+ch8   250    Remark             $+1/\alpha      $-(-1/\alpha)
+ch8   250    Ex. 14             .               ,
+                         (replace the first four periods by commas)    
+ch8   251    4                  problem ,       problem,
+ch8   251    16                 questions       question
+ch8   251    18                 year            the year
+ch8   251    22                 those           these
+ch8   252   -8                  billions        billion
+ch8   253    16                 Example 24.3    Example 24.4
+ch8   253    17                 $55K            of $55K 
+ch8   253   -14                 from from       from
+ch8   253   -11                 On the top      On top
+ch8   253   -5                  intitial        initial
+ch8   253   -4                  sufficiantly    sufficiently
+ch8   255     6                 liner           linear
+ch8   255    11                 date            data
+ch8   256    -4                 l_p             l^p
+
+ap    259    16               of           
+ap    262   -10               = 0.]             = 0].
+ap    262    -5               otherwize        otherwise
+ap    273    head             A3. ...           A4. ...
+ap    273   -11               to toward         toward
+ap    276    -9               get better        get a better 
+ap    285    head             A6. ...           A5. ...
+ap    285    8,9              ))                 )
+ap    285    9                  -             
+ap    286    1, 2             Pertubation       Perturbation 
+ap    287    head             A6. ...           A7. Goal Programming
+ap    295    -15              sort s            sort  n
+ap    295    -14              n] = m[           i] = n[
+ap    296      6              * and             and
+ap    296    -18              previosly         previously
+ap    296     -5              (11)              (1) 
+ap    297    head             A11. ...          A10. ...
+ap    299     12              Transportation    The transportation 
+
+see the manual at
+
+http://personal.psu.edu/lxv1/LPbook/sol2.ps
+
+and
+
+http://personal.psu.edu/lxv1/LPbook/sol2.pdf
+
+for corrections to pages 305-317.
+
+bibliography, index:
+
+bai    301  [B1]         New York ,          New York, 
+bai    301  [C1]         C.                  C.,
+bai    301  [DL]         .and               . and
+bai    301  [DL]        .  Mathematics      . Mathematics      
+bai    302  [FSS]        Forg               Forgó
+bai    302  [FSS]        Szp                Szép
+bai    303  [K4]        .  Klower           . Klower
+bai    303  [K5]        . ,                 .,
+bai    303  [NC]        .   Cambridge      . Cambridge
+bai    318     assignment problem,,         assignment problem,
+bai    318     Dantzig ,                    Dantzig,
+bai    319     elementary                   elementary
+                 matrices. 51                 matrices, 51
+bai    319     inconsistant                 inconsistent
+bai    319     klein                        Klein
+bai    319     Lagrange multiplies          Lagrange multipliers 
+bai    320     step. 79                     step, 79 
+bai    321     points. 79                   points, 79 
+bai    321     shadow prices, 1144, 146     shadow prices, 144, 146
+bai    321     TCP                          TSP 
+

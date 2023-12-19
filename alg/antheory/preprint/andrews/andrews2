@@ -1,0 +1,1299 @@
+%Ken Ono's revisions to Pat's file owbg1015.tex
+\magnification=\magstep1
+\input amstex
+\documentstyle{amsppt}
+\nopagenumbers
+\leftheadtext{G.E.Andrews, K.Alladi, K.Ono, R.McIntosh}
+\NoBlackBoxes
+\def\pf{\hfill $\square$}
+\def\c{\cite}
+\def\fr{\frac}
+
+\def\sp{\hbox{\kern+.1ex}}
+\def\lowO{\hbox{\lower.6ex\hbox{$\scriptstyle 0$}}}
+\def\lowl{\hbox{\lower.6ex\hbox{$\scriptstyle 1$}}}
+\def\low2{\hbox{\lower.6ex\hbox{$\scriptstyle 2$}}}
+\def\lowd{\hbox{\lower.6ex\hbox{$\scriptstyle d$}}}
+
+\topmatter
+\title
+On the Work of Basil Gordon
+\endtitle
+
+\author
+by  \\
+\ \ \\
+Krishnaswami Alladi\footnote{}
+%$^{\text{(1)}}$, 
+George E. Andrews\footnote{Supported by the National Science Foundation, Grant DMS \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+%$^{\text{(2)}}$
+Ken Ono\footnote{Supported by a Guggenheim Fellowship, a Packard Fellowship, a Romnes Fellowship, and Grants from the National Science Foundation \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ } 
+%$^{\text{(3)}}$
+and Richard J. McIntosh\footnote{Supported by the Natural Sciences and Engineering Research Council of Canada}
+%$^{\text{(4)}}$
+\endauthor
+
+
+\abstract
+A review is given of several aspects of the work of Basil Gordon. These include:  Rogers-Ramanujan identities, plane partitions, the method of weighted words, modular forms and partition congruences, and the asymptotics of partitions and related $q$-series.
+\endabstract
+ 
+
+%\thanks The third author is grateful for the generous support of
+%a Guggenheim Fellowship, a Packard Fellowship,
+%a Romnes Fellowship, and grants from
+%the National Science Foundation.
+%\endthanks
+
+\endtopmatter
+
+\hsize=5in
+\vsize=6.9in
+
+\document
+
+%\footnote"{}"
+%{$^{\text{(1)}}$Partially supported by National Science
+%Foundation Grant DMS-9206993.}
+
+\baselineskip 20pt
+
+\subhead 1.  \ Introduction  \endsubhead
+
+Basil Gordon (along with Bruce Rothschild) edited the Journal of Combinatorial Theory (A) for 32 years.  In this paper, we shall consider several of the many contributions made by Basil Gordon to combinatorics apart from his leadership with Bruce Rothschild in building the Journal of Combinatorial Theory (A) into the world's premier combinatorics journal.
+
+An exercise of this nature will undoubtedly fall short of what it might be.  This is especially true for someone like Basil Gordon who has obtained deep results in a variety of areas of number theory.  His papers purely on algebra and analysis will receive much less attention than they deserve.  However, we believe that the topics we cover here represent works by Gordon that have dramatically influenced mathematical research and affected many careers including each of ours.
+
+This tribute to Gordon is organized as follows:  Section 2 will look at two early Gordon papers on the Rogers-Ramanujan identities.  Section 3 will build on this work to discuss the Alladi-Gordon method of weighted words. Section 4 looks at the series of pathbreaking papers on plane partitions.  As mentioned earlier, Gordon has done much deep work in analysis often involving questions touching analytic number theory; Section 5 considers some of the asymptotic methods developed in the collaboration of McIntosh and Gordon.  Section 6 provides an account of some of the congruence and divisibility theorems
+which are due to Gordon and some of his collaborators.
+The final section concludes with a few comments about some other work.
+
+
+\subhead
+2 \  Rogers-Ramanujan Identities
+\endsubhead
+
+Gordon published two absolutely pathbreaking papers \cite{29}, \cite{32} in the 1960's that led the way to tremendous subsequent developments.  By far the most important paper was \cite{21} which was devoted to the following:
+\proclaim
+{Theorem}  Let $A_{k,a}(n)$ denote the number of partitions of $n$ into parts $\not\equiv 0, \pm \, a \pmod {2k+1}$. Let $B_{k,a} (n)$ denote the number of partitions of $n$ of the form $b_1 + b_2 + \cdots + b_s$, where $b_i \geqq b_{i+1}, b_i - b_{i+k-1} \geqq 2$, and at most $a-1$ of the $b_i$ are equal to $1$.  Then for each $n\geqq 0$ and $1 \leqq a \leqq k$,
+$$
+A_{k,a}(n) = B_{k,a}(n).
+$$
+\endproclaim
+
+The cases $k=2, a=1, 2$ are the celebrated Rogers-Ramanujan identities.  In historical context, this result is absolutely revolutionary.  In the mid 1940's, D.H. Lehmer \cite{45} and H.L. Alder \cite{1} had proved theorems showing that certain seemingly natural ways to generalize the Rogers-Ramanujan identities were impossible.  Of course, while Lehmer and Alder only closed off some possibilities, the general belief was that it was impossible to extend the Rogers-Ramanujan identities.  Indeed, this sentiment was explicitly expressed by H. Rademacher \cite{50} in describing the Rogers-Ramanujan identities:
+
+%\midinsert
+\block
+%\narrower\narrower
+\noindent \llap{``}
+{\it The unexpected element in all these cases is the association of partitions of a definite type with divisibility properties.  The left-side in the identities is trivial.  The deeper part is the right side.  It can be shown that there can be no corresponding identites for moduli higher than 5.  All these appear as wide generalizations of the old Euler theorem in which the minimal difference between the summands is, of course, 1.  Euler's theorem is therefore the nucleus of all such results.''}
+%\endinsert
+\endblock
+
+Thus Gordon was able to dispel all this pessimism with his fabulously beautiful theorem.
+
+In \cite{32}, Gordon was able to fill a gap in the characterization theorem of Alder \cite{1}.  Namely, Alder proved that if $C_d(n)$ denotes the number of partitions of $n$ of the form $b_1 + b_2 + \cdots + b_s$, where $b_i - b_{i+1} \geqq d$ with strict inequality if $d\mid b_i$, then for $d > 3$, there is no set of integers $S_d$ such that $C_d(n)$ always equals the number of partitions of $n$ into elements of $S_d$.  Alder's motivation lay in the fact that
+$$
+S_3 = \{n\mid n \equiv \pm \; 1 \pmod {6}\}.
+$$
+It is immediate by the first Rogers-Ramanujan identity ($k=a=2$ of Gordon's theorem), that
+$$
+S_1 = \{n\mid n \equiv \pm \; 1 \pmod {5}\}.
+$$
+
+The unanswered question is: does $S_2$ exist?  In \cite{32}, Gordon proved that
+$$
+S_2 = \{n\mid n \equiv \pm \; 1,  4 \pmod {8}\}.
+$$
+While the first published proof of this theorem appeared in 1965, Gordon already knew the result in 1961 when he spoke at the International Congress \cite{28}.  
+This result had been found earlier by Heinz G\"ollnitz \cite{27} who did not publish his discovery until 1967 \cite{28}.  The theorem has a companion and the two identities together have become known as the G\"ollnitz-Gordon identities. Gordon's proof is quite different from G\"ollnitz's and is based on two identities in L.J. Slater's \cite{53} compendium of identities of the Rogers-Ramanujan type.  This and other identities in \cite{32}  were important in that they drew attention to the immense combinatorial possibilities latent in the extensive $q$-series literature on Rogers-Ramanujan type identities.
+
+This early work by Gordon kindled work in what is now a flourishing field. There are extensive surveys of these achievements in \cite{2}, \cite{15}.
+
+Gordon indicates in \cite{29} his interest in a related identity of Schur \cite{52}. This eventually led to his extensive collaboration with K. Alladi, and this novel and powerful work will be described in the next section.
+
+
+\subhead
+3 \  The Method of Weighted Words
+\endsubhead
+
+The Rogers-Ramanujan identities and Gordon's generalization described in Section 2 presaged an extensive collaboration by Gordon with one of us (Alladi) on how one might effectively study partition identities combinatorially.
+
+This collaboration began in 1989 when Gordon explained his philosophy that various well known Rogers-Ramanujan type identites that could be {\it refined} (this term is explained below) are to be first formulated abstractly as relations among colored integers expressed in terms of words formed with certain gap conditions, and then the specific partition identity is to be viewed as emerging from this abstract form under certain {\it dilations} and {\it translations}.  More specifically, the dilations and translations yield the moduli and residue classes pertaining to the partition theorem one begins with.  This philosophy gave birth to {\it the method of weighted words} that Gordon and Alladi first used \cite{10} to generalize and refine Schur's celebrated partition theorem of 1926 \cite{52}, and then to obtain several new companions to Schur's theorem \cite{11}.  Subsequently, Alladi, Andrews and Gordon \cite{8}, \cite{9}, improved the method not only to generalize and refine the deep partition theorem G\"ollnitz \cite{28}, but also that of Capparelli \cite{21}, \cite{22}, that arose in a study of vertex operators in Lie Algebras.
+
+Perhaps the best example of a partition identity that can be refined is that of Schur \cite{52}:
+
+\proclaim
+{Theorem S}
+Let $S(n)$ denote the number of partitions of $n$ into distinct parts $\equiv \pm \; 1 \pmod {3}$. Let $S_1(n)$ denote the number of partitions of $n$ into parts differing by $\geqq 3$ and such that there are no consecutive multiples of $3$.  Then
+$$
+S(n) = S_1(n).
+\tag{3.1}
+$$
+\endproclaim
+
+Gleissberg \cite{26} showed that Theorem S could be refined to
+$$
+S(n;k) = S_1(n;k),
+\tag{3.2}
+$$
+where $S(n;k)$ and $S_1(n;k)$ enumerate partitions of the type counted by $S(n)$ and $S_1(n)$ with the additional restriction that there are precisely $k$ parts and the convention that parts $\equiv 0 \pmod {3}$ are counted twice.  Bressoud \cite{20} has given a nice combinatorial proof of Theorem S based on this refinement.
+
+Gordon's 1989 observation is that one really ought to think of Schur's theorem in a more general setting as follows:  First consider the infinite product
+$$
+\prod^{\infty}_{m=1} (1+ aq^m)(1+bq^m).
+\tag{3.3}
+$$
+The generating function of a two parameter refinement of $S(n)$ can be obtained from the product in (3.3) by the transformations
+$$
+\cases (\text{dilation}) \; q \mapsto q^3, \\
+    (\text{translations}) \; a \mapsto aq^{-1}, b \mapsto bq^{-2},
+\endcases
+\tag{3.4}
+$$
+which yields
+$$
+\prod^{\infty}_{m=1} (1+ aq^{3m-2})(1+bq^{3m-1}).
+\tag{3.5}
+$$
+Note that this is already stronger than Gleissberg's refinement, because here the powers of $a$ and $b$ represent the number of parts of $S(n)$ in each of the residue classes $1 \pmod {3}$ and $2 \pmod {3}$ respectively.  The problem then is to have a meaningful series expansion of the product in (3.3) that would lead to a partition function whose parts satisfy difference conditions that would translate to those defining $S_1 (n)$ by applying the transformations (3.4).
+
+To this end, Alladi and Gordon [10] considered integers $n \geq 2$ that occurred in three colors - two primary colors $a$ and $b$, and one secondary color $ab$.  The integer $1$ will occur only in the two primary colors. Now let $a_n, b_n$, and $ab_n$ denote the integer $n$ occurring in the color $a, b$, and $ab$ respectively.
+
+Next in order to discuss partitions, an ordering of the colored integers was required and the one chosen was
+$$
+\text{Scheme 1}: \qquad a_1 < b_1 < ab_2 < a_2 < b_2 < ab_3 < a_3 <b_3 < \cdots
+\tag{3.6}
+$$
+The reason for this choice is that (3.4) correspond to the substitutions
+$$
+a_j = 3j-2, \quad  b_j = 3j-1, \quad ab_j = 3j-3,
+\tag{3.7}
+$$
+and so the $a_j$ and $b_j$ for $j \geq 1$ and $ab_j$ for $j \geq 2$ represent all positive integers in the natural order in the residue classes $1, 2$ and $3 \pmod {3}$ respectively.  The transformations in (3.7) are called the {\it standard transformations} for Schur's theorem.
+
+Next consider partitions $\pi : e_1 + e_2 + \cdots + e_{\nu}$, where the $e_i$ are symbols from Scheme 1 such that the gap between the symbols is $\geq 1$ with the added restriction that the gap between $e_{\ell}$ and $e_{\ell+1}$ is $> 1$ if
+$$
+\cases  e_{\ell} \text { is an $a$-part and $e_{\ell+1}$ is a $b$-part}, \\
+    \text{or if $e_{\ell}$ is an $ab$-part}.
+\endcases
+\tag{3.8}
+$$
+Call such a partition $\pi$ a Type 1 partition.  Thus Type 1 partitions are certain words formed with these symbols with conditions on the weights (subscripts).  Hence the name {\it the method of weighted words}.  The definition of Type 1 partitions might seem a bit artificial, but under the standard transformations the gap conditions (3.8) translate to the difference conditions of the partition function $S_1(n)$ in Theorem S.  More importantly, Type 1 partitions are interesting because their generating function has the following elegant form as proved in \cite{10}.
+
+\proclaim
+{Lemma}  Let
+$$
+G=G(i,j,k) = \sum_k a^{\sigma(\pi)}
+$$
+be the generating function of all Type 1 partitions $\pi$ for which $\nu_a(\pi) = i, \nu_b(\pi) =j$ and $\nu_{ab}(\pi) = k$.  Then
+$$
+G=\frac{q^{T_{i+j+k}+ T_k}}{(q)_i (q)_j (q)_k}.
+$$
+\endproclaim
+
+To prove the lemma, first consider the generating function $H (i, j, k)$ of all minimal Type 1 partitions with $i$ $a$-parts, $j$ $b$-parts and $k$ $ab$-parts.  It is possible to show that
+$$
+H=H(i, j, k) = q^{T_{i+j+k}+T_k} \bmatrix i+j+k \\ i, j, k \endbmatrix
+\tag{3.9}
+$$
+by induction on the length $i+j+k$ of the word, and standard recurrences for $q$-multinomial coefficients. The formula for the generating function $G$ follows from (3.9) because of the relation
+$$
+G(i,j,k) = \frac{H(i,j,k)}{(q)_{i+j+k}}.
+\tag{3.10}
+$$
+
+Once $G$ is determined, we are able to obtain the following analytic identity which yields a generalized and refined form of Schur's theorem:
+$$
+\sum_{r,s} a^r b^s \sum_{0\leq m \leq \min (r,s)} \frac{q^{T_{r+s-m}+T_m}}{(q)_{r-m} (q)_{s-m} (q)_m} = \sum_{r,s} \frac{a^r b^s q^{T_r + T_s}}{(q)_r (q)_s} = (-aq)_{\infty} (-bq)_{\infty}.
+\tag{3.11}
+$$
+
+In view of this, (3.11) is called the {\it key identity} for Schur's theorem.  It was the first time Schur's theorem was formulated in terms of an analytic identity.  Also, it was the first time a fundamental connection between Schur's theorem and the $q$-multinomial coefficients was established.
+
+This approach to Schur's theorem had several important consequences, one of which was to generate five companion partition identities. We now describe this briefly.
+
+In 1971, while using a computer to search for Rogers-Ramanujan type identities, Andrews \cite{14} found the following companion to Theorem S:
+
+\proclaim
+{Theorem A} Let $S_2 (n)$ denote the number of partitions of $n$ in the form $b_1+b_2+\cdots$, such that $b_i-b_{i+1} \geq 3, 2$ or $5$ depending on $b_i \equiv 1, 2$ or $3\pmod{3}$.  Then $S_1(n) = S_2(n)$
+\endproclaim
+
+Andrews' proof of Theorem A was similar to his proof of Theorem S.  But the exact connections between Theorems A and S were not clear. The approach by the method of weighted words shed light on the precise connections between the two results.
+
+Recall that we needed an ordering for the colored integers, and for certain reasons given above, we chose Scheme 1. We could have chosen any other ordering, for instance,
+$$
+\text{Scheme 2}: \qquad a_1 < ab_2 < b_1 <a_2 < ab_3, b_2 < \cdots
+$$
+If we used this scheme and defined Type 2 partitions similarly, we would then see that Type 2 partitions, under the standard transformations, become the partitions enumerated by $S_2(n)$. This then yields a bijective correspondence between the partitions enumerated by $S_1(n)$ and $S_2(n)$ (see \cite{11}).  Having noted that Theorem A emerges by merely using a different ordering of the symbols, it was natural to ask the question whether other companions to Theorem S emerge from other orderings, and indeed they do. More precisely, there are six orderings of the starting symbols
+$$
+a_1, b_1, ab_2,
+$$
+and so there are six schemes. Scheme 1 corresponds to Theorem S and Scheme 2 to Theorem A. In \cite{11} there are four new companions to Schur's theorem that were not detected by the computer search.  What is more, it is shown in \cite{11} that Schur's theorem and its five companions correspond to the six fundamental recurrences for the $q$-multinomial coefficients
+$$
+\bmatrix
+i+j+k \\  i, j, k
+\endbmatrix.
+$$
+
+Thus the method of weighted words not only provided a generalization of Schur's theorem, but also a fresh insight by yielding the companions. In addition, the method established fundamental connections with the $q$-multinomial coefficients.
+
+Gordon with Alladi decided next to attempt to understand the deep partition theorem of G\"ollnitz \cite{28} (Theorem G below) from the point of view of the method of weighted words.
+
+\proclaim
+{Theorem G} Let $C(n)$ denote the number of partitions of $n$ into distinct parts $\equiv 2, 4$ or $5 \pmod{6}$.
+
+Let $D(n)$ denote the number of partitions of $n$ in the form $h_1 + h_2 +\cdots + h_{\nu}$, such that $h_{\nu}\ne 1$ or $3$, $h_i - h_{i+1} \geq 6$ with strict inequality if $h_i \equiv 6, 7$ or $9 \pmod{6}$.  Then
+$$
+C(n) = D(n).
+$$
+\endproclaim
+
+The idea here was to start with the triple product
+$$
+\prod^{\infty}_{m=1} (1+ aq^m)(1+bq^m)(1+cq^m)
+\tag{3.12}
+$$
+and to think of a three parameter refinement of the partition function $D(n)$ in Theorem G as emerging from (13) under the transformations
+$$
+\cases
+(\text{dilation}) \; q \mapsto q^6, \\
+(\text{translations}) \; a \mapsto aq^{-4}, b\mapsto bq^{-2}, c \mapsto cq^{-1}.
+\endcases
+\tag{3.13}
+$$
+
+The real problem here was to determine a meaningful series expansion for this triple product, one that would have a combinatorial interpretation as the generating function of partitions given by colored integers satisfying certain gap conditions, and these partitions under the transformations (3.12) should correspond to the partitions enumerated by $C(n)$ in Theorem G.  The experience Gordon and Alladi had with Schur's theorem helped to determine such a partition function.
+
+From this point on, the theory blossomed. More than a dozen papers (see \cite{3}-\cite{12}) have been the outgrowth of this beautiful insight by Gordon.  Among these perhaps the most surprising is the intricate and difficult extension of G\"ollnitz's theorem \cite{7}.
+
+Why is G\"ollnitz's theorem so much more difficult to prove than Schur's theorem?  One reason is that whereas Schur's theorem involves the complete alphabet of non-zero colors that can be formed with two primary colors $a, b$, G\"ollnitz's theorem involves only an incomplete list of colors formed with three primary colors $a, b, c$ because the ternary color $abc$ is dropped.  In his 1971 computer search for identities of Rogers-Ramanujan type, Andrews \cite{14} asked whether there exists an identity that goes beyond G\"ollnitz's theorem.  Actually, the precise formulation of this problem came only after the method of weighted words, namely whether there exists a partition theorem emerging from the expansion of the infinite quadruple product
+$$
+\prod^{\infty}_{m=1} (1+ aq^m)(1+bq^m)(1+cq^m)(1+dq^m)
+\tag{3.14}
+$$
+that would reduce to (3.12) when we set $d = 0$.  Gordon and Alladi worked initially on this problem but without success.  This problem was solved only recently with the input of Alexander Berkovich, and the full proof of the new partition identity and the key identity corresponding to the expansion of the quadruple product (3.14) is given in \cite{7}.  Although Gordon was not an author in this paper, this difficult problem of Andrews was solved using Gordon's philosophy - namely, the method of weighted words.
+
+\subhead
+4 \  Plane Partitions Section on B. Gordon
+\endsubhead
+
+Gordon's work on plane partitions is truly remarkable. This topic originated in the work of P.A. MacMahon at the turn of the twentieth century. MacMahon's work was little understood at the time. Consequently decades passed with little attention being paid to this subject.
+
+In the early 1960's, Gordon started his investigations that foreshadowed his subsequent pathbreaking work with his student Lorne Houten. His first paper \cite{30} was entitled, Two New Representations of the Partition Function, and contained two theorems on two-rowed plane partitions. Now a plane partition of $n$ (as opposed to ordinary or linear partitions as described in the previous section) is a left justified array of non-negative integers whose sum is $n$. For example, there are thirteen plane partitions of 4.
+$$
+\matrix
+\format\l && \quad \l \\
+4 & 31 & 3 & 22 &2  & 211 & 21 & 2 & 1111 & 111 & 11 & 11 & 1 \\
+ && 1 & &2 & &1 & 1 &&1 &11 & 1 &1 \\
+&&&&&& &1  &&&& 1 & 1 \\
+&&&&&&&&&&&& 1
+\endmatrix
+$$
+Of these, ten are restricted to two rows.
+
+In \cite{30}, Gordon proved the following:
+
+\proclaim
+{Theorem BG1}  The number of two-rowed partitions of $n$ with strict decrease on each row is $p(n)$.
+\endproclaim
+
+\proclaim
+{Theorem BG2}  The number of two-rowed partitions of $n$ with odd parts and strict decrease on each row is $p(\lfloor \frac{n}2\rfloor)$.
+\endproclaim
+
+Inspecting the plane partitions of 4, we see five partitions of the type deacribed in Theorem 1 (namely \ $\matrix 4; &31, &3, &2, &21 \\ & & 1 & 2 & 1 \endmatrix$) and two of the type described in Theorem 2 (namely \ $\matrix 31 \text{ and} & 3 \\ &  1 \endmatrix$).  These observations are, of course, consistent with the facts that $p(4) = 5$ and $p(2) = 2$.
+
+In light of his subsequent discoveries, on plane partitions, we might suggest that these are minor results.  However, historically these theorems are very important; they really got Gordon on the road to his great work in plane partitions. The bulk of his work lies in six joint papers \cite{34}--\cite{40} with Lorne Houten under the title Notes on Plane Partitions. The first paper in the series extends the basic idea in the above Theorem BG1. Now Gordon and Houten consider
+$$
+B_k (q) = \sum^{\infty}_{n= s} b_k (n) q^n,
+$$
+where $b_k(n)$ is the number of $k$-rowed partitions of $n$ whose nonzero parts descrease strictly along each row.  The second paper determines an infinite product representation for $B_k(q)$.
+$$
+B_k(q) = \prod^{\infty}_{n=1} (1-q^n)^{-\lfloor\frac{k}2\rfloor} \prod^{\infty}_{m=1} (1-q^{2m-1})^{-2\{\frac{k}2\}} \prod^{k-2}_{\nu=1} (1-q^{\nu})^{\lfloor\frac{k-\nu}2\rfloor}
+$$
+Even more importantly, the Pfaffian method, which has been used so successfully in subsequent researches on plane partitions, is introduced in this second paper.  The main result on Pfaffian's is their
+\proclaim
+{Lemma 1}  Let $\{a_n\}$, $-\infty < n < \infty$, be a sequence of independent variables. Put $s = \sum a_n$ and $c_{\nu} = \sum_n a_n a_{n+\nu}$. If $n > 0$, let
+$$
+d_n = c_0 + 2 (c_1 +\cdots + c_{n-1}) + c_n;
+$$
+define $d_0 = 0$ and $d_{-n}= -d_n$.  Let $g_1,\cdots, g_k$ be given integers. Then for even $k$, the infinite series
+$$
+\sum_{h_1 > \cdots > h_k}  \det (a_{g_i+h_j})
+$$
+is equal to the Pfaffian of the skew-symmetric $k \times k$ matrix $D_k = (d_{g_j - g_i})$.
+
+For odd $k$, it is equal to the Pfaffian of the $(k+1) \times (k+1)$ matrix
+$$
+D'_k = \pmatrix 0 & s \\ -s & D_{k-1} \endpmatrix
+$$
+obtained by bordering $D_{k-1}$ with a row of $s$'s, a column of $-s$'s, and a zero.
+\endproclaim
+The proof runs nearly six pages.  In recent years, the role of Pfaffian's in combinatorics is widespread. Both S. Okada \cite{48} and S. Stembridge \cite{55} have used the Pfaffian method to solve deep problems on plane partitions.
+
+Paper III is devoted to the asymptotics of $b_k (n)$ and follows the methods of E.M. Wright.
+
+The fourth paper has received less subsequent study than the others in this series which is unfortunate. Its primary focus is
+$$
+C_k(q) = \sum^{\infty}_{n=0} C_k (n) q^n,
+$$
+where $C_k(n)$ is the number of $k$-rowed partitions of $n$ whose nonzero parts decrease strictly along each column.  Quite surprising the closed form found for $C_k(q)$ not only involves not only familiar, classical infinite products but also the false theta function
+$$
+\sum^{\infty}_{n=0} (-1)^n q^{n(n+1)/2}.
+$$
+
+Paper V is again pathbreaking.  In it, Gordon and Houten begin the study of plane partitions under certain symmetry conditions. The results are striking and indeed foreshadow Gordon's \cite{33} eventual proof of the Bender-Knuth conjecture.  While \cite{33} appeared in 1983, the work was done by Gordon prior to 1971 and is described by Stanley in his survey on plane partitions \cite{54}.
+
+A gap of nearly 8 years exists between the appearance of paper V and paper VI. Paper VI undertakes the examination of plane partitions where difference conditions are specified between parts.  This is a really tough problem, and it is quite surprising that they were able to find results relating instances of the two-dimensional problem to the related one-dimensional generating functions.  The final paper (unnumbered) in the Gordon-Houten series \cite{40} appeared in 1980 now treating multirowed partitions with totally distinct parts.
+
+There are other papers by Gordon that should be mentioned in this section. Multipartite partitions formed the topic of \cite{31}, and therein Gordon proved a conjecture of E.M. Wright \cite{57}, \cite{58} and extended a theorem of Carlitz \cite{24}. Also in the early 1960's, Gordon and Cheema \cite{23} laid the groundwork for future combinatorial studies of plane partitions restricting themselves to the two and three row case (cf. Atkin \cite{17}).
+
+It should be stressed that these achievements are truly wonderful. They have inspired many to study plane partitions deeply and seriously.  Apart from MacMahon who founded the subject, no one has been more influential or had a greater impact on the study of plane partitions than Basil Gordon.
+
+
+\subhead 5\ 
+Asymptotics Methods
+\endsubhead
+
+
+%\noindent
+%{\bf 5. Asymptotic Methods.}
+%\bigskip
+
+Asymptotics played a major role in the dissertation work of several of
+Gordon's graduate students, including Brenner and McIntosh. Brenner \cite{19}
+used the Mellin inversion formula and methods of Meinardus \cite{47} to prove that
+ if $p(n|S)$ is the number of partitions of $n$ into elements of a set $S$, then as $t\to 0^{\scriptscriptstyle +}$,
+$$
+\sum_{n=0}^\infty p(n|S)e^{-nt}\sim \exp\bigg\{{\pi^2A\over6\sp t}+D'(0)
+-D(0)\ln t\bigg\}
+\tag{5.1}
+$$
+provided
+$$
+D(s)=\sum_{\nu\in S}\nu^{-s},
+$$
+where $s$ is a complex variable, can be analytically continued to some half 
+plane Re$\,s\ge-c$ with $0<c<1$, and has a pole of residue $A$ at 
+$s=1$. 
+
+Unfortunately, the methods of Meinardus give only a few terms in the 
+asymptotic expansion of certain $q$-series.  To find new mock theta functions 
+ more terms in the asymptotic expansions of 
+$q$-series are required.
+
+In his dissertation, McIntosh obtained asymptotic formulas for binonial
+sums by estimating the sum of the terms in the neighbourhood of the greatest
+term.  Gordon encouraged McIntosh to modify his method to obtain the complete
+asymptotic expansion of the $q$-series
+$$
+\sum_{n=0}^\infty{a^nq^{bn^2+cn}\over(q)_n}\,,
+$$
+where $a$, $b$ and $c$ are constants, $q=e^{-t}$ and 
+$t\to 0^{\scriptscriptstyle +}$.  Under certain conditions on the constants
+$a$ and $b$ a complete asymptotic expansion was obtained by McIntosh.
+The asymptotic expansion of $q$-factorials can be expressed in terms of
+Bernoulli polynomials and polylogarithm functions 
+defined by 
+$$
+Li_n(x)=\sum_{k=1}^\infty{x^k\over k^n}\,.
+$$
+In \cite{46} the following theorem was proved.
+\medskip
+
+\noindent
+{\bf Theorem.}\ \ {\it Let $a$, $b$, $c$, and $q$ be real numbers
+with $a>0$, $b>0$ and $|q|<1$.  Let $z$ denote the positive root of
+$\,az^{2b}+z-1=0$.  When $q=e^{-t}$ and $t\to 0^{\scriptscriptstyle +}$
+we have for each nonnegative integer $p$,
+$$
+%\eqalignno{
+%\eqalign{
+\align
+\log\sum_{n=0}^\infty{a^nq^{bn^2+cn}\over(q)_n}&=
+\big\{{\text{ Li}}\low2(1-z)+b\log^2\!z\big\}t^{-1}
++c\log z-{1\over 2}\log\{z+2b(1-z)\}\cr&\cr 
+&{\hskip1.1truecm}
++\sum_{k=1}^pR_k(b,c,z)\,t^k
++O(t^{p+1})\,, \tag{5.2}
+\endalign
+$$
+where $R_1,R_2,\ldots,R_p$ are rational functions of $\,b$, $c$ and $z$.}
+%\vfill
+%\eject
+
+Watson \cite{56, p. 60} defined the function $G_{\mu}(q)$ by
+$$
+G_{\mu}(q)=\sum_{n=0}^\infty{q^{n(n+\mu)}\over(q)_n}\,.
+$$
+By Theorem~1 (with the aid of computer algebra) it follows that
+$$
+%\eqalignno{
+%\eqalign{
+\align
+G_{\mu}(q)
+&=\sqrt{2\over\sp 5-\sqrt{5}\sp}\ \bigg({\sqrt{5}-1\over 2}\bigg)^{\!\mu}\,
+\exp\bigg\{{\pi^2\over 15\sp t}+\bigg({{15\mu^2-3\mu-1}\over{60}}
+-{{\mu\sp(\mu-1)}\over{20}}\sqrt{5}\bigg)\sp t\cr&\cr
+&{\hskip 1.5truecm}
+-\mu\sp(\mu-1)\bigg({1\over{50}}+{{2\mu-1}\over{300}}\sqrt{5}\bigg)
+\sp t^2\cr&\cr
+&{\hskip 1.5truecm}
+-\mu\sp(\mu-1)\bigg({{2\mu-1}\over{500}}
++{{\mu^2-\mu+6}\over{3000}}\sqrt{5}\bigg)\sp t^3\cr&\cr 
+&{\hskip 1.5truecm}
++\mu\sp(\mu-1)\sum_{k=4}^9R_k(\mu)t^k+O(t^{10})\bigg\}\,, \cr
+\tag{5.3}
+\endalign
+$$
+where $\mu$ is any real number and the $R_k$ are polynomials over the field
+${\bold Q}(\sqrt{5})$.  This extends Watson's asymptotic formula for 
+$G_{\mu}(q)$.  Gordon observed that Watson's asymptotic formula is justified
+only for integral values of $\mu$ since it was obtained from the difference 
+equation
+$$
+G_{\mu}(q)=G_{\mu+1}(q)+q^{\mu+1}G_{\mu+2}(q),
+$$
+combined with the asymptotic values of the Rogers-Ramanujan functions 
+$G(q)=G\lowO(q)$ and $H(q)=G\lowl(q)$.  The asymptotic values of $G(q)$ and 
+$H(q)$ can easily be obtained from modular transformation formulas.
+Examining the tail of (3) we see that $G_{\mu}(q)$ cannot be a theta
+function (in the Euler sense), or even a mock theta function, unless $\mu=0$
+or 1.
+
+In \cite{56, p. 59} Watson puts $q=e^{-t}$ and observes that is easy to 
+obtain a first approximation to the value of the function when $t$ is small 
+by the method of estimating the sum of the terms in the neighbourhood of the 
+greatest term of the series, but further terms in the asymptotic expansion 
+cannot be determined very satisfactorily in this manner [without computer 
+algebra].  He goes on to say that perhaps this method played a larger part 
+in Ramanujan's work than his own studies of the subject would suggest.
+
+Asymptotics has played a major role is the search by Gordon and McIntosh 
+\cite{44} for new mock theta functions.  Gordon and McIntosh have observed that
+all of the known mock theta functions are related to a $q$-series of the 
+type
+$$
+F(\lambda,r,q)=\sum_{n=-\infty}^\infty
+{(-1)^nq^{\lambda n(n+1)}\over 1-q^{n+r}},
+$$
+where $\lambda=1$ or ${3\over2}$ and $r$ is a rational number.  For
+$\lambda=1$ and $\lambda={3\over2}$ the modular transformation formula for
+$F(\lambda,r,q)$ was obtain by McIntosh using asymptotic and numerical
+methods.  The transformation formula for $F({3\over2},r,q)$ was proved
+by Gordon using contour integration.  Most recently, McIntosh modified
+Gordon's proof to obtain the following transformation formula for
+$F(\lambda,r,q)$ with $\lambda={k\over2}$, where $k$ is any positive integer.
+If we let $q=e^{-\alpha}$ with $\alpha>0$ and ${\displaystyle 
+q_{\lowl}=e^{-\pi^2\!/\alpha}}$, then
+$$
+q^{\lambda r(1-r)}F(\lambda,r,q)={\pi\over\alpha}\csc(\pi r)\,
+G(\lambda,r,q_{\lowl}^4)-\!\!\sum_{m=1}^{2\lambda-1}
+\theta\lowl\!\Big({m\pi\over2\lambda},q_{\lowl}^{1\over\lambda}\Big)
+L(\lambda,m,r,\alpha)\,,
+\tag{5.4}
+$$
+where
+$$
+G(\lambda,r,q)=\sum_{n=-\infty}^\infty{(-1)^{2\lambda n}(2-2\cos 2\pi r)
+q^{n(\lambda n+{1\over2})}\over 1-2q^n
+\cos 2\pi r+q^{2n}}\,,
+$$
+the Jacobi theta function $\theta_1$ is defined by
+$$
+\theta_1(z,q)=2q^{1\over4}\sum_{n=0}^\infty(-1)^nq^{n(n+1)}\sin(2n+1)z\,,
+$$
+and the Mordell integral $L$ is given by
+$$
+L(\lambda,m,r,\alpha)=\int_0^\infty\!\!\!e^{-\lambda\alpha x^2}
+{\cosh(2\lambda r-m)\alpha x\over\cosh\lambda\alpha x}\,dx\,.
+$$
+ 
+
+\subhead 6\ Congruences for coefficients of modular forms
+and partition functions
+\endsubhead
+
+Although Gordon did not publish many papers on
+the congruence properties of
+partition functions and modular form coefficients, he made fundamental
+contributions which have inspired a recent resurgence in the area
+(for example, see Chapter 5 of \cite{49}).
+In particular, the third author owes him a great debt for
+introducing him to the beautiful Serre and Swinnerton-Dyer theory
+of $\ell$-adic  Galois representations
+which has been at the forefront of contemporary arithmetic
+algebraic geometry and number theory.
+
+It is clear that Ramanujan's work on the partition function $p(n)$
+and the tau-function $\tau(n)$ motivated much of Gordon's work in the area.
+As usual, let $p(n)$ denote the number of partitions of an integer $n$.
+Euler demonstrated that the generating function for $p(n)$ is
+given by the delightfully simple infinite product
+$$
+\sum_{n=0}^{\infty} p(n)x^n =\prod_{n=1}^{\infty}
+\frac{1}{1-x^n}=1+x+2x^2+3x^3+5x^4+\cdots.
+$$
+After a moment's reflection on the combinatorial definition of the partition
+function and the form of this generating function,
+we have no particular reason to believe that it possesses any interesting
+arithmetic properties.
+There is nothing, for example,
+which would lead us to think  that $p(n)$ should exhibit a preference to be
+even rather than odd.
+A natural suspicion, therefore, might be that the values of $p(n)$ are
+distributed evenly modulo $2$.
+A quick computation of the first  10,000  values    confirms this suspicion;
+of these  10,000
+values exactly  4,996  are even and  5,004  are odd.
+
+
+However, something quite different happens modulo $5, 7$ and $11$.
+For example, we find that many more than the expected one-fifth of the
+first 10,000 values of $p(n)$ are divisible by $5$.
+What is the explanation for this aberration?
+The answer follows from  Ramanujan's
+ground-breaking discoveries on the arithmetic of
+$p(n)$.
+Here is his own account \cite{51}.
+\block
+  ``\it I have proved a number of arithmetic properties
+of  p(n)...in particular that
+$$\align
+   &p(5n+4)\equiv 0 \pmod 5,   \\
+    &p(7n+5)\equiv 0 \pmod 7.
+\endalign
+$$
+...I have since found another method which enables me to prove
+all of these properties and a variety of others, of which the most
+striking is
+$$
+   p(11n+6)\equiv 0 \pmod {11}.
+$$
+There are corresponding properties in which the moduli are
+powers of $5, 7$, or $11$...
+It appears that there are no equally simple properties for any
+moduli involving primes other than these three."
+\endblock
+
+
+Ramanujan proved these congruences in   a series of  papers (the  proofs
+of the congruences modulo $5$ and $7$
+are quite ingenious but are  not  terribly difficult, while
+the proof of the  congruence  modulo $11$  is much     harder).
+He also sketched proofs of extensions of these congruences;
+for example,
+$$\gather
+p(25n+24)\equiv 0\pmod {25}, \\
+p(49n+47)\equiv 0\pmod {49}.
+\endgather $$
+Thanks to works of Ramanujan, Atkin, and Watson
+(see {16, 18 , ??]),
+we now know the following theorem.
+
+
+\proclaim{Theorem} If $n$ is an integer and
+$k\geq 1$, then
+$$
+\align
+    p(5^kn+\delta_{5,k})&\equiv 0 \pmod{5^k}\\
+    p(7^kn+\delta_{7,k})&\equiv 0 \pmod{7^{ [k/2]+1}}\\
+   p(11^kn+\delta_{11,k})&\equiv 0 \pmod{11^k} \\
+\endalign
+$$
+where $\delta_{p,k}:=1/24 \pmod{p^k}.$
+\endproclaim
+
+Gordon has always been quite fond of the partition function
+$Q(n)$, which counts the number of partitions of an integer $n$
+into distinct parts. Like the ordinary partition function $p(n)$,
+$Q(n)$ has a simple infinite product generating function
+$$
+\sum_{n=0}^{\infty}
+Q(n)x^n=\prod_{n=1}^{\infty}(1+x^n)=1+x+x^2+2x^3+2x^4+\cdots.
+$$
+Thanks to Gordon and Hughes \cite{41}, it is known that $Q(n)$ also
+satisfies some striking Ramanujan-type congruences. In their work
+they established two beautiful families of such congruences
+including the following theorem.
+
+\proclaim{Theorem} If $k\geq 0$ is an integer, then for every
+integer $n$ with $24n\equiv -1\pmod{5^{2k+1}}$ we have $Q(n)\equiv
+0\pmod{5^k}$.
+\endproclaim
+
+\noindent In related work, Gordon and Hughes \cite{42} obtained
+similar Ramanujan-type congruences for $r_s(n)$, the number of
+representations of an integer $n$ as a sum of $s$ squares.
+
+Partition functions modulo small primes $\ell$ can often be quite
+simple. For example, Euler's Pentagonal Number Theorem implies
+that
+$$
+\sum_{n=0}^{\infty} Q(n)x^n\equiv \prod_{n=1}^{\infty}(1-x^n)\pmod
+2 = \sum_{k=-\infty}^{\infty} (-1)^k x^{(3k^2+k)/2}.
+$$
+In particular, $Q(n)$ is even for almost all $n$.
+
+Motivated by this simple observation, Gordon and Ono 
+investigated the partition functions $b_t(n)$, which count the
+number of partitions of an integer $n$ whose parts are not
+multiples of $t$, with the aim of obtaining a general theorem
+which includes this elementary observation (note. one easily sees
+that $Q(n)=b_2(n)$).
+
+Like $p(n)$ and $Q(n)$ before, the generating function for
+$b_t(n)$ is a simple infinite product:
+$$
+\sum_{n=0}^{\infty} b_t(n)x^n=\prod_{n=1}^{\infty}
+\frac{(1-x^{tn})}{(1-x^n)}.
+$$
+Using the transformation properties of the classical Dedekind
+eta-function
+$$
+\eta(z)=x^{1/24}\prod_{n=1}^{\infty}(1-x^n),
+$$
+where $x:=e^{2\pi i z}$, it turns out that these generating
+functions are essentially Fourier expansions of weight $0$ modular
+functions. Moreover, in special cases these Fourier expansions
+turn out to be the reduction of integer weight cusp forms.
+
+Over the last 35 years, there has been a tremendous amount of
+activity on the arithmetic properties of coefficients of integer
+weight cusp forms. Indeed, Wiles' proof of Fermat's Last Theorem
+depends on a deep correspondence between $L$-functions of elliptic
+curves and Fourier expansions of weight 2 cusp forms. Central to
+his arguments are families of Galois representations associated to
+the division points of an elliptic curve, and Galois
+representations associated to integer weight cusp forms.
+
+Thanks to deep results of Eichler, Shimura, Serre, and Deligne in
+generality, one can now view coefficients of integer weight cusp
+forms as linear combinations of ``traces of Frobenius'' of Galois
+representations. In the special situations alluded to above, the
+$\ell$-adic behavior of the $b_t(n)$ are literally dictated by
+these  representations.  Making ample use of these observations,
+Gordon and the third author employed a powerful theorem of Serre,
+which essentially only depends on the mere existence of these
+$\ell$-adic Galois representations and the Chebotarev Density
+Theorem, to prove the following theorem \cite{43}.
+
+\proclaim{Theorem} Suppose that  $t=p_1^{a_1}\cdots p_m^{a_m}$, where the
+$p_j$ are distinct primes. If $p_i$ is a prime for which $p_i^{a_i} \geq \sqrt{t}$, then for
+every positive integer $j$ we have
+$$
+\lim_{N\rightarrow +\infty} \frac{ \# \{0\leq n < N \ : \
+b_t(n)\equiv 0\pmod{p_i^j}\}}{N}=1.
+$$
+\endproclaim
+
+\subhead 6
+Conclusion
+\endsubhead
+
+Of the almost 75 papers written by Basil Gordon, we have, in this tribute, only referred to 22, fewer than one third.  He has also published on classical analysis, coding theory, group theory, number theory, and tilings, to name a few of his mathematical interests.  As was said at the beginning, this survey is really just a sample of the work of a brilliant, innovative, witty, kind and generous mathematician, Basil Gordon.
+
+
+
+\Refs
+
+\ref
+  \no 1
+  \by  H. L. Alder
+  \paper The nonexistence of certain identities in the theory of partitions and compositions
+  \jour   Bull. Amer. Math. Soc.
+  \vol   54
+  \yr    1948
+  \pages 712--722
+\endref
+
+\ref
+  \no 2
+  \by H. L. Alder
+  \paper Partition identities--from Euler to the present
+  \jour Amer. Math. Monthly
+  \vol 76
+  \yr 1969
+  \pages 733--746
+\endref
+
+\ref
+  \no 3
+  \by K. Alladi
+  \paper A combinatorial correspondence related to G\"olnitz' (Big) partition theorem and applications
+  \jour  Trans. A.M.S.
+  \vol  349
+  \yr   1997
+  \pages 2721--2735
+\endref
+
+\ref
+  \no 4
+  \by K. Alladi
+  \paper On a partition theorem of G\"ollnitz and quartic transformations (with an appendix by B. Gordon)
+  \jour J. Num. Th.
+  \vol 69
+  \yr 1998
+  \pages 153--180
+\endref
+
+\ref
+  \no 5
+  \by K. Alladi and G. E. Andrews
+  \paper A new key identity for G\"ollnitz' (Big) partition theorem
+  \jour  Proc. 10-th Anniv. Ramanujan Math. Soc. Comtemp. Math.
+  \vol  210
+  \yr  1997
+  \pages  229--241
+\endref
+
+\ref
+  \no 6
+  \by K. Alladi and G. E. Andrews
+  \paper A quartic key identity for a partition theorem of G\"ollnitz
+  \jour J. Num. Th.
+  \vol  75
+  \yr  1999
+  \pages 220--236
+\endref
+
+\ref
+  \no 7
+  \by K. Alladi, G. E. Andrews and A. Berkovich
+  \paper A new four parameter partition identity and its partition implications
+  \jour Invent. Math
+  \vol 153
+  \yr 2003
+  \pages 231--260
+\endref
+
+\ref
+  \no 8
+  \by K. Alladi, G. E. Andrews and B. Gordon
+  \paper Generalizations and refinements of a partition theorem of G\"ollnitz
+  \jour J. Reine Angew. Math.
+  \vol 460
+  \yr 1995
+  \pages 165--188
+\endref
+
+\ref
+  \no 9
+  \by K. Alladi, G. E. Andrews and B. Gordon
+  \paper Refinements and generalizations of Capparelli's conjecture on partitions
+  \jour J. Algebra
+  \vol 174
+  \yr 1995
+  \pages 636--658
+\endref
+
+\ref
+  \no 10
+  \by K. Alladi and B. Gordon
+  \paper Generalizations of Schur's partition theorem
+  \jour Manus. Math.
+  \vol 79
+  \yr 1993
+  \pages 113--126
+\endref
+
+\ref
+  \no 11
+  \by K. Alladi and B. Gordon
+  \paper Schur's partition theorem, companions, refinements and generalizations
+  \jour Trans. A.M.S.
+  \vol 347
+  \yr 1995
+  \pages 1591--1608
+\endref
+
+\ref
+  \no 12
+  \by K. Alladi and B. Gordon
+  \paper A heirarchy of general partition theorems via the method of weighted words
+  \jour  (in preparation)
+\endref
+
+\ref
+  \no 13
+  \by G. E. Andrews
+  \paper On Schur's second partition theorem
+  \jour Glasgow Math. J.
+  \vol 9
+  \yr 1967
+  \pages 127--132
+\endref
+
+
+\ref
+  \no 14
+  \by G. E. Andrews
+  \paper The use of computers in search of identities of the Rogers-Ramanujan type: in computers in Number Theory
+  \paperinfo  (A.O.L. Atkin and B. J. Birch Eds.), Academic Press (1971), 377--387
+\endref
+
+
+\ref
+  \no 15
+  \by G. E. Andrews
+  \paper Partition identities
+  \jour Adv. in Math.
+  \vol 9
+  \yr 1972
+  \pages 10--51
+\endref
+
+
+\ref
+  \no 16
+  \by A.O.L. Atkin
+  \paper Proof of a conjecture of Ramanujan
+  \jour  Glasgow Math. J.
+  \vol  8
+  \yr 1967
+  \pages  14--32
+  \endref
+
+\ref \no 17 \by A.O.L. Atkin \paper Note on a paper of Cheema and Gordon
+\jour Duke Math. J. \vol 34 \yr 1967 \pages 57--58 \endref
+
+\ref \no 18
+\by B. C. Berndt and K. Ono
+\paper Ramanujan's unpublished manuscript on the partition and tau
+functions with commentary
+\jour The Andrews Festchrift
+(ed. D. Foata and G. N. Han),
+Springer Verlag
+\yr 2001
+\pages 39-110
+\endref
+
+\ref
+  \no 19
+  \by C. H. Brenner
+  \paperinfo {\it Asymptotics of Partition Functions}, Ph.D., Dissertation, U.C.L.A., (1984)
+  \jour 
+  \vol 
+  \yr 
+  \pages
+\endref
+
+\ref
+  \no 20
+  \by D. M. Bressoud
+  \paper Combinatorial proof of Schur's 1926 partition theorem
+  \jour Proc. A.M.S.
+  \vol 19
+  \yr 1980
+  \pages 338--340
+\endref
+
+
+\ref
+  \no 21
+  \by S. Capparelli
+  \paper Vertex operator relations for affine algebras and combinatorial identities
+  \jour  PhD Thesis Rutgers Univ.
+  \yr 1998
+\endref
+
+
+\ref
+  \no 22
+  \by S. Capparelli
+  \paper On some representations of twisted affine Lie algebras and combinatorial identities
+  \jour J. Alg.
+  \vol 154
+  \yr 1993
+  \pages 335--355
+\endref
+
+
+\ref
+  \no 23
+  \by M.S. Cheema and B. Gordon
+  \paper Some remarks on two- and three- line partitions
+  \jour Duke Math. J.
+  \vol 31
+  \yr 1964
+  \pages 267-273
+\endref
+
+\ref
+  \no 24 
+  \by L. Carlitz
+  \paper The expansion of certain products
+  \jour Proc. Amer. Math. Soc.
+  \vol 7
+  \yr 1956
+  \pages 558--564
+\endref
+
+\ref
+  \no 25
+  \by W. Gleissberg
+  \paper \"Uber einen Satz von Herrn. I. Schur
+  \jour Math. Zeitschrift
+  \vol 28
+  \yr 1928
+  \pages 372--382
+\endref
+
+\ref
+  \no 26
+  \by H. G\"ollnitz
+  \paperinfo Einfache Partitionen, (unpublished), Diplomabeit W. S., 1960, G\"ottingen
+\endref
+
+\ref
+  \no 27
+  \by H. G\"ollnitz
+  \paper Partitionen mit Differenzenbedingungen
+  \jour  J. Reine Angew. Math
+  \vol 225
+  \yr 1967
+  \pages 154--190
+\endref
+
+\ref
+  \no 28
+  \by B. Gordon
+  \paperinfo {\it Some Ramunujan-like continued fractions}, Abstracts of Short Communications, International Congress of Mathematicians (1962: Stockholm), XXX
+\endref
+
+\ref
+  \no 29 
+  \by B. Gordon
+  \paper A combinatorial generalization of the Rogers-Ramanujan identities
+  \jour Amer. J. Math
+  \vol 83
+  \yr 1961
+  \pages 393--399
+\endref
+
+\ref
+  \no 30
+  \by B. Gordon
+  \paper Two new representations of the partition function
+  \jour Proc. Amer. Math. Soc.
+  \vol 13
+  \yr 1962
+  \pages  869--873
+\endref
+
+\ref
+   \no 31
+  \by B. Gordon
+  \paper  Two theorems on multipartite partitions
+  \jour J. London Math. Soc.
+  \vol  38
+  \yr  1963
+  \pages  459--464
+\endref
+
+\ref
+   \no 32
+  \by B. Gordon
+  \paper  Some continued fractions of the Rogers-Ramanujan type
+  \jour Duke Math. J.
+  \vol  31
+  \yr  1965
+  \pages  741-748
+\endref
+
+\ref
+   \no 33
+  \by B. Gordon
+  \paper  A proof of the Bender-Knuth conjecture
+  \jour Pacific J. Math
+  \vol  108
+  \yr  1983
+  \pages  999--1013
+\endref
+
+\ref
+   \no 34
+  \by B. Gordon, L. Houten
+  \paper  Notes on plane partitions:  I
+  \jour J. Comb. Theory
+  \vol  4
+  \yr  1968
+  \pages  72--89
+\endref
+
+\ref
+   \no 35
+  \by B. Gordon, L. Houten
+  \paper  Notes on plane partitions: II
+  \jour J. Comb. Theory
+  \vol  4
+  \yr  1968
+  \pages  118--120
+\endref
+
+\ref
+   \no 36
+  \by Gordon, Basil; Houten, L.
+  \paper  Notes on plane partitions:  III
+  \jour Duke Math. J.
+  \vol  36
+  \yr  1969
+  \pages  801--824
+\endref
+
+\ref
+   \no 37
+  \by B. Gordon
+  \paper  Multirowed partitions with strict decrease along columns. (Notes on plane partitions IV)
+  \jour Symposia Amer. Math. Soc.
+  \vol  19
+  \yr  1971
+  \pages  91--100
+\endref
+
+\ref
+   \no 38
+  \by B. Gordon
+  \paper  Notes on plane partitions V
+  \jour J. of Comb. Theory
+  \vol  B-11
+  \yr  1971
+  \pages  157--168
+\endref
+
+\ref
+   \no 39
+  \by B. Gordon, L. Houten
+  \paper  Notes on plane partitions VI
+  \jour Discrete Math
+  \vol  26
+  \yr  1979
+  \pages  41--45
+\endref
+
+\ref
+   \no 40
+  \by B. Gordon, L. Houten
+  \paper  Multi-rowed partitions with totally distinct parts
+  \jour J. Number Theory
+  \vol  12
+  \yr  1980
+  \pages  439--444
+\endref
+
+\ref \no 41 \by B. Gordon and K. Hughes \paper Ramanujan
+congruences for $q(n)$ \jour Analytic number theory (Philadelphia,
+Pa., 1980), Springer Lect. Notes in Math. \vol 899 \yr 1981 \pages
+333-359
+\endref
+
+\ref \no 42 \by B. Gordon and K. Hughes \paper Congruences for
+$r_s(n)$ \jour Proc. London Math. Soc. (3) \vol 47 \yr 1983 \pages
+527-546
+\endref
+
+\ref \no 43 \by B. Gordon and K. Ono \paper Divisibility of
+certain partition functions by powers of primes \jour Ramanujan J.
+\vol 1 \yr 197 \pages 25-34
+\endref
+
+
+\ref
+   \no 44
+  \by B. Gordon and  R. J. McIntosh
+  \paper Modular transformations of Ramanujan's fifth and seventh order mock theta functions
+  \jour Ramanujan Journal
+  \vol  7
+  \yr  2003
+  \pages  193--222
+\endref
+
+\ref
+   \no 45
+  \by D. H. Lehmer
+  \paper Two nonexistence theorems on partitions
+  \jour  Bull. Amer. Math. Soc.
+  \vol  52
+  \yr  1946
+  \pages  538--544
+\endref
+
+\ref
+   \no 46
+  \by R. J. McIntosh
+  \paper  Some asymptotic formulae for $q$-hypergeometric series
+  \jour J. London Math. Soc.
+  \vol  51
+  \yr  1995
+  \pages  120--136
+\endref
+
+\ref
+   \no 47
+  \by G. Meinardus
+  \paper  \"Uber Partitionen mit Differenzenbedingungen
+  \jour Math. Zeit.
+  \vol  61
+  \yr  1954
+  \pages  289--302
+\endref
+
+\ref
+   \no 48
+  \by S. Okada
+  \paper  
+  \jour 
+  \vol  
+  \yr  
+  \pages  
+\endref
+
+
+\ref
+\no 49
+\by K. Ono
+\book The web of modularity: Arithmetic of the coefficients of
+modular forms and $q$-series
+\publ American Mathematical Society, CBMS
+\vol 102
+\yr 2004
+\endref
+
+\ref
+   \no 50
+  \by H. Rademacher
+  \paper  Lectures on Analytic Number Theory
+  \jour Tata Institute, Bombay
+  \vol  
+  \yr  1954--1955
+  \pages  
+\endref
+
+\ref
+\no 51
+\by S. Ramanujan
+\paper Congruence properties of partitions
+\jour Proc. London Math. Soc. (2)
+\vol 19
+\yr 1919
+\pages 207-210
+\endref
+
+
+\ref
+  \no 52
+  \by I. Schur
+  \paper Zer Additiven Zahentheorie: Gesammelte Abhandlungen
+  \paperinfo  Vol. 2, Springer, Berlin (1973), 43--50
+\endref
+
+
+\ref
+   \no 53
+  \by L. J. Slater
+  \paper  Further identities of the Rogers-Ramanujan type
+  \jour Proc. London Math. Soc.
+  \vol  54
+  \yr  1952
+  \pages  147--167
+\endref
+
+\ref
+   \no 54
+  \by R. P. Stanley
+  \paper  Theory and application of plane partitions (I) and (II)
+  \jour Studies in Appl. Math.
+  \vol  50
+  \yr  1971
+  \pages  167--188, 259--279
+\endref
+
+\ref
+   \no 55
+  \by J. Stembridge
+  \paper  Nonintersecting paths, Pfaffians, and plane partitions
+  \jour Adv. Math.
+  \vol  83
+  \yr  1990
+  \pages  96--131
+\endref
+
+
+\ref \no 56 \by G.N. Watson \paper The final problem: an account of the mock theta functions \jour J. London Math. Soc. \vol 11 \yr 1936 \pages 55-80 \endref
+
+
+\ref
+   \no 57
+  \by G.N. Watson
+  \paper Ramanujan's vermutung \"uber zerf \"allungsanzahlen
+  \jour J. Reine Angew. Math.
+  \vol  179
+  \yr  1938
+  \pages  97--128
+\endref
+
+\ref
+   \no 58
+  \by E.M. Wright
+  \paper Partitions of multipartite numbers
+  \jour Proc. Amer. Math. Soc.
+  \vol  7
+  \yr  1956
+  \pages  880--890
+\endref
+
+\ref
+   \no 59
+  \by E.M. Wright
+  \paper Partitions of multipartite numbers into a fixed number of parts
+  \jour Proc. London Math. Soc. (3)
+  \vol  11
+  \yr  1961
+  \pages  499--510
+\endref
+
+
+\endRefs
+
+\vskip .2in
+
+\baselineskip 12pt
+\noindent Department of Mathematics, 
+University of Florida, 
+Gainesville, FL  
+
+%\vskip .1in
+\noindent alladi\@math.ufl.edu
+%\noindent email: 
+
+\vskip .1in
+ 
+\noindent Department of Mathematics,  
+The Pennsylvania State University,    
+University Park, PA  16802 \ \ andrews\@math.psu.edu 
+
+\vskip .1in
+
+\baselineskip 12pt
+\noindent Department of Mathematics, 
+University of Wisconsin, 
+Madison, Wisconsin 53706    
+%\vskip.1in
+ \ ono\@math.wisc.edu
+
+\vskip .1in
+
+\baselineskip 12pt
+\noindent Department of Mathematics, 
+University of Regina, 
+Regina, Saskatchewan, Canada,  
+%\vskip .1in
+ \ mcintosh\@math.uregina.ca
+
+%\noindent AMS Classification numbers:  11P81, 33D15, 33D80
+
+\enddocument
+
+

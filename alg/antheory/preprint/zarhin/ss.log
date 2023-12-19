@@ -1,0 +1,157 @@
+This is TeX, Version 3.1415 (C version 6.1) (format=latex 97.5.4)  3 SEP 1998 17:36
+**ss
+(ss.tex
+LaTeX2e <1996/12/01> patch level 1
+Hyphenation patterns for english, german, french, loaded.
+(/usr/local/lib/texmf/tex/latex/amslatex/amsart.cls
+Document Class: amsart 1997/03/26 v1.2r
+\linespacing=\dimen102
+\normalparindent=\dimen103
+\normaltopskip=\skip41
+(/usr/local/lib/texmf/tex/latex/amslatex/amsgen.sty
+File: amsgen 1996/10/29 v1.2b
+\@emptytoks=\toks15
+\ex@=\dimen104
+)
+(/usr/local/lib/texmf/tex/latex/amslatex/amsmath.sty
+Package: amsmath 1997/03/20 v1.2d AMS math features
+\@mathmargin=\skip42
+
+(/usr/local/lib/texmf/tex/latex/amslatex/amstext.sty
+Package: amstext 1996/10/28 v1.2b
+
+(/usr/local/lib/texmf/tex/latex/amslatex/amsgen.sty
+File: amsgen 1996/10/29 v1.2b
+\@emptytoks=\toks16
+\ex@=\dimen105
+))
+(/usr/local/lib/texmf/tex/latex/amslatex/amsbsy.sty
+Package: amsbsy 1996/10/28 v1.2b
+\pmbraise@=\dimen106
+)
+(/usr/local/lib/texmf/tex/latex/amslatex/amsopn.sty
+Package: amsopn 1996/10/28 v1.2b operator names
+)
+LaTeX Info: Redefining \frac on input line 188.
+\uproot@=\count79
+\leftroot@=\count80
+\classnum@=\count81
+\DOTSCASE@=\count82
+LaTeX Info: Redefining \dots on input line 335.
+LaTeX Info: Redefining \ldots on input line 418.
+LaTeX Info: Redefining \cdots on input line 422.
+\Mathstrutbox@=\box26
+\strutbox@=\box27
+\big@size=\dimen107
+LaTeX Font Info:    Redeclaring font encoding OML on input line 500.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 501.
+\skewcharcount@=\count83
+\familycount@=\count84
+\pointcount@=\count85
+\accentdimen@=\dimen108
+\accentmu@=\count86
+\minaw@=\dimen109
+\c@MaxMatrixCols=\count87
+\dotsspace@=\muskip10
+\c@parentequation=\count88
+\dspbrk@lvl=\count89
+\tag@help=\toks17
+\row@=\count90
+\column@=\count91
+\maxfields@=\count92
+\andhelp@=\toks18
+\eqnshift@=\dimen110
+\alignsep@=\dimen111
+\tagshift@=\dimen112
+\tagwidth@=\dimen113
+\totwidth@=\dimen114
+\lineht@=\dimen115
+\@envbody=\toks19
+\multlinegap=\skip43
+\multlinetaggap=\skip44
+)
+LaTeX Font Info:    Try loading font information for U+msa on input line 368.
+
+(/usr/local/lib/texmf/tex/latex/amslatex/Umsa.fd
+File: Umsa.fd 1995/01/05 v2.2e AMS font definitions
+)
+(/usr/local/lib/texmf/tex/latex/amslatex/amsfonts.sty
+Package: amsfonts 1996/11/03 v2.2c
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 128.
+)
+\copyins=\insert233
+\abstractbox=\box28
+\listisep=\skip45
+\c@part=\count93
+\c@section=\count94
+\c@subsection=\count95
+\c@subsubsection=\count96
+\c@paragraph=\count97
+\c@figure=\count98
+\c@table=\count99
+\abovecaptionskip=\skip46
+\belowcaptionskip=\skip47
+\captionindent=\dimen116
+
+(/usr/local/lib/texmf/tex/latex/amslatex/amsthm.sty
+Package: amsthm 1996/10/24 v1.2d
+\thm@style=\toks20
+\thm@bodyfont=\toks21
+\thm@headfont=\toks22
+\thm@notefont=\toks23
+\thm@headpunct=\toks24
+\thm@preskip=\skip48
+\thm@postskip=\skip49
+))
+\c@thm=\count100
+ (ss.aux)
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 80.
+LaTeX Font Info:    ... okay on input line 80.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 80.
+LaTeX Font Info:    ... okay on input line 80.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 80.
+LaTeX Font Info:    ... okay on input line 80.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 80.
+LaTeX Font Info:    ... okay on input line 80.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 80.
+LaTeX Font Info:    ... okay on input line 80.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 80.
+LaTeX Font Info:    ... okay on input line 80.
+LaTeX Font Info:    Try loading font information for U+msa on input line 80.
+
+(/usr/local/lib/texmf/tex/latex/amslatex/Umsa.fd
+File: Umsa.fd 1995/01/05 v2.2e AMS font definitions
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 80.
+
+(/usr/local/lib/texmf/tex/latex/amslatex/Umsb.fd
+File: Umsb.fd 1995/01/05 v2.2e AMS font definitions
+) [1]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 169.
+
+
+(/usr/local/lib/texmf/tex/latex/base/omscmr.fd
+File: omscmr.fd 1997/01/14 v2.5a Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 169.
+ [2] [3] [4] [5] [6] [7]
+[8]
+LaTeX Font Info:    Try loading font information for U+euf on input line 897.
+ (/usr/local/lib/texmf/tex/latex/amslatex/Ueuf.fd
+File: Ueuf.fd 1995/01/05 v2.2e AMS font definitions
+) [9] [10] [11] [12]
+[13] (ss.aux) ) 
+Here is how much of TeX's memory you used:
+ 1342 strings out of 10909
+ 13552 string characters out of 72191
+ 64908 words of memory out of 262141
+ 4025 multiletter control sequences out of 9500
+ 13690 words of font info for 52 fonts, out of 100000 for 255
+ 177 hyphenation exceptions out of 607
+ 34i,8n,32p,292b,412s stack positions out of 300i,40n,60p,3000b,4000s
+
+Output written on ss.dvi (13 pages, 68056 bytes).

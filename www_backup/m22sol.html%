@@ -1,0 +1,812 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="GENERATOR" content="Mozilla/4.77 [en] (X11; U; SunOS 5.8 sun4u) [Netscape]">
+</head>
+<body>
+Math 484.2&nbsp; October 23, 2003.&nbsp;&nbsp; Name:________L. Vaserstein_______________
+<p>Midterm 2,&nbsp; 5 problems, 15 points each.
+<p>Solve linear programs where all&nbsp; <i>x<sub>i</sub></i> >= 0:
+<p>1.
+<table BORDER COLS=5 WIDTH="100%" NOSAVE >
+<tr>
+<td>-2</td>
+
+<td><i>x</i><sub>2</sub></td>
+
+<td>3</td>
+
+<td>-<i>x</i><sub>3</sub></td>
+
+<td></td>
+</tr>
+
+<tr>
+<td>1</td>
+
+<td>2</td>
+
+<td>3</td>
+
+<td>4</td>
+
+<td>= <i>x</i><sub>1</sub></td>
+</tr>
+
+<tr>
+<td>5</td>
+
+<td>6</td>
+
+<td>-7</td>
+
+<td>8</td>
+
+<td>=-<i>x</i><sub>4</sub></td>
+</tr>
+
+<tr>
+<td>0</td>
+
+<td>1</td>
+
+<td>2</td>
+
+<td>3</td>
+
+<td>-> min</td>
+</tr>
+</table>
+
+<p>combine two columns with constants on top&nbsp; together&nbsp; and multiply
+a column&nbsp; and a row by -1.
+<br>standard&nbsp; feasible tableau:
+<table BORDER COLS=4 WIDTH="100%" NOSAVE >
+<tr>
+<td><i>x</i><sub>2</sub></td>
+
+<td><i>x</i><sub>3</sub></td>
+
+<td>1</td>
+
+<td></td>
+</tr>
+
+<tr>
+<td>2</td>
+
+<td>-4*</td>
+
+<td>7</td>
+
+<td>= <i>x</i><sub>1</sub></td>
+</tr>
+
+<tr>
+<td>-6</td>
+
+<td>8</td>
+
+<td>31</td>
+
+<td>= <i>x</i><sub>4</sub></td>
+</tr>
+
+<tr>
+<td>1</td>
+
+<td>-3</td>
+
+<td>6</td>
+
+<td>-> min</td>
+</tr>
+</table>
+pivot step according to Phase 2 of simplex method
+<table BORDER COLS=4 WIDTH="100%" NOSAVE >
+<tr>
+<td>&nbsp;<i>x</i><sub>2</sub></td>
+
+<td><i>x</i><sub>1</sub></td>
+
+<td>1</td>
+
+<td></td>
+</tr>
+
+<tr>
+<td>1/2</td>
+
+<td>-1/4</td>
+
+<td>7/4</td>
+
+<td>= <i>x</i><sub>3</sub></td>
+</tr>
+
+<tr>
+<td>-2*</td>
+
+<td>-2</td>
+
+<td>45</td>
+
+<td>= <i>x</i><sub>4</sub></td>
+</tr>
+
+<tr>
+<td>-1/2</td>
+
+<td>3/4</td>
+
+<td>3/4</td>
+
+<td>-> min</td>
+</tr>
+</table>
+pivot step according to Phase 2 of simplex method
+<table BORDER COLS=4 WIDTH="100%" NOSAVE >
+<tr>
+<td>&nbsp;<i>x</i><sub>4</sub></td>
+
+<td><i>x</i><sub>1</sub></td>
+
+<td>1</td>
+
+<td></td>
+</tr>
+
+<tr>
+<td>-1/4</td>
+
+<td>-3/4</td>
+
+<td>13</td>
+
+<td>= <i>x</i><sub>3</sub></td>
+</tr>
+
+<tr>
+<td>1/2</td>
+
+<td>-1</td>
+
+<td>45/2</td>
+
+<td>= <i>x</i><sub>2</sub></td>
+</tr>
+
+<tr>
+<td>1/4</td>
+
+<td>5/4</td>
+
+<td>&nbsp;-21/2</td>
+
+<td>-> min</td>
+</tr>
+</table>
+The tableau is optimal, so&nbsp; min = -21/2=-10.5 at&nbsp; <i>x</i><sub>1</sub>=0,
+<i>x</i><sub>2</sub>=
+45/2, <i>x</i><sub>3</sub>=13,&nbsp; <i>x</i><sub>4</sub>= 0.
+<p>2.
+<table BORDER COLS=5 WIDTH="100%" NOSAVE >
+<tr>
+<td>-2</td>
+
+<td><i>-x</i><sub>2</sub></td>
+
+<td>-3</td>
+
+<td>-<i>x</i><sub>1</sub></td>
+
+<td></td>
+</tr>
+
+<tr>
+<td>1</td>
+
+<td>2</td>
+
+<td>3</td>
+
+<td>4</td>
+
+<td>= <i>x</i><sub>1</sub></td>
+</tr>
+
+<tr>
+<td>5</td>
+
+<td>6</td>
+
+<td>7</td>
+
+<td>8</td>
+
+<td>= <i>x</i><sub>4</sub></td>
+</tr>
+
+<tr>
+<td>0</td>
+
+<td>1</td>
+
+<td>2</td>
+
+<td>3</td>
+
+<td>-> min</td>
+</tr>
+</table>
+
+<p>combine two columns with constants on top&nbsp; together&nbsp; and multiply
+a column by -1
+<table BORDER COLS=4 WIDTH="100%" NOSAVE >
+<tr>
+<td><i>x</i><sub>2</sub></td>
+
+<td><i>-x</i><sub>1</sub></td>
+
+<td>1</td>
+
+<td></td>
+</tr>
+
+<tr>
+<td>-2*</td>
+
+<td>4</td>
+
+<td>-11</td>
+
+<td>= <i>x</i><sub>1</sub></td>
+</tr>
+
+<tr>
+<td>-6</td>
+
+<td>8</td>
+
+<td>-31</td>
+
+<td>=&nbsp; <i>x</i><sub>4</sub></td>
+</tr>
+
+<tr>
+<td>-1</td>
+
+<td>3</td>
+
+<td>-6</td>
+
+<td>-> min</td>
+</tr>
+</table>
+pivot step
+<table BORDER COLS=4 WIDTH="100%" NOSAVE >
+<tr>
+<td><i>x</i><sub>1</sub></td>
+
+<td><i>-x</i><sub>1</sub></td>
+
+<td>1</td>
+
+<td></td>
+</tr>
+
+<tr>
+<td>-1/2</td>
+
+<td>2</td>
+
+<td>-11/2</td>
+
+<td>= <i>x</i><sub>2</sub></td>
+</tr>
+
+<tr>
+<td>3</td>
+
+<td>-4</td>
+
+<td>2</td>
+
+<td>= <i>x</i><sub>4</sub></td>
+</tr>
+
+<tr>
+<td>1/2</td>
+
+<td>1</td>
+
+<td>-1/2</td>
+
+<td>-> min</td>
+</tr>
+</table>
+combine the first two columns.&nbsp; standard tableau:
+<br>&nbsp;
+<table BORDER COLS=3 WIDTH="100%" NOSAVE >
+<tr>
+<td><i>x</i><sub>1</sub></td>
+
+<td>1</td>
+
+<td></td>
+</tr>
+
+<tr>
+<td>-5/2</td>
+
+<td>-11/2</td>
+
+<td>= <i>x</i><sub>2</sub></td>
+</tr>
+
+<tr>
+<td>7</td>
+
+<td>2</td>
+
+<td>=<i>x</i><sub>4</sub></td>
+</tr>
+
+<tr>
+<td>-1/2</td>
+
+<td>-1/2</td>
+
+<td>-> min</td>
+</tr>
+</table>
+&nbsp;<i>x</i><sub>2</sub>-row is bad,&nbsp; so the program is infeasible.
+<p>3.
+<table BORDER COLS=5 WIDTH="100%" NOSAVE >
+<tr>
+<td>2</td>
+
+<td><i>x</i><sub>2</sub></td>
+
+<td>3</td>
+
+<td>-<i>x</i><sub>3</sub></td>
+
+<td></td>
+</tr>
+
+<tr>
+<td>1</td>
+
+<td>2</td>
+
+<td>3</td>
+
+<td>4</td>
+
+<td>= <i>x</i><sub>1</sub></td>
+</tr>
+
+<tr>
+<td>5</td>
+
+<td>6</td>
+
+<td>7</td>
+
+<td>8</td>
+
+<td>=- <i>x</i><sub>1</sub></td>
+</tr>
+
+<tr>
+<td>0</td>
+
+<td>1</td>
+
+<td>2</td>
+
+<td>3</td>
+
+<td>-> max</td>
+</tr>
+</table>
+
+<p>combine two columns with constants on top&nbsp; together&nbsp; and multiply
+a column by -1.
+<table BORDER COLS=4 WIDTH="100%" NOSAVE >
+<tr>
+<td><i>x</i><sub>2</sub></td>
+
+<td><i>x</i><sub>3</sub></td>
+
+<td>1</td>
+
+<td></td>
+</tr>
+
+<tr>
+<td>2</td>
+
+<td>-4</td>
+
+<td>11</td>
+
+<td>= <i>x</i><sub>1</sub></td>
+</tr>
+
+<tr>
+<td>6</td>
+
+<td>-8</td>
+
+<td>31</td>
+
+<td>= -<i>x</i><sub>1</sub></td>
+</tr>
+
+<tr>
+<td>1</td>
+
+<td>-3</td>
+
+<td>6</td>
+
+<td>-> max</td>
+</tr>
+</table>
+add the first row from the second row and multiply the third row by -1
+<table BORDER COLS=4 WIDTH="100%" NOSAVE >
+<tr>
+<td><i>x</i><sub>2</sub></td>
+
+<td><i>x</i><sub>3</sub></td>
+
+<td>1</td>
+
+<td></td>
+</tr>
+
+<tr>
+<td>2</td>
+
+<td>-4</td>
+
+<td>11</td>
+
+<td>= <i>x</i><sub>1</sub></td>
+</tr>
+
+<tr>
+<td>8</td>
+
+<td>-12*</td>
+
+<td>42</td>
+
+<td>= 0</td>
+</tr>
+
+<tr>
+<td>-1</td>
+
+<td>3</td>
+
+<td>-6</td>
+
+<td>-> min</td>
+</tr>
+</table>
+pivot on -12 and drop the second column to obtain standard tableau
+<table BORDER COLS=3 WIDTH="100%" NOSAVE >
+<tr>
+<td><i>x</i><sub>2</sub></td>
+
+<td>1</td>
+
+<td></td>
+</tr>
+
+<tr>
+<td>-2/3</td>
+
+<td>-3</td>
+
+<td>= <i>x</i><sub>1</sub></td>
+</tr>
+
+<tr>
+<td>2/3</td>
+
+<td>7/2</td>
+
+<td>= <i>x</i><sub>3</sub></td>
+</tr>
+
+<tr>
+<td>1</td>
+
+<td>9/2</td>
+
+<td>-> min</td>
+</tr>
+</table>
+The&nbsp; <i>x</i><sub>1</sub>-row is bad, so the program is infeasible.
+<p>4.
+<table BORDER COLS=5 WIDTH="100%" NOSAVE >
+<tr>
+<td><i>x</i><sub>3</sub></td>
+
+<td><i>x</i><sub>2</sub></td>
+
+<td>1</td>
+
+<td>-<i>x</i><sub>3</sub></td>
+
+<td></td>
+</tr>
+
+<tr>
+<td>1</td>
+
+<td>2</td>
+
+<td>3</td>
+
+<td>4</td>
+
+<td>= <i>x</i><sub>1</sub></td>
+</tr>
+
+<tr>
+<td>5</td>
+
+<td>6</td>
+
+<td>7</td>
+
+<td>0</td>
+
+<td>=<i>x</i><sub>4</sub></td>
+</tr>
+
+<tr>
+<td>0</td>
+
+<td>1</td>
+
+<td>2</td>
+
+<td>3</td>
+
+<td>-> min</td>
+</tr>
+</table>
+
+<p>combine the first and the last column&nbsp; to obtain standard tableau
+<table BORDER COLS=4 WIDTH="100%" NOSAVE >
+<tr>
+<td><i>x</i><sub>3</sub></td>
+
+<td><i>x</i><sub>2</sub></td>
+
+<td>1</td>
+
+<td></td>
+</tr>
+
+<tr>
+<td>-3*</td>
+
+<td>2</td>
+
+<td>3</td>
+
+<td>= <i>x</i><sub>1</sub></td>
+</tr>
+
+<tr>
+<td>5</td>
+
+<td>6</td>
+
+<td>7</td>
+
+<td>=<i>x</i><sub>4</sub></td>
+</tr>
+
+<tr>
+<td>-3</td>
+
+<td>1</td>
+
+<td>2</td>
+
+<td>-> min</td>
+</tr>
+</table>
+pivot step according to Phase 2 of simplex method
+<table BORDER COLS=4 WIDTH="100%" NOSAVE >
+<tr>
+<td><i>x</i><sub>3</sub></td>
+
+<td><i>x</i><sub>2</sub></td>
+
+<td>1</td>
+
+<td></td>
+</tr>
+
+<tr>
+<td></td>
+
+<td>2/3</td>
+
+<td>1</td>
+
+<td>= <i>x</i><sub>1</sub></td>
+</tr>
+
+<tr>
+<td></td>
+
+<td>28/3</td>
+
+<td>12</td>
+
+<td>= <i>x</i><sub>4</sub></td>
+</tr>
+
+<tr>
+<td></td>
+
+<td>-1</td>
+
+<td></td>
+
+<td>-> min</td>
+</tr>
+</table>
+&nbsp;<i>x</i><sub>2</sub>-column is bad,&nbsp; so the program is unbounded.
+<p>5.
+<table BORDER COLS=5 WIDTH="100%" NOSAVE >
+<tr>
+<td>0</td>
+
+<td><i>x</i><sub>2</sub></td>
+
+<td>-1</td>
+
+<td>-<i>x</i><sub>3</sub></td>
+
+<td></td>
+</tr>
+
+<tr>
+<td>1</td>
+
+<td>2</td>
+
+<td>3</td>
+
+<td>4</td>
+
+<td>= -<i>x</i><sub>1</sub></td>
+</tr>
+
+<tr>
+<td>5</td>
+
+<td>6</td>
+
+<td>7</td>
+
+<td>8</td>
+
+<td>= <i>x</i><sub>4</sub></td>
+</tr>
+
+<tr>
+<td>0</td>
+
+<td>1</td>
+
+<td>2</td>
+
+<td>3</td>
+
+<td>-> min</td>
+</tr>
+</table>
+
+<p>drop the first column, switch&nbsp;&nbsp; columns, and nultiply a column
+and a row by -1 to obtain standard tableau
+<table BORDER COLS=4 WIDTH="100%" NOSAVE >
+<tr>
+<td><i>x</i><sub>2</sub></td>
+
+<td><i>x</i><sub>3</sub></td>
+
+<td>1</td>
+
+<td></td>
+</tr>
+
+<tr>
+<td>-2</td>
+
+<td>&nbsp;4</td>
+
+<td>&nbsp;3</td>
+
+<td>= <i>x</i><sub>1</sub></td>
+</tr>
+
+<tr>
+<td>6*</td>
+
+<td>-8</td>
+
+<td>-7</td>
+
+<td>= <i>x</i><sub>4</sub></td>
+</tr>
+
+<tr>
+<td>1</td>
+
+<td>-3</td>
+
+<td>-2</td>
+
+<td>-> min</td>
+</tr>
+</table>
+&nbsp;pivot step according to Phase 1 of simplex method
+<table BORDER COLS=4 WIDTH="100%" NOSAVE >
+<tr>
+<td><i>x</i><sub>4</sub></td>
+
+<td><i>x</i><sub>3</sub></td>
+
+<td>1</td>
+
+<td></td>
+</tr>
+
+<tr>
+<td></td>
+
+<td>&nbsp;4/3</td>
+
+<td>&nbsp;2/3</td>
+
+<td>= <i>x</i><sub>1</sub></td>
+</tr>
+
+<tr>
+<td>1/6</td>
+
+<td>4/3</td>
+
+<td>7/6</td>
+
+<td>= <i>x</i><sub>2</sub></td>
+</tr>
+
+<tr>
+<td></td>
+
+<td>-5/3</td>
+
+<td></td>
+
+<td>-> min</td>
+</tr>
+</table>
+&nbsp;This is a feasuble tableau with&nbsp; <i>x</i><sub>3</sub>-column
+bad, so the program is unbounded.
+<br>&nbsp;
+</body>
+</html>

@@ -1,0 +1,177 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="GENERATOR" content="Mozilla/4.77 [en] (X11; U; SunOS 5.8 sun4u) [Netscape]">
+</head>
+<body>
+
+<center>
+<h1>
+Repeated Prisoner's Dilemma</h1></center>
+submitted strategies:
+<br>&nbsp;
+<br>&nbsp;
+<br>&nbsp;
+<br>&nbsp;
+<table BORDER COLS=6 WIDTH="100%" NOSAVE >
+<tr>
+<td></td>
+
+<td>Charles</td>
+
+<td>Chris</td>
+
+<td>Holly</td>
+
+<td>Jeff</td>
+
+<td>Scott</td>
+</tr>
+
+<tr>
+<td>Charles</td>
+
+<td>(2cc+dd)/3</td>
+
+<td>(2cd+dd)/3</td>
+
+<td>(cc+dc+cd)/3</td>
+
+<td>(2cc+dc)/3</td>
+
+<td>(2cc+dc)/3</td>
+</tr>
+
+<tr>
+<td>Chris</td>
+
+<td>(2dc+dd)/3</td>
+
+<td>(cc+dd)/2</td>
+
+<td>(2cc+cd+dc+2dd)/6</td>
+
+<td>(2cc+5cd+5dc+2dd)/14</td>
+
+<td>(2cc+2cd+2cd+2dd)/8</td>
+</tr>
+
+<tr>
+<td>Holly</td>
+
+<td>(cc+dc+cd)/3</td>
+
+<td>(2cc+cd+dc+2dd)/6</td>
+
+<td>dd</td>
+
+<td>cc</td>
+
+<td>dd</td>
+</tr>
+
+<tr>
+<td>Jeff</td>
+
+<td>(2cc+cd)/3</td>
+
+<td>(2cc+5cd+5dc+2dd)/14</td>
+
+<td>cc</td>
+
+<td>cc</td>
+
+<td>cc</td>
+</tr>
+
+<tr>
+<td>Scott</td>
+
+<td>(2cc+cd)/3</td>
+
+<td>(2cc+2cd+2cd+2dd)/8</td>
+
+<td>dd</td>
+
+<td>cc</td>
+
+<td>dd</td>
+</tr>
+</table>
+
+<table BORDER COLS=3 WIDTH="100%" NOSAVE >
+<tr>
+<td>game from the textbook</td>
+
+<td>c</td>
+
+<td>d</td>
+</tr>
+
+<tr>
+<td>c</td>
+
+<td>-2, -2 ( bonus points: 8,8)</td>
+
+<td>-10, -1 (bonus points: 0, 9)</td>
+</tr>
+
+<tr>
+<td>d</td>
+
+<td>-1, -10 (bonus points 9,0)</td>
+
+<td>-5, -5 (bonus points: 5,5)</td>
+</tr>
+</table>
+
+<p>Bonus points:
+<br>1. (1.4cc+0.6cd+0.6dc+0.4dd)/3=(11.2+5.4+2)/3=18.6/3=6.2 ~ 6.
+<br>2. ((2dc+dd)/3+(cc+dd)/2+(2cc+cd+dc+2dd)/6+(2cc+5cd+5dc+2dd)/14+(2cc+2cd+2cd+2dd)/8)/5
+=793/140~5.66~6.
+<br>3. (10cc+3cd+3dc+14dd)/30=(80+27+70)/30=5.9~6.
+<br>4. ((2cc+cd)/3+(2cc+5cd+5dc+2dd)/14+3cc)/5 ~ 6.88 ~7.
+<br>5.&nbsp; ((2cc+cd)/3+(2cc+2cd+2cd+2dd)/8+2dd+cc)/5=319/60 ~5.32~5.
+<br>%/.{cc->8,cd->0,dc->9,dd->5}
+<p><tt>Chris&nbsp; d c d c&nbsp; c d d d c c&nbsp; c d d</tt>
+<br><tt>Holly&nbsp; d d c d&nbsp; c c d d d c&nbsp; c c d</tt>
+<br><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+period 6</tt>
+<p><tt>Chris &amp; Chris&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; d c&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+d c</tt>
+<br><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+period 2</tt>
+<p><tt>Chris&nbsp; d c d d&nbsp;&nbsp; d d d d d d d c c c c c c c&nbsp;&nbsp;
+d d d d d d d c c c c c c c</tt>
+<br><tt>Jeff&nbsp;&nbsp; c c c c&nbsp;&nbsp; c c c c c d d d d d d d c
+c&nbsp;&nbsp; c c c c c d d d d d d d c c</tt>
+<br><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+period 14</tt>
+<p><tt>Scott c d&nbsp; d d d c c c c d&nbsp; d d d c c c c d</tt>
+<br><tt>Chris d c&nbsp; d c c c c d d d&nbsp; d c c c c d d d</tt>
+<br><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+period 8</tt><tt></tt>
+<p><tt>Charles c c d&nbsp; c c d</tt>
+<br><tt>Chris&nbsp;&nbsp; d c d&nbsp; d d d</tt>
+<br><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+period 3</tt><tt></tt>
+<p><tt>Charles&nbsp;&nbsp; c&nbsp; c d c</tt>
+<br><tt>Holly&nbsp;&nbsp;&nbsp;&nbsp; d&nbsp; c c d</tt>
+<br><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+period 3</tt><tt></tt>
+<p><tt>Charles&nbsp;&nbsp; c c d&nbsp; c c d&nbsp; c c d c c d</tt>
+<br><tt>Jeff&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; c c c&nbsp; c c c&nbsp; c c
+c c c c</tt>
+<br><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; period 3</tt><tt></tt>
+<p><tt>Charles&nbsp;&nbsp; c c d&nbsp; c c d&nbsp; c c d c c d</tt>
+<br><tt>Scott&nbsp;&nbsp;&nbsp;&nbsp; c d c&nbsp; c c c&nbsp; c c c c c
+c</tt>
+<br><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+period 3</tt>
+<br><tt></tt>&nbsp;
+<br><tt></tt>&nbsp;
+<br><tt></tt>&nbsp;
+<br><tt></tt>&nbsp;
+</body>
+</html>

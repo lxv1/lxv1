@@ -1,0 +1,1605 @@
+%
+\magnification=\magstep1
+\input amstex
+\documentstyle{amsppt}
+\NoBlackBoxes
+\pageheight{7.5in}
+\pagewidth{5.5in}
+
+\leftheadtext{George E. Andrews}
+\TagsOnRight
+\def\c{\cite}
+\def\fr{\frac}
+\def\pf{\hfill $\square$}
+\def\wa{\widetilde{\alpha}}
+\def\wb{\widetilde{\beta}}
+
+\topmatter
+\title
+	Bailey's Transform, Lemma, Chains and Tree
+\endtitle
+\author
+	George E. Andrews\footnote{Partially 
+	supported by National Science Foundation Grant
+	DMS-9206993. \hfill\hfil }
+\endauthor
+\address
+	The Pennsylvania State University  
+	University Park, PA  16802
+\endaddress
+\abstract
+	In this paper we shall provide a brief survey of the work
+	begun by L. J. Rogers and W. N. Bailey which has led to an
+	iteratave method for producing infinite chains of $q$-series
+	identities.  Apart from providing the reader with leads to the
+	study of previous accomplishments, we shall emphasize the
+	importance of examination of the seminal works in order to
+	discern topics open to further development.  This will lead us
+	directly to a new construct: the Bailey tree.
+\endabstract
+\endtopmatter
+
+
+\document
+
+\subhead
+1. \ Introduction
+\endsubhead
+
+Bailey chains have their genesis in the work of L. J. Rogers.  He
+first proved the following identities in 1894 \c{30}, and they have
+become known as the Rogers-Ramanujan identities.
+$$
+	\sum_{n=0}^{\infty} \fr{q^{n^2}}{(q;q)_n} =
+	\fr1{(q,q^4;q^5)_{\infty}}
+\tag{1.1}
+$$
+and
+$$
+	\sum_{n=0}^{\infty} \fr{q^{n^2+n}}{(q;q)_n} = 
+	\fr1{(q^2,q^3;q^5)_{\infty}}
+\tag{1.2}
+$$
+where
+$$
+	(A)_n = (A;q)_n = \prod_{j=0}^{n-1} (1 - Aq^j),
+\tag{1.3}
+$$
+and
+$$
+	(A_1,A_2,\dots,A_r;q)_n = \prod_{n=1}^r (A_j;q)_n\,.
+\tag{1.4}
+$$
+
+We shall provide a proof of (1.1) and (1.2) in Section 2.  It is
+essentially Bressoud's simplification of Rogers' second proof \c{Br}.
+This will provide us with the simplest possible example of a Bailey
+chain (cf. \c5, \c{7; Ch.3})
+
+\subhead
+{Definition}
+\endsubhead
+
+A General Bailey Chain is an infinite sequence $(i \geqq 0)$ of pairs
+of sequences of rational functions $\{\alpha_n^{(i)}\}_{n\geqq 0}$ and
+$\{\beta_n^{(i)}\}_{n\geqq 0}$ of two variables $a$ and $q$ and
+possibly others.
+$$
+	(\alpha_n,\beta_n) \to (\alpha_n',\beta_n') \to 
+	(\alpha_n'',\beta_n'') \to \cdots
+\tag{1.5}
+$$
+
+There is an identity independent of $i$ connecting
+$\alpha_n^{(i)}$ and $\beta_n^{(i)}$, say
+$$
+	\beta_n^{(i)} = F_n (\alpha_0^{(i)},\alpha_1^{(i)},\alpha_2^{(i)},
+	\dots,\alpha_n^{(i)})\,; \qquad (i \geqq 0)
+\tag{1.6}
+$$
+furthermore there are given rules of construction
+$$
+	\beta_n^{(i)} = G_n (\beta_0^{(i-1)},\dots,\beta_n^{(i-1)})
+	\qquad (i \geqq 1)
+\tag{1.7}
+$$
+and
+$$
+	\alpha_n^{(i)} = H_n (\alpha_0^{(i-1)},\dots,\alpha_r^{(i-1)})
+	\qquad (i \geqq 1)\,,
+\tag{1.8}
+$$
+again $G_n$ and $H_n$ are independent of $i$.
+\vskip .1in
+Put in this abstract setting, it is hard to discern the relationship
+of this iterative process with the Rogres-Ramanujan identities (1.1)
+and (1.2).  This will become clear in Section 2.  Section 3 will look
+at the overarching method dubbed by L. J. Slater, the Bailey transform
+\c{38; p. 58}.  Section 4 will provide a summary of how this idea has
+been broadly applied.  In Section 5, we consider the Milne-Lilly
+extensions \c{25}-\c{27}, and other extensions \c{12}.  We also return
+to a look at Rogers' second paper \c{31} with an eye to extensions as
+described in \c8.  In Section 6, we reconsider Bailey's first papers
+on this topic; this leads us to new Bailey chains in Section 7 and
+eventually to the Bailey tree in Section 8.
+
+\subhead
+2. \ The Bressoud-Rogers Proof
+\endsubhead
+
+In this section we will provide the simplest known example of a
+non-trivial Bailey chain.
+
+\proclaim
+{Thereom 1}  Let
+$$
+	\alpha_n^{(0)} = \fr{(1 - aq^{2n})(a;q)_n (-1)^n q^{\binom{n}{2}}}
+	{(1 - a)(q;q)_n} \;
+\tag{2.1}
+$$
+and
+$$
+	\beta_n^{(0)} = \delta_{n,0}\,.
+\tag{2.2}
+$$
+Furthermore for $i > 0$ 
+$$
+	\alpha_n^{(i)} = a^n q^{n^2} \alpha_n^{(i-1)}
+\tag{2.3}
+$$
+and 
+$$
+	\beta_n^{(i)} = \sum_{j=0}^n \fr{q^{j^2} a^j \beta_j^{(i-1)}}
+	{(q;q)_{n-i}}\;.
+\tag{2.4}
+$$
+Then $\{\alpha_n^{(i)}\}_{n \geqq 0}$, $\{\beta_n^{(i)}\}_{n\geqq 0}$
+$(i \geqq 0)$ form a Bailey Chain.
+\endproclaim
+
+\demo
+{Proof}  The $G_n$ and $H_n$ of (1.7) and (1.8) are clearly defined
+by (2.3) and (2.4).  We shall show that 
+$$
+	F_n(x_0,x_1,\dots,x_n) = \sum_{j=0}^n \fr{x_j}{(q;q)_{n-j}
+	(aq;q)_{n+j}}\;.
+\tag{2.5}
+$$
+The treatment of the assertion that
+$$
+	\beta_n^{(0)} = \sum_{j=0}^n \fr{\alpha_j^{(0)}}{(q;q)_{n_j}
+	(aq;q)_{n+j}}
+\tag{2.6}
+$$
+follows immediately from the fact (proved easily by induction on
+$M$) that
+$$
+	\sum_{j=0}^M \fr{(a;q)_j(1 - aq^{2j})(q^{-n};q);q^{nj}}
+	{(q;q)_j(aq^{n+1};q)_j(1 - a)} = \fr{(aq;q)_M q^{nM} 
+	(q^{1-n};q)_M}{(q;q)_M (aq^{n+1};q)_M}
+\tag{2.7}
+$$
+
+Now we assume that (1.6) holds for $i - 1$ with $F_n$ given by (2.5).
+Hence
+$$
+\align
+	\beta_n^{(i)} & = \sum_{j=0}^n \fr{q^{j^2} a^j \beta_j^{(i-1)}}
+	{(q;q)_{n-j}}   \\
+	& = \sum_{j=0}^n \fr{q^{j^2}a^j}{(q;q)_{n-j}} \;\sum_{r = 0}^j
+	\fr{\alpha_r^{(i-1)}}{(q;q)_{j-r}(aq;q)_{j+r}}  \\
+	& = \sum_{r=0}^n \sum_{j=r}^n \fr{q^{j^2}a^j \alpha_r^{(i-1)}}
+	{(q;q)_{n-j}(q;q)_{j-r}(aq;q)_{j+r}}   \\
+	& = \sum_{r=0}^n \sum_{j=0}^{n-r} \fr{q^{j^2 + 2jr}a^j \alpha_r^{(i)}}
+	{(q;q)_{n-j-r} (q;q)_j (aq;q)_{j+2r}}   \\
+	& = \sum_{r=0}^n \fr{\alpha_r^{(i)}}{(q;q)_{n-r}(aq;q)_{2r}}  \\
+	& \qquad\qquad \sum_{j\geqq 0}  \fr{(q^{-n+r};q)_j (-1)^j 
+	q^{(n-r)j+\binom{j+1}{2} + 2jr}}{(q;q)_j(aq^{2r+1};q)_j}   \\
+	& = \sum_{r=0}^r \fr{\alpha_r^{(i)}}{(q;q)_{n-r} (aq;q)_{2r}}
+	\;\fr1{(aq^{2r+1};q)_{n-r}}   \\
+	& \qquad\qquad \text{(by \c{23; p. 11, eq (1.5.2) with $b \to \infty$
+		})}   \\
+	& = \sum_{r=0}^n \fr{\alpha_r^{(i)}}{(q;q)_{n-r} (aq;q)_{n+r}}\,,
+	\tag2.8
+\endalign
+$$
+which proves that (1.6) hodls for all $i$.  \pf
+\enddemo
+
+The first couple of instances of (1.6) reveal the power of Bailey
+Chains.  When $i = 1$, 
+$$
+	\beta_n^{(1)} = \fr1{(q;q)_n}
+\tag2.9
+$$
+by (2.4), and
+$$
+	\alpha_n^{(1)} = \fr{(1 - aq^{2n})(a;q)_n (-a)^n
+	q^{n(3n-1)/2}}{(1 - a) (q;q)_n}\;.
+\tag2.10
+$$
+Next,
+$$
+	\beta_n^{(2)} = \sum_{j=0}^n \fr{q^{j^2} q^j}{(q)_{n-j}(q)_j}\;,
+\tag2.11
+$$
+and
+$$
+	\alpha_n^{(2)} = \fr{(1 - aq^{2n})(a;q)_n(-1)^n a^{2n}
+	q^{n(5n-1)/2}}{(1 - a)(q;q)_n}\;.
+\tag2.12
+$$
+
+Now by Theorem 1, we know that
+$$
+	\beta_n^{(2)} = \sum_{r=0}^n \fr{\alpha_r^{(2)}}{(q;q)_{n-r}
+	(aq;q)_{n+r}}\;,
+\tag2.13
+$$
+and therefore
+$$
+	\beta_{\infty}^{(2)} = \fr1{(q;q)_{\infty}(aq;q)_{\infty}}
+	\sum_{r=0}^{\infty} \alpha_r^{(2)}\,,
+\tag2.14
+$$
+i.e. after multiplication by $(q;q)_{\infty}$, we obtain
+$$
+	\sum_{n=0}^{\infty} \fr{a^n q^{n^2}}{(q;q)_n} =
+	\fr1{(aq;q)_{\infty}} \sum_{n=0}^{\infty}
+	\fr{(a;q)_n(1 - aq^{2n})(-1)^n a^{2n} q^{n(5n-1)/2}}
+	{(q;q)_n (1 - a)}
+\tag2.15
+$$
+
+From this familiar formula and Jacobi's Triple Product Indentity
+\c{23; p. 12, eq. (1.6.1)} we obtain (1.1) by setting $a = 1$, and
+(1.2) by setting $a = q$.
+
+This process was essentially carried out by D. Bressoud in \c{19}
+(cf. \c{17; Sec. 3.4}).  It is a limiting case of the proof given
+in Chapter 3 of \c7.  We go through it here to illustrate as 
+cleanly as possible precisely how a Bailey Chain works.
+
+\subhead
+3. \ The Bailey Transform
+\endsubhead
+
+The actual transformation that we performed in (2.8) was treated in
+a fully abstract manner by Bailey in \c{15}.  L. J. Slater \c{38; p. 58}
+has christened this the Bailey Transform:
+
+If
+$$
+	\beta_n = \sum_{r=0}^n \alpha_r u_{n-r} v_{n+r}\,,
+\tag3.1
+$$
+and 
+$$
+	\gamma_n = \sum_{r=n}^{\infty} \delta_r u_{r-n} v_{r+n}\,,
+\tag3.2
+$$
+then
+$$
+	\sum_{n=0}^{\infty} \alpha_n \gamma_n = \sum_{n=0}^\infty
+	\beta_n \delta_n\,.
+\tag3.3
+$$
+
+As Bailey notes \c{15; p. 1} the proof is a mere series 
+rearrangement.
+$$
+\align
+	\sum_{n=0}^{\infty} \alpha_n \gamma_n & = \sum_{n=0}^{\infty}
+	\sum_{r=n}^{\infty} \alpha_n \delta_r u_{r-n} v_{r+n}  \tag3.4
+	\\
+	& = \sum_{r=0}^{\infty}
+	\sum_{n=0}^{r} \delta_r \alpha_n  u_{r-n} v_{r+n}  \tag3.5
+	\\
+	& = \sum_{r=0}^{\infty} \delta_r \beta_r\,.  \tag3.6
+\endalign
+$$
+
+In (2.8), the Bailey Transform underlies the process in the 
+instance $u_n = 1/(q;q)_n$, $v_n = 1/(aq;q)_n$, $\delta_r =
+a^r q^{r^2}$, $\gamma_n = a^n q^{n^2}/(aq;q)_{\infty}$.
+
+In Section 4, we shall examine other instances of the Bailey Transform
+that lead to other Bailey Chains.  Indeed, one of the reasons for a
+separate section on the Bailey Transform is to distinguish it from
+Bailey's Lemma (an instance of the Bailey Transform [cf. (4.1)-(4.4)
+in Section 4]) and Bailey Chains (as defined in Section 1).
+
+Section 4 will only consider the case $u_n = 1/(q;q)_n$, $v_n =
+1/(aq;q)_n$, and in Section 5 we shall restrict ourselves to natural
+multidimensional extensions of this instance. However, there are
+several quite distinct instances of Bailey's Transform in the 
+literature, and we shall touch briefly on a few.
+
+D. Bressoud \c{18} was perhaps the first to obtain really striking
+variations.  He chose
+$$
+	u_n = \fr{(\beta;q)_n}{(q;q)_n} \quad,\quad v_n = 
+	\fr{(\alpha\beta;q)_n}{(q;q)_n} \quad,\quad \text{ and }
+	\delta_n = r^n\,.
+\tag3.7
+$$
+Perhaps his most appealing application is the discovery of two new
+polynomial identities which imply the Rogers-Ramanujan identities:
+$$
+	\sum_{m=0}^N q^{m^2} \bmatrix N \\ m \endbmatrix =
+	\sum_{m=-\infty}^{\infty} (-1)^m q^{m(5m+1)/2}
+	\bmatrix 2N \\ N + 2m \endbmatrix
+\tag3.8
+$$
+and
+$$
+	(1 - q^N) \sum_{n=0}^{\infty} q^{m^2 + m} \bmatrix N -1 \\
+	m\endbmatrix = \sum_{m=-\infty}^{\infty} (-1)^m q^{m(5m+3)/2}
+	\bmatrix 2N \\ N + 2m + 1 \endbmatrix
+\tag3.9
+$$
+where
+$$
+	\bmatrix A \\ B \endbmatrix = \bmatrix A \\ B \endbmatrix_q
+	= \left\{
+	\aligned
+	\fr{(q;q)_A}{(q;q)_B (q;q)_{A-B}} \qquad & \text{ if } 0 \leqq
+		A \leqq B  \\
+	0 \qquad & \text{ otherwise }\,.
+	\endaligned  \right.
+\tag3.10
+$$
+
+In \c{10}, it was pointed out that one of D. B. Sears' most useful
+transformations \c{35; p. 167, Th. 3} was the following instance 
+of the Bailey Transform:
+$$
+\aligned
+	u_n & = \fr{(ab/e;q)_n}{(q;q)_n}\quad,\quad v_n = 1\,,\quad
+	\gamma_s = \sum_{t=0}^{\infty} \fr{(ab/e;q)_t \delta_{s+t}}
+	{(q;q)_t}
+	\\
+	\alpha_n & = \fr{(e/a;q)_n (e/b;q)_n\left(\fr{ab}{e}\right)^n}
+	{(q;q)_n (e;q)_n}\quad,\quad \beta_n = \fr{(a;q)_n (b;q)_n}
+	{(q;q)_n (e;q)_n}
+\endaligned
+\tag3.11
+$$
+
+Following up on this \c{10}, one can obtain an $(r-1)$-fold expansion of
+$$
+\align
+	_{r+1}\phi_r & \pmatrix c_0,c_1,\dots,c_r;q, \fr{f_1 f_2 \cdots f_r}
+	{c_0 c_1\cdots c_r} \\ f_1,\dots,f_r \endpmatrix   \\
+	: = & \sum_{n\geqq 0} \fr{(c_0,c_1,\dots,c_r;q)_n}{(q,f_1,
+	\dots, f_r;q)_n} \;\left( \fr{f_1 f_2 \dots f_r}{c_0 c_1 \dots c_r}
+	\right)^n\;.   \tag3.12
+\endalign
+$$
+
+When $r = 2$, the result reduces to
+$$
+\align
+	_3\phi_2 & \pmatrix c_0,c_1,c_2;q, \fr{f_1 f_2}{c_0 c_1 c_2}
+	\\ f_1,f_2 \endpmatrix   \\
+	= & \fr{\left(\fr{f_2}{c_2}\;,\; \fr{f_1 f_2}{c_0 c_2} ; 
+		q\right)_{\infty}}{\left(f_2, \fr{f_1 f_2}{c_0 c_1 c_2}
+		\;;\; q\right)_{\infty}} \; _3\phi_2 \;
+		\pmatrix f_1/c_0,f_1/c_1,c_2;q,f_2/c_2 \\
+		f_1,\fr{f_1 f_2}{c_0 c_1}\endpmatrix  \tag3.13
+\endalign
+$$
+a familiar and useful formula \c{23, p. 62, eq. (3.2.7)}.
+
+Very much related to this is a series of papers by Schilling and
+Warnaar \c{32}, \c{33}, \c{34} in which they also concentrate on the
+$\gamma_n$ and $\delta_n$ and consider multi-dimensional extensions
+thereof.  Also a variation on $\gamma_n$ and $\delta_n$ appears 
+in Bailey's paper \c{15; $\S$5}.
+
+In this same general area, but not explicitly following from the
+Bailey Transform is the work in \c9 on a $q$-trinomial coefficient
+analog of Bailey's Lemma.  In \c{39}, O. Warnaar shows how this work is
+closely related to the classical Bailey Lemma.
+
+\subhead
+4. \ One-Dimensional Bailey Chains
+\endsubhead
+
+The proof of the Rogers-Ramanujan identities given in Section 2 is in
+fact a very special case of the following result known as Bailey's
+Lemma \c5, \c{7; Ch. 3}.
+
+If for $n\geq 0$
+$$
+	\beta_n = \sum_{r=0}^n \fr{\alpha_r}{(q;q)_{n-r}(aq;q)_{n+r}}\;,
+\tag4.1
+$$
+then
+$$
+	\beta_n' = \sum_{r=0}^n \fr{\alpha_r'}{(q;q)_{n-r}(aq;q)_{n+r}}\;,
+\tag4.2
+$$
+where
+$$
+	\alpha_r' = \fr{(\rho_1;q)_r(\rho_2;q)_r(aq/\rho_1\rho_2)^r \alpha_r}
+	{(aq/\rho_1;q)_r(aq/\rho_2;q)_r} 
+\tag4.3
+$$
+and
+$$
+	\beta_n' = \sum_{j\geq 0} \fr{(\rho_1;q)_j(\rho_2;q)_j
+		(aq/\rho_1\rho_2;q)_{n-j}(aq/\rho_1\rho_2)^j \beta_j}
+		{(q;q)_{n-j}(aq/\rho_1;q)_n(aq/\rho_2;q)_n}\;.
+\tag4.4
+$$
+
+We shall suppress the proof of this; it is very similar to the proof
+of (2.8) (cf. \c{7; Ch. 3}).  This, of course, can be iterated
+immediately to produce a Bailey Chain as described in Section 1.
+
+This result as outlined (but not stated) by Bailey himself \c{15; $\S$4}
+uses the Bailey Transform in the case where
+$$
+\aligned
+ 	u_n & = \fr1{(q;q)_n} \quad v_n = \fr1{(aq;q)_n}   \\
+	\delta_n & = \fr{(\rho_1, \rho_2, q^{-N};q)_n q^n}{(\rho_1
+	\rho_2 q^{-N}/a;q)_n}\;,  \\
+	\gamma_n & = \fr{(aq/\rho_1,aq/\rho_2;q)_N}{(aq,aq/(\rho_1\rho_2);q)_N}
+	\;\; \fr{(\rho_1,\rho_2, q^{-N};q)_n \left(\fr{-aq}{\rho_1\rho_2}
+	\right)^n q^{nN-\binom{n}{2}}}{(aq/\rho_1, aq/\rho_2,aq^{N+1};q)_n}
+\endaligned
+\tag4.5
+$$
+
+Subsequently this Bailey Chain has been applied to prove many 
+disparate results.  Its original application \c3 (cf. \c{7; Ch 3})
+was to provide an analog of Watson's $q$-analog of Whipple's 
+Theorem \c{40} for 
+$$
+	_{2k+r}\phi_{2k+3} \pmatrix a,q\sqrt{a},-q\sqrt{a},b_1,c_1,
+	b_2,c_2,\dots,b_k, c_k; q^{-N};q, \fr{a^k q^{k+N}}{b_1 c_1
+	\cdots b_k c_k}  \\
+	\sqrt{a},-\sqrt{a},\fr{aq}{b_1}, \fr{aq}{c_1},\fr{aq}{b_2},
+	\fr{aq}{c_2}\,,\quad \,, \fr{aq}{b_k},\fr{aq}{c_k}\,,
+	aq^{N+1} \endpmatrix
+\tag4.6
+$$
+This in turn can be specialized to the natural extension of the
+first Rogers-Ramanujan identity \c2, \c{4; Ch. 7}
+$$
+\align
+	\sum_{n_1 \geqq n_2 \geqq \cdots n_{k-1}\geqq 0}\quad
+	& \fr{q^{n_1^2 + n_2^2 + \cdots + n_{k-1}^2}}
+	{(q;q)_{n_1-n_2}(q;q)_{n_2-n_3} \cdots (q;q)_{n_{k-2}-n_{k-1}}
+	(q;q)_{n_{k-1}}}    \\
+	& = \prod_{\Sb{n=1} \\ {n\not\equiv 0,\pm k\pmod{2k+1}}\endSb}^{\infty}
+	\quad\fr1{1 - q^n}  \tag4.7
+\endalign
+$$
+
+But other results also follow such as \c{11; p. 392}
+$$
+	\sum_{n=0}^{\infty} \fr{q^{\binom{n+1}{2}}}{(-q;q)_n} =
+	\sum_{\Sb n \geqq 0 \\ |j| \leqq n \endSb} (-1)^{n+j} 
+	q^{n(3n+1)/2 - j^2} (1 - q^{2n+1})
+\tag4.8
+$$
+or \c{11; p. 404}
+$$
+	\sum_{n\geqq 1} \fr{(-1)^n q^{n^2}}{(q;q^2)_n} = 
+	\sum_{n\geqq 1} \sum_{j=0}^{2n-1} (-1)^n q^{n(3n-1) - j
+	(j+1)/2} (1 + q^{2n})
+\tag4.9
+$$
+
+Further applications are given in \c5, \c6, \c{36} and \c{37}.
+
+\subhead
+5. \ Multidimensional Bailey Chains
+\endsubhead
+
+Lilly and Milne were the first researchers \c{25}, \c{26} and \c{27}
+to recognize that the concepts described in Sections
+2--5 could be extended to higher dimensional series.  In a substantial
+series of papers extending classical ordinary and $q$-hypergeometric
+functions to multiple series based on the unitary or symplectic
+groups, S. Milne and his collaborators laid the ground work for an
+extension of Bailey's Lemma and Bailey chains to these groups.
+
+As an example of their achievement we state their generalization for
+the symplectic groups $C_{\ell}$ \c{26; pp. 494--495}:
+
+\proclaim
+{Theorem}  Let $A = \{A_y\}$ and $B = \{B_y\}$ be sequences that
+satisfy
+$$
+	B_N = \sum_{\Sb 0 \leq y_k \leq N_k \\ k = 1,2,\dots,\ell\endSb}
+	\left\{ \prod_{r,s=1}^{\ell} \left[\left( q\;\fr{x_r}{x_s}\;
+	q^{y_r - y_s}\right)_{N_r - y_r}^{-1} 
+	(qx_r x_s q^{y_r + y_s})_{N_r - y_r}^{-1} \right] A_y \right\}
+\tag5.1
+$$
+for every $N_i\geq 0$, $i = 1,2,\dots,\ell$.  ($A$ and $B$ form a $C_{\ell}$
+Bailey pair).  If we define
+$$
+	A_N' : = \left\{ \prod_{k=1}^{\ell} \left[ \fr{(\alpha x_k)_{N_k}
+	(qx_k \beta^{-1})_{N_k}}{(\beta x_k)_{N_k}(qx_k \alpha^{-1})_{N_k}}
+	\right] \left(\fr{\beta}{\alpha}\right)^{(N_1 + \cdots + N_{\ell})}
+	A_N \right\}
+\tag5.2
+$$
+and if we also define
+$$
+\aligned
+	B_N' : = \sum_{\Sb 0 \leq m_k \leq N_k \\ k = 1,2,\dots,\ell\endSb}
+	& \left\{\left( \fr{\beta}{\alpha}\right)_{(N_1 + \cdots + N_{\ell})
+	- (m_1 + \cdots + m_{\ell})}  \right.  \\
+	& \times  \prod_{k=1}^{\ell} \left[ 
+	\fr{(\alpha x_k)_{m_k}(qx_k\beta^{-1})_{m_k}}{(\beta x_k)_{N_k}
+	(qx_k \alpha^{-1})_{N_k}} \right]
+	\left(\fr{\beta}{\alpha}\right)^{(m_1 + \cdots + m_{\ell})}  \\
+	& \times \prod_{1 \leq r < s \leq \ell}  [(qx_r x_s q^{m_r + m_s})
+	^{-1} (qx_r x_3 q^{N_s - m_s})_{N_r - m_r}^{-1}] \\
+	& \times \left. \prod_{r,s = 1}^{\ell} \left(q \fr{x_r}{x_s} 
+	q^{m_r - m_s}\right)_{N_r - m_r}^{-1} B_m\right\} \,,
+\endaligned
+$$
+then $A' = \{A_y'\}$ and $B' = \{B_y'\}$ also satisfy (4.13); i.e. 
+they form a $C_{\ell}$ Bailey pair.
+\endproclaim
+
+In \c{27}, they consider the applications of their extensions and
+provide relevant generalizations of the $q$-analog of Whipple's
+transformation, the $q$-Dougall summation and other results.
+
+In \c{12}, Schilling, Warnaar and I provide an alternative approach to
+multiple series.  It is not nearly as broad in scope as the
+Lilly-Milne work, but it does yield a variety of new series-product
+identities.  The principal ideas of \c{12} culminate in the following
+formulation.
+
+\definition
+{Definition 5.1}   ($A_2$ Bailey pair of type I).  Denote $\alpha_k =
+\alpha_{k_1,k_2,k_3}$ and $\beta_L = \beta_{L_1,L_2}$, and let
+$\alpha = \{\alpha_k\} \Sb k_1 \geq k_2 \geq k_3 \\ k_1 + k_2 + k_3 = 0
+	\endSb$ and $\beta = \{\beta_l\}_{L_1,L_2 \geq 0}$  be a pair 
+of sequences that satisfies
+\enddefinition
+$$
+	\beta_L = \sum_{\Sb k_1 \geq k_2 \geq k_3 \\ k_1 + k_2 + k_3
+	= 0 \endSb} \alpha_k \sum_r \fr{q^{r_1 r_{23}}}
+	{(q)_{r_1}(q)_{r_2}(aq)_{r_3}(q)_{r_{12}}(q)_{r_{13}}(q)_{r_{23}}}\;,
+\tag5.4
+$$
+where $\sum_r$ denotes a sum over $r_1,\dots,r_{23}$ such that
+$$
+	r_1 + r_{12} + r_{13} = L_2 - k_1, \quad r_2 + r_{12} +
+	r_{23} = L_2 - k_2, \quad r_3 + r_{13} + r_{23} = L_2
+	- k_3
+$$
+and
+$$
+	r_1 + r_2 + r_3 = 2L_1 - L_2, \quad r_{12} + r_{13} + r_{23}
+	= 2L_2 - L_1.
+$$
+Then $(\alpha,\beta)$ forms an $A_2$ Bailey pair of type I relative
+to $\alpha$.
+
+\definition
+{Definition 5.2} ($A_2$ Bailey pair of type II).  Denote $\alpha_k =
+\alpha_{k_1,k_2,k_3}$ and $\beta_L = \beta_{L_1,L_2}$, and let
+$\alpha = \{\alpha_k\} \Sb k_1 \geq k_2 \geq k_3 \\ k_1 + k_2 + k_3 = 0
+\endSb$ and $\beta = \{\beta_L\}_{L_1,L_2 \geq 0}$ be a pair of
+sequences that satisfies
+$$
+	\beta_L = \sum_{\Sb k_1 \geq k_2 \geq k_3 \\ k_1 + k_2 + k_3 = 0
+	\endSb} \alpha_k \;\fr{(aq)_{L_1 + L_2}}{(aq)_{L_1 + k_1}
+	(aq)_{L_1 + k_2}(q)_{L_1 + k_3}(q)_{L_2 - k_1}(q)_{L_2-k_2}
+	(aq)_{L_2 - k_3}}\;.
+\tag5.5
+$$
+Then $(\alpha,\beta)$ forms an $A_2$ Bailey pair of type II relative
+to $\alpha$.
+\enddefinition
+
+With these definitions, the $A_2$ version of Bailey's lemma reads
+
+\proclaim
+{Theorem \c{12}} Le t$(\alpha,\beta)$ form an $A_2$ bailey pair of
+type $T = I,II$ relative to $a$.  Then the pair $(\alpha',\beta')$
+given by
+$$
+\aligned
+	\alpha_k' & = a^{k_1 + k_2} q^{\fr12(k_1^2 + k_2^2 + K_3^2)}
+	\alpha_k\,,   \\
+	\beta_L' & = f_L^{(T)} \sum_{r_1 = 0}^{L_1} \sum_{r_2 = 0}^{L_2}
+	\fr{a^{r_1} q^{r_1^2 - r_1 r_2 + r_2^2}}{(q)_{L_1 - r_1}
+	(q)_{L_2 - r_2}}\;\beta_r
+\endaligned
+\tag5.6
+$$
+forms an $A_2$ Bailey pair of type II relative to $a$.  Here
+$f_L^{(I)} = (aq)_{L_1 + L_2}^{-1}$ and $f_L^{(II)} = 1$.
+\endproclaim
+
+As examples of the series-product results that follow from this
+theorem, we include \c{12; Th. 5.2}
+
+\proclaim
+{Theorem}  For $|q| < 1$,
+$$
+	\sum_{r_1 r_2 \geq 0} \fr{q^{r_1^2 - r_1 r_2 + r_2^2}}
+	{(q)_{r_1}} \bmatrix 2r_1 \\ r_2 \endbmatrix =
+	\prod_{n=1}^{\infty} \fr1{(1 - q^{7n-1})^2(1 - q^{7n-3})
+	(1 - q^{7n-4})(1 - q^{7n-6})^2}\;,
+\tag5.7
+$$
+$$
+\aligned
+	\sum_{r_1 r_2 \geq 0} \fr{q^{r_1^2 - r_1 r_2 + r_2^2+r_1+r_2}}
+	{(q)_{r_1}} & \bmatrix 2r_1 \\ r_2 \endbmatrix \\
+	& = \prod_{n=1}^{\infty} \fr1{(1 - q^{7n-2})(1 - q^{7n-3})^2
+	(1 - q^{7n-4})^2(1 - q^{7n-5})}\;,
+\endaligned
+\tag5.8
+$$
+and
+$$
+\aligned
+	& \sum_{r_1 r_2 \geq 0} \fr{q^{r_1^2 - r_1 r_2 + r_2^2+r_1}}
+	{(q)_{r_1}} \bmatrix 2r_1 + 1 \\ r_2 \endbmatrix 
+	= \sum_{r_1,r_2 \geq 0} \fr{q^{r_1^2-r_1 r_2 + r_2^2 + r_2}}
+	{(q)_{r_1}}\;\bmatrix 2r_1 \\ r_2 \endbmatrix \\
+	& = \prod_{n=1}^{\infty} \fr1{(1 - q^{7n-1})(1 - q^{7n-2})(1 - 
+	q^{7n-3})(1 - q^{7n-4})(1 - q^{7n-5})(1 - q^{7n-6})}\;.
+\endaligned
+\tag5.9
+$$
+(the symbol $\bmatrix A \\ B\endbmatrix$ is defined in (3.10)).
+\endproclaim
+
+In \c8, I undertook an examination of the work of L. J. Rogers which
+inspired all of Bailey's insights.  The main result there might be 
+described as a ``direct product'' generalization of Bailey's Lemma
+and Bailey Chains \c{7; Ch. 3}.  Its bilateral nature is dealt 
+with in the $s = 1$ case in \c{16} and \c{29}.
+
+\proclaim
+{Theorem}  If for $n_1,n_2,\dots,n_2 \geqq 0$,
+$$
+	\beta_{n_1,n_2,\dots,n_r} = \sum_{r_1 = - \infty}^{n_1}
+	\sum_{r_2 = - \infty}^{n_2} \cdots \sum_{r_x = - \infty}^{n_r}
+	\fr{\alpha_{r_1,r_2,\dots,r_x}}{\prod_{j=1}^{s} (q;q)_{n_j-r_j}
+	(a_j q;q)_{n_j + r_j}}
+\tag5.10
+$$
+then
+$$
+	\beta_{n_1,n_2,\dots,n_r}' = \sum_{r_1 = - \infty}^{n_1}
+	\sum_{r_2 = - \infty}^{n_2} \cdots \sum_{r_x = - \infty}^{n_r}
+	\fr{\alpha_{r_1,r_2,\dots,r_x}'}{\prod_{j=1}^{s} (q;q)_{n_j-r_j}
+	(a_j q;q)_{n_j + r_j}}\;,
+\tag5.11
+$$
+where
+$$
+	\alpha_{r_1,r_2,\dots,r_x}' = \left( \prod_{j=1}^s
+	\fr{(\rho_j)_{r_j} (\sigma_j)_{r_j}(a_j q/(\rho_j \sigma_j))^{r_j}}
+	{(a_jq/\rho_j)_{r_j}(a_jq/\sigma_j)_{r_j}}\right) \;
+	\alpha_{r_1,r_2,\dots,r_x}
+\tag5.12
+$$
+and
+$$
+	\beta_{n_1,n_2,\dots,n_x}' = \prod_{j=1}^s 
+		\sum_{m_j = -\infty}^{n_j}
+	\fr{(\rho_j)_{m_j} (\sigma_j)_{m_j} (a_j q/(\rho_j\sigma_j))_{n_j - 
+		m_j}
+	\left(\fr{a_j q}{\rho_j\sigma_j}\right)^{m_j} \beta_{m_j,\dots,m_x}}
+	{(q)_{n_j-m_j}(a_jq/\rho_j)_{n_j}(a_j q/\sigma_j)_{n_j}}\;.
+\tag5.13
+$$
+\endproclaim
+
+The instance of this theorem that is utilized in \c8 is the
+\vskip .1in
+{\bf First Corollary.}  If for $n_1,n_2,\dots,n_x \geqq 0$
+$$
+	\beta_{n_1,n_2,\dots,n_s} = \sum_{r_1 = - n_1}^{n_1}
+	\sum_{r_2 = - n_2}^{n_2} \cdots \sum_{r_s = - n_s}^{n_s}
+	\fr{\alpha_{r_1,r_2,\dots,r_s}}{\prod_{j=1}^s (q;q)_{n_j - r_j}
+	(q;q)_{n_j + r_j}}\,,
+\tag5.14
+$$
+then
+$$
+\aligned
+	\sum_{n_1,\dots,n_s \geqq 0} & q^{n^2_1 + n_2^2 + \cdots 
+	+ n_s^2}\beta_{n_1,n_2,\dots,n_s}  \\
+	& = \fr1{(q;q)_{\infty}^s}  \sum_{m_1,m_2,\dots,m_s = -\infty}
+	q^{m^2_1 + m_2^2 + \cdots + m_s^2} \alpha_{m_1,m_2,\dots,m_s}\,.
+\endaligned
+\tag5.15
+$$
+
+To illustrate the implications of this result for $q$-series 
+identities, new pentagonal numbers theorems are proved:
+$$
+	\sum_{n=1}^{\infty} \fr{q^{2n^2}}{(q;q)_{2n}} =
+	\fr{\sum_{n,m  =-\infty}^{\infty} (-1)^{n+m} q^{n(3n-1)/2 + 
+		m(3m-1)/2+nm}}{\prod_{n-1}^{\infty} (1 - q^n)^2}\,.
+\tag5.16
+$$
+and
+$$
+\aligned
+	\sum_{i,j,k \geqq 0} & \fr{q^{i^2 + j^2 + k^2}}{(q;q)_{i+j-k}
+	(q;q)_{i+k-j}(q;q)_{j+k-i}}   \\
+	& = \fr{\sum_{n,m,p=-\infty}^{\infty} (-1)^{n+m+p}
+	q^{n(3n-1)/2 + m(3m-1)/2 + p(3p - 1)/2+nm+np+mp}}{\prod_{n=1}^{\infty}
+	(1 - q^n)^3}
+\endaligned
+\tag5.17
+$$
+
+To further illustrate the application of these results we shall 
+prove:
+
+\proclaim
+{Theorem 2}
+$$
+\aligned
+	\sum_{m,n \geqq 0} & \fr{(-1)^m q^{2m^2 + 2n^2}(-q;q^2)_{n-m}}
+	{(q;q^2)_{n-m}(q^4;q^4)_m (q^4;q^4)_m}   \\
+	& = \fr{\sum_{i,j=-\infty}^{\infty} (-1)^i q^{3i^2 + 3j^2 + 2ij}}
+	{(q^2;q^2)_{\infty}^2}
+\endaligned
+\tag5.18
+$$
+\endproclaim
+
+\demo
+{Proof}  This result is a direct application of the First Corollary
+wherein we replace $q$ by $q^2$, set $s = 2$, and
+$$
+	\alpha_{i,j} = (-1)^i q^{(i + j)^2}
+\tag5.19
+$$
+$$
+	\beta_{m,n} = \fr{(-1)^m (-q;q^2)_{n-m}}{(q;q^2)_{n-m}
+	(q^4;q^4)_m (q^4;q^4)_n}\;.
+\tag5.20
+$$
+This means that we must prove that
+$$
+\align
+	\sum_{i,j=-\infty}^{\infty}  (-1)^i & q^{(i + j)^2}
+	\bmatrix 2m \\ m + i \endbmatrix_{q^2} \bmatrix 2n \\
+	n + j \endbmatrix_{q^2}  \\
+	& = \fr{(-1)^m (-q;q^2)_{n-m} (q^2;q^4)_m(q^2;q^4)_n}
+	{(q;q^2)_{n-m}}\;.   \tag5.21
+\endalign
+$$
+To see this, we note
+$$
+\align
+	& \sum_{i,j} (-1)^i q^{(i+j)^2} \bmatrix 2m \\ m+i \endbmatrix_{q^2}
+	\bmatrix 2n \\ n+j \endbmatrix_{q^2}   \\
+	& = \sum_j \bmatrix 2n \\ n + j\endbmatrix_{q^2} q^{j^2} \sum_i
+	(-1)^k q^{i^2 + 2ij} \bmatrix 2m \\ m + i \endbmatrix_{q^2}  \\
+	& = \sum_j \bmatrix 2n \\ n + j\endbmatrix_{q^2} q^{j^2} 
+	(q^{2j+1},q^2)_m (q^{1-2j}; q^2)_m  \\
+	& \hskip 2in \text{(by \c{4; p. 49, Ex. 1})}   \\
+	& = \fr{(-1)^m (q;q^2)_{m-n} q^{(n+m)^2}}{(q;q^2)_{-m-n}}
+	\quad  _2\phi_1 \; \pmatrix q^{-4n}, q^{2m-2n+1};q^2, - q^{2n-2m+1} \\
+	q^{-2m - 2n+1} \endpmatrix  \\
+	& = \fr{(-1)^m (-q;q^2)_{n-m}(q^2;q^4)_m(q^2;q^4)_r}{(q;q^2)_{n-m}}
+	\\
+	& \qquad\qquad \text{(by \c{1; eq. (1.7)}, \c{23; $\S$1.8})}
+	\tag5.22
+\endalign
+$$
+which is the desired result.  
+\pf
+\enddemo
+
+\subhead
+6. \ A New Bailey Chain, the $WP$-Bailey Chain
+\endsubhead
+
+The work described in Section 4 yields (among many other results)
+transformations for the series given in (4.6).  The most famous of
+these are the case $k = 1$, a summation due to F. H. Jackson \c{24},
+and $k = 2$, Watson's $q$-analog of Whipple's theorem.
+
+However, there is a classical transformation due to Bailey \c{23;
+p. 39, eq. (2.9.1)}) which is not a direct corollary of the Bailey
+Chains considered in Section 4.
+$$
+\aligned
+	& _{10}\phi_9 \left[\gathered a,qa^{\fr12},-qa^{\fr12},b,c,d,e,f,
+	\lambda aq^{n+1}/ef,q^{-n}  \\ a^{\fr12},-a^{\fr12},aq/b,
+	aq/c,aq/d,aq/e,aq/f,efq^{-n}/\lambda,aq^{n+1}\endgathered
+	\,;q,q \right]  \\
+	& = \fr{(aq,aq/ef,\lambda q/e,\lambda q/f;q)_n}
+	{(aq/e,aq/f,\lambda q/ef,\lambda q;q)_n} \;_{10}\phi_9\;
+	\left[ \gathered \lambda,q\lambda^{\fr12}, q\lambda^{\fr12},
+	\lambda b/a,\lambda c/a,\lambda d/a, \\ \lambda^{\fr12} -
+	\lambda^{\fr12}, aq/b,aq/c,aq/d,\endgathered   \right.   \\
+	& \quad \left. \gathered e,f,\lambda aq^{n+1}/ef,q^{-n}, \\
+	\lambda q/e,\lambda q/f,efq^{-n}/a,\lambda q^{n+1}
+	\endgathered\, ; q,q \right]\;,
+\endaligned
+\tag6.1
+$$
+where $\lambda = qa^2/bcd$.
+
+If we examine the Bailey method for proving (6.1) (beautifully,
+presented in \c{23; $\S$2.2 and $\S$2.9}), we find that we can easily
+produce a new type of Bailey Chain.  We shall call it a $WP$-Bailey
+Chain because both the series in (6.1) are examples of very
+well-poised basic hypergeometric series \c{23; p. 32}.
+
+\demo
+{\bf Definition}  We say that two sequences $\alpha_n(a,k)$ and $\beta_n(a,k)$
+form a $WP$-Bailey pair provided
+$$
+	\beta_n(a,k) = \sum_{i=0}^n \fr{(k/a;q)_{n-i}(k;q)_{n+i}}
+	{(q;q)_{n-i}(aq;q)_{n+i}}\;\alpha_i (a,k)\,.
+\tag6.2
+$$
+
+Note that if $k = 0$ then we have a Bailey pair as considered in
+Section 4.
+\enddemo
+
+\proclaim
+{Theorem 3}  If $\alpha_n(a,k)$ and $\beta_n(a,k)$ form a $WP$-Bailey
+pair, then so do $\alpha_n'(a,k)$ and $\beta_n'(a,k)$, where
+$$
+	\alpha_n'(a,k) = \fr{(\rho_1;q)_n(\rho_2;q)_n(aq/\rho_1\rho_2)^n}
+	{(aq/\rho_1;q)_n (aq/\rho_2;q)_n}\;\alpha_n \left( a,
+	\fr{k\rho_1\rho_2}{aq}\right)  
+\tag6.3
+$$
+and
+$$
+\align
+	\beta_n'(a,k) & = \fr{\left(\fr{k\rho_1}{a};q\right)_n \left(
+	\fr{k\rho_2}{a}q\right)_n}{\left(\fr{aq}{\rho_1},q\right)_n
+	\left(\fr{aq}{\rho_2},q\right)_n}\quad \sum_{j=0}^n\quad
+	\fr{(\rho_1;q)_j (\rho_2;q)_j}{\left(\fr{k\rho_2}{a};q\right)_j
+	\left(\fr{k\rho_1}{a};q\right)_j}   \\
+	& \times\; \fr{\left(1 - \fr{k\rho_1\rho_2 q^{2j-1}}{a}\right)
+	\left(\fr{aq}{\rho_1\rho_2};q\right)_{n-j}(k;q)_{n+j}}
+	{\left(1 - \fr{k\rho_1\rho_2}{aq}\right) (q;q)_{n-j} \left(
+	\fr{k\rho_1\rho_2}{a} ;q\right)_{n+j}} \left(\fr{aq}{\rho_1\rho_2}
+	\right)^j  \beta_j \left(a, \fr{k\rho_1\rho_2}{aq}\right)\,.
+	\tag6.4
+\endalign
+$$
+\endproclaim
+
+\remark
+{Remark}  Note that if we at $k = 0$, this result reduces to the
+assertions in (4.1)--(4.4).
+\endremark
+
+\demo
+{Proof}  We must show that $\alpha_n'(a,k)$ and $\beta_n'(a,k)$
+as given in (6.3) and (6.4) actually satisfy (6.2).  By (6.4) 
+and (6.2)
+$$
+\aligned
+	\beta_n'(a,k) & = \fr{\left(\fr{k\rho_1}{a}\,,\, \fr{k\rho_2}{a};
+	q\right)_n}{\left(\fr{aq}{\rho_1}\,,\,\fr{aq}{\rho_2};q\right)_n}
+	\;\sum_{j=0}^n\; \fr{(\rho_1,\rho_2;q)_j}{\left( \fr{k\rho_2}{a}\,,\,
+	\fr{k\rho_1}{a};q\right)_j}   \\
+	& \times \fr{\left(1 - \fr{k\rho_1\rho_2 q^{2j-1}}{a}\right)
+	\left(\fr{aq}{\rho_1\rho_2};q\right)_{n-j}(k;q)_{n+j}}{\left(
+	1 - \fr{k\rho_1\rho_2}{aq}\right) (q;q)_{n-j}\left(\fr{k\rho_1\rho_2}
+	{a};q\right)_{n+j}} \; \left(\fr{aq}{\rho_1\rho_2}\right)^j  \\
+	& \times \sum_{i=0}^j \fr{\left( \fr{k\rho_1\rho_2}{a^2 q};
+	q\right)_{j-i}\left( \fr{k\rho_1\rho_2}{aq};q\right)_{j+1}\;
+	\alpha_i\left( a,\fr{k\rho_1\rho_2}{aq}\right)}{(q;q)_{j-i}
+	(aq;q)_{j+i}}  \\
+	& = \fr{\left( \fr{k\rho_1}{a}\,,\,\fr{k\rho_2}{a}; q\right)_n}
+	{\left(\fr{aq}{\rho_1}\,,\,\fr{aq}{\rho_2};q\right)_n}
+	\sum_{i=0}^n \sum_{j=0}^{n-i} \fr{(\rho_1,\rho_2;q)_{j+i}}
+	{\left( \fr{k\rho_2}{a}\,,\, \fr{k\rho_1}{a};q\right)_{j+i}}  \\
+	& \times \fr{\left(1 - \fr{k\rho_1\rho_2 q^{2i+2j-1}}{a}\right)
+	\left(\fr{aq}{\rho_1\rho_2};q\right)_{n-i-j}(k;q)_{n+i+j}
+	\left(\fr{aq}{\rho_1\rho_2}\right)^{i+j}}{\left(1 - 
+	\fr{k\rho_1\rho_2}{aq}\right) (q;q)_{n-i-j} \left(\fr{k\rho_1\rho_2}
+	{a};q\right)_{n+i+j}}   \\
+	& \times \fr{\left(\fr{k\rho_1\rho_2}{a^2 q};q\right)_j
+	\left(\fr{k\rho_1\rho_2}{aq};q\right)_{j+2i}\alpha_i
+	\left(a,\fr{k\rho_1\rho_2}{aq}\right)}{(q;q)_j (aq;q)_{j+2i}}  \\
+	& = \fr{\left(\fr{k\rho_1}{a}\,,\,\fr{k\rho_2}{a};q\right)_n}
+	{\left(\fr{aq}{\rho_1}\,,\,\fr{aq}{\rho_2};q\right)_n}\sum_{i=0}^n
+	\fr{(\rho_1,\rho_2;q)_i}{\left(\fr{k\rho_2}{a}\,,\,\fr{k\rho_1}{a};
+	q\right)_i} \alpha_i\left(a,\fr{k\rho_1\rho_2}{aq}\right)  \\
+	& \fr{\left(\fr{aq}{\rho_1\rho_2};q\right)_{n-i}(k;q)_{n+i}\left(
+	\fr{aq}{\rho_1\rho_2}\right)^i \left(1 - \fr{k\rho_1\rho_2 q^{2i-1}}
+	{a}\right)\left(\fr{k\rho_1\rho_2}{aq};q\right)_{2i}}{(q;q)_{n-i}
+	\left(\fr{k\rho_1\rho_2}{a};q\right)_{n+i} \left(1 - 
+	\fr{k\rho_1\rho_2}{aq}	\right)(aq;q)_{2i}}  \\
+	&  _8\phi_7 \left(\gathered \fr{k\rho_1\rho_2 q^{2i-1}}{a}\,,\,
+	q^{i+1} \sqrt{\fr{k\rho_1\rho_2}{aq}}\,, \,-q^{i+1}
+	\sqrt{\fr{k\rho_1\rho_2}{aq}}\,,\,\rho_1 q^i,\rho_2 q^i\,,\,
+	\fr{k\rho_1\rho_2}{a^2 q}\,,\,kq^{n+i}\,,\, q^{-n+i};q,q \\
+	q^i \sqrt{\fr{k\rho_1\rho_2}{aq}}\,,\, -q^i 
+	\sqrt{\fr{k\rho_1\rho_2}{aq}}\,,\,\fr{k \rho_2 q^i}{a}\,,\,
+	\fr{k\rho_1 q^i}{a}\,,\, aq^{2i+1}\,,\, 
+	\fr{\rho_1\rho_2 q^{-n+i}}{a}\,,\, \fr{k\rho_1\rho_2 q^{n+i}}{a}
+	\endgathered\right) \\
+	& = \fr{\left( \fr{k\rho_1}{a}\,,\,\fr{k\rho_2}{a};q\right)_n}
+	{\left(\fr{aq}{\rho_1}\,,\,\fr{aq}{\rho_2};q\right)_n}
+	\sum_{i=0}^n \fr{(\rho_1,\rho_2;q)_i}{\left(\fr{k\rho_2}{a}\,,\,
+	\fr{k\rho_1}{a};q\right)_i} \;\alpha_i \left(a\,,\,\fr{k\rho_1\rho_2}
+	{aq}\right)  \\
+\endaligned
+$$
+$$
+\align
+	& \times \fr{\left(\fr{aq}{\rho_1\rho_2};q\right)_{n-i}(k;q)_{n+i}
+	\left(\fr{aq}{\rho_1\rho_2}\right)^i \left(\fr{k\rho_1\rho_2}{a};
+	q\right)_{2i}}{(q;q)_{n-i} \left(\fr{k\rho_1\rho_2}{a};q\right)_{n+i}
+	(aq;q)_{2i}}   \\
+	& \times \fr{\left(\fr{k\rho_1\rho_2 q^{2i}}{a}\,,\, \fr{k}{a}\,,\,
+	\fr{\rho_1 q^{-n}}{a}\,,\, \fr{\rho_2 q^{-n}}{a}; q\right)_{n-i}}
+	{\left(\fr{k\rho_2 q^i}{a}\,,\, \fr{k\rho_1 q^i}{a}\,,\,
+	\fr{\rho_1\rho_2 q^{-n+i}}{a}\,,\,\fr{q^{-n-i}}{a};q\right)_{n-i}}  \\
+	& \hskip 1in \text{(by \c{23; p. 35, eq. (2.6.2)})}   \\
+	& = \sum_{i=0}^n \fr{\left(\fr{k}{a};q\right)_{n-i}(k;q)_{n+i}}
+	{(q;q)_{n-i} (aq;q)_{n+i}}\;\fr{(\rho_1,\rho_2;q)_i}{\left(
+	\fr{aq}{\rho_1}\,,\,\fr{aq}{\rho_2}; q\right)_i} \left(
+	\fr{aq}{\rho_1\rho_2}\right)^i \alpha_i \left(a,\fr{k\rho_1\rho_2}
+	{aq}\right)   \\
+	& = \sum_{i=0}^n \fr{\left(\fr{k}{a};q\right)_{n-i} (k;q)_{n+i}}
+	{(q;q)_{n-i}(aq;q)_{n+i}} \;\alpha_i' (a,k)\,,  \tag6.4
+\endalign
+$$
+as desired.  \pf
+\enddemo
+
+It is now a simple matter to begin a $WP$-Bailey chain by noting that
+$$
+	\beta_n (a,k) = \delta_{n,0}
+\tag6.5
+$$
+$$
+	\alpha_n(a,k) = \fr{(a;q)_n (1-aq^{2n})\left(\fr{a}{k};q\right)_n}
+	{(q;q)_n \,(1 - a) \,(kq;q)_n}\;\left(\fr{k}{a}\right)^n
+\tag6.6
+$$
+forms a $WP$-Bailey pair.  This follows immediately by setting $m =n$
+in the following identity
+$$
+\align
+	& \sum_{n=0}^m \fr{\left(\fr{k}{a};q\right)_{n-i} (k;q)_{n+i} 
+	\alpha_i(a,k)}{(q;q)_{n-i}(aq;q)_{n+i}}   \\
+	& = \fr{\left(\fr{kq^{-m}}{a};q\right)_n (1-k) (kq^{m+1};q)_n
+	(q^{1-n};q)_m q^{nm}}{(1 - kq^n)(aq^{m+1};q)_n (q;q)_n (q;q)_m}
+	\tag6.7
+\endalign
+$$
+Identity (6.7) follows immediately by mathematical induction on $m$.
+
+\proclaim
+{Corollary}  (F. H. Jackson's $q$-analog of Dougall's theorem
+\c{24}, \c{23; p. 35, eq. (2.6.2)})
+$$
+\align
+	_8\phi_7  & \left(\gathered a,q\sqrt{a},-q \sqrt{a},kq^n,\rho_1,
+	\rho_2,\fr{a^2 q}{k\rho_1\rho_2}\,,\, q^{-n};q,q  \\
+	\sqrt{a}, - \sqrt{a}, \fr{aq^{1-n}}{k}\,,\, \fr{aq}{\rho_1}\,,\,
+	\fr{aq}{\rho_2}\,,\, \fr{k\rho_1\rho_2}{a}\,,\, aq^{n+1}
+	\endgathered\right)  \\
+	& = \fr{\left(aq, \fr{aq^{1-n}}{\rho_1 k}\,,\, \fr{aq^{1-n}}{\rho_2 k}
+	\,,\, \fr{aq}{\rho_1\rho_2}; q\right)_n}{\left(\fr{aq^{1-n}}{k}\,,\,
+	\fr{aq}{\rho_1}\,,\, \fr{aq}{\rho_2}\,,\, \fr{aq^{1-n}}{k\rho_1\rho_2}
+	;q\right)_n}\;.  \tag6.8
+\endalign
+$$
+\endproclaim
+
+\demo
+{Proof} This is just the assertion that the $WP$-Bailey pair
+$\alpha_n' (a,k)$ and $\beta_n'(a,k)$ defined from Theorem 3 satisfy
+(6.2) where $\alpha_n(a,k)$ and $\beta_n(a,k)$ are given by (6.5) and
+(6.6).  \pf
+\enddemo
+
+\proclaim
+{Corollary}  (W. N. Bailey's very well-poised $_{10}\phi_9$ identity
+\c{23; p. 38, eq. (2.9.1)}).  Equation (6.1) is valid.
+\endproclaim
+
+\demo
+{Proof} This is (after changes of variable), the assertion that the
+$WP$-Bailey pair $\alpha_n''(a,k)$, $\beta_n''(a,k)$ (with new
+parameters $\rho_3$ and $\rho_4$) defined from (6.3) and (6.4) satisfy
+(6.2) where $\alpha_n'(a,k)$ and $\beta_n'(a,k)$ are given in the
+previous corollary.  \pf
+\enddemo
+
+We close this section by remarking that the $N$-th entry in this
+$WP$-Bailey chain produces a representation of 
+$$
+	_{2N+4}\phi_{2N+3} \pmatrix a,q\sqrt{a}, - a\sqrt{a},\rho_1,\rho_2,
+	\rho_3 \rho_4,\dots,\rho_{2N-3},\rho_{2N-2},\lambda q^n, q^{-n};
+	q,q  \\
+	\sqrt{a}, - \sqrt{a}, \fr{aq}{\rho_1},\fr{aq}{\rho_2}\dots, 
+	\fr{aq}{\rho_{2N-3}},\fr{aq}{\rho_{2N-2}},\fr{aq^{1-n}}{\lambda},
+	aq^{n+1} \endpmatrix
+\tag6.9
+$$
+(where $a^N q^{N-1} = \rho_1\rho_2 \cdots \rho_{2N-2} \lambda$) as an
+$(N-2)$ fold summation.  Thus when $N=4$ (the first new case) we find
+the very-well poised $_{12}\phi_{11}$ of the above type represented 
+by a double sum.
+
+\subhead
+7. \ An Alternative WP-Bailey Pair
+\endsubhead
+
+In \c{13; $\S$9} and \c{14}, W. N. Bailey used ideas similar to those
+recounted up to this point in order to develop identities for nearly
+poised series.  These are series in which one column of parameters
+does not satisfy the well-poised requirement.
+
+When we translate Bailey's ideas into the world of Bailey chains, a
+most extraordinary thing happens.  Namely, in contrast with Theorem 3,
+we find that from any given $WP$-Bailey pair we can construct a new
+$WP$-Bailey pair $\wa_n(a,k)$, $\wb_n(a,k)$ which is not at all the
+pair given by (6.3) and (6.4).
+
+\proclaim
+{Theorem 4} If $\alpha_n(a,k)$ and $\beta_n(a,k)$ form a $WP$-Bailey
+pair, then so do $\wa_n(a,k)$ and $\wb_n(a,k)$, where
+$$
+	\wa_n(a,k) = \fr{\left(\fr{qa^2}{k};q\right)_{2n} \left(
+	\fr{k^2}{qa^2}\right)^n}{(k;q)_{2n}} \;\alpha_n \left(a,
+	\fr{qa^2}{k}\right)
+\tag7.1
+$$
+$$
+	\wb_n(a,k) = \sum_{j=0}^n \fr{\left(\fr{k^2}{a^2 q};q\right)_{n-j}}
+	{(q;q)_{n-z}} \;\left(\fr{k^2}{a^2 q}\right)^j \beta_j
+	\left(a,\fr{aq^2}{k}\right)\,.
+\tag7.2
+$$
+\endproclaim
+
+\remark
+{Remark}  There is absolutely no intersection of the $WP$-Bailey
+pairs produced by Theorem 3 and those produced by Theorem 4.
+\endremark
+
+\demo
+{Proof}  We are given that the sequences $\alpha_n(a,k)$ and 
+$\beta_n(a,k)$ satisfy (6.2).  Hence
+$$
+\align
+	\wb_n(a,k) & = \sum_{j=0}^n \fr{\left(\fr{k^2}{a^2 q};q\right)_{n-j}
+	\left( \fr{k^2}{a^2 q}\right)^j}{(q;q)_{n-j}} \sum_{i=0}^j
+	\fr{\left(\fr{qa}{k};q\right)_{j-1} \left(\fr{qa^2}{k};q\right)_{j+i}}
+	{(q;q)_{j-i} (aq;q)_{j+i}} \alpha_i\left(a,\fr{qa^2}{k}\right)
+	\\
+	& = \sum_{i=0}^n \sum_{j=0}^{n-i} \fr{\left(\fr{k^2}{a^2 q};
+		q\right)_{n-i-j} \left(\fr{k^2}{a^2 q}\right)^{j+i}
+	\left(\fr{qa}{k};q\right)_j \left(\fr{aq^2}{k};q\right)_{j+2i}
+	\alpha_i\left(a,\fr{qa^2}{k}\right)}{(q;q)_{n-j}(q;q)_j
+	(aq;q)_{j+2i}}
+	\\
+	& = \sum_{i=0}^n \fr{\left(\fr{k^2}{a^2 q};q\right)_{n-i}
+	\left(\fr{k^2}{a^2 q}\right)^i \left(\fr{aq^2}{k};q\right)_{2i}
+	\alpha_i \left(a,\fr{aq^2}{k}\right)}{(q;q)_{n-i} (aq;q)_{2i}}
+	\\
+	& \quad \times \sum_{j=0}^{n-i} \fr{(q^{-n+i};q)_j}{\left(
+	\fr{a^2 q^{2-n+i}}{k^2}; q\right)_j} \;q^j\; \fr{\left(
+	\fr{aq}{k};q\right)_j\left(\fr{a^2 q^{2i+1}}{k};q\right)_j}
+	{(q;q)_j(aq^{2i+1};q)_j}
+	\\
+	& = \sum_{i=0}^n \fr{\left(\fr{k^2}{a^2 q};q\right)_{n-i}
+	\left(\fr{k^2}{a^2 q}\right)^i \left(\fr{qa^2}{k};q\right)_{2i}
+	\alpha_i\left(a,\fr{qa^2}{k}\right)}{(q;q)_{n-i}(aq;q)_{2i}}
+	\\
+	& \hskip .5in \fr{\left(\fr{k}{a};q\right)_{n-i}(kq^{2i};q)_{n-i}}
+	{(aq^{2i+1};q)_{n-i}\left(\fr{k^2}{a^2 q};q\right)_{n-i}}
+	\\
+	& \hskip 1in \text{(by \c{23; p. 13, eq. (1.7.2)})}
+	\\
+	& = \sum_{i=0}^n \fr{\left(\fr{k}{a};q\right)_{n-i}(k;q)_{n+i}}
+	{(q;q)_{n-i}(aq;q)_{n+i}} \;;\fr{\left(\fr{qa^2}{k};q\right)_{2i}
+	\left(\fr{k^2}{a^2 q}\right)^i \alpha_i \left(a;\fr{qa^2}{k}\right)}
+	{(k;q)_{2i}}
+	\\
+	& = \sum_{i=0}^n \fr{\left(\fr{k}{a};q\right)_{n-i} (k;q)_{n+i}}
+	{(q;q)_{n-i}(aq:q)_{n+i}} \wa_i (a,k),  \tag7.3
+\endalign
+$$
+as desired.  \pf
+\enddemo
+
+The most immediate application of Theorem 4 is the application in
+which the $WP$-Bailey pair $\alpha_n'(a,k)$ and $\beta_n'(a,k)$ of
+the first Corollary are taken as input.  The resulting assertion that
+$\wa_n(a,k)$ and $\wb_n(a,k)$ form a $WP$-Bailey pair is equivalent to
+the result of Bailey \c{13; p. 431}:
+$$
+\aligned
+	& _5\Phi_4 \bmatrix a,b,c,d, z^{-N};\;x,x  \\ ax/b,\;ax/c,\; ax/d,
+	\;a^2 x^{-N}/k^2 \endbmatrix  \\
+	& = \fr{(kx/a)_N(k^2 x/a)_N}{(kx)_N(k^2 x/a^2)_N}    \\
+	\times _{12}\Phi_{11} & \left[\aligned  k,\,x &\sqrt k, - x\sqrt k,
+	kb/a,\,kc/a,\,kd/a,\qquad \sqrt a, - \sqrt a,  \\
+	& \sqrt k,\; - \sqrt k,\,ax/b,\;ax/c,\;ax/d,\;kx/\sqrt a,
+	\;- kx/\sqrt a, \endaligned \right.  \\
+	& \qquad\qquad \left. \aligned  & \sqrt (ax), \quad - \sqrt (ax),
+	\;k^2 x^{N+1}/a,\quad x^{-N}; x;x  \\ k & \sqrt (x/a), \; - k \sqrt
+	(x/a), \quad ax^{-N}/k,\;kx^{N+1}
+	\endaligned \right]\;,
+\endaligned
+$$
+
+\subhead
+8. \ Summary and the Bailey Tree
+\endsubhead
+ 
+First it should be noted that this survey paper has shortchanged a
+number of papers that have made substantial contributions to Bailey
+chains.  Among these are \c{16}, \c{20}, \c{21}, \c{22}, \c{29}.
+
+Finally, I note again the surprise contained in Sections 7 and 8.  The
+new, two parameter $WP$-Bailey pairs (which reduce to the original
+Bailey pairs when $k = 0$) generate new $WP$-Bailey pairs in two
+entirely different ways (Theorems 3 and 4).  Thus at each step in the
+generation of a chain there are two offspring pairs.  So instead of
+generating a chain, we are generating a
+\underbar{binary tree}.  We shall wait to explore Bailey Trees
+subsequently.
+
+
+\Refs
+
+\ref
+  \no 1
+  \by G. E.Andrews
+  \paper On the $q$-analog of Kummer's theorem and applications
+  \jour Duke Math. J.
+  \vol 40
+  \yr 1973
+  \pages 525--528
+\endref
+
+
+\ref
+  \no 2
+  \by G. E. Andrews
+  \paper An analytic generalization of the Rogers-Ramanujan identities
+	for odd moduli
+  \jour Proc. Nat. Acad. Sci. USA
+  \vol 71
+  \yr 1974
+  \pages 4082--4085
+\endref
+
+
+\ref
+  \no 3
+  \by G. E. Andrews
+  \paper Problems and prospects for basic hypergeometric functions
+  \paperinfo in Theory and Applications of Special Functions (R. 
+	Askey, ed.), Academic Press, New York, 1975, pp. 191--224
+\endref
+
+
+\ref
+  \no 4
+  \by G. E. Andrews
+  \paper The Theory of Partitions
+  \paperinfo Encyl. of Math. and Its Appl., Vol. 2, Addison-Wesley,
+	Reading, 1976 (Reissued:  Cambridge University Press, 
+	Cambridge, 1985 and 1998)
+\endref
+
+
+\ref
+  \no 5
+  \by G. E. Andrews
+  \paper Multiple series Rogers-Ramanujan type identities
+  \jour Pacific J. Math.
+  \vol 114
+  \yr 1984
+  \pages 267--283
+\endref
+
+
+\ref
+  \no 6
+  \by G. E. Andrews
+  \paper The fifth and seventh order mock theta functions
+  \jour Trans. Amer. Math. Soc.
+  \vol 293
+  \yr 1986
+  \pages 113--134
+\endref
+
+
+\ref
+  \no 7
+  \by G. E. Andrews
+  \paper $q$-Series:  Their Development
+  \paperinfo CBMS Regional Conf. Lecture Series 66, Amer. Math. Soc.,
+	Providence, 1986
+\endref
+
+
+\ref
+  \no 8
+  \by G. E. Andrews
+  \paper Umbral calculus, Bailey chains and pentagonal number theorems
+  \paperinfo J. Comb. Th., Ser. A, (to apear in 91 (2000))
+\endref
+
+
+\ref
+  \no 9
+  \by G. E. Andrews and A. Berkovich
+  \paper A trinomial analogue of Bailey's lemma and $N = 2$ superconformal
+	invariance
+  \jour Comm. in Math. Phys.
+  \vol 192
+  \yr 1998
+  \pages 245--260
+\endref
+
+
+\ref
+  \no 10
+  \by G. E. Andrews and D. Bowman
+  \paper The Bailey transform and D. B. Sears
+  \jour Quaest. Math.
+  \vol 22
+  \yr 1999
+  \pages 19--26
+\endref
+
+
+\ref
+  \no 11
+  \by G. E. Andrews, F. J. Dyson and D. Hickerson
+  \paper Partitions and indefinite quadratic forms
+  \jour Invent. Math.
+  \vol 91 
+  \yr 1988
+  \pages 391--407
+\endref
+
+
+\ref
+  \no 12
+  \by G. E. Andrews, A. Schilling and S. O. Warnaar
+  \paper An $A_2$ Bailey Lemma and Rogers-Ramanujan-type identities
+  \jour J. Amer. Math. Soc.
+  \vol 12
+  \yr 1999
+  \pages 677--702
+\endref
+
+
+\ref
+  \no 13
+  \by W. N. Bailey
+  \paper Some identities in combinatory analysis
+  \jour Proc. London Math. Soc. (2)
+  \vol 49
+  \yr 1947
+  \pages 421--435
+\endref
+
+
+\ref
+  \no 14
+  \by W. N. Bailey
+  \paper A transformation of nearly-poised basic hypergeometric series
+  \jour J. London Math. Soc.
+  \vol 22
+  \yr 1947
+  \pages 237--240
+\endref
+
+
+\ref
+  \no 15
+  \by W. N. Bailey
+  \paper Identities of the Rogers-Ramanujan type
+  \jour Proc. London Math. Soc. (2)
+  \vol 50 
+  \yr 1949
+  \pages 1--10
+\endref
+
+
+\ref
+  \no 16
+  \by A. Berkovich, B. M. McCoy and A. Schilling
+  \paper $N = 2$ supersymmetry and Bailey pairs
+  \jour Phys. A
+  \vol 228
+  \yr 1996
+  \pages 33--62
+\endref
+
+
+\ref
+  \no 17
+  \by J. M. and P. B. Borwein
+  \paper Pi and the AGM
+  \paperinfo Wiley, New York, 1987
+\endref
+
+
+\ref
+  \no 18
+  \by D. M. Bressoud
+  \paper Some identities for terminating $q$-series
+  \jour Math. Proc. Camb. Phil. Soc.
+  \vol 81
+  \yr 1981
+  \pages 211--223
+\endref
+
+
+\ref
+  \no 19
+  \by D. M. Bressoud
+  \paper An easy proof of the Rogers-Ramanujan identities
+  \jour J. Number Th.
+  \vol 16
+  \yr 1983
+  \pages 235--241
+\endref
+
+
+\ref
+  \no 20
+  \by D. M. Bressoud
+  \paper A matrix inverse
+  \jour Proc. Amer. Math. Soc.
+  \vol 88
+  \yr 1983
+  \pages 446--448
+\endref
+
+
+\ref
+  \no 21
+  \by D. M. Bressoud
+  \paper The Bailey lattice:  an introduction, from Ramanujan Revisited
+  \paperinfo (G. E. Andrews et al, eds.), Academic Press, New York
+	1988, pp. 57--67
+\endref
+
+
+\ref
+  \no 22
+  \by O. Foda and V.-H. Iuano
+  \paper Virasoro character identities from the Andrews-Bailey 
+	construction
+  \jour Int. J. Mod. Phys. A
+  \vol 12
+  \yr 1997
+  \pages 1651--1676
+\endref
+
+
+\ref
+  \no 23
+  \by G. Gasper and M. Rahman
+  \paper Basic Hypergeometric Series
+  \jour Encyl. of Math and Its Appl.
+  \paperinfo Vol. 35, Cambridge University Press, Cambridge, 1990
+\endref
+
+
+\ref
+  \no 24
+  \by F. H. Jackson
+  \paper Summation of $q$-hypergeometric series
+  \jour Messenger of Math.
+  \vol 50 
+  \yr 1921
+  \pages 101--112
+\endref
+
+
+\ref
+  \no 25
+  \by G. M. Lilly and S. C. Milne
+  \paper The $A_{\ell}$ and $C_{\ell}$ Bailey transform and lemma
+  \jour Bull. Amer. Math. Soc. (NS)
+  \vol 26
+  \yr (1992)
+  \pages 258--263
+\endref
+
+
+\ref
+  \no 26
+  \by G. M. Lilly and S. C. Milne
+  \paper The $C_{\ell}$ Bailey transform and Bailey lemma
+  \jour Constr. Approx.
+  \vol 9
+  \yr 1993
+  \pages 473--500
+\endref
+
+
+\ref
+  \no 27
+  \by G. M. Lilly and S. C. Milne
+  \paper Consequences of the $A_{\ell}$ and $C_{\ell}$ Bailey
+	transform and Bailey lemma
+  \jour Discr. Math.
+  \vol 139
+  \yr 1995
+  \pages 319--346
+\endref
+
+
+\ref
+  \no 28
+  \by P. Paule
+  \paper On identities of the Rogers-Ramanujan type
+  \jour J. Math. Anal. and Appl.
+  \vol 107
+  \yr 1985
+  \pages 225--284
+\endref
+
+
+\ref
+  \no 29
+  \by P. Paule
+  \paper The concept of Bailey chains
+  \jour Sem. Lothar. Combin. B
+  \vol 18f
+  \yr 1987
+  \pages 24
+\endref
+
+
+\ref
+  \no 30
+  \by L. J. Rogers
+  \paper Second memoir on the expansion of certain infinite products
+  \jour Proc. London Math. Soc.
+  \vol 25
+  \yr 1894
+  \pages 318--343
+\endref
+
+
+\ref
+  \no 31
+  \by L. J. Rogers
+  \paper On two theorems of combinatory analysis and allied identities
+  \jour Proc. London Math. Soc. (2)
+  \vol 16
+  \yr 1917
+  \pages 315--336
+\endref
+
+
+\ref
+  \no 32
+  \by A. Schilling and S. O. Warnaar
+  \paper A higher-level Bailey lemma
+  \jour Int. J. Mod. Phys.
+  \vol B11
+  \yr 1997
+  \pages 189--195
+\endref
+
+
+\ref
+  \no 33
+  \by A. Schilling and S. O. Warnaar
+  \paper A higher level Bailey lemma, proof and application
+  \jour Ramanujan journal
+  \vol 2
+  \yr 1998
+  \pages 327--349
+\endref
+
+
+\ref
+  \no 34
+  \by A. Schilling and S. O. Warnaar
+  \paper Conjugate Bailey pairs
+  \paperinfo (to appear)
+\endref
+
+
+\ref
+  \no 35
+  \by D. B. Sears
+  \paper On the transformation theory of basic hypergeometric
+	functions
+  \jour Proc. London Math. Soc. (2)
+  \vol 53
+  \yr 1951
+  \pages 158--180
+\endref
+
+
+\ref
+  \no 36
+  \by L. J. Slater
+  \paper A new proof of Rogers' transformations of infinite series
+  \jour Proc. London Math. Soc. (2)
+  \vol 53
+  \yr 1951
+  \pages 460--475
+\endref
+
+
+\ref
+  \no 37
+  \by L. J. Slater
+  \paper Further identities of the Rogers-Ramanujan type
+  \jour Proc. London Math. Soc. (2)
+  \vol 54
+  \yr (1952)
+  \pages 147--167
+\endref
+
+
+\ref
+  \no 38
+  \by L. J. Slater
+  \paper Generalized Hypergeometry Functions
+  \paperinfo Cambridge University Press, Cambridge, 1966
+\endref
+
+\ref
+  \no 39
+  \by O. Warnaar
+  \paper A note on the trinomial analogue of Bailey's lemma
+  \jour J. combin. Th. A
+  \vol 81
+  \yr 1998
+  \pages 114--118
+\endref
+
+
+\ref
+  \no 40
+  \by G. N. Watson
+  \paper A new proof of the Rogers-Ramanujan identities
+  \jour J. London Math. Soc.
+  \vol 4
+  \yr 1929
+  \pages 4--9
+\endref
+
+\endRefs
+
+
+
+
+
+
+
+
+
+
+
+
+\enddocument
+
+

@@ -1,0 +1,612 @@
+%
+\magnification=\magstep1
+\input amstex
+\documentstyle{amsppt}
+\NoBlackBoxes
+
+\vsize=7.5in
+
+\def\c{\cite}
+\def\fr{\frac}
+\def\sumty{\displaystyle{\sum_{n=0}^{\infty}}}
+\def\pf{\hfill $\square$}
+\def\N{\Bbb N}
+
+
+\topmatter
+\title
+	Partitions with Designated Summands
+\endtitle
+\author
+	G. E. Andrews, R. P. Lewis, J. Lovejoy
+\endauthor
+\abstract
+This paper is devoted to the study of a new class of partitions,
+partitions with designated summands.  In such partitions, among those
+parts of the same magnitude one is tagged or designated.  The
+resulting partition functions are related to several classical
+ordinary partition functions.  Also they have many interesting
+divisibility properties and satisfy quite appealing modular relations.
+\endabstract
+\endtopmatter
+
+\document
+\baselineskip 20pt
+\subhead
+1. \ Introduction
+\endsubhead
+
+The object of our study is partitions with designated summands.  They
+are constructed by taking ordinary partitions and tagging exactly one
+of each part size.  Thus there are 15 partitions of 5 with designated
+summands:
+$$
+\gathered
+	5',4'+1', 3'+2',3'+1'+1,3'+1+1', 2'+2+1',  \\
+	2+2'+1', 2'+1'+ 1+1, 2'+1+1'+1,2'+1+1+1', 1'+1+1+1+1,  \\
+	1+1'+1+1+1, 1+1+1'+1+1,1+1+1+1'+1,1+1+1+1+1'\,.
+\endgathered
+$$
+The total number of partitions of $n$ with designated summands is
+denoted by $PD(n)$.  Hence $PD(5) = 15$.
+
+We shall also study $PDO(n)$ the total number of partitions of
+$n$ with designated summands in which all parts are odd.  Thus
+$PDO(5) = 8$.
+
+While these objects have not appeared in the literature before,
+they are tacitly considered by P. A. MacMahon \c{M2} in his work
+on generalized divisor sums.  Indeed, MacMahon's $A_{n,k}$ is the
+number of partitions of $n$ with designated summands wherein exactly
+$k$ different magnitudes occur among all the parts.  MacMahon
+\c{M2; Section 17} is able to connect $A_{n,k}$ with numerous
+divisor sum identities due to  Glaisher \c{G}, Ramanujan \c{R}
+and others.  However, MacMahon neglected the very interesting
+case wherein the number of different magnitudes of parts is
+surpressed.
+
+We shall consider the generating functions:
+$$
+	pd(q) = \sumty PD(n) q^n\,,
+\tag1.1
+$$
+and
+$$
+	pdo(q) = \sumty PDO(n) q^n\,.
+\tag1.2
+$$
+
+In Section 2, we shall show (among other things) that
+$$
+	pd(q) = \fr{\eta(6\tau)}{\eta(\tau)\eta(2\tau)\eta(3\tau)}\;,
+\tag1.3
+$$
+where
+$$
+	\eta(\tau) = q^{fr1{24}} \prod_{n=1}^{\infty} (1 - q^n)\,,
+\tag1.4
+$$
+and
+$$
+	q = e^{2\pi i\tau}\,.
+\tag1.5
+$$
+Also
+$$
+	pdo(q) = \fr{\eta(4\tau)\eta^2(6\tau)}{\eta(\tau)
+	\eta(3\tau) \eta(12\tau)}\;.
+\tag1.6
+$$
+
+We examine $q$-series identities in Section 3, and in Section 4 we
+relate $PD(n)$ and $PDO(n)$ to several well-known partition functions.
+As a result, we can easily deduce that $PDO(n)$ is even unless either
+$n$ is $0$ or $n$ is a perfect square not divisible by 3.
+
+Sections 5 and 6 are devoted to congruences for $PD(n)$ and modular
+relations for $pd(q)$ while Sections 7 and 8 treat the same issues
+for $PDO(n)$ and $pdo(q)$ respectively.
+
+\subhead
+2. \ The Generating Functions
+\endsubhead
+
+\proclaim
+{Theorem 1} Suppose $S$ is a set of positive integers.  We denote by
+$PD_S(n)$ the number of partitions of $n$ with designated summands all
+of whose parts lie in $S$, and we denote by $pd_S(q)$ the generating
+function for $PD_S(n)$.  Then
+$$
+	pd_S(q) = \prod_{n\in S} \fr{(1 - q^{6n})}{(1 - q^n)
+	(1 - q^{2n})(1 - q^{3n})}\;.
+\tag2.1
+$$
+\endproclaim
+
+\demo
+{Proof}  We see immediately that 
+$$
+\aligned
+	pd_S(q) & = \prod_{n\in S} (1 + q^n + 2q^{2n} + 3q^{3n}
+	+ 4q^{4n} + \cdots )   \\
+	& = \prod_{n\in S} \left( 1 + \fr{q^n}{(1 - q^n)^2}\right)
+	\\
+	& = \prod_{n\in S}^{\infty} \fr{(1 - q^n + q^{2n})}{(1 - q^n)^2}
+	\\
+	& = \prod_{n\in S}^{\infty} \fr{(1 + q^{3n})}{(1 - q^n)^2(1 + q^n)}
+	\\
+	& = \prod_{n\in S}^{\infty} \fr{(1 - q^{6n})}{(1 - q^n)(1 - q^{2n})
+	(1 - q^{3n})}\;.  
+\endaligned
+$$
+\qed
+\enddemo
+
+\proclaim
+{Corollary 1.1}  Equation (1.3) is valid.
+\endproclaim
+
+\demo
+{Proof}  This is the case $S = \N$, the set of all positive 
+integers.  \pf
+\enddemo
+
+\proclaim
+{Corollary 1.2}  If $S_k$ is the set of all positive integers not 
+divisible by $k$, then
+$$
+	pd_{S_k}(q) = pd(q)/pd(q^k)\;.
+$$
+\endproclaim
+
+\demo
+{Proof}  This assertion is the specialization of Theorem 1 to
+$S_k$.  \pf
+\enddemo
+
+\proclaim
+{Corollary 1.3}  Equation (1.6) is valid.
+\endproclaim
+
+\demo
+{Proof}  This follows directly from Corollaries 1 and Corollary 2
+with $k = 2$.  \pf
+\enddemo
+
+Indeed we might note that if $S$ consists of all positive integers
+congruent to one of $a_1,a_2,\dots,a_j$ modulo $k$, and if $S$ is
+symmetric (i.e. whenever $\alpha \in S$ then all positive integers
+$\equiv - \alpha\pmod{k}$ are in $S$), then $pd_S(q)$ is a modular
+form.  The subsequent sections are restricted to the instances 
+of $pd_S(q)$ that seem to have the most interest, namely $pd(q)$
+and $pdo(q)$.
+
+\subhead
+3. \ $q$-Series for $pd(q)$ and $pdo(q)$
+\endsubhead
+
+There are several reasons for considering $q$-series expansions of
+these generating functions.  Often such expansions provide efficient
+algorithms for the calculation of their coefficients.  This turns
+out to be the case for both $pd(q)$ (see (3.4)) and $pdo(q)$ (see
+(3.14)).  In addition, we occasionally uncover new mysteries.  In
+our present study, it is quite mysterious that the $q$-series (3.3)
+and (3.13) which seem to have complex coefficients, in fact do not.
+
+\proclaim
+{Theorem 2}  For $|q| < 1$ and $\zeta = e^{\pi i/3}$,
+$$
+\align
+	pd(q)  & = \fr{(\zeta q;q)_{\infty}(\zeta^{-1} q;q)_{\infty}}
+	{(q;q)_{\infty}^2}   \tag3.1   \\
+	& = 1 + \sum_{n=1}^{\infty} \fr{(-q^3;q^3)_{n-1} q^n}
+		{(q;q)_n(q^2;q^2)_{n-1} (1 - q^n)}  \tag3.2  \\
+	& = 1 + \zeta \sum_{n=1}^{\infty} \left(\fr{(\zeta q;q)_{n-1}}
+		{(q;q)_n}\right)^3 (1 - \zeta q^{2n})(-1)^n 
+		q^{\binom{n+1}{2}} \zeta^{-n}  \tag3.3  \\
+	& = \fr{\sumty q^{\binom{n+1}{2}} - 3 
+		\sumty q^{\binom{3n+2}{2}}}
+		{\sumty (-1)^n (2n+1) q^{\binom{n+1}{2}}}\;,
+		\tag3.4
+\endalign
+$$
+where
+$$
+	(a;q)_n = (1 - a)(1 - aq) \cdots (1 - aq^{n-1})\,.
+\tag3.5
+$$
+\endproclaim
+
+\demo
+{Proof}  By (1.3),
+$$
+\aligned
+	pd(q) & = \fr{(q^6;q^6)_{\infty}}{(q;q)_{\infty}
+		(q^2;q^2)_{\infty} (q^3;q^3)_{\infty}}  \\
+	& = \fr{(-q^3;q^3)_{\infty}}{(q;q)_{\infty}^2 (-q;q)_{\infty}}
+	\\
+	& = \fr{(\zeta q;q)_{\infty}(\zeta^{-1} q;q)_{\infty}}
+		{(q;q)_{\infty}^2}\;,
+\endaligned
+$$
+which proves (3.1).
+
+Identity (3.2) may be rewritten as follows:
+$$
+	\sum_{n-0}^{\infty} \fr{(\zeta;q)_n(\zeta^{-1};q)_n}
+		{(q;q)_{\infty}(q;q)_n} = \fr{(\zeta q;q)_{\infty}
+		(\zeta^{-1} q;q)_{\infty}}{(q;q)_{\infty}(q;q)_{\infty}}\;,
+\tag3.6
+$$
+and in this form we see that it is a specialization of the $q$-analog
+of Gauss's theorem \c{A2; p. 20, Cor. 2.4, $a=\zeta$, $b = \zeta^{-1}$,
+$c = q$}.
+
+Identity (3.3) may be rewritten as follows:
+$$
+	\lim_{t\rightarrow 0} \sumty
+	\fr{(\zeta;q)_n^3}{(q;q)_n^3} \fr{(1 - \zeta q^{2n})}
+	{(1 - \zeta)} \fr{(t^{-1};q)_n}{(\zeta qt;q)_n} \left(
+	\fr{t\zeta q}{\zeta^2}\right)^n = 
+	\fr{(\zeta^{-1}q;q)_{\infty}(\zeta q;q)_{\infty}}
+		{(q;q)_{\infty}(q;q)_{\infty}}\;,
+\tag3.7
+$$
+and in this form we see that it is a specialization of the 
+limiting form of Jackson's theorem \c{G-R; p. 238, eq. (II,20)}.
+
+To obtain (3.4), we first note that
+$$
+	\fr{(-1)^n (\zeta^{-n}- \zeta^{n+1})}{(1 - \zeta)} =
+	\cases
+		1 \qquad & \text{ if } n \equiv 0 \pmod{3} \\
+		-2 \qquad & \text{ if } n \equiv 1 \pmod{3} \\
+		1 \qquad & \text{ if } n \equiv 2 \pmod{3}.
+	\endcases
+\tag3.8
+$$
+Hence by Jacobi's triple product \c{G-R; p. 239, eq. (II.28)}
+$$
+\aligned
+	\fr{(\zeta q;q)_{\infty}(\zeta^{-1}q;q)_{\infty}}
+	{(q;q)_{\infty}^2} & = \fr{(q;q)_{\infty}(\zeta;q)_{\infty}
+	(\zeta^{-1}q;q)_{\infty}}{(1 - \zeta) \; (q;q)_{\infty}^3}
+	\\
+	& = \fr{\sumty (-1)^nq^{\binom{n+1}{2}}
+	\zeta^{-n}/(1 - \zeta)}{(q;q)_{\infty}^3}
+	\\
+	& = \fr{\sumty q^{\binom{n+1}{2}}((-1)^n
+	(\zeta^{-n} - \zeta^{n+1})/(1 - \zeta))}{\sumty
+	(-1)^n (2n+1)q^{\binom{n+1}{2}}}
+	\\
+	& \hskip 1in  \text{(by \c{H-R; p. 285, Th. 357})}
+	\\
+	& = \fr{\sumty q^{\binom{n+1}{2}} - 3 
+		\sumty q^{\binom{3n+2}{2}}}  
+		{\sumty (-1)^n (2n+1) q^{\binom{n+1}{2}}}\;. 
+\endaligned
+\tag3.9
+$$
+\pf
+\enddemo
+
+From (3.4) we immediately deduce a computationally fast recurrence
+for $PD(n)$.  
+
+\proclaim
+{Corollary 2.1}  For $n \geqq 0$
+$$
+	\sum_{j\geqq 0} PD\left(n - \binom{j+1}{2}\right) 
+	(-1)^j (2j+1) = \cases
+		0 \ & \text{\rm if } n \neq \text{\rm triangular
+			number}  \\
+		1 \ & \text{\rm if } n = \binom{m+1}{2} 
+			\text{\rm and } m \not\equiv 1 \pmod{3}
+		\\
+		-2 \ & \text{\rm otherwise}
+	\endcases
+\tag3.10
+$$
+\endproclaim
+
+\proclaim
+{Corollary 2.2}  $PD(3n+2) \equiv 0 \pmod{3}$.
+\endproclaim
+
+\demo
+{Proof}  By (3.4), we see that
+$$
+\aligned
+	pd(q) & \equiv \fr{\sumty q^{\binom{n+1}{2}}}{(q;q)_{\infty}^3}
+	\;\;\pmod{3}   \\
+	& \equiv \fr{\sumty q^{\binom{n+1}{2}}}{(q^3;q^3)_{\infty}}
+	\;,\;\pmod{3}   
+\endaligned
+$$
+but this last expression has no powers of $q \equiv 2 \pmod{3}$
+in its expansion.  \pf
+\enddemo
+
+\proclaim
+{Theorem 3}  For $|q| < 1$ and $\zeta = e^{\pi i/3}$,
+$$
+\align
+	pdo(q) & = \fr{(\zeta q;q^2)_{\infty}(\zeta^{-1}q;q^2)_{\infty}}
+		{(q;q^2)_{\infty}^{2}}  \;   \tag3.11   \\
+	& = 1 + \sum_{n=1}^{\infty} \fr{(-q^6;q^6)_{n-1} q^n}
+		{(q;q)_{2n} (-q^2;q^2)_{n-1}}   \tag3.12   \\
+	& = 1 - \zeta \sum_{n=1}^{\infty} \fr{(\zeta q;q)_{2n-1}
+		(\zeta q^2;q^2)_{n-1} (-1)^n q^{n^2}}{(q;q)_{2n}
+		(q;q^2)_n}   \tag3.13    \\
+	& = \fr{\displaystyle{\sum_{n=-\infty}^{\infty}} q^{(3n)^2}
+		- \sum_{n=-\infty}^{\infty} q^{(3n+1)^2}}
+		{1 + 2 \sum_{n=1}^{\infty} (-1)^n q^{n^2}}\;.  \tag3.14
+\endalign
+$$
+\endproclaim
+
+\demo
+{Proof}  By Corollary 1.2 with $k = 2$
+$$
+\align
+	pdo(q) & = pd(q)/pd(q^2) \tag3.15   \\
+	& = \fr{(\zeta q;q)_{\infty}(\zeta^{-1} q;q)_{\infty}}
+		{(q;q)_{\infty}^2}\;\cdot\; \fr{(q^2;q^2)_{\infty}}
+	{(\zeta q^2;q^2)_{\infty}(\zeta^{-1}q^2;q^2)_{\infty}}
+	\\
+	& = \fr{(\zeta q;q^2)_{\infty}(\zeta^{-1}q;q^2)_{\infty}}
+	{(q;q^2)_{\infty}^2}\;.
+\endalign
+$$
+
+Identity (3.12) may be rewritten as follows:
+$$
+	\sumty \fr{(\zeta;q^2)_n(\zeta^{-1};q^2)_n}{(q^2;q^2)_n
+	(q;q^2)_n} \;q^n = \fr{(\zeta^{-1} q;q^2)_{\infty}
+	(\zeta q;q^2)_{\infty}}{(q;q^2)_{\infty} (q;q^2)_{\infty}}\;,
+\tag3.16
+$$
+and in this form we see that it is a specialization of the $q$-analog
+of Gauss's theorem \c{A2; p. 20, Cor. 2.4, $q$ replaced by $q^2$,
+$a = \zeta$, $b = \zeta^{-1}$, $c = q$}.
+
+Identity (3.13) may be rewritten as follows:
+$$
+\align
+	\lim_{t\rightarrow 0} \; & \sumty\; \fr{(\zeta/q;q^2)_n}{(q^2;q^2)_n}
+	\;\fr{(1 - \zeta q^{2n-1})}{(1 - \zeta/q)} \; \fr{(\zeta;q^2)_n^2}
+	{(q;q^2)_n^2} \; \fr{(t^{-1};q^2)_n}{(\zeta qt;q^2)_n}\;
+	t^n q^n \zeta^{-n}    \tag3.17   \\
+	& = \fr{(\zeta q;q^2)_{\infty}(\zeta^{-1} q;q^2)_{\infty}}
+	{(q;q^2)_{\infty}(q;q^2)_{\infty}}\;, 
+\endalign
+$$
+and in this form we see that it is a specialization of the limiting
+form of Jackson's theorem \c{G-R; p. 238, eq. (II.20)}.
+
+To obtain (3.14) we note that
+$$
+	(-\zeta)^n + (-\zeta)^{-n} = \cases
+		2 \qquad & \text{ if } n \equiv 0 \pmod{3}  \\
+		-1 \qquad & \text{ otherwise}\,.
+	\endcases
+\tag3.18
+$$
+Hence by Jacobi's triple product
+$$
+\align
+	& \fr{(\zeta q;q^2)_{\infty}(\zeta^{-1}q;q^2)_{\infty}}
+		{(q;q^2)_{\infty}^2} = \fr{(q^2;q^2)_{\infty}
+		(\zeta q;q^2)_{\infty}(\zeta^{-1}q;q^2)_{\infty}}
+		{(q^2;q^2)_{\infty} (q;q^2)_{\infty}^2}
+		\tag3.19 	
+	\\
+	& = \fr{\displaystyle{\sum_{n=-\infty}^{\infty}} (-1)^n
+		q^{n^2} \zeta^n}{\displaystyle{\sum_{n=-\infty}^{\infty}} 
+		(-1)^n q^{n^2}}  
+	\\
+	& = \fr{1 + \displaystyle{\sum_{n=1}^{\infty}} q^{n^2}
+		((-\zeta)^n + (-\zeta)^{-n})}{1 + 2 
+		\displaystyle{\sum_{n=1}^{\infty}} (-1)^n q^{n^2}}
+	\\
+	& = \fr{\displaystyle{\sum_{n=-\infty}^{\infty}} q^{(3n)^2}
+		- \displaystyle{\sum_{n=-\infty}^{\infty}} q^{(3n+1)^2}}
+		{1 + 2 \displaystyle{\sum_{n=1}^{\infty}}(-1)^n q^{n^2}}\;.
+\endalign
+$$
+\pf
+\enddemo
+
+From (3.14) we immediately deduce a computationally fast recurrence
+for $PDO(n)$.  
+
+\proclaim
+{Corollary 3.1}  For $n \geqq 0$
+$$
+	PDO(n) + 2 \sum_{j\geqq 1} PDO(n-j^2) (-1)^j = \cases
+	0 \quad \text{ if } n \text{ is not a square}    \\
+	1 \quad \text{ if } n = 0   \\
+	2 \quad \text{ if } n = (3m)^2   \\
+	-1 \quad\text{ otherwise}\,.
+	\endcases
+\tag3.20
+$$
+\endproclaim
+
+\proclaim
+{Corollary 3.2}  $PDO(n)$ is odd precisely when either $n$ is $0$
+or a square not divisible by $3$.
+\endproclaim
+
+\demo
+{Proof}  By (3.14)
+$$
+	pdo(q) \equiv 1 - \sum_{n=-\infty}^{\infty} q^{(2n+1)^2}
+	\qquad \pmod{2}\,.
+$$
+\pf
+\enddemo
+
+\subhead
+4. \ Relations to Other Partition Functions
+\endsubhead
+
+In this section we shall consider three classical partition functions
+with an extensive literature.
+
+$M(q)$ will denote the generating function for partitions without $1$'s
+and without any two parts differing by $1$.  It is a theorem of
+MacMahon \c{M1; p. 54} (see also \c{A1}) that
+$$
+	M(q) = \prod_{\Sb n = 1 \\ n \not\equiv \pm \pmod{6} \endSb}^{\infty}
+	(1 - q^n)^{-1} = \fr{(-q^3;q^3)_{\infty}}{(q^2;q^2)_{\infty}}
+\tag4.1
+$$
+
+$S(q)$ will denote the generating function for partitions in 
+which parts differ by at least 3 and multiples of 3 differ by at
+least 4.  Schur \c{S} has shown that
+$$
+	S(q) = \prod_{\Sb n = 1 \\ n \not\equiv \pm \pmod{6} \endSb}^{\infty}
+	(1 - q^n)^{-1} = \fr{(-q;q)_{\infty}}{(q^3;q^3)_{\infty}}\;.
+\tag4.2
+$$
+
+Our final generating function, $\Phi_2(q)$, is related to more
+complicated objects, generalized Frobenius partitions, and we refer
+the reader to \c{A3} for an  introduction of this topic.  $\Phi_2(q)$
+is the generating function for generalized Frobenius partitions 
+wherein any number can appear on each row as a part at most twice.
+In \c{A3; eq. (5.11)}, it is shown that
+$$
+\align
+	\Phi_2(q) & = \prod_{n=1}^{\infty} \fr1{(1-q^n)(1 - q^{12n-10})
+	(1 - q^{12n-2})(1 - q^{12n-3})(1 - q^{12n-2})}  \tag4.3
+	\\
+	& = \fr{\displaystyle{\sum_{m=-\infty}^{\infty}} q^{(3m)^2} 
+	- \displaystyle{\sum_{m=-\infty}^{\infty}} q^{(3m+1)^2}}
+	{(q;q)_{\infty}^2}
+	\\
+	& \hskip .5in \text{(by \c{A4; eq. (10.4)})}\,.
+\endalign
+$$
+
+Given the above generating functions, we can easily combine these
+formulas with those of Theorem 2 and 3 to deduce the following:
+
+\proclaim
+{Theorem 4}  For $|q| < 1$,
+$$
+\align
+	pd(q) \,(q;q)_{\infty} & = M(q)   \tag4.4    \\
+	pd(q) \,S(q) & = \fr1{(q;q)_{\infty}^{2}}   \tag4.5  \\
+	pd(q) & = (q^2;q^2)_{\infty} \Phi_2(q)  \tag4.6 
+\endalign
+$$
+\endproclaim
+
+\demo
+{Proof}  Identity (4.4) follows from (4.1) and (3.1); identity (4.5)
+follows from (4.2) and (3.1).  Finally identity (4.6) follows from
+(4.3) and (3.14).   \pf
+\enddemo
+
+It should be observed that these relationships are quite simple and
+suggest the possibility of our obtaining insight for partitions with
+designated summands from these classical partition functions.
+
+\Refs
+\widestnumber\key{G-R}
+\ref
+  \key A1
+  \manyby G. E. Andrews
+  \paper A generalization of a partition theorem of MacMahon
+  \jour J. Comb. Th.
+  \vol 3
+  \yr 1967
+  \pages 100--101
+\endref
+
+\ref
+  \key A2
+  \bysame 
+  \paper The Theory of Partitions
+  \paperinfo Encycl. Math. and Its Applications, Vol. 2,
+	Addison-Wesley, Reading, 1976 [Reissued:  Cambridge
+	University Press, Cambridge, 1985, paperback, 1998]
+\endref
+
+\ref
+  \key A3
+  \bysame 
+  \paper Generalized Frobenius partitions
+  \jour Mem. Amer. Math. Soc.
+  \vol 49
+  \yr 1984
+  \finalinfo No. 301, iv + 44 pp
+\endref
+
+\ref
+  \key G-R
+  \by G. Gasper and M. Rahman
+  \paper Basic Hypergeometric Series
+  \paperinfo Encyl. Math and Its Applications, Vol. 35, Cambridge
+	University Press, Cambridge, 1990
+\endref
+
+\ref
+  \key G
+  \by J. W. L. Glaisher
+  \paper Expressions for the first five powers of the series in which
+	the coefficients are the sums of the divisors of the exponents
+  \paperinfo Messenger of Math., No. 171, July 1885
+\endref
+
+\ref
+  \key H-R
+  \by G. H. Hardy and E. M. Wright
+  \paper An Introduction to the Theory of Numbers
+  \paperinfo 4th ed., Oxford Univ., Press, London and New York,
+	1960
+\endref
+
+\ref
+  \key M1
+  \manyby P. A. MacMahon
+  \paper Combinatory Analysis
+  \paperinfo Vol. 2, Cambridge University Press, London, 1916
+	[Reprinted:  Chelsea, New York, 1960]
+\endref
+
+\ref
+  \key M2
+  \bysame 
+  \paper Divisors of numbers and their continuations in the theory
+	of partitions
+  \jour Proc. London Math. Soc., Ser. 2
+  \vol 19
+  \yr 1919
+  \pages 75--113
+\endref
+
+\ref
+  \key R
+  \by S. Ramanujan
+  \paper On certain arithmetical functions
+  \paperinfo Proc. Cambridge Phil. Soc., 22 (1916), 159--184.
+	[Reprinted:  Collected Papers of S. Ramanujan, Cambridge
+	Univ. Press, Cambridge, 1927, pp. 136--162 \{Reissued:
+	Chelsea, New York, 1962\}]
+\endref
+
+\ref
+  \key S
+  \by I. Schur
+  \paper Zur additiven Zahlentheorie
+  \paperinfo S.-B. Preuss. Akad. Wiss. Phys.-Math. Kl., 1926,
+	pp. 488--495 [Reprinted:  I. Schur, Gessammelte
+	Abhandlungen, Vol. 3, pp. 43--50, Springer, Berlin,
+	1973\
+\endref
+\endRefs
+\enddocument

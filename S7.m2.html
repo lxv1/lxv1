@@ -1,0 +1,723 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title>m2</title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="1265.21">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 10.0px Times}
+    p.p2 {margin: 0.0px 0.0px 6.0px 0.0px; font: 12.0px Times; min-height: 14.0px}
+    p.p3 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; min-height: 14.0px}
+    p.p4 {margin: 0.0px 0.0px 0.0px 0.0px; font: 9.0px Times}
+    p.p5 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times}
+    p.p6 {margin: 0.0px 0.0px 12.0px 0.0px; font: 10.0px Times}
+    p.p7 {margin: 0.0px 0.0px 12.0px 0.0px; font: 12.0px Times}
+    span.s1 {font: 9.0px Times}
+    span.s2 {font: 12.0px Times}
+    span.s3 {font: 10.0px Times}
+    span.s4 {font: 14.0px Times}
+    table.t1 {width: 784.0px}
+    table.t2 {border-style: solid; border-width: 1.0px 1.0px 1.0px 1.0px; border-color: #808080 #808080 #808080 #808080}
+    table.t3 {width: 154.0px; border-style: solid; border-width: 1.0px 1.0px 1.0px 1.0px; border-color: #808080 #808080 #808080 #808080}
+    td.td1 {width: 106.0px; margin: 0.5px 0.5px 0.5px 0.5px; padding: 1.0px 1.0px 1.0px 1.0px}
+    td.td2 {width: 54.0px; margin: 0.5px 0.5px 0.5px 0.5px; padding: 1.0px 1.0px 1.0px 1.0px}
+    td.td3 {width: 121.0px; margin: 0.5px 0.5px 0.5px 0.5px; padding: 1.0px 1.0px 1.0px 1.0px}
+    td.td4 {width: 75.0px; margin: 0.5px 0.5px 0.5px 0.5px; padding: 1.0px 1.0px 1.0px 1.0px}
+    td.td5 {width: 122.0px; margin: 0.5px 0.5px 0.5px 0.5px; padding: 1.0px 1.0px 1.0px 1.0px}
+    td.td6 {width: 222.0px; margin: 0.5px 0.5px 0.5px 0.5px; padding: 1.0px 1.0px 1.0px 1.0px}
+    td.td7 {width: 56.0px; margin: 0.5px 0.5px 0.5px 0.5px; padding: 1.0px 1.0px 1.0px 1.0px}
+    td.td8 {width: 167.0px; margin: 0.5px 0.5px 0.5px 0.5px; padding: 1.0px 1.0px 1.0px 1.0px}
+    td.td9 {width: 125.0px; margin: 0.5px 0.5px 0.5px 0.5px; padding: 1.0px 1.0px 1.0px 1.0px}
+    td.td10 {width: 238.0px; margin: 0.5px 0.5px 0.5px 0.5px; padding: 1.0px 1.0px 1.0px 1.0px}
+    td.td11 {width: 133.0px; margin: 0.5px 0.5px 0.5px 0.5px; padding: 1.0px 1.0px 1.0px 1.0px}
+    td.td12 {width: 25.0px; margin: 0.5px 0.5px 0.5px 0.5px; padding: 1.0px 1.0px 1.0px 1.0px}
+    td.td13 {width: 112.0px; margin: 0.5px 0.5px 0.5px 0.5px; padding: 1.0px 1.0px 1.0px 1.0px}
+    td.td14 {width: 100.0px; margin: 0.5px 0.5px 0.5px 0.5px; border-style: solid; border-width: 1.0px 1.0px 1.0px 1.0px; border-color: #808080 #808080 #808080 #808080; padding: 1.0px 1.0px 1.0px 1.0px}
+    td.td15 {width: 101.0px; margin: 0.5px 0.5px 0.5px 0.5px; border-style: solid; border-width: 1.0px 1.0px 1.0px 1.0px; border-color: #808080 #808080 #808080 #808080; padding: 1.0px 1.0px 1.0px 1.0px}
+    td.td16 {width: 93.0px; margin: 0.5px 0.5px 0.5px 0.5px; border-style: solid; border-width: 1.0px 1.0px 1.0px 1.0px; border-color: #808080 #808080 #808080 #808080; padding: 1.0px 1.0px 1.0px 1.0px}
+    td.td17 {width: 81.0px; margin: 0.5px 0.5px 0.5px 0.5px; border-style: solid; border-width: 1.0px 1.0px 1.0px 1.0px; border-color: #808080 #808080 #808080 #808080; padding: 1.0px 1.0px 1.0px 1.0px}
+    td.td18 {width: 18.0px; margin: 0.5px 0.5px 0.5px 0.5px; border-style: solid; border-width: 1.0px 1.0px 1.0px 1.0px; border-color: #808080 #808080 #808080 #808080; padding: 1.0px 1.0px 1.0px 1.0px}
+    td.td19 {width: 95.0px; margin: 0.5px 0.5px 0.5px 0.5px; border-style: solid; border-width: 1.0px 1.0px 1.0px 1.0px; border-color: #808080 #808080 #808080 #808080; padding: 1.0px 1.0px 1.0px 1.0px}
+    td.td20 {width: 213.0px; margin: 0.5px 0.5px 0.5px 0.5px; border-style: solid; border-width: 1.0px 1.0px 1.0px 1.0px; border-color: #808080 #808080 #808080 #808080; padding: 1.0px 1.0px 1.0px 1.0px}
+    td.td21 {width: 46.0px; margin: 0.5px 0.5px 0.5px 0.5px; border-style: solid; border-width: 1.0px 1.0px 1.0px 1.0px; border-color: #808080 #808080 #808080 #808080; padding: 1.0px 1.0px 1.0px 1.0px}
+    td.td22 {width: 69.0px; margin: 0.5px 0.5px 0.5px 0.5px; border-style: solid; border-width: 1.0px 1.0px 1.0px 1.0px; border-color: #808080 #808080 #808080 #808080; padding: 1.0px 1.0px 1.0px 1.0px}
+    td.td23 {width: 114.0px; margin: 0.5px 0.5px 0.5px 0.5px; border-style: solid; border-width: 1.0px 1.0px 1.0px 1.0px; border-color: #808080 #808080 #808080 #808080; padding: 1.0px 1.0px 1.0px 1.0px}
+    td.td24 {width: 26.0px; margin: 0.5px 0.5px 0.5px 0.5px; border-style: solid; border-width: 1.0px 1.0px 1.0px 1.0px; border-color: #808080 #808080 #808080 #808080; padding: 1.0px 1.0px 1.0px 1.0px}
+  </style>
+</head>
+<body>
+<p class="p1">Math 486.  March 22, 2007 .  Midterm 2.   5 problems, 15 points each. Name:</p>
+<p class="p2"><br></p>
+<p class="p3"><br></p>
+<p class="p1">1-3. Solve the linear programs, where  all <i>x</i><span class="s1"><sub>i</sub></span> &gt;=  0:<span class="s2"><span class="Apple-converted-space"> </span></span></p>
+<p class="p1"><b>1.</b></p>
+<table width="784.0" cellspacing="0" cellpadding="0" class="t1">
+  <tbody>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><i>x</i><span class="s1"><sub>1</sub></span></p>
+      </td>
+      <td valign="middle" class="td2">
+        <p class="p1"><i>x</i><span class="s1"><sub>2</sub></span></p>
+      </td>
+      <td valign="middle" class="td3">
+        <p class="p1"><i>x</i><span class="s1"><sub>3</sub></span></p>
+      </td>
+      <td valign="middle" class="td4">
+        <p class="p1"><i>-x</i><span class="s1"><sub>4</sub></span></p>
+      </td>
+      <td valign="middle" class="td2">
+        <p class="p1"><i>x</i><span class="s1"><sub>5</sub></span></p>
+      </td>
+      <td valign="middle" class="td5">
+        <p class="p1">-1</p>
+      </td>
+      <td valign="middle" class="td6">
+        <p class="p3"><br></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1">10<span class="s1"><sup>11</sup></span></p>
+      </td>
+      <td valign="middle" class="td2">
+        <p class="p1">2</p>
+      </td>
+      <td valign="middle" class="td3">
+        <p class="p1">-3</p>
+      </td>
+      <td valign="middle" class="td4">
+        <p class="p1">5</p>
+      </td>
+      <td valign="middle" class="td2">
+        <p class="p1">6</p>
+      </td>
+      <td valign="middle" class="td5">
+        <p class="p4"><span class="s3">10</span><sup>-12</sup></p>
+      </td>
+      <td valign="middle" class="td6">
+        <p class="p1">=- <i>x</i><span class="s1"><sub>6</sub></span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1">0</p>
+      </td>
+      <td valign="middle" class="td2">
+        <p class="p1">-1</p>
+      </td>
+      <td valign="middle" class="td3">
+        <p class="p1">2</p>
+      </td>
+      <td valign="middle" class="td4">
+        <p class="p1">0</p>
+      </td>
+      <td valign="middle" class="td2">
+        <p class="p1">3</p>
+      </td>
+      <td valign="middle" class="td5">
+        <p class="p1">10<span class="s1"><sup>13</sup></span></p>
+      </td>
+      <td valign="middle" class="td6">
+        <p class="p1">= <i>-x</i><span class="s1"><sub>7</sub></span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1">-1</p>
+      </td>
+      <td valign="middle" class="td2">
+        <p class="p1">0</p>
+      </td>
+      <td valign="middle" class="td3">
+        <p class="p1">2</p>
+      </td>
+      <td valign="middle" class="td4">
+        <p class="p1">4</p>
+      </td>
+      <td valign="middle" class="td2">
+        <p class="p1">-4</p>
+      </td>
+      <td valign="middle" class="td5">
+        <p class="p4"><span class="s3">2</span><sup>300</sup></p>
+      </td>
+      <td valign="middle" class="td6">
+        <p class="p1">= -<i>x</i><span class="s1"><sub>8</sub></span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1">2</p>
+      </td>
+      <td valign="middle" class="td2">
+        <p class="p1">0</p>
+      </td>
+      <td valign="middle" class="td3">
+        <p class="p4"><span class="s3">3</span><sup>-300</sup></p>
+      </td>
+      <td valign="middle" class="td4">
+        <p class="p1">0</p>
+      </td>
+      <td valign="middle" class="td2">
+        <p class="p1">1</p>
+      </td>
+      <td valign="middle" class="td5">
+        <p class="p1">2</p>
+      </td>
+      <td valign="middle" class="td6">
+        <p class="p1">= <i>f</i> -&gt; min</p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<p class="p3"><i></i><br></p>
+<p class="p5"><i>Solution. </i>We multiply    the  last row and <span class="Apple-converted-space">  </span><span class="s3"><i>x</i></span><span class="s1"><sub>4</sub></span>-column<span class="Apple-converted-space">  </span>by -1 to obtain a standard tableau. It is optimal, so<span class="Apple-converted-space"> </span></p>
+<p class="p5">max(-<i>f</i>) = 2, min(<i>f</i>)=- 2 at  <span class="s3"><i>x</i></span><span class="s1"><sub>1</sub></span>, <i>x</i><span class="s3">2</span>, <i>x</i><span class="s3">3</span>, <i>x</i><span class="s3">4</span>, <i>x</i><span class="s3">5</span>= 0,  <span class="s3"><i>x</i></span><span class="s1"><sub>6</sub></span> = <span class="s3">10</span><span class="s1"><sup>-12</sup></span>, <span class="s3"><i>x</i></span><span class="s1"><sub>7</sub></span>= <span class="s3">10</span><span class="s1"><sup>13</sup></span> , <span class="s3"><i>x</i></span><span class="s1"><sub>8 </sub></span>= <span class="s3">2</span><span class="s1"><sup>300</sup></span>.<span class="Apple-converted-space"> </span></p>
+<p class="p2"><br></p>
+<p class="p3"><br></p>
+<p class="p5">2.</p>
+<table width="784.0" cellspacing="0" cellpadding="0" class="t1">
+  <tbody>
+    <tr>
+      <td valign="middle" class="td7">
+        <p class="p1"><i>x</i><span class="s1"><sub>1</sub></span></p>
+      </td>
+      <td valign="middle" class="td8">
+        <p class="p1"><i>x</i><span class="s1"><sub>2</sub></span></p>
+      </td>
+      <td valign="middle" class="td7">
+        <p class="p1"><i>x</i><span class="s1"><sub>3</sub></span></p>
+      </td>
+      <td valign="middle" class="td7">
+        <p class="p1"><i>x</i><span class="s1"><sub>4</sub></span></p>
+      </td>
+      <td valign="middle" class="td7">
+        <p class="p1"><i>x</i><span class="s1"><sub>5</sub></span></p>
+      </td>
+      <td valign="middle" class="td9">
+        <p class="p1">-1</p>
+      </td>
+      <td valign="middle" class="td10">
+        <p class="p3"><br></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td7">
+        <p class="p1">1</p>
+      </td>
+      <td valign="middle" class="td8">
+        <p class="p1">2</p>
+      </td>
+      <td valign="middle" class="td7">
+        <p class="p1">-3</p>
+      </td>
+      <td valign="middle" class="td7">
+        <p class="p1">-5</p>
+      </td>
+      <td valign="middle" class="td7">
+        <p class="p1">6</p>
+      </td>
+      <td valign="middle" class="td9">
+        <p class="p1">-2</p>
+      </td>
+      <td valign="middle" class="td10">
+        <p class="p1">= -<i>x</i><span class="s1"><sub>6</sub></span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td7">
+        <p class="p1">0</p>
+      </td>
+      <td valign="middle" class="td8">
+        <p class="p4"><span class="s3">-10</span><sup>-100</sup></p>
+      </td>
+      <td valign="middle" class="td7">
+        <p class="p1">-2</p>
+      </td>
+      <td valign="middle" class="td7">
+        <p class="p1">0</p>
+      </td>
+      <td valign="middle" class="td7">
+        <p class="p1">-3</p>
+      </td>
+      <td valign="middle" class="td9">
+        <p class="p4"><span class="s3">1</span><sup>-300</sup></p>
+      </td>
+      <td valign="middle" class="td10">
+        <p class="p1">= <i>x</i><span class="s1"><sub>7</sub></span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td7">
+        <p class="p1">-1</p>
+      </td>
+      <td valign="middle" class="td8">
+        <p class="p1">0</p>
+      </td>
+      <td valign="middle" class="td7">
+        <p class="p1">2</p>
+      </td>
+      <td valign="middle" class="td7">
+        <p class="p1">4</p>
+      </td>
+      <td valign="middle" class="td7">
+        <p class="p1">-4</p>
+      </td>
+      <td valign="middle" class="td9">
+        <p class="p1">2</p>
+      </td>
+      <td valign="middle" class="td10">
+        <p class="p1">= <i>x</i><span class="s1"><sub>8</sub></span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td7">
+        <p class="p1">2</p>
+      </td>
+      <td valign="middle" class="td8">
+        <p class="p1">0</p>
+      </td>
+      <td valign="middle" class="td7">
+        <p class="p1">3</p>
+      </td>
+      <td valign="middle" class="td7">
+        <p class="p1">1</p>
+      </td>
+      <td valign="middle" class="td7">
+        <p class="p1">1</p>
+      </td>
+      <td valign="middle" class="td9">
+        <p class="p1">2</p>
+      </td>
+      <td valign="middle" class="td10">
+        <p class="p1">= <i>f</i> -&gt; max</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td7">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td8">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td7">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td7">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td7">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td9">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td10">
+        <p class="p3"><br></p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<p class="p5"><i>Solution. </i>We multiply    the   rows 2, 3  by -1 to obtain a standard tableau. The  <span class="s3"><i>x</i></span><span class="s1"><sub>7</sub></span>-row is bad, so<span class="Apple-converted-space"> </span></p>
+<p class="p5">the LP is infeasible.<span class="Apple-converted-space"> </span></p>
+<p class="p5"> </p>
+<p class="p6"><b>3.</b></p>
+<table width="784.0" cellspacing="0" cellpadding="0" class="t1">
+  <tbody>
+    <tr>
+      <td valign="middle" class="td11">
+        <p class="p1"><i>x</i><span class="s1"><sub>1</sub></span>/30000001</p>
+      </td>
+      <td valign="middle" class="td3">
+        <p class="p1"><i>x</i><span class="s1"><sub>1</sub></span>/3000002</p>
+      </td>
+      <td valign="middle" class="td3">
+        <p class="p1"><i>x</i><span class="s1"><sub>3</sub></span>/3000003</p>
+      </td>
+      <td valign="middle" class="td3">
+        <p class="p1"><i>x</i><span class="s1"><sub>4</sub></span>/3000004</p>
+      </td>
+      <td valign="middle" class="td3">
+        <p class="p1"><i>x</i><span class="s1"><sub>5</sub></span>/3000005</p>
+      </td>
+      <td valign="middle" class="td12">
+        <p class="p1">-1</p>
+      </td>
+      <td valign="middle" class="td13">
+        <p class="p3"><br></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td11">
+        <p class="p1">1/300001</p>
+      </td>
+      <td valign="middle" class="td3">
+        <p class="p1">-1/300002</p>
+      </td>
+      <td valign="middle" class="td3">
+        <p class="p1">1/300003</p>
+      </td>
+      <td valign="middle" class="td3">
+        <p class="p1">1/300004</p>
+      </td>
+      <td valign="middle" class="td3">
+        <p class="p1">0</p>
+      </td>
+      <td valign="middle" class="td12">
+        <p class="p1">-2</p>
+      </td>
+      <td valign="middle" class="td13">
+        <p class="p1">= -<i>x</i><span class="s1"><sub>6</sub></span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td11">
+        <p class="p1">1/30001</p>
+      </td>
+      <td valign="middle" class="td3">
+        <p class="p1">-1/30002</p>
+      </td>
+      <td valign="middle" class="td3">
+        <p class="p1">-2/3003</p>
+      </td>
+      <td valign="middle" class="td3">
+        <p class="p1">0</p>
+      </td>
+      <td valign="middle" class="td3">
+        <p class="p1">0</p>
+      </td>
+      <td valign="middle" class="td12">
+        <p class="p1">-1</p>
+      </td>
+      <td valign="middle" class="td13">
+        <p class="p1">= -<i>x</i><span class="s1"><sub>7</sub></span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td11">
+        <p class="p1">1/3001</p>
+      </td>
+      <td valign="middle" class="td3">
+        <p class="p1">0</p>
+      </td>
+      <td valign="middle" class="td3">
+        <p class="p1">2/3003</p>
+      </td>
+      <td valign="middle" class="td3">
+        <p class="p1">3/3004</p>
+      </td>
+      <td valign="middle" class="td3">
+        <p class="p1">-4/3005</p>
+      </td>
+      <td valign="middle" class="td12">
+        <p class="p1">2</p>
+      </td>
+      <td valign="middle" class="td13">
+        <p class="p1">= <i>-x</i><span class="s1"><sub>8</sub></span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td11">
+        <p class="p1">2/301</p>
+      </td>
+      <td valign="middle" class="td3">
+        <p class="p1">0</p>
+      </td>
+      <td valign="middle" class="td3">
+        <p class="p1">-1/303</p>
+      </td>
+      <td valign="middle" class="td3">
+        <p class="p1">0</p>
+      </td>
+      <td valign="middle" class="td3">
+        <p class="p1">1/305</p>
+      </td>
+      <td valign="middle" class="td12">
+        <p class="p1">2</p>
+      </td>
+      <td valign="middle" class="td13">
+        <p class="p1">= <i>f</i> -&gt; max</p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<p class="p7"><i>Solution. </i>Combine the first two columns to obtain a standard tableau. If we set  <span class="s3"><i>x</i></span><span class="s1"><sub>5 </sub></span>=    <span class="s3"><i>x</i></span><span class="s1"><sub>1</sub></span>,  we obtain a tableau    with a bad column <br>
+( <span class="s3"><i>x</i></span><span class="s1"><sub>1</sub></span>-column)   of type (-,-,-,+). The tableau is not feasible. <br>
+Setting   <span class="s3"><i>x</i></span><span class="s1"><sub>3</sub></span>   =<span class="s3"><i>x</i></span><span class="s1"><sub>4</sub></span>  = 0 and sending <span class="s3"><i>x</i></span><span class="s1"><sub>1</sub></span> = <span class="s3"><i>x</i></span><span class="s1"><sub>5 </sub></span>         to infinity we get  arbitrary large feasible values. The LP is unbounded.</p>
+<p class="p2"><br></p>
+<p class="p3"><br></p>
+<p class="p1">4-5. Solve matrix games:<span class="s2"><span class="Apple-converted-space"> </span></span></p>
+<p class="p1"><b>4.</b></p>
+<table cellspacing="0" cellpadding="0" class="t2">
+  <tbody>
+    <tr>
+      <td valign="middle" class="td14">
+        <p class="p1">1</p>
+      </td>
+      <td valign="middle" class="td15">
+        <p class="p1">3</p>
+      </td>
+      <td valign="middle" class="td16">
+        <p class="p1">5-10<span class="s1"><sup>-100</sup></span></p>
+      </td>
+      <td valign="middle" class="td16">
+        <p class="p1">7</p>
+      </td>
+      <td valign="middle" class="td17">
+        <p class="p1">1</p>
+      </td>
+      <td valign="middle" class="td18">
+        <p class="p1">3</p>
+      </td>
+      <td valign="middle" class="td19">
+        <p class="p1">2</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td14">
+        <p class="p1">8</p>
+      </td>
+      <td valign="middle" class="td15">
+        <p class="p1">8+10<span class="s1"><sup>-100</sup></span></p>
+      </td>
+      <td valign="middle" class="td16">
+        <p class="p1">9</p>
+      </td>
+      <td valign="middle" class="td16">
+        <p class="p1">8-10<span class="s1"><sup>-100</sup></span></p>
+      </td>
+      <td valign="middle" class="td17">
+        <p class="p1">9</p>
+      </td>
+      <td valign="middle" class="td18">
+        <p class="p1">8</p>
+      </td>
+      <td valign="middle" class="td19">
+        <p class="p1">9</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td14">
+        <p class="p1">1</p>
+      </td>
+      <td valign="middle" class="td15">
+        <p class="p1">-5</p>
+      </td>
+      <td valign="middle" class="td16">
+        <p class="p1">4</p>
+      </td>
+      <td valign="middle" class="td16">
+        <p class="p1">3</p>
+      </td>
+      <td valign="middle" class="td17">
+        <p class="p1">4</p>
+      </td>
+      <td valign="middle" class="td18">
+        <p class="p1">9</p>
+      </td>
+      <td valign="middle" class="td19">
+        <p class="p4"><span class="s3">10</span><sup>-100</sup></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td14">
+        <p class="p1">3</p>
+      </td>
+      <td valign="middle" class="td15">
+        <p class="p1">5</p>
+      </td>
+      <td valign="middle" class="td16">
+        <p class="p1">6</p>
+      </td>
+      <td valign="middle" class="td16">
+        <p class="p1">-3</p>
+      </td>
+      <td valign="middle" class="td17">
+        <p class="p4"><span class="s3">-10</span><sup>-100</sup></p>
+      </td>
+      <td valign="middle" class="td18">
+        <p class="p1">1</p>
+      </td>
+      <td valign="middle" class="td19">
+        <p class="p1">3</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td14">
+        <p class="p1">8+10<span class="s1"><sup>-100</sup></span></p>
+      </td>
+      <td valign="middle" class="td15">
+        <p class="p1">9</p>
+      </td>
+      <td valign="middle" class="td16">
+        <p class="p1">9</p>
+      </td>
+      <td valign="middle" class="td16">
+        <p class="p1">8</p>
+      </td>
+      <td valign="middle" class="td17">
+        <p class="p1">9</p>
+      </td>
+      <td valign="middle" class="td18">
+        <p class="p1">8</p>
+      </td>
+      <td valign="middle" class="td19">
+        <p class="p1">9-10<span class="s1"><sup>-100</sup></span></p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<p class="p5"><i>Solution. </i>We have a saddle point in the last row, column 4, and the value of game is 8.</p>
+<p class="p6"><b>5.</b></p>
+<table cellspacing="0" cellpadding="0" class="t2">
+  <tbody>
+    <tr>
+      <td valign="middle" class="td20">
+        <p class="p1">0</p>
+      </td>
+      <td valign="middle" class="td21">
+        <p class="p1">0</p>
+      </td>
+      <td valign="middle" class="td21">
+        <p class="p1">0</p>
+      </td>
+      <td valign="middle" class="td22">
+        <p class="p1">-2</p>
+      </td>
+      <td valign="middle" class="td22">
+        <p class="p1">-2</p>
+      </td>
+      <td valign="middle" class="td22">
+        <p class="p1">-1</p>
+      </td>
+      <td valign="middle" class="td22">
+        <p class="p1">-2</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td20">
+        <p class="p1">0</p>
+      </td>
+      <td valign="middle" class="td21">
+        <p class="p1">2</p>
+      </td>
+      <td valign="middle" class="td21">
+        <p class="p1">0</p>
+      </td>
+      <td valign="middle" class="td22">
+        <p class="p1">-1</p>
+      </td>
+      <td valign="middle" class="td22">
+        <p class="p1">-2</p>
+      </td>
+      <td valign="middle" class="td22">
+        <p class="p1">-1</p>
+      </td>
+      <td valign="middle" class="td22">
+        <p class="p1">-1</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td20">
+        <p class="p1">0</p>
+      </td>
+      <td valign="middle" class="td21">
+        <p class="p1">3</p>
+      </td>
+      <td valign="middle" class="td21">
+        <p class="p1">3</p>
+      </td>
+      <td valign="middle" class="td22">
+        <p class="p1">0</p>
+      </td>
+      <td valign="middle" class="td22">
+        <p class="p1">-2</p>
+      </td>
+      <td valign="middle" class="td22">
+        <p class="p1">0</p>
+      </td>
+      <td valign="middle" class="td22">
+        <p class="p1">-1</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td20">
+        <p class="p1">3-10<span class="s1"><sup>-100</sup></span></p>
+      </td>
+      <td valign="middle" class="td21">
+        <p class="p1">0</p>
+      </td>
+      <td valign="middle" class="td21">
+        <p class="p1">3</p>
+      </td>
+      <td valign="middle" class="td22">
+        <p class="p1">0</p>
+      </td>
+      <td valign="middle" class="td22">
+        <p class="p1">2</p>
+      </td>
+      <td valign="middle" class="td22">
+        <p class="p1">3</p>
+      </td>
+      <td valign="middle" class="td22">
+        <p class="p1">0</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td20">
+        <p class="p1">0</p>
+      </td>
+      <td valign="middle" class="td21">
+        <p class="p1">3</p>
+      </td>
+      <td valign="middle" class="td21">
+        <p class="p1">1</p>
+      </td>
+      <td valign="middle" class="td22">
+        <p class="p1">4</p>
+      </td>
+      <td valign="middle" class="td22">
+        <p class="p1">3</p>
+      </td>
+      <td valign="middle" class="td22">
+        <p class="p1">0</p>
+      </td>
+      <td valign="middle" class="td22">
+        <p class="p1">4</p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<p class="p7"><i>Solution. </i>By domination, we are reduced  to the southwest corner:</p>
+<table width="154.0" cellspacing="0" cellpadding="0" class="t3">
+  <tbody>
+    <tr>
+      <td valign="middle" class="td23">
+        <p class="p4"><span class="s2">3</span><span class="s3">-10</span><sup>-100</sup></p>
+      </td>
+      <td valign="middle" class="td24">
+        <p class="p5">0</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td23">
+        <p class="p5">0</p>
+      </td>
+      <td valign="middle" class="td24">
+        <p class="p5">3</p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<p class="p7">Optimal strategies are [3, 3- 10<span class="s3">-</span><span class="s1"><sup>100</sup></span>]<span class="s3"><sup>T</sup></span> /(6<span class="s4">-</span>10<span class="s3">-</span><span class="s1"><sup>100</sup></span>)  and   [3, 3- 10<span class="s3">-</span><span class="s1"><sup>100</sup></span>]<span class="s3"><sup> </sup></span> /(6<span class="s4">-</span>10<span class="s3">-</span><span class="s1"><sup>100</sup></span>)  and the value of game is 3(3- 10<span class="s3">-</span><span class="s1"><sup>100</sup></span>)<span class="s3"><sup> </sup></span>/(6<span class="s4">-</span>10<span class="s3">-</span><span class="s1"><sup>100</sup></span>) . <br>
+For the original game, the value is the same, and   optimal strategies are <br>
+[0,0,0,3, 3- 10<span class="s3">-</span><span class="s1"><sup>100</sup></span>]<span class="s3"><sup>T</sup></span> /(6<span class="s4">-</span>10<span class="s3">-</span><span class="s1"><sup>100</sup></span>)<span class="s3"><sup> </sup></span> and   [3, 3- 10<span class="s3">-</span><span class="s1"><sup>100</sup></span>,0,0,0,0] /(6<span class="s4">-</span>10<span class="s3">-</span><span class="s1"><sup>100</sup></span>). <br>
+</p>
+<p class="p2"><br></p>
+<p class="p3"><br></p>
+<p class="p5"> <span class="Apple-converted-space"> </span></p>
+<p class="p5"> </p>
+</body>
+</html>

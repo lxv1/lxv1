@@ -1,0 +1,169 @@
+This is TeX, Version 3.14159 (Web2C 7.2) (format=tex 1998.11.21)  31 JUL 2000 08:41
+**all
+(all (/usr/local/lib/teTeX/texmf/tex/amstex/base/amstex.tex
+
+AmS-TeX- Version 2.1
+COPYRIGHT 1985, 1990, 1991 - AMERICAN MATHEMATICAL SOCIETY
+Use of this macro package is not restricted provided
+each use is acknowledged upon publication.
+
+Loading definitions for misc utility macros, page layout, accents/punctuation,
+line and page breaks, figures, comments, math spacing, fractions,
+smash commands, large operator symbols, integrals, operator names,
+multilevel sub/superscripts, matrices, multiline displays,
+continued fractions, compound symbols, various kinds of dots,
+special superscripts, \text, math font commands, \newsymbol,
+bold Greek and bold symbols, Euler fonts, math accents, roots,
+commutative diagrams, poor man's bold, syntax check, ... finished)
+
+(/usr/local/lib/teTeX/texmf/tex/amstex/base/amsppt.sty
+version 2.1h (1997/02/02): Loading utility definitions, more fonts,
+page dimension settings, top matter, section heads,
+theorems/proofs/definitions/remarks, rosters, footnotes, figures and captions,
+miscellaneous, references, end of document, output routine,
+\copyins=\insert252
+
+hyphenation exceptions (U.S. English)
+(/usr/local/lib/teTeX/texmf/tex/amstex/config/amsppt.sti symbol names
+(/usr/local/lib/teTeX/texmf/tex/amstex/base/amssym.tex) ,)
+
+) [1] [2]
+Overfull \hbox (0.40317pt too wide) in paragraph at lines 134--141
+\tenrm in color $\tenmsb AB$\tenrm , with sim-i-lar in-ter-pre-ta-tion for $\te
+ni ac; [] ; cd$\tenrm . $[]$
+
+\hbox(6.94444+1.9999)x360.0, glue set - 1.0
+.\tenrm i
+.\tenrm n
+.\glue 3.33333 plus 1.66666 minus 1.11111
+.\tenrm c
+.\tenrm o
+.etc.
+
+[3] [4] [5] [6]
+Overfull \hbox (1.66075pt too wide) detected at line 399
+[] []
+
+\hbox(58.53793+53.53793)x360.0
+.\hbox(0.0+0.0)x0.0
+.\glue 1.66663
+.\vbox(58.53793+53.53793)x359.99413
+..\hbox(10.50006+12.79865)x359.99413
+...\glue(\tabskip) 0.0
+...\hbox(10.50006+12.79865)x0.0 []
+...\glue(\tabskip) 0.0
+...\hbox(10.50006+12.79865)x359.99413, glue set 236.55566fil []
+...\glue(\tabskip) 0.0
+..\glue(\lineskip) 4.00444
+..\hbox(14.5001+9.50012)x359.99413
+...\glue(\tabskip) 0.0
+...\hbox(14.5001+9.50012)x0.0 []
+...\glue(\tabskip) 0.0
+...\hbox(14.5001+9.50012)x359.99413, glue set 17.03098fil []
+...\glue(\tabskip) 0.0
+..\glue(\lineskip) 4.00444
+..\hbox(14.5001+9.50012)x359.99413
+...\glue(\tabskip) 0.0
+...\hbox(14.5001+9.50012)x0.0 []
+...\glue(\tabskip) 0.0
+...\hbox(14.5001+9.50012)x359.99413 []
+...\glue(\tabskip) 0.0
+..etc.
+
+[7] [8]
+Overfull \hbox (2.66649pt too wide) detected at line 457
+ \tenrm 10.
+
+\hbox(6.44444+0.0)x15.11133
+.\glue 0.0 plus 1.0fil
+.\tenrm 1
+.\tenrm 0
+.\tenrm .
+.\kern 5.0
+
+
+Overfull \hbox (2.66649pt too wide) detected at line 460
+ \tenrm 11.
+
+\hbox(6.44444+0.0)x15.11133
+.\glue 0.0 plus 1.0fil
+.\tenrm 1
+.\tenrm 1
+.\tenrm .
+.\kern 5.0
+
+
+Overfull \hbox (2.66649pt too wide) detected at line 464
+ \tenrm 12.
+
+\hbox(6.44444+0.0)x15.11133
+.\glue 0.0 plus 1.0fil
+.\tenrm 1
+.\tenrm 2
+.\tenrm .
+.\kern 5.0
+
+
+Overfull \hbox (2.66649pt too wide) detected at line 467
+ \tenrm 13.
+
+\hbox(6.44444+0.0)x15.11133
+.\glue 0.0 plus 1.0fil
+.\tenrm 1
+.\tenrm 3
+.\tenrm .
+.\kern 5.0
+
+
+Overfull \hbox (2.66649pt too wide) detected at line 472
+ \tenrm 14.
+
+\hbox(6.44444+0.0)x15.11133
+.\glue 0.0 plus 1.0fil
+.\tenrm 1
+.\tenrm 4
+.\tenrm .
+.\kern 5.0
+
+
+Overfull \hbox (2.66649pt too wide) detected at line 475
+ \tenrm 15.
+
+\hbox(6.44444+0.0)x15.11133
+.\glue 0.0 plus 1.0fil
+.\tenrm 1
+.\tenrm 5
+.\tenrm .
+.\kern 5.0
+
+
+Overfull \hbox (2.66649pt too wide) detected at line 478
+ \tenrm 16.
+
+\hbox(6.44444+0.0)x15.11133
+.\glue 0.0 plus 1.0fil
+.\tenrm 1
+.\tenrm 6
+.\tenrm .
+.\kern 5.0
+
+
+Overfull \hbox (10.44148pt too wide) in paragraph at lines 477--478
+[]\tenrm I. Schur, \tenit Zur Ad-di-tiven Zahlen-the-o-rie\tenrm , Gesam-melte 
+Ab-hand-lun-gen, Vol. 2, Springer
+
+\hbox(6.94444+1.94444)x360.0, glue set - 1.0
+.\hbox(6.44444+0.0)x15.11133
+..\glue 0.0 plus 1.0fil
+..\tenrm 1
+..\tenrm 6
+..\tenrm .
+..\kern 5.0
+.\tenrm I
+.\tenrm .
+.\glue 3.33333 plus 1.66666 minus 1.11111
+.\tenrm S
+.etc.
+
+[9] )
+Output written on all.dvi (9 pages, 31200 bytes).

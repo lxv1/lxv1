@@ -1,0 +1,61 @@
+This is TeX, Version 3.1415926 (TeX Live 2012) (format=tex 2012.7.9)  6 NOV 2012 08:17
+**ch3
+(./ch3
+\p@renwd=\dimen16
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+[]
+
+\hbox(8.5+0.0)x295.6491
+.\vbox(8.5+0.0)x0.0
+
+[67] [68] [69] [70] [71] [72] [73] [74] [75] [76] [77] [78] [79] [80] [81]
+[82] [83] [84] [85] [86] [87] [88] [89] [90] [91]
+Underfull \vbox (badness 1303) has occurred while \output is active
+\vbox(492.74959+0.83333)x295.6491, glue set 2.35439
+.\glue(\topskip) 3.05556
+.\hbox(6.94444+1.94444)x295.6491, glue set 0.6107
+..\hbox(0.0+0.0)x20.0
+..\tenrm L
+..\tenrm e
+..\tenrm t
+..\glue 3.33333 plus 1.66666 minus 1.11111
+..etc.
+.\penalty 150
+.\glue(\baselineskip) 2.55556
+.\hbox(7.5+2.5)x295.6491, glue set 0.09793
+..\tenrm c
+..\tenrm o
+..\tenrm m
+..\kern-0.27779
+..\tenrm b
+..etc.
+.etc.
+
+ [92]
+[93] [94] [95] [96] [97]
+Underfull \vbox (badness 4886) has occurred while \output is active
+\vbox(492.74959+1.94444)x295.6491, glue set 3.65681
+.\glue(\topskip) 3.05556
+.\hbox(6.94444+1.94444)x295.6491, glue set 0.39684
+..\tenbf S
+..\tenbf o
+..\tenbf l
+..\tenbf u
+..\tenbf t
+..etc.
+.\penalty 400
+.\glue(\baselineskip) 3.11111
+.\hbox(6.94444+1.94444)x295.6491, glue set 33.13701fil
+..\tenrm j
+..\tenrm e
+..\tenrm c
+..\discretionary
+...\tenrm -
+..\tenrm t
+..etc.
+.etc.
+
+ [98]
+[99] )
+Output written on ch3.dvi (33 pages, 102908 bytes).

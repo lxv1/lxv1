@@ -1,0 +1,1636 @@
+\magnification=1100
+\hsize=4.5 true in
+\vsize=7.5 true in
+
+\def\blackbox{\vrule height 1.2ex width 1.0ex depth -.2ex}
+
+\font\ch=cmbx10 at 18truept
+\font\chtitle=cmbx10 at 21truept
+\font\eighteenbf=cmbx10 scaled\magstep4
+\font\sixteenbf=cmbx10 scaled\magstep3
+\font\fourteenbf=cmbx10 scaled\magstep2
+\font\twelvebf=cmbx10 scaled\magstep1
+%\magnification=\magstep1/2
+\catcode`\@=11
+\def\m@th{\mathsurround=0pt }
+
+%\pageno=0
+%\nopagenumbers % suppress footlines
+%\headline={\ifnum\pageno=1\title\else\ifodd\pageno\rightheadline %\else\leftheadline\fi\fi}
+\headline={\ifnum\pageno=1   \else\ifodd\pageno\rightheadline \else\leftheadline\fi\fi}
+
+% \def\title{{\twelvebf Chapter 1.  Introduction}\hfil}
+\def\rightheadline{\tenrm\hfil{\it  \S 1. What  Is  Linear  Programming?}\quad {\bf\folio}}
+\def\leftheadline{\tenrm{\bf\folio}\quad{\it Chapter 1  Introduction} \hfil}
+\voffset=2\baselineskip
+
+% \relax
+\input psfig
+\
+\bigskip
+\bigskip
+\bigskip
+\noindent {\ch  Chapter} {\chtitle 1}
+\bigskip
+\bigskip
+\noindent  {\chtitle  Introduction}
+ \medskip
+\hrule
+\bigskip
+\bigskip
+ 
+\noindent 
+{\twelvebf\S  1. What  Is  Linear  Programming?}
+\smallskip
+
+\noindent 
+Perhaps the earliest examples of mathematical  models  for 
+analyzing  and optimizing the
+economy  were provided almost 250 years ago by a French economist. 
+In his {\it Tableau \'Economique,} written in 1758, Fran\c cois Quesnay 
+(1694--1774)
+explained the interrelation of the 
+roles of the landlord, peasant, and artisan in eighteenth-century France by 
+considering several factors separately. For example, there 
+are
+ ``The Economical Tableau considered relative to National Cash,"  and 
+``The Economical Tableau considered in the Estimation of the Produce and Capital Stock of Every Kind of Riches." 
+
+
+The nineteenth-century French mathematician Jean-Baptiste-Joseph Fourier
+(1768--1830) had some knowledge of the subject of linear programming, as evidenced by his work in linear inequalities as early as 1826 (see \S A.10
+in the Appendix). He also suggested the simplex method
+for solving linear programs arising from  linear approximation (see Chapter 8).
+ In the late 1800s, the writings of the French economist L. Walras (1834--1910)
+demonstrated his use of linear programming.   However, with a few other notable exceptions, such as Kantorovich's 1939 monograph {\it Mathematical Methods for Organization and Planning of Production,} there was comparatively little attention paid to linear programming preceding World War II.
+ 
+The fortuitous synchronization of the advent of the computer and  George B. Dantzig's  reinvention of the simplex algorithm in 1947   contributed to the  dizzyingly explosive   development of linear programming with applications to economics, business, industrial engineering, actuarial sciences,  operations research, and game theory. Progress in  linear programming  is noteworthy enough to be reported in the {\it New York Times.}  In 1970 P. Samuelson (b. 1915)  was awarded the Nobel Prize in Economics, and in 1975 L. Kantorovich
+(1912--1986)
+ and T. C. Koopmans
+ (1910--1985)
+ received the Nobel Prize in Economics for their work in linear programming. The subject of linear programming   even made its way into Len Deighton's suspense spy story, {\it The Billion Dollar Brain,} published in 1966:
+ 
+``I don't want to bore you," Harvey said, ``but you should understand that these heaps of wire can practically think---linear pro-gramming---which means that instead of going through all alternatives they have a hunch which is the right one."
+ 
+\nopagenumbers % suppress footlines
+\smallskip
+{\it Optimization problems}  come in two flavors: maximization problems and minimization problems.
+In a maximization problem, we want to maximize a function over a set, and
+in a minimization problem, we want to minimize a function over a set,
+
+In both cases, the function is real valued and it is called the {\it objective function.} The set is called the {\it feasible region} or the set of
+{\it feasible solutions.} 
+To solve an optimization  (maximization or minimization) problem  means usually  to find
+both the {\it optimal value }
+(maximal or  minimal value, respectively) over the feasible region  and an {\it optimal solution} or {\it optimizer}
+  [i.e., how (where) to reach the optimal value, if it is possible]. It is not required unless otherwise instructed to find all
+optimal solutions.  This is different from solving a system of linear equations,
+where a complete answer describes all solutions.
+
+
+The optimal value is also known as $optimum$ or $extremum.$ Depending on the flavor, the terms  $maximum$  (max for short) and  $minimum $ (min for short) are also used. The set of all optimal solutions (maximizers or minimizers) is called the {\it 
+optimality region.}
+
+
+
+ Now we consider a   simple example.
+ 
+
+
+Imagine that you are asked to solve the following optimization problem:
+\smallskip
+$\left\{\matrix{\hbox{Maximize}& x \cr\hbox{subject to}& 2\le x\le 3.}\right.$
+
+\smallskip
+Clearly the goal is to find the largest value for $x,$ given that this variable is limited as to the values it can assume. Since these limitations are explicitly stated as functions of the variable under consideration, called the {\it objective variable,} there is no difficulty in solving the problem; just take the maximum value. Thus, you can correctly conclude that  the maximum value for $x$ is 3, attained at $x=3.$
+ 
+However, it is more often the case that the range of values for the objective variable is given implicitly by placing limitations on 
+\filbreak
+\noindent
+another variable or  other variables related with the objective variable. These variables are called {\it decision }
+or {\it control variables.} 
+ These variables   are under our control:
+We are free to decide their values subject to given   constraints.
+They are different from data that form an input for our optimization problem.
+The objective function   is always a function of decision variables. Sometimes it has a name called the {\it objective variable.}
+
+
+
+
+For instance, in a problem such as finding which rectangles of fixed perimeter encompass the largest area, the objective variable is ``area," and the decision variables are $l=$ length of the rectangle and $w=$ width of the rectangle. In general, when the objective variable is given as a function of decision variables, we use the term {\it objective function} to describe the function we want to optimize.  These limitations on the decision variables, however  they might be described, are called the {\it constraints}  or {\it restraints} of the problem. 
+
+ 
+ 
+Thus,   a {\it mathematical program}  is an optimization problem  where the objective function is a function of real variables (decision variables) and the feasible region is given by conditions (constraints) on the variables.
+So a  feasible solution   is a set of values for all the decision variables satisfying all the constraints in the problem.  Mathematical programs are
+addressed in {\it mathematical programming.}
+
+
+
+   What is {\it linear programming} then? Linear programming is the part of mathematical programming  that studies optimization (extremal) problems having   objective functions  and constraints of particularly simple form.  Mathematically, a {\it linear program} is an optimization problem of the following form: Maximize (or, sometimes, minimize) an {\it affine function}    subject to a finite set of {\it linear constraints.} Contrary to modern perception, the word  {\it programming}  here does not refer to computer programming. In our context, which goes back to military planning,  $programming$ means something like ``detailed planning." 
+
+ 
+Now we   define the terms {\it affine function} and  {\it linear constraint}.
+In this book, unless indicated otherwise, a $number$ means a``real number"
+and a function means a ``real-valued function."
+\smallskip
+\noindent 
+{\bf Definition 1.1.}  A  function  $f$  of 
+variables $x_1,\ldots,x_n$   is called a {\it linear form} if it can be written as  $c_1x_1 +\cdots+ c_nx_n,$ where  the coefficients $c_i$ are given real numbers (constants).  A  function  $f$ is called {\it affine} if it is the sum
+of a linear form and a constant.
+ \hfill   \blackbox
+ 
+
+	Of course, it is not necessary to denote these  variables as $x_i,$ 
+the coefficients as  $c_i,$ or the function as $f.$  For example,  $g(x,y)=2x  -  a^2y$, where $a$ is some fixed real number, is a linear form in two variables, which are denoted   $x$  and  $y$ instead of $x_1$ and $x_2.$ Note that if $a$ were a variable and $y$ were a fixed nonzero number, then $f(x, a) = 2x - a^2y$ is not a linear form in $x$ and $a$ (see Problem 1.2). Here are 
+ three affine functions of 
+two variables, $x,y:$  $x-4y -3,$ $ y+2,$  $ x+y.$
+
+
+\smallskip
+\noindent 
+{\bf Problem 1.2.}  Show that the function $g(x, a) = 2x - a^2y,$ where $y$ is a fixed {\it nonzero} number, is not a linear form in $x$  and $a.$
+ 
+\noindent 
+{\bf Solution.} Suppose, to the contrary, that  $g(x, a) = 2x - a^2y$  is a linear form in $x$  and $a;$ that is, $g(x, a) =  2x -  a^2y   =  c_1x + c_2a$  with coefficients  $c_1,\,  c_2$  independent of $x$ and $a.$ Then $g(1, 0)  = 2 = c_1$ and $g(0, 1)  = -y  = c_2.$ Thus, $g(x, a) =  2x -  a^2y   =  2x - ya $, hence $a^2y =   ya$ for all $a.$ Taking $a = 2,$ we see that $y = 0.$  But, since $y$ cannot equal zero by hypothesis, we have arrived at our hoped-for contradiction. \hfill \blackbox
+
+The term  {\it linear function}  means ``linear form" in
+   some textbooks and ``affine function" in others. The term  {\it linear functional}  in linear programming means ``linear form."
+
+ 
+ 
+
+{\it Linear constraints} come in three flavors,  of type  $=,\  \ge,$ or $\le.$
+The linear constraints of type =  are familiar linear equations, that is,
+the equalities of the form
+
+\smallskip
+\centerline{an affine function = an affine function.}
+\smallskip
+Most often, they come in the standard form
+\smallskip
+\centerline{a linear form = a constant.}
+\smallskip
+For illustration, $x=2,$ $x-y=0$, $5y=7$ are three linear equations for  two variables $x, y$ written in standard form,
+while  $2=x,$ $x=y,$  $3y+x +3 = x-2y - 4$ are the same equations written differently.
+
+Two other types of linear constraints are inequalities of the form
+\smallskip
+\centerline{an affine function  $(\le$   or $\ge)$  an affine function.}
+\smallskip
+Often they are written as 
+
+\smallskip
+\centerline{a linear form $(\le$   or $\ge)$  a constant.}
+\smallskip
+
+
+ Thus, a linear constraint  consists of two affine functions (the left-hand
+side and the right-hand side) connected by one of three symbols: $=,\ \le,\ \ge$.
+ Strict linear inequalities such as $x > 0$  are not considered to be linear constraints.
+ 
+\smallskip
+\noindent 
+{\bf Example 1.3}
+ 
+(i) $y =\sin 5$ is a linear constraint on the variable $y.$
+\smallskip
+(ii) $x\ge 0$ is a linear constraint on the variable $x.$
+\smallskip
+(iii) $2x + 3y\le 7$ is a linear constraint on the variables $x$ and $y.$
+\smallskip
+Note, however, that
+\smallskip
+
+(iv) $y+\sin x=1$ 
+\smallskip
+
+\noindent is not a linear constraint on the variables $x$ and $y$, since $\sin x$ is {\it not} a linear form in $x.$
+
+\smallskip
+\noindent 
+{\bf Definition 1.4.} A {\it linear program}  (LP for short),  or {\it linear programming problem,} is any optimization problem where we are required to maximize (or minimize) an affine  function   subject to a {\it finite} set of linear constraints. \hfill \blackbox
+
+For example, the following is a linear program:   
+$$\left\{\matrix{\hbox{minimize}&f(x_1,\ldots,x_n)= c_1x_1 + \cdots + c_nx_n + d,\cr \hbox{subject to}&\displaystyle{\sum_{i=1}^n a_{ji}\,x_i\le b_j}\quad \hbox{for}\,\,j=1,\ldots,m\cr\hfill& x_i\ge 0\quad\hbox{for}\,\, i=1,\ldots,n\cr}\right.\eqno(1.5)$$
+ where  $m,n$ are given natural numbers, $d, c_i,,b_j,a_{j,i}$ are
+constants, and $x_i$ are decision  (control) variables (unknowns). We call (1.5)
+a linear program in $canonical$ form.
+ 
+  The finite set of  constraints in Definition 1.4 can be  empty. In other words,
+the number of constraints is allowed to be zero.  If there are no constraints in an optimization problem, we talk about {\it unconstrained} optimization.  Note that, unless otherwise instructed, we cannot ignore any of the given  constraints in an optimization problem. 
+ 
+ Recall that   constant terms  are not allowed in linear forms, but we allow
+constant terms in the objective functions of linear programs. Thus, according to our definitions,
+the function  $x -2y + 3$ of two variables $x$ and $y$ is not a linear form  but   it  is an affine function, and it can be the objective function of a linear program. Some textbooks make different
+choices in definitions.
+ 
+   It is possible to have an optimization problem or even a linear program for which there are no feasible solutions (see Example 1.6). Such a problem is called $infeasible$ or $inconsistent.$ It is also possible for an optimization  problem to have feasible solutions but no optimal solutions. For example, maximize $x$ subject to $x <
+ 1.$  This explains why we do not allow these kind of constraints in linear programming. 
+
+An optimization problem is called $unbounded$ if the objective function takes
+arbitrary large values in the case of the maximization problem
+and arbitrary small values in the case of the minimization problem
+(Example 1.7). We will see in Chapter 4 that any  feasible linear program either has  an  optimal solution or is unbounded.
+ 
+  Note that there may be more than one optimal solution (or none at all, as in  Example 1.6) among the feasible solutions (Example 1.8).
+ However,  the optimal (maximal or minimal) value of an optimization problem is unique  (if it exists).  Had we found two different values, one would be better, so the other would not be optimal.
+ 
+    
+
+ \smallskip
+\noindent 
+{\bf Example 1.6.} {\it An Infeasible LP}
+ \smallskip
+
+$\left\{\matrix{\hbox{Maximize}&4x+5y\cr\hbox{subject to}& 2x+y\le 4\cr\hfill& -2x-y\le -5\cr\hfill&x\ge 0,\quad y\ge 0.}\right.$
+ \smallskip
+ 
+ 
+
+Note that if $x$ and $y$ satisfy the constraint $2x\,+\,y\le 4,$ then, by multiplying by $-1,$ we obtain $-2x\,-\,y\ge -4.$ However, the second constraint demands that $-2x-y\le -5.$  Obviously, the two given constraints are mutually exclusive and  therefore there are no feasible solutions. This linear program is $infeasible.$ \hfill \blackbox
+ 
+ \smallskip
+\noindent 
+{\bf Example 1.7.}  {\it An Unbounded LP}
+ \smallskip
+
+$\left\{\matrix{\hbox{Maximize}& x-2y\cr\hbox{subject to}&-3x+2y\le -2\cr\hfill& -6x-5y\le -1\cr\hfill&x\ge 0,\quad y\ge 0.}\right.$
+  \smallskip
+
+This linear program does have feasible solutions (for example $x=2/3,\,y=0$), but none of them is optimal. For any real number $M,$ there is a feasible solution $x,\,y$ such that $x-2y>M.$ An example of such a feasible solution is $x=2/3 + M$ and $y=0.$ In a sense, there are so many feasible solutions that none of them even gets close to being optimal. This linear program is   {\it unbounded.} \hfill \blackbox
+ 
+ 
+ \smallskip
+\noindent 
+{\bf Example 1.8}  {\it A LP with Many  Optimal Solutions}
+\smallskip
+$\left\{\matrix{\hbox{Minimize}& x+y\cr\hbox{subject to}&x,y,z \ge 0 . }\right.$
+  \smallskip
+In this problem with three variables $x,y,z$ the optimal solutions are  $x=y=0, $
+ $z \ge 0$ arbitrary nonnegative number. The optimal value is 0. \hfill \blackbox
+
+ \smallskip
+\noindent 
+{\bf Example 1.9.}  {\it A LP with One  Optimal Solution}
+ \smallskip
+ $\left\{\matrix{\hbox{Minimize}& x+y + z\cr\hbox{subject to}&x \ge -1,y \ge 2,z \ge 0 . }\right.$
+  \smallskip
+In this linear program with three variables $x,y,z$ the optimal solution is $x=-1,y=2,  z=0.$ 
+  The optimal value is 1. 
+Note that a
+solution should contain values for all variables involved.   \hfill
+\blackbox
+% \eject
+
+ \smallskip
+\noindent 
+{\bf Example 1.10.}  {\it A Nonlinear Problem}
+ 
+ \smallskip
+ $\left\{\matrix{\hbox{Minimize}& x^2+y^3 + z^4\cr\hbox{subject to}& |x| \ge 1, |y|  \le 3.   }\right.$
+  \smallskip
+This is  a mathematical program with three variables and two constraints that is not linear because the objective function is not affine and the constraints
+are not linear. (However, the second constraint  can be replaced by two linear constraints, and the feasible region  is the disjoint union of two parts;
+each can be given by three linear constraints.) Nevertheless, using common sense, 
+it is clear that the problem splits into three separate optimization problems with
+one variable each. So
+  there are exactly two optimal solutions,
+$x=\pm 1, y=-3, z = 0$ and $ \min =-26. $ \hfill \blackbox
+
+
+
+
+
+
+
+All numbers in linear programming are real numbers.  In fact, it is hard to imagine a 
+linear program arising out of business and industrial concerns, 
+with  numbers   not being  actually rational numbers. Why?  You might ask yourself if  the price of a product could be stated as an irrational number, for example, $\sqrt 2.$  We will see later that to solve a linear programming problem with rational data we do not need irrational numbers. However, this is not the case with nonlinear problems, as you can see when you solve the (nonlinear) equation $x^2 = 2$.
+
+
+ 
+
+To develop your own appreciation of optimization problems, try to solve the following two problems. Are they linear programs?
+ 
+ 		
+ \smallskip
+\noindent 
+{\bf Problem 1.11}  
+ \smallskip
+$\left\{\matrix{\hbox{Maximize}& x\cr\hbox{subject to}& 2\le x\le 3.}\right.$
+  
+    \smallskip
+\noindent 
+{\bf Solution.}  As we noted earlier, the maximal value is 3 (max = 3 for short) and it is reached at  $x = 3.$  \hfill  \blackbox
+
+One of the main applications of the first derivative of a function, which you study in calculus, is to find the maxima or minima of a function  by looking at the critical points. Yet you can see from Problem 1.11 that   first-year calculus is not sufficient to solve linear programs. Suppose  you are trying to find  the maximum and minimum of the linear form $f(x) = x$ on the interval $2\le x\le 3$ by determining where the first derivative equals zero.  You  observe that the first derivative, 1, never equals zero. Yet the objective function reaches its maximum, 3, and minimum, 2, on this interval.
+ 
+ \smallskip
+\eject
+
+\noindent 
+{\bf Problem 1.12} 
+ \smallskip
+$\left\{\matrix{\hbox{Maximize}&x + 2y + z\cr\hbox{subject to}&x + y = 1,\cr\hfill&z\ge 0.}\right.$ 
+  \smallskip
+
+  
+\noindent 
+{\bf Solution.}  The objective function takes arbitrarily large values as $y$ goes to $+\infty,\,\,\, x  =  1 - y, \,\,\,z = 0.$ Informally, we can write max = $\infty.$ This is an $unbounded$
+ linear program. \hfill \blackbox
+   \smallskip
+ 
+
+
+Problems 1.11 and 1.12 are both linear programs because the objective functions and all the constraints are linear. Note that the optimal (maximal or minimal) value of an optimization problem is unique. (Had we found two different values, one would be better, so the other would not be optimal.)  The optimal value always exists if we add the symbols $-\infty,\,\, +\infty$  to the set of real numbers as possible values for the optimal value. But if it is reached at all, there could be more than one way to reach it. That is, we may have many optimal solutions for the same optimal value. 
+
+ \smallskip
+
+  Now you have encountered the following terms: {\it linear form, affine function, linear constraint, linear program, objective function, optimal value, optimal solution, feasible solution.}  Try to explain the meaning of each of these terms. 
+
+\smallskip
+\noindent
+{\bf
+Remark.}  We have already mentioned that  linear programming is a part of mathematical programming. In its turn,  mathematical programming is a
+tool in {\it operations research} (or operational research), which is an
+application of scientific methods to the
+management and administration of
+organized military, governmental,
+commercial, and industrial processes. 
+Historically, the terms $programming$ and $operations$  came    from planning military operations.
+
+The terms {\it systems engineering} and {\it management science} mean   almost the same as operations research with less or more stress on the
+human factor. As a part of operations research, linear programming is concerned not only
+with solving of linear programs but also with
+\smallskip
+
+$\bullet$  acquiring and processing 
+data  required to make
+decisions
+\smallskip
+
+ $\bullet$     problem formulation  and   model construction
+\smallskip
+
+ $\bullet$     testing the models and  
+        interpreting solutions
+\smallskip
+
+$\bullet$      implementing solutions into decisions
+
+\smallskip
+
+$\bullet$ 
+  controlling the
+      decisions
+\smallskip
+
+$\bullet$ organizing and interconnecting   different aspects of  the 
+ process
+\medskip
+
+
+ In this book we stress mathematical aspects
+of linear programming,  but we are also concerned with translating word problems into mathematical language,
+transforming linear programs into differents forms, and making connections with game theory and statistics.
+% \filbreak
+
+How is linear programming   connected with {\it linear algebra}? The main   concern in
+linear algebra is solving systems of linear equations. We will see in Chapter 5
+  that solving linear programs is equivalent to finding feasible
+solutions for systems of linear constraints. Thus, from a mathematical point of view, linear programming
+is about more general and difficult problems. 
+
+\noindent
+{\bf
+Remark.}
+   Besides mathematical programming,  there are other areas of mathematics
+and computer science
+where optimization plays a prominent role. For example, both {\it control theory}
+and {\it calculus of variations}  are  concerned with optimization problems
+that cannot be   described easily with  a finite set of variables. 
+The feasible solutions  could be functions satisfying certain conditions.
+We may ask what is the shortest curve connecting two given points in plane.
+Or we can ask about the most efficient way to sort data of any size.
+Sometimes  mathematical programming can help to solve those problems.
+\smallskip
+
+\noindent
+{\bf
+Historic Remark.}  The mathematicians mentioned in this book are well known,
+and their bios can be found in    encyclopedias, biographies, history books, and on the Web.
+
+
+% (Baron Jean-Baptiste-) 
+Joseph Fourier, a French mathematician
+        well known also as an
+        Egyptologist and
+        administrator,
+ is famous for his  Fourier series, which are very important in mathematical physics and engineering.  His work on linear approximation and linear programming is not so well known. A son of a tailor, he had 11 siblings and 3 half-siblings.
+His    mother died when  he was
+nine years old, and his father died the following year.  He received military and religious education and  was involved in politics.
+His life was in danger a few times.
+
+Leonid  Kantorovich, a Soviet mathematician with  very important
+contributions to economics, was  almost  unknown  in the United States until the
+simplex method was successfully implemented for computers and widely used.
+He got his Ph.D. in mathematics at age 18.
+The author had the pleasure of meeting  Kantorovich  several times at mathematical talks
+and at business meetings involving optimization of advanced
+planning in the former U.S.S.R.  One of many things he did in mathematics  was 
+introducing the notion of a distance  between probability distributions, which was rediscoved
+later in different forms by other mathematicians, including the author (the Vaserstein distance).
+This distance  is the  optimal value for a problem similar to the transportation
+problem (see Example 2.4 and Chapter 6).
+
+
+
+
+\filbreak
+
+
+ 
+
+{\centerline  {\twelvebf Exercises}}
+\parindent=0pt
+\smallskip
+
+{\bf 1--13.}
+ State whether the following are true or false. Explain your reasoning.
+\smallskip
+
+ \settabs 2 \columns
+\+  {\bf \ 1.} \quad $1\le 2$ &   {\bf 2.} \quad $-10\le  - 1$ \cr
+\+  {\bf \ 3.} \quad $3\le 3$ &  {\bf 4.} \quad $ -5/12  \ge  -3 /7 $   \cr
+
+\smallskip
+ {\bf \ 5.} \quad  $ x^2 + |y| \ge 0  $ for all numbers  $x, y$
+
+\smallskip
+{\bf \ 6.} \quad  $ 3x   \ge  x  $ for all numbers  $x$
+
+\smallskip
+{\bf\ 7.} \quad  $ 3x^3   \ge  2x^2  $ for all numbers  $x$
+
+\smallskip
+{\bf\ 8.}   Every linear program should have at least one linear constraint
+ 
+\smallskip
+{\bf\ 9.}  Every linear program has an optimal solution
+ 
+\smallskip
+{\bf 10.}  Each variable in a linear program should be nonnegative
+ 
+\smallskip
+{\bf 11.}  Any linear program has a unique optimal solution
+ 
+\smallskip
+{\bf 12.}   The total number of constraints in a linear program is always larger than the number of variables
+ 
+\smallskip
+{\bf 13.}   The constraint  $2x+5 = 6x-3$ is equivalent to a linear equation for $x$ \hfill \blackbox
+\smallskip
+
+\smallskip
+ {\bf 14--17.}  Determine whether the following functions of $x$ and $y$  are linear forms.
+
+\smallskip
+ \settabs 2 \columns
+\+  {\bf 14.} \quad $2x$ &   {\bf 15.} \quad $x+y+1$ \cr
+\+  {\bf 16.} \quad $(\sin 1)\,\,x + e^z\,y$ &
+{\bf 17.} \quad  $x\sin a + y\,z$  \hfill  \blackbox  \cr 
+\smallskip
+
+{\bf 18--23.} Is this a linear constraint for $x$?
+\settabs 2 \columns
+\+  {\bf 18.} \quad $x > 2$ &   {\bf 19.} \quad $|x| \le 1 $ \cr
+\+  {\bf 20.} \quad $0 = 1$ & {\bf 21.} \quad $0 \ge  1$  \cr
+\+  {\bf 22.} \quad $xy^2 = 3$ & {\bf 23.} \quad $ax=b.$ \hfill  \blackbox \cr
+
+\smallskip
+
+{\bf 24--26.}  Do you agree with the following statements? Why or why not?
+
+\smallskip
+{\bf 24.} \quad $|x|\le 1$ is equivalent to a system of two linear constraints
+ 
+\smallskip
+{\bf 25.} \quad $|x|\ge 1$ is equivalent to a system of two linear constraints
+ \smallskip
+
+{\bf 26.} \quad The equation  $(x-1)^2= 0$  is equivalent to a linear constraint for  $x$ \hfill  \blackbox
+
+\smallskip
+
+{\bf 27.}  Solve the equation $ax = b$ for $x,$ where $a$ and $b$ are given numbers.
+ 
+\smallskip
+{\bf 28--30.} Solve the following three linear systems of equations for $x$ and $y.$
+  
+\smallskip
+{\bf 28.}
+$$\left\{\matrix{x &+& 2y &=& 3\cr5x &+& 9y &=& 4\cr}\right.$$
+ 
+\smallskip
+{\bf 29.}
+$$\left\{\matrix{x &+& 2y &=& 3\cr 5x &+& 10y &=& 15\cr}\right.$$
+
+\smallskip
+{\bf 30.}
+$$\left\{\matrix{x &+& 2y &=& 3\cr3x &+&6y &=& 0\cr}\right.$$ 
+\hfill \blackbox
+
+
+ \smallskip
+{\bf 31.}   Minimize (over $x,y,z$)   $(x + y)^2 + (z + 1)^2.$ 
+
+ \smallskip
+{\bf 32.}   Minimize $|x + 2| + |x + 3|$ subject to $|x|\le  2.5.$
+
+\smallskip
+{\bf 33.}   Maximize  $1/(1+x^2).$ 
+
+\smallskip
+{\bf 34.}   Maximize  $(x + y)^2 + (z + 1)^2.$ 
+
+\smallskip
+{\bf 35.}   Minimize  $|x + y| + (z + 1)^6 + (x-y+z)^2.$ 
+
+
+\smallskip
+{\bf 36--43} 
+ Is this a linear form of two variables,  $x$ and $y$? (Answer Yes or No.)
+\smallskip
+
+\settabs 2 \columns
+\+  {\bf 36.} \quad  $2x+3y$ &
+{\bf 37.} \quad  $2x+3y=1$ \cr
+\+
+{\bf 38.} \quad  $x+y^2$ &
+{\bf 39.} \quad  $xy$ \cr
+\+
+{\bf 40.} \quad  $y$ &
+{\bf 41.} \quad  0 \cr
+\+
+{\bf 42.} \quad   $(x+1)^2 + 2y -x^2 -1$ & 
+{\bf 43.} \quad  $x/y$   \hfill \blackbox \cr
+
+\smallskip
+{\bf 44--49.} Is this constraint for two variables, $x$ and $y$ linear?
+
+\smallskip
+ \settabs 2 \columns
+\+
+{\bf 44.} \quad  $xy =0$ &
+{\bf 45.} \quad  $x =0$ \cr
+\+
+{\bf 46.} \quad  $x < 0$ &
+{\bf 47.} \quad  $x+y =0$ \cr
+\+
+{\bf 48.} \quad  $x$ is an integer
+&
+{\bf 49.} \quad  $x \ge 1$ or $y =0$ \hfill \blackbox \cr
+
+
+\smallskip
+{\bf 50--57.}  Is this a linear constraint for $x$ and $y$? (Answer Yes or No.)
+\smallskip
+
+ \settabs 2 \columns
+\+
+{\bf 50.} \quad  $x+2y$ &
+{\bf 51.} \quad  $x \ge 1$ \cr
+\+
+{\bf 52.} \quad  0 = 0 &
+{\bf 53.} \quad  0 = 1 \cr
+\+
+{\bf 54.} \quad  $x+y \le 0$ &
+{\bf 55.} \quad  $x^2=2$ \cr
+\+
+{\bf 56.} \quad  $x \ge 0$ &
+{\bf 57.} \quad  $xy=0$ \hfill \blackbox \cr
+\smallskip
+
+{\bf 58.} Show that any linear form  $f(x, y)$ of two variables $x, y$  has the following two
+properties:
+\smallskip
+
+$\bullet$ (proportionality) $f(ax, ay) = af(x,y)$ for every number $a$
+\smallskip
+
+$\bullet$ (additivity) $f(x_1+x_2, y_1+y_2) = f(x_1, y_1)  + f(x_2,y_2)$
+
+\smallskip
+{\bf 59.} Conversely, show that every  function 
+ $f(x, y)$ of two variables $x, y$    with  these two properties is a linear
+form..
+
+\medskip
+{\bf 60.} Minimize  $ |x| + (x-2y)^2 +  \sin z   +  2^u + \log(v+101)$ subject to
+$|x|, |y|,|z|, |u|, |v|  \le 100.$  How many optimal solutions are there?
+ $Hint$: Try to minimize every term in the objective function separately.
+
+
+
+
+
+\parindent=20pt
+
+ \vfill
+\eject
+\def\rightheadline{\tenrm\hfil{\it  \S 2. Examples of  Linear  Programs}\quad {\bf\folio}}
+ %\bigskip
+
+\noindent
+{\twelvebf\S  2. Examples of Linear Programs}
+\smallskip
+\noindent As you recall, we mentioned in \S 1 that linear programs arise in business and industry. Our goal for the next two sections is to present some cases of real-life situations that can be described as linear programs. 
+% We thank  Peter Morris for some of these examples.    
+
+  \noindent
+{\bf Example 2.1.}  {\it A Diet Problem}
+ 
+In this age of health consciousness, many people are analyzing the nutritive content of the food they eat. Let us see how this can be set up as a linear program. 
+ 
+
+
+The general idea is to select a mix of different foods for a person's diet in such a way that basic nutritional requirements are satisfied at minimum cost.  
+ 
+
+
+Of course, a realistic problem of this type would be quite complicated. We would have to rely on nutritionists to learn what the basic nutritional requirements are (and these would  vary with the  individual). Additionally, in order to have variety and avoid nutritional boredom, we would have to consider a long list of possible foods.  Our example is drastically simplified.
+
+According to the   recommendations of a nutritionist, a person's daily requirements for protein, vitamin A, and calcium are as follows: 50 grams of protein, 4000 IUs (international units) of vitamin A, 1000 milligrams of calcium. For illustrative purposes, let us  consider a diet consisting only of apples (raw, with skin), bananas (raw), carrots (raw), dates (domestic, natural, pitted, chopped), and eggs (whole, raw, fresh) and let us, if we can, determine the amount  of each   food  to be consumed in order to meet the 
+Recommended Dietary Allowances  (RDA)
+  at minimal cost.   
+
+\smallskip
+\relax
+\catcode`\*=\active
+\def*{\hphantom{0}}
+\centerline{\vbox{\offinterlineskip\halign{
+\strut#&\quad #&\quad #& \quad#&\quad #\cr\noalign{\leavevmode\hrule\smallskip\smallskip}
+\bf Food &\bf Unit           &\bf Protein &\bf Vit. A &\bf Calcium   \cr\noalign{\smallskip}\omit&\omit&  **(g)&  ***(IU)&  (mg)  
+\cr\noalign{\smallskip\smallskip\hrule\smallskip}
+    apple   & 1 medium (138 g)  &*0.3  & ***73 & *9.6   
+\cr banana&  1 medium (118 g) & *1.2 & ***96 & **7   
+\cr carrot & 1 medium (72 g)   & *0.7 & 20253  & *19    
+\cr dates  & 1 cup * (178 g)     &*3.5  & **890 & *57    
+\cr egg     & 1 medium (44 g)   & *5.5  & **279 &  *22     
+\cr\noalign{\smallskip\hrule}}}} 
+
+% \centerline{\bf Table 1}
+ \smallskip
+ 
+Since our goal is to meet the RDA with minimal cost, we also need to compile
+the costs of these foods:
+ \eject
+
+ \smallskip
+
+\relax
+\centerline{\vbox{\offinterlineskip\halign{
+\strut#&\quad #\cr\noalign{\hrule\smallskip\smallskip}
+\bf ***Food& \bf **Cost\cr\noalign{\smallskip}\omit&\bf (in cents)\cr\noalign{\smallskip\smallskip\hrule\smallskip}
+1**apple& ***10\cr
+1**banana& ***15\cr
+1**carrot& ****5\cr
+1*cup of dates&	***60\cr
+1*egg& **$\,$**8\cr\noalign{\smallskip\hrule}}}}
+% \centerline{\bf Table 2}
+\smallskip
+
+Using these data, we can now set up a linear program. Let $a,b,c,d,e$  be variables representing the quantities of the five  foods we are going to use in the diet. The objective function   to be minimized  is the total cost function (in cents),
+
+$$C=10a + 15b + 5c + 60d + 8e,$$
+
+\noindent where the coefficients represent cost per unit of the five items under consideration.  
+ 
+What are the constraints ? Obviously,
+$$a,b,c,d,e \ge 0.\eqno{(i)}$$ 
+ These constraints are called {\it nonnegativity constraints.} 	
+
+ 
+Then, to ensure that the minimum daily requirements of protein, vitamin A, and calcium are satisfied, it is necessary that
+$$\left\{\matrix{
+0.3a& +& 1.2b &+& 0.7c   &+& 3.5d &+& 5.5e \ge 50 \cr
+73a &+ & 96b  &+& 20253c &+& 890d & +& 279e  \ge  4000  \cr 
+9.6a&+ &  7b  &+& 19c &+& 57d &+&22e \ge 1000,}\right.\eqno (ii)$$
+ where, for example, in the first constraint, the term $0.3\,a$ expresses the number of grams of protein in each apple multiplied by the quantity of apples needed in the diet, the second term $1.2\,b$ expresses the number of grams of protein in each banana multiplied by the quantity of bananas needed in the diet, and so forth.
+ 
+Notice that the terms of the first constraint are written in grams, 
+ all terms in the second constraint are written in  IUs, and
+all terms in the third constraint are written in  milligrams.   
+ 
+
+Recall that solving this linear program requires finding an optimal value and an optimal solution. Let us attempt to find the solution of this problem by trial and error.  Since carrots are cheap, let us consider first the all-carrot diet. This means that $a,b,d$ and $e$ equal zero. The three constraints in $(\it{ii})$ reduce to
+$$\left\{\matrix{0.7c&\ge&50& {\rm (g)}\cr
+20253c&\ge&4000& {\rm (IU)}\cr
+19c&\ge&1000& {\rm (mg)}\cr}\right.\eqno (iii)$$
+
+Thus, with $c = 500/7$ (approximately 71 carrots) the protein requirement in the diet is exactly satisfied, whereas the requirements for vitamin A and calcium are grossly exceeded. Since carrots cost 5 cents each, we find that the cost of this diet is $\$25/7.$  Can we do better? Can we find another diet consisting of something other than  carrots and that costs less than $\$25/7 \approx \$3.57$  a day?   (The person being asked to eat 71 carrots per day hopes so!)
+
+ 
+Note that since eggs are an excellent source of protein, the coefficient of $e$ is comparatively large in the constraint describing the protein requirement.  This 
+observation suggests  that we could   meet the nutritional requirements we have established for ourselves while avoiding monotony if we incorporate some eggs into our daily menu.  We will try to reduce the amount of carrots, $c,$ in our diet by increasing the number of eggs, $e.$ Since we keep  $a,b$ and $d$ equal zero, the three constraints are now
+$$\left\{\matrix{
+0.7c+& 5.5e     &\ge 50    *     \hbox{(grams of protein)}\cr
+20253c+& 279e   &\ge  4000  *\hbox{(IUs of vitamin A)}\cr
+19c+& 22e       &\ge 1000  * \hbox{(milligrams of calcium).}\cr}\right.\eqno (iv)$$
+
+ It is easy to see that we satisfy these constraints with $ c=50, e= 3.$
+ Since carrots cost 5 cents each and eggs cost 8 cents each, the cost of this new diet is $\$2.74.$  Voila!  Our new diet of 50 carrots and 3 eggs per day offers a welcome respite from the 71-carrot diet as well as being substantially cheaper. Shall we try to do even better? 
+
+Although the trial-and-error method has helped us to do some analysis, it gives us no guidelines as to whether we can lower the cost further by considering other combinations of the five foods in our daily diet. We will return to this example later when we study the dual simplex method (Chapter 5).
+
+ \filbreak
+
+\noindent
+{\bf Remark.} Here is some more food for thought about the diet problem.
+ 
+
+(a)  Each ingredient can be measured in its own units. Always include the name of the unit   to avoid confusion. Indicate also the unit for the cost objective function (cost can be expressed in cents, dollars, thousands of dollars, etc.).
+ 
+
+
+(b) Could we have allowed the number of eggs in the answer to be expressed as a fraction, say $1/2$?  In a formal solution to a linear program, yes, we could have (the divisibility assumption of linear programming). Does it make sense?  It depends on the situation discussed.
+Sometimes we have to require that certain variables are integers. Adding
+these nonlinear  constraints   turns a linear program into
+an integer linear program.
+ 
+
+(c) How do  we solve the diet problem? We will answer this question when we discuss the simplex method in Chapter 4. For now, we have tried a few iterations of the trial-and-error method, and, although we were able to come up with two feasible solutions, we still do not know what the optimal solution is. 
+
+
+(d) Should we measure apples in weight units rather than in pieces, since apples could be of different size? It depends. The unit you choose depends on real-life situations. If you buy apples   in a convenience store, they are about the same size and you pay for each piece of fruit. So {\it piece} is appropriate in this situation. On the other hand, if you buy your apples by the bushel at a farm, then  $bushel$ is an appropriate unit. Just switching to a different weight unit is not a complete cure for variations in ingredients  although sometimes it helps. The numbers in real life are often not exact (if they are known at all). Can you plan your diet for the next months if you are not even sure about the prices  tomorrow? Other people do it, and sometimes you must do it, too. \hfill \blackbox
+
+ \smallskip
+ 
+Let us try to set up another problem where the goal is to minimize cost.
+ 
+\smallskip
+\noindent
+{\bf Example 2.2.}  {\it A Blending Problem}
+ 
+Many coins in different countries are made from cupronickel 
+(75\% copper, 25\% nickel). Suppose that
+the four available alloys (scrap metals), $A,\,B,\,C,\,D,$ to be utilized to produce the
+ coin contain the   percentages of copper and nickel shown in the following table:
+
+\eject
+
+\relax
+\centerline{\vbox{\offinterlineskip\halign{
+\strut#&\quad  #&\quad  #&\quad #&\quad 
+#\cr\noalign{\hrule\smallskip\smallskip}
+\bf *$\,$Alloy& $A$ &$B$ &$C$ &$D$ 
+\cr\noalign{\smallskip\smallskip\hrule\smallskip}
+$\%$ copper&    90&     80&     70&     60\cr
+$\%$ nickel&    10&	20&	30&	40\cr
+$\$$/lb    &    1.2&     1.4&    1.7&    1.9\cr
+\noalign{\smallskip\hrule}}}}
+ \smallskip
+% \centerline{\bf Table 3}
+\smallskip
+ 
+The cost in dollars per pound of each alloy is given as the last row
+ in the same table.
+ 
+ 
+ 
+Notice that none of the four alloys contains the desired percentages of  copper and nickel.
+Our  goal   is to combine these alloys into a new blend containing the desired percentages of  copper and nickel for cupronickel while  minimizing the cost. This lends itself to a linear program. 
+
+ 
+
+ Let $a,\,\, b, \,\,c, \,\,d$ be the   amounts of alloys $A, \,B, \,C, \,D$ in pounds  to make a pound of  the new blend. Thus,
+
+$$a,\,\, b, \,\,c, \,\,d\ge 0.\eqno{(i)}$$
+ Since the new blend will be composed exclusively from the four alloys, we have
+                 $$a + b  +  c +  d = 1.\eqno{(ii)}$$	
+ The conditions on the composition of the new blend give
+$$\left\{\matrix{.9a &+& .8b &+& .7c &+& .6d &=& .75\cr.1a &+& .2b &+& .3c &+& .4d &=& .25.} \right.\eqno (iii)$$
+
+
+For example, the first equality states that $90\%$ of the amount of alloy $A$, plus $80\%$ of the amount of alloy $B$, plus $70\%$ of the amount of alloy $C$, plus $60\%$ of the amount of alloy D will give the desired $75\%$ of copper in a pound
+of the new blend. Likewise, the second equality gives the desired amount of nickel in the new blend.	
+ 
+ 
+
+Taking the preceding constraints into account,  we minimize the cost function
+$$C = 1.2a + 1.4b + 1.7c + 1.9d$$
+ 
+
+   In this problem all the constraints, except $(i),$ are {\it equalities.} In fact, there are three linear equations and four unknowns. However,  the three equations are not independent. For example, the sum of the equations in $(iii)$ gives $(ii).$ Thus $(ii)$ is redundant.
+\filbreak
+
+ In general, a constraint is said to be {\it redundant} if it follows from the other constraints of our system. Since it contributes no new information regarding the solutions of the linear program, it can be dropped from consideration without changing the feasible set. 
+
+\smallskip
+ \noindent
+{\bf Example 2.3.}   {\it A Manufacturing  Problem}
+%check Nering and Tucker for reference
+%(*Ex 2.3, Manufacturing Problem from the book*)
+%ConstrainedMax[2a +   3b +   7c,
+%             {40a +  20b +   60c < 1200,   
+%               4a +    b +    6c < 300,
+%             0.2a + 0.7b +    2c < 40,
+%             100a + 100b +  800c < 8000,
+ %             .1a +  .3b +   .8c < 8}, {a, b, c}]
+% {100., {a -> 20., b -> 20., c -> 0}}
+ 
+
+We are now going to state a program in which the  objective function, a profit function, is to be maximized. A   factory produces three   products: P1, P2,  and P3. The unit of measure for each product is the standard-sized boxes into which the product is placed. The profit per box of P1, P2,  and P3 is \$2,   $\$3$ and   $\$7,$ respectively. Denote by $x_1,\,\, x_2, \,\,x_3$ the number of boxes of P1, P2,  and P3, respectively. So the profit function we want to maximize is 
+$$P = 2x_1 + 3x_2 + 7x_3$$
+ 
+The five resources used are raw materials R1 and R2,  labor, working area, and time on a   machine. There are 1200 lbs of R1 available,  300 lbs of R2, 40 employee-hours of labor, 8000 m$^2$ of working area,  and 8 machine-hours on the  machine.   
+
+ The amount of each resource needed for a box of each of the products is given in  the following table (which also includes  the aforementioned data):
+ 
+
+\smallskip
+\relax
+\centerline{\vbox{\offinterlineskip\halign{
+\strut#&\quad  #&\quad  #&\quad #&\quad   #&\quad 
+#\cr\noalign{\hrule\smallskip\smallskip}
+\bf Resource & \bf Unit &   P1 &  P2&  P3 &  $\|$ \bf Available
+\cr\noalign{\smallskip\smallskip\hrule\smallskip}
+R1 &lb         &         *40&	           ***20&	*60 &$\|$ 1200 \cr
+R2 &lb         &         **4&	           ****1&       **6 &$\|$* 300  \cr
+Labor & hour   &        **.2&	       *** .7&       **2 &$\|$** 40   \cr
+Area & $m^2$   &        100 &           *   100 &       800 &$\|$ 8000 \cr
+Machine & hour &        **.1&	       *** .3&   *$\,$.8 &$\|$*** 8    \cr
+\noalign{\smallskip\hrule}
+Profit & \$ & **2 & ***3 &  **7 & $\| \rightarrow$ max\cr
+}}}
+ \smallskip
+% \centerline{\bf Table 4}
+ \smallskip
+
+ 
+As we see from this table, to produce a box of P1 we need 40 pounds of R1, 4 pounds of R2, 0.2 hours of labor, 100 m$^2$ of working area, and 0.1 hours on the  machine. Also, the amount of resources needed to produce a box of P2 and P3 can be deduced from  the table.    
+\smallskip
+The constraints are
+$$x_1, x_2, x_3\ge 0,\eqno{(i)}$$	
+and
+$$\left\{\matrix{40x_1 &+& 20x_2 &+& 60x_3&\le&  1200&\hbox{(pounds of R1)}\cr 4x_1& +&x_2 &+& 6x_3 &\le& 300&\hbox{(pounds of R2)}\cr
+ .2x_1 &+& .7x_2 &+& 2x_3&\le& 40&\hbox{(labor)}\cr 
+100x_1 &+& 100x_2 &+& 800x_3&\le& 8000&\hbox{(area in m$^2$)}\cr 
+.1x_1 &+& .3x_2 &+& .8x_3 &\le& 8&\hbox{(machine).}\cr}\right.\eqno (ii)$$	
+ 
+
+Note that a naive first approximation of the optimal solution is to produce only boxes of P3, since the profit from each one of them is bigger than the profit from boxes of P1 and P2. This means setting up $x_1=0$ and $x_2=0.$ The constraints $(ii)$ now become
+
+$$\left\{\matrix{60x_3&\le& 1200\cr 
+                  6x_3&\le&300\cr
+                  2x_3&\le&40\cr
+                 800x_3&\le&8000\cr
+                .8x_3&\le&8. \cr}\right.\eqno (iii)$$ 
+
+One solution to these inequalities is $x_3=10$ with profit $P=70.$ However, when we figure out how much of the resources were used to produce these 10 boxes of P3, we see that 600 lbs of R1 remain unused, more than half of R2 was not used, and  half of the labor was wasted. Please keep in mind that the maximal profit involves an optimal use of the resources in order to get the best return on our investment. Although this naive first approximation is feasible, we are guessing that it is not an optimal solution to this problem.  We will see later that
+the optimal solution is  $x_1 = 20, x_2 = 20, x_3=0$ with $\max= 100.$   
+\smallskip  
+
+\noindent
+{\bf Example 2.4.} {\it A   Transportation Problem} 
+
+\noindent
+Another concern that manufacturers face daily is {\it transportation costs} for their products. Let us look at the following hypothetical situation and try to set it up as a linear program.
+ 
+A manufacturer of widgets  has warehouses in Atlanta, Baltimore, and Chicago. The warehouse in Atlanta has 50 widgets in stock, the warehouse in Baltimore has 30 widgets in stock, and the warehouse in Chicago has 50 widgets in stock. There are retail stores in Detroit, Eugene, Fairview, Grove City, and Houston. The retail stores in Detroit, Eugene, Fairview, Grove City, and Houston need at least 25, 10, 20, 30, 15 widgets, respectively. Obviously, the manufacturer needs to ship widgets to all five stores from the three warehouses and he wants to do this in the cheapest possible way. This presents a perfect backdrop for a linear program, to minimize shipping cost. To start, we need to know the cost of shipping  one widget from each warehouse to each retail store. This is given by a shipping cost table  
+ 
+\smallskip
+
+\relax
+\centerline{\vbox{\offinterlineskip\halign{
+\strut#&\quad  #&\quad  #&\quad #&\quad   #&\quad 
+#\cr\noalign{\hrule\smallskip\smallskip}
+\omit   &\hfill \bf 1.D &\hfill \bf 2.E &\hfill \bf 3.F&\hfill \bf 4.G& \hfill \bf 5.H\cr
+\noalign{\smallskip\smallskip\hrule\smallskip}
+\bf 1.*Atlanta&***55&***30&***40&**50&****40\cr
+\bf 2.*Baltimore&***35&***30&**100&**45&****60\cr
+\bf 3.*Chicago&***40&***60&***95&**35&****30\cr 
+\noalign{\smallskip\hrule}
+}}}
+ \smallskip
+%   \centerline{\bf Table 5}
+\smallskip
+
+Thus, it costs $\$30$ to ship one unit of the product from Baltimore to Eugene (E), $\$95$ from Chicago to Fairview (F), and so on.
+ 
+ 
+In order to set this up as a linear program, we introduce variables that represent the number of units of product shipped from each warehouse to each store.  We have numbered the warehouses according to their alphabetical order and we have enumerated the stores  similarly. Let  $x_{ij},\,\,\hbox{for all}\,\, 1\le i\le 3,\,\, 1\le j\le 5,$  represent the number of widgets shipped from warehouse $\#\,i$ to store $\#\,j.$ This gives us 15 unknowns. The objective function (the quantity to be minimized) is the shipping cost given by
+$$\displaylines{C=\,55x_{11} + 30x_{12} + 40x_{13} + 50x_{14} +  40x_{15}\cr\qquad {}+35x_{21} + 30x_{22} + 100x_{23} + 45x_{24} + 60x_{25} \cr
+\quad {}+40x_{31} + 60x_{32} +95x_{33} +35x_{34}+30x_{35}\cr}$$
+\noindent where $55x_{11}$ represents the cost of shipping one widget from the warehouse in Atlanta to the retail store in Detroit (D) multiplied by the number of widgets that will be shipped, and so forth.
+
+What are the constraints? First, our 15 variables satisfy the condition that 
+$$x_{ij}\ge 0, \,\,\hbox{for all}\,\, 1\le i\le 3,\,\, 1\le j\le 5\eqno (i)$$                       since shipping a negative amount of widgets makes no sense.  
+  Second, since the warehouse $\#\,i$ cannot ship more widgets than it has in stock, we get
+$$\left\{\matrix{x_{11} &+& x_{12} &+& x_{13} &+& x_{14} &+& x_{15}&\le& 50\cr x_{21} &+& x_{22} &+& x_{23} &+& x_{24} &+& x_{25}&\le& 30\cr x_{31} &+& x_{32} &+& x_{33} &+& x_{34} &+& x_{35}&\le&  50\cr}\right.\eqno {(ii)}$$ 	
+
+ 
+
+\noindent Next, working with the amount of widgets that each retail store needs, we obtain the following five constraints:  
+
+
+
+$$\left\{\matrix{x_{11} &+& x_{21} &+& x_{31}&\ge&  25\cr x_{12} &+& x_{22} &+& x_{32}&\ge&  10\cr x_{13} &+& x_{23} &+& x_{33}&\ge&  20\cr x_{14} &+& x_{24} &+& x_{34}&\ge&  30\cr x_{15} &+& x_{25} &+& x_{35}&\ge&  15\cr}\right.\eqno (iii)$$ 
+ 
+
+
+The problem is now set up. We will study an efficient method for solving such problems later. For now, we are still limping along with the trial-and-error method.
+
+ 	
+
+Geographically and financially speaking, it seems reasonable for the warehouse in Atlanta  to ship widgets to the retail stores in Eugene  and Fairview, while Grove City and Houston are attractive markets for Chicago. Thus, 
+$$\left\{\matrix{x_{12}& =& 10,& x_{22}& =& x_{32}& =& 0\cr x_{13} & =& 20, & x_{23} & =& x_{33} & =& 0\cr x_{34}& =& 30, & x_{35} & =& 15.& &\cr}\right.$$
+
+ 
+
+We have now decided on the values for 8 of the 15 variables.  Continuing, since  the  retail stores in Eugene  and Fairview will get the widgets they need from the warehouse in Atlanta and the retail stores in Grove City and Houston will receive widgets from the warehouse in Chicago,  it makes no sense to ship additional widgets to  these stores  from another warehouse since that would increase the shipping cost.  Thus we set
+$$x_{14} \,=\, x_{15}\, =\, x_{24}\, =\, x_{25}\, =\, 0.$$
+\smallskip\smallskip
+
+
+This leaves only the three variables $x_{11},\,\, x_{21},\,\, x_{31}$ to be determined. By using the constraints, we determine that
+$$x_{21} \,=\, 25, x_{11} \,=\, x_{31} \,=\, 0$$  
+\smallskip 
+
+ 
+\noindent {\bf Some Remarks about This Feasible Solution}
+
+ 
+(a)\quad Notice that in our feasible solution we require that the total number of units shipped to Detroit is 25, the number of units shipped to Eugene is 10, and so on. Shipping more units than what each store needs would only increase the  cost. On the other hand, we did not use the whole supply of widgets since the supply is greater than the demand.   
+
+%$$\displaylines{\rlap{(iv)}\hfill x_{11} + x_{12} + x_{13} + x_{14} + x_{15}+% %x_{21} + x_{22} +x_{23}\hfill\cr {}+x_{24} + x_{25} + x_{31} + x_{32}+ x_{33}+% %x_{34} + x_{35} = 100\cr}$$%
+
+%\noindent For this reason, we could not replace the inequalities in (ii) of% %this example by equalities since this would then imply that%
+
+%$$\displaylines{\rlap{(v)}\hfill x_{11} + x_{12} + x_{13} + x_{14} + x_{15} +% %x_{21} + x_{22} + x_{23} \hfill\cr {}+x_{24} + x_{25} + x_{31} + x_{32} +% %x_{33} + x_{34} + x_{35} = 130\cr}$$%  
+
+ 
+
+  	
+
+	
+
+(b)\quad In real life, the total shipping cost is not always expressible by a linear form. For example, discounts could be available for bulk shipping. Nonlinear problems are usually more difficult to solve than the linear ones.  
+ 
+\smallskip
+\noindent
+{\bf Example 2.5.}  {\it  Job Assignment Problem}
+ 
+Suppose that a production manager must assign $n$ workers to do $n$ jobs. If every worker could perform each job at the same level of skill and efficiency, the job assignments could be issued arbitrarily. However, as we know, this is seldom the case. Thus, each of the $n$ workers is evaluated according to the time he or she takes to perform each job. The time, given in hours, is expressed as a number greater than or equal to zero. Obviously, the goal is to assign workers to jobs in such a way that the total time is as small as possible. In order to set up the notation, we let $c_{ij}$  be the time it takes for worker $\#\,i$ to perform job $\#\,j.$  Then the times could naturally be written in a table. For example, take $n = 3$ and let the times be given as
+in the following table:
+
+\smallskip 
+
+\relax
+\centerline{\vbox{\offinterlineskip\halign{
+\strut#&\quad  #&\quad  #&\quad #&\quad   #&\quad 
+#\cr\noalign{\hrule\smallskip\smallskip}
+\omit&$\,$\bf $\,$a &\bf *b&\bf *c\cr
+\noalign{\smallskip\smallskip\hrule\smallskip}
+\bf A&	 10&	  70&	40\cr
+\bf B&	 20&	  60&	10\cr
+\bf C&	 10&	  20&	90\cr
+\noalign{\smallskip\hrule}
+}}}
+ \smallskip
+% \centerline{\bf Table 6}
+\smallskip
+
+\noindent So if worker {\bf A} gets assigned to job {\bf a}, worker {\bf B} fills job {\bf b} and worker {\bf C} does job {\bf c}, then the total time is $10 + 60 + 90 = 160.$ This is not a minimum since, if {\bf A} does   {\bf b}, {\bf B} does {\bf c} and {\bf C} does {\bf a},  then the  total time equals $70+10+10=90.$ For $n = 3,$ the total number of possible ways of assigning jobs is $3\times 2 = 6.$ This can be seen from the information contained in the   following table:
+
+ \smallskip
+
+\centerline{\vbox{\offinterlineskip\halign{
+\strut#&\quad  #&\quad  #&\quad #&\quad   #&\quad 
+#\cr\noalign{\hrule\smallskip\smallskip}
+**Assignment& & Total Time\cr
+\noalign{\smallskip\smallskip\hrule\smallskip}
+{\bf Aa\quad Bb\quad Cc}& &****160\cr
+{\bf Aa\quad Bc\quad Cb}& &*****40\cr
+{\bf Ab\quad Ba\quad Cc}& &****180\cr
+{\bf Ab\quad Bc\quad Ca}& &*****90\cr
+{\bf Ac\quad Ba\quad Cb}& &*****80\cr
+{\bf Ac\quad Bb\quad Ca}& &****110\cr
+\noalign{\smallskip\hrule}
+}}}
+% \centerline{\bf Table 7}
+\filbreak
+
+ 
+\noindent From the table we can see that the minimum value of the total time is 40; we conclude that the production manager would be wise to assign worker {\bf A} to job {\bf a}, worker {\bf B} to job {\bf c} and worker {\bf C} to job {\bf b}.
+ 
+In general,  this method of selection is not good. The total number of possible ways of assigning jobs is  $n! = n\times (n - 1)\times (n - 2)\times\cdots\times 2\times 1.$ This is an enormous number even for moderate $n.$  For  $n = 70,$
+$$\displaylines{n!= 119785716699698917960727837216890987364589381425\cr46425857555362864628009582789845319680000000000000000.\cr}$$
+ It has been estimated that   if a Sun Workstation computer had started solving this problem at the time of the Big Bang, by looking at all possible job assignments, then by now it would not have finished yet its task.
+ 
+Although it is not obvious,   the job assignment problem can be expressed as a linear program. As such, it can be solved by the simplex method. When $n=70$ it takes seconds.
+  We will return to this and related problems in Chapter 7 after we discuss the simplex method.
+\smallskip
+
+% Poincaré, Henri  1854, Nancy, Fr. d. July 17, 1912
+%   French mathematician, theoretical
+%   astronomer, and philosopher of science
+%   who influenced cosmogony, relativity,
+%   and topology and was a gifted
+%  interpreter of science to a wide public. 
+
+% Leonid Vitalyevich Kantorovich   Born: 19 Jan 1912 in St Petersburg, Russia
+%            Died: 7 April 1986 in USSR
+
+We conclude this section with a quotation.
+In 1980 Eugene Lawler wrote that
+
+   [Linear programming] is used to allocate resources, plan production, schedule workers, plan investment
+   portfolios and formulate marketing (and military) strategies. The versatility and economic impact of linear
+   programming in today's industrial world is truly awesome. 
+
+
+
+{\centerline {\twelvebf Exercises}}
+ 
+\smallskip
+\noindent
+{\bf 1.} Suppose that for your balanced diet you need only protein and vitamins A,  B$_1$,  C,  B$_6$,  B$_{12}$  and you are allowed to eat only cereals. Go to a grocery store and choose 10 different boxes of cereals. Write down the percentages of U.S. recommended daily allowances (RDAs) for the aforementioned    ingredients and the price of each cereal brand. Then write down your diet problem, indicating the units, date, and store. If necessary, you may choose your gender, age, and
+calorie intake to determine your RDA.  If you cannot find your protein RDA on
+boxes and elsewhere, take it to be 50 g. Write down the name of the store and the date. You may take data from a store on the Internet.
+ 
+\smallskip
+\noindent
+{\bf 2.}  Solve the blending problem in Example 2.2.  $Hint$: Note that in $(iii)$ of Example 2.2 we have a system of two linear equations in four unknowns. Thus, two variables can be eliminated
+and the resulting problem in two variables can be solved by graphical methods
+(see \S  3).
+ 
+\smallskip
+\noindent
+{\bf 3.}  Solve the linear program in Example 2.3 with the additional condition $x_3=0.$   $Hint$:  Use the graphical method (see \S  3).
+\smallskip
+\noindent
+{\bf 4.} You have 100 quarters and 90 dimes and no other money.
+You have to pay a given amount $C.$  No change is given to you.
+You do not want to overpay too much.
+State this word optimization problem in mathematical form (i.e., in terms of decision variables, objective function, and constraints).
+ Is this problem linear? Solve it for $C = 15$ cents,
+  for  $C = \$1.02,$  and for $C = \$100.$
+
+\smallskip
+\noindent
+{\bf 5.} You have a string loop  of length 100.  
+You want to make a rectangle
+of maximal area. State this problem mathematically and solve it.
+
+
+\smallskip
+\noindent
+{\bf 6.}\ \  Example 2.5  has a nice variation. Suppose that the production manager devises a  system whereby each employee is given a numerical rating depending on how well he or she performs a particular job.   Then the manager would want to assign people to jobs in a way that the sum of their ratings is as large as possible, so that the level of efficiency of the company is also as high as possible. Your company is small  and you have just rated four employees as to how well they can do four jobs which need to be assigned. Solve this  maximization problem, using the following matrix of ratings:
+\smallskip
+\centerline{\vbox{\offinterlineskip\halign{
+\strut#&\quad  #&\quad  #&\quad #&\quad   #&\quad 
+#\cr\noalign{\hrule\smallskip\smallskip}
+\omit& \bf  a &\bf b&\bf c&\bf d\cr
+\noalign{\smallskip\smallskip\hrule\smallskip}
+\bf A&	 10&	  70&	40& 55\cr
+\bf B&	 20&	  60&	10& 67\cr
+\bf C&	 10&	  20&	90& 43\cr
+\bf D&	 15&	  37&	89& 23\cr
+\noalign{\smallskip\hrule}
+}}}
+
+
+
+
+\bigskip
+\noindent
+{\bf 7.}
+Another interpretation of the same mathematical problem is the {\it matching problem.} You want to match  $n$ boys with $n$ girls  into
+$n$ couples with objective to produce the maximal bliss (or minimal grief).
+Here is  your data, where the numbers are    dollars that the couples are expected to pay you for happy marriage (negative numbers mean they
+would try to get some money from   you for an unhappy marriage)   and where $n = 4:$
+
+\smallskip
+\centerline{\vbox{\offinterlineskip\halign{
+\strut#&\quad  #&\quad  #&\quad #&\quad   #&\quad 
+#\cr\noalign{\hrule\smallskip\smallskip}
+\omit&   {\bf a} &\bf b&\bf c&\bf d\cr
+\noalign{\smallskip\smallskip\hrule\smallskip}
+\bf A&	 1&	  -2&	2& 0\cr
+\bf B&	 2&	  0&	1& 1\cr
+\bf C&	 3&	  1&	0& -1\cr
+\bf D&	 -1&	  0&	1& 2\cr
+\noalign{\smallskip\hrule}
+}}}
+
+ \noindent
+Solve this problem. {\it Hint:} Check all  4! = 24 matches unless you see a faster way.
+
+\medskip
+\noindent
+{\bf 8--10.} Solve the following matching problems where the numbers in tables are the expected numbers  of 
+happy years  together for each couple and you want to maximize the total. If you cannot solve the
+problem in a reasonable timeframe, try to find as good a feasible solution as possible. Data are not taken from real life.
+
+% \filbreak
+\smallskip
+\noindent
+ \vbox{\offinterlineskip\halign{
+\strut#&\quad  #&\quad  #&\quad #&\quad   #&\quad 
+#\cr\noalign{\hrule\smallskip\smallskip}
+{\bf 8.}& \bf a &\bf b&\bf c&\bf d   &\bf e   \cr
+\noalign{\smallskip\smallskip\hrule\smallskip}
+\bf A&	 8&	  2&	9& 0 & 0 \cr
+\bf B&	 2&	  9&	1& 1 & 3\cr
+\bf C&	 3&	  1&	7& 1 & 1\cr
+\bf D&	 1&	  6&	1 & 2 & 9 \cr
+\bf E&	 8&	 8&	1 & 9 & 1 \cr
+\noalign{\smallskip\hrule}
+}} 
+\ \ \ \ \ \ \  \ \ \
+ \vbox{\offinterlineskip\halign{
+\strut#&\quad  #&\quad  #&\quad #&\quad   #&\quad   #&\quad   #&\quad 
+#\cr\noalign{\hrule\smallskip\smallskip}
+{\bf 9.} & \bf  a &\bf b&\bf c&\bf d   &\bf e   &\bf f  &\bf g  \cr
+\noalign{\smallskip\smallskip\hrule\smallskip}
+\bf A&	 8&	  2&	9& 0 & 3 & 8 & 7 \cr
+\bf B&	 2&	  0&	1& 1 & 3 & 7 & 9 \cr
+\bf C&	 3&	  1&	1& 1 & 1 & 6 & 9 \cr
+\bf D&	 1&	  0&	1 & 2 & 9 & 5 & 8 \cr
+\bf E&	 8&	 8&	1 & 1 & 1 & 5 & 7 \cr
+\bf F&	 1&	 6&	1 & 9 & 9 & 5 & 8  \cr
+\bf G&	 6&	 6&	6 & 5 & 1 & 5 & 4  \cr
+\noalign{\smallskip\hrule}
+}}
+
+ 
+
+
+%\filbreak
+ \bigskip
+ 
+\centerline{ \vbox{\offinterlineskip\halign{
+\strut#&\quad  #&\quad  #&\quad #&\quad   #&\quad   #&\quad   #&\quad 
+#\cr\noalign{\hrule\smallskip\smallskip}
+{\bf 10.} & \bf  a &\bf b&\bf c&\bf d   &\bf e   &\bf f  &\bf g  \cr
+\noalign{\smallskip\smallskip\hrule\smallskip}
+\bf A&	 8&	  2&	5& 0 & 0 & 1 & 7 \cr
+\bf B&	 2&	  9&	1& 1 & 3 & 7 & 5 \cr
+\bf C&	 3&	  1&	7& 1 & 1 & 6 & 9 \cr
+\bf D&	 1&	  6&	1 & 2 & 1 & 5 & 8 \cr
+\bf E&	 8&	 8&	1 & 0 & 1 & 5 & 7 \cr
+\bf F&	 0&	 6&	1 & 9 & 1 & 5 & 8  \cr
+\bf G&	 6&	 6&	1 & 5 & 1 & 5 & 4  \cr
+\noalign{\smallskip\hrule}
+}}}
+
+
+  
+\bigskip
+\noindent
+{\bf 11.} We want to find  a maximal number  among given numbers
+$c_1,\ldots, c_n.$ State this as a linear program.
+
+\smallskip
+\noindent
+{\bf 12.} Given three distinct numbers, $a,b,c,$ we want to find the {\it median} (i.e., the number
+$x$ that is one of the given numbers but is not maximal or minimal).
+  State this as a linear program. {\it Hint}: This is a difficult problem, but it will be solved in Chapter 8.
+
+\filbreak
+ \def\rightheadline{\tenrm\hfil{\it  \S   3. Graphical Method}\quad {\bf\folio}}
+
+ 
+\bigskip
+\noindent
+ {\twelvebf \S  3. Graphical Method}
+ \smallskip
+ 
+\noindent
+{\bf Example 3.1.} Consider the following simple linear program: 
+$$\left\{\matrix{\hbox{Maximize}& y=3x\cr\hbox{subject to}&0\le x\le 5. \cr}\right.$$
+\smallskip
+
+The value of $x$ that optimizes this function becomes   obvious when we look at  the following figure:
+
+% graph of y=3x for x in [0,5]%
+ \bigskip
+% $$\psfig{figure=Ex.3.1b.eps,height=4cm}$$
+$$\psfig{figure=Ex.3.1.eps,height=4cm}$$
+\vskip-137pt
+\hskip47pt $y$
+\vskip0pt
+\hskip135pt  $x=5,y=15$
+\vskip80pt
+\hskip100pt Feasible region
+\vskip-5pt
+\hskip230pt $x$
+\vskip20pt
+
+
+
+In general, when the number of decision variables is no more than 2, we can use 
+some pictures in the plane to solve our optimization problem.
+Unfortunately, it is much harder to make and use pictures in a higher dimension.
+
+ 
+ When we have a linear program with one decision variable $x,$
+ the graph  of the objective function $y$ in the $(x,\,y)$-plane is a straight line and the feasible region is a set    in the $x$-axis. In general,
+any finite system of linear constraints for one variable $x$  is equivalent 
+to either a single linear  constraint or to a system of two linear constraints.
+To see this, replace every constraint by a constraint of one of the following five types: $0=0, 0=1, x \ge b, x \le b, x = b.$ Therefore, the
+ feasible region  for a linear program with one variable  $x$  has one of the following six shapes: 
+\medskip
+
+% \obeylines{
+$\bullet$\quad the whole line
+\smallskip
+$\bullet$\quad the ray  $x\le c$ going from $-\infty$ up to a number $c$  
+\smallskip
+$\bullet$\quad the ray $x\ge c$ going from a number $c$  up to $+\infty $
+\smallskip
+$\bullet$\quad the closed interval  $a\le x\le b$ with endpoints  $a\, b\ (a < b)$ 
+\smallskip
+$\bullet$\quad a point  $x = c$ 
+\smallskip
+$\bullet$\quad the empty set (that is, there are no feasible solutions)
+%}
+
+\smallskip
+ We leave it as an exercise for the reader to verify the following facts:
+\smallskip 
+\noindent {\bf Fact 3.2.}\  If the objective function is a constant function, $y=c,$ then the optimal value is $y=c$ and it is attained at any point $x$ in the feasible region. 
+\smallskip
+\noindent{\bf Fact 3.3.}\  Now assume that the objective function is of the form $y=\alpha x,$ where $\alpha$ is a {\it nonzero} real number. 
+\smallskip
+\noindent 1.\quad If the feasible region is the whole line, no linear program has an optimal solution.
+\smallskip
+\noindent 2.\quad If the feasible region is a ray $x\le c$ (respectively, $x\ge c$), a linear program has an optimal solution if and only if it is a maximization problem (respectively, a minimization problem). The optimal value is $y=\alpha c$ attained at the point $x=c.$ 
+\smallskip
+\noindent 3.\quad If the feasible region is a closed interval, $a\le x\le b,\,\, a\le b,$ the optimal value is attained at one of the endpoints $a$ or $b.$
+\smallskip
+\noindent 4.\quad If the feasible region is the empty set, there are no optimal solutions.   
+\smallskip
+
+When the number of decision variables is 2, it is possible to draw a picture for our linear program in the Cartesian plane in order to see all feasible and optimal solutions. This is called the {\it graphing method} for solving linear programs. By doing this, we gain  geometrical insight that can be applied to problems with any number of variables.
+ 
+  Sometimes, problems with a large number of variables can be reduced to problems with a smaller number of variables. For instance, in Example 2.2, we can reduce the number of variables (not counting the objective variable $C$) from 4 to 2.
+ 
+Here is an example when the number of variables is 1 from the beginning.
+\smallskip
+\noindent
+{\bf Example\ 3.4.} 
+$$\left\{\matrix{\hbox{Minimize}& y&=&0.3x\cr\hbox{subject to}&2x&\le& 50,\cr\hfill&3x&\le& 120,\cr\hfill&-5x&\ge&  -250,\cr\hfill&0.5x&\ge& -3.}\right.     $$
+%\leqno  {\bf Example\ 3.4}    $$
+We can picture this linear program as follows.
+Each inequality gives a ray on the  $x$-axis:  The inequality $2x\le 50$ represents the ray $(-\infty,25\,],$ the constraint $3x\le 120$ represents the ray $(-\infty,40\,]$ and the constraint $-5x\ge -250$ represents the ray $(-\infty,50\,].$  What ray is obtained from the fourth constraint in Example 3.4?  Since the contribution made by each and every constraint must be taken into account, the feasible   region must be the  common part or intersection  of these rays. This gives the interval $-6\le x\le 25$ as the feasible region; that is, the set of all feasible solutions.
+
+In Figure 3.5,  we plot the objective function on the feasible region. 
+%sketch of y=.3x for x in [-6,25] in lp_book/figures.nb%
+
+
+
+ 
+% $$\psfig{figure=Fig.3.5.eps,height=4cm}$$
+$$\psfig{figure=Ex.4.4.eps,height=4cm}$$
+\centerline{{\bf Figure 3.5}}
+\bigskip
+\medskip
+ 
+Now it is clear that the minimal value for the objective function in  our problem is ${}-1.8.$  It is reached at  $x ={} -6,$ which is the unique optimal solution.  $Answer$: $ \min ={} -1.8$ at $ x ={} -6.$ \hfill \blackbox
+ 
+The set of optimal solutions also has one of those six forms. And it is a subset of the feasible region.  When the feasible set is an interval, one endpoint  or the other is an optimal solution; we have exactly one optimal solution (which must be an endpoint) if and only if the objective  function is not constant.
+
+We now consider a linear program with two variables.
+
+ \smallskip
+\noindent
+{\bf Example 3.6.}
+\smallskip
+$\left\{\matrix{\hbox{Maximize}& f=x+9y\cr\hbox{subject to}&x\ge 0, \,\,y\ge 0,\cr\hfill& x-y\le 3,\cr\hfill&x-3y\ge -5,\cr\hfill&5x+7y\le 35}\right.$ 
+ \smallskip
+
+First we draw the feasible region, $F$, in the $(x, y)$-plane, where $F$ consists of all points $(x, y)$ satisfying the linear constraints. Since each constraint is a linear inequality, the set of all points satisfying this inequality describes a half-plane. Thus  the feasible region $F$ is the intersection of all these half-planes (Figure 3.7).
+%sketch of feasible region%
+% 4 Graphics of  Plot[{x-3,(x+5)/3,(-5x+35)/7},{x,0,7}]
+% 17 Graphics of 
+%poly={GrayLevel[0.8],Polygon[{{0,0},{0,5/3},{35/11,30/11},{14/3,5/3},{3,0}}]}
+%Graphics[Text[feasible  region,{2,1}]]
+% Show[%17,%4,%29,Axes->True,AxesLabel->{"x","y"}]
+% $$\psfig{figure=pic5,height=4cm}$$
+
+%$$\psfig{figure=Fig.3.7.eps,height=4cm}$$
+$$\psfig{figure=Ex.4.5a.eps,height=4cm}$$
+\centerline{{\bf Figure 3.7.} The feasible region $F$.}
+\medskip
+
+This  region $F$  is a convex  (see \S 12 of Chapter 4) polygon with five vertices (a pentagon). The  vertices with 
+$y$-coordinate equal to zero are  $(0, 0)$  and  $(3,0).$ The vertex that lies on the $y$-axis is $(0, \displaystyle{5\over 3}).$ The fourth vertex is $(\displaystyle{14\over 3},\displaystyle{5\over 3})$ which corresponds to the intersection of the straight lines $x-y=3$ and $5x + 7 y = 35$ and the highest vertex is the intersection of the lines  $x - 3 y =- 5$  and $5x + 7 y = 35$ and has coordinates $(x, y ) = (\displaystyle{35\over 11}, \displaystyle{30\over 11}).$
+ 
+In Figure 3.8, we   draw the graph of the function $y=-x/9$ in the $(x,y)$-plane.  This corresponds to the value $f=0$ of the objective function. 
+
+% lin=Graphics[Plot[{-x/9,305/99-x/9},{x,0,7}]] 
+% poly=Polygon[{{0,0},{0,5/3},{35/11,30/11},{14/3,5/3},{3,0}}}
+% grey=Graphics[{GrayLevel[0.8],poly}
+% text1=Graphics[Text[feasible  region,{2,1}]]
+% text2=Graphics[Text[f=0 ,{1,-1}]]
+% text3=Graphics[Text[f=305/11,  region,{3,4}]]
+% Show[lin,grey,text1,text2,text3,Axes->True,AxesLabel->{"x","y"}] 
+%  $$\psfig{figure=pic6,height=10cm}$$
+
+%$$\psfig{figure=Fig.3.8.eps,height=4cm}$$
+$$\psfig{figure=Ex.4.5b.eps,height=4cm}$$
+\centerline{{\bf Figure 3.8.}  The feasible region $F$  and levels for $f$.}
+ \bigskip
+The value of $f$ is constant along parallel straight lines passing through the feasible region; that is, $x+9y=f$ with $f\ge 0.$  Now it is clear that
+the minimal value of $f$ is 0, the value $f= 36$ is infeasible, and
+ the maximal value  of $f$ in $F$ is reached at the vertex  $(\displaystyle{35\over 11}, \displaystyle{30\over 11}).$ This optimal value is $f=\displaystyle{35\over 11}+ 9(\displaystyle{30\over 11}) = \displaystyle{305\over 11}.$    The objective function $f$  takes values between 0 and 305/11 on $F.$
+{\it Answer}:   $\max =\displaystyle{305\over 11} \approx 27.7$  at $x=\displaystyle{35\over 11},\, y = \displaystyle{30\over 11}.$\hfill  \blackbox
+\medskip
+In general, the feasible region for a linear program with two variables  $x,\, y$  is a polygonal region of one of the following shapes: the empty set; a point; an interval; a ray; a straight line, a bounded convex polygon, a half-plane, the whole plane; a strip, an angle, an unbounded polygonal region with  $s\ge 3$ sides. The set of optimal solutions is a subset of one of the listed shapes.
+\smallskip 
+When the feasible region is a (bounded nonempty) polygon, it is clear  that
+ we have at least one optimal solution for any linear  objective function. Moreover, a vertex (depending on the objective function) is an optimal solution
+(corner principle).
+
+Of course, the corner principle does not work for nonlinear problems.
+Here is an example.
+
+\smallskip
+\noindent
+{\bf Example 3.9.}
+ Minimize $g= x^2 - 3x + 2y^2 - 4y $  subject to the same constraints as  in Example 3.6. 
+
+We plot the levels of our nonlinear objective function 
+in the feasible region (Figure 3.10).
+$$\psfig{figure=Fig.3.10.eps,height=4cm}$$
+\centerline{{\bf Figure 3.10.}  The feasible region $F$  and levels for $g$ in Example 3.9}
+
+\medskip
+The figure shows clearly that the optimal solution is inside, not at the boundary
+of $F.$ So we can ignore the constraints. To minimize $g$ without constraints, we can use derivatives or do a simple algebraic transformation:
+$g = (x-3/2)^2+2(y-1)^2 -9/4-2,$ hence $\min = -4.25$ at $x=1.5, y= 1.$
+It will not hurt if we double check directly that
+this solution is feasible. \hfill \blackbox
+
+Another way to obtain a nonlinear problem from Example 3.6 is to add nonlinear constraints.
+\smallskip
+\noindent
+{\bf Example 3.11.} {\it An integer program}
+
+\noindent
+ Solve the linear problem  in Example 3.6 with the additional condition that both $x$ and $y$ are integers. 
+
+
+Again we can draw a figure (Figure 3.12):
+\vskip20pt
+\hskip160pt $f=27.72$
+\vskip45pt
+\hskip170pt $f=13.5$
+\vskip-80pt
+$$\psfig{figure=Fig.3.12.eps,height=4cm}$$
+\centerline{{\bf Figure 3.12.}  The feasible points and levels for $f$ in Example 3.11}
+\medskip
+
+It is clear that the feasible region  (the integer points in $F$) consists of
+13 points with possible exceptions of two points,
+$(x,y) = (1,2), (4,1),$ which apparently  are    on the boundary. Checking the constraint $x-y \le 3$ for  $x=4, y=1$ and  $x-3y \ge -5$ for $x=1, y=2$
+confirms the figure. We can see from Figure 3.12 that the optimal solution is $x=4, y=2,$  so $\max =4 + 9 \cdot 2 = 22.$ The additional condition
+reduced the maximum from  $305/11 \approx$ 27.7    to 22.  
+
+In general, {\it integer programming} is concerned with linear programs
+where some or all variables are required to be integers.  This additional
+condition usually makes solving the problem much more difficult. However, this is not the case with this example. \hfill
+\blackbox
+
+Next we consider another modification of Example 3.6 with  the objective function changed and a nonlinear constraint added.
+
+ \smallskip
+\noindent
+{\bf Example 3.13.}
+\smallskip
+$\left\{\matrix{\hbox{Maximize}\  h=x^2 - y^2\cr
+\hbox{subject to} \ x\ge 0, \,\,y\ge 0, \ y \ {\rm an \ integer}\cr
+  x-y\le 3,  x-3y\ge -5, 5x+7y\le 35.}\right.$ 
+ \filbreak
+Now the feasibly region consists of three horizontal line segments and 
+levels of the nonlinear objective function $h$ are disconnected (Figure 3.14).
+
+$$\psfig{figure=Fig.3.14.eps,height=4cm}$$
+\centerline{{\bf Figure 3.14.}  The feasible lines and levels for $h$ in Example 3.13.}
+\medskip
+
+The figure shows that  the optimal solutions are restricted to the following two points: the  right ends of the upper and middle  intervals.
+These two points are $x=4.25, y=2$ and $x=4, y=1.$ The values of $h$ at these points are
+14.0625 and 15. So the max= 15 at  $x=4, y=1.$ \hfill
+\blackbox
+ 
+In the next example we are required to solve a family of linear programs depending on two parameters.
+
+ \smallskip
+\noindent
+{\bf Example 3.15.}
+
+\noindent
+Maximize $x+y$ subject to $ 0\le x \le a, 0 \le y \le b,$
+where $a,b$ are given numbers.
+
+
+It is clear that the feasible region in this problem is
+
+a rectangle when $a, b > 0,$
+
+a line segment when $a=0$ and $b> 0$ or $b=0$ and $a > 0,$
+
+a point when  $a=b=0,$
+
+empty when $a < 0$ or $b < 0.$
+
+\noindent
+So the answer is
+
+$\max= a+b $ at  $x=a, y = $b when $a,b \ge 0,$
+
+the program is infeasible  otherwise. 
+
+\noindent
+The problem can be solved without pictures, but  a picture on paper or in your mind may help. \hfill \blackbox
+
+For a linear program with many variables  we can imagine the feasible region and the set of optimal solutions as {\it convex} sets in a high-dimensional space. We will make this   more precise later,  after we  define what a convex set is (see \S 12 of Chapter 4).
+
+ 
+
+   A linear constraint $c_1x_1 +\cdots + c_nx_n  = a$   gives a $hyperplane$ (when not all $c_i = 0$) or the whole space (when it is of the form $0 = 0$), or the empty set (when all $c_i = 0,$ but $a\ne 0$).  A linear constraint $c_1x_1 +\cdots + c_nx_n\le a$ gives either a {\it half-space} (when not all $c_i  = 0$), or the whole space (when all $c_i  = 0$ and  $a\ge 0$), or the empty set (when all $c_i  = 0$ but $a < 0$). 
+
+With computers,  we can  use 3-D (three-dimensional)  graphics more efficiently than with paper.
+Paper is not a good media for working with high-dimensional pictures, but our imagination
+is. 
+
+ 
+ 
+\bigskip
+
+{\centerline {\twelvebf Exercises }}
+  
+\parindent=0pt
+\smallskip
+
+{\bf 1--3.}
+Try your hand at these exercises involving the digits $a_i$ of your Social Security Number $a_1\,a_2\,a_3\,\,\,a_4\,a_5\,\,\,a_6\,a_7\,a_8\,a_9.$ Solve the following problems:
+
+\smallskip
+ \noindent
+{\bf  1.}\quad  
+$\left\{\matrix{\hbox{Maximize}& (a_1 - a_2)x\cr\hbox{subject to}&(a_3 + a_4)x\le a_5,\cr\hfill& (a_6 + a_7)x\ge -a_8,\cr\hfill&(a_9 + 2)x\le 10.}\right.$
+
+\medskip
+  
+{\bf 2.} \quad  
+$\left\{\matrix{\hbox{Minimize}& f=a_1\,x - (a_1+a_2)\,y\cr\hbox{subject to}&
+|(9 - a_3)x + a_4y|\le 10+a_4,\cr\hfill& |a_5x  + (1 + a_6)y |\le 8,\cr
+\hfill&|x + y |\le a_7   + a_9+1.}\right.$
+
+\medskip
+ 
+{\bf 3.}  \quad  
+$\left\{\matrix{\hbox{Minimize}& f=a_1\,x + a_2\,y\cr\hbox{subject to}&|(9 + a_3)x + a_4y|\le 10,\cr\hfill& |a_5x  + (9 + a_6)y |\le 10,\cr\hfill&|x + y |\le a_7 + a_8 + a_9.}\right.$ 
+\hfill 
+\blackbox
+
+
+ 
+\medskip
+ 
+{\bf 4.} \quad  
+$\left\{\matrix{\hbox{Maximize (over}\, x) &bx\cr\hbox{subject to}&|2 x + 4|\le 10,\cr\hfill&|x + 3|\le  5.}\right.$  
+\smallskip
+ where:
+
+$(i)$\quad $b= 7$
+\smallskip
+ 
+
+$(ii)$\quad $b = -9$
+\smallskip
+ 
+
+$(iii)$\quad $b$  is any given number.
+ 
+ \medskip
+  
+{\bf 5.}\quad  
+$\left\{\matrix{\hbox{Minimize}& f=x + 8y\cr\hbox{subject to}&| x |\le 9,\cr\hfill& |y |\le 9,\cr\hfill&| x + y |\le 9.}\right.$
+ 
+ \smallskip
+  
+{\bf 6.} Minimize $x/y$ subject to  $x \ge y.$
+
+ 
+ \medskip
+  
+{\bf \ 7.} \quad  
+$\left\{\matrix{\hbox{Minimize}& f=x\cdot y\cr\hbox{subject to}&| x | + |y |\le 1.}\right.$
+ 
+\medskip
+ 
+{\bf \ 8.} \quad  
+$\left\{\matrix{\hbox{Maximize}&w=x + y + z\cr\hbox{subject to}&| x |\le 1,\cr\hfill& |y |\le 1,\cr\hfill&|z|\le 1,\cr\hfill&x + 2y + 3z = 6.}\right.$ 
+ 
+ 
+ \bigskip
+  
+{\bf\ 9.} Maximize $\displaystyle{{1}\over {1 + x^2+y^4}}.$
+ 
+ 
+ \bigskip
+  
+{\bf 10.} Solve for $b$ the linear equation $b x = c,$ where $x$ and $c$ are given numbers.
+
+  \bigskip
+ 
+{\bf 11.} \quad
+$\left\{\matrix{\hbox{Maximize}& f=x+9y\cr\hbox{subject to}&x\ge 0, \,\,y\ge 0,\cr\hfill& x-y\le 3,\cr\hfill&x-3y\ge -5,\cr\hfill&5x+7y\le 35,\cr \hfill&x\,\,\hbox{and}\,\, y\,\,\hbox{integers.}}\right.$
+ 
+  \bigskip
+ 
+  
+{\bf 12.}\ 
+Solve the diet problem involving three ingredients,  energy, vitamin B$_1$ (thiamin), and
+vitamin B$_2$ (riboflavin) and
+two foods,
+almonds (nuts; refuse: shells, 60\%) and  blueberries (raw; refuse: 2\%).
+ Here are contents per 100 g of edible portion (excluding refuse)
+and prices in dollars per pound (not per 100 g!).
+
+ \smallskip
+\centerline{\vbox{\offinterlineskip\halign{
+\strut#&\quad  #&\quad  #&\quad #&\quad   #&\quad 
+#\cr\noalign{\hrule\smallskip\smallskip}
+{\bf Food} \hfill & {\bf Energy}  in  kcal & {\bf B$_1$} in mg & {\bf B$_2$}   in  mg & {\bf Price}
+\cr\noalign{\smallskip\smallskip\hrule\smallskip}
+{\rm Almonds} \hfill & \hfill 578  \hfill & 0.24 & 0.81 & 2 \cr
+{\rm Blueberries}  \hfill &  \hfill  56  \hfill & 0.05 & 0.05 & 3 \cr
+{\rm RDA}  \hfill &  \hfill 2000  \hfill & 1.1 &  1.1 & & \cr
+\noalign{\smallskip\hrule}
+}}}
+
+ 
+ \bigskip
+  
+{\bf 13.} Maximize $x^3+y^3$ subject to $x+y \le 5.$
+
+ \bigskip
+  
+{\bf 14.} Maximize $|x| +y^2$ subject to $|x+y+2| + |x-y+3| \le 5.$
+
+ \bigskip
+  
+{\bf 15.} Maximize $x+2y+3z$ subject to $x,y,z \ge 0, x+y+z =1.$
+
+
+\end
+
+$$\matrix{  Food \hfill & Energy\ in\ kcal & B_1\ in\ mg & B_2 \ in\ mg & Price \cr
+{\rm Almonds} \hfill & 578 & 0.24 & 0.81 & 2 \cr
+{\rm Blueberries}  \hfill & 56 & 0.05 & 0.05 & 3 \cr
+{\rm RDA}  \hfill & 2000  & 1.1 &  1.1 & & }$$
+
+
+
+spell
+
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+
+
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+ 
+ 

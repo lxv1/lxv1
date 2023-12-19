@@ -1,0 +1,85 @@
+
+MR0314115 (47 #2667)  Vasershtein, L. N.
+Markov processes over denumerable products of spaces describing large system of automata. 
+Problems of Information Transmission 5 (1969), no. 3, 47–52; translated from Problemy Peredači Informacii 5 (1969), no. 3, 64--72 (Russian)   60J05 (94A35)
+
+is cited in  29 publications:
+
+<
+
+MR2996972 Prelim Ebner, Oliver; Convergence of refinement schemes on metric spaces. Proc. Amer. Math. Soc. 141 (2013), no. 2, 677–686.
+
+
+MR2928139 Pending Chow, Shui-Nee; Huang, Wen; Li, Yao; Zhou, Haomin Fokker-Planck equations for a free energy functional or Markov process on a graph. Arch. Ration. Mech. Anal. 203 (2012), no. 3, 969–1008. 35R02 (60H30 60J25)
+
+
+MR2854323 Reviewed Mileyko, Yuriy; Mukherjee, Sayan; Harer, John Probability measures on the space of persistence diagrams. Inverse Problems 27 (2011), no. 12, 124007, 22 pp. (Reviewer: Gutti J. Babu) 60B05 (60B99 62H11)
+
+
+MR2779833 Reviewed Abourashchi, N.; Veretennikov, A. Yu. On stochastic averaging and mixing. Theory Stoch. Process. 16 (2010), no. 1, 111–129. (Reviewer: Athanasios Yannacopoulos) 60H30 (37A25)
+
+
+
+
+MR2594441 Indexed Cohen-Steiner, David; Edelsbrunner, Herbert; Harer, John; Mileyko, Yuriy Lipschitz functions have
+Lp-stable persistence. Found. Comput. Math. 10 (2010), no. 2, 127–139. 54H99 (54C99 68U05 92-08 92B05 92D10)
+
+
+MR2574738 Reviewed Fang, Shizan; Shao, Jinghai; Sturm, Karl-Theodor Wasserstein space over the Wiener space. Probab. Theory Related Fields 146 (2010), no. 3-4, 535–565. (Reviewer: Hélène Airault) 60J45 (58B20 60H07)
+
+
+MR2574735 Reviewed Gabetta, Ester; Regazzini, Eugenio Central limit theorems for solutions of the Kac equation: speed of approach to equilibrium in weak metrics. Probab. Theory Related Fields 146 (2010), no. 3-4, 451–480. (Reviewer: Zhong Gen Su) 60F05 (82C40)
+
+
+MR2480619 Reviewed Lott, John; Villani, Cédric Ricci curvature for metric-measure spaces via optimal transport. Ann. of Math. (2) 169 (2009), no. 3, 903–991. (Reviewer: Alessio Figalli) 53C23 (49Q15)
+
+
+MR2476680 Reviewed Carrillo, José A.; Cordier, Stéphane; Toscani, Giuseppe Over-populated tails for conservative-in-the-mean inelastic Maxwell models. Discrete Contin. Dyn. Syst. 24 (2009), no. 1, 59–81. (Reviewer: Laurent Desvillettes) 82B40 (35B40 82C40)
+
+
+MR2461188 Reviewed Toom, André Law of large numbers for non-local functions on probabilistic cellular automata. J. Stat. Phys. 133 (2008), no. 5, 883–897. (Reviewer: Gerardo Sanz) 60F15 (37B15 68Q80)
+
+
+MR2433296 Reviewed de la Rue, T.; Fernández, R.; Sokal, A. D. How to clean a dirty floor: probabilistic potential theory and the Dobrushin uniqueness theorem. Markov Process. Related Fields 14 (2008), no. 1, 1–78. (Reviewer: Maria E. Caballero) 60J10 (15A48 60J45 82B20)
+
+
+MR2356041 Reviewed Rüschendorf, Ludger Monge-Kantorovich transportation problem and optimal couplings. Jahresber. Deutsch. Math.-Verein. 109 (2007), no. 3, 113–137. (Reviewer: Luigi De Pascale) 60B11 (49Q20 60-03 60E15 65K10)
+
+
+MR2251231 Reviewed van Breugel, Franck; Worrell, James Approximating and computing behavioural distances in probabilistic transition systems. Theoret. Comput. Sci. 360 (2006), no. 1-3, 373–385. (Reviewer: Andrea Maggiolo-Schettini) 68Q85 (28A33 68Q60)
+
+
+MR2237206 Reviewed Sturm, Karl-Theodor On the geometry of metric measure spaces. I. Acta Math. 196 (2006), no. 1, 65–131. (Reviewer: Juha Heinonen) 53C23
+
+
+MR2209130 Reviewed Carrillo, José A.; McCann, Robert J.; Villani, Cédric Contractions in the 2-Wasserstein length space and thermalization of granular media. Arch. Ration. Mech. Anal. 179 (2006), no. 2, 217–263. (Reviewer: Benoît P. Desjardins) 76M30 (35K57 58E50 76T25 82C40)
+
+
+MR2207064 Reviewed Bisin, Alberto; Horst, Ulrich; Özgür, Onur Rational expectations equilibria of economies with local interactions. J. Econom. Theory 127 (2006), no. 1, 74–116. (Reviewer: Susheng Wang) 91A10 (91A15 91B62)
+
+
+MR2120054 Reviewed van Breugel, Franck; Worrell, James A behavioural pseudometric for probabilistic transition systems. Theoret. Comput. Sci. 331 (2005), no. 1, 115–142. 68Q60 (03B45 28A33 54E70 60J05 68Q55)
+
+
+MR2108858 Reviewed Louis, Pierre-Yves Ergodicity of PCA: equivalence between spatial and temporal mixing conditions. Electron. Comm. Probab. 9 (2004), 119–131 (electronic). (Reviewer: Utkir Rozikov) 60G60 (37B15 37H99 60J10 60K35 68Q80 82C20 82C26)
+
+
+MR2107899 Reviewed Eizenberg, A.; Kifer, Y. Large deviations for probabilistic cellular automata. II. J. Statist. Phys. 117 (2004), no. 5-6, 845–889. (Reviewer: Vadim A. Kaĭmanovich) 60F10 (37A50 37B15 68Q80 82C99)
+
+
+MR2065028 Reviewed Toscani, Giuseppe Kinetic and hydrodynamic models of nearly elastic granular flows. Monatsh. Math. 142 (2004), no. 1-2, 179–192. 82C40 (76P05 76T25)
+
+
+>
+
+
+MR0298716 (45 #7765) Reviewed
+Dobrušin, R. L.
+Definition of a system of random variables by means of conditional distributions. (Russian. English summary)
+Teor. Verojatnost. i Primenen. 15 (1970), 469–497.
+60B05
+
+The author continues his earlier researches [Teor. Verojatnost. i Primenen. 13 (1968), 201–229; MR0231434 (37 #6989)] into the conditions for existence and uniqueness of a random field with a given system of conditional distributions. He now considers different conditions for the weak dependence of a random field. For the formulation of his results the author studies and makes use of an interesting metric (the Vaseršteĭn metric) in the space of all probability distributions on (X,B), where X is a metric space with metric ρ(x,y) and B is an algebra of Borel sets in X. Let P and Q be probability distributions on (X,B) and R(P,Q)=infEρ(ξ,η), where the infimum is taken over all ξ and η with values in X such that ξ has distribution P, and η has distribution Q. R(P,Q) is called the Vaseršteĭn distance.
+   {This article has appeared in English translation [Theor. Probability Appl. 15 (1970), 458–486].}
+Reviewed by M. I. Jadrenko
+

@@ -1,0 +1,287 @@
+% Started typing 3-1-05
+
+
+\magnification=\magstep1
+\input amstex
+\documentstyle{amsppt}
+%\leftheadtext{The Product of Partial Theta Function}
+\NoPageNumbers
+\NoBlackBoxes
+\def\pf{\hfill $\square$}
+\def\c{\cite}
+\def\fr{\frac}
+
+\topmatter
+
+\title
+{The Product of Partial Theta Function}
+\endtitle
+
+\author 
+by \\
+\\  \\
+George E. Andrews
+\footnote{Partially supported by National Science Foundation Grant DMS 0200047 \ \ \ \ \ \ \ \ \ \ \ }
+\endauthor
+
+
+\abstract
+In this paper, we prove a new identity for the product of two partial theta functions.  An immediate corollary is Warnaar's generalization of the Jacobi triple product identity.
+\endabstract
+
+\endtopmatter
+\hsize=5in
+\vsize=6.9in
+\document
+
+%\baselineskip 20pt
+
+\subhead 1.  \ Introduction  \endsubhead
+
+In [5; eq.(1.7)], O. Warnaar proved the following beautiful generalization of Jacobi's triple product identity:
+$$
+1+ \sum^{\infty}_{n=1} (-1)^n q^{n(n-1)/2} (a^n+b^n) = (q)_{\infty}(a)_{\infty}(b)_{\infty} \sum^{\infty}_{n=0} \frac{\left(\frac{ab}q\right)_{2n} q^n}{(q)_n (a)_n (b)_n (ab)_n},
+\tag{1.1}
+$$
+where
+$$
+(a;q)_n = (a)_n = (1-a)(1-aq)\cdots (1-aq^{n-1}).
+\tag{1.2}
+$$
+The celebrated Jacobi triple product identity [3; p. 12, eq. (1.6.1)]
+$$
+\sum^{\infty}_{n= - \infty} (-1)^n q^{n(n-1)/2} b^n = (q)_{\infty}(q/b)_{\infty}(b)_{\infty} 
+\tag{1.3}
+$$
+follows immediately from (1.1) upon setting $a=q/b$ and noting that the sum on the right-hand side of (1.1) reduces to $1$ in this instance.
+
+Sums of the form
+$$
+\sum^{\infty}_{n=0} (-1)^n  q^{n(n-1)/2} b^n
+\tag{1.4}
+$$
+are called partial theta functions owing to the fact that the sum in (1.3) is usually referred to as a complete theta function or just a theta function.  Partial theta functions appear often in Ramanujan's Lost Notebook [4].  An extensive explication of Ramanujan's discoveries was given in [2].  Warnaar [5] greatly extended the work in [2] and proved (1.1) as a central formula in his paper.
+
+Our object here is to prove the following theorem for the product of partial theta functions.
+
+\proclaim
+{Theorem 1} 
+$$
+(q)_{\infty}(a)_{\infty}(b)_{\infty} \sum^{\infty}_{n=0} \frac{\left(abq^{n-1}\right)_n q^n}{(q)_n (a)_n (b)_n} = \left(\sum^{\infty}_{n=0} (-1)^n a^n q^{n(n-1)/2}\right) \left(\sum^{\infty}_{n=0} (-1)^n b^n q^{n(n-1)/2}\right) 
+$$
+\endproclaim
+
+Section 2 will be devoted to the proof of Theorem 1.  In Section 3, we deduce Warnaar's theorem (1.1) from Theorem 1, and in the conclusion we discuss the relationship of Theorem 1 to other theorems in $q$-hypergeometric series.
+
+\subhead
+2. \ Proof of Theorem 1
+\endsubhead
+
+Let
+$$
+L (a,b): = (q)_{\infty}(a)_{\infty}(b)_{\infty} \sum^{\infty}_{n=0} \frac{(abq^{n-1})_n q^n}{(q)_n (a)_n (b)_n} = \sum_{N,M\geqq 0} C_{N,M} a^N b^M.
+$$
+
+Our goal is to obtain a simple expression for $C_{N,M}$.  We begin by invoking the $q$-binomial theorem [1; p. 36, eq. (3.3.6)] and Euler's identity [1; p. 19, eq. (2.2.6)]:
+$$
+\gathered
+L (a,b) = (q)_{\infty} \sum^{\infty}_{n=0} \frac{(abq^{n-1})_n q^n}{(q)_n} (aq^n)_{\infty} (bq^n)_{\infty} \\
+= (q)_{\infty} \sum^{\infty}_{n=0} \sum^n_{i=0} \frac{(-1)^i a^i b^i q^{(n-1)i + \binom i2 + n}}{(q)_i (q)_{n-i}} \\
+\times \sum^{\infty}_{j=0} \frac{(-1)^j a^j q^{\binom j2 + nj}}{(q)_j}
+\sum^{\infty}_{k=0} \frac{(-1)^k  b^k q^{\binom k2 + nk}}{(q)_k}
+\endgathered
+$$
+To pick out the coefficient of $a^N b^M$ we take $j=N-i$ and $k=M-i$ in this last expression.  Hence
+$$
+%\gathered
+\align
+C_{N,M} & = \ (q)_{\infty} \sum^{\infty}_{n=0} \sum^n_{i=0} \frac{(-1)^i q^{(n-1) i + \binom i2 + n}}{(q)_i (q)_{n-i}} \\
+& \quad \times \  \frac{(-1)^{N-i} q^{\binom{N-i}2 + n (N-i)}}{(q)_{N-i}} 
+\frac{(-1)^{M-i} q^{\binom{M-i}2 + n (M-i)}}{(q)_{M-i}} \\
+ & = \ (q)_{\infty} \sum^{\infty}_{i=0} \sum^{\infty}_{n=0} \frac{(-1)^{i+N+M} 
+q^{(n+i-1) i + \binom i2 + n+i}}{(q)_i (q)_n} \\
+& \quad \times \  \frac{q^{\binom{N-i}2 + (n+i) (N-i)}}{(q)_{N-i}} 
+\frac{(-1) q^{\binom{M-i}2 + (n+i) (M-i)}}{(q)_{M-i}} \\
+& \text{(where we have interchanged the order of summation and replaced $n$ by $n+i$)} \\
+& = \ (q)_{\infty} \sum^{\min (M,N)}_{i=0} \frac{(-1)^{i+N+M} q^{3 \binom i2 + i + \binom{N-i}2 + i (N-i) + \binom{M-i}2 +i (M-i)}}{(q)_i (q)_{N-i} (q)_{M-i}} \\
+& \quad \times \sum_{n\geqq 0} \frac{q^{n (N+M-i+1)}}{(q)_n} \\ 
+& = \ \sum^{\min (M,N)}_{i=0} \frac{(q)_{N+M-i} (-1)^{i+N+M}}{(q)_i (q)_{N-i} (q)_{M-i}} q^{3 \binom i2 + i + \binom{N-i}2 + \binom{M-i}2 +i (N+M-2i)}\\
+&\hskip 2in
+ \text{ (by[1; p. 19, eq. (2.2.5)])} \\
+& = \ \frac{(-1)^{N+M} (q)_{N+M}}{(q)_N (q)_M} q^{\binom N2 + \binom M2}
+\sum^{\min (M, N)}_{i\geq 0}\frac{(q^{-N})_i (q^{-M})_i}{(q)_i (q^{-N-M})_i} q^i \\
+& = \ \frac{(-1)^{N+M} (q)_{N+M}}{(q)_N (q)_M} q^{\binom N2 + \binom M2}
+\frac{(q^{-N})_N (q^{-MN})}{(q^{-N-M})_N}  \\ 
+&\hskip 2in
+ \text{ (by [3; p. 11, eq. (1.5.3)])} \\
+& = \ (-1)^{N+M} q^{\binom N2 + \binom M2}
+\endalign
+$$
+Hence
+$$
+\gather
+L (a,b) = \sum_{M, N \geqq 0} (-1)^{N+M} q^{\binom N2 + \binom M2} a^N b^M \\
+= \left(\sum^{\infty}_{M=0} (-1)^M q^{\binom M2} b^M \right) \left(\sum^{\infty}_{N=0} (-1)^N q^{\binom N2}  a^N \right), 
+\endgather
+$$
+which proves Theorem 1. 
+\pf
+
+\subhead
+3. \ Warnaar's theorem
+\endsubhead
+
+
+\proclaim
+{Theorem 2}  Identity (1.1) is valid.
+\endproclaim
+
+$$
+\align
+(q)_{\infty} (a)_{\infty} (b)_{\infty} &\sum^{\infty}_{n=0} \frac{\left(\frac{ab}q\right)_{2n} q^n}{(q)_n (a)_n (b)_n (ab)_n} \\
+&= \ (q)_{\infty} (a)_{\infty} (b)_{\infty} \sum^{\infty}_{n=0} \frac{\left(1- \frac{ab}q\right) (abq^n)_{n-1} q^n}{(q)_n (a)_n (b)_n}\\
+&= \  (q)_{\infty} (a)_{\infty} (b)_{\infty} \sum^{\infty}_{n=0} 
+\frac{\left( (1- abq^{n-1}) - \frac{ab}q (1- q^n)\right)(abq^n)_{n-1} q^n}{(q)_n (a)_n (b)_n}\\
+&= \ (q)_{\infty} (a)_{\infty} (b)_{\infty} \sum^{\infty}_{n=0} \frac{(abq^{n-1})_n q^n}{(q)_n (a)_n (b)_n}\\
+& \quad - \ ab (q)_{\infty} (a)_{\infty} (b)_{\infty} \sum^{\infty}_{n=1} \frac{(abq^n)_{n-1} q^{n-1}}{(q)_n (a)_n (b)_n}\\
+&= \ L (a,b) - ab (q)_{\infty} (aq)_{\infty} (bq)_{\infty} \sum^{\infty}_{n=0} \frac{(abq ^{n+1})_n q^n}{(q)_n (aq)_n (bq)_n}\\
+&= \ L (a,b) - ab L (aq, bq)\\
+&= \ \left(\sum^{\infty}_{n=0} (-1)^n q^{\binom n2} a^n \right)
+\left(\sum^{\infty}_{n=0} (-1)^n q^{\binom n2} b^n \right) \\
+& \quad  - \ \left(\sum^{\infty}_{n=0} (-1)^n q^{\binom {n+1}2} a^{n+1} \right)
+\left(\sum^{\infty}_{n=0} (-1)^n q^{\binom {n+1}2} b^{n+1} \right) \\
+&\hskip 3in \text{ (by Th. 1)} \\
+&= \ \left(\sum^{\infty}_{n=0} (-1)^n q^{\binom n2} a^n \right)
+\left(\sum^{\infty}_{n=0} (-1)^n q^{\binom n2} b^n \right) \\
+& \quad - \ \left(\sum^{\infty}_{n=1} (-1)^n q^{\binom n2} a^n \right)
+\left(\sum^{\infty}_{n=1} (-1)^n q^{\binom n2} b^n \right) \\
+&= \ 1 + \sum^{\infty}_{n=1} (-1)^n q^{\binom n2} a^n + \sum^{\infty}_{n=1} (-1)^n q^{\binom n2} b^n,
+\endalign
+$$
+as desired.
+\pf
+
+\subhead
+4. \ Conclusion
+\endsubhead
+
+There are numerous corollaries that follow from Theorem 1.  Most important is Warnaar's theorem (Theorem 2 of section 3).  As Warnaar has shown in \cite{5}, there are extensive implications of Theorem 2.
+
+In light of the fact that (1.3) may be rewritten as
+$$
+(q)_{\infty} \left(\frac{q}b \right)_{\infty} (b)_{\infty} = \sum^{\infty}_{n=0}(-1)^n q^{\binom n2} b^n - b^{-1} q  \sum^{\infty}_{n=0} (-1)^n q^{\binom n2} \left(\frac{q^2}b\right)^n,
+\tag{4.1}
+$$
+we see that 
+$$
+\gather
+(q)^2_{\infty} (q/b)_{\infty} (b)_{\infty} (q/a)_{\infty} (a)_{\infty} \\
+ = \ \left( \sum^{\infty}_{n=0}(-1)^n q^{\binom n2} a^n - a^{-1} q  \sum^{\infty}_{n=0} (-1)^n q^{\binom n2} \left(\frac{q^2}a\right)^n \right) \\
+\qquad  \times \ \left( \sum^{\infty}_{n=0}(-1)^n q^{\binom n2} b^n - b^{-1} q  \sum^{\infty}_{n=0} (-1)^n q^{\binom n2} \left(\frac{q^2}b\right)^n \right) \\
+ = \ L (a,b) - a^{-1} q L \left(\frac{q^2}a, b\right) - b^{-1} q L \left(a, \frac{q^2}b\right) + \frac{q^2}{ab} L \left(\frac{q^2}a, \frac{q^2}b \right).
+\tag{4.2}
+\endgather
+$$
+Noting that, in standard $q$-hypergeometric series notation \cite{3; p. 4, eq. (1.2.22)}
+$$
+L (a,b) = (q)_{\infty}(a)_{\infty}(b)_{\infty}\  \times \  _4\phi_3 \pmatrix \left(\frac{ab}q\right)^{\frac12}, & - \left(\frac{ab}q\right)^{\frac12}, &- (ab)^{\frac12}, & - (ab)^{\frac12}; q, q \\
+& a, & b, &\frac{ab}q \endpmatrix,
+$$
+we see that we have an identity between four $_4\phi_3$'s and the infinite product on the left-hand side of (4.2).  This result can be easily generalized to $2^n \  _4\phi_3$'s.
+
+Also, one can make use of Gauss's formula \cite{1; p. 23, eq. (2.2.12)}
+$$
+\sum^{\infty}_{n=0} q^{n(n+1)/2} = \frac{(q^2; q^2)_{\infty}}{(q;q^2)_{\infty}}
+$$
+to deduce from Theorem 1 with $b = - q$, that 
+$$
+\gather
+\sum^{\infty}_{n=0} \frac{(-a q^n; q)_n q^n}{(q^2;q^2)_n (a)_n} = \frac{(-q; q)_{\infty}}{(a)_{\infty}} \sum^{\infty}_{n=0}(-1)^n q^{\binom n2} a^n \\
+\hskip 2in \qquad \text{(we have also used \cite{1; p. 5, eq. (1.2.5)})}
+\endgather
+$$
+
+Or, we can use a further instance of Jacobi's identity \cite{1; p.23, eq. (2.2.12)}
+$$
+1 + 2 \sum^{\infty}_{n=0} (-1)^n q^{n^2} = \frac{(q)_{\infty}}{(-q; q)_{\infty}}
+$$
+to deduce that 
+$$
+\sum^{\infty}_{n=0} \frac{(b q^{2n-1}; q^2)_n q^{2n}}{(q)_{2n} (b;q^2)_n}=  
+\frac1{2(b; q^2)_{\infty}} \left(\frac1{(-q;q)_{\infty}} + \frac1{(q)_{\infty}}\right) \sum^{\infty}_{n=0}(-1)^n q^{n^2- n} b^n.
+$$
+
+Finally we point out that Theorem 1 may also be deduced from Theorem 2. To achieve this one merely iterates the functional equation
+$$
+L (a,b) - ab L (aq, bq) = 1 +  \sum^{\infty}_{n=1}(-1)^n q^{\binom n2} (a^n +  b^n),
+$$
+which we see from the proof of Theorem 2 is an assertion equivalent to Theorem 2.
+
+
+
+\Refs
+
+\ref
+  \no 1
+  \by G.E. Andrews
+  \paperinfo  Theory of Partitions, Encycl. of Math and Applications, Vol. 2, Addison-Wesley, Reading,  1976. (Reprinted: Cambridge University Press, Cambridge, 1998)
+\endref
+
+\ref
+  \no 2
+  \by G.E. Andrews
+  \paperinfo Ramanujan's ``lost'' notebook. I. partial theta functions, Adv. Math., {\bf 41}(1981), 137--172
+\endref
+
+\ref
+  \no 3
+  \by G. Gasper and M. Rahman, 
+  \paperinfo  Basic Hypergeometric Series, Encycl. of Math. and Applications, Vol. 35, Cambridge University Press, Cambridge, 1990
+\endref
+
+\ref
+  \no 4
+  \by S. Ramanujan
+  \paperinfo The Lost Notebook and Other Unpublished Papers, Intro. by G.E. Andrews, Narosa, New Delhi, 1988
+\endref
+
+\ref
+  \no 5
+  \by O. Warnaar
+  \paper Partial theta functions. I. beyond the lost notebook
+  \jour  Proc. London Math. Soc. (3)
+  \vol	87
+  \yr  2003
+  \pages  363--395
+\endref
+
+
+\endRefs
+
+\vskip .3in
+
+\baselineskip 12pt
+\noindent The Pennsylvania State University   \newline
+\noindent University Park, PA  16802  
+
+\vskip .1in
+
+\noindent email address: \ andrews\@math.psu.edu
+
+
+\enddocument
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

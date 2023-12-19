@@ -1,0 +1,12 @@
+Polynomial parametrization  
+for the solutions of Diophantine equations 
+and arithmetic groups
+
+ 
+
+Abstract. We solve an old open  problem of Skolem and Beurkers
+giving a polynomial  parametrization
+of the group of integer two by two matrices with determinant one.
+This implies that, for many Diophantine equations,
+the integer solutions  and the primitive solutions 
+admit polynomial parametrizations

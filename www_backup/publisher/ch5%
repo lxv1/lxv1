@@ -1,0 +1,1739 @@
+\magnification=1100
+\hsize=4.5 true in
+\vsize=7.5  true in
+
+\def\bull{\vrule height .9ex width .9ex depth -.05ex }
+\def\blackbox{\vrule height 1.2ex width 1.0ex depth -.2ex}
+\input psfig
+
+\font\ch=cmbx10 at 18truept
+\font\chtitle=cmbx10 at 21truept
+\font\fourteenbf=cmbx10 scaled\magstep2
+\font\twelvebf=cmbx10 scaled\magstep1
+\font\ten=cmr10  
+\font\nine=cmr9
+%\magnification=\magstep1
+\catcode`\@=11
+\def\m@th{\mathsurround=0pt }
+
+\def\bmatrix#1{\left[\matrix{#1}\right]} %matrix with brackets []
+
+
+%this is the code to write matrices 
+
+\def\matriz#1{\,\vcenter{\normabaselines\m@th
+\ialign{\hfil$##$\hfil&&\quad\hfil$##$\hfil\crcr
+\mathstrut\crcr\noalign{\kern-\baselineskip}
+#1\crcr\mathstrut\crcr\noalign{\kern-\baselineskip}}}\,}
+
+%this is the code to write tableaux with square brackets 
+ 
+\newdimen\p@renwd\setbox0=\hbox{\tenex B}\p@renwd=\wd0 
+\def\rowtab#1{\begingroup \m@th\setbox0=\vbox{\def\cr{\crcr\noalign{\kern2pt\global\let\cr=\endline}}
+\ialign{$##$\hfil\kern2pt\kern\p@renwd&\thinspace\hfil$##$\hfil
+&&\quad\hfil$##$\hfil\crcr
+\omit\strut\hfil\crcr\noalign{\kern-\baselineskip}
+#1\crcr\omit\strut\cr}}
+\setbox2=\vbox{\unvcopy0 \global\setbox1=\lastbox}
+\setbox2=\hbox{\unhbox1 \unskip \global\setbox1=\lastbox}
+\setbox2=\hbox{$\kern\wd1\kern-\p@renwd \left [ \kern-\wd1
+\global\setbox1=\vbox{\box1\kern2pt}
+\vcenter{\kern-\ht1 \unvbox0 \kern-\baselineskip} \,\right]$}
+\;\vbox{\kern\ht1\box2}\endgroup}
+
+
+\pageno=133
+
+\headline={\ifnum\pageno=133  \else\ifodd\pageno\rightheadline\else \leftheadline\fi\fi}
+\def\title{\hfil{\fourteenbf Chapter V  Duality}\hfil}
+\def\rightheadline{\tenrm\hfil{\it \S 13. Dual Problems}\quad {\bf\folio}}
+\def\leftheadline{\tenrm{\bf\folio}\quad{\it Chapter 5: Duality} \hfil}
+\voffset=2\baselineskip
+\
+ \bigskip
+\bigskip
+\bigskip
+\noindent
+\noindent  {\ch  Chapter} {\chtitle 5}
+\bigskip
+\bigskip
+\noindent
+{\chtitle Duality }
+ \medskip
+\hrule
+\bigskip
+\bigskip
+
+\noindent
+{\twelvebf \S 13. Dual Problems}
+\smallskip
+\noindent
+Let us recall the canonical form of a linear programming problem:
+
+$$cx+ d \rightarrow \hbox{min}, Ax\le b, x \ge 0.$$ 
+
+Here $x$ is a column of variables (unknowns) and the data consist of a
+row $c$, a number $d$, a matrix A, and a column $b.$ In more detail, we want to
+\medskip
+
+  minimize the  objective function
+$$f(x)= c_1x_1 + c_2x_2 + \cdots + c_mx_m$$
+
+subject to the linear constraints
+
+$$a_{11}x_1 + a_{12}x_2 +\cdots + a_{1m}x_m \le b_1$$
+$$a_{21}x_1 + a_{22}x_2 + \cdots + a_{2m}x_m \le b_2$$
+$$\ldots$$
+$$ a_{n1}x_1 + a_{n2}x_2 +\cdots + a_{nm}x_m \le b_n$$
+
+and the nonnegativity constraints
+$$x_i \ge 0,\,\, i=1,2,\,\dots\,, m.$$
+\medskip
+
+The first $n$  linear  constraints can be written as linear equalities  by introducing the slack variables, $u_j \ge 0,$ where $j=1,2, \ldots, n$:
+$$u_j = b_j - a_{j1}x_1 - a_{j2}x_2 - \ldots - a_{jm}x_m, \,\,j=1,\,\ldots\,,n$$
+(i.e., $u=b-A x \ge 0$ in matrix form).
+\medskip
+Thus, in matrix notation, we can write the linear programming problem as follows:
+$$\displaylines{\hbox{minimize}\,\,cx\cr
+\hbox{subject to}\,\, b - Ax = u\cr    x \ge 0,\,\, u\ge 0}$$  
+or, even shorter,
+
+$$cx \to \min, b-Ax =u \ge 0, x \ge 0,$$
+ where $c$ is the $1\times m$ row matrix $c=[c_1\,\, c_2\,\,\ldots\,\, c_m], \,\,x$ is the $m\times 1$ column matrix  
+\smallskip
+$x=  \left[ \matrix{x_1\cr x_2\cr\vdots\cr x_m\cr}\right],$
+\smallskip
+\noindent $b$ is the $n\times 1$ column matrix
+\smallskip
+$b= \left[ \matrix{b_1\cr b_2\cr\vdots\cr b_n\cr}\right],$
+\smallskip
+\noindent $u$ is the $n\times 1$ column matrix
+\smallskip
+$u= \left[ \matrix{u_1\cr u_2\cr\vdots\cr u_n\cr}\right],$
+\smallskip
+\noindent and $A$ is the $n\times m$ matrix
+\smallskip 
+$A= \left[ \matrix{a_{11}& a_{12}&\cdots& a_{1m}\cr a_{21}& a_{22}&\cdots&a_{2m}\cr \vdots&\vdots&\ddots&\vdots\cr a_{n1}& a_{n2}&\cdots& a_{nm}\cr}\right].$
+\medskip 
+\nopagenumbers  
+
+We can write our linear program   in standard row 
+tableau:
+
+$$\rowtab{&x^T&1\cr\omit&A&b\cr\omit
+&c&d\cr}\quad\matrix{=u\hfill&\omit&\omit\cr=f\rightarrow\hbox{min,}&x \ge 0, &u \ge 0.\cr}$$
+\filbreak
+
+We also can write the same problem in a column tableau:
+% from Mata 
+%  $${{\rowtab{&\omit&\omit\cr   -x&\hfill&-A^T&\hfill&c^T&\hfill\cr \ 
+%  1&\hfill&b^T&\hfill&-d&\hfill\cr}\atop\matrix{ \qquad \| &
+%  \quad\,\| }}\atop\matrix{\qquad\qquad\qquad\qquad\qquad u^T& -f \rightarrow }  %  \hbox{max,}\quad x\ge 0,\,\,u\ge 0}$$	
+
+ 
+$$ 
+\matrix{-x \cr \ 1}   \left[ \matrix{-A^T & c^T \cr b^T & -d} \right] 
+\quad x\ge 0,\,\,u\ge 0 $$   
+\vskip-6pt
+$$   \matrix{    ^\| & ^\| &  \cr      u^T &  -f & \rightarrow {\rm max}}      $$               
+
+We call such a column tableau $standard.$ Notice that the matrix
+
+$$\left[ \matrix{-A^T & c^T \cr b^T & -d} \right] $$
+
+\noindent is an arbitrary given matrix, and all variables are distinct.
+We replaced $x$ by $-x$ to keep the same pivot rule (8.6):
+
+$$ 
+\matrix{-x \cr -y}   \left[ \matrix{\alpha^* & \beta  \cr \gamma & \delta} \right]  
+\quad \mapsto \quad
+\matrix{-u \cr -y}   \left[ \matrix{1/\alpha &-\beta/\alpha  \cr\gamma/\alpha & \delta - \beta \gamma/\alpha} \right] $$
+\vskip -10pt  
+ $$ \hskip 0.1in  \matrix{    _\| && _\|    \cr      u &&  v  }  \hskip 0.9in
+ \matrix{    _\|&&& & _\|    \cr      x &&&&  v  }     $$ 
+
+So  we pivot  standard  column tableaux using the same pivoting rule
+ we used for standard  row tableaux. A pivot entry is always a nonzero entry of the matrix. We do not choose it in the last row or the last
+column to keep our tableaux standard.  We change signs of the variables that are moved. This is the only difference from (8.6). There is no difference in 
+the matrix, only at the margins.    
+
+
+\smallskip
+\noindent
+{\bf Definition.}
+The $basic \ solution$ associated with the standard column  tableau
+\vskip-30pt
+$$
+\matrix{-y \cr \ 1}  \left[ \matrix{\  \cr \ } \right. 
+\matrix{ & \cr & \cr A & b \cr c & d \cr   _\|  &  _\downarrow \cr v & \max}
+ \left. \matrix{\  \cr \ } \right] \quad y\ge 0, v \ge 0
+$$                    
+   is $y = 0,\,\, v = c.$ \hfill  \blackbox
+
+This basic solution  is feasible if and only if  $c \ge 0.$  In this case the column tableau is called  (column) {\it feasible.} The corresponding value of the objective function is $d.$
+
+
+%{\nine TEST} TEST {\ten TEST}
+
+
+
+
+\smallskip
+
+\noindent
+{\bf Definition.}
+A  standard  column tableau is called {\it optimal} if  $b\ge 0$ and  $c\ge 0;$ that is, if it is both, row and column feasible. \hfill \blackbox
+
+ In this case the basic solution $y = 0,\,\, v = c$ is optimal, and $\max=d.$
+ 
+
+ \filbreak
+\noindent
+{\bf Example 13.1.}   Let us write the diet problem (Example 2.1) in a standard column tableau:
+
+\noindent
+${{\rowtab{&\omit&\omit&\hfill&\omit&\hfill&\omit&\hfill&\omit\hfill&\omit\hfill\cr 
+-a&\hfill&\hfill-0.3&\hfill&\hfill&-73&\hfill&\hfill&\  \ -9.6\hfill&&\hfill& 10 \hfill&\hfill\cr -b&\hfill&\hfill-1.2&\hfill&\hfill&-96&\hfill&\hfill&-7&\hfill&\hfill&15\hfill&\hfill\cr
+-c&\hfill&\hfill-0.7&\hfill&\hfill&-20253&\hfill&\hfill&-19&\hfill&\hfill&5\hfill&\hfill\cr
+-d&\hfill&\hfill-3.5&\hfill&\hfill&-890&\hfill&\hfill&-57&\hfill&\hfill&60\hfill&\hfill\cr
+-e&\hfill&\hfill-5.5&\hfill&\hfill&-279&\hfill&\hfill&-22&\hfill&\hfill&8\hfill&\hfill\cr
+\ 1&\hfill&\hfill-50&\hfill&\hfill&-4000&\hfill&\hfill&-1000&\hfill&\hfill&0\hfill&\hfill\cr}\atop
+\matrix{\qquad & \qquad \ =\ u_1&\hfill&\ \ \ \ \   =u_2&\hfill& 
+  \ \ \ \ \ \ \  =u_3&\hfill&\hfill =-C  & \hskip-1pt \to \max.   \cr }}}$
+ 	                                                                            \bigskip
+Note that this tableau is row feasible, so the simplex method, Phase 2 can be applied. We apply it to an imaginary row problem, which later will be called the dual problem. In   terms of the original (primal) diet problem, this is the dual simplex method.
+
+In general, we can write any linear program in a standard column tableaux,  and then use the simplex method.   This is the dual simplex method.  It may be more efficient than the simplex method that we discussed in Chapter 4.    
+ 
+Let  a linear program be given using a standard row tableau:
+
+$$\rowtab{&x&1\cr\omit&A&b\cr\omit
+&c&d\cr}\quad\matrix{=u\hfill&\omit&\omit\cr=z\rightarrow\hbox{min,}&x \ge 0, &u \ge 0\cr}\eqno{(13.2)}$$
+
+ We will  refer to  this linear program as the {\it primal} or {\it row} 
+problem. 
+ Note that in a standard row tableau we use the top and the right margins for the row   of variables, $x,$ and the column   of variables, $u,$ respectively.
+The {\it dual} or {\it column} problem of the primal problem given previosly is defined to be the following linear program, which we write in the standard column tableau form: 
+$$ 
+\matrix{-y \cr \ 1}   \left[ \matrix{A & b\cr c & d} \right] 
+\quad y\ge 0,\,\,v\ge 0 \eqno(13.3)$$   
+\vskip-5pt
+$$   \matrix{    ^\| & ^\| &  \cr      v & w & \rightarrow {\rm max,}}      $$
+ 
+ 
+
+\noindent where all variables in the matrices $y$ and $v$  are distinct and different from the variables in the matrices $x \,\,\hbox{and}\,\,u$ and the objective variable $w.$ The variables in the matrices $y$ and $v$ are called {\it dual} variables.
+ 
+\filbreak
+
+The standard column tableau uses the remaining margins, i.e., the left and the bottom margins,  for the    variables. Both linear programming problems can be written in the same tableau, which 
+now uses all the margins:
+ $$\matrix{  -y \cr \ 1}   
+\left[ \matrix{\ \cr \ } \right.
+\matrix{x  & 1\cr A & b \cr c  & d \cr =v  & = w }
+\left. \matrix{\ \cr \ } \right]
+\matrix{\cr =u \cr =z \cr \to \hfill } 
+\matrix{ \cr \cr \to \min  \cr \max \hfill}  \qquad
+\matrix{ x \ge 0, u \ge 0  \cr   y \ge 0, v \ge 0.} \eqno(13.4)
+$$
+
+
+Note that every (primal) variable in the row (primal) problem is coupled with a (dual) variable in the column (dual) problem. For instance, the variables in the row matrix $x$ are coupled with the variables in the row matrix $v,$ and the variables in the column matrix $u$ are coupled with the variables in the column matrix $y.$ We will call this situation duality. A remarkable feature of the duality is that  (13.2) and (13.3) are dual to each other. In other words, the dual problem of the primal problem (13.2) is problem (13.3) and vice versa (so we can say that the ``dual of the dual is the primal"). This is because   rewriting a standard row tableau as an equivalent column tableau
+and rewriting a standard column tableau as an equivalent row tableau
+both result in the same operation  on the data matrix:
+$$\left[ \matrix{A & b \cr c & d} \right] \mapsto  
+\left[\matrix{-A^T & \ c^T \cr \  b^T & -d} \right], $$
+and this operation repeated gives back the original matrix [recall that $(e^T)^T =e$ and $-(-e) = e$ for any matrix $e$].
+
+
+Dropping the basic variables $u$  in the row problem  in (13.4), we obtain 
+the canonical form 
+\smallskip
+ \centerline{$cx^T+d \to \min, -Ax^T  \le b, x \ge 0.$}
+\smallskip
+The canonical form for the dual problem  is 
+\smallskip
+\centerline{$b^Ty^T -d \to \min, A^Ty^T\le c^T, y \ge 0.$}
+\smallskip
+So it is very easy to  write the dual for a problem in canonical form, 
+bypassing
+slack variables and tableaux.
+
+   For a linear program in standard form  $cx^T+d \to \min, -Ax^T  =  b, x \ge 0,$
+its dual can be obtained via canonical form. A simpler dual has variables  corresponding to
+the linear equations, which are not required to be
+nonnegative. An alternative is to solve the system $Ax=b$ in the standard form,
+which allows us to get a smaller canonical form and the dual problem.
+ 
+
+
+  Now we will find a relationship between the feasible values of a linear program and those of its dual. First we need a definition.
+\smallskip
+\noindent
+{\bf Definition 13.5.} Given an optimization problem, the values of the objective function on the feasible region are called {\it feasible values.} \hfill \blackbox
+
+If the feasible region is empty   (i.e., the system of constraints is inconsistent), then there are no feasible values. Now we apply this notion to the
+pair of linear programs written in (13.4).
+
+ Any feasible value for the
+row problem is  $cx^T+d,$ where the row $x$ is a feasible solution   (i.e., $x \ge 0$ and $Ax^T + b =u \ge 0.$)   Any feasible value for the
+column problem is  $-y^TA+d,$ where the column $y$ is a feasible solution  (i.e., $y \ge 0$ and $-y^TA + c  =v  \ge 0).$   Putting   these equalities together,
+ we obtain that
+$$cx^T+d = (v+y^TA)x^T+d = vx^T+ y^T(Ax^T) +d $$
+$$= vx^T +y^T(u-b) +d=
+vx^T +y^Tu-   y^Tb  +d \ge   -   y^Tb + d,   $$
+because both numbers  $vx^T$ and  $y^Tu$ are nonnegative.
+
+Thus, we obtain the  inequality  $cx^T+d  \le  -y^Tb +d$ between the feasible values of our two problems and hence the following result.
+
+
+
+ 
+
+\smallskip
+\noindent
+{\bf Fact 13.6.} Every feasible  value for a linear minimization program
+is greater than  or equal to every feasible 
+value of the dual maximization problem. \hfill \blackbox
+
+This fact does not violate the symmetry between the problem and its dual because
+we multiply the objective functions by $-1$ when we transpose the situation.
+Here is a shorter way to write this fact: min $\ge$ max whenever both problems are feasible.
+In fact with our conventions about max and min for unbounded and infeasible
+problems, the inequality  min $\ge$ max 
+ holds in all cases. Namely, when the row problem is unbounded, we obtain that the dual problem has no feasible values  (i.e., it is infeasible;
+hence  max = min = $-\infty).$ When  the column problem is unbounded,
+then  the row problem is infeasible; hence  max = min = $\infty)$
+
+
+It is also clear that  the inequality becomes equality if and only if
+$vx^T +y^Tu=0$ (i.e., whenever a variable in one of the programs takes a nonzero value, the corresponding dual variable is zero).  The last condition is called  {\it complementary slackness}.
+So we obtain the following
+result, which is very useful   to prove that a solution is
+optimal.
+
+\filbreak
+\noindent
+{\bf Fact 13.7.} If we have a feasible  solution for a linear program and a feasible solution
+for the dual problem and the feasible values are the same (i.e.,
+the complementary slackness holds), then both solutions are optimal. \hfill
+\blackbox
+
+
+The duality theorem  (included in Theorem 13.8)  is a deeper result which replaces  the inequality 
+min $\ge$ max by equality  min =  max in the case when both problems are feasible.  In particular, it gives the converse of the last fact (see Theorem 13.9).
+The duality  theorem also  relates properties of  a given linear program,
+such as feasibility and boundness, 
+with that of   its dual problem.  The idea is to apply pivoting on both the primal linear program and its dual in order to obtain outcomes for both problems. According to Theorem 11.3 there are three possible outcomes for each of these problems.  However, as we will see, the outcomes of both problems are closely related.
+
+ 
+
+ To see how this theorem applies, we write both problems in the same tableau [as in (13.4)] and apply the simplex method.
+   Then, in a finite number of pivoting steps, the following three outcomes are possible. 
+\smallskip
+\noindent 
+{\bf Case 1:}  We obtain an optimal tableau $(b\ge 0,\,\,\, c\ge 0);$ 
+\smallskip
+\noindent 
+{\bf Case 2:} 
+ We obtain a tableau with a bad row; 
+\smallskip
+\noindent 
+{\bf Case 3:} We obtain a row feasible tableau$\,\,(b\ge 0)\,\,$with a bad column.  
+\smallskip
+In Case 1, the optimal tableau $(b\ge 0,\,\,\, c\ge 0)$ gives an optimal solution for either problem. An optimal solution for the primal problem is given by $u=b,\,\,x=0;$ an optimal solution for the dual problem is given by $v=c, \,\,y=0.$  Moreover, the optimal value is $d=\hbox{min}(z) =\hbox{max}(w)$ for both $z$ and $w.$
+\smallskip
+In Case 2, $\min(z) = -\infty$ and the column problem (13.3) has no feasible solutions. So $\max(w) = -\infty.$
+\smallskip
+In Case 3, the row problem has no feasible solutions  [that is, $\min(z) = +\infty].$ To see what happens with the column problem, we transpose the tableau and apply the simplex method. When we perform this operation, the original row problem becomes a column problem and the original column problem is now the row problem. Note that we cannot obtain an optimal tableau since this would give an optimal solution for the original row problem which is now the column problem in this new tableau. So only two outcomes are now possible:
+\medskip
+
+a tableau with a bad row 
+
+\noindent or 
+
+a feasible tableau with a bad column.
+ %$$\hbox{a feasible tableau with a bad column.}$$
+ 
+
+In the first case neither problem has any feasible solutions. In the second case  the new row problem (that is, the original column problem) is unbounded. It can be shown that by extra pivoting we can obtain a tableau with a bad row and a bad column.
+\smallskip
+Thus, we obtain the main theorem  of linear programming---the theorem on four alternatives---which includes the duality theorem.
+ 
+
+\smallskip
+\noindent
+{\bf Theorem 13.8.} Given a pair (13.4) of dual linear programs,
+ one and only one of the following four situations occurs:
+\smallskip
+(1)\quad Both problems have optimal solutions with the same optimal value [min($z$)= max($w$)].
+\smallskip
+(2)\quad Both problems are infeasible.
+\smallskip
+(3)\quad The row problem is  infeasible  and the column problem is unbounded [min($z) = \infty $ = max($w$)].
+\smallskip
+(4)\quad The column problem is infeasible   and the row problem is unbounded [min($z) = -\infty $ = max($w$)].
+ 
+\smallskip
+\noindent
+{\bf Proof.} This theorem follows from the existence of a simplex method that always works (one that avoids cycling) and the previous discussion. 
+\hfill  \blackbox
+\smallskip
+Sometimes this is called the  theorem in three alternatives, because (3) and (4) are symmetric.  But usually  the  theorem on three alternatives refers to a  less precise classification, namely, Cases 1--3.   We prefer to stick to the name   ``theorem on four alternatives."  
+ 
+The duality theorem usually refers to the equality of the optimal values in the  cases (1), (2),  (4).  But we will sometimes refer to Theorem 13.8 as the duality theorem for short. 
+ 
+The duality theorem is a deep fact with several interpretations and applications. Geometrically, the duality theorem means that certain convex sets can be separated from points outside them by hyperplanes. Traditionally, this is how the duality theorem is proved. But we chose another way of proving it: It follows from the existence of a simplex method that always works (one that avoids cycling). We will see another interpretation of the duality theorem in the theory of matrix games (cf. Chapter 7).
+For  problems in economics, the dual problems and the duality theorem also have important economic interpretations  (see examples in the next section).
+
+As a corollary of the duality theorem, we obtain the following result
+called {\it the complementary slackness theorem}:
+
+\smallskip
+\noindent
+{\bf Theorem 13.9.} Given a feasible solution for a linear problem and a feasible solution for
+the dual problem, they are both optimal if and only if the feasible values are the same  (i.e.,  the complementary slackness condition holds). \hfill \blackbox
+ 
+\smallskip
+\noindent
+{\bf Problem 13.10. } Check whether   
+$x_1=1, x_2 = 2, x_3 =3, x_4 =4,  x_5 = 0$ is an optimal solution for
+   the linear program
+
+$x_1 -  x_2+  x_3 -2 x_4+ 6x_5    \to  \min,$
+
+$x_1+   x_2+  x_3 + x_4+ x_5    \ge  10,$
+
+$x_1+   2x_2+  3x_3 + 4x_4+ 5x_5   \ge  20,$
+
+$x_1-   x_2+  x_3 - x_4+ x_5    \ge  -2,$
+
+all $x_i \ge 0.$
+
+
+% x1 -  x2+  x3 -2 x4+ 6x5 
+% x1+   x2+  x3 + x4+ x5    >  10,
+% x1+   2x2+  3x3 + 4x4+ 5x5   >  20,
+% x1-   x2+  x3 - x4+ x5    >  -2   unbounded ? in nb in lp_book
+
+\noindent
+{\bf Solution.}
+First we check that the given solution $x$ is feasible. We find
+that it is, and  the first, the third, and the last constraints 
+ hold as equalities (such constraints are called $active$ or $tight$).
+
+Then we put the problem in a standard row tableau 
+with slack variables at the right margin, and    we write
+dual variables $y_i$ at the left and  bottom margin in the same tableau,
+where all $x_i, y_i \ge 0$:
+ $$\matrix{  -y_6 \cr -y_7 \cr -y_8 \cr \ 1}   
+\left[ \matrix{\ \cr\ \cr\ \cr \ } \right.
+\matrix{x_1 &  x_2 &  x_3 & x_4& x_5         & 1\cr 
+1 & 1 & 1 & 1 & 1 &      -10 \cr 
+1 & 2 & 3& 4 & 5 &       -20 \cr
+1 & -1 & 1 & -1 &1 &    \    2 \cr
+1 & -1 & 1 & -2 & 6 &    \ \   0 \cr
+ =y_1 &  =y_2 &  =y_3 & =y_4& =y_5     & = w }
+\left. \matrix{\ \cr\ \cr\ \cr \ } \right]
+\matrix{\cr =x_6\cr =x_7\cr =x_8 \cr =z\cr \to \hfill } 
+\matrix{ \cr \cr\cr\cr \to \min  \cr \max. \hfill}  
+ $$
+
+Note that  $x_6=x_8 =0$ for our slack variables in  $x$  corresponding to the active constraints. On the other hand, $x_7=10 \ne 0.$
+Assume now that  our $x$ is optimal and consider
+an optimal solution $y$  for the dual problem that exists by the duality theorem.
+By   complementary slackness,  $y_1=y_2=y_3=y_4=0$ and
+$y_7 =0.$  
+Thus, our column problem becomes
+\vskip-10pt
+ $$\matrix{    -y_6 \cr -y_8  \cr \ 1}   
+\left[ \matrix{\ \cr \ \cr \ } \right.
+\matrix{ \cr 
+1 & 1 & 1 & 1 & 1 &      -10 \cr 
+1 & -1 & 1 & -1 &1 &    \    2 \cr
+1 & -1 & 1 & -2 & 6 &    \ \   0 \cr
+ =0 &  =0 &  =0 & =0& =y_5     & = w }
+\left. \matrix{\ \cr \  \cr \ } \right] 
+\matrix{ \cr  \cr      \cr  \cr \to\max. \hfill}  
+ $$
+
+The second column says that  $y_8 - y_6 =1$ 
+while the fourth column says that  $y_8 - y_6 =2,$ 
+which gives a contradiction.
+So the given solution is not optimal.
+ 
+
+\filbreak
+
+\bigskip
+\centerline {\twelvebf Exercises}
+\parindent=0pt
+\medskip
+{\bf 1--2.}  Write in a standard column tableau:
+\smallskip
+{\bf \ 1.} $5x-6y+2z \rightarrow {\rm min}, \ [x,y,z] \ge 0,  y \le 7, x +y \ge 3.$
+\medskip
+
+{\bf \ 2.} Minimize 
+\smallskip
+$.39a + .11b + .18c + .21d + .35e + .44f + .25g + .25h \
++ .23i + .24j$
+\smallskip
+subject to
+\smallskip
+$	15a + 15b + 15c + 15d + 15e + 1 5f + 10g + 15h + 15i + 10 j	\ge     100,$
+\smallskip
+$ 25a + 25b + 25c +   6f + 10g + 25h +  10j \ge 100, $  
+\smallskip
+$a + 25b + 25c + 25d +   30f + 25g + 25h + 25i + 25j \ge 100,$
+\smallskip
+$ a +   25c + 25d + 30e + 25f + 25g + 25h + 25i + 25j \ge 100,$
+\smallskip
+$a + 25b + 25c + 25d + 30e + 25f + 25g + 25h + 25i + 25j \ge 100,$
+\smallskip
+$   3a + 2b + 1c + 2d + 4e + 2f + g + 2h + 3i + 3j \ge 70, $  
+\smallskip
+$[a, b,   c, d, e, f, g, h, i, j] \ge 0.$ \hfill \blackbox
+\medskip
+{\bf \ 3.} Rewrite the linear programs in Exercise 1  and Exercise 2 in standard row tableaux.
+
+
+\medskip
+{\bf \ 4.} Solve the linear problem in Problem 13.10.
+\medskip
+
+
+
+{\bf\ 5.} Prove that for any
+ linear program,  the set of feasible values is  a convex set on line.
+\medskip
+
+%solved in LPtest.nb
+{\bf 6--10.} Check whether   the following solution is optimal for the
+problem given by the standard row tableau
+$$   
+\left[ \matrix{\ \cr\ \cr\ \cr \ } \right.
+\matrix{x_1 &  x_2 &  x_3 & x_4& x_5         & 1\cr 
+7 & -2 & -6 & 6 & -1 &      15 \cr 
+-1 & 1 & 1 & -2 & 2 &       -4 \cr
+-1 & 0 & 1 & 0 & -1 &       -2 \cr
+4 & 0 & -3 & 5 & 3 &    \ \  4 \cr
+ \ &  \  & \  & \ &\     & \ }
+\left. \matrix{\ \cr\ \cr\ \cr \ } \right]
+\matrix{\cr =x_6\cr =x_7\cr =x_8 \cr =z \cr \ } 
+\matrix{ \cr \cr\cr\cr \to \min.  \cr\  } . 
+ $$
+%  Solve[{x6 + 2x7 + 4x8 - 2x4 + x5 + 1 == x1, 
+ %   x7 - x8 + 2x4 - 3x5 + 2 == x2, 
+ %   x6 + 2x7 + 5x8 - 2x4 + 2x5 + 3 == x3,
+ %   x6 + 2x7 + x8 + 3x4 + x5 - 1 == z}, {x6, x7, x8, z}]
+%  {{x6 -> 15 + 7 x1 - 2 x2 - 6 x3 + 6 x4 - x5, 
+%  x7 -> -4 - x1 + x2 + x3 - 2 x4 + 2 x5, 
+%  x8 -> -2 - x1 + x3 - x5, 
+ %   z -> 4 + 4 x1 - 3 x3 + 5 x4 + 3 x5}}
+{\bf \ 6.} \ \  The basic solution.
+
+{\bf \ 7.} \ \  all $x_i= 1.$
+
+{\bf \ 8.} \ \  $x_1=4, x_3 = 7, x_5 =x_7= 1,$ all other $x_i = 0.$
+
+
+{\bf \ 9.}\ \  $x_1=1, x_2 = 2, x_3 = 3,$ all other $x_i = 0.$
+
+{\bf 10.} \ \ $x_3=3,  x_2 =x_4=x_5= 1,$ all other $x_i = 0.$
+
+\parindent=20pt
+
+\vfill\eject
+\def\rightheadline{\tenrm\hfil{\it \S 14. Sensitivity Analysis} \quad {\bf\folio}}
+\noindent
+{\twelvebf \S 14. Sensitivity Analysis}
+
+\noindent
+{\twelvebf  and Parametric Programming}
+ 
+\smallskip
+\noindent
+In real-life problems we often do not know exact values or these values may
+change with time.
+For example, RDAs in Example 2.1 (diet problem) are of necessity only vague estimates and they depend on country and year.
+Sensitivity analysis  is concerned with how changes in data affect the optimal value
+and the optimal solutions. Most often, this is about small changes, while large changes
+are studied in  {\it parametric programming.} In this section we consider both.
+We have already considered problems where some values in the data were not given explicitly but
+we were asked to solve the problem for all possible values. These values are called $parameters.$
+
+First we show how to find the changes in the optimal values caused by
+small changes in   resource  limits or required limits using optimal tableaux.
+
+Suppose that in  the diet problem (Example 2.1) we want to know  
+   the change in the minimal cost    if 
+$$ \hbox{the
+protein requirement  is changed   from 50 to 51;}  \eqno(14.1)$$
+$$\matrix{ \hbox{all three requirements are changed: } \cr
+\hbox{from  50, 4000, 1000 to} \cr
+50 + \varepsilon_1, 4000 + \varepsilon_2, 1000 + \varepsilon_3, \cr
+\hbox{respectively with} \ | \varepsilon_i| \le 1, \ i= 1,2,3;}  \eqno(14.2)$$
+$$\matrix{ \hbox{all five prices are changed by }  
+\varepsilon_a,\varepsilon_b,\varepsilon_c,\varepsilon_d,\varepsilon_e, \cr
+\hbox{respectively, with  absolute value of every change} \ \le 1}   \eqno(14.3)$$
+$$\matrix{ \hbox{all requirements are changed as in (14.2)} \cr 
+\hbox{and all
+prices  are changed as in (14.3)  }  }
+    \eqno(14.4)$$
+
+Now we   answer these four questions. Note that the second question includes the first one, and the last question
+includes all four  questions.
+
+First we    write the diet problem in  a standard row tableau:
+$$\rowtab{&a&b&c&d&e&1\cr\omit
+&0.3&1.2  &0.7   &3.5&5.5&-50\cr\omit
+&73 &96   &20253 &890&279&-4000\cr\omit
+&9.6& 7   &19    &57&22  &-1000\cr\omit
+&8&10&15&5&60&0\cr}\thinspace\matrix{=u_1\hfill\cr =u_2 \hfill\cr =u_3\hfill\cr=C\rightarrow\hbox{min}\cr}$$
+ (cf. Example 13.1). 
+
+It takes at least two pivot steps to 
+obtain  an optimal tableau:
+ $$\rowtab{&  a  &  b  & u_1  &  d  &  u_3 &  1\cr\omit
+&- 0.519 &  - 0.136 &  -0.2469 &  - 2.654 & 0.0617 &
+ 49.38  
+ \cr\omit
+  &  - 10425 &-2710 &- 4941 & - 52951 & 1248   & 996931 \cr\omit
+  &  0.011 & - 0.20 &    0.21 & - 0.30 & - 0.0079 &  2.806
+\cr\omit
+  & 7.499  & 12.71  &  0.471  &  44.34  &   0.2458  &   269\cr} 
+\matrix{
+=c\hfill\cr 
+=u_2 \hfill\cr 
+=e\hfill\cr
+=C\cr}$$
+with numbers given approximately; the exact value for
+the optimal value is $80,000/297\approx 269.36,$ not 269.
+Surplus variables  $u_1$ and $u_3$ for  protein  and calcium  are on the top,
+so the corresponding    constraints   are active (the constraints hold as equalities for the basic solution) while the constraint in vitamin A is not active (there is a surplus). So it is clear that a small change in the
+vitamin A requirement of 4000 would not affect the optimal solution.
+
+%see ~vstein/LPtest.nb
+
+One way to find what happens when 50 is replaced by another number is
+to replace 50 by a parameter, say, $p,$ in the original tableau and pivot 
+the modified tableau.  The parameter would stay in the last column.  
+However, there is another way to proceed that  also allows us to get the modified optimal tableau without pivoting again.
+  Instead of replacing 50 by $p$, we replace the restriction $u_1 \ge 0$ on the  slack variable by the
+condition   $u_1 \ge  p-50.$ This makes our tableau nonstandard, but we do not
+  do  any additional pivoting.
+  
+To answer (14.1), our constraint on $u_1$  is  $u_1 \ge 1$, so we cannot set
+it to   0 together with the other variables on the top to get an optimal solution. The best we can do is to set
+$u_1= p-1=1,$ which gives the optimal value $\approx  0.47+ 269.36=269.83.$
+It is important to check the feasibility: The values for $c$ and $u_2$ go down but stay positive. Thus, the answer to (14.1) is that the  minimal cost increases by  approximately  0.47 (the exact number is  140/297).
+  
+Similarly, if we replace the requirement 50 by, say, $p=48$,   we relax the condition   $u_1 \ge 0$
+to  $u_1 \ge -2$ which allows us to take  $u_1 = -2$ and get  improvement
+in  $C$  equal  280/297 (now the minimal cost goes down). Again it is important to check the feasibility: the value for  $e$ goes down but stays positive. 
+
+Thus, we see that  the
+minimal cost,  mc = mc($p$),  is   
+an affine function of $p$ when  we replace the requirement  50 by a parameter $p$  that   stays close to $50$
+(so the optimal tableau for $p=50$ produces  feasible solutions
+when we change the basic value $u_1 = 0$ for the slack variable 
+to the value $u_1 = p - 50$) and that
+ the number  $140/297 \approx  0.471$ is the  slope of  mc($t$).
+This number is known as the {\it shadow price} of protein in our diet problem.
+We can compare it with  prices for protein from alternative sources
+to make decisions about our diet.
+
+Moreover, we can tell that if we replace all  required limits  50, 4000, 1000
+by parameters $t_1,t_2,t_3$ respectively, then for $|t_1-50|$, $|t_2-4000|,$
+and $|t_3-1000|$ sufficiently close to 0, the minimal cost, mc  $ \approx 
+0.471t_1 + 0.240 t_3 + 269.36.$ So it is an affine function of $t_1, t_2, t_3$
+and it is independent of $t_2.$  It is not a surprise that it is independent of $t_2$ because the corresponding constraint is  not active for the basic solution---we have a surplus of vitamin A.  Therefore, the answer to (14.2) is
+$\approx  0.471\varepsilon_1 + 0.240 \varepsilon_3.$
+
+
+Also, we can write the last column of  the (standard) optimal tableau of
+the modified problem:
+ $$\rowtab{&    1\cr\omit
+&   49.38   -0.2469\varepsilon_1 +   0.0617\varepsilon_3
+ \cr\omit
+  &   996931  - 4941 \varepsilon_1 +  1248\varepsilon_3 +  \varepsilon_2 \cr\omit
+  &      2.806 + 0.21 \varepsilon_1   - 0.0079\varepsilon_3
+\cr\omit
+  &    269  +0.471\varepsilon_1 +   0.2458 \varepsilon_3\cr} 
+\matrix{
+=c\hfill\cr 
+=u_2  \hfill\cr 
+=e\hfill\cr
+=C \to \min\hskip-1pt. \hfill \cr}\eqno(14.5) $$
+The rest of the tableau stays the same, independent of  $ \varepsilon_i.$
+It is easy to compute now for which values of  $\varepsilon_i$ the tableau
+stays optimal.  It is clear  that the last column is positive when $| \varepsilon_i| \le 1.$
+
+Next we address the question of (14.3). 
+ Since the dual problem  has the same optimal value and   the  coefficients of the objective function for the row problem are the constant
+terms in the constraints of the  dual problem, we can use duality to get the answer. Also, we can argue directly that a small change in data would result in a small change in the optimal tableau, so the tableau stay optimal. Therefore,
+the answer is approximately  $   48.38 \varepsilon_c  + 2.806\varepsilon_e $ for $\varepsilon_*$ sufficiently close to 0. But is the number
+1 in (14.3)  sufficiently close to 0?
+
+To answer this question,  it is time to write the last row of the modified tableau (approximately;
+the other rows do not depend on parameters):
+$$\bmatrix{ 7.499- 0.519\varepsilon_c+  0.011 \varepsilon_e + \varepsilon_a
+ \cr
+ 12.71   - 0.136\varepsilon_c - 0.20  \varepsilon_e   + \varepsilon_b \cr
+ 0.471    -0.2469\varepsilon_c  + 0.21  \varepsilon_e \cr
+ 44.34  - 2.654 \varepsilon_c - 0.30 \varepsilon_e  + \varepsilon_d \cr
+ 0.2458    +0.0617 \varepsilon_c       - 0.0079  \varepsilon_e    \cr
+  269 + 49.38 \varepsilon_c  + 2.806 \varepsilon_e}^T\hskip-1pt. \eqno(14.6) $$
+Now it is clear that this row is positive for  $|\varepsilon_*| \le 1.$
+\filbreak
+
+Finally, we have to face (14.4) when we modify both the requirements and prices.
+ Then, in   the modified optimal tableau, the first three entries of 
+the last column 
+are the same as in (14.5), the first  five entries of the last row are the same as 
+in (14.6), and the last entry in the last row or column is (approximately)
+$$ [\varepsilon_c, \varepsilon_e, 1] 
+\bmatrix{
+ -0.2469 &   0.0617 & 49.38  \cr 
+  0.21 &  - 0.0079 &  2.806  \cr
+    0.471   &   0.2458  &   269\cr} 
+\bmatrix{\varepsilon_1 \cr \varepsilon_3 \cr 1}.$$
+Dropping the constant term here, we get an approximate answer for (14.4).
+
+
+
+
+
+ 
+
+The same trick works in general.  Namely, suppose we have a linear program
+of the form $cx \to \min, Ax \ge t, x \ge 0,$ and we ask how the optimal value depends on
+the requirements   $t$ when they are close to certain values $t = b.$
+Suppose that the program has an optimal solution for $t=b$ and that this
+optimal solution is the basic solution for an optimal tableau where
+all basic variables take positive values.
+  (To put the problem  in a standard row tableau, we introduce the surplus
+variables  $u = Ax - b.$) 
+Then the minimal  value, mv =  mv($t$), is an affine function
+$c_1(t-b) + \bar d,$ where $\bar d  =$  mv($b$) is the last entry in the last row in the optimal tableau and  the row $c_1$ consists of entries of the last row of
+the optimal tableau corresponding to active constraints
+and zeros for the  parameters corresponding to nonactive constraints.
+When the objective function is interpreted as the cost, the entries of the row $c_1$  are called the {\it shadow prices}  corresponding to the active constraints.
+Note that  small changes in  the requirements in nonactive constraints do not change the optimal value. The corresponding shadow prices are zeros.
+When  a basic slack variable takes the zero value,  two different shadow prices for this constraint are possible: one corresponding to increasing  requirement, and the other corresponding to  decreasing requirement (see the discussion of parametric programming in \S 14).
+
+
+Thus, the basic solution for the  dual problem tells us how the optimal value depends on  some changes in data.  Similarly,
+the optimal tableau tells us how the optimal value depends on small changes in the objective function.
+Again the dependence is affine.
+   
+
+\smallskip
+\noindent
+{\bf 
+Remark.}  More generally, we can replace $b$ and $c$  by   functions, not necessarily affine,  $F(t)$ and $G(t)$  of parameters $t.$  This makes the optimal value
+a function  mv($t$)  of $t$  (not necessarily defined   for all $t$).
+Then   the last row and column (if positive except the last entry) of the optimal tableau  for the problem with
+$ b= F(t_0)$ 
+(if it exists)
+ allows us    to express the  partial derivatives
+of  mv(t) as a linear function  of partial derivatives of $F(t)$ and $G(t)$  (if they exist). 
+
+Using the optimal tableau, it is also possible to find  what happens with the
+optimal tableau under a small change of all entries in the initial tableau,
+not only those in the last row  and column.  For simplicity
+we assume that we have only one parameter $t.$ So our setting is now as follows.
+We have a standard row tableau
+$$   
+\left[ \matrix{\cr  \cr} \right.
+ \matrix{ x & 1 \cr A(t) & b(t) \cr c(t)  & d(t) \cr \  & \ } 
+\left. \matrix{\ \cr \ \cr} \right]
+\matrix{=u \cr \to \min} \eqno(14.7)
+$$
+\vskip-10pt
+\noindent
+depending on a parameter $t$ such that all functions are differentiable at
+$t = t_0$ and an optimal tableau for $t = t_0$
+$$   
+\left[ \matrix{\cr  \cr} \right.
+ \matrix{ \bar x & 1 \cr \bar A  & \bar b  \cr \bar c  & \bar d  \cr \  & \ } 
+\left. \matrix{\ \cr \ \cr} \right]
+\matrix{=\bar u \cr \to \min} \eqno(14.8)
+$$
+\vskip-10pt
+\noindent
+has all entries in $\bar b$  and  $\bar c$ positive.   Then we   show that the linear program
+has  exactly one optimal  solution  $x= x(t)  $
+for every $t$  sufficiently close  to $t= t_0,$  and  we compute  
+the derivative $z'(t_0)$ of the optimal value $z(t) =c(t)x(t)^T$  at $t = t_0.$
+
+To simplify notations, we permute rows and columns in the tableaux to arrange
+that   $x = [x_1, x_2],$ $ u = \bmatrix{u_1 \cr  u_2}, $  $ \bar x= [u_1, x_2], $
+$\bar u =  \bmatrix{x_1^T \cr  u_2}. $  The  row $x_2$ consists of all variables that stay on the top, and it could be vacuous. The row $x_1$ consists of variables on top that go to the right margin at the optimal tableau, and it could be vacuous too, in which case the answer is trivial: $z'(t_0) = d'(t_0).$
+
+We rewrite the initial matrix (14.7) and the optimal tableau (14.8)
+accordingly:
+\vskip-5pt
+$$   
+\left[ \matrix{\cr \cr \cr} \right.
+ \matrix{ x_1 & x_2  & 1 \cr 
+\alpha (t) &  \beta (t) &  b_1(t) \cr 
+\gamma (t) &  \delta (t) &  b_2(t) \cr 
+c_1(t) & c_2(t) & d(t) \cr \  &  & \cr } 
+\left. \matrix{\ \cr \cr \cr } \right]
+\matrix{=u_1 \cr =  u_2  \cr \to \min,} \eqno(14.9)
+$$
+\vskip-5pt
+$$   
+\left[ \matrix{\cr \cr \cr} \right.
+ \matrix{ u_1 ^T & x_2  & 1 \cr 
+* &  * &  \bar b_1  \cr 
+* & * &  * \cr 
+\bar c_1  & * & \bar d  \cr \  &  & \cr } 
+\left. \matrix{\ \cr \cr \cr } \right]
+\matrix{=x_1^T \cr =  u_2  \cr \to \min.} \eqno(14.10)
+$$
+% \filbreak
+The pivot steps, taking the tableau (14.9) with $t=t_0$ to (14.10),
+take the parametric tableau (14.9) to
+$$   
+\left[ \matrix{\cr \cr \cr} \right.
+ \matrix{ x_1 & x_2  & 1 \cr 
+\alpha(t)^{-1} &  -\alpha^{-1}\beta (t) &  -\alpha(t)^{-1}b_1(t) \cr 
+\gamma (t)\alpha(t)^{-1} & * &   b_2(t) - \gamma (t)\alpha(t)^{-1}b_1(t) \cr 
+c_1(t)\alpha(t)^{-1} & * & d(t) - c_1(t)\alpha(t)^{-1} b_1(t)  \cr
+ \  &  & \cr } 
+\left. \matrix{\ \cr \cr \cr } \right]
+\matrix{=u_1 \cr =  u_2  \cr \to \min} \eqno(14.11)
+$$
+ (see Remark 8.11).  Since  all functions in (14.9) are continuous at $t=t_0,$ 
+we have the following. For  all   $t$ sufficiently close to $t_0:$ 
+the matrix 
+  $\alpha(t)$ is invertible [because    $\alpha(t_0)$ is invertible];
+ the last column in (14.10) without the last entry
+is  strictly positive (because
+$\bar b > 0)$;
+ the last row in (14.11) without the last entry
+is  strictly positive (because
+$\bar c > 0$). So the tableau    (14.11)    is optimal and  its basic solution
+is the only optimal solution  (for  $t$   close to $t_0).$
+The last entry in the last row is the optimal value. Its derivative  at $t=t_0$ is
+$$
+z'(t_0) = d'(t) - c_1'(t_0)  \bar b_1 -  \bar c_1   b_1'(t_0) 
+ +   \bar c_1 \alpha'(t_0)  \bar b_1.
+$$ 
+ In the case when   $A(t)$  is constant, the last term drops. 
+When both  $A(t)$  and $c(t)$ are constant and  both $b(t)$ and
+$d(t)$  are affine or both  $A(t)$  and $b(t)$ are constant and  both $c(t)$ and
+$d(t)$  are affine, the optimal value is an affine function of $t$ for $t$ close to $t_0.$ \hfill
+ \blackbox
+
+What happens when our optimal tableau has  zero values for some basic variables (such tableaux are called $degenerate)$? In this case  the slopes may depend on    direction in the change of  parameters.
+ 
+\smallskip
+\noindent
+{\bf Example 14.12.}
+This example is adapted from Section 4-10 of {\it  Linear programming and economic analysis,} by Dorfman, Samuelson and Solow  (McGraw-Hill, 1958).
+ 
+A chemical firm processes a certain raw material by the use of two major types of equipment, called stills and retorts. Four different production processes are available to the firm. If Process 1 is used to treat 100 tons of the raw material, it will utilize $7\%$ of the weekly capacity of the stills and
+$3\%$ of the weekly capacity of the retorts. The value of the product and the costs vary with the process used. If 100 tons are treated by Process 1, the net profit to the firm is $\$60.$ The firm plans to process 1500 tons of raw material weekly. Obviously, the company wants to {\it maximize} the profit it will accrue by processing 1500 tons of raw material weekly, using an {\it optimal} combination of all four processes. The following table gives the pertinent information for all four processes:
+
+\medskip
+\catcode`\*=\active
+\def*{\hphantom{0}}
+\centerline{\vbox{\offinterlineskip\halign{
+\hfil\strut#&\quad #&\quad #&\quad #&\quad #&\quad #\cr\noalign{\leavevmode\hrule\smallskip\smallskip}
+\bf Production processes&\bf (1) &\bf (2)&\bf (3)&\bf (4)&\bf Available\cr\noalign{\smallskip\smallskip\hrule\smallskip}
+Raw material (tons/week)&100&100&100&100&**1500\cr
+Still capacity $(\%)$&**7&**5&**3&**2&***100\cr
+Retort capacity $(\%)$&**3&**5&*10&*15&***100\cr
+Profit ($\$/$week)&*60&*60&*90&*90&\omit\cr
+\noalign{\smallskip\hrule}}}} 
+\smallskip
+We can write these data in row and column standard tableaux, where $x_i$ is the level (intensity) of Process $i$ ($x_1 = 1$ means that   a hundred   tons of the raw material is treated by Process 1),  and $y_j$ is a slack variable. Here is the standard column tableau form of this linear program
+\vskip-0.3in
+$$
+\matrix{ -x_1 \cr -x_2 \cr  -x_3 \cr -x_4 \cr 1}
+\left[
+\matrix{ \cr \cr \cr \cr \ }
+\right.
+\matrix{\ \cr
+  100&  7&  3&  -60  \cr
+  100&  5&  5&  -60  \cr
+   100&  3&  10&  -90  \cr
+   100&  2&  15&  -90  \cr
+  1500&  100&  100&  \ \ 0 \cr
+ =y_1  &\quad =y_2  &\quad =y_3  &  =f}
+ \left.
+\matrix{ \cr \cr \cr \cr \ }
+\right]
+\matrix{ \cr \cr \cr  \cr \cr \cr \to \max.\hfill }
+\matrix{ \cr x_1, x_2\ge 0, \cr x_3, x_4\ge 0; \cr
+y_1, y_2,y_3\ge 0 \cr \cr} 
+$$
+ 
+
+We also include the standard row tableau, on which we will pivot:
+\bigskip
+\noindent ${{\rowtab{&x_1&x_2&x_3&x_4&1\cr
+\omit&-100&-100&-100&-100&1500\cr
+\omit&-7&-5&-3&-2&100\cr
+\omit&-3&-5&-10&-15&100\cr
+\omit&-60&-60&-90&-90&0\cr}
+\thinspace\matrix{=y_1\hfill\cr =y_2\hfill\cr =y_3\hfill\cr =-f\rightarrow\hbox{min.}\cr}}}$
+\bigskip
+
+Let us work with the row form.  It is (row) feasible, since the  first three entries in the last column, 1500, 100, and 100, are $\ge 0.$
+  Therefore, we  go  to Phase 2 of the simplex method. Applying pivoting twice, we obtain an optimal tableau:
+\bigskip
+$\rowtab{&y_1&x_2&y_3&x_4&1\cr
+\omit&-1/70&-5/7&1/7&5/7&50/7\cr
+\omit&61/700&6/7&-4/7&-13/7&185/7\cr
+\omit&3/700&-2/7&-1/7&-12/7&55/7\cr
+\omit&33/70&60/7&30/7&150/7&-7950/7\cr}\thinspace\matrix{=x_1\hfill\cr =y_2\hfill\cr =x_3\hfill\cr =-f\rightarrow\hbox{min.}\cr}$
+\filbreak
+
+So the (unique) answer is that
+maximal profit $f = \$ 7950/7$ per week (approximately $\$1135.71$ per week) at
+$x_1= 50/7,\ x_2=  0,\  x_3= 55/7,\  x_4 =  0.$
+We used completely the raw material available $( y_1 = 0)$ and the retorts $(y_3  = 0),$ but the stills are underused.
+\smallskip
+Can we make more profit by buying and using more raw material? The answer depends on comparison of the price at which we can buy extra material and 
+the {\it shadow price}, the change in the optimal value of the linear  program  when we replace  1500   by 1501 or 1499. So we consider the linear program with 1500 replaced by $1500 + \varepsilon$ as a function of the parameter $\varepsilon.$ Here is
+the perturbed problem in a standard row tableau: 
+$$
+{{\rowtab{&x_1&x_2&x_3&x_4&1\cr
+\omit&-100&-100&-100&-100&1500 + \varepsilon\cr
+\omit&-7&-5&-3&-2&100\cr
+\omit&-3&-5&-10&-15&100\cr
+\omit&-60&-60&-90&-90&0\cr}
+\thinspace\matrix{=y_1\hfill\cr =y_2\hfill\cr =y_3\hfill\cr =-f\rightarrow\hbox{min.}\cr}}}
+$$
+Pivoting twice, we obtain an optimal tableau:
+$$
+\rowtab{&y_1&x_2&y_3&x_4&1\cr
+\omit&-1/70&-5/7&1/7&5/7&50/7+\varepsilon/70\cr
+\omit&61/700&6/7&-4/7&-13/7&185/7-61\varepsilon/700\cr
+\omit&3/700&-2/7&-1/7&-12/7&55/7-3\varepsilon/700\cr
+\omit&33/70&60/7&30/7&150/7&-7950/7-33\varepsilon/70\cr}\thinspace\matrix{=x_1\hfill\cr =y_2\hfill\cr =x_3\hfill\cr \rightarrow\hbox{min.}\cr}
+$$
+Here is how we obtain the answer  (for small $\varepsilon$) {\it without} pivoting.  We relax the condition  $y_1\ge 0$ replacing it by $y_1\ge - e.$ From the optimal tableau,  we see that the optimal value for $f$ in the perturbed (relaxed) problem  is  $7950/7 + 33\varepsilon/70$  for small positive  $\varepsilon.$
+ 
+Note that in the optimal tableau of the perturbed problem, the last column is a perturbation of the last column of the original problem; that is, the difference between these two columns is given by a column matrix multiplied by $\varepsilon.$ Moreover, this column matrix is precisely the negative of the first column of the original problem.     
+ 
+The answer to our question lies in the shadow price (i.e.,  the coefficient
+33/70
+ of $\varepsilon$ in the optimal value of the perturbed problem; i.e., the slope of
+the optimal value as a  function of the parameter). If the price of the raw material is less than the shadow price, then buy more raw material and increase the profit. Otherwise, do not buy any more raw material. %(and think about selling if you can do it at a price which is higher than this number).%
+ 
+%Note that 33/70  is the value of a variable in the optimal solution for the %dual problem. It is called the {\it shadow price} (for the raw material).
+%\bigskip
+%In general, an optimal solution of the dual problem (namely, the $c$-part of %the optimal row tableau) gives information on the dependence of the optimal %value on the $b$-part of the original (row) problem. More precisely, the %numbers in the  $c$-part of an optimal tableau are partial derivatives of the %optimal value (up to sign) with respect to entries in the $b$-part.
+ 
+An economic  interpretation of the slope, depending on the situation, can be the  shadow price (i.e., the maximal price we are willing to pay for a small additional amount of a resource)  or the marginal cost (i.e., the additional cost needed  to produce a small additional amount of a product while we are minimizing the total cost). 
+ 
+Let us now  consider the previous problem with $1500 + \varepsilon$ instead of 1500, where $\varepsilon$ ranges over all real numbers (before we were interested only in small $\varepsilon$). This is an example of {\it parametric linear programming.} Note that $\varepsilon$ is not a variable under our control, but a {\it parameter.} The optimal value (the maximal profit in our problem)  is a function $F(\varepsilon)$ of the parameter. When  $\varepsilon\le -1500,$ there are no feasible solutions. We do need the raw material to get any profit, so  $F(-1500) = 0.$  We have computed above $F(0) = 7950/7.$  Here is a  plot of $F(\varepsilon)$: 
+%%draw the plot of $F(\varepsilon)$%%
+
+% $$\psfig{figure=Fig21.eps,height=4cm}$$
+\centerline{\it F}
+\vskip-10pt
+$$\psfig{figure=Ex.14.12.eps,height=4cm}$$
+\vskip-32pt
+\hskip 230pt $\varepsilon$
+
+\bigskip
+The graph of the function  $F(\varepsilon)$ consists of line segments (such functions are often called  piecewise linear; see the next definition).   The function is nondecreasing because we are not required to use
+all resources available. The slope  of the function is the marginal cost of the  row material. The slope changes at 
+the {\it  break points.}  The slope  decreases (such functions are called concave,
+see Definition 14.14 below)---the {\it law of diminishing returns.}
+
+The optimal value of any linear program as a function of parameters in data
+has similar properties. To describe   those properties we give a few definitions. 
+
+\smallskip
+\noindent
+{\bf
+Definition 14.13.}  A function  $f(t)$ of $k$ variables $t = [t_1,\ldots, t_k]^T$
+defined on a convex set $ P $
+is called   piecewise affine  if the set $P$ is the union of finitely many convex subsets
+such that $f(t)$  is an affine function on every subset. \hfill \blackbox
+
+The term   {\it piecewise linear}  is often used instead of  {\it piecewise affine.}
+In most common case $k=1$ the graph of a piecewise affine function is made from   finitely many line segments.  The convex sets on a line are easy to list: the empty set, points, intervals, rays, the whole line.
+
+
+
+\smallskip
+\noindent
+{\bf Remark.} The following quote of  Hermann  Weyl (1885--1955)   may help you to grasp the concept of piecewise linear  function (The Mathematical Way of Thinking, an address given at the Bicentennial Conference at the University of Pennsylvania, 1940):
+
+Our federal income tax law defines the tax $y$ to be paid in terms 
+
+of the income $x$; it does so in a clumsy enough way by
+pasting 
+
+several linear functions together, each valid in another interval 
+
+or bracket of income. An archeologist who, five
+thousand years 
+
+from now, shall unearth some of our income tax returns together 
+
+with relics of engineering works and
+mathematical books, will 
+
+probably date them a couple of centuries earlier, certainly before 
+
+Galileo and Vieta.
+% The Mathematical Way of Thinking, an address given at the Bicentennial Conference at the University of Pennsylvania, 1940. \blackbox
+
+
+
+\smallskip
+\noindent
+{\bf
+Definition 14.14.}    A function  $f(t)$ of $k$ variables $t = [t_1,\ldots, t_k]^T$
+defined on a convex set $ P $
+is called  convex if the set of points above its graph is convex. \hfill
+\blackbox 
+
+Sometimes the terms {\it concave upward}  or {\it convex downward}  are used instead of $convex.$  We call a function $f$ $concave$ if the function  $-f$ is convex (i.e., the set of points below the graph of $f$ is  convex).
+
+There are several equivalent definitions of  a convex function. For example,
+a function  (defined on a convex set) is convex if and only if it is the  maximum of  a family of affine functions.   In the case of a finite family,
+the maximum is a piecewise affine convex function.
+
+ 
+ 
+
+
+Now we state a general result of parametric programming.
+
+\smallskip
+\noindent
+{\bf
+Theorem 14.15.} Consider a linear program  
+$cx \to \min,  Ax \le b, x \ge 0 $
+in canonical form. Assume that   all entries of either
+the row $c$ or the column $ b$ are affine functions of  $k$  parameters $t_1, \ldots, t_k.$  Consider the set  $P$  of values $t=[t_1,\ldots, t_k]$ of the parameter for which the linear program has an optimal solution, and let $f(t)$ be the optimal 
+value.
+Then $P$ is a convex set, and, when parameters are in $c$ (resp., in $b$), $f(t)$ is the minimum  (resp., maximum) of a finite set of affine functions on $P.$  So $f(t)$ is a piecewise affine and concave (resp., convex)
+function.
+If $b$ is a nondecreasing  function of $t$ or  $c$  is a nonincreasing function of $t,$ then
+$f(t)$ is a nondecreasing  function of $t$.
+
+\smallskip
+\noindent
+{\bf
+Proof.}  If $P$ is empty, then we have nothing to prove so let us assume that
+our program has an optimal solution for at least one value of $t.$
+
+  Using the duality theorem, we see that it suffices to consider the case   when the parameter is in the objective function $c = c' + c''t. $ Then the feasible region $S$ is independent of $t.$  To prove convexity of $P,$ consider two  numbers $t', t''$  in $P$ and their convex combination
+$t= at' + (1-a)t''. $   We have to show that 
+$t$ is in $P,$ i.e., the function  $c(t)x$ is bounded from below on $S.$
+Since $c(t)$ is an affine function of $t, \ c(t) =  ac(t') + (1-a)c(t'').$
+Since  $c(t')x, c(t'')x \ge C$ for all  $x$ in $S$ for a number $C,$ we have
+$c(t)x =ac(t')x + (1-a)c(t'')x    \ge  aC + (1-a)C = C$ for all   $x$ in $S;$
+hence   $c(t)x$ is bounded from below on $S.$
+
+Each tableau for our LP has parameters only in the last row, and
+every entry in the last row is an affine function of parameters.
+This is true for the initial tableau, and pivot steps preserve this property.
+The total number of these tableaux is finite (it was bounded in \S 10).
+
+Now we consider the subset of     tableaux   that are
+optimal for at least one value of (vector) parameter $t$ (the value
+could be different for different tableaux) and the last entries in the last rows in these tableaux.
+For each $t$ all these tableaux are feasible and at least one is optimal.
+So  the optimal value $f(t)$ is the minimum over these last entries.
+
+Finally, it is obvious that if all coefficients of the objective function increase or stay the same, then
+the  minimal value $f(t)$  cannot improve. \hfill
+\blackbox
+
+Objective functions with parameters appear   in   {\it
+goal programming} when we want to combine several objectives or goals into one objective function. A way to do this is to take a linear combination of several
+objectives we want to minimize  with nonnegative coefficients.
+The choice of coefficients (the weights) could be controversial, but
+they could be considered as parameters. If the functions we combine are affine,
+then the resulting objective function is also affine,
+and its coefficients are affine functions of parameters. So Theorem  14.15
+can be applied.
+ 
+
+\smallskip
+\noindent
+{\bf Problem 14.16.} Solve  $P= 3x+4y \to \max, 2x+2y  \le 200, x+3y \le t;  x,y  \ge 0,\  t$ a given number. 
+
+\smallskip
+\noindent
+{\bf Solution.} This problem can be   solved graphically (see \S 3).
+Here is an outline.
+When $t <0,$ the feasible region is empty, so the problem is infeasible.
+When $0 \le t \le 100, $ the first constraint is redundant, the feasible region is a triangle, and $\max = 
+3t$ at  $x=t, y = 0.$
+When $100 \le t \le 300,$  the  optimal solution is the intersection of the lines corresponding to 
+the first two constraints:
+$2x+2y  = 200, x+3y = t; $ hence $x= 150-t/2, y=t/2 -50,$ and $ \max = 250+t/2.$
+When $t\ge 300,$  the second constraint is redundant, the feasible region is a triangle, and $\max = 
+400$ at  $x=0, y = 100.$
+
+ Now  we will solve the problem by the simplex method.
+We introduce two slack variables 
+$u=100-x-y \ge  0$ and  $v= t-x-3y \ge 0$
+and write the problem in a standard row tableau: 
+$$\left[ \matrix{ \ \cr\ \cr\  \cr} \right.
+\matrix{
+x &     y &    1  \cr
+ -1  &    -1   &    100 \cr
+ -1  &    -3   &    t \cr
+ -3  &    -4   &    0 \cr
+    &      &    \cr}
+\left. \matrix{ \ \cr\ \cr\  \cr} \right]
+   \matrix{ =u  &\cr =v &\cr =-P & \to \min\hskip-1pt.\cr}   \eqno(14.17)  
+$$     
+\vskip-0.2in
+\noindent
+          When $t < 0,$ the $v$-row is bad, so the problem is infeasible.
+Assume now that $t >0.$  The tableau is feasible, so we go to Phase 2.
+We chose  the $y$-column as the pivot column.
+
+If  $t \ge 300, $ then we pivot on $-1$ and obtain
+$$\left[ \matrix{ \ \cr\ \cr\  \cr} \right.
+\matrix{
+x &     u &    1  \cr
+ -1  &    -1   &    100 \cr
+  2  &    3   &    t-300 \cr
+ 1  &    4   &    -400 \cr
+    &      &    \cr}
+\left. \matrix{ \ \cr\ \cr\  \cr} \right]
+   \matrix{ =y  &\cr =v &\cr =-P & \to \min\hskip-1pt.\cr}   \eqno(14.18)    $$   
+\vskip-0.2in
+\noindent
+which is an optimal tableau; hence $\max = 400$ at $x= 0, y=100.$
+
+Assume now that  $0 < t < 300$. Then according to the simplex method we pivot
+the tableau  (14.17)  on $-3$ and 
+obtain
+$$\left[ \matrix{ \ \cr\ \cr\  \cr} \right.
+\matrix{
+x &     v &    1  \cr
+ -2/3  &    -1/3   &    100-t/3 \cr
+ -1/3  &    -1/3   &    t/3 \cr
+ -5/3  &    4/3   &    -4t/3 \cr
+    &      &    \cr}
+\left. \matrix{ \ \cr\ \cr\  \cr} \right]
+   \matrix{ =u  &\cr =y &\cr =-P & \to \min\hskip-1pt.\cr}   \eqno(14.20)    $$   
+\vskip-10pt
+Now the $x$-column is the pivot column. We have to compare   $(100-t/3)/(-2/3) $ and  
+$(t/3)/(-1/3)$ to choose a pivot entry.
+When $0 < t \le 100,$ we pivot on  -1/3 and obtain
+$$\left[ \matrix{ \ \cr\ \cr\  \cr} \right.
+\matrix{
+y &     v &    1  \cr
+2  &    1   &    100-t \cr
+-3  &    -1   &    t \cr
+ 5  &    3  &    -3t \cr
+    &      &    \cr}
+\left. \matrix{ \ \cr\ \cr\  \cr} \right]
+   \matrix{ =u  &\cr =x &\cr =-P & \to \min.\cr}   \eqno(14.21)    $$  
+\vskip-10pt
+\noindent
+hence $\max=3t$ at $x=t, y = 0.$
+
+When $100 \le t \le 300,$  we pivot  (14.20) on  $-2/3$ and obtain
+$$\left[ \matrix{ \ \cr\ \cr\  \cr} \right.
+\matrix{
+u &     v &    1  \cr
+ -3/2  &    1/2   &    150-t/2 \cr
+ 1/2  &    -1   &    t/2-50 \cr
+ 5/2  &    1/2   &    -t/2-250 \cr
+    &      &    \cr}
+\left. \matrix{ \ \cr\ \cr\  \cr} \right]
+   \matrix{ =x  &\cr =y &\cr =-P & \to \min;\cr}   \eqno(14.22)    $$  
+\vskip-10pt
+\noindent
+hence $\max=t /2+250$ at  $x = 150-t/2, y= t/2-50.$
+\filbreak
+
+Note that the slope is decreasing (the law of diminishing return):
+
+
+ $$\matrix{ {\rm interval} & 0 \le t \le 100 & 100 \le t \le 300 & 300 \le t \cr
+{\rm slope} \hfill & 3 &  1/2 & 0.}$$
+
+
+The last tableau is optimal when $t = 200$ (the case in a  film on linear programming), and the slope is the last entry 
+in the $v$-column.
+If we start to change the first limit  200 (instead of the second limit 200), then the slope would 
+be 5/4.
+
+\bigskip
+\centerline {\twelvebf Exercises}
+\parindent=0pt
+
+\smallskip
+{\bf 1--4.} Solve the following linear programs, where all the variables $a,   b, c,  d,  e,  f, g, h, i,$ and $j$ are required to be nonnegative. 
+$Hint$. The row and column problem in a nonstandard tableau need not   be dual to each other.
+  
+
+$$\matrix{\ g \cr h \cr -1}
+\left[ \matrix{ \ \cr\ \cr\  \cr} \right.
+\matrix{
+a  &     b &     c &   1  \cr
+ 1  &   0   &   -1 & -2   \cr
+ 2   &    -1  & 0  &   -3 \cr
+0    &    2   &  1 &    0 \cr
+ =i  &   =j   & =k & =u   \cr}
+\left. \matrix{ \ \cr \ \cr\  \cr} \right]
+   \matrix{ & \cr  =d  & \cr =c  & \cr
+=w & \to \min \cr
+ \to \hfill  & \min. \hfill}   \leqno {\bf 1.}   $$  
+
+
+
+ 
+
+ $$\matrix{\ g \cr h \cr -1}
+\left[ \matrix{ \ \cr\ \cr\  \cr} \right.
+\matrix{
+a  &     b &     c &   1  \cr
+ 1  &  2   &   3 & -1   \cr
+ 2   &   0  & 1  &   3 \cr
+-1    &    1   &  0 &    0 \cr
+ =i  &   =j   & =k & =u   \cr}
+\left. \matrix{ \ \cr \ \cr\  \cr} \right]
+   \matrix{ & \cr  =d  & \cr =c  & \cr
+=w & \to \min \cr
+ \to \hfill  & \min. \hfill}   \leqno {\bf 2.}   $$  
+
+\medskip
+{\bf 3}
+\smallskip
+$\rowtab{&a&a&a&-1\cr
+\omit&0&0&0&0\cr
+\omit&0&0&0&0\cr
+\omit&0&0&0&0\cr}\thinspace\matrix{=d\hfill\cr =e\hfill\cr =w\rightarrow\hbox{min\hskip-1pt.}\cr}$
+\medskip
+
+{\bf 4.}
+\smallskip
+$\rowtab{&a&b&-1\cr
+\omit&1&0&1+\varepsilon\cr
+\omit&0&1&1\cr
+\omit&1&2&0\cr}\thinspace\matrix{=c\hfill\cr =d\hfill\cr =w\rightarrow\hbox{max,}\cr}$
+\medskip
+where $\varepsilon$ is a given number.
+ 
+\parindent=20pt
+\filbreak
+
+
+
+\noindent
+{\twelvebf\S  15.  More on Duality}  
+\smallskip
+\noindent
+The duality theorem has many facets and interpretations, and it was published in different forms by many authors including
+Fourier (1826), Gordan (1873),  Minkowski (1896), and  Farkas (1901).
+
+
+In Theorem 6.16, we gave a version of duality for systems of linear equations. Here is another form of this: The system of linear equations $A x = b$ has a solution if and only if $yb = 0$ for any row matrix $y$ such that $yA = 0.$ Here is how Fredholm (1903) stated this.
+
+{\it Exactly one of the following  two  systems is feasible:}
+\smallskip
+\centerline{(a) $Ax = b; $ \ (b)  $yA = 0, yb > 0. $}
+\smallskip
+
+We are going to state  a version of duality for systems of linear inequalities. 
+But first  we show a way to   deduce the dual problem from the primal problem. The main idea is to find a lower bound for the optimal value of the primal problem using the linear constraints of the primal problem. 
+Namely, we combine  linearly given constraints to obtain the lower bound.
+The dual program  turns out to be the following:    Maximize this lower bound.  
+ 
+Let us start with a simple example.  Suppose that we want to solve the linear program:
+\medskip
+$\left\{\matrix{\hfill\hbox{Minimize}& x+y\hfill\cr\hbox{subject to}& x+y\ge 2.}\right.$
+\medskip
+\noindent
+It is clear that $\hbox{min}\, (x+y) = 2.$
+\medskip
+Here is a more complicated example:  
+\medskip
+$\left\{\matrix{\hfill\hbox{Minimize}& 4x + 5y\hfill\cr\hbox{subject to}& x + 3y\ge 2,\cr\omit&2x-y\ge 3.}\right.$
+\medskip
+If we multiply the first constraint by 2 and add the result to the second constraint, then we obtain that $4x + 5y\ge 7.$  This constraint, which is a linear combination of given constraints with positive coefficients,  gives a low bound for the objective function: $\min (4x + 5y)\ge 7$ (under our conditions). Moreover, it is easy to see in this example that this lower bound can be reached; that is, it is sharp. Thus, 
+$$\min (4x + 5y)=7.$$
+
+ \filbreak
+\def\rightheadline{\tenrm\hfil{\it \S  15. More on Duality} \quad {\bf\folio}}
+
+Let us try this approach  to 
+   a  bigger LP, given by the following standard row tableau:
+$$
+\left[ \matrix{ \ \cr \ \cr \cr\ } \right.
+\matrix{x_1 & x_2 & x_3 & x_4 & 1 \cr
+1& 2 & 3 & 4 & 5  \cr
+1& -2 & 0& 4 & -1  \cr
+0& 2 & -3 & 1 & 0  \cr
+1& 2 & 3 & -4 & 5 \cr
+&&& } 
+\left.  \matrix{ \ \cr \ \cr \cr\ } \right] 
+ \matrix{ = u_1  \ge 0 \hfill  \cr= u_2 \ge 0  \hfill \cr= u_3 \ge 0 \hfill  \cr = z   \to \min,} \qquad {\rm all}\ \   x_i \ge 0 
+$$
+or, using matrices,
+$$
+ \left[ \matrix{ \ \cr \ } \right.
+\matrix{x & 1 \cr A & b \cr c & d\cr & } 
+\left.  \matrix{ \ \cr \ } \right] 
+ \matrix{ = u \ge 0 \hfill  \cr = z   \to \min,} \qquad x \ge 0
+$$
+or, using  matrix multiplication,
+ $$Ax^T\ge -b,\,\,x\ge 0,\,\,c  x^T + d \to \min\hskip-1pt.$$ 
+If $y$ is a column matrix such that $y\ge 0$ and $y^T\cdot A\le c,$ then we obtain that $c  x^T\ge u^T\cdot A  x^T\ge -y^T\cdot b.$ Thus, we  obtain a lower bound 
+$$z=c x^T+d \ge -y^T\cdot b+d$$
+ for the objective function $z$ using a linear combination of given constraints  $Ax^T\ge -b$ with nonnegative coefficients $y.$
+
+
+ 
+Next we try to pick $y$  as before such that the bound is as sharp as possible: 
+ 
+$$-u^T\cdot b+d\rightarrow\hbox{max,}\,\,y\ge 0,\,\,y^T\cdot A\le c.$$  
+ 
+This is the dual problem, which can be written  as the column problem in the same  standard tableau:
+$$
+  \matrix{-y \cr 1}     \left[ \matrix{ \ \cr \ } \right.
+\matrix{x & 1 \cr A & b \cr c & d\cr = v & =w} 
+\left.  \matrix{ \ \cr \ } \right] \kern-10pt
+ \matrix{\  \cr \qquad = u   \hfill  \cr \qquad = z   \to \min \cr
+  \to \max\hskip-1pt.  \hfill \cr } \qquad \matrix{x \ge 0, u \ge 0 \cr y \ge 0, v \ge 0}
+$$
+
+
+ In fact,    passing to matrices made our computation easy,
+and  they work   for the   LP given  by an arbitrary standard row tableau.
+
+Finding  $y\ge 0$ such that  $y^T\cdot A\le c$ is equivalent to
+writing the linear function  $cx$ as a linear combination   $y^TAx + ux$
+of the left-hand sides  $ Ax, x$  of   all given constraints
+$Ax \ge -b, x \ge 0$   with nonnegative coefficients $y, u,$ where
+$u$ is the row of basic variables for the dual (column) program.
+
+  
+So how  is the duality theorem   related to our situation? There is a possibility 
+that  our problem is unbounded.  Then obviously we cannot get any bounds for $z$ by any method, so the dual problem must be infeasible, which gives us a part of the theorem. There is a possibility that our problem is infeasible. 
+Then the theorem says that the dual problem is either unbounded or infeasible.
+In   terms of linear combinations, this means
+that either we can get arbitrary good bounds or no bound can be obtained as a linear combination. Finally, it may happen that our problem has an optimal solution.
+Then the theorem says that the optimal value is the best bound that can be obtained by linear combinations.
+
+Now we ask ourselves for which numbers $e$   the constraint $cx  \ge d'$ follows from the given constraints
+$Ax \ge -b, x \ge 0.$   In other words (see \S 4), does every feasible solution for the system satisfy the constraint as well?
+It is clear  that the answer depends on the relation between    min(cx) over 
+  the feasible region of the system and the number $d'.$  If
+$\min(cx) < d'$ (including the case when $\ min = -\infty,$  i.e., the program
+is unbounded), then the answer is no.
+If
+$\min(cx) \ge  e $ (including the case when  $\min = \infty, $ i.e., the program
+is infeasible), then the  answer is no.
+
+
+Therefore, we can easily get our version of duality theorem from
+the following version of the duality theorem.
+
+\smallskip
+\noindent
+{\bf
+Theorem 15.1.}  Given any system of inequalities  $A'x' \ge b'$  and another
+inequality  $c'x' \ge d'$  that follows from the system,
+then either  the inequality is  a linear combination of
+the constraints in the system together with the constraint $0 \ge -1$
+with nonnegative coefficients, or the system is infeasible and
+the constraint $0 \ge 1$ is a linear combination of the constraints of the system. \hfill \blackbox
+
+\smallskip
+ We put primes into the condition of the theorem
+because  the data are not the same as in the tableau. To apply the theorem,
+we take $A' = \bmatrix{ A\cr 1_n}$,  $n$ the number of variables in $x$,  $x' = x$,  $b' = -b$, and so on.
+\filbreak
+
+
+  Theorem 15.1 can be  obtained easily from our duality theorem using the standard trick $x = x' - x''; x', x''  \ge 0$ to write data in a standard row tableau.
+
+Now we    state a version of Theorem  6.16 for systems of inequalities. Suppose we are given a system of inequalities $Ax \ge b$  and another
+inequality  $cx  \ge d $ of the same type $\ge.$ Does the latter constraint follow
+from the system?  In other words (see \S 4), does every feasible solution for the system satisfy the constraint as well?
+
+It is clear  that the answer depends on the relation between    $\min(cx)$ over 
+  the feasible region of the system and the number $d.$  If
+$\min(cx) < d$ (including the case when $\min = -\infty,$  i.e., the program
+is unbounded), then the answer is $no.$
+If
+$\min(cx) \ge  d$  (including the case when  $\min = \infty,$  i.e., the program
+is infeasible), then the  answer is $yes.$
+
+% ????
+
+\smallskip
+\noindent
+{\bf Remark 15.2} The duality theorem implies that  any primal-dual pair of linear programs 
+ $$
+cx +d  \to \min, \  A x \ge -b, \ x\ge 0; \qquad -yb + d \to \max, \ yA  \ge c, 
+\ y \ge 0
+$$
+can be written as a system of linear constraints:
+$$
+A  x \ge -b, \  x\ge 0, \ cx  + y b=0, \ y \ge 0, \ yA \le c.
+$$  
+Every feasible solution $[x^T, y]$ to this system of linear constraints gives optimal solutions   $x$ and $y$ for both programs, and the optimal solutions $x$ and $u$  for the optimization problems give a solution $[x^T, y]$  for this system of constraints. In this sense linear programming is about solving systems of linear constraints. Another way to put it is that  finding an optimal solution for an LP can be reduced to Phase 1 for another LP.
+\hfill  \blackbox
+
+When a linear program comes from a real-life situation, 
+its dual also can be interpreted 
+in real-life terms. We consider now  Examples 2.1, 2.2, 2.3, 2.4 (in more
+general forms) and give economic  interpretations of the dual problems.
+
+\smallskip
+\noindent
+{\bf Example 15.3.} Consider the general diet problem  (a generalization of Example 2.1):
+$$Ax \ge b, x\ge 0, C= cx \rightarrow {\rm min,}$$
+where $m$ variables in $x$ represent different foods and $n$ constraints
+in $Ax \ge b$ represent ingredients. We want to satisfy given  requirements
+$b$  in ingredients using given foods at minimal cost $C.$
+
+On the other hand, consider a warehouse that sells the ingredients 
+at prices  $y_1,\ldots, y_n \ge 0.$ Its objective is to maximize the
+profit  $P= yb,$ matching the price for each food:  $yA \le c.$
+
+We can write both problems in a standard tableau using slack variables  $u = Ax - b \ge 0$ and  $v=c-yA  \ge 0$:
+$$\matrix{  -y^T \cr \ 1}   
+\left[ \matrix{\ \cr \ } \right.
+\matrix{x^T  & 1\cr A & -b \cr c  & 0 \cr =v  & = P }
+\left. \matrix{\ \cr \ } \right]
+\matrix{\cr =u \cr = C \cr \to \hfill } 
+\matrix{ \cr \cr \to \min  \cr \max. \hfill}  \qquad
+\matrix{ x \ge 0, u \ge 0  \cr   y \ge 0, v \ge 0} 
+$$
+
+So these two problems are dual to each other. In particular, the simplex method
+solves both problems, and if both problems are feasible, then  min($C$) = max($P$).  The shadow prices  mentioned in  \S 14 turn out to be the optimal prices for the ingredients in the dual problem,
+so they are called {\it dual prices} as well.
+
+Another economic interpretation for the same mathematical problem is that
+the variables in $x$ are intensities of different industrial processes, 
+the constraints correspond to different products, with $b$ being  
+the federal order to be fulfilled (or demand to be satisfied); $C = cx$  is the total
+cost that you want to minimize    using given processes and   satisfying given production
+quotas. With this interpretation for the primal problem, here is an interpretation
+for the dual problem:  A competitor,  Ann, 
+who lost the government contract,  says that you can buy the products  from her at her low prices $y \ge 0,$ matching unit cost for every process you got (i.e., $yA \le c$)  and maximizing her profit $ yb.$
+ 
+
+ With this interpretation, the optimal prices $y$ are {\it marginal costs} for you (i.e., they answer to the question  what is the additional cost to produce  an additional unit
+of each product).  In \S 14, we saw that the marginal costs decrease with increase in volume (in linear programming). \hfill
+\blackbox
+
+\smallskip
+\noindent
+{\bf Example 15.4.}  Consider the general mixing problem (a generalization of Example 2.1):
+$$Ax = b, x\ge 0, C= cx \rightarrow {\rm min,}$$
+where $m$ variables in $x$ represent different alloys and $n$ constraints
+in $Ax \ge b$ represent elements. We want to satisfy given  requirements
+$b$  in elements using given alloys at minimal cost $C.$
+\filbreak
+
+On the other hand, consider a dealer who buys and sells the elements 
+at prices  $y_1,\ldots, y_n.$  The positive price means that the dealer
+sells, and negative price means that the dealer  buys.  The dealer's objective is to maximize the
+profit   $P= yb,$ matching the price for each alloy:  $yA \le c.$
+
+To write the problems in standard tableaux, we use the standard tricks
+and  artificial  variables:
+\medskip
+$u' = Ax - b \ge 0,$ $u'' = -Ax +  b \ge 0;$
+
+     $v=c-yA  \ge 0; y = y' - y'',$ $ y' \ge 0, y'' \ge 0.$
+\medskip
+Now we manage to write both problems in the same standard tableau:
+$$
+\matrix{  -y'^T \cr -y''^T \cr \ 1}   
+\left[ \matrix{\ \cr \cr \ } \right.
+\matrix{x^T  & 1\cr
+ A & -b \cr
+-A & b \cr
+ c  & 0 \cr =v 
+ & = P }
+\left. \matrix{\ \cr \cr \ } \right]
+\matrix{\cr =u' \cr =u'' \cr  = C \cr \to \hfill } 
+\matrix{ \cr \cr \cr \to \min  \cr \max. \hfill}  \qquad
+\matrix{ x \ge 0, u \ge 0  \cr   y',y'' \ge 0, v \ge 0} 
+$$
+
+\noindent
+{\bf 
+Remark 15.5.}
+Adding an arbitrary constant $d$ to the linear objective $C,$  we get an arbitrary
+LP in standard form, and replacing  the last zero in the last row by $d,$ we have this LP in a standard row tableau.
+\smallskip
+\noindent
+{\bf Example 15.6.}  Consider a generalization of the manufacturing problem
+in Example 2.3:
+$$P=cx \to \max,  Ax \le b, x\ge 0,$$
+ where the variables in $x$ are the  amounts of products, $P$ is the profit 
+(or revenue) you
+want to maximize, 
+  constraints $Ax \le b$ correspond to resources (e.g.,  labor of different types,
+clean water you use, pollutants you emit, scarce raw materials), and the 
+given column $b$ consists of amounts of resources you have.
+Then the dual problem  
+$$ yb \to \min,  yA \ge c, y \ge 0$$
+admits the following interpretation.
+Your competitor, Bob  offers to buy you out at the following terms:
+You   go out of business, and he buys all resources you have 
+  at   price $y\ge 0,$   matching your profit for every product you may want to produce, and he wants to minimize his cost.
+
+Again Bob's optimal prices are your resource shadow prices by the duality theorem.
+The shadow price for a resource shows the increase in your  profit per unit increase in the quantity $b_0$
+of the resource available or decrease  in the profit  when the limit  $b_o$  decreases by one unit. While changing $b_0$ we do not change  the
+limits for the other resources and any other data for our program.  There are only finitely many  values of $b_0$ for which the downward and  upward shadow
+prices are different. One of these values could be the borderline
+between the values of $b_0$   for which the corresponding constraint is  binding
+   or nonbinding (in the sense that dropping of this constraint does not change the optimal value). 
+
+
+
+In \S 14, we saw  that the    shadow price of  a resource   cannot increase when 
+supply $b_0$ of this  resource increases (the law of diminishing returns).  
+
+\smallskip
+\noindent
+{\bf Example 15.7.}   This transportation problem is similar to Example 2.4, even though we have a different geographic setting. There are warehouses in Bedford and Scranton. They can supply 220 and 280 units, respectively. The retail stores are in State College,  Altoona, and Harrisburg. These need 170, 120, 210 units, respectively. The shipping cost table is:
+\smallskip
+ 
+
+\catcode`\*=\active
+\def*{\hphantom{0}}
+\vbox{\offinterlineskip\halign{
+\strut#&\quad #&\quad #&\quad #\cr\noalign{\leavevmode\hrule\smallskip\smallskip}\omit&$\,$\bf State College &\bf Altoona &\bf Harrisburg
+\cr\noalign{\smallskip\smallskip\hrule\smallskip\smallskip}
+\bf Bedford&	 ***77&	  ****39&	*****105\cr
+\bf Scranton&	   ***150&	  ****186&	*****122\cr\noalign{\smallskip\hrule}}}		
+\smallskip 
+
+The constraints are
+$$x_{ij}\ge 0, \,\,\, i=1,\,2;\,\,\, j=1,\,2,\,3\eqno {(i)}$$     
+$$\left\{\matrix{x_{11} &+& x_{12} &+& x_{13}&\le& 220\cr x_{21} &+& x_{22} &+& x_{23}&\le& 280\cr}\right.\eqno {(ii)}$$ 	 
+and
+$$\left\{\matrix{x_{11}&+&x_{21}&\ge&170\cr x_{12} &+& x_{22}&\ge&120\cr x_{13} &+& x_{23}&\ge& 210.\cr}\right.\eqno {(iii)}$$
+ 
+  Notice that in this LP  the sum of units available in the warehouses is 500, which equals the amount of units needed by the retail stores; this was not the case in the previous example (the warehouses had 130 widgets available, whereas the retail stores needed a total of 100). By looking at the constraints in $(ii),$ we obtain  
+$$x_{11} + x_{12} + x_{13} + x_{21} + x_{22} + x_{23}\le 500.\eqno {(iv)}$$
+On the other hand, $(iii)$ yields
+$$x_{11} + x_{12} + x_{13} + x_{21} + x_{22} + x_{23}\ge 500. \eqno {(v)}$$ 
+Combining the inequalities $(iv)$ and $(v),$ we obtain the equality
+$$x_{11} + x_{12} + x_{13} + x_{21} + x_{22} + x_{23} = 500.$$ 
+This equality means that the total supply equals the total demand, and it is called  the {\it  balance condition.}
+This condition allows us, if we   wish so,  to replace all the inequality signs in $(ii)$ and $(iii)$ by equality signs.   The balance condition forces the slack variables to be zero for all feasible solutions, so we obtain an equivalent problem if we replace all  $\le $ and  $\ge$ in 
+ $(ii)$ and $(iii)$ by equality signs.
+ 
+This  small problem can be  solved easily by the simplex method. In the next chapter 
+we will see that the simplex method works particularly well for transportation problems. Our goal now is to give an economic  interpretation for the dual problem.
+	First we use Example 15.7 to introduce potentials.  To put the problem in a standard row tableau, we  introduce slack variables.    Then we write the dual variables in the same tableau.
+ \smallskip
+
+\ \  \ \    $\matrix{ x_{11} && x_{12} && x_{13} && x_{21} && x_{22} && x_{23} &&  \ \ 1}$
+
+\noindent $\matrix {-u_1 \cr -u_2 \cr -v_1 \cr -v_2 \cr -v_3 \cr 1}$
+$\left[ \matrix{
+ -1&& -1&& -1&&  0&&  0&&  0&&  220 \cr 
+  0&&  0&&  0&& -1&& -1&& -1&&  280 \cr
+  1&&  0&&  0&&  1&&  0&&  0&& -170 \cr
+  0&&  1&&  0&&  0&&  1&&  0&& -120 \cr
+  0&&  0&&  1&&  0&&  0&&  1&& -210 \cr
+  77 &&  39 &&  105 &&  150 &&  186 && 122 &&    0 \cr}\right]$
+$\matrix {=y_1 \cr =y_2 \cr= z_1 \cr= z_2 \cr =z_3 \cr  =C}$
+
+\hskip8pt  $\matrix{\| && \hskip-5pt\| &&\hskip-1pt\| && \hskip-1pt\| &&\hskip-0pt\| &&\hskip-1pt\| && \hskip1pt\downarrow \cr
+   \ w_{11} && \hskip-5ptw_{12} && \hskip-1ptw_{13} && \hskip-1ptw_{21} && \hskip-0ptw_{22} &&  \hskip-1ptw_{23} && \hskip1pt{\rm max}}$
+
+\smallskip
+\noindent with  $u_i, v_j, w_{ij}, x_{ij}, y_{i}, z_{j} \ge 0.$
+
+\medskip
+	The objective function to be maximized by the dual problem is
+$$ -220u_1 - 280u_2 +170v_1 +120v_2 +210v_3 \eqno(15.8)$$
+ 
+The control variables ${u_i,v_j}$ of the dual problem are called {\it potentials}.  While the potentials correspond to the constraints on each retail store and each warehouse (or to the corresponding slack variables), there are other variables $w_{ij}$ in the dual problem that correspond to the decision variable 
+ $x_{ij}$  of the primal problem.  
+\filbreak
+
+They are the slack variables for the 
+six dual constraints
+$$w_{ij} = c_{ij} + u_i - v_j \ge 0 \ \forall \ i,j,  \eqno(15.9)$$
+where $i=1,2,$ \  $j=1,2,3,$
+and   $c_{ij}$ are the entries of the cost matrix
+$$c=\left[\matrix{77 & 39 &105  \cr 150 & 186 & 122 \cr }\right].$$
+So what is a possible meaning of the dual problem?
+
+
+  Imagine that you want to be a mover and suggest a simplified system of tariffs.
+Namely, you assign  a ``zone"  $u_i \ge 0$ $i=1,2$
+ to each of the warehouses
+and a  ``zone"  $v_j \ge 0$ $j=1,2$ to each of the retail stores.
+To beat competition, you want the constraints  (15.9).
+Your profit is (15.8), and you want to maximize it.
+
+\smallskip
+\noindent
+ {\bf Remark. 15.10.}
+	Observe that the problem is invariant under the change 
+$${u_i \rightarrow u_i+t, v_j \rightarrow v_j+t}$$
+  using any fixed value of $t$ for all $i,j$.  This allows us to ignore the conditions ${u,v \ge 0}$ if we   wish so.    
+
+\smallskip
+ 
+ 
+ 
+
+
+ 
+
+
+ 
+ 
+
+
+\bigskip
+\centerline {\twelvebf Exercises}
+\parindent=0pt
+\medskip
+{\bf 1--4.}  Find whether the last equation in the system is redundant
+(i.e., follows from the others).
+
+\medskip
+{\bf\ 1.}
+$\left\{\matrix{\hfill x + 2y + 3z = 4\cr
+\hfill 5x + 6y + 7z = 8 \cr
+\hfill 6x+ 8y + 10z = 0}\right.$ \qquad \qquad
+{\bf \ 2.}
+$\left\{\matrix{\hfill x + 2y + 3z = 4\cr
+\hfill 5x + 6y + 7z = 8 \cr
+\hfill 7x+10y+13z=16
+}\right.$
+\medskip  
+
+
+{\bf \ 3.}
+$x=6, y=5, z= 0,  2x-8y+3z=7$
+ 
+\medskip
+{\bf \ 4.}
+$\left\{\matrix{\hfill x_1 + 2x_2 + 3x_3 + 4x_4+5x_5= 6 \cr
+\hfill 6x_1 + 5x_2 + 4x_3 + 3x_4+ 2x_5= 1 \cr
+\hfill x_1 -x_2 +  x_3   -x_4+ x_5= 0}\right.$
+\bigskip  
+
+{\bf 5--8.}  Find whether the last constraint in the system is redundant
+(i.e., follows from the others).
+
+\medskip
+{\bf \ 5.}
+$\left\{\matrix{\hfill x + 2y + 3z = 4\cr
+\hfill 5x + 6y + 7z = 8 \cr
+\hfill 6x+ 8y + 10z \ge  0}\right.$ \qquad \qquad
+{\bf \ 6.}
+$\left\{\matrix{\hfill x + 2y + 3z \ge 4\cr
+\hfill 5x + 6y + 7z \ge 8 \cr
+\hfill 7x+10y+13z \ge 16
+}\right.$
+\medskip  
+
+
+{\bf \ 7.}
+$x=6, y=5, z= 0,  2x-8y+3z \le 7$
+ 
+\medskip
+{\bf \ 8.}
+$\left\{\matrix{\hfill x_1 + 2x_2 + 3x_3 + 4x_4+5x_5= 6 \cr
+\hfill 6x_1 + 5x_2 + 4x_3 + 3x_4+ 2x_5= 1 \cr
+\hfill x_1 -x_2 +  x_3   -x_4+ x_5 \ge 0}\right.$
+\bigskip  
+
+{\bf 9--14.}  Solve the linear program, where all $x_i \ge 0.$ . $Hint$: Solve the dual problem by graphical method.
+\smallskip
+
+{\bf \ 9.}
+
+$\left[ \matrix{ \cr \cr   } \right.
+\matrix{x_1 &x_2 &x_3 &x_4 &x_5 &x_6 &x_7&x_8&x_9 &\  1 \cr
+ \ 0 & \  8  &\  -5  &\ 6 & \ 7&\ 8  &\  3 &\ 5  & 4 & -1 \cr
+  -1 &\  2  &  -2  & 1  & 1  & 1   &\  2 &  2 & 5 &  \ 0 \cr
+&&&&&&& } \left. \matrix{ \cr \cr   } \right] $ 
+$   \matrix{\ge 0 & \cr   \to &  \min}  $
+
+{\bf 10.}
+
+$\left[ \matrix{ \cr \cr   } \right.
+\matrix{x_1 &x_2 &x_3 &x_4 &x_5 &x_6 &x_7&x_8&x_9 &\  1 \cr
+ \ 6 & \  8  &\  5  &\ 6 & \ 7&\ 8  &\  3 &\ 5  & 4 & -1 \cr
+  1 &\  2  &  5  & 1 & 1 & 1  &\  5 &  0 & 5 &  \ 0 \cr
+&&&&&&& } \left. \matrix{ \cr \cr  } \right] $ 
+$   \matrix{\ge 0 & \cr  \to &  \min}  $
+
+
+{\bf 11.}
+
+$\matrix{ \ x_1 &\ x_2 &x_3 &x_4 &x_5 &x_6 &x_7 &\  1}$
+
+$\left[\matrix{
+\, 3 &\,\  4  &\,\  1  &\,\ 1 &\,\  1 &\,\ 2  &\,\  3 & -1 \cr
+\, 4 &\,\  3  &\,\  1  &\,\ 0 &\,\  0 &\,\ 2  &\,\  4 & -2 \cr
+\, 5 &\,\  5  &   1.4  &\,\ 5 &\,\  6 &\,\ 3  &\,\  6 & 0}  
+\right] \matrix{=x_8 & \cr = x_9 &  \cr =z & \to \min} $
+ 
+\medskip
+{\bf 12.}
+
+$\matrix{ \ x_1 &\ x_2 &x_3 &\ x_4 &x_5 &x_6 &\ x_7 &x_8 &\  1}$
+
+$\left[\matrix{
+\, 6 &\,\  4  &\,\  1  &\,\ 10 &\,\  5 &\,\ 2  &\,\  8 &  7 &-1 \cr
+\, 19 &\,\  9  &\, 10  &\,\ 1 &\,\  9 &\, 10  &\,\  6 & 7 & -2 \cr
+\, 20 &\, 10  &   10  &\, 10 &   10 &\, 11  &\,   10 & 10 & 0}  
+\right] \matrix{=x_9 & \cr = x_{10} &  \cr =z & \to \min} $
+
+\medskip
+{\bf 13.}
+
+$\left[ \matrix{ \cr \cr \cr } \right.
+\matrix{x_1 &x_2 &x_3 &x_4 &x_5 &x_6 &x_7&x_8&x_9 &\  1 \cr
+ \ 6 & \  8  &\  5  &\ 6 & \ 7&\ 8  &\  3 &\ 5  & 4 & -1 \cr
+  29 &\  29  &  14  & 14 & 13 & 13  &\  4 &\  8 & 3 & -2 \cr
+  31 &\  32  &  15  & 15 & 15 & 15  &\  5 &  20 & 5 &  \ 0 \cr
+&&&&&&& } \left. \matrix{ \cr \cr \cr } \right] $ 
+$   \matrix{\ge 0 & \cr \ge 0 &  \cr \to &  \min}  $
+
+\medskip
+{\bf 14.}
+
+$\left[ \matrix{ \cr \cr \cr } \right.
+\matrix{x_1 &x_2 &x_3 &x_4 &x_5 &x_6 &x_7&x_8&x_9 &\  1 \cr
+ \ 6 & \  8  &\  5  &\ 6 & \ -7&\ 8  &\  3 &\ 5  & 4 & -1 \cr
+  -9 &\  0  &  -4  & 1  & 13 & 13  &\  4 &\  8 & 3 & -2 \cr
+  -1 &\  2  &  -5  & 15 & 15 & 15  &\  5 &  0 & 5 &  \ 0 \cr
+&&&&&&& } \left. \matrix{ \cr \cr \cr } \right] $ 
+$   \matrix{\ge 0 & \cr \ge 0 &  \cr \to &  \min}  $
+ 
+% f[x_]:=(225-x^2)^0.5
+\end
+
+Alternatives:
+http://carbon.cudenver.edu/~hgreenbe/glossary/
+
+tex ch5
+
+dvips -o ch5.ps ch5.dvi
+
+ps2pdf ch5.ps

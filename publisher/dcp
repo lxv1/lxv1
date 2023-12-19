@@ -1,0 +1,537 @@
+ \magnification=1100
+\hsize=4.5 true in
+\vsize=7.5 true in
+
+\pageno=-4
+\nopagenumbers
+
+%The arabic number and the chapter title should be minimally
+%20 or 22 points, rather than the 13 or 14 pt font you have now.  The word
+%"chapter" could be 18 pts in size. 
+
+\font\ch=cmbx10 at 18truept
+\font\ten=cmr10 at 9truept
+\font\tenit=cmmi10 at 9truept
+\font\chtitle=cmbx10 at 21truept
+
+\font\eighteenbf=cmbx10 scaled\magstep4  % 20.736x1.1=22.8096
+\font\sixteenbf=cmbx10 scaled\magstep3 %17.28x1.1=19.008
+\font\fourteenbf=cmbx10 scaled\magstep2 % 14.4x1.1=15.84 was fontsize for ch title
+\font\twelvebf=cmbx10 scaled\magstep1 %12x1.1=13.2 was fontsize for ch
+ 
+ 
+
+\
+\vskip 2in
+{\fourteenbf
+For our students}
+\filbreak
+
+
+
+
+% \headline={\ifnum\pageno=-5\title\else\ifodd\pageno\rightheadline 
+% \else\leftheadline\fi\fi}
+
+
+\voffset=2\baselineskip
+\vskip .5in
+ \
+\bigskip
+ \bigskip
+\bigskip
+
+ 
+%\font\ch=cmbx10 at 18truept
+ 
+
+
+\parindent=0pt
+
+{\ch Contents} 
+\smallskip
+\hrule
+\bigskip
+\bigskip
+
+ 
+{\bf Preface}  {   \dotfill  vii}
+
+\bigskip
+
+{\twelvebf Chapter 1.\quad  Introduction}
+\bigskip
+ 
+{\bf 1.}\quad   What  Is  Linear  Programming?\dotfill 1
+\smallskip
+
+{\bf 2.}\quad  Examples of Linear Programs\dotfill 12
+
+\smallskip
+ 
+
+{\bf 3.}\quad   Graphical Method \dotfill 25
+
+
+\bigskip
+\bigskip
+{\twelvebf Chapter 2.\quad  Background}
+\bigskip
+ 
+
+{\bf 4.}\quad   Logic\dotfill 34
+\smallskip
+{\bf 5.}\quad   Matrices\dotfill 43
+\smallskip
+{\bf 6.}\quad   Systems of Linear Equations\dotfill 54
+ 
+\bigskip
+\bigskip
+{\twelvebf Chapter 3.\quad  Tableaux and Pivoting}
+\bigskip
+{\bf 7.}\quad   Standard and Canonical Forms for Linear Programs  \dotfill 67 
+\smallskip
+{\bf 8.}\quad   Pivoting Tableaux\dotfill 76
+ 
+\smallskip
+{\bf 9.}\quad  Standard Row Tableaux\dotfill 89
+ 
+\bigskip
+\bigskip
+{\twelvebf Chapter 4.\quad  Simplex Method}
+\bigskip
+ 
+{\bf 10.}\quad   Simplex Method,  Phase 2\dotfill 100
+\smallskip
+{\bf 11.}\quad   Simplex Method, Phase 1\dotfill 112
+\smallskip
+{\bf 12.}\quad   Geometric Interpretation  \dotfill 121
+ 
+  \vfill
+%\eject
+\bigskip
+\bigskip
+\nopagenumbers % supress footlines
+
+
+{\twelvebf Chapter 5.\quad Duality}
+\bigskip
+ 
+ 
+{\bf 13.}\quad   Dual Problems\dotfill 133
+\smallskip
+ 
+{\bf 14.}\quad     Sensitivity Analysis and Parametric Programming\dotfill 143 
+\smallskip
+{\bf 15.}\quad  More on Duality \dotfill 156
+ 
+\bigskip
+\footline{\hfill{\bf \folio}\hfill}
+% \centerline{v}
+
+
+\headline={\ifnum\pageno=-5\title\else\ifodd\pageno\rightheadline
+\else\leftheadline\fi\fi}
+\def\title{\hfil{}\hfil}
+\def\rightheadline{\tenrm\hfil{\it Contents}\quad {\bf\folio}}
+\def\leftheadline{\tenrm{\bf\folio}\quad{\it Contents} \hfil}
+
+\eject
+
+
+
+
+
+{\twelvebf Chapter 6.\quad Transportation Problems}
+\bigskip
+ 
+{\bf 16.}\quad   Phase 1 \dotfill 166
+\smallskip
+{\bf 17.}\quad   Phase 2 \dotfill 179
+\smallskip
+{\bf 18.}\quad  Job Assignment Problem \dotfill 192
+\bigskip
+\bigskip
+{\twelvebf Chapter 7.\quad Matrix Games}
+ 
+\bigskip	
+{\bf 19.}\quad   What are Matrix Games? \dotfill 199
+\smallskip
+{\bf 20.}\quad   Matrix Games and Linear Programming \dotfill 211
+\smallskip
+{\bf 21.}\quad   Other Methods \dotfill 221
+\bigskip
+ 
+\bigskip
+ 
+{\twelvebf Chapter 8.\quad Linear Approximation}
+\bigskip
+ 	
+{\bf 22.}\quad     What is Linear Approximation? \dotfill 229
+\smallskip
+{\bf 23.}\quad   Linear Approximation and Linear Programming \dotfill 241
+\smallskip
+{\bf 24.}\quad   More Examples \dotfill 251
+ 
+\bigskip
+\bigskip
+{\twelvebf Appendix.   Guide to Mathematical Programming} 
+\bigskip
+ 
+{\bf\ A1.}\quad    Mathematical Programming \dotfill 257
+\smallskip
+{\bf  \  A2.}\quad    Univariate Programming \dotfill 261
+\smallskip
+{\bf  \  A3.}\quad    Convex and Quadratic  Programming \dotfill 270
+\smallskip
+{\bf  \  A4.}\quad    Multivariate Programming \dotfill 273
+\smallskip
+{\bf  \  A5.}\quad    Interior Methods \dotfill 280
+\smallskip
+{\bf  \  A6.}\quad    Perturbation \dotfill 286
+\smallskip
+{\bf  \  A7.}\quad    Goal Programming   \dotfill 287
+\smallskip
+{\bf  \  A8.}\quad    Linear Programming in  Small Dimension \dotfill 289
+\smallskip
+{\bf  \  A9.}\quad    Integer Programming  \dotfill 292
+\smallskip
+{\bf A10.}\quad    Sorting, Order Statistics, and  Saddle Points \dotfill 295
+\smallskip
+{\bf A11.}\quad    Other Topics and Recent Developments \dotfill 298
+\smallskip
+\bigskip
+
+{\bf Bibliography}  {   \dotfill  301}
+
+{\bf Answers to Selected Exercises}  {   \dotfill  305}
+
+{\bf Index}  {   \dotfill  318}
+
+\parindent=20pt
+\nopagenumbers
+\filbreak
+
+
+% \pageno=-5
+
+\headline={\ifnum\pageno=-5\title\else\ifodd\pageno\rightheadline
+\else\leftheadline\fi\fi}
+%\def\title{\hfil{\sixteenbf LINEAR PROGRAMMING}\hfil}
+\def\title{\hfil{}\hfil}
+\def\rightheadline{\tenrm\hfil{\it Contents}\quad {\bf\folio}}
+\def\leftheadline{\tenrm{\bf\folio}\quad{\it Contents} \hfil}
+\voffset=2\baselineskip
+\vskip .5in
+
+\bigskip
+\bigskip
+\bigskip
+
+%\noindent
+%{ \fourteenbf      Preface}
+%
+\noindent
+{ \ch      Preface}
+%\font\ch=cmbx10 at 18truept
+\smallskip
+\hrule
+\bigskip
+
+\footline{\hfill{\bf \folio}\hfill}
+\headline={\ifnum\pageno=-7\title\else\ifodd\pageno\rightheadline
+\else\leftheadline\fi\fi}
+\def\rightheadline{\tenrm\hfil{\it Preface}\quad {\bf\folio}}
+\def\leftheadline{\tenrm{\bf\folio}\quad{\it Preface} \hfil}
+
+\noindent
+{\bf Why This Book Was Written}
+
+% \noindent
+% I have been teaching Math 484, Linear Programming, at Penn State since 1983.
+% This course is a one-semester course carrying three credits. Most students 
+% enrolled are seniors, and they have
+\noindent
+This text has evolved from an advanced undergraduate math course serving students with 
+ different mathematical backgrounds and various majors, including mathematics, computer science, 
+statistics, engineering, secondary education, actuarial science,  computer
+engineering,  science, and business. Some students are in the integrated five-year science/business program leading to a Master's in Business Administration, and some are Ph.D. students.
+
+Since this course does not require deep mathematical theories such as
+calculus, differential equations, abstract algebra, topology or
+number theory,
+it offers an opportunity for students with modest mathematical 
+backgrounds to learn some useful and important mathematics. 
+With this in mind, I tried to avoid, whenever possible, deep or complicated 
+mathematical concepts such as vector spaces, determinants, echelon forms,
+limits, and derivatives.
+ 
+
+
+  Many students enroll because linear programming is widely used in
+ business and other areas.
+They need to learn how to formulate real-life problems, how to adapt the
+formulation for specific computer software, and how to interpret and apply the results of
+computations 
+back to   real-life problems. In the case when a computer does not
+produce any result or produces nonsense, they should be able  
+to adjust the problem or choose an appropriate software.
+
+% Word problems...
+
+
+There are many excellent textbooks on linear programming,
+but most of them require a strong  mathematical background
+and are accessible only to mathematics majors
+or written for advanced students and contain much more than can be covered in a one-semester course. 
+
+It is a real challenge to keep both advanced students and beginners in one class!
+Although linear algebra is a prerequisite for linear programming at Penn State, some students in class have
+difficulty solving  systems of linear equations.  
+On the other hand,
+some students  in class are strong in mathematics or computer science.
+
+So I tried   to avoid texts that are
+  a bit like the porridge that Goldilocks
+rejected---they either presented material that was  too ``cold'' in that it was
+trivialized or they presented material that was too ``hot'' in 
+that it was
+predicated on a rigorous mathematical background.  In 
+the former case, many students
+were bored; in the latter case, many students found the material to be
+inaccessible.  
+ 
+% \headline={\ifnum\pageno=-5\title\else\ifodd\pageno\rightheadline
+% \else\leftheadline\fi\fi}
+
+%\def\title{\hfil{\sixteenbf LINEAR PROGRAMMING}\hfil}
+\def\title{\hfil{}\hfil}
+
+
+
+
+ \smallskip
+ % \centerline{vii}
+ 
+
+ 
+
+
+  
+
+
+% \filbreak
+The  text  starts from
+the   beginning, assuming very little mathematical background. Thus, I offer the reader
+the opportunity to learn linear programming integrally by  first considering
+relevant tools from linear algebra and logic before seeing  the simplex method.  
+The section on logic is an important, albeit often ignored, component of linear
+programming. Throughout the book, I present a rich palette of examples and
+applications and I ask students to attempt exercises of differing degrees of
+difficulty. Students like this approach to linear
+programming, as evidenced by the enrollment and  remarks they have made on their end-of-semester
+evaluation forms.  
+
+
+  \nopagenumbers
+
+
+ 
+
+
+The widespread availability of computers has not eliminated the need for computational skills, but it has increased the
+relative importance of logical skills. It is a curiosity rather than an
+important asset, nowadays, if you can compute 100 digits of  $\pi$ by hand.
+Today computers can compute the first  $10^{10}$ digits. 
+But is it   logically possible to compute the $10^{100}$-th digit of $\pi$?
+
+% Can you detect a fallacy in the following statement
+% in New Yorker: p.62
+% ..............computation of remote digits of $\pi$......
+
+
+
+\medskip
+\noindent
+{\bf How to Use This Book}
+
+\noindent
+The text is written at three levels.  Most of it
+is accessible to students who even do not know linear algebra or calculus.
+Remarks and some exercises are addressed to more sophisticated students.
+ The appendix at the end of the book gives a general idea of
+further developments
+in linear and mathematical programming. It is
+intended as a guide for further studies. Also it gives details on topics mentioned in Chapters 1 through 8 requiring a
+stronger mathematical background and a level of experience and sophistication on the part of students that is 
+beyond what is typically achieved by undergraduate students in the United States.
+
+
+Many examples with solutions are given in the text, so I feel that it is not
+necessary to give students solutions for numerous exercises.
+However, at the end of book, answers are given to some exercises including those that  
+could be tricky.  Exercises are of different difficulties, but all of them can be
+solved by hand.
+Computers are allowed but not required in class. I do not give
+problems where  computer skills give a big advantage. 
+The exercises in the first section of Chapter 1, besides checking understanding of definitions, also
+test the mathematical background of students. 
+
+% Exercises in the book can be used for various tests such as quizzes, 
+% homework, midterms, and finals.
+%  I suggest a quiz or homework for each section and three midterms.
+
+
+ 
+
+
+\medskip
+\noindent
+{\bf     Acknowledgments and  References}
+
+\noindent
+My class notes evolved over several years, and many students and graders contributed
+to their improvement by pointing out misprints and errors and asking
+questions. Reviewers and editors of Prentice Hall made numerous corrections and
+improvements.
+
+\filbreak  
+% \bigskip
+
+\nopagenumbers % suppress footlines
+
+I deliberately chose not to tie this book to a particular  
+software package, because I  believe that if students learn the material in this text, they
+can intelligently apply this knowledge when  using any one of the excellent
+software packages now available.  Another reason is that any particular package
+will be soon outdated with the appearance of new packages and advances in computers
+and operating systems.
+
+% However, the students in class are allowed to use
+% any hardware and software they like, even during tests. 
+
+  However, the students  are allowed to use
+ any hardware and software they like, with proper references, in homework. Software
+that can do linear programming includes $Mathematica, Maple,$ and $Excel.$
+
+More software for linear programming is available via the Internet
+either to be downloaded for free or to be used online. There is a lot
+of useful information about  linear programming on the Internet. I list
+some URLs, but keep in mind that the Web changes rapidly:
+
+\smallskip
+\noindent
+$\bullet$
+% http://carbon.cudenver.edu/~hgreenbe/glossary/ 
+ http://glossary.computing.society.informs.org/
+ 
+(Mathematical Programming Glossary)
+
+\noindent
+$\bullet$
+http://www.mathprog.org/
+
+(Mathematical Programming Society)
+
+\noindent
+$\bullet$
+% http://iris.gmu.edu/~asofer/siagopt.html
+http://www.siam.org/activity/optimization/
+
+ (SIAM Activity Group on 
+ Optimization)
+
+\noindent
+$\bullet$
+http://solon.cma.univie.ac.at/~neum/glopt.html 
+
+(Global Optimization, Wien)
+
+\noindent
+$\bullet$
+http://www.informs.org/Resources/
+
+(INFORMS)
+
+\smallskip
+ Searching the Web
+with the  keyword ``linear programming"  will yield many other  Web sites.
+There are many books on linear programming. The Web site 
+\smallskip
+\centerline{
+http://www.amazon.com}
+\smallskip
+\noindent
+ listed   771 matches for ``linear programming"  on 
+August 16, 2002.
+
+There are also many journals that  publish  papers on   linear and nonlinear
+programming. The Web site
+\smallskip
+\centerline{
+ http://www.informs.org/Resources/}
+\smallskip
+\noindent
+lists 36 hardcopy journals and 14 
+online journals on operations research (as of August 16, 2002).
+It lists also 35 societies related to operations research. 
+
+\bigskip
+\hfill Leon Vaserstein
+
+\hfill  vstein@math.psu.edu
+\filbreak
+\
+\bigskip
+\
+\bigskip
+\
+\bigskip
+
+\noindent
+P.S. Student's manual with corrections to the first print is  at  
+
+\centerline{ http://personal.psu.edu/lxv1/LPbook/sol2.pdf}
+
+ Instructor's manual
+is available upon request.
+
+ 
+
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+
+
+\def\rightheadline{  }
+\def\leftheadline{\hfill  \hfil}
+\end
+
+
+tex dcp
+
+dvips -o dcp.ps dcp.dvi
+
+ps2pdf dcp.ps
+
+
+
+Page ix - http://carbon.cudenver.edu/hgreenbe/glossary/ no longer exists
+Page ix - 
+<http://iris.gmu.edu/asofer/siagopt.html>http://iris.gmu.edu/asofer/siagopt.html 
+no longer exists
+Page ix - 
+<http://solon.cma.univie.ac.at/neum/glopt.html>http://solon.cma.univie.ac.at/neum/glopt.html 
+no longer exists
+Page ix - 
+<http://www.informs.org/Resources/>http://www.informs.org/Resources/ 
+changed to 
+<http://www2.informs.org/Resources/>http://www2.informs.org/Resources/ 
+because when I typed this URL in, it redirected me to this site
+

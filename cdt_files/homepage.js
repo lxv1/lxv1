@@ -1,0 +1,1 @@
+document.write('<a target="_new" href="http://ad.doubleclick.net/click;h=v2|2fbc|0|0|%2a|u;5325398;0-0;0;7939206;1-468|60;2485625|2483857|1;;%3fhttp://www.centredaily.com/mld/centredaily/classifieds/employment/"><img src="http://m.doubleclick.net/viewad/827893/4-9279_cb_468x60a1_move.gif" border=0 alt="Click Here for the Most Local Jobs - CareerBuilder.com"></a>');

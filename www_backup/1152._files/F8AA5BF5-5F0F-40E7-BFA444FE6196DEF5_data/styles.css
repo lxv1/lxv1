@@ -1,0 +1,42 @@
+<!--
+body  { 
+scrollbar-face-color: #ffffff;
+scrollbar-highlight-color: #2E6CB3;
+scrollbar-shadow-color: #7CA3CA; 
+scrollbar-3dlight-color: #7CA3CA;
+scrollbar-arrow-color: #2E6CB3;
+scrollbar-track-color: #7CA3CA;
+scrollbar-darkshadow-color: #7CA3CA;
+scrollbar-base-color: #7CA3CA;
+background-color: #003366;
+ FONT-SIZE: 12px;
+ MARGIN: 0px;
+ * }
+
+a:link       { text-decoration: underline; color: black; font-family: Tahoma, Verdana}
+a:visited    { text-decoration: underline; color: black; font-family: Tahoma, Verdana }
+a:active     { text-decoration: underline; color: black; font-family: Tahoma, Verdana }
+a:hover      { text-decoration: underline; color: blue; font-family: Tahoma, Verdana }
+
+a.footer, a:visited.footer, a:active.footer {
+	font-size : 7.5pt;
+	font-weight : normal;
+	font-family : Verdana;
+	text-decoration : none;
+}
+a:hover.footer {
+	font-size : 7.5pt;
+	font-weight : normal;
+	font-family : Verdana;
+	text-decoration : underline;
+}
+
+.title {
+color: white;
+font-size: 12; 
+font-weight: bold;
+text-decoration: none;
+font-family: Verdana;}
+
+p,td,b,strong { text-decoration: none; color: #3B4977; font-family: Tahoma, Verdana; FONT-SIZE: 12px }
+-->

@@ -1,0 +1,1915 @@
+\magnification=1100
+\hsize=4.5 true in
+\vsize=7.5 true in
+
+\def\blackbox{\vrule height 1.2ex width 1.0ex depth -.2ex}
+\input psfig
+
+\font\ch=cmbx10 at 18truept
+\font\chtitle=cmbx10 at 21truept
+\font\fourteenbf=cmbx10 scaled\magstep2
+\font\twelvebf=cmbx10 scaled\magstep1
+%\magnification=\magstep1
+
+\def\bmatrix#1{\left[\matrix{#1}\right]} %matrix with brackets []
+
+\catcode`\@=11
+\def\m@th{\mathsurround=0pt }
+
+%this is the code to write matrices 
+
+\def\matriz#1{\,\vcenter{\normabaselines\m@th
+\ialign{\hfil$##$\hfil&&\quad\hfil$##$\hfil\crcr
+\mathstrut\crcr\noalign{\kern-\baselineskip}
+#1\crcr\mathstrut\crcr\noalign{\kern-\baselineskip}}}\,}
+
+%this is the code to write tableaux with square brackets 
+ 
+\newdimen\p@renwd\setbox0=\hbox{\tenex B}\p@renwd=\wd0 
+\def\rowtab#1{\begingroup \m@th\setbox0=\vbox{\def\cr{\crcr\noalign{\kern2pt\global\let\cr=\endline}}
+\ialign{$##$\hfil\kern2pt\kern\p@renwd&\thinspace\hfil$##$\hfil
+&&\quad\hfil$##$\hfil\crcr
+\omit\strut\hfil\crcr\noalign{\kern-\baselineskip}
+#1\crcr\omit\strut\cr}}
+\setbox2=\vbox{\unvcopy0 \global\setbox1=\lastbox}
+\setbox2=\hbox{\unhbox1 \unskip \global\setbox1=\lastbox}
+\setbox2=\hbox{$\kern\wd1\kern-\p@renwd \left [ \kern-\wd1
+\global\setbox1=\vbox{\box1\kern2pt}
+\vcenter{\kern-\ht1 \unvbox0 \kern-\baselineskip} \,\right]$}
+\;\vbox{\kern\ht1\box2}\endgroup}
+
+\pageno=100
+
+\headline={\ifnum\pageno=100  \else\ifodd\pageno\rightheadline \else\leftheadline\fi\fi}
+\def\title{\hfil{\fourteenbf Chapter IV   Simplex method}\hfil}
+ 
+\def\leftheadline{\tenrm{\bf\folio}\quad{\it Chapter 4  Simplex Method} \hfil}
+\voffset=2\baselineskip
+
+\def\rightheadline{\tenrm\hfil{\it\S  10.  Simplex Method,  Phase 2}\quad {\bf\folio}}
+\
+\bigskip
+\bigskip
+\bigskip
+\noindent  {\ch  Chapter} {\chtitle 4}
+\bigskip
+\bigskip
+\noindent  {\chtitle  Simplex Method }
+ \medskip
+\hrule
+\bigskip
+\bigskip
+\noindent
+ {\twelvebf\S 10. Simplex Method,  Phase 2}
+
+\smallskip
+\noindent
+The simplex method,  described in terms of standard row tableaux, is a way
+  of choosing pivot entries   in order to reach a terminal tableau in finitely
+many pivot steps.  Usually, a simplex method works in two stages, or phases. In Phase 1 our objective is to find a feasible solution,
+and in Phase 2  we try to improve our objective function, staying feasible until we reach an optimal solution.
+In this section we provide a  precise description of Phase 2.
+Phase 1  is similar but somewhat more complicated and will be described 
+in detail in the next section.  There are  tricks to reduce  Phase 1 to Phase 2
+as well as Phase 2 to Phase 1. The dual point of view  
+switches the two phases (Chapter 5).
+
+We start with an arbitrary linear program   written in standard row tableau:   
+$$\rowtab{&x&1\cr\omit&A&b\cr\omit
+&c&d\cr}\quad\matrix{=u\hfill&\omit&\omit\cr=z\rightarrow\hbox{min,}&x \ge 0, &u \ge 0\cr} \eqno(10.1)$$
+ Here  $A$  is a matrix of coefficients, $b$ is a column   representing the right-hand sides of   linear constraints, $c$  is a row   representing the coefficients of the objective function, $d$  is a given number, $x$  is a row   of variables (called {\it nonbasic variables}), $u$  is a column of variables (called {\it basic variables}), and $z$ is the objective variable; all variables in  $x,\,\, u,\,\, z$  are distinct.  
+
+	
+In matrix notation, our linear program is
+\smallskip
+ minimize $z = cx^T + d,$ subject to $Ax^T + b = u  \ge  0, \ x  \ge 0.$
+ \smallskip
+If we obtained this tableau from the linear program in canonical form
+
+ minimize $z = cx^T + d,$ subject to $-Ax^T     \le  b, \ x  \ge 0,$
+
+\noindent then the variables in $u$ are slack variables.  However, after a few 
+pivot steps, some slack variables can become nonbasic  (i.e., they can go to the top margin). In this case we say  that these variables and the corresponding inequalities in the normal form
+ become  $active.$   
+
+\smallskip
+\noindent
+{\bf 
+Remark.} 
+In general, an inequality constraint in an optimization problem is called
+$active,$ or $tight,$  
+ for a feasible solution if the  inequality holds as equality.   For comparison,  a $binding $  constraint is a constraint  whose removal changes the 
+optimality region (in a stronger version, the optimal value). For a linear program,
+any binding  constraint is tight for an optimal solution. \hfill \blackbox
+ 
+
+ 
+ 
+Note that the system of linear equations $A^T\cdot x + b = u$ has a solution given by $x = 0,\,\, u = b.$ Such a solution is called the {\it basic solution} for the given standard row tableau. The corresponding value for the objective function is $d.$ This justifies the following definition: 
+
+\smallskip
+\noindent
+{\bf Definition 10.2.}  A standard tableau [see (10.1)] is called {\it row feasible}  if  $b \ge 0$ (i.e., the basic solution is feasible). \hfill \blackbox
+
+For example, the following two standard tableaux are feasible:
+$$\rowtab{&x & 1\cr
+\omit& -1& 1\cr
+\omit& 0& 0\cr
+\omit &-2 &-3 \cr}\quad
+\matrix{
+=u\hfill&\omit&\omit\cr
+=v\hfill&\omit&\omit\cr
+ \rightarrow\hbox{min}& } {\rm and}
+\rowtab{&  1\cr
+\omit&  2\cr
+\omit& 3\cr
+\omit &-2   \cr}\quad
+\matrix{
+=x\hfill&\omit&\omit\cr
+=y\hfill&\omit&\omit\cr
+ \rightarrow\hbox{min.}& } \eqno(10.3)
+$$
+The corresponding basic solutions are
+$$ x=0, u =1 , v =0 \  {\rm and} \  x=2, y= 3.    $$
+They are both feasible. Here are two standard tableaux that
+are not feasible:
+$$\rowtab{&x & 1\cr
+\omit& -1& 1\cr
+\omit&  1& -1\cr
+\omit &-2 &-3 \cr}\quad
+\matrix{
+=u\hfill&\omit&\omit\cr
+=v\hfill&\omit&\omit\cr
+ \rightarrow\hbox{min}& } {\rm and}
+\rowtab{&  1\cr
+\omit&  -2\cr
+\omit& 3\cr
+\omit &-2   \cr}\quad
+\matrix{
+=x\hfill&\omit&\omit\cr
+=y\hfill&\omit&\omit\cr
+ \rightarrow\hbox{min.}& }  \eqno(10.4) 
+$$
+The corresponding basic solutions are
+$$ x=0, u =1 , v =-1 \  {\rm and} \  x=-2, y= 3.  $$
+These solutions are not feasible.  
+
+ \nopagenumbers % suppress footlines
+
+  
+
+ \smallskip
+\noindent
+{\bf Definition 10.5.}  The preceding tableau (10.1) is called {\it optimal}
+ if  $b \ge 0$ and $c \ge 0.$  \hfill \blackbox
+
+ 
+
+In this case, the basic solution is an optimal solution and  $d$  is the optimal value. Indeed,  on one hand the basic solution $x = 0,\,\, u = b$ is feasible (because $b \ge 0$) and the objective function  $z$  reaches the value $d$  at this basic solution. On the other hand, since $c \ge 0,$ we conclude that $z =  c^Tx + d  \ge d$  for any row matrix  $x \ge 0,$ so we cannot get a smaller value for $z$ (i.e., $d$ is the minimum value that $z$ can attain).
+For example, the first tableau  in (10.3) is  not optimal while the second one is, with $\min =-2.$
+
+In fact, any optimal tableau describes all the optimal solutions for our linear program by a system of linear constraints. All nonbasic variables corresponding to nonzero entries of $c$  must be zero in any optimal solution. For other variables, the tableau gives a system of linear equations, which, together with the conditions of nonnegativity for the variables, are necessary and sufficient for optimality.  Also an optimal solution gives other useful information
+about the basic optimal solution  (cf.  Chapter 5).
+
+
+Thus, our linear program is   solved if it can be described by an optimal tableau.  A simplex method attempts to obtain an optimal tableau  by a few pivoting steps, starting from an arbitrary (standard) tableau. We will never choose pivot entries in the last column (the column of constants with 1 in the top margin) or the last row (the row that represents the objective function), so our pivoting steps take standard tableaux into standard tableaux. 
+ 
+
+Phase 2 of our simplex method starts with a feasible tableau, and it will produce either an optimal tableau or a tableau with a {\it bad column,} which is defined as follows.
+
+ \smallskip
+\noindent
+{\bf Definition 10.6.}  A {\it bad column} in a standard tableau is a column
+that is not the last column  (labeled by 1 on top) with the last
+entry negative and all other entries nonnegative. \hfill \blackbox
+
+
+For example, all tableaux in (10.3) and (10.4) have no bad columns, but the
+following two tableaux have one bad column each:
+$$\rowtab{&  y & 1\cr
+\omit&   1  & 1  \cr
+\omit&   1 & 0 \cr
+\omit   &-3 & -1  \cr}\quad
+\matrix{
+=u\hfill&\omit&\omit\cr
+=v\hfill&\omit&\omit\cr
+  \to\min,& }   
+ \rowtab{&x & y & 1\cr
+\omit& 0& -1  & 1  \cr
+\omit&  0 & 1 & -3 \cr
+\omit &-1 &-3 & -1  \cr}\quad
+\matrix{
+=u\hfill&\omit&\omit\cr
+=v\hfill&\omit&\omit\cr
+ =  \to\min.& }$$
+
+
+Suppose we have a bad column. Then we can  give the variable on the top
+larger and larger values and set all other variables on the top (if any exist) to be 0. In this way we obtain feasible solutions with smaller and smaller values for the objective
+function. 
+Thus, we encounter an unbounded problem and there are no optimal solutions. In particular, we have no chance of obtaining an optimal tableau. 
+A short-hand for ``the problem is unbounded"  is   min $=-\infty.$ 
+
+
+
+
+
+ In this section we   describe Phase 2 of the simplex method in detail and show that it
+always terminates in   finitely many steps.
+
+ We stated   that  the simplex method is a way of choosing pivot entries to reach a terminal tableau in finitely many pivot steps. 
+More specifically, in Phase 2  all tableaux are standard and feasible,
+the values of the objective function (on the basic solutions) improve or (in the degenerate case) they stay
+the same after each pivot step, and  in finitely many pivot steps we obtain a terminal tableau, which is either optimal or has a bad column.
+
+ 
+  
+We start with   a feasible standard tableau (10.1):
+$$\rowtab{&x&1\cr\omit&A&b\cr\omit
+&c&d\cr}\quad\matrix{=u\hfill&\omit&\omit\cr=z\rightarrow\hbox{min,}&x \ge 0, &u \ge 0.\cr}$$
+By Definition 10.2, the  feasibility means that  $b \ge 0.$ We would like  to obtain an optimal tableau by pivoting. 
+The simplex method consists of checking for terminal tableaux (when we finish),
+a procedure to choose the pivot entries, and pivoting.  We divide a loop containing one pivot step into four
+substeps.
+
+\bigskip
+\noindent
+{\bf Simplex Method, Phase 2}
+\medskip
+{\bf1.}\quad  If  $c \ge 0,$ our feasible tableau is already {\it optimal.} So we write
+
+ Answer: min = $d$ at $x = 0, u = b. $ 
+
+\noindent We are done!
+
+
+
+\medskip
+{\bf  2.}\quad We check whether we have a bad column. That is, for each $c_j < 0$ we check whether all entries of the matrix $A$ in this column are nonnegative.  If we find a bad column, we write 
+
+ Answer: $\min  =-\infty,$ as $x_j \to \infty,$ the other variables on the top margin, (nonbasic variables) $x_i,\,\,i\neq j,$ are set equal to 0, and $u = A\cdot x + b.$
+ We are done!
+
+\medskip
+
+{\bf 3.}\quad Pick some  $c_j < 0.$ Consider all  $a_{ij} < 0$  in the $j^{\,\hbox{th}}$ column (which is going to be the pivot column).  We compare  $b_i /a_{ij}$  for those $a_{ij}$  and pick the one, $a_{i^{'}j},$  with the maximal ratio (i.e., with the ratio closest to zero)  as the pivot element.
+
+\medskip
+
+
+
+{\bf  4.}\quad Pivot  and go to Substep {\bf 1}. \hfill \blackbox
+\medskip
+
+By pivoting, we obtain a new standard tableau that is feasible. 
+Indeed, $b_{i'}\rightarrow {}- b_{i'} /a_{i^{'}j} \ge 0.$  If $i\neq i',$  then $b_i \mapsto {\bar b}_i=b_i - a_{ij}\cdot b_{i'} /a_{i^{'}j}.$ If  $a_{ij}\ge 0,$ then ${\bar b}_i\ge b_i \ge 0.$  
+If  $a_{ij} < 0,$ then ${\bar b}_i\ge 0,$  because  $b_i/a_{ij}\le b_{i'}/a_{i^{'}j}.$ The value of the objective function,  $z,$  improved or stayed the same: It changed from  $d$  to  $d - c_jb_i/a_{i^{'}j}\le d,$  where $a_{i^{'}j}$ is the pivot entry. 
+It stays the same if and only if
+the last entry $b_i$ in  the pivot row is 0. In this case, our pivot step is
+$degenerate.$  A degenerate pivot step does not change the basic feasible solution,
+but it does change the basis (the set of variables at the right margin).
+  
+ \smallskip
+\noindent
+{\bf Problems 10.7.}  Solve the following linear programs given by standard row
+tableaux:
+$$ \left[  \matrix{\  \cr \ \cr\  \cr}\right.
+ \matrix{ x_1  & x_2 & \ x_3 & x_4 & 1 \cr
+1 & -1 & 0 & 1&  0 \cr
+-1 & 1 & -2 & -1 & -2 \cr
+0 & 1 & 2 & -1 & -2\cr &&&&  }
+\left.  \matrix{\  \cr \ \cr\  \cr}\right] 
+  \matrix{= e \cr
+= f \cr
+ \rightarrow {\rm min}} \leqno(a)
+  $$
+\vskip-10pt
+$$ \left[  \matrix{\  \cr \ \cr\  \cr}\right.
+ \matrix{ x_1  & x_2 & \ x_3 & x_4 & 1 \cr
+1 & -1 & 0 & 1&  0 \cr
+-1 & 1 & -2 & -1 & 1 \cr
+1 & 1 & 2 &0 & -2 \cr &&&&  }
+\left.  \matrix{\  \cr \ \cr\  \cr}\right] 
+  \matrix{= e \cr
+= f \cr
+ \rightarrow {\rm min}} \leqno(b)
+  $$
+\vskip-10pt
+$$ \left[  \matrix{\  \cr \ \cr\  \cr}\right.
+ \matrix{ x_1  & x_2 & \ x_3 & x_4 & 1 \cr
+1 & 1 & 0 & 1&  0 \cr
+-1 & 1 & -2 & -1 & 1 \cr
+0 & -1 & 2 &0 & 2 \cr &&&&  }
+\left.  \matrix{\  \cr \ \cr\  \cr}\right] 
+  \matrix{= e \cr
+= f \cr
+ \rightarrow {\rm min}} \leqno(c)
+  $$
+\vskip-10pt
+$$ \left[  \matrix{\  \cr \ \cr\  \cr}\right.
+ \matrix{ x_1  & x_2 & \ x_3 & x_4 & 1 \cr
+1 & 1 & 0 & 1&  0 \cr
+-1 & -1 & -2 & -1 & 1 \cr
+0 & -1 & 2 &0 & 2 \cr &&&&  }
+\left.  \matrix{\  \cr \ \cr\  \cr}\right] 
+  \matrix{= e \cr
+= f \cr
+ \rightarrow {\rm min}} \leqno(d)
+  $$
+{\bf Solutions}
+\smallskip
+(a) The tableau is not feasible, so we cannot apply Phase 2 to it. We will solve this problem later.
+\smallskip
+(b) The tableau is optimal, so $\ min = -2$ at $x_1=x_2=x_3= x_4=0, e= 0, f =1.$
+If required, we can describe all optimal solutions:
+ $x_1=x_2=x_3=0,   0 \le x_4 \le 1, e = x_4, f =1- x_4.$
+\smallskip
+(c) 1. The tableau is not optimal.  2. The $x_2$-column is bad, so
+the problem is unbounded (min = $-\infty).$
+\smallskip
+(d) 1. The tableau is not optimal. 2. There are no bad columns.  3. The pivot
+column is the  $x_2$-column. The pivot entry is $-1$ in the  $f$-row. 
+ 
+
+$\matrix{&x_1  & \ x_2 & \ x_3 & x_4 & 1}$
+
+$ \left[ \matrix{1 & 1 & 0 & 1&  0 \cr
+-1 & -1^* & -2 & -1 & 1 \cr
+0 & -1 & 2 &0 & 2}\right]$
+$  \matrix{= e \cr
+= f \cr
+ \to \ min.}$
+\smallskip
+ 
+
+4. We compute
+first the new entries in the last row and column:
+\smallskip
+$\matrix{&x_1  & f & \ x_3 & x_4 & 1}$
+
+$ \left[ \matrix{ \ \ \ &\ \  \ &\  \ \  &\  \ \ &\ 1 \cr
+  &   &  &  & 1 \cr
+1 & 1 & 4 &1 & 1}\right]$
+$  \matrix{= e \cr
+= x_2 \cr
+ \to \min.}$
+\smallskip
+
+Now we see that the new tableau is optimal without computing the other entries.
+Also we can write the answer without other entries:  min = 1 at
+$x_1=f=x_3=x_4=0, e=1, x_2=1.$ Notice that the pivot step kept the tableau standard and feasible,
+and it improved the objective function, as it should in Phase 2. \hfill \blackbox
+
+\smallskip
+\noindent
+{\bf Problem 10.8.}  Solve
+
+$\matrix{&x_1  & -x_2 & \ 2x_3 & x_4 & -2}$
+
+$ \left[ \matrix{
+1 &\ \  1 &\  0 &\  1& \  \ 0 \cr
+-1 &\ \  -1 & -2 &\  -1 & \ \   1 \cr
+0 & \ \ -1 & \ 2 &\ 0 & \  \ 2}\right]$
+$  \matrix{= 3x_5 \cr
+= -x_6 \cr
+ \to \min.}, \hfill  {\rm all} \  x_i \ge 0   $
+
+\smallskip
+\noindent
+{\bf Solution.} The tableau is not standard. To make it standard, we
+multiply the second column by $-1,$ the last column by $-2$ and the second row by $-1$:
+
+$\matrix{&x_1  & x_2 & \ 2x_3 & x_4 &\ 1}$
+
+$ \ \ \left[ \matrix{
+1 & -1 &\ \  0 &\  1& \    0 \cr
+1 & -1 & \ \ 2 &\  1 & \     2 \cr
+0 & 1 &\ \  2 &\ 0 & \    -4}\right]$
+$  \matrix{= 3x_5 \cr
+=  x_6 \cr
+ \to \min.}, \hfill  {\rm all} \  x_i \ge 0   $
+\smallskip
+There is no need to scale the third column and the first row or replace
+$2x_3$ and $3x_5$ by other variables. The tableau is optimal, and we write the answer: $x_1=x_2=x_3=x_4=0,  x_5=0, x_6=2,\min  = -4.$
+ 
+ \smallskip
+\noindent
+{\bf Problem 10.9.}  Solve
+
+ $\matrix{&x_1  & x_2 & \ x_3 & x_4 & 1}$
+
+$ \left[ \matrix{1 & 1 & 0 & 1&  0 \cr
+-1 & -1 & -2 & -1 & 1 \cr
+0 & -1 & 2 &0 & 2}\right]$
+$  \matrix{= x_5 \cr
+= 0 \cr
+ \to \min.} \hfill  {\rm all} \  x_i \ge 0 $
+ 
+\smallskip
+\noindent
+{\bf Solution.} The tableau is not standard. To make it standard, we
+pivot on the first entry $-1$ in the second row. This pivot step switches $x_1$ and 0; only the first row in the matrix changes:
+ 
+
+  $\matrix{&\ \ 0  & x_2 & \ x_3 & x_4 & 1}$
+
+$ \left[ \matrix{
+-1 & 0 & -2 & 0&  1 \cr
+-1 & -1 & -2 & -1 & 1 \cr
+0 & -1 & 2 &0 & 2}\right]$
+$  \matrix{= x_5 \cr
+= x_1 \cr
+ \to \min.} \hfill  {\rm all} \  x_i \ge 0 $
+\smallskip
+Now we drop the first column to obtain a standard tableau:
+
+  $\matrix{&  x_2 & \ x_3 & x_4 & 1}$
+
+$ \left[ \matrix{
+  0 & -2 & 0&  1 \cr
+  -1 & -2 & -1 & 1 \cr
+  -1 & 2 &0 & 2}\right]$
+$  \matrix{= x_5 \cr
+= x_1 \cr
+ \to \min.} \hfill  {\rm all} \  x_i \ge 0 $
+\smallskip
+Since the tableau is standard, we can use Phase 2 of the simplex method.
+In this case  the simplex method gives us only one choice: Switch 
+$x_1$ and $x_2$:
+
+ 
+ \noindent $\matrix{&\  x_2 & \ x_3 & x_4 & 1}$   \hfill    
+$\matrix{&  x_1 & \ x_3 & x_4 & 1 &\quad \quad  \quad \quad }$  
+
+ \noindent $ \left[ \matrix{
+  0 & -2 & 0&  1 \cr
+  -1^* & -2 & -1 & 1 \cr
+  -1 & 2 &0 & 2}\right]$
+$  \matrix{= x_5 \cr
+= x_1 \cr  \to \min}  \  \mapsto \hfill
+ \left[ \matrix{
+  0 & -2 & 0&  1 \cr
+  -1 & -2 & -1 & 1 \cr
+   1 & 4 & 1 & 1}\right]$
+$  \matrix{= x_5 \cr
+= x_2 \cr
+ \to \min.}$
+\smallskip
+The tableau is optimal, so we write the answer: $x_1=x_3=x_4=0,  x_2=1, x_5=1, \min  = 1.$ There are other optimal solutions, but we were not required to find them. \hfill \blackbox
+ 
+
+\smallskip
+\noindent
+{\bf Problem 10.10.}  Solve
+
+ $\matrix{&x_1  & x_2 & \ x_3 & x_4 & 1}$
+
+$ \left[ \matrix{1 & 1 & 0 & 1&  0 \cr
+-1 & -1 & -2 & -1 & 1 \cr
+0 & -1 & 2 &0 & 2}\right]$
+$  \matrix{= -x_5 \cr
+= -x_6 \cr
+ \to \max.} \hfill  {\rm all} \  x_i \ge 0 $
+ 
+\smallskip
+\noindent
+{\bf Solution.} The tableau is not standard. To make it standard, we
+multiply every row by $-1.$ Since we change the objective function, let
+$f=-x_2+2x_3+2.$ Then the new objective function is $-f:$
+
+
+ $\matrix{&x_1  & x_2 & \ x_3 &\ \  x_4 &\  1}$
+
+$ \left[ \matrix{
+-1 & -1 & 0 & -1&  0 \cr
+1 & 1 & 2 & 1 & -1 \cr
+0 & 1 & -2 &0 & -2}\right]$
+$  \matrix{= x_5 \cr
+= x_6 \cr
+  = -f \to \min.} \hfill  {\rm all} \  x_i \ge 0 $
+\smallskip
+Now the tableau is standard. Since it is not feasible, we cannot use Phase 2.
+Should we wait until we learn Phase 1? Not necessary. Let us look at the problem closely, trying to use common sense. The first row in the tableau
+is ``almost bad." It says
+$-x_1-x_2-x_4=x_5.$ Since all $x_i \ge 0,$ we conclude that
+$x_1= x_2= x_4=0 = x_5.$ So it remains to determine  $x_3$ and $x_6$ 
+for which we have a smaller standard tableau:
+
+ $\matrix{&  x_3 &   1}$
+
+$ \left[ \matrix{
+ 2 &   -1 \cr
+ -2 & -2}\right]$
+$  \matrix{ 
+= x_6 \cr
+  = -f \to \min.} \hfill  x_1= x_2= x_4= x_5=0;   x_3, x_6 \ge 0 $
+\smallskip
+Still this tableau is not feasible. However, it has a bad column.
+Since we are not in Phase 2, we cannot conclude that the problem is unbounded.
+However, the same argument,  which was used to prove the unboundness 
+in the presence of a bad column in Phase 2, works in our case. Namely,
+we drive the objective function to $-\infty$ by sending  $x_3$ to 
+$\infty$ and we are feasible for  $x_3 \ge 1/2.$ Thus, the problem
+is unbounded, min($-f) = -\infty.$  In the terms of the original problem,
+it is also unbounded:
+max = $\infty.$
+As an alternative, we could solve the optimization problem for $x_3, x_6$ by the graphical method. \hfill \blackbox
+
+The total number of possible  tableaux we can obtain by the simplex method starting from an initial tableau is finite:
+There are only so many ways to put some variables on the top and the rest of variables at the right margin; after the positions of the variables are fixed, the tableau is determined. Remember that all our systems of linear equations
+written in those tableaux are equivalent
+(for the initial tableau as previously, the system is $Ax^T = u$), so they have the same  solutions.
+
+In fact, if we work with  $m$ variables at the right margin (basic variables) and $n$ variables
+on the top (nonbasic variables), then  there are $(m+n)!$ ways to arrange  $m + n$ variables at
+ $m + n$ positions.  After the positions for the variables are fixed, the
+whole $(m+1) \times (n+1)$ matrix is determined. Some of these tableaux
+are feasible.  Some of these configurations  could be impossible because
+our system of linear equations could be unsolvable for
+some sets of $m$ variables. If we permute the basic variables or
+nonbasic variables, we do not change the basic solution. So the number
+of the basic solutions is at most  ${(m+n)! \over m!n!}$.
+
+
+
+By the simplex method, Phase 2, we either obtain an optimal tableau in finitely many steps,  or we obtain a tableau that occurred before. In the latter case
+we can
+get into a cycle passing through the same set of tableaux with the same entry $d.$  Note that the last entry $d$ in the last row---that is, the current value for the objective function---must be constant along the cycle because it cannot go up. Since $d$ does not change,    the last entry in the pivot row is zero
+along the cycle. 
+\filbreak
+
+We call a pivot step $degenerate$ if the last entry in the pivot row is 0.
+Equivalently, a degenerate pivot step does not change the basic solution (although it does change the set of basic variables).
+
+
+  
+
+  A good way to avoid cycling is to choose $i'$  in Phase 2   at random, whenever there is a choice.  
+There are many ways to specify the choice of the pivot in Substep 3, so there are many simplex algorithms.  None of them is shown to be the best for all data, but  some of them allow us to avoid cycling. 
+
+Another good rule for choosing the pivot column is to pick the smallest $c_j$   in Step 3 (this is known as the least-coefficient rule). However this rule needs to be refined for the case when there are several minimal entries to be an exact
+algorithm.
+
+    Or we can pick the pivot entry by computing the improvements in the objective function for all possible pivot entries that preserve the feasibility  condition and choose one that gives the best improvement (the largest decrease rule). This rule, however, may contradict  the previous rule.
+
+
+In practical problems cycling happens so rarely that often nothing is done to prevent it. There are other, more serious problems with the simplex method, which we will discuss soon. However, for theoretical reasons it is important to show how to avoid cycling;  that is, it is important to give a simplex method that works always (by ``works" we mean that it terminates in finitely many steps).  We will do so  next. 
+ 
+  The first way suggested to prevent cycling  was $perturbation,$ a small change
+of entries in the last column to avoid zeros.
+More precisely, we replace the column $b= [b_1,\ldots,b_m]^T$ by the perturbed
+column
+ $b(\varepsilon) = [b_1 + \varepsilon,\ldots, b_n + \varepsilon^n]^T.$  Formally, we work  with {\it polynomials} in  $\varepsilon.$  Informally,  $b(\varepsilon)$  is a small perturbation of  $b;\,\,  \varepsilon$  is considered a small positive number. We can define how to compare these polynomials and then apply the simplex method to
+the perturbed matrix. All entries in the $b$-part stay nonzero, which makes cycling impossible. See Section A6 of the Appendix.
+
+The perturbation requires additional computations and has very little practical
+value. But it showed that there was a way to avoid cycling.
+
+
+In 1976, Robert G. Bland introduced  cycle-proof rules that also make all choices in Step 3 unique.  Here is a paraphrase of Bland's rule.   First, before
+pivoting,  list  (sort) the names or labels of variables in  some
+linear order (in a row or column). 
+  For example, if you were working with three variables, you could name them and order them as $x,\,\,y,\,\,z$ or label them and order them as $t_1,\,\,t_2,\,\,t_3.$  Then, whenever the simplex method gives you  a choice, pick the variable that appears first in the list of variables, according to your ordering.  When the variables are ordered by subscripts, this rule is known as the least subscript rule.
+
+For example, if we have two negative entries in the last row, corresponding to 
+  $x$ and $y,$ then  the pivot column is going to be  the $x$-column, since in the ordering, $x$ appears before $y.$  Similarly, if there are two maximal ratios corresponding to 
+  $x$ and $y,$ the $x$-row is going to be the pivot row.
+
+We now show  that Bland's rule works.
+ 
+\smallskip
+\noindent
+{\bf Theorem 10.11.}  If we choose pivot entries in Phase 2 of the simplex method  according to  
+Bland's rule, cycling is impossible.
+ 
+\smallskip
+\noindent
+{\bf Proof.} Let  $x_1,\ldots, x_{n+m} $ be our variables; we use the least subscript rule. We work with  $(m+1) \times (n+1)$ standard feasible row
+tableaux.
+
+Suppose that we have a cycle.  A $swing$ variable is a variable that changes its position along the cycle. While  we make the cycle, the swing variable 
+  labels (marks)  the pivot column  for a tableau and it labels the pivot
+row for another tableau. 
+
+ Let  $x_t$  be the  swing variable with the largest subscript.
+We consider a tableau
+$$ \matrix{y & 1 &&&&&&}$$  
+\vskip-10pt
+$$ \left[ \matrix{A & b \cr c & d} \right] \matrix{=  z & \cr =f & \to   \min,} \eqno{(10.12)}$$
+  where  $x_t$  labels the pivot column (i.e., $x_t$ is on the top, but it is at the side in the next tableau). Then the last entry  $c_t$ in the pivot
+column is negative, and  $c_j \ge 0$ for the variables $x_j$ on top with $j <t,$
+because
+otherwise we would choose another pivot column according to Bland's rule.
+Note  that the last entries in the swing rows are all zeros.
+
+
+Now we consider a tableau
+$$ \matrix{y' & 1 &&&&&&}$$
+\vskip-10pt
+$$ \left[ \matrix{A' & b' \cr c' & d'} \right] \matrix{=  z' & \cr =f & \to \min,} \eqno{(10.13)}$$
+
+\noindent  where    $x_t$ marks the pivot row. That is, $x_t$ is at the right margin (one of variables in $z'$) but is about to move to the top.
+Note that  $d = d'$ because the objective function cannot increase along the cycle.
+
+Let
+$$x_s$$
+$$\left[ \matrix{
+a \cr
+c_s}\right]$$
+ be the pivot column  in (10.13). So  $c_s  < 0,$ 
+$a_i \ge 0$ for the entry of $a$ in the  $x_i$-row when  $x_i$ is a swing variable at the right margin with $i \ne t,$ and $a_t <0.$
+
+Now we define a solution $h$  of the system  $Ay^T = z$ or an equivalent system
+$A'y'^T = b',$ which is not feasible and need not   be basic, as follows.
+We set  $x_s =1$ and set all other variables in $y'$ to   0, hence
+ $z' =  a + b'$ and $f(h) = d + c_s < d.$ In particular,  for this solution, we
+have  $x_j = h_j =0$  for any   variable  $x_j $ on top ($j \ne s$) and
+$x_i = h_i = a_i \ge 0$ for any swing $x_i$ variable at the right in (10.13).
+
+On the other hand, we can plug this solution into the tableau (10.12) and obtain
+that  $f(h) = d+ \sum c_j h_j $ where the sum is taken over all swing variables in
+$y$ [recall that the values for nonswing variables on top in (10.12) and (10.14) are 0].
+In this sum, $c_th_t =  c_ta_t > 0$ (since   $c_t,a_t   < 0$)   and all other terms are $\ge 0 $ (because $c_j,  h_j > 0$ for $j \ne t$). Thus, $f(h)  > d, $ which contradicts  
+the preceding estimate. \hfill \blackbox
+ 
+\smallskip
+\centerline {{\twelvebf Exercises}}
+ 
+\smallskip
+\parindent=0pt
+
+{\bf 1--3.}  Solve the linear programs given by standard row 
+tableaux:
+$$  \rowtab{&a&b&c&d&1\cr\omit
+&.3&.35&.5&.4&.4\cr\omit
+&-.3&-.35&-.5&.4&.4\cr\omit
+&.6&.35&.5&.45&0\cr\omit
+&-.6&-.35&-.5& 5&.5\cr\omit
+&.1&.3&0&.15& 1\cr\omit
+&-.1&-.3&0&-.15&.1\cr\omit
+&11&12&16&14&0\cr}\quad\matrix{=y_1\hfill\cr =y_2\hfill\cr =y_3\hfill\cr =y_4\hfill\cr =y_5\hfill\cr=y_6\hfill\cr \rightarrow\hbox{min}\cr}\leqno{\bf 1.} $$
+ 
+ 
+$$\rowtab{&y_7&y_8&y_9&y_{10}&1\cr\omit
+&.3&.35&.5&.4&-.4\cr\omit
+&-.3&-.35&-.5&-.4&-.4\cr\omit
+&.6&.35&.5&.45&-.5\cr\omit
+&-.6&-.35&-.5&-.45&.5\cr\omit
+&.1&.3&0&.15&-.1\cr\omit
+&-.1&-.3&0&-.15&.1\cr\omit
+&11&12&16&-14&0\cr}\quad\matrix{=y_1\hfill\cr =y_2\hfill\cr =y_3\hfill\cr =y_4\hfill\cr =y_5\hfill\cr=y_6\hfill\cr=C\rightarrow\hbox{min}\cr}
+\leqno{\bf 2.} $$
+
+$$\rowtab{&z_1&z_2&z_3&z_4&1\cr\omit
+&0&.35&.5&.4&.4\cr\omit
+&3&-.35&-.5&-.4&.4\cr\omit
+&.6&.35&.5&.45&0\cr\omit
+& .6&-.35&-.5&-.45&.5\cr\omit
+&.1&.3&0&.15&-.1\cr\omit
+&0&-.3&0&-.15&.1\cr\omit
+&-11&12&16&14&0\cr}\quad\matrix{=y_1\hfill\cr =y_2\hfill\cr =y_3\hfill\cr =y_4\hfill\cr =y_5\hfill\cr=y_6\hfill\cr \rightarrow\hbox{min} \hskip60pt \blackbox\cr}
+\leqno{\bf \ 3.}$$
+ 
+
+{\bf 4--6.} State whether  you agree or disagree.
+
+
+{\bf \ 4.} A standard tableau is optimal if its basic solution is optimal.
+
+{\bf \ 5.} Every standard tableau with one row is feasible.
+
+{\bf \ 6.} If a standard tableau has only one row and no bad columns, then 
+it is optimal. \hfill \blackbox
+
+
+\smallskip
+{\bf \ 7.} Solve the linear program from Example 2.3.
+ 
+{\bf \ 8.}  Solve the linear program \
+$x+z \rightarrow {\rm min,} \ y-u = 1, x \ge 0, y \ge 0.$
+
+ 
+{\bf \ 9.}  Solve  \
+$1.2a + 1.4b + 1.7c + 1.9d \rightarrow \min,\
+		a + b + c + d = 1,$ \
+  $0.1a + 0.2b + 0.3c + 0.4d = 0.25, \  [a, b, c, d] \ge 0.$
+	 
+
+
+{\bf 10.} Solve
+
+$\matrix{&x_1  &-x_2 & \ x_3 & x_4 & -1}$
+
+$ \left[ \matrix{
+1 &\ \  1 &\  0 &   1&  -3 \cr
+-1 &\ \  -1 & -2 &   -1 &     1 \cr
+0 & \ \ -1 & \ 2 &  0 &  2}\right]$
+$  \matrix{= x_5 \cr
+= -x_6 \cr
+ \to \min.} \hfill  {\rm all} \  x_i \ge 0   $
+
+
+\medskip
+
+{\bf 11.} Solve
+
+$\matrix{&x_1  &-x_2 & \ x_3 & x_4 & -1}$
+
+$ \left[ \matrix{
+1 &\ \  -1 &\  0 &   1&  -3 \cr
+-1 &\ \  1 & -2 &   -1 &     1 \cr
+0 & \ \ -1 & \ 2 &  0 &  2}\right]$
+$  \matrix{= x_5 \cr
+= -x_6 \cr
+ \to \max.} \hfill  {\rm all} \  x_i \ge 0   $
+
+\medskip
+{\bf 12.} Solve
+
+$\matrix{&x_1  &-x_2 & \ x_3 & x_4 & 1}$
+
+$ \left[ \matrix{
+1 &\ \  -1 &\  0 &   1&  -3 \cr
+-1 &\ \  1 & -2 &   -1 &     1 \cr
+0 & \ \ -1 & \ 2 &  0 &  2}\right]$
+$  \matrix{= x_5 \cr
+= -x_6 \cr
+ \to \max.} \hfill  {\rm all} \  x_i \ge 0  $
+\medskip
+
+{\bf 13.} Describe how Phase 2 works for an arbitrary standard tableau
+with only one row.
+$Hint$:  Consider first a few examples.
+\medskip
+
+{\bf 14.} Describe how Phase 2 works for an arbitrary feasible tableau
+with only  two columns (that is, only one variable on the top).
+$Hint$:  Consider first a few examples and use  the graphical method.
+
+
+
+
+
+ \parindent=20pt
+ \vfill
+\eject
+\def\rightheadline{\tenrm\hfil{\it   \S 11. Simplex Method,  Phase 1}\quad {\bf\folio}}
+
+\noindent {\twelvebf \S 11. Simplex Method,  Phase 1}
+\smallskip
+
+\noindent
+A good simplex method produces an optimal tableau for an arbitrary linear program that has an optimal solution. No method  can produce an optimal tableau for a problem that has no optimal solutions.
+In Phase 1, our goal is to obtain a feasible tableau. Since there are infeasible linear programs,
+we have to allow other outcomes for simplex methods. Recall that the
+  simplex method works with standard tableaux.
+
+ 
+\smallskip
+\noindent
+{\bf Definition 11.1.}  A {\it bad row} in a standard tableau is a row that is not the last row and whose last entry is strictly negative while the other entries are  nonpositive. \hfill \blackbox
+
+In other words, it is a row
+$[A_i,b_i]$  in the matrix $[A, b]$  [see (10.1)] such that $A_i\le 0\quad\hbox{and}\quad b_i < 0.$   
+The constraint corresponding to a bad row reads $A_i^T  x + b_i = u_i.$  Since the left-hand side here is strictly negative and the right-hand side is nonnegative, we obtain a contradiction. Thus, a linear program with a standard tableau having a bad row has no feasible solutions. This is because  the bad row
+is inconsistent with the nonnegativity conditions.
+
+For example,  the $x$-row in the second tableau in (10.4) is bad, while
+the first tableau in (10.4) has no bad rows. A short-hand for ``the problem is infeasible"  is   $\min =\infty.$  
+
+The following are logical implications between properties of a linear program and properties of its standard tableaux that are obvious from our definitions:
+$$\matrix{{\rm there\ is \ a} \cr {\rm    tableau \ with } \cr {\rm   a \ bad \ row}} \  \Rightarrow   \
+\matrix{ {\rm the } \cr {\rm program \ is}  \cr {\rm infeasible} }\
+\Rightarrow   \
+       \matrix{{\rm there \ is \ no} \cr  {\rm  feasible} \cr  {\rm tableau}}. \eqno(11.2)$$
+ Note that the existence of an infeasible tableau does not imply that  min $=\infty$ and that  min $=\infty$  does not imply the existence of a bad row in every tableau.
+
+
+Phase 1 of our simplex method will produce either a feasible tableau or a tableau with a bad row. So it shows that either our linear program is not feasible (the second case) or it yields a feasible solution (namely, the basic solution of the feasible tableau in the first case.) Given this, we have
+the converse implications of (11.2):
+ $$\matrix{{\rm there\ is \ a} \cr {\rm    tableau \ with } \cr {\rm   a \ bad \ row}} \  \Leftrightarrow   \
+\matrix{ {\rm the } \cr {\rm program \ is}  \cr {\rm infeasible} }\
+\Leftrightarrow   \
+       \matrix{{\rm there \ is \ no} \cr  {\rm  feasible} \cr  {\rm tableau}}. $$
+
+ Given this, we can 
+  summarize this discussion in the following theorem:
+ 
+\smallskip
+\noindent
+{\bf Theorem 11.3.}  Our simplex method will have one and only one of the following three outcomes:
+\smallskip
+1.\quad An optimal tableau; in this case we can read off the optimal solution(s) from the optimal tableau, as well as the optimal value. 
+\smallskip
+2.\quad A feasible tableau with a bad column; in this case the problem is unbounded, so there are no optimal solutions.  
+\smallskip
+3.\quad A tableau with a bad row; this gives us an infeasible problem (i.e., a problem without feasible solutions). \hfill  \blackbox 
+\medskip
+
+So there are terminal tableaux of three different types for the simplex method. Including row feasible tableaux that are terminal for Phase 1, there are
+four different types. It is very important to recognize these terminal 
+  tableaux  when it is time to stop and write the answer.
+ To memorize  terminal  tableaux, the following sketch may help:
+
+\noindent {\bf Row feasible tableau: }
+$\rowtab{&\oplus &1\cr\omit&*& \oplus  \cr\omit
+& *& * \cr}\quad\matrix{= \oplus \hfill&\omit&\omit\cr 
+\rightarrow\hbox{min,}} \hfill
+\matrix{  {\rm terminal} \cr {\rm for \ Phase\ 1,} \cr {\rm  go\ to\ Phase\ 2}  }       $
+\smallskip
+\noindent  {\bf Bad row: }
+$\rowtab{&\oplus &1\cr\omit&\ominus & -    \cr}\quad\matrix{= \oplus \hfill&\omit&\omit\cr },\hfill
+\matrix{  {\rm a\ terminal} \cr {\rm tableau,} \cr \min = \infty  } 
+$
+\smallskip
+
+\noindent  {\bf Optimal: }
+$\rowtab{&\oplus &1\cr\omit&*& \oplus  \cr\omit
+&\oplus & * \cr}\quad\matrix{= \oplus \hfill&\omit&\omit\cr 
+\rightarrow\hbox{min,}} 
+  \hfill \matrix{{\rm  a\ terminal\  tableau,} \cr {\rm write \ answer}}
+ $
+
+\smallskip
+\noindent  {\bf Bad column: }
+$\rowtab{&\oplus \cr\omit&  \oplus   \cr\omit
+&-   \cr}\quad\matrix{= \oplus \hfill&\omit&\omit\cr 
+\rightarrow\hbox{min.}} 
+\hfill \matrix{{\rm    terminal\  if} \cr {\rm in\ Phase \ 2}}
+$
+\smallskip
+
+\noindent  $\matrix{ {\bf   A\ feasible} \hfill  \cr {\bf tableau \ with} \hfill \cr 
+{\bf  a \  bad \ column:} \cr \cr}
+\quad
+\rowtab{&\oplus  & \oplus & \oplus & 1\cr
+\omit   & * & \oplus & * & \oplus \cr
+\omit  & * & - & * & * \cr}\quad
+\matrix{= \oplus \hfill&\omit&\omit\cr 
+\rightarrow\hbox{min.}} 
+\hfill \matrix{{\rm    terminal, } \cr { \min = -\infty.}}
+$
+\smallskip
+
+Here
+
+ $\oplus$ represents positive and zero entries, that is, nonnegative entries ($\ge 0)$;
+
+$\ominus$ represents  negative and zero entries, that is, nonpositive entries,
+($\le 0)$;
+
+ $-$ represents  a  negative entry;
+
+ $+$ represents  a  positive entry;
+
+$* $ represents arbitrary numbers.
+ \smallskip
+
+
+
+
+
+In \S 10 we presented a method to choose pivoting entries from a feasible standard tableau. However, what can we do when a given   standard tableau is not feasible? We will present a method to make a standard tableau feasible
+or to show that this cannot be done. We start   with a standard tableau:
+
+
+$$\rowtab{&x&1\cr\omit&A&b\cr\omit
+&c&d\cr}\quad\matrix{=u\hfill&\omit&\omit\cr=z\rightarrow\hbox{min,}&x \ge 0, &u \ge 0\cr}$$
+
+ 
+As in Phase 2, we split a loop involving a pivot step into four substeps.
+\medskip
+
+\noindent {\bf Simplex Method, Phase 1}
+\medskip
+
+{\bf   1.}\quad  If  $b \ge 0,$ then our tableau is already feasible, so we are done with Phase 1 and we   proceed to Phase 2.
+
+\medskip
+{\bf   2.}\quad Check whether we have a bad row in the tableau. That is, for each  $b_i < 0,$  check the sign of the entries $a_{ij}$ in its row. If for one of these $b_i,$ all the entries, $a_{ij},$ in the row are nonpositive, then we cannot satisfy this constraint.  Therefore, there are no feasible solutions. We can write this   as follows:
+
+Answer:  min = $\infty.$
+
+\medskip
+{\bf   3.}\quad Pick the row, $i',$ closest to the top of the tableau, with $b_{i'}< 0.$  This means that $b_i\ge 0$ for every index $i$ for which $b_i$ is above $b_{i'}.$  Choose any positive entry,  $a_{i'j'} > 0,$ in this row. Select  $i''\le i'$  such that $b_{i''}/a_{i''j'} =\hbox{max}( b_{i'}/a_{i'j'},  b_i/a_{ij'} ),$ where the maximum is taken over all indexes $i \le i'$ for which $a_{ij'} < 0.$
+
+\medskip
+{\bf  4.}\quad Pivot and go to Substep {\bf 1}. \hfill  \blackbox
+\medskip
+  Note that the $b$-entries above  $b_{i'}$ remain nonnegative and $b_{i'}$ either maintains or increases its value. Indeed, $b_i$  with  $i\le  i'$ is replaced by ${\bar b}_i =  b_i  -  a_{ij'}\cdot b_{i''}/a_{i''j'}.$  If  $a_{ij'}\ge 0$ (for example, when $i= i'$), then ${\bar b}_i\ge b_i.$  If $a_{ij'} < 0,$  then ${\bar b}_i\ge 0.$  
+
+The method just described   produces either a tableau with a bad row, or a feasible tableau, or we get into a cycle. Cycling is possible only when there are zero entries in the $b$-column and those zeros are in the pivot rows (the degenerate case). To prevent cycling we can use Bland's rule (see \S 10) or the perturbation technique  when choosing the pivot  entries. 
+Bland's rule works, because if we get into a cycle, then  we get cycling
+for a linear program in Phase 2. This program is obtained by  changing sign
+in the first row with the negative last entry in the standard 
+tableau, treating it as the  objective function, and ignoring all
+following rows. 
+
+% When using the perturbation technique, if we obtain a feasible tableau for the % $\varepsilon$-problem, then, by setting $\varepsilon=0,$  we obtain a feasible %tableau for the original problem. If we obtain an $\varepsilon$-tableau with  a % bad row, then, by setting $\varepsilon=0,$ we obtain a tableau for the 
+%   original problem with a row which is either bad or can be deleted from the 
+% tableau together with some columns.
+
+ 
+Practical computations show that the number of pivoting steps in a good simplex method is proportional to  min$(m, n),$ where  $m\times n$  is the size of the tableau.  However, linear programs have been constructed   that require a much larger number of pivoting steps for many common ways to specify
+the choice of pivot entries (including  Bland's rule). Fortunately, such ``pathological"  problems do not occur in practice. 
+
+It is still an open problem whether  there is a number $t$ such that
+for any natural numbers $m, n$ and any standard feasible tableau with $m+1$ rows and $n+1$ columns (so we have $m+n$ decision variables) there is a sequence 
+with less than  $(m + n)^t$ pivot steps
+that produces feasible tableaux (but does not necessarily follow  the simplex method) and results in a terminal tableau.
+Without the restriction that the tableaux are feasible,
+take $t=1,$
+because  we can  obtain
+a terminal tableau in  $\le \min(m, n)$ pivot steps.
+ 
+
+ 
+If you use a computer, then besides storage room for  data, you need about the same room for the current tableau. Since round-off errors accumulate, you need occasionally to recalculate the current tableau starting from the initial tableau (this is why you have to store an initial tableau). This requires 
+$\le \min(m, n)$ pivot steps.
+ Otherwise the  accumulation of round-off errors can take you far away from optimal and feasible solutions. In general, since time is money, it is a good idea to check occasionally whether the progress in computations (say, improvement in objective function) justifies the time and effort spent. 
+ 
+Large linear programs often have sparse tableaux; that is, most  entries of the matrix of coefficients are equal to zero. We can save RAM (random 
+access memory) by storing only nonzero entries and using multiplicative simplex methods that represent the current matrix as a product of a few elementary operations applied to the initial tableau.
+
+
+
+ \filbreak
+\noindent
+{\bf Problem 11.4.} Solve
+
+$ \rowtab{&x&y&z&1\cr \omit&1&-1&1&2\cr \omit&0&-1&0&-1\cr\omit&1&0&2&0\cr}\quad\matrix{=u\hfill&\omit&\omit&\omit&\omit&\omit\cr =v\hfill&\omit&\omit&\omit&\omit&\omit\cr =w\to \min.}
+\hfill x,y,z,u, v \ge 0$
+ 
+ \smallskip
+\noindent
+{\bf Solution.} The tableau is standard but not feasible.
+ The $v$-row is bad, so the problem is infeasible (min = $\infty$ for short).
+
+ 
+ \smallskip
+\noindent
+{\bf Problem 11.5.} Solve
+
+$ \rowtab{&x&y&z&1\cr 
+\omit&1&-1&1&2\cr 
+\omit&0&1&0&-1\cr
+\omit&1&0&2&0\cr}\quad
+\matrix{=u\hfill&\omit&\omit&\omit&\omit&\omit\cr =v\hfill&\omit&\omit&\omit&\omit&\omit\cr =w\to \min.}
+\hfill x,y,z,u, v \ge 0$
+ 
+ \smallskip
+\noindent
+{\bf Solution.}  The tableau is standard but not feasible.
+There are no bad rows.
+ We look for a positive entry in the second row, and there is only one,
+in the $y$-column, which is going to be the pivot column. We compare
+$2/(-1) < (-1)/1 < 0$; hence the $v$-row is the pivot row. Now we pivot
+and obtain
+
+$ \rowtab{&x&v &z&1\cr 
+\omit&1&-1&1&1\cr 
+\omit&0&1&0&1\cr
+\omit&1&0&2&0\cr}\quad
+\matrix{=u\hfill&\omit&\omit&\omit&\omit&\omit\cr =y \hfill&\omit&\omit&\omit&\omit&\omit\cr =w\to \min.}
+\hfill x,y,z,u, v \ge 0$ 
+\smallskip 
+
+As it should be, the tableau stays standard, and the first entry in the last
+column  stays $\ge 0.$ Moreover the tableau becomes optimal. Answer:
+$x=v=z=0, y=u=1, $ min$ =0.$  \hfill \blackbox
+
+ \smallskip
+\noindent
+{\bf Problem 11.6.} Solve the problem in 10.10 by the  simplex method.
+
+ \smallskip
+\noindent
+{\bf Solution.} After we get the standard tableau
+
+ $\matrix{&x_1  & x_2 & \ x_3 &\ \  x_4 &\  1}$
+
+$ \left[ \matrix{
+-1 & -1 & 0 & -1&  0 \cr
+1 & 1 & 2 & 1 & -1 \cr
+0 & 1 & -2 &0 & -2}\right]$
+$  \matrix{= x_5 \cr
+= x_6 \cr
+  = -f \to \min } \hfill  {\rm all} \  x_i \ge 0 $
+\smallskip
+\noindent as before, we  play stupid and follow  Phase 1. Let us see whether we get the same answer.
+
+
+There are four choices  for the pivot column consistent with Phase 1. Only
+one of them, the $x_3$-column, gives a nondegenerate pivot step. So we pivot on
+2 and obtain
+
+ $\matrix{&x_1  & \quad  x_2 & \quad x_6 &\quad  x_4 &\quad  1}$
+
+$ \left[ \matrix{
+-1 & -1 & 0 & -1&  0 \cr
+-1/2 & -1/2 & 1/2 & -1/2 & 1/2 \cr
+1 & 2 & -1 & 1& -3}\right]$
+$  \matrix{= x_5 \cr
+= x_3 \cr
+  = -f \to \rm min.} \hfill  {\rm all} \  x_i \ge 0 $
+\smallskip
+This tableau is feasible, so we proceed with Phase 2. The tableau has
+a bad column, so the problem is unbounded.  To get more practice, try the other three
+choices for the pivot entry. Can you get into cycling? Fat chance! \hfill  \blackbox
+
+
+
+
+
+ \smallskip
+\noindent
+{\bf Problem.} Solve the linear program
+$$\rowtab{&x & y & 1\cr
+\omit& -1& 1  & 1  \cr
+\omit&  2 & -1 & 0 \cr
+\omit &-1 &0 & 1  \cr}\quad
+\matrix{
+\ge 0\hfill&\omit&\omit\cr
+\le 0\hfill&\omit&\omit\cr
+ = z \rightarrow\hbox{max}& x,y \ge 0.} $$
+
+ \smallskip
+\noindent
+{\bf Solution.} The tableau is not standard. Multiplying the last two rows by
+$-1$ and introducing two slack variables $u, v$ we make it standard:
+$$\rowtab{&x & y & 1\cr
+\omit& -1& 1  & 1  \cr
+\omit&  -2 & 1 & 0 \cr
+\omit &1 &0 & -1  \cr}\quad
+\matrix{
+=u\hfill&\omit&\omit\cr
+=v\hfill&\omit&\omit\cr
+ = -z \rightarrow\hbox{min}& x,y \ge 0, u, v \ge 0. }$$
+The tableau is optimal. So the basic solution  
+is optimal: $x=y = 0, u = 1, v = 0, \min = -1.$ In the terms of the original problem, the answer is: $x=y=0, $ max$ = 1.$ All optimal solutions are given by
+$x= 0, y \le 1.$ \hfill \blackbox
+
+ 
+
+ \smallskip
+\noindent
+{\bf Problem.} Solve the linear program given by a standard row tableau
+$$
+  \left[ \matrix{ \cr \cr \cr \ } \right.
+\matrix{ x_1 & x_2 & x_3 & 1 \cr
+1 & 0 & -1 & -1 \cr
+-1 & 1 & 1 & 0 \cr
+0 &-1 & 0 & 1  \cr
+1 & -1 & 1 & 0 \cr
+&&&}
+\left.  \matrix{ \cr \cr \cr \ } \right]
+\matrix{  =x_4 \cr = x_5 \cr = x_6 \cr \to \min.} 
+$$
+ \smallskip
+\noindent
+{\bf Solution.} The tableau is not feasible. According to Phase 1,
+we have to switch $x_1$ and $x_4$. After the pivot step, we obtain
+$$
+  \left[ \matrix{ \cr \cr \cr \ } \right.
+\matrix{ x_4 & x_2 & x_3 & 1 \cr
+1 & 0 & 1 & 1 \cr
+-1 & 1 & 0 & -1 \cr
+0 &-1 & 0 & 1  \cr
+1 & -1 & 2 & 1 \cr
+&&&}
+\left.  \matrix{ \cr \cr \cr \ } \right]
+\matrix{  =x_1 \cr = x_5 \cr = x_6 \cr \to \min.} 
+$$
+
+ We switch $x_2$ and $x_5$ and obtain 
+$$
+  \left[ \matrix{ \cr \cr \cr \ } \right.
+\matrix{ x_4 & x_5 & x_3 & 1 \cr
+1 & 0 & 1 & 1 \cr
+1 & 1 & 0 & 1 \cr
+-1 &-1 & 0 & 0  \cr
+0 & -1 & 2 & 0 \cr
+&&&}
+\left.  \matrix{ \cr \cr \cr \ } \right]
+\matrix{  =x_1 \cr = x_2 \cr = x_6 \cr \to \min} .
+$$
+\vskip-5pt
+Now the tableau is feasible, so we proceed with Phase 2.  We switch $x_5$ and $x_6$ and after a degenerate pivot step  obtain an optimal tableau:
+$$
+  \left[ \matrix{ \cr \cr \cr \ } \right.
+\matrix{ x_4 & x_6 & x_3 & 1 \cr
+* & * & * & 1 \cr
+* & * & * & 1 \cr
+* &* & * & 0  \cr
+1 & 1 & 2 & 0 \cr
+&&&}
+\left.  \matrix{ \cr \cr \cr \ } \right]
+\matrix{  =x_1 \cr = x_2 \cr = x_5 \cr \to \min.} 
+$$
+\vskip-5pt
+So $\min = 0$ at $x_4=x_6=x_3=0, x_1=1, x_2=1, x_5 = 0.$
+
+
+
+
+
+\medskip
+\noindent
+{\bf Remark.}
+Some textbooks and some computer implementations
+reduce Phase 1 to Phase 2 by formal tricks rather than by
+treating Phase 1 as an equal stage of the simplex method.
+Here we give such a  trick.
+Consider a standard row tableau
+$$\rowtab{&x&1\cr\omit&A&b\cr\omit
+&c&d\cr}\quad\matrix{=u\hfill&\omit&\omit\cr=z\rightarrow\hbox{min,}&x \ge 0, &u \ge 0\cr} \eqno(11.7)$$
+that is not feasible (i.e., the minimal entry $-\mu$ of $b$ is negative).
+We introduce a new variable $t \ge 0$ and consider the standard tableau
+ 
+
+$$\rowtab{&x& t & 1\cr
+\omit&A&  I &b \cr
+\omit &0&1 & 0 \cr}\quad
+\matrix{=u\hfill&\omit&\omit\cr
+  \to \min} 
+\quad  \matrix{x \ge 0, t \ge 0 \cr u \ge 0,\cr}
+\eqno(11.8)$$
+where $I$ is the column of ones.  By one pivot step with the pivot entry
+in the $t$-column and the last entry in the pivot row being $-\mu,$ we obtain
+a feasible tableau, so Phase 1 is done in one pivot step. If the optimal
+value for (11.8) is 0, then we can easily obtain a feasible tableau for (11.7)
+from an optimal tableau for (11.8). If the optimal
+value for (11.8) is not  0, then the problem (11.7) is infeasible.
+\filbreak
+
+A modification of this is the ``big  $M$ method." We replace the last
+row [0, 1, 0] in (11.8) by  $[c, M, d]$  with large $M$.  By  the same pivot step, this
+$M$-tableau  becomes feasible.  If the $M$-program has an optimal solution with $t=0,$ then we obtain an optimal solution for (11.7) by dropping $t.$
+ 
+
+   There are other tricks to avoid or shorten Phase 1. Some of them involving introducing
+a new variable for each variable in $u.$
+
+
+\smallskip
+\noindent
+{\bf Remark.} It is also possible to reduce Phase 2 to Phase 1. 
+A simple-minded  way to do this is to replace the objective function $z$ by linear constraints $f \le M$ for various goals $M.$ This approach
+could be computationally taxing. Another way, using duality, will be
+given in the next chapter.
+ 
+
+
+\medskip
+%  filbreak %to deter bad page break
+\centerline {{\twelvebf Exercises} }
+\smallskip
+\parindent=0pt
+
+{\bf  1.} Solve
+$ \rowtab{&x&y&z&1\cr \omit&1&-1&1&2\cr \omit&0&-1&0&-1\cr\omit&1&0&2&0\cr}\quad\matrix{=u\hfill&\omit&\omit&\omit&\omit&\omit\cr =v\hfill&\omit&\omit&\omit&\omit&\omit\cr =w\rightarrow\hbox{min.}}
+\qquad \matrix{x,y,z\ge 0 \cr u, v \ge 0 } $
+
+ 
+\medskip
+ 
+{\bf  2.} Solve
+$ \rowtab{&x&y&z&1\cr \omit&1&-1&1&2\cr \omit&0&-1&0&0\cr\omit&1&0&2&0\cr}\quad\matrix{=u\hfill&\omit&\omit&\omit&\omit&\omit\cr =v\hfill&\omit&\omit&\omit&\omit&\omit\cr =w\rightarrow\hbox{min}}$
+\smallskip
+\noindent with $x\ge 0,y\ge 0,z\ge 0, u\ge 0, v\ge 0.$
+\medskip
+
+{\bf  3.} Solve
+$\rowtab{&x&y&z&1\cr \omit&1&-1&1&2\cr \omit&0&-1&0&0\cr\omit&1&0&-2&0\cr}\quad\matrix{=u\hfill&\omit&\omit&\omit&\omit&\omit\cr =v\hfill&\omit&\omit&\omit&\omit&\omit\cr =w\rightarrow\hbox{min}}$
+\smallskip
+\noindent with $x\ge 0,y\ge 0,z\ge 0,u\ge 0,v\ge 0.$
+\smallskip
+
+{\bf  4--8.}\quad Solve the   linear programs, where all the decision variables, $a,\,\,b,\,\,c,\,\,d,\,\,e,$ are required to be nonnegative.
+\medskip
+{\bf 4.}
+$ \rowtab{&a&-b&c&-2\cr \omit&1&0&-1&2\cr \omit&2&-1&0&-3\cr\omit&0&2&-1&0\cr}\quad\matrix{=d\hfill\cr =e\hfill\cr \rightarrow\hbox{min}\cr}$
+\medskip
+{\bf  5.}
+$\rowtab{&a&b&c&1\cr \omit&1&2&3&-1\cr \omit&2&0&1&3\cr\omit&-1&1&0&0\cr}\quad\matrix{=d\hfill\cr =e\hfill\cr \rightarrow\hbox{min}\cr}$
+\medskip
+{\bf \ 6.}
+$\rowtab{&a&b&c&-1\cr \omit&1&2&3&-3\cr \omit&2&1&0&-1\cr\omit&-3&0&1&0\cr}\quad\matrix{=d\hfill\cr =e\hfill\cr \rightarrow\hbox{min}\cr}$
+
+\medskip
+{\bf \ 7.}
+$\rowtab{&a&b&c&-1\cr \omit&1&0&1&-1\cr \omit&0&1&1&1\cr\omit&1&2&3&0\cr}\quad\matrix{=c\hfill\cr =d\hfill\cr =f\rightarrow\hbox{min}\cr}$ 
+\medskip
+{\bf \ 8.}
+$\rowtab{&a&b&c&-1\cr \omit&1&0&1&-1\cr \omit&0&1&1&1\cr\omit&1&2&3&0\cr}\quad\matrix{=e\hfill\cr =d\hfill\cr =f\rightarrow\hbox{min}\cr}$ 
+ \bigskip
+
+{\bf 9--10.}  Do you agree or disagree with the following statements?
+
+{\bf \ 9.}  There is no standard feasible tableau with a bad row.
+
+{\bf 10.} There is no standard  tableau with   both a bad row and a bad column.
+\smallskip
+{\bf 11--13.} Solve the linear program given by a standard row tableau.
+$$
+  \left[ \matrix{ \cr \cr \cr \ } \right.
+\matrix{ x_1 & x_2 & x_3 & x_4 & 1 \cr
+1 & 0 & -2 & -3 & -1 \cr
+-1 & 1 & 1 & 1 & 1 \cr
+2 &-1 & 0 & 1  & 3 \cr
+1 & -1 & 1 & 0 &2  \cr
+&&&}
+\left.  \matrix{ \cr \cr \cr \ } \right]
+\matrix{  =x_5 \cr = x_6 \cr = x_7 \cr \to \min}  \leqno{\bf 11.}
+$$
+\vskip-10pt
+$$
+  \left[ \matrix{ \cr \cr \cr \cr \  } \right.
+\matrix{ x_1 & x_2 & x_3 & 1 \cr
+1 & 0 & -1 & -1 \cr
+-1 & 3 & 1 & 0 \cr
+3 &-1 & 2 & 1  \cr
+1 & -1 & 1 & 0 \cr
+1 & -1 & -1 & 0 \cr
+&&&}
+\left.  \matrix{ \cr \cr \cr \cr \  } \right]
+\matrix{  =x_4 \cr = x_5 \cr = x_6 \cr =x_7 \cr \to \min}  \leqno{\bf 12.}
+$$
+\vskip-10pt
+$$
+  \left[ \matrix{ \cr \cr \cr \cr \  } \right.
+\matrix{ x_1 & x_2 & x_3 & x_4 & x_5 & 1 \cr
+1 & 0 & -1 & -1 & 0 & 1 \cr
+-1 & 3 & 1 & 0 & -2 & -1 \cr
+3 &-1 & 2 & 1 & 2 & 1  \cr
+1 & -1 & 1 & 0  & -1 & 1 \cr
+0 & -1 & -1 & 0 &-1 & 2 \cr
+&&&}
+\left.  \matrix{ \cr \cr \cr \ \cr \ } \right]
+\matrix{  =x_6 \cr = x_7 \cr = x_8 \cr =x_9 \cr \to \min}  \leqno{\bf 13.}
+$$
+
+\parindent=20pt
+
+
+
+\def\rightheadline{\tenrm\hfil{\it   \S 12.  Geometric Interpretation}\quad {\bf\folio}}
+\bigskip
+\noindent {\twelvebf \S 12.  Geometric Interpretation}
+\smallskip
+\noindent In this section we will explain the geometric meaning of Phase   2 (the second stage) of the simplex method. The objective is to engage our geometric imagination. The price we have to pay is to learn  some geometric language: $n$-tuples of numbers become points in $R^n,$  certain linear combinations of two $n$-tuples become lines, feasible regions become subsets of $R^n$  with interesting properties, Phase 2 of simplex method is a way to move in the feasible region, and so on.
+ We will first look at the properties of the feasible region as a subset of the $n$-dimensional space $R^n.$  
+
+
+We saw in \S 3 (Chapter 1) that the feasible region of a linear programming problem in two or less variables is a set with very special properties. In fact, when we try to generalize rays, intervals, in one dimension to  higher-dimensional spaces, we are led to the notion of convex sets, which we proceed to define.
+
+\smallskip
+\noindent
+{\bf Definition 12.1.} A set $S$ is called {\it convex}  if $(1 - a)x + ay$ belongs to $S$ whenever $x\,\, \hbox{and}\,\,y$ belong to $S$ 
+and $0\le a\le 1.$ \hfill \blackbox
+
+  For the definition of a convex set to make sense, $(1 - a)x + ay$ should be defined. This is the case when, for example, $S$ is a set of rows $[a_1, a_2,\ldots, a_n]$ or a set of columns $[a_1, a_2,\ldots, a_n]^T$, where $n\ge 1$ is a fixed integer. Clearly, we can multiply these rows (columns) by numbers and add them to obtain a new row (column). 
+
+\smallskip
+\noindent
+{\bf Definition 12.2.} A point
+  $(1 - a)x + ay$ with    $0\le a\le 1$    is called a {\it convex   combination} or a  {\it mixture} of $x$ and $y.$ \hfill \blackbox
+\smallskip
+The set of all convex linear combinations of two distinct points $x$ and $y$ is 
+called  the $interval$ or $line$ $segment$ connecting or joining $x$ and $y$.
+It can be also called the convex hull of  $x$ and $y$.
+The points $x$ and $y$ are the $endpoints$ of the segment. Sometimes these
+terms are used also in the case $x=y$ when the segment becomes a point.
+
+  Figure 12.3 shows  three examples of convex sets.
+ 
+ 
+
+$$\psfig{figure=Fig8a.eps,height=3cm}$$
+
+\centerline {{\bf Figure 12.3.} Three convex sets in the plane}
+
+
+They are
+
+diamond  $|x| + |y| \le 1,$  
+
+disc  $(x-3)^2+y^2 \le 1,$  
+
+\noindent and
+ 
+interval $(1-\alpha)[5,-1]+\alpha [6,1]$ ($0 \le \alpha \le 1$)
+ connecting
+the point $x = 5, y = -1$ with the point $x = 6,y=1.$
+\bigskip 
+
+Figure 12.4 shows  three examples of  nonconvex sets.
+
+
+
+$$\psfig{figure=Fig8b.eps,height=2.5cm}$$
+\centerline {{\bf Figure 12.4.} Three nonconvex sets in the plane:}
+\centerline { the union of a square and a triangle;}
+ \centerline { circle  $(x-3)^2+y^2 = 1;$ 
+the union of two intervals}
+\bigskip 
+
+
+
+
+
+\noindent
+{\bf Problem.} Show that the disc $x^2 + y^2\le 1$ in the $(x,y)$-plane is a convex set.
+
+\smallskip
+\noindent
+{\bf Solution.} 
+If $(x_1, y_1)\,\,\hbox{and}\,\,(x_2, y_2)$ are two elements of the disc, then $x_1^2 + y_1^2\le 1$ and $x_2^2 + y_2^2\le 1.$ Then for $0\le a\le 1,\,\,(1-a)(x_1, y_1)= ((1-a)x_1, (1-a)y_1)$ and $a(x_2, y_2)=(ax_2, ay_2).$ Therefore, the point $(1-a)(x_1, y_1)+a(x_2, y_2)$ has coordinates $x=(1-a)x_1+ax_2\,\,\hbox{and}\,\,y=(1-a)y_1+ay_2$ and, by substituting these expressions for $x$ and $y$, we have to conclude that $x^2 + y^2\le 1.$ 
+To do this use the following hint:  $(x_1-x_2)^2 \ge 0,$ hence  $2x_1y_1 \le
+x_1^2+y_1^2.$
+
+%$$\displaylines{x^2+y^2=\cr [(1-a)x_1+ax_2]^2+[(1-a)y_1+ay_2]^2=\cr (1-a)^2x_1^2+2(1-a)x_1ax_2+a^2x_2^2+\cr (1-a)^2y_1^2+2(1-a)y_1ay_2+a^2y_2^2=\cr  (1-a)^2x_1^2+(1-a)^2y_1^2+\cr a^2x_2^2+a^2y_2^2+\cr 2(1-a)x_1ax_2+2(1-a)y_1ay_2\le\cr (1-a)^2+a^2+2(1-a)a=1\cr}$$%
+
+\smallskip
+\noindent
+{\bf Proposition 12.5.} The intersection of any collection of convex sets is also a convex set. 
+
+\smallskip
+\noindent
+{\bf Proof.} Let $S_i,\,\,i\in I,$ be a collection of convex sets. We want to prove that the intersection  $S={\bigcap\atop {i\in I}} S_i$ is also convex.
+\smallskip
+If $x$ and $y$ are elements of $S,$ then $x$ and $y$ belong to $S_i$ for every $i\in I.$ Therefore, by the definition of a convex set, $(1 - a)x + ay$ belongs to $S_i$  for every $i\in I.$ Thus, $(1 - a)x + ay\in S,$ which proves the convexity of $S.$  \hfill  \blackbox
+\bigskip  
+The importance of convex sets in linear programming is easily seen from the following two theorems.
+
+\smallskip
+\noindent
+{\bf Theorem 12.6.} The feasible region $S$ of any linear program is a convex set. 
+\smallskip
+
+\smallskip
+\noindent
+{\bf Proof.} 
+Since $S$ is given by the {\it intersection} of a finite set of linear constraints, it suffices to show that the region given by one linear constraint is convex.
+ 
+Let our constraint, for variables $z_1,\ldots,z_n,$ be as follows:  
+$$a_1z_1 +\cdots+  a_nz_n\le c$$ 
+(The cases when  we have $ =$  or $\ge$  instead of $\le$ can be dealt with similarly.) Take any $a$ in the interval $0\le a\le 1.$ Let both $x = (x_1,\ldots,x_n)$  and  $y = (y_1,\ldots, y_n)$ satisfy the linear constraint; that is,
+$$a_1x_1 +\ldots+ a_nx_n\le c\,\,\, {\rm and}\,\,\, a_1y_1 +\ldots+ a_ny_n\le c.$$  
+
+Taking the linear combination of these inequalities with the coefficients $a$  and $1 - a,$  we obtain that 
+ $$a_1\,(a\,x_1 +(1 - a)\,y_1)+\ldots+  a_n\,(a\,x_n +(1- a)\,y_n)\le c;$$
+that is, $a\,x +(1 - a)\,y$ satisfies the linear constraint. \hfill \blackbox
+ 
+Since linear equations  are linear constraints,  Theorem 12.6 implies that the solution set for any system of linear equations is convex. In fact, more is true
+in this case: For any  two distinct solutions $x,y$ the whole straight line  
+ $\{(1 - a)x + ay\} $ passing through $x, y$ consists of solutions, 
+not only the  line segment  
+ $\{(1 - a)x + ay : 0 \le a \le 1\}$.   The point  $(1 - a)x + ay$
+is called an {\it affine combination} of $x$ and $y.$ \hfill
+\blackbox
+
+As an illustration of convexity, the $n$-dimensional unit simplex
+$$x_1+ \cdots + x_{n +1}= 1, \ {\rm all} \ x_i \ge 0$$
+is convex. When $n=1$  this is just the unit interval $0 \le x_1 \le 1,$
+and the two-dimensional simplex is just a triangle.
+
+
+\smallskip
+\noindent
+{\bf Theorem 12.7.} The optimality region for any linear program is a convex set. 
+
+\smallskip
+\noindent
+{\bf Proof.}
+This follows from  Theorem 12.6 because the optimality region 
+can be described by adding one additional linear constraint
+\smallskip
+\centerline{objective function = optimal value} 
+\smallskip
+\noindent
+to the set of constraints for the feasible region. \hfill \blackbox
+
+ 
+Besides the feasible set and the set of optimal solutions, there is a third convex set associated to any linear program, the set of feasible values.
+First we need a definition.
+\smallskip
+
+\noindent
+{\bf Definition 12.8.} Given an optimization problem, the values of the objective function on the feasible region are called {\it feasible values.} \blackbox
+
+If the feasible region is empty ( i.e., the system of constraints is inconsistent), then there are no feasible values.  
+
+\smallskip
+\noindent
+{\bf
+Proposition 12.9. }  The image of any convex set under an affine transformation is convex.
+
+\smallskip
+\noindent
+{\bf
+Proof. } Let  $S$ be a convex set in the space of all columns  $x$ with  $n$ entries
+and  $x \mapsto Cx+d$ be an affine transformation, where  C is a constant
+$m \times n$ matrix and  $d$ a  constant column with   $m$ entries.
+Let $ Cx+d$  and $Cy + d$ be two points in the image. Then
+$a(Cx+d) + (1-a)(Cy+d) = C(ax + (1-a)y) +d $  belongs to the image too, for any 
+scalar $a$ in the interval  $0 \le a \le 1.$ \hfill  \blackbox
+
+The  point of the proof was the fact that under  any affine transformation, straight lines go to straight lines and line segments go to line segments.
+
+\smallskip
+\noindent
+{\bf Corollary 12.10.} The set of feasible values for any linear program is convex.
+
+\smallskip
+\noindent
+{\bf Proof.} Apply   Proposition 12.9  to the case when the convex set is the feasible set of a linear program and the affine transformation is the objective function
+of this program.  
+
+ 
+
+\smallskip
+\noindent
+{\bf Definition 12.11.}
+A {\it vertex} (or extreme point)  of a convex set  $S$ is defined as a point of $S$  that is {\it not} the half-sum    $(y+z)/2$ of two distinct points $y,z$ of $S.$ \hfill \blackbox
+
+In other words, a point  is  extreme  if it is   an endpoint of every line segment  that lies  wholly in $S.$ Still another way to express this is that a point
+$x$  is a vertex if and only if the set $S$  stays convex after deleting  $x.$
+See Exercise 14 for an alternative definition of a vertex.
+
+\smallskip
+\noindent
+{\bf Example 12.12.}
+The interval $0 \le x \le 1$ has exactly two vertices, its ends
+$x=0$ and $x=1.$ Indeed, if  $0 = (y+z)/2$ with   both $y$ and $z$ in the interval, then obviously $y=z=0;$ hence $y$ and $z$ are not distinct. Similarly, 1 is a vertex. On the other hand, if $x$ is in the interval and $x \ne 0,1,$
+then we can write  $x =(y+z)/2$ with  $y = x- \varepsilon $ and
+ $z = x+ \varepsilon, $  where  $\varepsilon = \min(x, 1-x) \ne 0,$ hence
+both  $y,z$ are in the interval, and they are distinct.
+
+\smallskip
+\noindent
+{\bf Example 12.13.} The triangle  $x \ge 0, y \ge 0, x+y \le 1$ has three vertices: $x=y=0; x=0, y=1; x=1, y=0.$ Prove this.
+
+\smallskip
+\noindent
+{\bf Example 12.14.} The  extreme points in the disc  $x^2 + y^2 \le 1$ are
+the points at the circle  $x^2 + y^2 = 1.$  Prove this. \hfill  \blackbox
+
+The image of a vertex under an affine map need not   be a vertex: 
+Take the diamond $S$ with 4 vertices in  Figure 12.3  and project it
+into the $x$-axis, $[x,y] ^T \mapsto x = [1,0][x,y] ^T  .$ The image is 
+an interval with two vertices (endpoints), and two  vertices of $S$ go to the middle of the interval.
+
+
+\smallskip
+\noindent
+{\bf
+Proposition 12.15. }  Let  $S$ be a convex set and  $f$ an affine transformation that takes
+distinct points of $S$ to distinct points. Then  $F(x)$ is a vertex in $F(S)$
+for any vertex $x$ in $S.$
+
+\smallskip
+\noindent
+{\bf
+Proof.}  Suppose that $x$ is a vertex in $S$  and  $f(x) = (f(y) + f(z))/2$
+for some  $f(y)$ and $f(z)$ in $f(S).$  Then  $x = (y+y)/2$ hence $x=y=z.$ 
+So  $f(x) = f(y) = f(z).$  Thus, $f(x)$  is a vertex. \hfill \blackbox
+
+For example, if we have a linear program P with all variables required to
+be $\ge 0,$ then  we can write it in a standard tableau so P is affinely equivalent to the tableau problem P$'.$   Proposition 12.15 says that there is
+a 1-1-correspondence between vertices in the feasible region for P and the vertices in the feasible region for P$'$. Now we relate  the latter vertices with
+feasible tableaux as follows.
+ 
+ 
+    
+\smallskip
+\noindent
+{\bf Theorem 12.16.} Consider a linear program given by a standard row tableau. Then 
+ a point in the feasible region   is a vertex if and only if
+it is the basic solution for a feasible tableau.
+
+\smallskip
+\noindent
+{\bf Proof.}  
+ Consider    an arbitrary feasible tableau  
+$$\rowtab{&x&1\cr\omit&A&b\cr\omit
+&c&d\cr}\quad\matrix{=u\hfill&\omit&\omit\cr=z\rightarrow\hbox{min,}&x \ge 0, &u \ge 0\cr} \eqno(12.17)$$
+and the corresponding basic solution  $x=0, u= Ax^T+b =b.$
+The feasibility means that $b \ge 0.$
+ Let us try to write
+$$[0,b] = ([y,Ay^T+b] + [z,Az^T+b])/2$$
+ with feasible solutions $[y,Ay^T+b], [z,Az^T+b].$ Since  $y,z \ge 0,$ we conclude that $y=z=0;$ hence
+$[y,Ay^T+b] = [z,Az^T+b] = [0,b].$ Thus, $[0,b]$ is a vertex.
+
+Conversely, let $[x',Ax'^T+b]$ be a vertex in the feasible region $S.$
+(If $S$ is empty, there is nothing to prove.)
+We start with any feasible tableau (12.17) and by 
+degenerate pivot steps put
+as many variables, which take the zero value at the vertex,  as possible
+on the top. 
+
+Suppose now that in the tableau (12.17) we cannot switch any variable on
+top taking a nonzero value with any variable at the right margin taking 
+the zero value. If all variables on the top take the zero value, then
+$[x',Ax'^T+b]  =  [0, b]$ is the basic solution, and we are done.
+Assume now that a variable on the top, $x_0,$ takes a nonzero value $x'_0,$
+and we are going to get a contradiction.
+
+Permuting  columns, we assume that this is the first variable on the top.
+Permuting rows, we assume that the zeros in the $b$-part, if any, are on the top of this part.
+Our tableau looks like
+$$\rowtab{&x_0 & y &1\cr
+\omit&A'  &* & 0\cr
+\omit&* & *& +\cr
+\omit &* & * &d \cr
+}\quad\matrix{=v \hfill&\omit&\omit\cr
+=w \hfill&\omit&\omit\cr
+=z\rightarrow\hbox{min,}&x \ge 0, &u \ge 0\cr} \eqno(12.18) $$
+where + stands for positive entries. Since we cannot switch  $x_0$ with any variable by a pivot step in $v,$ then either there is no $A', v$ in the tableau
+or $A' = 0.$ Now we change the vertex a little bit replacing
+$x_0$ by   $x_0- \varepsilon$  and $x_0 + \varepsilon$ and keeping the same values $y'$ for the other variables $y$ on the top. For sufficiently small
+$\varepsilon > 0,$ we obtain two distinct feasible solutions
+$$[[x_0'- \varepsilon,  y'] ,A[x_0'+ \varepsilon,  y']^T+b]$$
+and
+$$ [[x_0'+ \varepsilon,  y']     ,A[x_0'+ \varepsilon,  y']^T+b],$$
+and our vertex  $[[x_0',  y'], A[x_0',  y']^T+b]$ is the half-sum of these two points, which is a contradiction. \hfill  \blackbox
+
+  As a corollary of Theorem 12.16, we obtain that the basic solution of
+an optimal tableau is a vertex in the feasible region. Thus, if a linear program
+has an optimal solution, then one of the vertices  in the feasible region is optimal. This statement is   called the $corner$  $principle. $ A corner here
+refers to  a vertex (extreme point).
+
+Another consequence of Theorem  12.16 is as follows:
+
+\smallskip
+\noindent
+{\bf 
+Corollary.}  The feasible region for any linear program has only finitely many vertices.
+
+\smallskip
+\noindent
+{\bf 
+Proof.}  Let  $x$ be the column of  $n$   variables in our program P and  $m$
+the number   of
+inequalities in P  that are not  sign restrictions.
+If  all $n$ variables in our program  P are required to be $\ge 0,$ then   P is affinely equivalent to a linear program given by a standard tableau, so we can apply  Theorem 12.6 and Proposition 12.5 and conclude  that the number of vertices is at most  
+  $$ {(m+n)! \over m!n!} = { m+n \choose m} =   { m+n \choose n}, $$
+where $n$ is the number of variables in P and  $n+m$  is the  number of
+inequalities in P (recall that  to put P into a standard  tableau P$'$ we
+introduce a slack variable for each inequality which is not a sign
+constraint). In general we will prove that  the number of vertices for
+P is at most  ${ m+n \choose m}$.  Suppose we find  a finite set of vertices
+$V$ for P with 
+   $N >{ m+2n \choose m}$ 
+vertices   (we still do not know whether  P has only finitely many vertices).  Then we can shift all variables, i.e.,  make transformation
+$x  \mapsto  y= x+ s $  (the affine transformation 
+going back is   also a shift,  $y  \mapsto  x= x- s $)     where $s$ is a constant column  such that  $y \ge 0$  for all
+vertices in the selected set  $V.$  Now we add   at most $n$   sign restrictions on variables in the column $y$  to obtain a new problem P$''$
+with $n$ variables $y \ge 0$.  The problem P$''$ has still the same number  $m$
+of  other inequalities. Moreover the vertices in $V$ correspond to vertices
+for P$''$. (Some vertices in P now  could be  cut off.) Since there are too many of them, we obtain a contradiction. We used  a fact about vertices stated as
+  Exercise 18 in the end of this section. \hfill \blackbox
+
+
+
+
+By Theorem 12.16, in Phase 2 of the simplex method, a pivot step corresponds to going
+from a vertex in the feasible region to another vertex.
+Every vertex can be described by the corresponding basic solution or by
+the system of linear equations: all  nonbasic variables = 0. 
+A degenerate pivot step does not change the basic solution but any pivot step  changes the basis (the set of variables at the right margin) and the set of equations 
+describing the solution. The change  is not big: Only one basic variable is replaced and only one equation is replaced.
+
+It is not difficult to show that the two vertices connected by 
+a nondegenerate pivot step are distinct and
+$adjacent$ in the following sense.
+ 
+\smallskip
+\noindent
+{\bf 
+Definition  12.19.} \
+Two  distinct vertices $x, y$ in a convex set  $S$ are called $adjacent$ if  $S$ stays convex after deleting
+the line segment connecting   $x,y.$ \hfill \blackbox
+
+Indeed,  suppose  that  $x$ and $y$ are the basic solutions of two feasible tableaux T and T$'$ connected by a pivot step, and suppose that their 
+convex combination  $z=ax + (1-a)y$ can be written as $(u+v)/2$ with feasible solutions $u, v.$ We have to prove that  then both $u$ and $v$ are convex combinations of  $x$ and $y$. Our pivot step switches  the variables, say,  $x_1$ and $x_2.$ 
+Then  the other variables $x'$ on top (nonbasic variables)
+take zero values at both vertices.
+
+We consider
+the tableau T:
+$$\rowtab{&x_1 & x' &1\cr
+\omit&\alpha^*  &* & \beta\cr
+\omit&* & *& *\cr
+\omit &* & * &* \cr
+}\quad\matrix{=x_2 \hfill&\omit&\omit\cr
+=x'' \hfill&\omit&\omit\cr
+\to \hbox{min,}& & \cr}   $$
+where for notational convenience, we pretend that $x_1$ is the first  variable
+on the top,   $x'$  denotes the rest of the variables on the top,  $x_2$ is the first variable at the right margin, and $x''$ is the rest of the decision variables 
+on the side.
+
+Since the variables in $x'$ vanish at both $x,y$ they also vanish at $z$, hence they vanish at $u, v$. So all five points  $x,y,z,u, v$ are determined by values of
+the variable $x_1. $  The values of $x_1$ for  $x$ and $y$ are  0 and  $-\beta/\alpha$ respectively.
+These values and the values between (recall that the pivot entry $\alpha$  is negative in Phase 2 and  $\beta$ is positive) give feasible solutions,
+and other values give infeasible solutions. Thus, both $u$ and $v$ belong to the interval connecting $x$ and $y$; this interval is  the image of the interval
+$0 \le  x_1 \le  -\beta/\alpha  $  under an affine transformation. 
+
+Thus, a degenerate pivot step leaves us at the same vertex  while a nondegenerate pivot
+takes us to an adjacent vertex. In both cases,  we  change the set of linear equations giving this vertex by one equation. The equations in the question are
+
+\centerline{the nonbasic variables = 0.}
+ \smallskip
+We are still discussing the  linear program given by the standard tableau (12.17),
+that is, the linear program 
+ \smallskip
+\centerline{minimize $ z = cx^T +  d,$ subject to $ x \ge 0,\,\, A  x^T +b =u \ge 0.$}
+ \smallskip
+Let  $n$ be the number of variables on the top and  $m$ the number of variables at the right margin. 
+The inequalities $x \ge 0$ represent $n$ half-spaces, in the $n$-dimensional space $R^n,$  and the constraints
+ $A x^T =u \ge 0$ give $m$ more half-spaces. So the feasible region in the $x$ -space  $R^n$ is given as the intersection of  $m+n$ half-spaces.
+
+Sometimes it is more convenient to think about the feasible region $S$ as
+embedded in  $(x,u)$-space  $R^{n+m}.$ In this case, it is given by
+ $m+n$  inequalities and  $m$ equations, $Ax^T + b=u.$
+\smallskip
+
+Since the tableau is feasible,    the basic solution
+$x=0, u =b$  is in $S.$  So $S$
+is a nonempty set. It is a convex  ``polyhedron" or ``polytope" (bounded or unbounded; see Exercise  13 for more on   bounded sets) of nonnegative dimension. 
+
+
+ 
+
+In a  generic case (when $b$ has no zero entries), the dimension of $S$ is exactly the number  $n$   and there are  exactly $n$ hyperplanes ($active$ constraints) passing through the basic solution; namely, we set the variables on top to be 0.
+ 
+In Phase 2 of the simplex method, we start at a vertex, namely, the  
+basic solution for the initial tableau.  Each pivot step takes us to an adjacent vertex (see Definition 12.19) with the same or a better value of the objective function. In the  nongenerate case, we strictly improve the value of the objective function at each pivot step. In the degenerate case, we actually stay at the same vertex, by replacing one of the active constraints by another one.
+ 
+
+Getting a bad column means that we found an ``edge" going to infinity, such that we  drive the objective function to $-\infty$ as we follow the edge. This can happen only if $S$ is unbounded.
+
+ 
+  As a corollary of Definition 12.8, we obtain that the basic solution of
+an optimal tableau is a vertex in the feasible region. Thus, if a linear program
+has an optimal solution, then one of the vertices  in the feasible region is optimal. This statement is sometimes called the corner principle. A corner here
+refers to  a vertex (extreme point).
+
+\smallskip
+\noindent
+{\bf 
+Example 12.20.} Here we consider a two-dimensional example with pictures.
+Let the linear program
+$$x+8y \to \max, \  y-2x \le 2, \ x+y \le 5, 2x+y \le 7,\ x \le 3, x \ge 0, y \ge 0$$
+be given. We are going to solve it by the simplex method. Since the constraints are in canonical form, we need only to multiply
+the objective function $f= x+8y$  by $-1$ and introduce slack variables $a, b, c, d$ to  obtain a standard row tableau:
+
+$$   \left[ \matrix{\ \cr\  \cr\  \cr\  \cr\  } \right.
+  \matrix{ x & y & 1 \cr
+2 & -1 & 2 \cr
+-1 & -1 & 5 \cr
+-2 & -1 & 7 \cr
+-1 & 0 & 3 \cr
+-1 &-8  & 0 \cr
+& & \cr}
+ \left. \matrix{\ \cr \cr \cr \cr \cr} \right]
+\matrix{=a & \cr =b & \cr =c & \cr = d & \cr = -f & \to \min.}$$
+
+
+The tableau is feasible, so we pass to Phase 2. There are two minuses in
+the last row, and we can choose either to be in the pivot column.
+Let us choose $y$ to be included into the basis. Then the maximal ratio is $-2,$ so $u_1$ goes out of the basis. After the pivot step we obtain the tableau
+$$   \left[ \matrix{\ \cr\  \cr\  \cr\  \cr\  } \right.
+  \matrix{ x & a & 1 \cr
+2 & -1 & 2 \cr
+-3 & 1 & 3 \cr
+-4 & 1 & 5 \cr
+-1 & 0 & 3 \cr
+-17 &8  & -16 \cr
+& & \cr}
+ \left. \matrix{\ \cr \cr \cr \cr \cr} \right]
+\matrix{=y & \cr =b & \cr =c & \cr = d & \cr = -f & \to \min.}$$
+
+In  Figure 12.21 our initial tableau is represented
+by its basic solution,
+the vertex  [0, 0]. The second tableau is represented by the vertex  [0, 2].
+Thus, the pivot step is a move from a vertex along the edge $x=0$  to an adjacent vertex [0, 2].
+
+
+% $$\psfig{figure=ex.12.9b.eps,height=4cm}$$
+
+
+ $$\psfig{figure=ex.12.9c.eps,height=4cm}$$
+\vskip-119pt
+\hskip78pt $[x, y] = [1, 4]$
+\vskip6pt
+\hskip130pt $b=0$
+\vskip1pt
+\hskip  42pt $a=0$ \hskip 95pt [2, 3]
+\vskip8pt
+\hskip13pt $[0, 2]$ \hskip154pt $c=0$
+\vskip0pt
+\hskip80pt {\bf Feasible region}
+\vskip2pt
+\hskip13pt $x=0$ \hskip182pt [3, 1]
+\vskip-2pt
+\hskip183pt $d=0$  
+\vskip0pt
+\hskip13pt[0, 0]  \hskip184pt [3, 0]
+\vskip-3pt
+\hskip120pt $y=0$ 
+\smallskip
+\centerline{{\bf Figure 12.21.} The feasible region for Example 12.20}
+\medskip
+
+ 
+
+Now we have to choose the $x$-column as the pivot column and  the $b$-row as the pivot row. The pivot entry is $-3$. The pivot step gives an optimal tableau:
+
+$$   \left[ \matrix{\ \cr\  \cr\  \cr\  \cr\  } \right.
+  \matrix{ b & a & 1 \cr
+* & * & 4 \cr
+* & * & 1 \cr
+-4 & 1 & 3 \cr
+-1 & 0 & 2 \cr
+17/3 &7/3 & -33 \cr
+& & \cr}
+ \left. \matrix{\ \cr \cr \cr \cr \cr} \right]
+\matrix{=y & \cr =x & \cr =c & \cr = d & \cr = -f & \to \min.}$$
+Since the tableau is optimal, we do not need the entries marked by $*$. So 
+$\min = -33, \max = 33$ at $x=1, y=4.$ In   Figure 12.21 we moved from
+the vertex [0, 2] along the edge  $a=0$ to adjacent vertex [1, 4].
+
+What would happen if we chose the other pivot column in the initial tableau? Then we would follow
+the path [0, 0], [3, 0], [3, 1], [2, 3], [1, 4] and reach  the optimal solution in 4 pivot steps instead of 2 pivot steps. \hfill \blackbox
+\smallskip
+ 
+In conclusion, here is a quotation by
+Dantzig:
+   ``The tremendous power of the simplex method is a constant surprise to me."
+
+\bigskip
+\centerline {{\twelvebf Exercises} }
+\parindent=0pt
+
+\medskip
+{\bf 1--2.} Prove that the diamond and the interval in Figure  12.3 are   convex.  
+\medskip    
+{\bf \ 3.} Show that   the feasible region for the constraint 
+ $x^4+y^4 \le 1$ is convex.
+Can this region be the feasible region for a linear program ?
+
+\medskip    
+{\bf 4--6.} Show that  the three sets in Figure 12.4 are not convex.
+
+\medskip    
+{\bf \ 7.} Show that  the feasible region for the constraint
+$\vert x \vert  \ge 1$  is not  convex. Conclude that this region cannot be the feasible region for a linear program.
+
+\medskip    
+{\bf \ 8.} Give the disc $x^2+y^2 \le 1$ by an infinite system of linear constraints.
+
+\medskip    
+{\bf \ 9.} Can the open interval $0  < x < 1$ be given
+by a system of linear constraints?
+
+
+
+
+\medskip   
+{\bf 10.} Find the vertices in the five-dimensional simplex
+$x_1+x_2+x_3+x_4+x_5+x_6=1,$ all $x_* \ge 0.$
+
+ 
+
+ 
+\medskip   
+{\bf 11.}   Consider a feasible tableau with two columns (one variable on top)
+and $m$ rows ($m-1$  basic variables on side).
+ What is maximal possible
+number of pivot steps in  the simplex method? $ Hint: $ consider  first small values of $m.$
+ 
+\medskip   
+{\bf 12.} Consider a feasible tableau with three columns (two variables on top)
+and $m$ rows ($m-1$  basic variables on the side). 
+What is maximal possible
+number of pivot steps in Phase 2?   What if you can guess a better choice for the first pivot entry?
+$Hints$: Consider  first small values of $m$
+and assume that all pivot steps are nondegenerate; use the graphical method. 
+
+\medskip   
+{\bf 13.}  Let  $S$ be a set of vectors  $[x_1, \ldots, x_n]$  with $n$ real
+entries. For example, $S$ could be the feasible set of a linear program with 
+the decision variables $x_i.$ Show that the following  five properties of
+$S$ are equivalent:
+
+(a) Every affine function on $S$ is bounded.
+
+(b) The function $x_i$ is bounded on $S$ for  $i = 1,\ldots, n.$
+
+(c) The function   $x_1^2+ \cdots + x_n^2$ is bounded on $S$.
+
+(d) The function   $|x_1| + \cdots + |x_n|$ is bounded on $S$.
+
+(e) The function   $\max_{1\le i\le n}  |x_i|$   is bounded on $S.$
+
+\smallskip
+{\bf Remark.} The set $S$ is called  $bounded$ if one of these conditions (and hence all of them) holds. In some publications, the boundedness is included into  the concept of polyhedron or polytope. A bounded polyhedron is the convex hull of its vertices  (i.e., consists of all convex
+combinations of its vertices). Conversely, the convex hull  $S$
+of any finite set is a bounded polyhedron, so $S$ can be given by a finite set
+of linear constraint. Recall that a function $f(x)$ on a set $X$ is $bounded$
+if there is a number $C$ such that  $f(x) \le C$ for all $x$ in  $S.$
+
+ \medskip   
+
+{\bf 14.} 
+Let a convex set $S$  be given by
+a system of linear constraints. Prove that  a point $x$ is a vertex if and only if no other point has the same tight constraints.  
+
+ 
+
+{\bf 15.} Suppose we minimize a linear form over
+a convex set and there is an exactly one optimal solution $x.$ Prove that $x$ is a vertex in $S.$  $Hint$:  Write $x=(y+z)/2$ and consider  
+$$\min=f(x)= (f(y)+f(z))/2.$$
+\smallskip
+
+{\bf 16.} Given any linear program and its feasible region $S,$
+show that for each vertex $x$ in $S$ there is a linear form $f$ such that $x$ is  the unique optimal solution when we minimize $f$ over $S.$  
+Construct a convex set  $S$  and a vertex $x$  for which there is no such $f.$
+
+ 
+{\bf 17.} Let $x$ be an extreme point in a convex set $S.$ Prove that there is
+a nonconstant linear form $f$ such that $x$ is an optimal solution
+for  maximization  of $f$ over $S.$ In other words, there is a tangent
+hyperplane to $S$ touching the point $x.$  $Hint$:  To do this problem
+in general, you have to be at a Ph.D. level in mathematics. Try to solve
+this problem for some simple convex sets you know, like convex polygons in plane.
+
+{\bf 18.}  Let $x$ be a vertex in a convex set $S$, and   $S'$ be another convex set containing $x$. Then  $x$ is a vertex in the intersection $S \cap S'.$
+For example, $x = 0,$  $S$ is the interval   $0 \le x \le 1,$  and
+$S'$  is the ray   $x \le 1/2.$
+
+
+\end
+
+From ~vstein:
+
+cd www/publisher
+
+tex ch4
+
+dvips -o ch4.ps ch4.dvi
+
+ps2pdf ch4.ps
+
+\smallskip
+\noindent
+{\bf Example 11.7.} We  write Example 2.3 in a standard tableau.
+
+$$\rowtab{&x_1&x_2&x_3&1\cr\omit
+&-40&-20&-60&1200\cr\omit
+&-4&-1&-6&300\cr\omit
+&-.2&-.7&-2&40\cr\omit
+&-100&-100&-800&8000\cr\omit
+&-.1&-.3&-.6 & 8\cr\omit
+&-2&-3&-7&0\cr}\thinspace\matrix{=u_1\hfill\cr =u_2 \hfill\cr =u_3\hfill\cr=u_4\hfill\cr =u_5\hfill\cr =-P\rightarrow \hbox{min}\cr}$$
+\noindent and we require that all the variables $x_1,\,\,x_2,\,\,x_3,\,\,u_1,\,\,u_2,\,\,u_3,\,\,u_4\ge 0.$ 
+\smallskip
+This tableau is row feasible; that is, the basic solution (do nothing) is feasible. Such a basic solution is given by $x_1=0,\,\,x_2=0,\,\,x_3=0,\,\,u_1=1200,\,\,u_2=300,\,\,u_3=40,\,\,u_4=8000, \,\, u_5=8.$ The tableau is not  optimal. 
+
+
+\smallskip
+\noindent
+{\bf Example 11.9.}  Let us write Example 2.1 (the diet problem) in standard tableau form, where the slack variables at the right margin are denoted by $u_1,\,\,u_2,\,\,\hbox{and}\,\,u_3.$ 
+$$\rowtab{&a&b&c&d&e&1\cr\omit
+&0.3&1.2  &0.7   &3.5&5.5&-50\cr\omit
+&73 &96   &20253 &890&279&-4000\cr\omit
+&9.6& 7   &19    &57&22  &-1000\cr\omit
+&8&10&15&5&60&0\cr}\thinspace\matrix{=u_1\hfill\cr =u_2 \hfill\cr =u_3\hfill\cr=C\rightarrow\hbox{min}\cr}$$
+\noindent where we require that all the variables 
+$a, b, c, d, e, u_1,\,\,u_2,\,\,u_3\ge 0.$ 
+ 
+This tableau  is not row feasible; that is, the basic solution (do not eat anything) is not a feasible solution. This basic solution is given by $a=0,\,b=0,\,c=0,\, d=0,\,e=0, \,\,u_1=-50,\,\,u_2=-4000 ,\,\,u_3=-1000.$ 
+This tableau is {\it column feasible}  since
+$$[8, 10, 15, 5, 60] \ge 0$$ 
+for the last row without the last entry. 
+\blackbox
+
+
+\smallskip
+\noindent
+{\bf Example 11.10.} We  write Example 2.2 in a standard tableau. Instead of excluding variables as we did above, we now add new variables (artificial variables) to put the problem in a standard tableau form.  This makes sense when you use a computer which understands only standard tableaux and does not mind a few extra variables.
+$$\rowtab{&a&b&c&d&1\cr\omit
+&.9&.8&.7&.6&-.75\cr\omit
+&-.9&-.8&-.7&-.6&.75\cr\omit
+&.1&.2&.3&.4&-.25\cr\omit
+&-.1&-.2&-.3&-.4&.25\cr\omit
+&1.2&1.4&1.7&1.9&0\cr}\quad\matrix{=y_1\hfill\cr =y_2\hfill\cr =y_3\hfill\cr =y_4\hfill\cr =C\rightarrow\hbox{min}\cr}$$
+with the nonnegativity constraints 
+
+$a,b,c,d, y_1,\,\,y_2,\,\,y_3,\,\,y_4,\,\,y_5,\,\,y_6\ge 0.$
+
+\smallskip
+
+This tableau is column feasible (the last row consists of nonnegative entries). It is not row feasible, since the basic solution reads $a=0,\,\,b=0,\,\,c=0,\,\,d=0,\,\,y_1=-.75,\,\,y_2=.75,\,\,y_3=-.25,\,\, y_4=.25.$ 
+

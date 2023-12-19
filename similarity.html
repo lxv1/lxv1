@@ -1,0 +1,804 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="1265.21">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 18.0px Times}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 18.0px Times; min-height: 23.0px}
+    p.p3 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
+    p.p4 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+    p.p5 {margin: 0.0px 0.0px 0.0px 0.0px; font: 18.0px Helvetica}
+    p.p6 {margin: 0.0px 0.0px 0.0px 0.0px; font: 18.0px Helvetica; min-height: 22.0px}
+    p.p7 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Arial}
+    p.p8 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Arial; min-height: 14.0px}
+    p.p9 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 23.0px Helvetica}
+    p.p10 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times}
+    p.p11 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 17.0px Times}
+    p.p12 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; min-height: 14.0px}
+    p.p13 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 12.0px Times; min-height: 14.0px}
+    p.p14 {margin: 0.0px 0.0px 0.0px 0.0px; font: 19.0px Times}
+    p.p15 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; color: #042eee}
+    p.p16 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px Arial}
+    p.p17 {margin: 0.0px 0.0px 0.0px 0.0px; font: 11.0px Times; min-height: 13.0px}
+    p.p18 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 17.0px Times; min-height: 20.0px}
+    p.p19 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px Times}
+    p.p20 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px 'Times New Roman'}
+    p.p21 {margin: 0.0px 0.0px 0.0px 0.0px; font: 17.0px Times; min-height: 20.0px}
+    p.p22 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 11.0px Times; min-height: 13.0px}
+    p.p23 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; color: #4787ff}
+    p.p24 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px Times; min-height: 16.0px}
+    p.p25 {margin: 0.0px 0.0px 12.0px 0.0px; font: 12.0px Times}
+    p.p26 {margin: 0.0px 0.0px 0.0px 0.0px; font: 17.0px Helvetica; min-height: 20.0px}
+    p.p27 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 18.0px Times}
+    p.p28 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 18.0px Times; min-height: 23.0px}
+    p.p29 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; color: #042ff1}
+    p.p30 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; color: #042ff1; min-height: 14.0px}
+    p.p31 {margin: 0.0px 0.0px 0.0px 0.0px; font: 17.0px Times}
+    p.p32 {margin: 0.0px 0.0px 0.0px 0.0px; font: 17.0px Times; color: #042ff1}
+    p.p33 {margin: 0.0px 0.0px 0.0px 0.0px; font: 17.0px Helvetica}
+    p.p34 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 17.0px Helvetica; min-height: 20.0px}
+    p.p35 {margin: 0.0px 0.0px 12.0px 0.0px; font: 13.0px Times}
+    p.p36 {margin: 0.0px 0.0px 0.0px 0.0px; font: 15.0px Arial}
+    p.p37 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 19.0px Times; min-height: 23.0px}
+    p.p38 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px Times; color: #042eee}
+    p.p39 {margin: 0.0px 0.0px 0.0px 0.0px; font: 15.0px Times; color: #042eee}
+    p.p40 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 12.0px Helvetica; min-height: 14.0px}
+    p.p41 {margin: 0.0px 0.0px 0.0px 0.0px; font: 17.0px Arial}
+    p.p42 {margin: 0.0px 0.0px 0.0px 0.0px; font: 18.0px Arial}
+    p.p43 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times}
+    p.p44 {margin: 0.0px 0.0px 0.0px 0.0px; font: 17.0px Arial; min-height: 20.0px}
+    p.p45 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; color: #4787ff; min-height: 14.0px}
+    p.p46 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px 'Lucida Grande'}
+    p.p47 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; color: #042eee; min-height: 14.0px}
+    p.p48 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: right; font: 12.0px Times; min-height: 14.0px}
+    p.p49 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 24.0px Times; min-height: 29.0px}
+    p.p50 {margin: 0.0px 0.0px 0.0px 0.0px; font: 18.0px Arial; min-height: 21.0px}
+    p.p51 {margin: 0.0px 0.0px 0.0px 0.0px; font: 15.0px Helvetica}
+    p.p52 {margin: 0.0px 0.0px 0.0px 0.0px; font: 18.0px 'Times New Roman'}
+    p.p53 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 12.0px Times; color: #042ff1; min-height: 14.0px}
+    p.p54 {margin: 0.0px 0.0px 0.0px 0.0px; font: 19.0px Helvetica; color: #1061c8; min-height: 23.0px}
+    p.p55 {margin: 0.0px 0.0px 0.0px 0.0px; font: 19.0px Helvetica; color: #1061c8}
+    span.s1 {font: 12.0px Arial}
+    span.s2 {font: 18.0px Helvetica}
+    span.s3 {font: 15.0px Helvetica}
+    span.s4 {text-decoration: underline ; color: #042eee}
+    span.s5 {font: 12.0px Times}
+    span.s6 {font: 17.0px Arial}
+    span.s7 {font: 18.0px Arial}
+    span.s8 {font: 13.0px Times}
+    span.s9 {font: 13.0px STIXGeneral}
+    span.s10 {font: 9.0px STIXGeneral}
+    span.s11 {text-decoration: underline ; color: #2337f3}
+    span.s12 {font: 12.0px Courier; color: #2337f3}
+    span.s13 {color: #2337f3}
+    span.s14 {font: 24.0px Times}
+    span.s15 {font: 12.0px Times; text-decoration: underline ; color: #042eee}
+    span.s16 {text-decoration: underline}
+    span.s17 {color: #000000}
+    span.s18 {color: #042eee}
+    span.s19 {font: 13.0px 'Lucida Grande'}
+    span.s20 {font: 13.0px Times; text-decoration: underline ; color: #0439ff}
+    span.s21 {text-decoration: underline ; color: #0439ff}
+    span.s22 {font: 13.0px 'Times New Roman'}
+    span.s23 {font: 12.0px Helvetica; text-decoration: underline ; color: #4787ff}
+    span.s24 {font: 12.0px Helvetica; text-decoration: underline}
+    span.s25 {text-decoration: underline ; color: #4787ff}
+    span.s26 {font: 13.0px Helvetica}
+    span.s27 {font: 13.0px Symbol}
+    span.s28 {font: 9.0px Times}
+    span.s29 {font: 12.0px 'Apple Symbols'}
+    span.s30 {text-decoration: underline ; color: #569dff}
+    span.s31 {font: 9.0px Times; vertical-align: -1.5px}
+    span.s32 {font: 9.0px Times; vertical-align: 6.5px}
+    span.s33 {color: #042ff1}
+    span.s34 {text-decoration: underline ; color: #042ff1}
+    span.s35 {color: #272ff1}
+    span.s36 {text-decoration: underline ; color: #272ff1}
+    span.s37 {font: 12.0px Helvetica}
+    span.s38 {font: 15.0px Times}
+    span.s39 {font: 18.0px Times}
+    span.s40 {font: 12.0px 'Arial Unicode MS'}
+    span.s41 {font: 12.0px Symbol}
+    span.s42 {font: 12.0px 'Cambria Math'}
+    span.s43 {font: 17.0px Times; text-decoration: underline}
+    span.s44 {font: 17.0px 'Apple Symbols'}
+    span.s45 {color: #4787ff}
+    span.s46 {font: 13.0px Times; text-decoration: underline}
+    span.s47 {font: 12.0px Times; color: #000000}
+    span.s48 {font: 15.0px Times; text-decoration: underline}
+    span.s49 {font: 12.0px STIXGeneral}
+    span.s50 {font: 12.0px 'Lucida Grande'}
+    span.s51 {font: 14.0px Times; color: #042eee}
+    span.s52 {font: 14.0px Times}
+    span.s53 {font: 10.0px Times}
+    span.s54 {font: 19.0px Times}
+    span.s55 {font: 19.0px Times; text-decoration: underline ; color: #2730f3}
+    span.s56 {color: #2730f3}
+    span.s57 {text-decoration: underline ; color: #2730f3}
+    span.s58 {font: 12.0px Times; text-decoration: underline}
+    span.s59 {font: 12.0px Helvetica; color: #000000}
+    span.s60 {font: 18.0px Symbol}
+    span.s61 {font: 17.0px Symbol}
+    span.s62 {font: 17.0px '.Helvetica Neue Desk UI'}
+    span.s63 {font: 17.0px 'Lucida Grande'}
+    span.s64 {font: 17.0px Times}
+    span.s65 {font: 13.0px Times; color: #000000}
+    span.s66 {font: 13.0px STIXGeneral; color: #000000}
+    span.s67 {font: 12.0px Arial; color: #000000}
+    span.Apple-tab-span {white-space:pre}
+    td.td1 {width: 15.0px; height: 1.0px; padding: 2.0px 2.0px 2.0px 2.0px}
+    td.td2 {width: 248.0px; height: 1.0px; padding: 2.0px 2.0px 2.0px 2.0px}
+  </style>
+</head>
+<body>
+<p class="p1">similarity.rtf</p>
+<p class="p2"><br></p>
+<p class="p3">see: similarity_local.rtf ; similarity_integer.rtf, similarity_holomorphic.rtf,<span class="Apple-converted-space">  </span>Kaplansky.rtf<span class="Apple-converted-space">  </span>similarity_divisionRing.rtf<span class="Apple-converted-space">  </span>similarity_simultaneous.rtf</p>
+<p class="p4"><br></p>
+<p class="p2"><br></p>
+<p class="p2"><br></p>
+<p class="p5">A and<span class="Apple-converted-space">  </span>B<span class="Apple-converted-space">  </span>matrices over an associative<span class="Apple-converted-space">  </span>ring, <span class="Apple-converted-space">  </span>U= U( λ) and V = V( λ) are<span class="Apple-converted-space">  </span>invertible<span class="Apple-converted-space">    </span>polynomial matrices. Assume that <span class="Apple-converted-space"> </span></p>
+<p class="p5"><span class="Apple-converted-space"> </span>U(A -<span class="Apple-converted-space">  </span>λ)V = B -<span class="Apple-converted-space">  </span>λ. Then<span class="Apple-converted-space">  </span>A<span class="Apple-converted-space">  </span>and<span class="Apple-converted-space">  </span>B<span class="Apple-converted-space">  </span>are similar.<span class="Apple-converted-space"> </span></p>
+<p class="p5">Proof.<span class="Apple-converted-space">  </span>U = (B -<span class="Apple-converted-space">  </span>λ)Q_1 + R_1 <span class="Apple-converted-space">  </span>V = Q_2(B -<span class="Apple-converted-space">  </span>λ) + R_2, <span class="Apple-converted-space">                                                     </span></p>
+<p class="p5">R_1(A -<span class="Apple-converted-space">  </span>λ)R_2 = (U - (B -<span class="Apple-converted-space">  </span>λ)Q_1) (A -<span class="Apple-converted-space">  </span>λ) (V - Q_2(B -<span class="Apple-converted-space">  </span>λ)<span class="Apple-converted-space">  </span>= <span class="Apple-converted-space">  </span>(B -<span class="Apple-converted-space">  </span>λ) + (B -<span class="Apple-converted-space">  </span>λ)(*)(B -<span class="Apple-converted-space">  </span>λ)</p>
+<p class="p5">where<span class="Apple-converted-space">  </span>* =<span class="Apple-converted-space">    </span>Q_1 (A -<span class="Apple-converted-space">  </span>λ)Q_2<span class="Apple-converted-space">  </span>-<span class="Apple-converted-space">  </span>Q_1) /U<span class="Apple-converted-space">  </span>- Q_2 - (1/V)Q_2.</p>
+<p class="p5">The second term on the right vanishes because otherwise<span class="Apple-converted-space">  </span>it is of degree<span class="Apple-converted-space">  </span>≥<span class="Apple-converted-space">  </span>2.</p>
+<p class="p5">Then R_1 R_2 = 1 and <span class="Apple-converted-space">  </span>R_1AR_2 = B.</p>
+<p class="p6"><br></p>
+<p class="p5">Stated and proved <span class="s1">(for fields).<span class="Apple-converted-space"> </span></span> in<span class="Apple-converted-space"> </span></p>
+<p class="p7">Курс высшей алгебры Nauka 1968 <span class="Apple-converted-space">  </span>(9-е изд..<span class="Apple-converted-space">  </span>Kurosh.djvu 7MB<span class="Apple-converted-space">  </span>pages 376-378<span class="Apple-converted-space"> </span></p>
+<p class="p7">[ Zbl 0237.13001<span class="Apple-converted-space">  </span>Kurosh, A. Higher algebra. (Kurs vyssei algebry.) Übersetzung aus dem Russischen von George Yankovsky. (German)<span class="Apple-converted-space">  </span>Moskau: Mir Publishers. 428 S. M 15.00 (1972). MSC:<span class="Apple-converted-space">  </span>13-01 00-02 16-01 20-01<span class="Apple-converted-space">  </span>]</p>
+<p class="p5">and in <span class="s1"><span class="Apple-converted-space"> </span></span></p>
+<p class="p7">Theory of Matrices 3nd edition 1967<span class="Apple-converted-space">  </span>my book<span class="Apple-converted-space">    </span>1959 v.1<span class="Apple-converted-space">  </span>Gantmacher1.djvu 10MB Theorem 7 on p.147</p>
+<p class="p8"><br></p>
+<p class="p7">1-<span class="Apple-converted-space"> </span><span class="s2"> <span class="Apple-converted-space">  </span></span><span class="s3">λ</span>A<span class="Apple-converted-space">  </span>and 1-<span class="Apple-converted-space"> </span><span class="s2"> <span class="Apple-converted-space">  </span></span><span class="s3">λ</span>B<span class="Apple-converted-space">  </span>equivalent does NOT imply<span class="Apple-converted-space">  </span>A and B similar:<span class="Apple-converted-space">  </span>A = 0, B nilpotent.<span class="Apple-converted-space">  </span>However if A, B are invertible, the implication works.</p>
+<p class="p6"><br></p>
+<p class="p5">—————————</p>
+<p class="p6"><br></p>
+<p class="p5">The<span class="Apple-converted-space">  </span>m<span class="Apple-converted-space">  </span>by<span class="Apple-converted-space">  </span>n<span class="Apple-converted-space">  </span>matrices over a ring<span class="Apple-converted-space">  </span>R are the right R-module homomorphisms of n-columns<span class="Apple-converted-space">  </span>to m-columns over<span class="Apple-converted-space">  </span>R</p>
+<p class="p5">In particular, the ring of n<span class="Apple-converted-space">  </span>by n<span class="Apple-converted-space">  </span>matrices over R are the endomorphisms of the right R-module of<span class="Apple-converted-space">  </span>n-columns over<span class="Apple-converted-space">  </span>R.</p>
+<p class="p5">Multiplication by a scalar is not an R-module homomorphism unless the scalar is central in which case the endomorphism is a scalar matrix.</p>
+<p class="p6"><br></p>
+<p class="p6"><br></p>
+<p class="p6"><br></p>
+<p class="p6"><br></p>
+<p class="p9">wiki</p>
+<p class="p6"><br></p>
+<p class="p5"><a href="https://en.wikipedia.org/wiki/Elementary_divisors">elementary divisors</a> =<a href="https://en.wikipedia.org/wiki/Invariant_factor"> invariant factors </a><span class="Apple-converted-space">  </span>wiki</p>
+<p class="p5">for a matrix over commutative PID <span class="Apple-converted-space"> </span></p>
+<p class="p6"><br></p>
+<p class="p3"><a href="https://en.wikipedia.org/wiki/Smith_normal_form">Smith normal form</a> wiki</p>
+<p class="p5">for a matrix over commutative PID <span class="Apple-converted-space"> </span></p>
+<p class="p6"><br></p>
+<p class="p2"><a href="https://en.wikipedia.org/wiki/Frobenius_normal_form"><b><span class="Apple-converted-space"> </span></b></a></p>
+<p class="p10">In <a href="https://en.wikipedia.org/wiki/Linear_algebra"><span class="s4">linear algebra</span></a>, the <b>Frobenius normal form</b> or <b>rational canonical form</b> of a <a href="https://en.wikipedia.org/wiki/Square_matrix"><span class="s4">square matrix</span></a> <i>A</i> with entries in a <a href="https://en.wikipedia.org/wiki/Field_%28mathematics%29"><span class="s4">field</span></a> <i>F</i> is a <a href="https://en.wikipedia.org/wiki/Canonical_form"><span class="s4">canonical form</span></a> for <a href="https://en.wikipedia.org/wiki/Matrix_%28mathematics%29"><span class="s4">matrices</span></a> obtained by conjugation by invertible matrices over <i>F</i>. The form reflects a minimal decomposition of the vector space into subspaces that are cyclic for <i>A</i> (i.e., spanned by some vector and its repeated images under <i>A</i>).</p>
+<p class="p2"><br></p>
+<p class="p2"><br></p>
+<p class="p2"><br></p>
+<p class="p11">A</p>
+<p class="p12"><br></p>
+<p class="p12"><br></p>
+<p class="p7"><span class="s5"><b>MR3041349 </b></span>I. Akharraz, Rational canonical form for matrices over the ring Z^p<span class="s6"><sup>r<span class="Apple-converted-space"> </span></sup></span><span class="s7"><sup> </sup></span>of integers modulo p<span class="s6"><sup>r</sup></span></p>
+<p class="p7">(over a factor ring of Z) .<span class="Apple-converted-space">  </span>Journal of Advanced Research in Pure Mathematics Volume 5, Issue 3, 2013<span class="Apple-converted-space">    </span>Pages<span class="Apple-converted-space">  </span>107 - 111<span class="Apple-converted-space"> </span></p>
+<p class="p7">Received <span class="Apple-converted-space">  </span>15 June 2012, <span class="Apple-converted-space">  </span>Accepted <span class="Apple-converted-space">  </span>14 January 2013</p>
+<p class="p7"><span class="Apple-converted-space"> </span>Akharraz.pdf<span class="Apple-converted-space">  </span>local</p>
+<p class="p8"><br></p>
+<p class="p8"><br></p>
+<p class="p7">MR0617778 (82i:20052) Appelgate, Harry; Onishi, Hironori Continued fractions and the conjugacy problem in ${\rm SL}_{2}(Z)$. Comm. Algebra 9 (1981), no. 11, 1121--1130. (Reviewer: Joseph B. Dennin, Jr.) 20G30 (10A32 10D07).<span class="Apple-converted-space"> </span></p>
+<p class="p7">Appelgate.pdf <span class="Apple-converted-space">  </span>integer</p>
+<p class="p8"><br></p>
+<p class="p10"><span class="s4"><a href="http://www.ams.org.ezaccess.libraries.psu.edu/mathscinet/search/publdoc.html?pg1=MR&amp;s1=0656422&amp;loc=fromreflist">MR0656422</a> </span>Appelgate, H., Onishi, H. (1982). The similarity problem for<span class="s8"> </span><span class="s9">3×3</span><span class="s8"> </span>integer matrices. Linear Algebra Appl. 42:159–174.<span class="Apple-converted-space"> </span></p>
+<p class="p10">Appelgate 3.pdf<span class="Apple-converted-space">  </span>integer</p>
+<p class="p12"><br></p>
+<p class="p10"><span class="s4"><a href="http://www.ams.org.ezaccess.libraries.psu.edu/mathscinet/search/publdoc.html?pg1=MR&amp;s1=0681827&amp;loc=fromreflist">MR0681827</a><span class="Apple-converted-space">  </span></span>Appelgate, H., Onishi, H. (1983). Similarity problem over<span class="s8"> </span><span class="s9">SL(<i>n</i>,Z</span><span class="s10"><i>p</i></span><span class="s9">)</span><span class="s8"> </span>. Proc. Amer. Math. Soc. 87:(2)233–238.<span class="Apple-converted-space"> </span></p>
+<p class="p7">Appelgate2.pdf<span class="Apple-converted-space">    </span><span class="s5">local</span></p>
+<p class="p8"><br></p>
+<p class="p8"><br></p>
+<p class="p8"><br></p>
+<p class="p7"><b>MR0301242</b> <b>(46 #400)</b> <span class="Apple-converted-space">  </span><span class="s11">Arnol</span><span class="s12">ʹ</span><span class="s11">d, V. I.</span> Matrices depending on parameters. <b>(Russian)</b><span class="Apple-converted-space">  </span><span class="s13"><i>Uspehi Mat. Nauk</i></span> <b>26 </b>(1971), no. 2(158), 101--114.<span class="Apple-converted-space">  </span><span class="s11">32G13 (14B05). </span>similarity<span class="Apple-converted-space"> </span><span class="s11"> = О матрицах, зависящих от параметров</span> В. И. Арнольд <i>УМН</i>, 1971, <b>26</b>:2(158), 101–114<span class="Apple-converted-space"> </span></p>
+<p class="p7">Arnold3.pdf. <span class="Apple-converted-space">  </span>similarity<span class="Apple-converted-space"> </span><span class="s5"> </span>holomorphic functions<span class="Apple-converted-space">  </span>several complex variables near 0 convergent series</p>
+<p class="p12"><br></p>
+<p class="p12"><br></p>
+<p class="p11">B</p>
+<p class="p13"><br></p>
+<p class="p14"><b>Local Conjugacy of Irreducible Hyperbolic Toral Automorphisms<span class="Apple-converted-space"> </span></b><span class="s14"><b> </b><a href="https://arxiv.org/pdf/1611.05551v1"><span class="s15">PDF</span></a></span><span class="s15"> arXiv</span></p>
+<p class="p15"><span class="s16"><a href="https://arxiv.org/find/math/1/au:+Bakker_L/0/1/0/all/0/1">Lennard F Bakker</a></span><span class="s17">, <a href="https://arxiv.org/find/math/1/au:+Rodrigues_P/0/1/0/all/0/1"><span class="s16">Pedro Martins Rodrigues</span></a>, <a href="https://arxiv.org/find/math/1/au:+Moreira_M/0/1/0/all/0/1"><span class="s16">Miguel M. R. Moreira</span></a> (Submitted on 17 Nov 2016)</span></p>
+<p class="p10">Bakker.pdf<span class="Apple-converted-space">  </span>integer</p>
+<p class="p12"><br></p>
+<p class="p10"><span class="s18"><a href="http://www.ams.org.ezaccess.libraries.psu.edu/mathscinet/search/publdoc.html?amp=&amp;loc=refcit&amp;refcit=174573&amp;vfpref=html&amp;r=1&amp;mx-pid=2336027"><b>MR2336027</b><span class="s16"><span class="Apple-converted-space"> </span></span></a><a href="http://www.ams.org.ezaccess.libraries.psu.edu/mathscinet/help/fullitem_help_full.html#review"> </a><a href="http://www.ams.org.ezaccess.libraries.psu.edu/mathscinet/search/author.html?mrauthid=34985"><span class="s16">Bercovici, Hari</span></a></span> On the similarity of analytic matrix functions. <a href="http://www.ams.org.ezaccess.libraries.psu.edu/mathscinet/search/journaldoc.html?cn=Complex_Anal_Oper_Theory"><span class="s18"><i>Complex Anal. Oper. Theory</i></span></a> <a href="http://www.ams.org.ezaccess.libraries.psu.edu/mathscinet/search/publications.html?pg1=ISSI&amp;s1=255456"><span class="s4">1 (2007), no. 3,</span></a> 335–339. (Reviewer: Vladimir Bolotnikov) <a href="http://www.ams.org.ezaccess.libraries.psu.edu/mathscinet/search/mscdoc.html?code=30E05"><span class="s4">30E05</span></a></p>
+<p class="p16">holomorphic</p>
+<p class="p17"><br></p>
+<p class="p17"><br></p>
+<p class="p10"><span class="s4"><a href="https://zbmath.org/?q=an:0391.20038">Zbl 0391.20038</a> </span>V. M. Bondarenko, “Similarity of matrices over residue class rings,” Mat. Sb. Inst. Mat. Akad. Nauk Ukr. SSR, No. 3, 275–277 (1976).</p>
+<p class="p10">local similarity of pairs</p>
+<p class="p12"><br></p>
+<p class="p12"><br></p>
+<p class="p11">C</p>
+<p class="p12"><br></p>
+<p class="p3">Zbl 0060.07001 Cohen, I.S. On the structure and ideal theory of complete local rings. (English)<span class="Apple-converted-space">  </span>Trans. Am. Math. Soc. 59, 54-106 (1946). .<span class="Apple-converted-space">  </span><span class="s5"><b>MR0016094</b> <b>(7,509h)</b></span></p>
+<p class="p3">Cohen6.pdf<span class="Apple-converted-space">  </span>local</p>
+<p class="p17"><br></p>
+<p class="p17"><br></p>
+<p class="p11">D</p>
+<p class="p18"><br></p>
+<p class="p19">88. G.Dafni, L. Vaserstein, Matrix zeros of quadratic polynomials. <span class="s19"><br>
+ </span>J.Number Theory   30 (1988),  27-50. <span class="s19"><br>
+ <a href="http://www.ams.org/msnmain?fn=105&amp;id=89j_13008&amp;r=4&amp;fmt=doc&amp;co3=AND&amp;dr=all&amp;l=20&amp;pg3=ICN&amp;s3=Dafni"><span class="s20">MR 89j:13008</span></a></span>. <a href="http://www.emis.de:80/cgi-bin/zmen/ZMATH/en/zmath.html?first=1&amp;maxdoc"><span class="s21">Z657.13005</span></a><span class="s22">.<span class="Apple-converted-space"> </span></span></p>
+<p class="p20">88.pdf<span class="Apple-converted-space">  </span>integer</p>
+<p class="p21"><br></p>
+<p class="p22"><br></p>
+<p class="p3"><b>MR1661300</b> <b>(99k:13016)</b>  </p>
+<p class="p23"><span class="s16"><a href="http://www.ams.org/mathscinet/search/author.html?mrauthid=55525">DeMeyer, Frank</a><a href="http://www.ams.org/mathscinet//search/institution.html?code=1_COS"><span class="s23">(1-COS)</span></a></span><span class="s17">; <a href="http://www.ams.org/mathscinet/search/author.html?mrauthid=189763"><span class="s24">Miranda, Rick</span></a><a href="http://www.ams.org/mathscinet//search/institution.html?code=1_COS"><span class="s24">(1-COS)</span></a>; <a href="http://www.ams.org/mathscinet/search/author.html?mrauthid=612233"><span class="s24">Schneider, Kim</span></a><a href="http://www.ams.org/mathscinet//search/institution.html?code=1_COS"><span class="s24">(1-COS)</span></a></span></p>
+<p class="p3">Examples of the failure of the local-global principle for similarity of matrices. (English summary)<span class="Apple-converted-space"> </span></p>
+<p class="p23"><a href="http://www.ams.org/mathscinet/search/journaldoc.html?cn=Comm_Algebra"><i>Comm. Algebra</i></a><span class="s17"> <a href="http://www.ams.org/mathscinet/search/publications.html?pg1=ISSI&amp;s1=169798"><span class="s24">26 (1998), no. 12,</span></a> 4179–4185.<span class="Apple-converted-space"> </span></span></p>
+<p class="p3"><span class="s25"><a href="http://www.ams.org/mathscinet/search/mscdoc.html?code=13C99,%2815A21%29">13C99 (15A21)</a></span> . Miranda.pdf</p>
+<p class="p3">Let<span class="s26"> </span><span class="s8"><i>R</i></span><span class="s26"> </span>be a commutative ring and<span class="s26"> </span><span class="s8"><i>M</i></span><span class="s26"> </span>and<span class="s26"> </span><span class="s8"><i>N</i></span><span class="s26"> </span>finitely presented<span class="s26"> </span><span class="s8"><i>R</i></span><span class="s26">-</span>modules. Say that <span class="s26">f</span><span class="s27">∈</span><span class="s8">E</span><span class="s26">n</span><span class="s8">dR(</span><span class="s26">M</span><span class="s28"><i>)</i></span><span class="s26"> </span><span class="s8">a<i>n</i>d</span><span class="s26"> </span><span class="s29">g∈E</span><span class="s26">n</span><span class="s8"><i>d</i>R</span><span class="s26">(</span><span class="s8">N) </span><span class="s26">a</span><span class="s28"><i>r</i></span><span class="s26">e</span><span class="s8"> <i>s</i>i</span><span class="s26">m</span>ilar if αf=gα <span class="s26">f</span><span class="s8"><i>or</i> <i>so</i></span><span class="s26">m</span>e isomorphism α from<span class="s26"> </span><span class="s8"><i>M</i></span><span class="s26"> </span>to N<span class="s26">.</span><span class="s8"><i> </i></span><span class="s26">S</span>im<span class="s26">i</span><span class="s8"><i>l</i></span><span class="s26">a</span>rly, one defines f and g<span class="s26"> </span><span class="s8"><i>t</i></span><span class="s26">o</span> be<span class="s26"> </span><span class="s8"><i>l</i></span><span class="s26">o</span>cally similar if there is a local isomorphism αP for <span class="s26">e</span><span class="s8"><i>a</i></span><span class="s26">c</span><span class="s28"><i>h</i></span><span class="s26"> </span>maximal ideal (or prime ideal) P of R i<span class="s26">n</span><span class="s8"><i>t</i></span><span class="s26">e</span>rt<span class="s26">w</span><span class="s8"><i>i</i></span><span class="s26">n</span>ing f and g <span class="s26">(</span><span class="s8"><i>a</i></span><span class="s26">n</span>d s<span class="s26">o</span><span class="s8"><i> </i></span><span class="s26">n</span>ecessarily M and N <span class="s26">a</span><span class="s8"><i>r</i></span><span class="s26">e</span> lo<span class="s26">c</span><span class="s8"><i>a</i></span><span class="s26">l</span>ly isomorphic). Let S=R[x]/I<span class="s26">,</span><span class="s8"><i> </i>w<i>h</i>e<i>r</i>e <i>I</i></span><span class="s26"> </span>is the <span class="s26">i</span><span class="s8"><i>d</i></span><span class="s26">e</span>al of R[x] whic<span class="s26">h</span><span class="s8"><i> </i>a<i>n</i>n</span><span class="s26">i</span>hilates f. Then l<span class="s26">e</span><span class="s8"><i>t</i></span><span class="s26">t</span>ing x act on M<span class="s26"> </span><span class="s8"><i>a</i></span><span class="s26">s</span> f ind<span class="s26">u</span><span class="s8"><i>c</i></span><span class="s26">e</span>s <span class="s26">a</span><span class="s8"><i>n</i></span><span class="s26"> </span>S-module s<span class="s26">t</span><span class="s8"><i>r</i></span><span class="s26">u</span>cture on M. The stud<span class="s26">y</span><span class="s8"><i> </i></span><span class="s26">o</span>f endomorphisms locally similar to f is precise<span class="s26">l</span><span class="s8"><i>y</i></span><span class="s26"> </span>the study of S-modules lo<span class="s26">c</span><span class="s8"><i>a</i></span><span class="s26">l</span>ly isomorphic to M. In particu<span class="s26">l</span><span class="s8"><i>a</i></span><span class="s26">r</span>, one may bring to bear the various tools of module theory and cohomology. In particular, if R is a 1-dimen<span class="s26">s</span><span class="s8"><i>i</i></span><span class="s26">o</span>nal <span class="s26">N</span><span class="s8">o</span><span class="s26">e</span>therian ring, then so is S and the Mayer<span class="s26">-</span><span class="s8"><i>V</i></span><span class="s26">i</span>etoris sequence can be used to study this problem. Also, under mild hypotheses, one can impose a natural abelian group structure on the set of local similarity classes. In this paper, this theory is reviewed and various examples of such situations are discussed.</p>
+<p class="p3">Reviewed by Robert M. Guraln<span class="s30">ick</span></p>
+<p class="p17"><br></p>
+<p class="p12"><br></p>
+<p class="p11">F</p>
+<p class="p13"><br></p>
+<p class="p24"><br></p>
+<p class="p10"><span class="Apple-converted-space"> </span><a href="https://zbmath.org/?q=an:0147.31003"><span class="s4">Zbl 0147.31003</span></a><span class="s4"> <a href="https://zbmath.org/authors/?q=ai:faddeev.dmitrij-konstantinovich"><span class="s16">Faddeev, D.K.</span></a></span> Über die Äquivalenz von Systemen ganzzahliger Matrizen. <i>(Russian)</i></p>
+<p class="p15"><span class="s16"><a href="https://zbmath.org/journals/?q=se:00001593">Izv. Akad. Nauk SSSR, Ser. Mat. 30, 449-454 (1966).</a></span></p>
+<p class="p19">D. K. Faddeev, On the equivalence of systems of integral matrices, ku. Ahd. Nauk SSSRser. Mat. 3w49-454 (1966).<span class="Apple-converted-space">  </span><span class="s5"><b>MR0194432</b> <b>(33 #2642)</b></span></p>
+<p class="p10"><span class="s4"><a href="http://www.mathnet.ru/rus/im2837">Об эквивалентности систем целочисленных матриц</a></span> Д. К. Фаддеев <i>Изв. АН СССР. Сер. матем.</i>, <b>30</b>:2 (1966),  449–454.<span class="Apple-converted-space"> </span></p>
+<p class="p10">Fadeev.pdf integer</p>
+<p class="p25">Устанавливается, что задача о целочисленной эквивалентности двух данных систем квадратных целочисленных матриц редуцируется к вопро­ су о том, будет ли главным некоторый идеал Z-кольца, лежащего в полу­ простой алгебре.</p>
+<p class="p26"><br></p>
+<p class="p3">Zbl 0016.05003 Fitting, Hans (1936), "Die Determinantenideale eines Moduls",<span class="Apple-converted-space"> </span></p>
+<p class="p3">rv: JacobsonJahresbericht der Deutschen Mathematiker-Vereinigung, 46: 195–228, ISSN 0012-0456.<span class="Apple-converted-space">  </span>rv: Jacobson. JFM 62.1104.02</p>
+<p class="p3">http://gdz.sub.uni-goettingen.de/dms/load/img/?PID=GDZPPN002131765</p>
+<p class="p4"><br></p>
+<p class="p10">Zbl 0014.14803 Fitting, Hans Über den Zusammenhang zwischen dem Begriff der Gleichartigkeit zweier Ideale und dem Äquivalenzbegriff der Elementarteilertheorie. (German)<span class="Apple-converted-space">  </span>Math. Ann. 112, 572-582 (1936).<span class="Apple-converted-space"> </span></p>
+<p class="p3">Fitting.pdf <span class="Apple-converted-space">    </span>MR1513062<span class="Apple-converted-space">    </span>cited in Nakayama.pdf <span class="Apple-converted-space">  </span>similarity.rtf<span class="Apple-converted-space">  </span><a href="https://scholar.google.com/scholar?cites=2502255154779409699&amp;as_sdt=5,39&amp;sciodt=0,39&amp;hl=en"><span class="s15">Cited by 29</span></a><span class="s5"> <a href="https://scholar.google.com/scholar?q=related:I00ERs7LuSIJ:scholar.google.com/&amp;hl=en&amp;as_sdt=0,39"><span class="s4">Related articles</span></a></span></p>
+<p class="p3">Fhttp://gdz.sub.uni-goettingen.de/en/dms/loader/img/?PID=GDZPPN002278413&amp;physid=PHYS_0578</p>
+<p class="p4"><br></p>
+<p class="p26"><br></p>
+<p class="p10"><span class="Apple-converted-space"> </span><a href="https://zbmath.org/?q=an:0436.15014"><span class="s4">Zbl 0436.15014</span></a><span class="s4"> <a href="https://zbmath.org/authors/?q=ai:friedland.shmuel"><span class="s16">Friedland, Shmuel</span></a></span> On pointwise and analytic similarity of matrices. <i>(English)</i></p>
+<p class="p15"><span class="s16"><a href="https://zbmath.org/journals/?q=se:00000115">Isr. J. Math. 35, 89-108 (1980).</a>. after Wasaw </span><span class="s17"><b>MR0576463</b> <b>(81g:15025) <span class="Apple-converted-space"> </span></b></span></p>
+<p class="p10">Friedland8.pdf<span class="Apple-converted-space">  </span>holomorphic</p>
+<p class="p12"><br></p>
+<p class="p26"><br></p>
+<p class="p12"><br></p>
+<p class="p10">.</p>
+<p class="p12"><br></p>
+<p class="p27">G</p>
+<p class="p12"><br></p>
+<p class="p15"><span class="s16"><a href="https://zbmath.org/?q=an:0820.15004">Zbl 0820.15004</a> <a href="https://zbmath.org/authors/?q=ai:gazaryan.t-g">Gazaryan, T.G.</a></span><span class="s17"> <a href="https://zbmath.org/?q=an:00746946"><span class="s16">Properties of matrices over a commutative ring related to the similarity relation.</span></a> <i>(English. Russian original)</i><span class="Apple-converted-space"> </span></span></p>
+<p class="p15"><span class="s16"><a href="https://zbmath.org/journals/?q=se:00001402">Discrete Math. Appl. 4, No.5, 455-466 (1994); translation from Diskretn. Mat. 6, No.3, 143-153 (1994).</a></span><span class="s17"> Reviewer: <a href="https://zbmath.org/authors/?q=ai:zhang.jule"><span class="s16">J.Zhang (Wuhu)</span></a></span></p>
+<p class="p15"><span class="s17">MSC:  <a href="https://zbmath.org/classification/?q=cc:15B33"><span class="s16">15B33</span></a> <a href="https://zbmath.org/classification/?q=cc:15A21"><span class="s16">15A21</span></a></span><span class="s16"> <span class="Apple-converted-space"> </span></span><span class="s17"> <a href="http://www.ams.org.ezaccess.libraries.psu.edu/mathscinet/search/publdoc.html?arg3=&amp;co4=AND&amp;co5=AND&amp;co6=AND&amp;co7=AND&amp;dr=all&amp;pg4=AUCN&amp;pg5=TI&amp;pg6=RVCN&amp;pg7=ALLF&amp;pg8=ET&amp;review_format=html&amp;s4=Gazaryan.&amp;s5=%20similarity%20&amp;s6=&amp;s7=&amp;s8=All&amp;vfpref=html&amp;yearRangeFirst=&amp;yearRangeSecond=&amp;yrop=eq&amp;r=2&amp;mx-pid=1310909"><b>MR1310909</b></a></span></p>
+<p class="p10">Т. Г. Газарян, “Свойства матриц над коммутативным кольцом, связанные с отношением подобия”, <i>Дискрет. матем.</i>, <b>6</b>:3 (1994), 143–153</p>
+<p class="p1">Аннотация: В работе изучаются свойства отношения подобия матриц над локальным артиновым коммутативным кольцом с единицей. Доказывается, что матрица A над радикалом такого кольца главных идеалов канонически определима тогда и только тогда, когда все фиттинговы инварианты характеристической матрицы xE−A являются главными идеалами. Описывается строение квазиканонических форм матрицы xE−A с первыми k главными фиттинговыми инвариантами. Приводится пример нормальной матрицы над кольцом вычетов, для которой не существует минимального многочлена, делящего ее характеристический многочлен.<span class="Apple-converted-space"> </span></p>
+<p class="p1">Gazaryan.pdf</p>
+<p class="p19">pp. 143-144</p>
+<p class="p19">В [1] введено понятие каноничности определимой матрицы и доказано, что если все фиттинговы инварианты матрицы <i>хЕ</i><span class="s31"><i>т </i></span><i>— А </i>— главные идеалы (такую матрицу <i>А </i>мы будем называть матрицей главных F-инвариантов), <i>тоА </i>— ка­ нонически определимая матрица, выдвинута гипотеза, что матрица <i>В </i>Е <i>R</i><span class="s31"><i>m </i></span>канонически определима тогда и только тогда, когда <i>В </i>— матрица главных F- инвариантов. Гипотеза подтверждается в [1] для класса нормальных матриц (т.е. матриц, подобных квазидиагональной матрице Diag(5(Fi),..., 5(F<span class="s31">t</span>)), где <i>Fi(x) </i>— унитарный многочлен из <i>R[x], </i>a <i>S(F{) </i>— сопровождающая матрица для многочлена <i>Fi(x) </i>(см. [2, с. 90]), а также для матриц размера 2 х 2 в случае, когда <i>R </i>— кольцо главных идеалов, и для матриц размера 3 x 3 при дополни­ тельном условии <i>J(R)</i><span class="s32"><i>2 </i></span>= 0. В параграфе 1 настоящей работы доказывается, что</p>
+<p class="p19">гипотеза остается верной для всех матриц над <i>J(R) </i>в случае, когда <i>R </i>— коль­ цо главных идеалов, и для всех матриц <i>А </i>Е <i>R</i><span class="s31"><i>m </i></span>таких, что <i>А </i>— диагональная матрица.</p>
+<p class="p10"><b>1. Нечаев А. А. О подобии матриц над коммутативным локальным артиновым кольцом. <i>Труды семинара имени И. Г. Петровского </i>(1989) 9, 81-101.</b></p>
+<p class="p2"><br></p>
+<p class="p28"><br></p>
+<p class="p7">MR2567327 (2010i:16026) Gudivok, P. M.; Yakima, O. V. On the similarity of matrices over commutative rings. (Ukrainian) Nauk. Vīsn. Uzhgorod. Univ. Ser. Mat. Īnform. No. 9 (2004), 100–102, 16G60 (15A27)</p>
+<p class="p10">Summary: "We show that the problem of the classification of arbitrary square matrices up to similarity over non-regular commutative rings with unity is wild.''</p>
+<p class="p12"><br></p>
+<p class="p12"><br></p>
+<p class="p10"><span class="s33"><a href="http://www.ams.org/mathscinet/search/publdoc.html?arg3=&amp;co4=AND&amp;co5=AND&amp;co6=AND&amp;co7=AND&amp;dr=all&amp;pg4=AUCN&amp;pg5=TI&amp;pg6=ALLF&amp;pg7=MR&amp;pg8=ET&amp;review_format=html&amp;s4=guralnick&amp;s5=local%2A&amp;s6=&amp;s7=&amp;s8=All&amp;vfpref=html&amp;yearRangeFirst=&amp;yearRangeSecond=&amp;yrop=eq&amp;r=5&amp;mx-pid=568794"><b>MR0568794</b><span class="s16"> </span></a><a href="http://www.ams.org/mathscinet/help/fullitem_help_full.html#review"><span class="Apple-converted-space"> </span></a></span> <a href="http://www.ams.org/mathscinet/search/author.html?mrauthid=78455"><span class="s34">Guralnick, Robert M.</span></a> A note on the local-global principle for similarity of matrices. <a href="http://www.ams.org/mathscinet/search/journaldoc.html?cn=Linear_Algebra_Appl"><span class="s33"><i>Linear Algebra Appl.</i></span></a> <b>30 </b>(1980), 241–245. (Reviewer: William H. Gustafson)<span class="Apple-converted-space"> </span></p>
+<p class="p29"><span class="s16"><a href="http://www.ams.org/mathscinet/search/mscdoc.html?code=15A33,%2815A54%29">15A33 (15A54)</a>. Guralnick6.pdf</span></p>
+<p class="p30"><span class="s16"></span><br></p>
+<p class="p10"><span class="s35"><b>MR0649724</b></span><span class="s36"> </span><span class="s35"><b>(83e:15011)</b></span> <span class="s36">Guralnick, Robert M.</span> Similarity of matrices over local rings. <span class="s35"><i>Linear Algebra Appl.</i></span> <b>41 </b>(1981), 161--174. (Reviewer: William H. Gustafson) <span class="s36">15A21 (15A54)<span class="Apple-converted-space"> </span></span></p>
+<p class="p10">sr(H(<span class="s37">Ω </span>)) = 1<span class="Apple-converted-space"> </span></p>
+<p class="p10"><span class="s36">Guralnick4.pdf.</span> <span class="Apple-converted-space">  </span>local<span class="Apple-converted-space">  </span>holomorphic functions in a domain <span class="s37">Ω<span class="Apple-converted-space"> </span></span> in plane); local</p>
+<p class="p10"><span class="s38">Abstract</span><span class="s39"><b><span class="Apple-converted-space">  </span></b></span>Wasow investigated the problem of when, for a pair of matrices of analytic functions, pointwise similarity implies analytic similarity. By using the topology of Spec <i>R</i>, this is studied for an arbitrary commutative ring. Results of Wasow, Ohm, Schneider, and Friedland are generalized in this setting. A canonical form is determined for matrices satisfying the Wasow condition.</p>
+<p class="p8"><br></p>
+<p class="p7">MR0925151 (89a:16005) Guralnick, Robert M. Similarity of holomorphic matrices. Linear Algebra Appl. 99 (1988), 85–96. (Reviewer: William H. Gustafson), 16A18 (16A64)</p>
+<p class="p7">Guralnick7.pdf<span class="Apple-converted-space">  </span>holomorphic</p>
+<p class="p7"><span class="Apple-converted-space"> </span>see <span class="Apple-converted-space">  </span>MR0649724 (83e:15011) Guralnick, Robert M. Similarity of matrices over local rings. Linear Algebra Appl. 41 (1981), 161–174. (Reviewer: William H. Gustafson), 15A21 (15A54)</p>
+<p class="p7"><span class="Apple-converted-space">    </span>V. I. Arnol<span class="s37">ʹ</span>d [Uspekhi Mat. Nauk 26 (1971), no. 2(158), 101--114; MR0301242 (46 #400)]<span class="Apple-converted-space"> </span></p>
+<p class="p8"><br></p>
+<p class="p10"><span class="Apple-converted-space"> </span>MR0766270 (86c:16003)<span class="Apple-converted-space">  </span>Estes, Dennis R.(1-SCA); Guralnick, Robert M.(1-SCA)</p>
+<p class="p10">Representations under ring extensions: Latimer-MacDuffee and Taussky correspondences.</p>
+<p class="p10">Adv. in Math. 54 (1984), no. 3, 302–313.</p>
+<p class="p10">16A18 (16A64)</p>
+<p class="p10">This article presents generalizations of the classical Latimer-MacDuffee and Taussky correspondences establishing a bijection between similarity classes of nonsingular integral n×n matrices with a common separable characteristic polynomial f(x) and the classes of faithful ideals in Z[x]/(f(x)).</p>
+<p class="p10"><span class="Apple-converted-space">   </span>Let R be an arbitrary commutative ring and let A be a rank n projective R-algebra. The n×n matrix classes are replaced by the isomorphism classes in <span class="s40">ℳ</span>A, the category of rank n projective R-modules which are faithful right A-modules. Let S be a commutative R-algebra and let <span class="s40">ℳ</span>A(S) [resp. IA(S)] denote the category of those M<span class="s41">∈</span><span class="s40">ℳ</span>A becoming trivial under scalar extension by S, that is, S<span class="s41">⊗</span>RM<span class="s41">≅</span>S<span class="s41">⊗</span>RA [resp. the isomorphism classes of full fractional ideals in S<span class="s41">⊗</span>RA]. R<span class="s41">⊂</span>S implies that the isomorphism classes of <span class="s40">ℳ</span>A(S) and IS(A) coincide. The full Latimer-MacDuffee correspondence is then obtained if <span class="s40">ℳ</span>A=<span class="s40">ℳ</span>A(S). Various situations where this happens are studied. For instance if A is commutative and S is a flat R-algebra with a certain localization property without proper finitely generated faithful ideals, then <span class="s40">ℳ</span>A=<span class="s40">ℳ</span>A(S) if and only if HomR(A,R)<span class="s41">∈</span><span class="s40">ℳ</span>A(S). Moreover, <span class="s40">ℳ</span>A=<span class="s40">ℳ</span>A(S) for some overring S of R if and only if <span class="s40">ℳ</span>A=<span class="s40">ℳ</span>A(R<span class="s42">𝔭</span>) for all localizations of R at prime ideals <span class="s42">𝔭</span> which do not contain any finitely generated faithful ideals. The results apply to partly classical cases considered by Noether-Deuring, Reiner-Zassenhaus, the authors, and Roggenkamp. Finally, Taussky's dual correspondence is generalized, and also eigenmodules are considered in order to clarify Taussky's correspondence in the more general situation.</p>
+<p class="p10">Reviewed by Alfred G. Wiedemann</p>
+<p class="p12"><br></p>
+<p class="p12"><br></p>
+<p class="p12"><br></p>
+<p class="p31"><b>MR0630152</b> <b>(83m:15010)</b> <a href="http://www.ams.org/mathscinet/search/author.html?mrauthid=78555"><span class="s34">Gustafson, William H.</span></a> On matrix similarity over commutative rings.<span class="Apple-converted-space"> </span></p>
+<p class="p32"><a href="http://www.ams.org/mathscinet/search/journaldoc.html?cn=Linear_and_Multilinear_Algebra"><i>Linear and Multilinear Algebra</i></a><span class="s17"> <b>10 </b>(1981), no. 3, 249–252.<span class="Apple-converted-space">  </span><a href="http://www.ams.org/mathscinet/search/mscdoc.html?code=15A21"><span class="s43">15A21</span></a></span></p>
+<p class="p33">Author's summary: "C. I. Byrnes and M. A. Grauger have recently shown [same journal 5 (1977), no. 3, 153–158; MR0460354 (57 #348)] that two n×n matrices A and B over a field are similar if and only if they have the same characteristic polynomial, and the matrices<span class="Apple-converted-space"> </span></p>
+<p class="p33">A<span class="s44">⊗</span>In−In<span class="s44">⊗</span>A, B<span class="s44">⊗</span>In−In<span class="s44">⊗</span>B and A<span class="s44">⊗</span>In−In<span class="s44">⊗</span>B all have the same rank. We investigate the B<span class="s44">⊗</span>In−In<span class="s44">⊗</span>B possibility of extending a suitably modified version of this criterion to the case where the matrices have entries in a commutative ring R. We discover that the criterion remains valid if and only if R is von Neumann regular.''<span class="Apple-converted-space"> </span></p>
+<p class="p26"><br></p>
+<p class="p27">H</p>
+<p class="p34"><br></p>
+<p class="p10"><span class="s18"><b>M</b><a href="http://www.ams.org.ezaccess.libraries.psu.edu/mathscinet/search/publdoc.html?arg3=&amp;co4=AND&amp;co5=AND&amp;co6=AND&amp;co7=AND&amp;dr=all&amp;pg4=AUCN&amp;pg5=TI&amp;pg6=RVCN&amp;pg7=JOUR&amp;pg8=ET&amp;review_format=html&amp;s4=&amp;s5=Latimer&amp;s6=&amp;s7=&amp;s8=All&amp;vfpref=html&amp;yearRangeFirst=&amp;yearRangeSecond=&amp;yrop=eq&amp;r=3&amp;mx-pid=1642834"><b>R1642834</b></a></span> <a href="http://www.ams.org.ezaccess.libraries.psu.edu/mathscinet/help/fullitem_help_full.html#indexed"><span class="s18">Indexed</span></a> <a href="http://www.ams.org.ezaccess.libraries.psu.edu/mathscinet/search/author.html?mrauthid=80805"><span class="s4">Hanlon, Phil</span></a> To the Latimer-Macduffee theorem and beyond! Special issue in memory of Olga Taussky Todd. <a href="http://www.ams.org.ezaccess.libraries.psu.edu/mathscinet/search/journaldoc.html?cn=Linear_Algebra_Appl"><span class="s18"><i>Linear Algebra Appl.</i></span></a> <a href="http://www.ams.org.ezaccess.libraries.psu.edu/mathscinet/search/publications.html?pg1=ISSI&amp;s1=167474"><span class="s4">280 (1998), no. 1,</span></a> 21–37. <a href="http://www.ams.org.ezaccess.libraries.psu.edu/mathscinet/search/mscdoc.html?code=01A70,%2815-03%29"><span class="s4">01A70 (15-03)</span></a></p>
+<p class="p26"><br></p>
+<p class="p26"><br></p>
+<p class="p3"><span class="s45"><a href="http://www.ams.org/mathscinet/search/publdoc.html?arg3=&amp;co4=AND&amp;co5=AND&amp;co6=AND&amp;co7=AND&amp;dr=all&amp;pg4=TI&amp;pg5=ALLF&amp;pg6=AUCN&amp;pg7=MR&amp;pg8=ET&amp;review_format=html&amp;s4=similarity&amp;s5=division%20ring&amp;s6=&amp;s7=&amp;s8=All&amp;vfpref=html&amp;yearRangeFirst=&amp;yearRangeSecond=&amp;yrop=eq&amp;r=1&amp;mx-pid=2428141"><b>MR2428141</b><span class="s16"><span class="Apple-converted-space"> </span></span></a><a href="http://www.ams.org/mathscinet/help/fullitem_help_full.html#review"><span class="s16"> </span></a></span>Erratum to: "Similarity reduction of matrix over a quaternion division ring'' [Linear Algebra Appl. 428 (2008), no. 4, 765–780; <a href="http://www.ams.org/mathscinet/search/publdoc.html?pg1=MR&amp;s1=2382088&amp;loc=fromrevtext"><span class="s25">MR2382088</span></a>] by L.-P. Huang and Z.-J. Liu. <a href="http://www.ams.org/mathscinet/search/journaldoc.html?cn=Linear_Algebra_Appl"><span class="s45"><i>Linear Algebra Appl.</i></span></a> <a href="http://www.ams.org/mathscinet/search/publications.html?pg1=ISSI&amp;s1=264697"><span class="s25">429 (2008), no. 4,</span></a> 948. <a href="http://www.ams.org/mathscinet/search/mscdoc.html?code=15A33,%2815A21,16K20%29"><span class="s25">15A33 (15A21 16K20)</span></a> <span class="s45">Li10<span class="Apple-converted-space"> </span></span></p>
+<p class="p35">The publisher regrets that this article is an accidental duplication of an article that has already been published in Linear Algebra Appl. 427 (2007) 317–332, doi:10.1016/j.laa.2007.08.003. The duplicate article has therefore been withdrawn.</p>
+<p class="p23"><a href="http://www.ams.org/mathscinet/search/publdoc.html?arg3=&amp;co4=AND&amp;co5=AND&amp;co6=AND&amp;co7=AND&amp;dr=all&amp;pg4=TI&amp;pg5=ALLF&amp;pg6=AUCN&amp;pg7=MR&amp;pg8=ET&amp;review_format=html&amp;s4=similarity&amp;s5=division%20ring&amp;s6=&amp;s7=&amp;s8=All&amp;vfpref=html&amp;yearRangeFirst=&amp;yearRangeSecond=&amp;yrop=eq&amp;r=2&amp;mx-pid=2382088"><b>MR2382088</b><span class="s16"><span class="Apple-converted-space"> </span></span></a><a href="http://www.ams.org/mathscinet/help/fullitem_help_full.html#review"><span class="s16"> </span></a><a href="http://www.ams.org/mathscinet/search/author.html?mrauthid=329476"><span class="s16">Huang, Li-Ping</span></a><span class="s17">; <a href="http://www.ams.org/mathscinet/search/author.html?mrauthid=229186"><span class="s24">Liu, Zhuo-Jun</span></a> Similarity reduction of matrix over a quaternion division ring. <a href="http://www.ams.org/mathscinet/search/journaldoc.html?cn=Linear_Algebra_Appl"><span class="s37"><i>Linear Algebra Appl.</i></span></a> <a href="http://www.ams.org/mathscinet/search/publications.html?pg1=ISSI&amp;s1=259479"><span class="s24">428 (2008), no. 4,</span></a> 765–780. <a href="http://www.ams.org/mathscinet/search/mscdoc.html?code=15A33,%2815A21,16K20%29"><span class="s24">15A33 (15A21 16K20)</span></a></span></p>
+<p class="p23">Li9.pdf division ring</p>
+<p class="p4"><br></p>
+<p class="p3"><span class="s45"><a href="http://www.ams.org/mathscinet/search/publdoc.html?arg3=&amp;co4=AND&amp;co5=AND&amp;co6=AND&amp;co7=AND&amp;dr=all&amp;pg4=TI&amp;pg5=ALLF&amp;pg6=AUCN&amp;pg7=MR&amp;pg8=ET&amp;review_format=html&amp;s4=similarity&amp;s5=division%20ring&amp;s6=&amp;s7=&amp;s8=All&amp;vfpref=html&amp;yearRangeFirst=&amp;yearRangeSecond=&amp;yrop=eq&amp;r=3&amp;mx-pid=2351363"><b>MR2351363</b><span class="s16"> </span></a><a href="http://www.ams.org/mathscinet/help/fullitem_help_full.html#review"><span class="s16"><span class="Apple-converted-space"> </span></span></a></span> <a href="http://www.ams.org/mathscinet/search/author.html?mrauthid=329476"><span class="s25">Huang, Li-Ping</span></a>; <a href="http://www.ams.org/mathscinet/search/author.html?mrauthid=229186"><span class="s25">Liu, Zhuo-Jun</span></a> Similarity reduction of matrix over a quaternion division ring. <a href="http://www.ams.org/mathscinet/search/journaldoc.html?cn=Linear_Algebra_Appl"><span class="s45"><i>Linear Algebra Appl.</i></span></a> <a href="http://www.ams.org/mathscinet/search/publications.html?pg1=ISSI&amp;s1=257113"><span class="s25">427 (2007), no. 2-3,</span></a> 317–332. (Reviewer: LeRoy B. Beasley) <a href="http://www.ams.org/mathscinet/search/mscdoc.html?code=15A33,%2815A04,16K20%29"><span class="s25">15A33 (15A04 16K20)</span></a></p>
+<p class="p23">Li8.pdf division ring</p>
+<p class="p26"><br></p>
+<p class="p27">J</p>
+<p class="p34"><br></p>
+<p class="p10"><span class="s4"><a href="http://www.ams.org.ezaccess.libraries.psu.edu/mathscinet/search/publdoc.html?pg1=MR&amp;s1=2905029&amp;loc=fromreflist">MR2905029</a> </span>S. Jambor and W. Plesken, Normal forms for matrices over uniserial rings of length two, J. Algebra 358 (2012), 250–256.</p>
+<p class="p26"><br></p>
+<p class="p26"><br></p>
+<p class="p27">K</p>
+<p class="p28"><br></p>
+<p class="p36"><span class="Apple-converted-space">      </span>S.A. Kaschenko, Uspekhi 43:1 (1988) =<span class="Apple-tab-span">	</span>О миниверсальных деформациях матриц С. А. Кащенко УМН, 43:1(259) (1988),<span class="Apple-converted-space">  </span>201–202<span class="Apple-converted-space"> </span></p>
+<p class="p36">Kaschenko.pdf holomorphic</p>
+<p class="p37"><br></p>
+<p class="p19"><span class="s4"><a href="https://zbmath.org/?q=an:1111.13017">Zbl 1111.13017</a> <a href="https://zbmath.org/authors/?q=ai:kurakin.v-l"><span class="s46">Kurakin, V.L.</span></a></span> Similarity invariants for matrices over a commutative Artinian chain ring. <i>(English. Russian original)</i><span class="Apple-converted-space"> </span></p>
+<p class="p38"><span class="s16"><a href="https://zbmath.org/journals/?q=se:00000157">Math. Notes 80, No. 3, 387-395 (2006); translation from Mat. Zametki 80, No. 3, 403-412 (2006)</a>. </span><span class="s47"><b>MR2278884</b> <b>(2008a:13024)</b></span></p>
+<p class="p19">Summary: Suppose that R is a commutative Artinian chain ring, A is an m×m matrix over R, and S is a discrete valuation ring such that R is a homomorphic image of S. We consider m ideals in the polynomial ring over S that are similarity invariants for matrices over R, i.e., these ideals coincide for similar matrices. It is shown that the new invariants are stronger than the Fitting invariants, and that new invariants solve the similarity problem for 2×2 matrices over R.</p>
+<p class="p39"><span class="s16"><a href="http://www.mathnet.ru/rus/mz2826"><b>Инварианты подобия матриц над коммутативным артиновым цепным кольцом</b><span class="s48"><b></b></span></a></span></p>
+<p class="p19">ВЛ Куракин - Математические заметки, 2006 - mathnet.ru <span class="Apple-converted-space"> </span></p>
+<p class="p19">Kurakin.pdf<span class="Apple-converted-space">  </span>local</p>
+<p class="p19">Аннотация: Квадратной матрице $ A $ порядка $ m $ над к</p>
+<p class="p19">оммутативным артиновым<span class="Apple-converted-space"> </span></p>
+<p class="p19">цепным кольцом $ R $ ставятся в соответствие $ m $ идеалов в кольце многочленов<span class="Apple-converted-space"> </span></p>
+<p class="p19">над кольцом дискретного нормирования $ S $, гомоморфным образом которого</p>
+<p class="p19">refers to Nechaev. Fitting is not complete invariants?</p>
+<p class="p27">L</p>
+<p class="p40"><br></p>
+<p class="p41">MR1503108 Latimer, Claiborne G.; MacDuffee, C. C. A correspondence between classes of ideals and classes of matrices. Ann. of Math. (2) 34 (1933), no. 2, 313–316, DML Item.</p>
+<p class="p10">MACDUFFEE.pdf<span class="Apple-converted-space">  </span>integer<span class="Apple-converted-space">  </span>minimal polynomial has distinct factors</p>
+<p class="p12"><br></p>
+<p class="p12"><br></p>
+<p class="p12"><br></p>
+<p class="p27">M</p>
+<p class="p28"><br></p>
+<p class="p42">MR2109550 (2005h:20052) Magnus, Wilhelm; Karrass, Abraham; Solitar, Donald Combinatorial group theory. Presentations of groups in terms of generators and relations. Reprint of the 1976 second edition. Dover Publications, Inc., Mineola, NY, 2004. xii+444 pp. ISBN: 0-486-43830-9, 20E05 (05A15 20E06 20F12).<span class="Apple-converted-space"> </span></p>
+<p class="p42">Magnus;djvu 6MB <span class="Apple-converted-space">    </span>GL_2Z &amp; SL_2Z<span class="Apple-converted-space">     </span></p>
+<p class="p42"><span class="s1">Appelgate2.pdf<span class="Apple-converted-space">    </span>:<span class="Apple-converted-space">  </span></span>It is well known that the conjugacy problem in GL(2, Z) and in SL(2, Z) has a solution. For example, see<span class="Apple-converted-space">  </span>p. 214<span class="Apple-converted-space"> </span></p>
+<p class="p28"><br></p>
+<p class="p15"><span class="s16"><a href="https://zbmath.org/?q=an:0382.15009">Zbl 0382.15009</a> <a href="https://zbmath.org/authors/?q=ai:mcdonald.bernard-r">McDonald, B.R.</a></span><span class="s17"> <a href="https://zbmath.org/?q=an:03593728"><span class="s16">Similarity of matrices over Artinian principal ideal rings.</span></a> <i>(English)</i></span></p>
+<p class="p15"><span class="s16"><a href="https://zbmath.org/journals/?q=se:00001605">Linear Algebra Appl. 21, 153-162 (1978).</a></span><span class="s17"> MSC:  <a href="https://zbmath.org/classification/?q=cc:15A21"><span class="s16">15A21</span></a> <a href="https://zbmath.org/classification/?q=cc:13F10"><span class="s16">13F10</span></a> <a href="https://zbmath.org/classification/?q=cc:13E10"><span class="s16">13E10</span></a></span><span class="s16">. </span><span class="s17"><b>MR0485924</b> <b>(58 #5718)</b></span></p>
+<p class="p10">McDonald7.pdf<span class="Apple-converted-space">  </span>local</p>
+<p class="p10">This paper discusses the theory of similarity of matrices over a commutative Artinian principal ideal ring <i>R</i>. It is shown that for the class matrices <i>A</i> such that <i>R</i>[<i>A</i>] is <i>R</i>-free a “rational” canonical form is available.</p>
+<p class="p12"><br></p>
+<p class="p12"><br></p>
+<p class="p11">N</p>
+<p class="p18"><br></p>
+<p class="p10"><span class="s4"><a href="http://www.ams.org.ezaccess.libraries.psu.edu/mathscinet/search/publdoc.html?pg1=MR&amp;s1=0498881&amp;loc=fromreflist">MR0498881</a><span class="Apple-converted-space">  </span></span>Nagornyĭ, S. V. (1978). Complex representations of the general linear group of degree three modulo a power of a prime. Zap. Naučn. Sem. Leningrad. Otdel. Mat. Inst. Steklov. (LOMI). 75:143–150, 197–198, Rings and linear groups.<span class="Apple-converted-space"> </span></p>
+<p class="p3">Nagornyi.pdf.<span class="Apple-converted-space">  </span>local</p>
+<p class="p12"><br></p>
+<p class="p12"><br></p>
+<p class="p31"><span class="s15"><a href="http://www.ams.org.ezaccess.libraries.psu.edu/mathscinet/search/publdoc.html?pg1=MR&amp;s1=0731899&amp;loc=fromreflist">MR0731899</a><span class="Apple-converted-space"> </span></span><span class="s4"> <a href="https://zbmath.org/?q=an:0533.15011"><span class="s16">Zbl 0533.15011</span></a></span><span class="s15"><span class="Apple-converted-space">  </span></span>Nechaev, A. A. (1983). Similarity of matrices over a commutative local Artinian ring. Trudy Sem. Petrovsk. 9:81–101.<span class="Apple-converted-space"> </span></p>
+<p class="p10"><span class="s18">J<a href="http://link.springer.com/journal/10958">ournal of Soviet Mathematics</a></span><span class="Apple-converted-space">  </span>June 1986, Volume 33, <a href="http://link.springer.com/journal/10958/33/5/page/1"><span class="s4">Issue 5</span></a>, pp 1221–1237<span class="Apple-converted-space">  </span>   </p>
+<p class="p43"><b>О подобии матриц над коммутативным локальным артиновым кольцом</b></p>
+<p class="p10">АА <b>Нечаев</b> - Труды Семинара имени ИГ …, 1983 - Изд-во Московского университет</p>
+<p class="p10">Nechaev.pdf. <span class="Apple-converted-space">  </span>local</p>
+<p class="p12"><br></p>
+<p class="p10">A. A. Nechaev, “Similarity of matrices over a finite commutative ring,” Proceedings of Second All-Union Symposium on the Theory of Rings, Algebras and Modules, Kishinev (1974).</p>
+<p class="p10">local</p>
+<p class="p44"><br></p>
+<p class="p26"><br></p>
+<p class="p27">O</p>
+<p class="p28"><br></p>
+<p class="p10"><span class="s18"><a href="http://www.ams.org.ezaccess.libraries.psu.edu/mathscinet/search/publdoc.html?arg3=&amp;co4=AND&amp;co5=AND&amp;co6=AND&amp;co7=AND&amp;dr=all&amp;pg4=ICN&amp;pg5=TI&amp;pg6=MR&amp;pg7=ALLF&amp;pg8=ET&amp;review_format=html&amp;s4=Schneider&amp;s5=similar&amp;s6=&amp;s7=&amp;s8=All&amp;vfpref=html&amp;yearRangeFirst=&amp;yearRangeSecond=&amp;yrop=eq&amp;r=4&amp;mx-pid=168597"><b>MR0168597</b><span class="s16"> </span></a><a href="http://www.ams.org.ezaccess.libraries.psu.edu/mathscinet/help/fullitem_help_full.html#review"><span class="Apple-converted-space"> </span></a></span> <a href="http://www.ams.org.ezaccess.libraries.psu.edu/mathscinet/search/author.html?mrauthid=190463"><span class="s4">Ohm, Jack</span></a>; <a href="http://www.ams.org.ezaccess.libraries.psu.edu/mathscinet/search/author.html?mrauthid=190941"><span class="s4">Schneider, Hans</span></a> Matrices similar on a Zariski-open set. <a href="http://www.ams.org.ezaccess.libraries.psu.edu/mathscinet/search/journaldoc.html?cn=Math_Z"><span class="s18"><i>Math. Z.</i></span></a> <b>85 </b>1964 373–381. (Reviewer: P. Samuel) <a href="http://www.ams.org.ezaccess.libraries.psu.edu/mathscinet/search/mscdoc.html?code=13.80,%2816.00%29"><span class="s4">13.80 (16.00)</span></a></p>
+<p class="p10"><b>Abstract : </b>Theorems due to Wasow and Ostrowski concerning the similarity of matrices whose elements are holomorphic functions are generalized to the case of matrices whose elements lie in an arbitrary commutative integral domain. The chief tool for this generalization is the Zariski topology. The integral domain consisting of certain functions on a topological space is an interesting special case. (Author)</p>
+<p class="p12"><br></p>
+<p class="p30"><br></p>
+<p class="p3">MR3471251 Pending Avni, Nir; Klopsch, Benjamin; Onn, Uri; Voll, Christopher Similarity classes of integral <span class="s42">𝔭</span>-adic matrices and representation zeta functions of groups of type <span class="s42">𝖠</span>2. Proc. Lond. Math. Soc. (3) 112 (2016), no. 2, 267–350. 11M41 (15A21 20Gxx)</p>
+<p class="p10">arXiv:1410.4533v1 [math.GR] 16 Oct 2014 <span class="Apple-converted-space"> </span></p>
+<p class="p10">Onn.pdf local</p>
+<p class="p12"><br></p>
+<p class="p3">MR3119211 <span class="Apple-converted-space">  </span>Onn, Uri; Singla, Pooja On the unramified principal series of GL(3) over non-Archimedean local fields. J. Algebra 397 (2014), 1–17. (Reviewer: Vladimir L. Popov) 20G25 (20G05)<span class="Apple-converted-space">    </span><span class="s5">Z117<span class="Apple-converted-space"> </span></span> <span class="s5"><b>sentout</b> 2014-10-01</span></p>
+<p class="p10">Summary: Let<span class="s49"><i><span class="Apple-converted-space">  </span>F </i></span>be a non-archimedean local field and let<span class="s49"><i><span class="Apple-converted-space">  </span></i></span><span class="s42">𝒪</span></p>
+<p class="p10">be its ring of integers. We give a complete description of the irreducible constituents of the restriction of the unramified principal series representations of<span class="s49"><i><span class="Apple-converted-space">  </span></i></span><span class="s42">𝖦𝖫</span><span class="s49"><i>_</i></span><span class="s10">3</span><span class="s49">(<i>F</i>)</span> <span class="Apple-converted-space">  </span>to<span class="s49"><i><span class="Apple-converted-space">  </span></i></span><span class="s42">𝖦𝖫</span><span class="s49"><i>_</i></span><span class="s10">3</span><span class="s49">(</span><span class="s42">𝒪</span><span class="s49">)</span>.</p>
+<p class="p45"><span class="s16"></span><br></p>
+<p class="p10">MR2543507<span class="Apple-converted-space">  </span>Avni, Nir; Onn, Uri; Prasad, Amritanshu; Vaserstein, Leonid Similarity classes of 3×3 matrices over a local principal ideal ring. Comm. Algebra 37 (2009), no. 8, 2601–2615. (Reviewer: Shahabaddin Ebrahimi Atani) 15A21 (15A30 15A54)</p>
+<p class="p10">136. (V with  Nir Avni, Uri Onn, Amritanshu Prasad)     Similarity classes of 3x3 matrices over a local principal ideal ring<span class="s50"><br>
+</span>Comm. in Algebra    37:8 (2009),    2601--2615.  <span class="Apple-converted-space"> </span></p>
+<p class="p29"><span class="s16"><a href="http://www.ams.org.ezaccess.libraries.psu.edu/mathscinet/search/publdoc.html?arg3=&amp;co4=AND&amp;co5=AND&amp;co6=AND&amp;co7=AND&amp;dr=all&amp;pg4=ICN&amp;pg5=TI&amp;pg6=JOUR&amp;pg7=MR&amp;pg8=ET&amp;review_format=html&amp;s4=vaserstein&amp;s5=&amp;s6=&amp;s7=&amp;s8=All&amp;vfpref=html&amp;yearRangeFirst=&amp;yearRangeSecond=&amp;yrop=eq&amp;r=6&amp;mx-pid=2543507">MR2543507</a></span><span class="s17">. <span class="Apple-converted-space">  </span><a href="http://www.zentralblatt-math.org/zmath/en/advanced/?q=an:1176.15013&amp;format=complete">Zbl 1176.15013</a></span><span class="Apple-converted-space">   </span></p>
+<p class="p10"><span class="s33">1</span>36,pdf<span class="Apple-converted-space">  </span>local</p>
+<p class="p30"><br></p>
+<p class="p15"><span class="s17"><span class="Apple-converted-space"> </span><a href="https://zbmath.org/?q=an:1112.15020">Zbl 1112.15020</a></span> <a href="https://zbmath.org/authors/?q=ai:onn.uri">Onn, Uri</a><span class="s17">; <a href="https://zbmath.org/authors/?q=ai:prasad.amritanshu">Prasad, Amritanshu</a>; <a href="https://zbmath.org/authors/?q=ai:vaserstein.leonid-n">Vaserstein, Leonid</a> <a href="https://zbmath.org/?q=an:05126185">A note on Bruhat decomposition of</a></span></p>
+<p class="p15"><span class="s49"><a href="https://zbmath.org/?q=an:05126185"><i>GL</i>(<i>n</i>)<span class="s5"> over local principal ideal rings.</span></a></span><span class="s17"> <i>(English)</i> <a href="https://zbmath.org/journals/?q=se:00000057">Commun. Algebra 34, No. 11, 4119-4130 (2006).</a></span></p>
+<p class="p15"><span class="s17">Reviewer: <a href="https://zbmath.org/authors/?q=A++A++Bogush">A. A. Bogush (Minsk)</a> MSC:  <a href="https://zbmath.org/classification/?q=cc:15B33">15B33</a> <a href="https://zbmath.org/classification/?q=cc:20G35">20G35</a> <a href="https://zbmath.org/classification/?q=cc:13H05">13H05</a></span>.<span class="Apple-converted-space">    </span><a href="http://www.ams.org.ezaccess.libraries.psu.edu/mathscinet/search/publdoc.html?arg3=&amp;co4=AND&amp;co5=AND&amp;co6=AND&amp;co7=AND&amp;dr=all&amp;pg4=ICN&amp;pg5=TI&amp;pg6=JOUR&amp;pg7=MR&amp;pg8=ET&amp;review_format=html&amp;s4=vaserstein&amp;s5=&amp;s6=&amp;s7=&amp;s8=All&amp;vfpref=html&amp;yearRangeFirst=&amp;yearRangeSecond=&amp;yrop=eq&amp;r=6&amp;mx-pid=2543507">MR2543507</a><span class="s17">.</span></p>
+<p class="p15">129.pdf <a href="http://www.ams.org/mathscinet/search/publdoc.html?arg3=&amp;co4=AND&amp;co5=AND&amp;co6=AND&amp;co7=AND&amp;dr=all&amp;pg4=AUCN&amp;pg5=TI&amp;pg6=PC&amp;pg7=ALLF&amp;pg8=ET&amp;review_format=html&amp;s4=Vaserstein&amp;s5=&amp;s6=&amp;s7=&amp;s8=All&amp;vfpref=html&amp;yearRangeFirst=&amp;yearRangeSecond=&amp;yrop=eq&amp;r=1&amp;mx-pid=2391463">. </a> local</p>
+<p class="p30"><br></p>
+<p class="p8"><br></p>
+<p class="p8"><br></p>
+<p class="p27">P</p>
+<p class="p28"><br></p>
+<p class="p1">Zbl 0465.20041 Petrov, E.E. On conjugacy classes of elements of the group SL(2,Z/(p λ )Z), p≠2. (English) Sov. Math. 24, No.8, 95-98 (1980).</p>
+<p class="p1">MSC:<span class="Apple-converted-space">  </span>20G35 20G05 20H05<span class="Apple-converted-space">  </span>=</p>
+<p class="p1"><span class="s38">12.<a href="http://www.mathnet.ru/rus/ivm4779"><span class="s15">О классах сопряженных элементов группы</span><span class="s51"><span class="Apple-converted-space">  </span><i>Sl(2,Z/pλZ), </i></span></a></span>p ≠ 2 . Е. Петров Изв. вузов. Матем., 1980, <span class="Apple-converted-space">  </span>№ 8,  85–888</p>
+<p class="p46">Petrov.pdf local</p>
+<p class="p2"><br></p>
+<p class="p15"><span class="s16"><a href="https://zbmath.org/?q=an:0534.20030">Zbl 0534.20030</a> <a href="https://zbmath.org/authors/?q=ai:petrov.egor-e">Petrov, E.E.</a></span><span class="s17"> <a href="https://zbmath.org/?q=an:03847668"><span class="s16">The principal series representations of the group SL(2,A) over a finite local commutative principal ideal ring A.</span></a> <i>(English. Russian original)</i><span class="Apple-converted-space"> </span></span></p>
+<p class="p15"><span class="s16"><a href="https://zbmath.org/journals/?q=se:00000797">Sov. Math. 26, No.9, 113-116 (1982); translation from Izv. Vyssh. Uchebn. Zaved., Mat. 1982, No.9(244), 83-86 (1982).</a></span><span class="s17"> Reviewer: <a href="https://zbmath.org/authors/?q=B+Weisfeiler"><span class="s16">B.Weisfeiler</span></a> MSC:  <a href="https://zbmath.org/classification/?q=cc:20G05"><span class="s16">20G05</span></a> <a href="https://zbmath.org/classification/?q=cc:20G35"><span class="s16">20G35</span></a></span><span class="s16"> <span class="Apple-converted-space"> </span></span><span class="s17"> <a href="http://www.ams.org.ezaccess.libraries.psu.edu/mathscinet/search/publdoc.html?arg3=&amp;co4=AND&amp;co5=AND&amp;co6=AND&amp;co7=AND&amp;dr=pubyear&amp;pg4=AUCN&amp;pg5=TI&amp;pg6=RVCN&amp;pg7=JOUR&amp;pg8=ET&amp;review_format=html&amp;s4=petrov&amp;s5=principal&amp;s6=&amp;s7=&amp;s8=All&amp;vfpref=html&amp;yearRangeFirst=&amp;yearRangeSecond=&amp;yrop=eq&amp;r=2&amp;mx-pid=676921"><b>MR0676921</b></a></span></p>
+<p class="p10">11.<a href="http://www.mathnet.ru/rus/ivm6887"> Основная серия представлений группы S</a>L(2A)<span class="Apple-converted-space">  </span>над конечным локальным коммутативным кольцом  A главных идеалов Е. Е. Петров Изв. вузов. Матем., 1982, № 9,  83–86</p>
+<p class="p47"><span class="s16"></span><br></p>
+<p class="p15"><span class="s16">Zbl 0647.20040 Petrov, E.E. A discrete series of representations of the group SL(2,F 2 n ). (English. Russian original)<span class="Apple-converted-space">  </span>Sov. Math. 30, No.6, 24-29 (1986); translation from Izv. Vyssh. Uchebn. Zaved., Mat. 1986, No.6(289), 18-21 (1986). <a href="http://www.ams.org.ezaccess.libraries.psu.edu/mathscinet/search/publdoc.html?arg3=&amp;co4=AND&amp;co5=AND&amp;co6=AND&amp;co7=AND&amp;dr=pubyear&amp;pg4=AUCN&amp;pg5=TI&amp;pg6=RVCN&amp;pg7=JOUR&amp;pg8=ET&amp;review_format=html&amp;s4=petrov&amp;s5=discrete&amp;s6=&amp;s7=&amp;s8=All&amp;vfpref=html&amp;yearRangeFirst=&amp;yearRangeSecond=&amp;yrop=eq&amp;r=5&amp;mx-pid=865682"><b>MR0865682</b></a></span></p>
+<p class="p15"><span class="s16">9. <a href="http://www.mathnet.ru/rus/ivm7563">О дискретной серии представлений группы<span class="s52"> <i>SL</i>(2,<i>F</i></span><span class="s53">2</span><span class="s28"><i>n</i></span><span class="s52">)</span></a></span><span class="s17"> Е. Е. Петров <i>Изв. вузов. Матем.</i>, 1986, № 6,  18–21</span></p>
+<p class="p12"><br></p>
+<table cellspacing="0" cellpadding="0">
+  <tbody>
+    <tr>
+      <td valign="top" class="td1">
+        <p class="p48"><br></p>
+      </td>
+      <td valign="top" class="td2">
+        <p class="p15"><span class="s16"><a href="http://www.mathnet.ru/php/person.phtml?option_lang=rus&amp;personid=8670">Петров Евгений Евгеньевич</a></span></p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<p class="p49"><br></p>
+<p class="p1"><span class="s13"><b>MR2151935</b></span><span class="s11"> </span><span class="s13"><b>(2006c:15019)</b></span> <span class="s11">Prokip, Volodymyr</span> On similarity of matrices over commutative rings. <span class="s13"><i>Linear Algebra Appl.</i></span> <span class="s11">399 (2005), </span>225–233. (Reviewer: Tomás Sánchez-Giralda), <span class="s11">15A18.<span class="Apple-converted-space">  </span></span><span class="s13"><span class="Apple-converted-space">  </span></span>Prokup.pdf</p>
+<p class="p49"><br></p>
+<p class="p1"><b>MR0714872</b> <b>(84j:15012)</b><span class="s54"><span class="Apple-converted-space">  </span></span><span class="s55">Pizarro, Antonio(1-OBLC)</span><span class="s54"> Similarity classes of 3×3 </span>matrices over a discrete valuation ring.<span class="Apple-converted-space">  </span><span class="s56"><i>Linear Algebra Appl.</i></span> <b>54 </b>(1983), 29–51.<span class="Apple-converted-space">  </span><span class="s57">15A21 (10M20 15A33 16A42). </span>.<span class="Apple-converted-space"> </span></p>
+<p class="p1">Pizarro.pdf.<span class="Apple-converted-space">  </span>local</p>
+<p class="p50"><br></p>
+<p class="p50"><br></p>
+<p class="p42">MR0309963 (46 #9066) Pomfret, J. Similarity of matrices over finite rings. Proc. Amer. Math. Soc. 37 (1973), 421–422. (Reviewer: C. F. Moppert), 15A21.<span class="Apple-converted-space"> </span></p>
+<p class="p42">Pomfret.pdf<span class="Apple-converted-space">  </span>local</p>
+<p class="p8"><br></p>
+<p class="p8"><br></p>
+<p class="p3">Zbl 1328.15023 Prasad, Amritanshu; Singla, Pooja; Spallone, Steven</p>
+<p class="p3">Similarity of matrices over local rings of length two. (English)<span class="Apple-converted-space"> </span></p>
+<p class="p3">Indiana Univ. Math. J. 64, No. 2, 471-514 (2015). Reviewer: Mihail Voicu (Iaşi)</p>
+<p class="p3">MSC:<span class="Apple-converted-space">  </span>15A21 05A15 05A05 16L30 . <span class="s5"><b>MR3344436</b></span></p>
+<p class="p3">(Submitted on 26 Dec 2012) http://arxiv.org/abs/1212.6157 <span class="Apple-converted-space"> </span></p>
+<p class="p3">amri2.pdf local</p>
+<p class="p3"><span class="Apple-converted-space"> </span>Let $R$ be a principal ideal local ring of length two, for example, the ring $R=\Z/p^2\Z$ with $p$ prime. In this paper we develop a theory of normal forms for similarity classes in the matrix rings $M_n(R)$ by interpreting them in terms of extensions of $R[t]$-modules. Using this theory, we describe the similarity classes in $M_n(R)$ for $n\leq 4$, along with their centralizers. Among these, we characterize those classes which are similar to their transposes. Non-self-transpose classes are shown to exist for all $n&gt;3$. When $R$ has finite residue field of order $q$, we enumerate the similarity classes and the cardinalities of their centralizers as polynomials in $q$. Surprisingly, these polynomials turn out to have non-negative integer coefficients.<span class="Apple-converted-space"> </span></p>
+<p class="p8"><br></p>
+<p class="p8"><br></p>
+<p class="p7">MR2151935 (2006c:15019) Prokip, Volodymyr On similarity of matrices over commutative rings. Linear Algebra Appl. 399 (2005), 225–233. (Reviewer: Tomás Sánchez-Giralda), 15A18. <span class="s58">Prokup.pdf</span></p>
+<p class="p8"><br></p>
+<p class="p30"><span class="s16"></span><br></p>
+<p class="p30"><span class="s16"></span><br></p>
+<p class="p12"><br></p>
+<p class="p11">R</p>
+<p class="p12"><br></p>
+<p class="p10"><b>MR0850618</b> <b>(87i:11041)</b> <span class="s33">\</span> <a href="http://www.ams.org/mathscinet/search/author.html?mrauthid=151810"><span class="s34">Rumely, Robert S.</span></a><a href="http://www.ams.org/mathscinet//search/institution.html?code=1_GA"><span class="s34">(1-GA)</span></a> Arithmetic over the ring of all algebraic integers.<span class="Apple-converted-space"> </span></p>
+<p class="p29"><a href="http://www.ams.org/mathscinet/search/journaldoc.html?cn=J_Reine_Angew_Math"><i>J. Reine Angew. Math.</i></a><span class="s17"> <a href="http://www.ams.org/mathscinet/search/publications.html?pg1=ISSI&amp;s1=37784"><span class="s16">368 (1986), </span></a>127–133.<span class="Apple-converted-space">  </span><a href="http://www.ams.org/mathscinet/search/mscdoc.html?code=11D72,%2811G35,11U09%29"><span class="s16">11D72 (11G35 11U09)</span></a></span><span class="s16">. refers to Guralnick6.pdf</span></p>
+<p class="p30"><span class="s16"></span><br></p>
+<p class="p29"><span class="s17"><b>MR1661300</b> <b>(99k:13016)</b> <a href="http://www.ams.org/mathscinet/help/fullitem_help_full.html#review"><span class="Apple-converted-space"> </span></a> <a href="http://www.ams.org/mathscinet/search/author.html?mrauthid=55525"><span class="s16">DeMeyer, Frank</span></a><a href="http://www.ams.org/mathscinet//search/institution.html?code=1_COS"><span class="s16">(1-COS)</span></a>; <a href="http://www.ams.org/mathscinet/search/author.html?mrauthid=189763"><span class="s16">Miranda, Rick</span></a><a href="http://www.ams.org/mathscinet//search/institution.html?code=1_COS"><span class="s16">(1-COS)</span></a>; <a href="http://www.ams.org/mathscinet/search/author.html?mrauthid=612233"><span class="s16">Schneider, Kim</span></a><a href="http://www.ams.org/mathscinet//search/institution.html?code=1_COS"><span class="s16">(1-COS)</span></a></span></p>
+<p class="p10">Examples of the failure of the local-global principle for similarity of matrices. (English summary)<span class="Apple-converted-space"> </span></p>
+<p class="p29"><a href="http://www.ams.org/mathscinet/search/journaldoc.html?cn=Comm_Algebra"><i>Comm. Algebra</i></a><span class="s17"> <a href="http://www.ams.org/mathscinet/search/publications.html?pg1=ISSI&amp;s1=169798"><span class="s16">26 (1998), no. 12,</span></a> 4179–4185.<span class="Apple-converted-space">  </span><a href="http://www.ams.org/mathscinet/search/mscdoc.html?code=13C99,%2815A21%29"><span class="s16">13C99 (15A21)</span></a></span><span class="s16">. DeMeyer.pdf<span class="Apple-converted-space">  </span></span><span class="s59">Miranda.pdf</span></p>
+<p class="p4"><br></p>
+<p class="p11">S</p>
+<p class="p18"><br></p>
+<p class="p42"><span class="Apple-converted-space">      </span>MR1142212 (92k:58035) Sergeĭchuk, V. V. A remark on the classification of holomorphic matrices up to similarity. (Russian) Funktsional. Anal. i Prilozhen. 25 (1991), no. 2, 65; translation in Funct. Anal. Appl. 25 (1991)</p>
+<p class="p10">В. В. Сергейчук, “Замечание о классификации голоморфных матриц с точностью до подобия”, <i>Функц. анализ и его прил.</i>, <b>25</b>:2 (1991), 65.<span class="Apple-converted-space"> </span></p>
+<p class="p3">Sergeichuk.pdf<span class="Apple-converted-space">  </span><span class="s7">holomorphic</span></p>
+<p class="p50"><br></p>
+<p class="p51">V.V.Sergeichuk, Canonical matrices for linear matrix problems, Linear Algebra Appl. 317 (2000) 53-102</p>
+<p class="p21"><br></p>
+<p class="p18"><br></p>
+<p class="p3">Zbl 06594005 Sidorov, S.V. On similarity classes of second order matrices with zero trace over the ring of integers. (English. Russian original)<span class="Apple-converted-space">  </span>Russ. Math. 60, No. 4, 65-71 (2016); translation from Izv. Vyssh. Uchebn. Zaved., Mat. 2016, No. 4, 79-86 (2016). MSC:<span class="Apple-converted-space">  </span>15 11 = <span class="s5">1.<a href="http://www.mathnet.ru/rus/ivm9107"><span class="s4">О классах подобия матриц второго порядка с нулевым следом над кольцом целых чисел</span></a></span></p>
+<p class="p10">С. В. Сидоров <i>Изв. вузов. Матем.</i>, 2016, № 4,  79–86</p>
+<p class="p3">integer</p>
+<p class="p4"><br></p>
+<p class="p3">Zbl 1232.15016 Sidorov, S.V. Similarity of matrices with integer spectrum over the ring of integers. (English. Russian original)<span class="Apple-converted-space"> </span></p>
+<p class="p3">Russ. Math. 55, No. 3, 77-84 (2011); translation from Izv. Vyssh. Uchebn. Zaved., Mat. 2011, No. 3, 86-94 (2011). Reviewer: Václav Burjan (Praha) MSC:<span class="Apple-converted-space">  </span>15A21 15B36 65F30=<span class="Apple-converted-space">    </span><span class="s5">2. <a href="http://www.mathnet.ru/rus/ivm7248"><span class="s4">О подобии матриц с целочисленным спектром над кольцом целых чисел</span></a> С. В. Сидоров <i>Изв. вузов. Матем.</i>, 2011, № 3,  86–94</span></p>
+<p class="p10">For matrices with integer elements which have the same integer spectrum and whose Jordan form contains no blocks of the same order for one and the same eigenvalue, we propose a quasipolynomial-time algorithm for recognizing their similarity over the ring of integers. In the case when the algebraic multiplicity of all eigenvalues is equal to 1, we estimate the number of similarity classes.</p>
+<p class="p3">integer</p>
+<p class="p4"><br></p>
+<p class="p3">Zbl 1173.65321 Shevchenko, V.N.; Sidorov, S.V. On similarity of second order matrices over the ring of integers. (English. Russian original) Russ. Math. 50, No. 4, 56-63 (2006); translation from Izv. Vyssh. Uchebn. Zaved., Mat. 2006, No. 4, 57-64 (2006). MSC:<span class="Apple-converted-space">  </span>65F30 15B36 15A21 <span class="Apple-converted-space">  </span>= <span class="s5">3. <a href="http://www.mathnet.ru/rus/ivm1207"><span class="s4">О подобии матриц второго порядка над кольцом целых чисел</span></a></span></p>
+<p class="p10">В. Н. Шевченко, С. В. Сидоров <i>Изв. вузов. Матем.</i>, 2006, № 4,  57–64</p>
+<p class="p3">integer</p>
+<p class="p4"><br></p>
+<p class="p1"><a href="http://www.mathnet.ru/php/person.phtml?option_lang=rus&amp;personid=32434">Сидоров Сергей Владимирович</a> <a href="https://diss.unn.ru/files/2015/495/diss-Sidorov-495.pdf">dissertation</a> 2015</p>
+<p class="p2"><br></p>
+<p class="p2"><br></p>
+<p class="p10">P. Singla, Irreducible representations and conjugacy classes of general linear groups over principal ideal local rings of length two, PhD Thesis, The Institute of Mathematical Sciences, Chennai, 2010.</p>
+<p class="p2"><br></p>
+<p class="p1">MR0072841 (17,340a)<span class="Apple-converted-space">  </span>Smiley, M. F. A remark on matric polynomials and similarity of matrices.<span class="Apple-converted-space">  </span>Amer. Math. Monthly 62 (1955), 173–174.<span class="Apple-converted-space">  </span>15.0X<span class="Apple-converted-space"> </span></p>
+<p class="p1">Smiley.pdf <span class="Apple-converted-space">  </span>division ring</p>
+<p class="p1">For matrix polynomials A(x) and B(x) in a commuting indeterminate and B<sub>R</sub>(C)=∑B<sub>i</sub>C<sub>i</sub> the usual result of right substitution for x, (A(x)B(x))R(C)=∑A<sub>i</sub>B<sub>R</sub>(C)C<sub>i</sub> is immediate yet easily yields the implication</p>
+<p class="p1">P(x)(Ix−M)Q(x)=Ix−N<span class="s60">⇒</span>N=P−1MP, for P=QR(N),</p>
+<p class="p1">where P(x) and Q(x) have matrix polynomial inverses and M and N are constant. The proof holds for matrices with elements in a division ring F and a modification to σ-similarity (N=P−1MPσ, σ an automorphism of F) is indicated. A computational procedure for similarity reduction to canonical forms is sketched. Reviewed by W. Givens</p>
+<p class="p2"><br></p>
+<p class="p10"><span class="s4"><a href="https://arxiv.org/abs/1211.6872">arXiv:1211.6872</a></span> [<a href="https://arxiv.org/pdf/1211.6872"><span class="s4">pdf</span></a>, <a href="https://arxiv.org/ps/1211.6872"><span class="s4">ps</span></a>, <a href="https://arxiv.org/format/1211.6872"><span class="s4">other</span></a>]<span class="Apple-converted-space">  </span><a href="https://arxiv.org/find/math/1/au:+Stasinski_A/0/1/0/all/0/1"><span class="s4"><span class="Apple-converted-space"> </span></span></a><span class="s37"> <span class="Apple-converted-space">      </span>Stasinski.pdf</span></p>
+<p class="p10">Similarity and commutators of matrices over principal ideal rings</p>
+<p class="p10"><span class="s4"><a href="https://arxiv.org/find/math/1/au:+Stasinski_A/0/1/0/all/0/1">Alexander Stasinski</a></span> Comments: 23 pages; minor corrections</p>
+<p class="p10">We prove that if R is a principal ideal ring and A\in\M_n(R) is a matrix with trace zero, then A is a commutator, that is, A=XY-YX for some X,Y\in\M_n(R). This generalises the corresponding result over fields due to Albert and Muckenhoupt, as well as that over Z due to Laffey and Reams, and as a by-product we obtain new simplified proofs of these results. We also establish a normal form for similarity classes of matrices over PIDs, generalising a result of Laffey and Reams. This normal form is a main ingredient in the proof of the result on commutators.</p>
+<p class="p2"><br></p>
+<p class="p2"><br></p>
+<p class="p2"><br></p>
+<p class="p2"><br></p>
+<p class="p10"><span class="s18"><b>M</b><a href="http://www.ams.org.ezaccess.libraries.psu.edu/mathscinet/search/publdoc.html?arg3=&amp;co4=AND&amp;co5=AND&amp;co6=AND&amp;co7=AND&amp;dr=all&amp;pg4=AUCN&amp;pg5=TI&amp;pg6=PC&amp;pg7=ALLF&amp;pg8=ET&amp;review_format=html&amp;s4=stebe&amp;s5=&amp;s6=&amp;s7=&amp;s8=All&amp;vfpref=html&amp;yearRangeFirst=&amp;yearRangeSecond=&amp;yrop=eq&amp;r=8&amp;mx-pid=292949"><b>R0292949</b><span class="s16"><span class="Apple-converted-space"> </span></span></a><a href="http://www.ams.org.ezaccess.libraries.psu.edu/mathscinet/help/fullitem_help_full.html#review"> </a><a href="http://www.ams.org.ezaccess.libraries.psu.edu/mathscinet/search/author.html?mrauthid=241606"><span class="s16">Stebe, P. F.</span></a></span> Conjugacy separability of certain Fuchsian groups. <a href="http://www.ams.org.ezaccess.libraries.psu.edu/mathscinet/search/journaldoc.html?cn=Trans_Amer_Math_Soc"><span class="s18"><i>Trans. Amer. Math. Soc.</i></span></a> <b>163 </b>(1972), 173–188. (Reviewer: A. M. Macbeath) <a href="http://www.ams.org.ezaccess.libraries.psu.edu/mathscinet/search/mscdoc.html?code=20H10,%2810D05%29"><span class="s4">20H10 (10D05)</span></a><span class="s4">/ Stebe.pdf</span></p>
+<p class="p2"><br></p>
+<p class="p10"><span class="s18"><a href="http://www.ams.org.ezaccess.libraries.psu.edu/mathscinet/search/publdoc.html?arg3=&amp;co4=AND&amp;co5=AND&amp;co6=AND&amp;co7=AND&amp;dr=all&amp;pg4=AUCN&amp;pg5=TI&amp;pg6=PC&amp;pg7=ALLF&amp;pg8=ET&amp;review_format=html&amp;s4=stebe&amp;s5=&amp;s6=&amp;s7=&amp;s8=All&amp;vfpref=html&amp;yearRangeFirst=&amp;yearRangeSecond=&amp;yrop=eq&amp;r=9&amp;mx-pid=289666"><b>MR0289666</b><span class="s16"> </span></a><a href="http://www.ams.org.ezaccess.libraries.psu.edu/mathscinet/help/fullitem_help_full.html#review"><span class="Apple-converted-space"> </span></a></span> <a href="http://www.ams.org.ezaccess.libraries.psu.edu/mathscinet/search/author.html?mrauthid=241606"><span class="s4">Stebe, Peter F.</span></a> Conjugacy separability of groups of integer matrices. <a href="http://www.ams.org.ezaccess.libraries.psu.edu/mathscinet/search/journaldoc.html?cn=Proc_Amer_Math_Soc"><span class="s18"><i>Proc. Amer. Math. Soc.</i></span></a> <b>32 </b>1972 1–7. (Reviewer: Morris Newman) <a href="http://www.ams.org.ezaccess.libraries.psu.edu/mathscinet/search/mscdoc.html?code=20.75"><span class="s4">20.75</span></a><span class="s4"> <span class="Apple-converted-space"> </span></span></p>
+<p class="p10">Stebe2.pdf integer</p>
+<p class="p52">An element g of a group G is said to be conjugacy distinguished if any element h of G is either conjugate to g, or there is a homomorphism φ of G onto a finite group such that φ(h) is not conjugate to φ(g). G is said to be conjugacy separable if every one of its elements is conjugacy distinguished. The author proves that SL(n,Z), GL(n,Z) are conjugacy separable if and only if n=1 or 2. He also shows that SL(n,Zp) and GL(n,Zp) are conjugacy separable for all n and all p. Here Z is the ring of integers, Zp the ring of p-adic integers.<span class="Apple-converted-space"> </span></p>
+<p class="p10">p.3<span class="Apple-converted-space">  </span>two matrices in SL(2,Z)<span class="Apple-converted-space">  </span>not similar in GL(2,Z)<span class="Apple-converted-space">  </span>locally similar.</p>
+<p class="p4"><br></p>
+<p class="p4"><br></p>
+<p class="p10"><span class="s4"><a href="https://zbmath.org/?q=an:0272.20042">Zbl 0272.20042</a><span class="Apple-converted-space">  </span></span>D. A. Suprunenko, “Conjugating of matrices over residue class rings,” Dokl. Akad. Nauk BSSR,8, 693–695 (1964).</p>
+<p class="p50"><br></p>
+<p class="p12"><br></p>
+<p class="p11">T</p>
+<p class="p12"><br></p>
+<p class="p12"><br></p>
+<p class="p15"><span class="s16"><a href="https://zbmath.org/?q=an:0587.47018">Zbl 0587.47018</a> <a href="https://zbmath.org/authors/?q=ai:thijsse.g-philip-a">Thijsse, G.Philip A.</a></span><span class="s17"> <a href="https://zbmath.org/?q=an:03942268"><span class="s16">Global holomorphic similarity to a Jordan form.</span></a> <i>(English)</i><span class="Apple-converted-space">  </span><a href="https://zbmath.org/journals/?q=se:00000673"><span class="s16">Result. Math. 8, 78-87 (1985).</span></a> MSC:  <a href="https://zbmath.org/classification/?q=cc:47A56"><span class="s16">47A56</span></a></span><span class="s16"> </span><span class="s17"><b>MR0812247</b> <b>(87a:15016)</b></span></p>
+<p class="p31">Let A be a holomorphic n×n-matrix function on a region G<span class="s61">⊆</span><span class="s62">ℂ</span>. Under what conditions does there exist a holomorphic matrix function S on G with invertible values such that S -1 (z)A(z)S(z) is a Jordan-matrix for all z<span class="s61">∈</span>G?</p>
+<p class="p31">A necessary condition is, obviously, that the Jordan-form of A(z) can be written as a holomorphic matrix function, but this is not sufficient, unless the number of different eigenvalues of A(z) is constant on G. This latter condition can be generalized, and the former be weakened, in order to obtain necessary and sufficient conditions. These conditions are of a local nature, and the set where they are not met is discrete in G. Improving a result of H. Baumgärtel it is shown that A is always meromorphically similar to a holomorphic Jordan form J=S -1 AS on a Riemann surface M over G<span class="s63">∖</span>γ, γ discrete, and that the set of poles of S, S -1 is characterized as the set of points in M where the abovementioned conditions fail.</p>
+<p class="p31">holomorphic</p>
+<p class="p21"><br></p>
+<p class="p21"><br></p>
+<p class="p42">MR0808285 (87g:11139) Charles Traina, The conjugacy problem of the modular group and the class number of real quadratic number fields,J.Number Th. 21:2 (1985), 176-184..<span class="Apple-converted-space">     </span></p>
+<p class="p42">Traina.pdf <span class="Apple-converted-space">    </span>integer GL_2Z &amp; SL_2Z<span class="Apple-converted-space">   </span></p>
+<p class="p42">We shall discuss the conjugacy problem of the modular group, and show how its solution, in conjunction with a theorem of Olga Taussky can be used to compute the class number of certain real quadratic number fields. IQ 1985 Academic press, Inc.</p>
+<p class="p12"><br></p>
+<p class="p10"><span class="s14"><b>On similar matrices over the dual numbers </b><a href="https://arxiv.org/find/math/1/au:+Trishin_I/0/1/0/all/0/1"><span class="s15">I.M. Trishin</span></a></span> (Submitted on 3 Oct 2009)<span class="Apple-converted-space">  </span><a href="https://arxiv.org/pdf/0910.0536v1"><span class="s4">PDF</span></a></p>
+<p class="p10">Matrices over the dual numbers are considered. We propose an approach to classify these matrices up to similarity. Some preliminary results on the realization of this approach are obtained. In particular, we produce explicitly canonical matrices of orders 2 and 3.</p>
+<p class="p10">the dual numbers over an alg closed field.</p>
+<p class="p30"><span class="s16"></span><br></p>
+<p class="p30"><span class="s16"></span><br></p>
+<p class="p11">W</p>
+<p class="p50"><br></p>
+<p class="p16">MR0735415 (85h:11024)<span class="Apple-converted-space">  </span>Wallace, D. I.(1-UCSD)<span class="Apple-converted-space">  </span>Conjugacy classes of hyperbolic matrices in Sl(n,Z) and ideal classes in an order.</p>
+<p class="p16">Trans. Amer. Math. Soc. 283 (1984), no. 1, 177–184. 11F06 (11R80) (char poly irred). <span class="s7"><span class="Apple-converted-space">    </span><a href="https://zbmath.org/?q=an:0562.12010"><span class="s15">Zbl 0562.12010</span></a> <span class="Apple-converted-space">    </span></span><span class="s37"><span class="Apple-converted-space"> </span></span></p>
+<p class="p3">Wallace2.pdf<span class="Apple-converted-space">  </span>integer</p>
+<p class="p18"><br></p>
+<p class="p10"><b>MR2711622</b> <a href="http://www.ams.org.ezaccess.libraries.psu.edu/mathscinet/help/fullitem_help_full.html#theses"><span class="s18">Thesis</span></a><span class="Apple-converted-space">  </span>Wang, Shuai On a certain triple system, elliptic curves and Gauss theory of quadratic forms.<span class="Apple-converted-space"> </span></p>
+<p class="p10">Thesis (Ph.D.)–The Johns Hopkins University. 2008. 64 pp. ISBN: 978-0549-58060-7<span class="Apple-converted-space"> </span></p>
+<p class="p15"><span class="s16"><a href="http://www.ams.org.ezaccess.libraries.psu.edu/mathscinet/help/proquest.html"><i>ProQuest LLC</i></a></span></p>
+<p class="p10">ABSTRACT Inspired by the important result that the space of cusp forms is generated by<span class="Apple-converted-space"> </span></p>
+<p class="p10">Poincaré sums, <b>a triple system </b>(G,(G, M)) is proposed in general and we are interested in<span class="Apple-converted-space"> </span></p>
+<p class="p10">whether analogous results hold in other circumstances. First I consider the case (G,(SLm (Z),</p>
+<p class="p12"><br></p>
+<p class="p3">Zbl 0108.01601 Wasow, W. On holomorphically similar matrices. (English)<span class="Apple-converted-space">  </span>J. Math. Anal. Appl. 4, 202-206 (1962).<span class="Apple-converted-space">    </span>MR0174573<span class="Apple-converted-space"> </span></p>
+<p class="p3">Wasow.pdf<span class="Apple-converted-space">      </span>holomorphic (regular analytic) functions:<span class="Apple-converted-space">  </span>(matrices whose elements are )</p>
+<p class="p12"><br></p>
+<p class="p12"><br></p>
+<p class="p12"><br></p>
+<p class="p53"><span class="s16"></span><br></p>
+<p class="p30"><span class="s16"></span><br></p>
+<p class="p11">Z</p>
+<p class="p18"><br></p>
+<p class="p10"><span class="s4"><a href="https://zbmath.org/?q=an:0509.13006">Zbl 0509.13006</a> </span>D. Zelinsky, Similarity of Nilpotent Integer Matrices or Four Elementary Categories, Contemporary Mathematics, <b>13 (1982) 369-378. </b><a href="http://www.ams.org.ezaccess.libraries.psu.edu/mathscinet/search/publdoc.html?arg3=&amp;co4=AND&amp;co5=AND&amp;co6=AND&amp;co7=AND&amp;dr=all&amp;pg4=AUCN&amp;pg5=TI&amp;pg6=RVCN&amp;pg7=JOUR&amp;pg8=ET&amp;review_format=html&amp;s4=&amp;s5=Similarity%20of%20Nilpotent%20Integer%20Matrices%20or%20Four%20Elementary&amp;s6=&amp;s7=&amp;s8=All&amp;vfpref=html&amp;yearRangeFirst=&amp;yearRangeSecond=&amp;yrop=eq&amp;r=2&amp;mx-pid=685973"><span class="s18"><b>MR0685973</b></span></a></p>
+<p class="p10"><b>integer</b></p>
+<p class="p10"><b><span class="Apple-converted-space"> </span>Given a principal ideal domain R and a fixed integer n the author considers four categories. These are: C1, the category of square matrices T over R with Tn=0; C2, the category of finitely generated R-free R[X]/(Xn)-modules; C3, the category of n-step filtrations F0</b><span class="s41">⊃</span><b>F1</b><span class="s41">⊃</span><span class="s40">⋯⊃</span><b>Fn=0 of R-modules with F0 finitely generated and free; and C4, the category of (n−1)-step filtrations G0</b><span class="s41">⊃</span><b>G1</b><span class="s41">⊃</span><span class="s40">⋯⊃</span><b>Gn−1=0 of R-modules, with G0 finitely generated. In each case the morphisms are the isomorphisms in the obvious sense. After pointing out some functors between these categories, the author concentrates on C3 and C4. His main interest is in determining when objects in these categories are naively determined, i.e., determined up to isomorphism by the factors of the filtrations. Several sufficient conditions are given for the case where n≤3. As an application, he obtains a canonical form for square R-matrices with cube zero.</b></p>
+<p class="p10"><b>{For the collection containing this paper see MR0685934.} Reviewed by William H. Gustafson</b></p>
+<p class="p12"><br></p>
+<p class="p53"><span class="s16"></span><br></p>
+<p class="p30"><span class="s16"></span><br></p>
+<p class="p1"><span class="s64"><span class="Apple-converted-space"> </span>Zyl, J., On the Latimer-MacDu</span><span class="s63">ff</span>ee theorem for polynomials over finite fields (doctoral dissertation), Rhodes University (2011). <span class="s64">Zyl.pdf</span></p>
+<p class="p1">ABSTRACT: Latimer &amp; MacDuffee showed in 1933 that there is a one-to-one correspondence between equivalence classes of matrices with a given minimum polynomial and equivalence classes of ideals of a certain ring. In the case where the matrices are taken over the integers, Behn and Van der Merwe developed an algorithm in 2002 to produce a representative in each equivalence class. We extend this algorithm to matrices taken over the ring Fq[T] of polynomials over a finite field and prove a modified version of the Latimer-MacDuffee theorem which holds for proper equivalence classes of matrices.</p>
+<p class="p30"><span class="s16"></span><br></p>
+<p class="p12"><br></p>
+<p class="p2"><br></p>
+<p class="p8"><br></p>
+<p class="p8"><br></p>
+<p class="p8"><br></p>
+<p class="p7">============================================== unsorted</p>
+<p class="p8"><br></p>
+<p class="p7"><span class="s6">stable</span> in GL , see K-theory endomorphisms. <span class="Apple-converted-space">   </span></p>
+<p class="p8"><br></p>
+<p class="p7">D Grayson<span class="Apple-converted-space">  </span>http://mathoverflow.net/questions/99713/classify-matrices-up-to-similarity-over-arbitrary-commutative-ring</p>
+<p class="p8"><br></p>
+<p class="p7">MR0523461 (80i:18018)     Almkvist, Gert $K$-theory of endomorphisms. J. Algebra 55 (1978), no. 2, 308--340. (Reviewer: Jean-Louis Loday) 18F25 (18E99 18F30) . Almkvist.pdf <span class="Apple-converted-space">  </span><a href="https://zbmath.org/?q=an:0414.18009"><span class="s15">Zbl 0414.18009</span></a></p>
+<p class="p7"> <span class="Apple-converted-space">  </span>MR0608549 (82h:18008).    Almkvist, Gert Erratum: ``$K$-theory of endomorphisms'' [J. Algebra 55 (1978), no. 2, 308--340; MR 80i:18018]. J. Algebra 68 (1981), no. 2, 520--521. (Reviewer: Jean-Louis Loday) 18F25 (13D15 14F15)<span class="Apple-converted-space">  </span>Almkvist2.pdf <span class="Apple-converted-space">  </span><a href="https://zbmath.org/?q=an:0448.18007"><span class="s15">Zbl 0448.18007</span></a></p>
+<p class="p8"><br></p>
+<p class="p7">MR0432738 (55 #5721)<span class="Apple-converted-space">  </span>Almkvist, Gert The Grothendieck ring of the category of endomorphisms. J. Algebra 28 (1974), 375–388. 18F30 (13C99) <span class="Apple-converted-space">         </span></p>
+<p class="p8"><br></p>
+<p class="p12"><br></p>
+<p class="p10"><span class="s18"><a href="http://www.ams.org.ezaccess.libraries.psu.edu/mathscinet/search/publdoc.html?arg3=&amp;co4=AND&amp;co5=AND&amp;co6=AND&amp;co7=AND&amp;dr=all&amp;pg4=AUCN&amp;pg5=TI&amp;pg6=RVCN&amp;pg7=JOUR&amp;pg8=ET&amp;review_format=html&amp;s4=grayson&amp;s5=endomorphisms&amp;s6=&amp;s7=&amp;s8=All&amp;vfpref=html&amp;yearRangeFirst=&amp;yearRangeSecond=&amp;yrop=eq&amp;r=2&amp;mx-pid=480699"><b>MR0480699</b><span class="s16"> </span></a><a href="http://www.ams.org.ezaccess.libraries.psu.edu/mathscinet/help/fullitem_help_full.html#review"><span class="Apple-converted-space"> </span></a></span> <a href="http://www.ams.org.ezaccess.libraries.psu.edu/mathscinet/search/author.html?mrauthid=76410"><span class="s4">Grayson, Daniel R.</span></a> The<span class="s8"> </span><span class="s9"><i>K</i></span>-theory of endomorphisms. <a href="http://www.ams.org.ezaccess.libraries.psu.edu/mathscinet/search/journaldoc.html?cn=J_Algebra"><span class="s18"><i>J. Algebra</i></span></a> <b>48 </b>(1977), no. 2, 439–446. (Reviewer: Keith Dennis) <a href="http://www.ams.org.ezaccess.libraries.psu.edu/mathscinet/search/mscdoc.html?code=18F25"><span class="s4">18F25</span></a></p>
+<p class="p15"><span class="s16"><a href="https://zbmath.org/?q=an:0413.18010">Zbl 0413.18010</a></span></p>
+<p class="p47"><span class="s16"></span><br></p>
+<p class="p7">MR0723394 (85k:13025) Hazewinkel, Michiel Operations in the $K$K-theory of endomorphisms. J. Algebra 84 (1983), no. 2, 285–304. (Reviewer: Jean-Louis Loday), 13K05 (18F25)</p>
+<p class="p15"><span class="s16"><a href="https://zbmath.org/?q=an:0534.13010">Zbl 0534.13010</a></span></p>
+<p class="p8"><br></p>
+<p class="p15"><a href="http://www.ams.org.ezaccess.libraries.psu.edu/mathscinet/search/publdoc.html?amp=&amp;loc=revcit&amp;revcit=480699&amp;vfpref=html&amp;r=1&amp;mx-pid=3504591"><b>MR3504591</b></a><span class="s17"> <a href="http://www.ams.org.ezaccess.libraries.psu.edu/mathscinet/search/author.html?mrauthid=952268"><span class="s16">Levikov, Filipp</span></a> The</span><span class="s65"> </span><span class="s66"><i>K</i></span><span class="s17">-theory of endomorphisms of spaces. <a href="http://www.ams.org.ezaccess.libraries.psu.edu/mathscinet/search/journaldoc.html?cn=Homology_Homotopy_Appl"><i>Homology Homotopy Appl.</i></a> <a href="http://www.ams.org.ezaccess.libraries.psu.edu/mathscinet/search/publications.html?pg1=ISSI&amp;s1=338828"><span class="s16">18 (2016), no. 1,</span></a> 325–338. (Reviewer: Wolfgang Steimle) <a href="http://www.ams.org.ezaccess.libraries.psu.edu/mathscinet/search/mscdoc.html?code=19D10,%2819D35,55N15%29"><span class="s16">19D10 (19D35 55N15)</span></a></span></p>
+<p class="p10"><span class="s4"><a href="https://zbmath.org/?q=an:06618802">Zbl 06618802</a><span class="Apple-converted-space">  </span></span>We prove a non-linear version of a theorem of Grayson which is an analogue of the Fundamental Theorem of Algebraic<span class="s49"><i> K</i></span>-theory and identify the<span class="s49"><i> K</i></span>-theory of the endomorphism category over a space</p>
+<p class="p10"><span class="s49"><i>X </i></span>in terms of reduced<span class="s49"><i> K</i></span>-theory of a certain localisation of the category of<span class="s49"><i> ℕ</i></span>-spaces over<span class="s49"><i> X</i></span>. In particular, we generalise the result of Klein and Williams describing the nil-terms of</p>
+<p class="p10"><span class="s49"><i>A</i></span>-theory in terms of<span class="s49"><i> K</i></span>-theory of nilpotent endomorphisms.<span class="s1"><span class="Apple-converted-space"> </span></span></p>
+<p class="p12"><br></p>
+<p class="p15"><a href="http://www.ams.org.ezaccess.libraries.psu.edu/mathscinet/search/publdoc.html?amp=&amp;loc=refcit&amp;refcit=480699&amp;vfpref=html&amp;r=2&amp;mx-pid=3430369"><b>MR3430369</b></a><span class="s17"><span class="Apple-converted-space"> </span><a href="http://www.ams.org.ezaccess.libraries.psu.edu/mathscinet/help/fullitem_help_full.html#review"> </a><a href="http://www.ams.org.ezaccess.libraries.psu.edu/mathscinet/search/author.html?mrauthid=648837"><span class="s16">Blumberg, Andrew J.</span></a>; <a href="http://www.ams.org.ezaccess.libraries.psu.edu/mathscinet/search/author.html?mrauthid=880977"><span class="s16">Gepner, David</span></a>; <a href="http://www.ams.org.ezaccess.libraries.psu.edu/mathscinet/search/author.html?mrauthid=751291"><span class="s16">Tabuada, Gonçalo</span></a></span></p>
+<p class="p10"><span class="s9"><i>K</i></span>-theory of endomorphisms via noncommutative motives. <a href="http://www.ams.org.ezaccess.libraries.psu.edu/mathscinet/search/journaldoc.html?cn=Trans_Amer_Math_Soc"><span class="s18"><i>Trans. Amer. Math. Soc.</i></span></a> <a href="http://www.ams.org.ezaccess.libraries.psu.edu/mathscinet/search/publications.html?pg1=ISSI&amp;s1=337856"><span class="s4">368 (2016), no. 2,</span></a> 1435–1465. (Reviewer: Charles Weibel) <a href="http://www.ams.org.ezaccess.libraries.psu.edu/mathscinet/search/mscdoc.html?code=19D10,%2814C15,18D20,19D25,19D35,19D55,55P43%29"><span class="s4">19D10 (14C15 18D20 19D25 19D35 19D55 55P43)</span></a></p>
+<p class="p10"><span class="s4"><a href="https://zbmath.org/?q=an:06560463">Zbl 06560463</a> </span>We extend the<span class="s49"><i> K</i></span>-theory of endomorphisms functor from ordinary rings to (stable)<span class="s49"><i> </i></span><span class="s50">∞</span>-categories. We show that<span class="s49"><i><span class="Apple-converted-space">  </span>KEnd </i>(-)</span> descends to the category of noncommutative motives, where it is corepresented by the noncommutative motive associated to the tensor algebra</p>
+<p class="p10"><span class="s42">𝕊</span><span class="s49">[<i>t</i>]</span> of the sphere spectrum<span class="s49"><i> </i></span><span class="s42">𝕊</span>.</p>
+<p class="p8"><br></p>
+<p class="p7">MR0686113 (84d:14012) Stienstra, Jan Operations in the higher $K$K-theory of endomorphisms. Current trends in algebraic topology, Part 1 (London, Ont., 1981), pp. 59–115, CMS Conf. Proc., 2, Amer. Math. Soc., Providence, R.I., 1982. 14F30 (14F15 18F25)</p>
+<p class="p8"><br></p>
+<p class="p8"><br></p>
+<p class="p8"><br></p>
+<p class="p7">————————————————————</p>
+<p class="p8"><br></p>
+<p class="p7">Bass orders:<span class="Apple-converted-space"> </span></p>
+<p class="p8"><br></p>
+<p class="p8"><br></p>
+<p class="p7">MR3282109 <span class="Apple-converted-space">  </span>Yang, Tse-Chung; Yu, Chia-Fu Monomial, Gorenstein and Bass orders. J. Pure Appl. Algebra 219 (2015), no. 4, 767–778. (Reviewer: John S. Kauta) 16H10</p>
+<p class="p8"><br></p>
+<p class="p7">MR1311621 <span class="Apple-converted-space">  </span>Hijikata, H.; Nishida, K. Bass orders in nonsemisimple algebras. J. Math. Kyoto Univ. 34 (1994), no. 4, 797–837. (Reviewer: Ellen E. Kirkman) 16H05 (16G30 16L60)</p>
+<p class="p8"><br></p>
+<p class="p7">MR1195409 <span class="Apple-converted-space">  </span>Nishida, Kenji On Bass orders. J. Algebra 153 (1992), no. 1, 121–132. (Reviewer: Charles J. Odenthal) 16G30 (16H05)</p>
+<p class="p8"><br></p>
+<p class="p7">MR1179337 <span class="Apple-converted-space">  </span>Hijikata, H.; Nishida, K. Classification of Bass orders. J. Reine Angew. Math. 431 (1992), 191–220. (Reviewer: Juliusz Brzeziński) 16H05</p>
+<p class="p8"><br></p>
+<p class="p7">MR1040944 <span class="Apple-converted-space">  </span>Kleinert, Ernst Which integral group rings are Bass orders? J. Algebra 129 (1990), no. 2, 380–392. (Reviewer: Alfred G. Wiedemann) 16S34 (16G30 16H05 20C05)</p>
+<p class="p8"><br></p>
+<p class="p7">MR0304411 <span class="Apple-converted-space">  </span>Drozd, Ju. A.; Kiričenko, V. V. The quasi-Bass orders. (Russian) Izv. Akad. Nauk SSSR Ser. Mat. 36 (1972), 328–370. (Reviewer: K. W. Roggenkamp) 16A18</p>
+<p class="p8"><br></p>
+<p class="p7">MR0316492 Roggenkamp, Klaus W. Bass-orders and the number of nonisomorphic indecomposable lattices over orders. Representation theory of finite groups and related topics (Proc. Sympos. Pure Math., Vol. XXI, Univ. Wisconsin, Madison, Wis., 1970), pp. 127–135. Amer. Math. Soc., Providence, R.I., 1971. (Reviewer: Ju. A. Drozd) 16A18 (13D15)</p>
+<p class="p8"><br></p>
+<p class="p7">MR0281748 <span class="Apple-converted-space">  </span>Roggenkamp, Klaus W. Grothendieck groups of Bass orders. Canad. J. Math. 23 1971 103–115. (Reviewer: A. Dress) 16.40 (20.00)</p>
+<p class="p8"><br></p>
+<p class="p7">Dafni-Vaserstein; <span class="Apple-converted-space"> </span></p>
+<p class="p8"><br></p>
+<p class="p7">MR0621290 (82k:15014) Sjerve, Denis Canonical forms for torsion matrices.</p>
+<p class="p7">J. Pure Appl. Algebra 22 (1981), no. 1, 103–111. 15A33 (15A36 20G30) .<span class="Apple-converted-space">  </span>(over Q and Z),<span class="Apple-converted-space">     </span></p>
+<p class="p8"><span class="Apple-converted-space"> </span></p>
+<p class="p7">MR0523463 (80f:20048) Steinberg, Robert Conjugacy in semisimple algebraic groups. J. Algebra 55 (1978), no. 2, 348–350. (Reviewer: Wim H. Hesselink), 20G15 (14L99)<span class="Apple-converted-space"> </span></p>
+<p class="p8"><br></p>
+<p class="p7">MR0601642 (82d:20041) Wall, G. E. Conjugacy classes in projective and special linear groups. Bull. Austral. Math. Soc. 22 (1980), no. 3, 339–364. (Reviewer: R. H. Dye), 20G15 (20G40)</p>
+<p class="p8"><br></p>
+<p class="p7">MR0978384 (91a:16009) Haefner, Jeremy Local orders whose lattices are direct sums of ideals. Trans. Amer. Math. Soc. 321 (1990), no. 2, 717–740. (Reviewer: Holger P. Petersson), 16H05</p>
+<p class="p8"><br></p>
+<p class="p7">MR0931905 (89e:13005) Haefner, Jeremy; Levy, Lawrence S. Commutative orders whose lattices are direct sums of ideals. J. Pure Appl. Algebra 50 (1988), no. 1, 1–20. (Reviewer: Cornelius Greither), 13C05 (13F05)</p>
+<p class="p8"><br></p>
+<p class="p15"><span class="s16"><a href="https://zbmath.org/?q=an:1115.18005">Zbl 1115.18005</a><span class="Apple-converted-space">  </span><a href="https://zbmath.org/authors/?q=ai:betley.stanislaw">Betley, Stanisław</a></span><span class="s17"> <a href="https://zbmath.org/?q=an:05125367"><span class="s16">Algebraic</span><span class="s49"><i> K</i></span><span class="s16">-theory of parameterized endomorphisms.</span></a> <i>(English)</i><span class="Apple-converted-space"> </span></span></p>
+<p class="p15"><span class="s49"><a href="https://zbmath.org/journals/?q=se:00001126"><i>K</i><span class="s58">-Theory 36, No. 3-4, 291-303 (2005).</span></a></span><span class="s17"> Reviewer: <a href="https://zbmath.org/authors/?q=ai:kolster.manfred"><span class="s16">Manfred Kolster (Hamilton/Ontario)</span></a><span class="Apple-converted-space">  </span>MSC:  <a href="https://zbmath.org/classification/?q=cc:18F25"><span class="s16">18F25</span></a></span></p>
+<p class="p8"><br></p>
+<p class="p8"><br></p>
+<p class="p8"><br></p>
+<p class="p7">—— unsorted</p>
+<p class="p8"><br></p>
+<p class="p7"><span class="Apple-converted-space">  </span>Platonov-Rapinchuk<span class="Apple-converted-space"> </span></p>
+<p class="p8"><br></p>
+<p class="p8"><br></p>
+<p class="p12"><br></p>
+<p class="p10"><span class="s18"><a href="http://www.ams.org.ezaccess.libraries.psu.edu/mathscinet/search/publdoc.html?arg3=1962&amp;co4=AND&amp;co5=AND&amp;co6=AND&amp;co7=AND&amp;dr=pubyear&amp;pg4=ICN&amp;pg5=ALLF&amp;pg6=MR&amp;pg7=ALLF&amp;pg8=ET&amp;review_format=html&amp;s4=Borel&amp;s5=&amp;s6=&amp;s7=&amp;s8=All&amp;vfpref=html&amp;yearRangeFirst=&amp;yearRangeSecond=&amp;yrop=eq&amp;r=3&amp;mx-pid=147566"><b>MR0147566</b><span class="s16"><span class="Apple-converted-space"> </span></span></a><a href="http://www.ams.org.ezaccess.libraries.psu.edu/mathscinet/help/fullitem_help_full.html#review"> </a><a href="http://www.ams.org.ezaccess.libraries.psu.edu/mathscinet/search/author.html?mrauthid=39565"><span class="s16">Borel, Armand</span></a></span>; <a href="http://www.ams.org.ezaccess.libraries.psu.edu/mathscinet/search/author.html?mrauthid=197986"><span class="s4">Harish-Chandra</span></a> Arithmetic subgroups of algebraic groups. <a href="http://www.ams.org.ezaccess.libraries.psu.edu/mathscinet/search/journaldoc.html?cn=Ann_of_Math_2"><span class="s18"><i>Ann. of Math. (2)</i></span></a> <b>75 </b>1962 485–535. (Reviewer: P. Cartier) <a href="http://www.ams.org.ezaccess.libraries.psu.edu/mathscinet/search/mscdoc.html?code=20.65,%2814.50%29"><span class="s4">20.65 (14.50)</span></a></p>
+<p class="p8"><br></p>
+<p class="p15"><span class="s67">M<a href="http://www.ams.org.ezaccess.libraries.psu.edu/mathscinet/search/publdoc.html?arg3=&amp;co4=AND&amp;co5=AND&amp;co6=AND&amp;co7=AND&amp;dr=pubyear&amp;pg4=ICN&amp;pg5=ALLF&amp;pg6=MR&amp;pg7=ALLF&amp;pg8=ET&amp;review_format=html&amp;s4=Borel&amp;s5=Introduction%20aux%20groupes%20&amp;s6=&amp;s7=&amp;s8=All&amp;vfpref=html&amp;yearRangeFirst=&amp;yearRangeSecond=&amp;yrop=eq&amp;r=3&amp;mx-pid=244260"><span class="s5"><b>R0244260</b></span><span class="s58"> </span></a><a href="http://www.ams.org.ezaccess.libraries.psu.edu/mathscinet/help/fullitem_help_full.html#review"><span class="s5"><span class="Apple-converted-space"> </span></span></a></span><span class="s17"> <a href="http://www.ams.org.ezaccess.libraries.psu.edu/mathscinet/search/author.html?mrauthid=39565"><span class="s16">Borel, Armand</span></a> Introduction aux groupes arithmétiques. (French) <a href="http://www.ams.org.ezaccess.libraries.psu.edu/mathscinet/search/series.html?cn=Publications_de_lInstitut_de_Mathematique_de_lUniversite_de_Strasbourg_XV_Actualites_Scientifiques_et_Industrielles_No_1341"><span class="s16">Publications de l'Institut de Mathématique de l'Université de Strasbourg, XV. Actualités Scientifiques et Industrielles, No. 1341</span></a> <i>Hermann, Paris</i> 1969 125 pp. (Reviewer: James Humphreys) <a href="http://www.ams.org.ezaccess.libraries.psu.edu/mathscinet/search/mscdoc.html?code=14.50,%2820.00%29"><span class="s16">14.50 (20.00)</span></a></span><span class="s16"> </span><span class="s67">green-white).</span></p>
+<p class="p8"><br></p>
+<p class="p7">Rudolf Muller, Z-konjugattionklassen ganzzahliger matrizen, Diplomarbeit Mai 1987.</p>
+<p class="p8"><br></p>
+<p class="p7">Martin Sichelstiel, Das Konjugationsproblem fur Matrizengruppen uber Funktionenkorpen endlicher Characteristik, Diplomarbeit Bonn 1987.</p>
+<p class="p8"><br></p>
+<p class="p7">MR1265024 <span class="Apple-converted-space">  </span>Nebe, G.; Plesken, W. Finite rational matrix groups. Mem. Amer. Math. Soc. 116 (1995), no. 556, viii+144 pp. (Reviewer: V. D. Mazurov) 20H20 (11E57)</p>
+<p class="p8"><br></p>
+<p class="p7">MR1262090 <span class="Apple-converted-space">  </span>Plesken, Wilhelm; Rosenberger, Gerhard Simultaneous conjugation in quaternion algebras. Results Math. 25 (1994), no. 1-2, 120–124. (Reviewer: Alan W. Reid) 20H20 (20H10)</p>
+<p class="p12"><br></p>
+<p class="p10"><span class="s18"><a href="http://www.ams.org.ezaccess.libraries.psu.edu/mathscinet/search/publdoc.html?arg3=&amp;co4=AND&amp;co5=AND&amp;co6=AND&amp;co7=AND&amp;dr=all&amp;pg4=ICN&amp;pg5=ALLF&amp;pg6=MR&amp;pg7=ALLF&amp;pg8=ET&amp;review_format=html&amp;s4=Plesken%20%20&amp;s5=six%20dimensional%20case.%20&amp;s6=&amp;s7=&amp;s8=All&amp;vfpref=html&amp;yearRangeFirst=&amp;yearRangeSecond=&amp;yrop=eq&amp;r=1&amp;mx-pid=444790"><b>MR0444790</b><span class="s16"><span class="Apple-converted-space"> </span></span></a><a href="http://www.ams.org.ezaccess.libraries.psu.edu/mathscinet/help/fullitem_help_full.html#review"> </a><a href="http://www.ams.org.ezaccess.libraries.psu.edu/mathscinet/search/author.html?mrauthid=140300"><span class="s16">Plesken, Wilhelm</span></a></span>; <a href="http://www.ams.org.ezaccess.libraries.psu.edu/mathscinet/search/author.html?mrauthid=140555"><span class="s4">Pohst, Michael</span></a> On maximal finite irreducible subgroups of<span class="s8"> </span><span class="s9">GL(<i>n</i>,<b>Z</b>)</span><span class="s8"> </span>. II. The six dimensional case. <a href="http://www.ams.org.ezaccess.libraries.psu.edu/mathscinet/search/journaldoc.html?cn=Math_Comp"><span class="s18"><i>Math. Comp.</i></span></a> <b>31 </b>(1977), no. 138, 552–573. (Reviewer: Wolfgang Knapp) <a href="http://www.ams.org.ezaccess.libraries.psu.edu/mathscinet/search/mscdoc.html?code=20G05"><span class="s4">20G05</span></a></p>
+<p class="p47"><span class="s16"></span><br></p>
+<p class="p10"><span class="s18"><b>M</b><a href="http://www.ams.org.ezaccess.libraries.psu.edu/mathscinet/search/publdoc.html?arg3=&amp;co4=AND&amp;co5=AND&amp;co6=AND&amp;co7=AND&amp;dr=all&amp;pg4=ICN&amp;pg5=ALLF&amp;pg6=MR&amp;pg7=ALLF&amp;pg8=ET&amp;review_format=html&amp;s4=Plesken%20%20&amp;s5=six%20dimensional%20case.%20&amp;s6=&amp;s7=&amp;s8=All&amp;vfpref=html&amp;yearRangeFirst=&amp;yearRangeSecond=&amp;yrop=eq&amp;r=2&amp;mx-pid=407165"><b>R0407165</b><span class="s16"> </span></a><a href="http://www.ams.org.ezaccess.libraries.psu.edu/mathscinet/search/author.html?mrauthid=140300"><span class="s16">Plesken, Wilhelm</span></a></span>; <a href="http://www.ams.org.ezaccess.libraries.psu.edu/mathscinet/search/author.html?mrauthid=140555"><span class="s4">Pohst, Michael</span></a> On maximal finite irreducible subgroups of</p>
+<p class="p10"><span class="s9">GL(<i>n</i>,<i>Z</i>).</span><span class="s8"> </span>I. The five and seven dimensional case. II. The six dimensional case. <a href="http://www.ams.org.ezaccess.libraries.psu.edu/mathscinet/search/journaldoc.html?cn=Bull_Amer_Math_Soc"><span class="s18"><i>Bull. Amer. Math. Soc.</i></span></a> <b>82 </b>(1976), no. 5, 757–758. (Reviewer: Donald Maurer) <a href="http://www.ams.org.ezaccess.libraries.psu.edu/mathscinet/search/mscdoc.html?code=20H15,%2810C30,20C10%29"><span class="s4">20H15 (10C30 20C10)</span></a></p>
+<p class="p8"><br></p>
+<p class="p8"><br></p>
+<p class="p19">—</p>
+<p class="p3">https://en.wikipedia.org/wiki/Fitting_ideal</p>
+<p class="p3">Fitting, Hans (1936), "Die Determinantenideale eines Moduls", Jahresbericht der Deutschen Mathematiker-Vereinigung, 46: 195–228, ISSN 0012-0456</p>
+<p class="p4"><br></p>
+<p class="p4"><br></p>
+<p class="p4"><br></p>
+<p class="p3">For a matrix m <span class="Apple-converted-space">  </span>over a commutative ring, R the Fitting invariant<span class="Apple-converted-space">  </span>are the ideals of R[x] generated by k by k minors pf<span class="Apple-converted-space">  </span>x - m.</p>
+<p class="p3">For a square m, they are invariant<span class="Apple-converted-space">  </span>under conjugation by invertible matrices.</p>
+<p class="p4"><br></p>
+<p class="p4"><br></p>
+<p class="p33">Consider the 2 by 2 matrices over  the integers:</p>
+<p class="p26"><br></p>
+<p class="p33">                1    2                                1      1</p>
+<p class="p33">m1 -=                               m2 = </p>
+<p class="p33">                -3   -1                              -6      -1</p>
+<p class="p26"><br></p>
+<p class="p33">They have the same trace 0  and determinant  5.  They are not similar over Z because they are  the ideal generated by the entries of the eigenvector for m1 is not principal</p>
+<p class="p33">while it is principal for m2.</p>
+<p class="p33">The eigenvector for  m1 is   [1+e, 2] where e^2 = -5. The eigenvector for  m2 is [1+e, 1]. The ideals  is in the ring  Z[e] which is the integers in Q[e].</p>
+<p class="p26"><br></p>
+<p class="p33">On the other hand, any 2 by 2 matrices m1 and m2 over Z are similar iff   GL(2, Z[x])  (x - m1)  GL(2, Z[x])  =  GL(2, Z[x])  (x - m2)  GL(2, Z[x]) .</p>
+<p class="p33">If an entry of   2 by 2 matrix m over Z is 1, then  GL(2, Z[x])  (x - m )  GL(2, Z[x]) = GL(2, Z[x])   diag(1, det(x- m))  GL(2, Z[x]).</p>
+<p class="p33">This is true form = m2. Thus, we cannot get  an entry 1 by multiplying the polynomial matrix C =  x - m1 with invertible matrices over Z[x] on both sides.</p>
+<p class="p33">This gives the negative answer to your question below because the Fitting invariants are  Z[x] and  (x^2+5)Z[x]    for both  m1 and m2.</p>
+<p class="p54"><br></p>
+<p class="p54"><br></p>
+<p class="p4"><br></p>
+<p class="p3">Example with R = Z/4Z:</p>
+<p class="p4"><br></p>
+<p class="p19"><span class="Apple-converted-space">                   </span>0<span class="Apple-converted-space">  </span>2<span class="Apple-converted-space">                                    </span>0 <span class="Apple-converted-space">  </span>2</p>
+<p class="p7">m1 = <span class="Apple-converted-space">                                </span>m2 =</p>
+<p class="p7"><span class="Apple-converted-space">                    </span>2 <span class="Apple-converted-space">  </span>0<span class="Apple-converted-space">                                  </span>2 <span class="Apple-converted-space">  </span>0<span class="Apple-converted-space">         </span></p>
+<p class="p8"><br></p>
+<p class="p7">have the same<span class="Apple-converted-space">  </span>Fitting invariants<span class="Apple-converted-space">  </span>xR + 2R<span class="Apple-converted-space">  </span>and x^2 R but not similar.</p>
+<p class="p8"><br></p>
+<p class="p7">---</p>
+<p class="p7">email to Frisch Nov 17, 2014</p>
+<p class="p5"><span class="s1">Oct 2, 2016 </span>question on matrices over Z[x]</p>
+<p class="p3"><span class="s2">Oct 12, 2016 </span>Is it enough that the fitting ideals of C (as a matrix over Z_(p))</p>
+<p class="p3">are generated by f_1, f_1f_2, f_1f_2f_3, etc?</p>
+<p class="p4"><br></p>
+<p class="p4"><br></p>
+<p class="p55">Dear Leonid!</p>
+<p class="p55">I have a question: if we have a square matrix C with entries in Z[x],</p>
+<p class="p55">and the ideal generated by the matrix entries in Z[x] is (1), can we </p>
+<p class="p55">multiply C by matrices A, B over Z[x] with det(A)=1, det(B)=1 such that</p>
+<p class="p55">D=ACB contains an entry 1? </p>
+<p class="p8"><br></p>
+<p class="p7">Курс высшей алгебры Nauka 1968 <span class="Apple-converted-space">  </span>(9-е изд..<span class="Apple-converted-space">  </span>Kurosh.djvu 7MB</p>
+<p class="p8"><br></p>
+<p class="p7">----</p>
+<p class="p7">stable equivalence - = Nakayama similarity = r-similarity = l-similarity</p>
+<p class="p8"><br></p>
+<p class="p7">Let<span class="Apple-converted-space">  </span>A be a principal ideal ring with 1;<span class="Apple-converted-space">  </span>a, b in A.</p>
+<p class="p7">Equivalent statements:</p>
+<p class="p8"><br></p>
+<p class="p7">p(i)<span class="Apple-converted-space">  </span>A/aA and A/bA<span class="Apple-converted-space">  </span>isomorphic as right A-modules</p>
+<p class="p8"><br></p>
+<p class="p7">(ii) there are<span class="Apple-converted-space">  </span>x, y in A such that <span class="Apple-converted-space">  </span>ax = yb,<span class="Apple-converted-space">  </span>,<span class="Apple-converted-space">    </span>aA + yA = A,<span class="Apple-converted-space">  </span>Ax + Ab = A.</p>
+<p class="p8"><br></p>
+<p class="p8"><br></p>
+<p class="p7">(iii) the 2 by 2 matrices</p>
+<p class="p7">a <span class="Apple-converted-space">  </span>0 <span class="Apple-converted-space">                </span>b<span class="Apple-converted-space">  </span>0</p>
+<p class="p7"><span class="Apple-converted-space">           </span>and</p>
+<p class="p7">0 <span class="Apple-converted-space">  </span>1 <span class="Apple-converted-space">                </span>0<span class="Apple-converted-space">  </span>1</p>
+<p class="p8"><br></p>
+<p class="p7">are equivalent</p>
+<p class="p8"><br></p>
+<p class="p7">(iii)<span class="Apple-converted-space">  </span>enlace 1 by an identity matrix.</p>
+<p class="p8"><br></p>
+<p class="p8"><br></p>
+<p class="p7">(iv) there is a matrix \alpha such that</p>
+<p class="p8"><br></p>
+<p class="p7"><span class="Apple-converted-space">                       </span>a * <span class="Apple-converted-space">                                                        </span>*<span class="Apple-converted-space">    </span>*</p>
+<p class="p7">\alpha <span class="Apple-converted-space">  </span>=<span class="Apple-converted-space">                                  </span>and<span class="Apple-converted-space">  </span>1/ \alpha=</p>
+<p class="p7"><span class="Apple-converted-space">                      </span>*<span class="Apple-converted-space">  </span>* <span class="Apple-converted-space">                                                          </span>*<span class="Apple-converted-space">  </span>b</p>
+<p class="p8"><br></p>
+<p class="p8"><br></p>
+<p class="p7">(i) =&gt; <span class="Apple-converted-space">  </span>(ii).<span class="Apple-converted-space">    </span>Let</p>
+<p class="p8"><br></p>
+<p class="p8"><br></p>
+<p class="p8"><br></p>
+<p class="p8"><br></p>
+<p class="p7"><span class="Apple-converted-space">                       </span>a <span class="Apple-converted-space">  </span>-y <span class="Apple-converted-space">                                                      </span>*<span class="Apple-converted-space">    </span>x</p>
+<p class="p7">\alpha <span class="Apple-converted-space">  </span>=<span class="Apple-converted-space">                                  </span>and<span class="Apple-converted-space">  </span>1/ \alpha=</p>
+<p class="p7"><span class="Apple-converted-space">                      </span>*<span class="Apple-converted-space">  </span>* <span class="Apple-converted-space">                                                          </span>*<span class="Apple-converted-space">  </span>b</p>
+<p class="p8"><br></p>
+<p class="p7">Then <span class="Apple-converted-space">  </span>ax<span class="Apple-converted-space">  </span>- yb = 0 and<span class="Apple-converted-space">  </span>aA + yA = A,<span class="Apple-converted-space">  </span>Ax + Ab = A.</p>
+<p class="p8"><br></p>
+<p class="p41">(i) =&gt; (ii)<span class="Apple-converted-space"> </span></p>
+<p class="p41">Let <span class="Apple-converted-space">  </span>A/aA and A/bA<span class="Apple-converted-space">  </span>isomorphic as right A-modules</p>
+<p class="p41">Let 1 |-&gt;y<span class="Apple-converted-space">  </span>under isomorphism, A/bA -&gt; A/aA<span class="Apple-converted-space">  </span>hence<span class="Apple-converted-space">  </span>b <span class="Apple-converted-space">  </span>|-&gt; yb in aA</p>
+<p class="p41"><span class="Apple-converted-space"> </span>hence <span class="Apple-converted-space">  </span>yb = <span class="Apple-converted-space">  </span>ax. Under the inverse isomorphism<span class="Apple-converted-space">  </span>A/aA -&gt; A/bA , <span class="Apple-converted-space">  </span>y<span class="Apple-converted-space">  </span>|-&gt;1 = 1 +aA, hence<span class="Apple-converted-space">  </span>yA + aA = A.</p>
+<p class="p8"><br></p>
+<p class="p41">Similarly,<span class="Apple-converted-space">  </span>Ax + Ab = A.</p>
+<p class="p8"><br></p>
+<p class="p8"><br></p>
+<p class="p41">(ii)<span class="Apple-converted-space">  </span>=&gt;<span class="Apple-converted-space">  </span>(iii).</p>
+<p class="p41">Let <span class="Apple-converted-space"> </span><span class="s1"> </span>ax = yb,<span class="Apple-converted-space">  </span>,<span class="Apple-converted-space">    </span>aA + yA = A,<span class="Apple-converted-space">  </span>Ax + Ab = A. Find</p>
+<p class="p41">Find <span class="Apple-converted-space">  </span>um vm u', v; in A<span class="Apple-converted-space">  </span>such that</p>
+<p class="p41">ux +vb = 1 and<span class="Apple-converted-space">  </span>xu' -yv' = 1. Then</p>
+<p class="p44"><br></p>
+<p class="p41"><span class="Apple-converted-space">                 </span>a <span class="Apple-converted-space">  </span>-y<span class="Apple-converted-space">                  </span>u' <span class="Apple-converted-space">  </span>x <span class="Apple-converted-space">                                                  </span>1 <span class="Apple-converted-space">                </span>0</p>
+<p class="p41"><span class="Apple-converted-space">                                                               </span>=</p>
+<p class="p41"><span class="s1"><span class="Apple-converted-space">              </span></span> <span class="Apple-converted-space">        </span>u <span class="Apple-converted-space">  </span>v<span class="Apple-converted-space">                  </span>v' <span class="Apple-converted-space">  </span>b <span class="Apple-converted-space">                                                  </span>z<span class="Apple-converted-space">                </span>1</p>
+<p class="p8"><br></p>
+<p class="p7">where <span class="Apple-converted-space">  </span>z = uu' + vv' in A. Now we set</p>
+<p class="p8"><br></p>
+<p class="p7"><span class="Apple-converted-space">                   </span>1 -0 <span class="Apple-converted-space">          </span>a<span class="Apple-converted-space">  </span>-y<span class="Apple-converted-space">              </span>a *</p>
+<p class="p7">\alpha<span class="Apple-converted-space">                                       </span></p>
+<p class="p7"><span class="Apple-converted-space">                  </span>-z <span class="Apple-converted-space">  </span>1<span class="Apple-converted-space">          </span>u<span class="Apple-converted-space">  </span>v <span class="Apple-converted-space">          </span>* <span class="Apple-converted-space">  </span>*.</p>
+<p class="p8"><br></p>
+<p class="p8"><br></p>
+<p class="p8"><br></p>
+<p class="p7">We used that <span class="Apple-converted-space">  </span>\a;pya \beta = I implies <span class="Apple-converted-space">  </span>\beta<span class="Apple-converted-space">  </span>\a;pya = I in our ring A because <span class="Apple-converted-space">  </span>A can be embedded in a division ring.</p>
+<p class="p8"><br></p>
+<p class="p8"><br></p>
+<p class="p8"><br></p>
+<p class="p8"><br></p>
+<p class="p8"><br></p>
+<p class="p7">1+ fg<span class="Apple-converted-space">  </span>is <span class="Apple-converted-space">  </span>stable equivalent to <span class="Apple-converted-space">      </span>1 + gf</p>
+<p class="p8"><br></p>
+<p class="p7"><span class="Apple-converted-space"> </span>fgh<span class="Apple-converted-space">  </span>is <span class="Apple-converted-space">  </span>stable equivalent to<span class="Apple-converted-space">      </span>hgf ???</p>
+<p class="p8"><br></p>
+<p class="p8"><br></p>
+<p class="p8"><br></p>
+<p class="p8"><br></p>
+<p class="p8"><br></p>
+<p class="p8"><br></p>
+</body>
+</html>

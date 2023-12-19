@@ -1,0 +1,28 @@
+This is TeX, Version 3.1415926 (TeX Live 2010) (format=tex 2010.7.21)  28 OCT 2010 08:32
+**testfig
+(./testfig.tex (/usr/local/texlive/2010/../texmf-local/tex/psfig/psfig.tex
+(/usr/local/texlive/2010/../texmf-local/tex/psfig/psfig.sty
+\@unused=\write0
+\fboxrule=\dimen16
+\fboxsep=\dimen17
+\ps@tempdima=\dimen18
+\ps@tempboxa=\box16
+\ps@stream=\read0
+\p@intvaluex=\dimen19
+\p@intvaluey=\dimen20
+
+psfig/tex 1.10-dvips
+))
+\p@renwd=\dimen21
+
+psfig: searching Fig.16.5b.eps for bounding box
+psfig: including Fig.16.5b.eps 
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+[]
+
+\hbox(8.5+0.0)x295.6491
+.\vbox(8.5+0.0)x0.0
+
+[166] )
+Output written on testfig.dvi (1 page, 1272 bytes).

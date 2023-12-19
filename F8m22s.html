@@ -1,0 +1,892 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+
+
+<title>Math 484.2 MT 2</title><meta name="Author" content="Patrick Johnson">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"></head><body>
+<h3>Math 484.2 &nbsp;&nbsp;&nbsp;&nbsp;November 6, 2008 &nbsp;&nbsp;&nbsp;&nbsp;Name: <u>______Patrick Johnson________________</u>
+<br>Midterm 2, &nbsp;&nbsp;&nbsp;&nbsp; 5 problems, 15 points each.</h3>
+
+
+<p> 1. Solve linear programs where all x<sub>i</sub> &gt;=0:
+</p><ul>
+<table style="border-collapse: collapse;" cellspacing="0">
+	<tbody><tr>
+		<td style="padding: 4pt 7pt;">x<sub>1</sub></td>
+		<td style="padding: 4pt 7pt;">x<sub>2</sub></td>
+
+		<td style="padding: 4pt 7pt;">2</td>
+		<td style="padding: 4pt 7pt;">-x<sub>5</sub></td>
+	</tr>
+	<tr>
+		<td style="border: 0.5pt solid ; padding: 4pt 7pt;">1</td>
+		<td style="border: 0.5pt solid ; padding: 4pt 7pt;">2</td>
+
+		<td style="border: 0.5pt solid ; padding: 4pt 7pt;">3</td>
+		<td style="border: 0.5pt solid ; padding: 4pt 7pt;">4</td>
+		<td style="padding: 4pt 7pt;">= x<sub>3</sub></td>
+
+	</tr>
+	<tr>
+		<td style="border: 0.5pt solid ; padding: 4pt 7pt;">1</td>
+
+		<td style="border: 0.5pt solid ; padding: 4pt 7pt;">-2</td>
+		<td style="border: 0.5pt solid ; padding: 4pt 7pt;">0</td>
+		<td style="border: 0.5pt solid ; padding: 4pt 7pt;">-1</td>
+		<td style="padding: 4pt 7pt;">= -x<sub>2</sub></td>
+
+	</tr>
+	<tr>
+
+		<td style="border: 0.5pt solid ; padding: 4pt 7pt;">0</td>
+		<td style="border: 0.5pt solid ; padding: 4pt 7pt;">2</td>
+		<td style="border: 0.5pt solid ; padding: 4pt 7pt;">-3</td>
+		<td style="border: 0.5pt solid ; padding: 4pt 7pt;">0</td>
+		<td style="padding: 4pt 7pt;">→ max</td>
+	</tr>
+
+</tbody></table>
+</ul>
+
+<p style="margin-left: 25px; color: blue;"> Solution: Pivot x<sub>2</sub> to top, then combine into standard form.<br>
+				Standard tableau is feasible, so pivot on the negative entry in the second column .</p>
+<ul>
+<table>
+<tbody><tr>
+<td>
+<table style="border-collapse: collapse;" cellspacing="0">
+
+	<tbody><tr>
+		<td style="padding: 4pt 7pt;">x<sub>1</sub></td>
+		<td style="padding: 4pt 7pt;">x<sub>2</sub></td>
+		<td style="padding: 4pt 7pt;">1</td>
+		<td style="padding: 4pt 7pt;">x<sub>5</sub></td>
+
+	</tr>
+	<tr>
+		<td style="border: 0.5pt solid ; padding: 4pt 7pt;">1</td>
+		<td style="border: 0.5pt solid ; padding: 4pt 7pt;">2</td>
+		<td style="border: 0.5pt solid ; padding: 4pt 7pt;">6</td>
+		<td style="border: 0.5pt solid ; padding: 4pt 7pt;">-4</td>
+		<td style="padding: 4pt 7pt;">= x<sub>3</sub></td>
+
+	</tr>
+	<tr>
+		<td style="border: 0.5pt solid ; padding: 4pt 7pt;">-1</td>
+		<td style="border: 0.5pt solid ; padding: 4pt 7pt;">2</td>
+		<td style="border: 0.5pt solid ; padding: 4pt 7pt;">0</td>
+		<td style="border: 0.5pt solid ; padding: 4pt 7pt;">-1*</td>
+
+		<td style="padding: 4pt 7pt;">= x<sub>2</sub></td>
+
+	</tr>
+	<tr>
+		<td style="border: 0.5pt solid ; padding: 4pt 7pt;">0</td>
+		<td style="border: 0.5pt solid ; padding: 4pt 7pt;">-2</td>
+		<td style="border: 0.5pt solid ; padding: 4pt 7pt;">6</td>
+
+		<td style="border: 0.5pt solid ; padding: 4pt 7pt;">0</td>
+		<td style="padding: 4pt 7pt;">→ min</td>
+	</tr>
+</tbody></table>
+</td>
+<td style="padding: 15pt;">
+<font size="5">→</font>
+</td>
+<td>
+<table style="border-collapse: collapse;" cellspacing="0">
+	<tbody><tr>
+
+		<td style="padding: 4pt 7pt;">x<sub>1</sub></td>
+		<td style="padding: 4pt 7pt;">x<sub>2</sub></td>
+		<td style="padding: 4pt 7pt;">1</td>
+		<td style="padding: 4pt 7pt;">x<sub>2</sub></td>
+	</tr>
+
+	<tr>
+		<td style="border: 0.5pt solid ; padding: 4pt 7pt;">5</td>
+		<td style="border: 0.5pt solid ; padding: 4pt 7pt;">-6</td>
+		<td style="border: 0.5pt solid ; padding: 4pt 7pt;">6</td>
+		<td style="border: 0.5pt solid ; padding: 4pt 7pt;">4</td>
+		<td style="padding: 4pt 7pt;">= x<sub>3</sub></td>
+
+	</tr>
+	<tr>
+		<td style="border: 0.5pt solid ; padding: 4pt 7pt;">-1</td>
+		<td style="border: 0.5pt solid ; padding: 4pt 7pt;">2</td>
+		<td style="border: 0.5pt solid ; padding: 4pt 7pt;">0</td>
+		<td style="border: 0.5pt solid ; padding: 4pt 7pt;">-1</td>
+
+		<td style="padding: 4pt 7pt;">= x<sub>5</sub></td>
+
+	</tr>
+	<tr>
+		<td style="border: 0.5pt solid ; padding: 4pt 7pt;">0</td>
+		<td style="border: 0.5pt solid ; padding: 4pt 7pt;">-2</td>
+		<td style="border: 0.5pt solid ; padding: 4pt 7pt;">6</td>
+
+		<td style="border: 0.5pt solid ; padding: 4pt 7pt;">0</td>
+		<td style="padding: 4pt 7pt;">→ min</td>
+	</tr>
+</tbody></table>
+</td>
+<td style="padding: 15pt;">
+<font size="5">→</font>
+</td>
+<td>
+<table style="border-collapse: collapse;" cellspacing="0">
+	<tbody><tr>
+
+		<td style="padding: 4pt 7pt;">x<sub>1</sub></td>
+		<td style="padding: 4pt 7pt;">x<sub>2</sub></td>
+		<td style="padding: 4pt 7pt;">1</td>
+	</tr>
+	<tr>
+		<td style="border: 0.5pt solid ; padding: 4pt 7pt;">5</td>
+
+		<td style="border: 0.5pt solid ; padding: 4pt 6pt;">-2*</td>
+		<td style="border: 0.5pt solid ; padding: 4pt 7pt;">6</td>
+		<td style="padding: 4pt 7pt;">= x<sub>3</sub></td>
+
+	</tr>
+	<tr>
+		<td style="border: 0.5pt solid ; padding: 4pt 7pt;">-1</td>
+
+		<td style="border: 0.5pt solid ; padding: 4pt 7pt;">1</td>
+		<td style="border: 0.5pt solid ; padding: 4pt 7pt;">0</td>
+		<td style="padding: 4pt 7pt;">= x<sub>5</sub></td>
+
+	</tr>
+	<tr>
+		<td style="border: 0.5pt solid ; padding: 4pt 7pt;">0</td>
+
+		<td style="border: 0.5pt solid ; padding: 4pt 7pt;">-2</td>
+		<td style="border: 0.5pt solid ; padding: 4pt 7pt;">6</td>
+		<td style="padding: 4pt 7pt;">→ min</td>
+	</tr>
+</tbody></table>
+</td>
+</tr>
+<tr>
+<td></td>
+
+<td style="padding: 15pt;">
+<font size="5">→</font>
+</td>
+<td>
+<table style="border-collapse: collapse;" cellspacing="0">
+	<tbody><tr>
+		<td style="padding: 4pt 7pt;">x<sub>1</sub></td>
+		<td style="padding: 4pt 7pt;">x<sub>2</sub></td>
+		<td style="padding: 4pt 7pt;">1</td>
+
+	</tr>
+	<tr>
+		<td style="border: 0.5pt solid ; padding: 4pt 7pt;"><sup>5</sup>/<sub>2</sub></td>
+		<td style="border: 0.5pt solid ; padding: 3pt;">-<sup>1</sup>/<sub>2</sub></td>
+		<td style="border: 0.5pt solid ; padding: 4pt 7pt;">3</td>
+
+		<td style="padding: 4pt 7pt;">= x<sub>3</sub></td>
+
+	</tr>
+	<tr>
+		<td style="border: 0.5pt solid ; padding: 2pt 7pt;"><sup>3</sup>/<sub>2</sub></td>
+		<td style="border: 0.5pt solid ; padding: 4pt 7pt;">-<sup>1</sup>/<sub>2</sub></td>
+
+		<td style="border: 0.5pt solid ; padding: 4pt 7pt;">3	</td>
+		<td style="padding: 4pt 7pt;">= x<sub>5</sub></td>
+
+	</tr>
+	<tr>
+		<td style="border: 0.5pt solid ; padding: 4pt 7pt;">-5</td>
+		<td style="border: 0.5pt solid ; padding: 4pt 7pt;">1</td>
+
+		<td style="border: 0.5pt solid ; padding: 4pt 7pt;">0</td>
+		<td style="padding: 4pt 7pt;">→ min</td>
+	</tr>
+</tbody></table>
+</td><td>[<span style="color: red;">switch</span><br style="color: red;"><span style="color: red;">x</span><sub style="color: red;">2</sub><span style="color: red;">&nbsp;and&nbsp;x</span><sub style="color: red;">3</sub><br style="color: red;"><span style="color: red;">-- Kayla</span><br style="color: red;"><span style="color: red;">&nbsp;Koda<span style="color: rgb(5, 0, 0);"> ]</span></span></td>
+
+<td>
+<br> First column is a bad column, so LP is unbounded
+<br> min → -∞ as x<sub>1</sub> → +∞</td>
+
+</tr>
+</tbody></table>
+</ul>
+
+
+
+
+
+
+<p> 2. Solve linear programs where all x<sub>i</sub> &gt;=0:
+</p><ul>
+<table style="border-collapse: collapse;" cellspacing="0">			<!-- PROBLEM 2-->
+
+	<tbody><tr>
+		<td style="padding: 4pt 7pt;">2x<sub>1</sub></td>
+		<td style="padding: 4pt 7pt;">-x<sub>2</sub></td>
+		<td style="padding: 4pt 7pt;">1</td>
+		<td style="padding: 4pt 7pt;">x<sub>5</sub></td>			
+	</tr>
+
+	<tr>
+		<td style="border: 0.5pt solid ; padding: 4pt 7pt;">1</td>
+		<td style="border: 0.5pt solid ; padding: 4pt 7pt;">-2</td>
+		<td style="border: 0.5pt solid ; padding: 4pt 7pt;">3</td>
+		<td style="border: 0.5pt solid ; padding: 4pt 7pt;">4</td>
+		<td style="padding: 4pt 7pt;">= x<sub>3</sub></td>
+
+	</tr>
+	<tr>
+		<td style="border: 0.5pt solid ; padding: 4pt 7pt;">1</td>
+		<td style="border: 0.5pt solid ; padding: 4pt 7pt;">-2</td>
+		<td style="border: 0.5pt solid ; padding: 4pt 7pt;">0</td>
+		<td style="border: 0.5pt solid ; padding: 4pt 7pt;">-1</td>
+
+		<td style="padding: 4pt 7pt;">= -x<sub>4</sub></td>
+
+	</tr>
+	<tr>
+		<td style="border: 0.5pt solid ; padding: 4pt 7pt;">0</td>
+		<td style="border: 0.5pt solid ; padding: 4pt 7pt;">2</td>
+		<td style="border: 0.5pt solid ; padding: 4pt 7pt;">-3</td>
+
+		<td style="border: 0.5pt solid ; padding: 4pt 7pt;">-2</td>
+		<td style="padding: 4pt 7pt;">→ min</td>
+	</tr>
+</tbody></table>
+</ul>
+
+<p style="margin-left: 25px; color: blue;">Solution: Rearrange tableaux into standard form.  Standard tableaux is feasible with a bad column</p>
+<ul>
+<table>
+<tbody><tr>
+
+<td>
+<table style="border-collapse: collapse;" cellspacing="0">
+	<tbody><tr>
+		<td style="padding: 4pt 7pt;">x<sub>1</sub></td>
+		<td style="padding: 4pt 7pt;">x<sub>2</sub></td>
+		<td style="padding: 4pt 7pt;">x<sub>5</sub></td>			
+		<td style="padding: 4pt 7pt;">1</td>
+
+	</tr>
+	<tr>
+		<td style="border: 0.5pt solid ; padding: 4pt 7pt;">2</td>
+		<td style="border: 0.5pt solid ; padding: 4pt 7pt;">2</td>
+		<td style="border: 0.5pt solid ; padding: 4pt 7pt;">4</td>
+		<td style="border: 0.5pt solid ; padding: 4pt 7pt;">3</td>
+		<td style="padding: 4pt 7pt;">= x<sub>3</sub></td>
+
+	</tr>
+	<tr>
+		<td style="border: 0.5pt solid ; padding: 4pt 7pt;">-2</td>
+		<td style="border: 0.5pt solid ; padding: 4pt 7pt;">2</td>
+		<td style="border: 0.5pt solid ; padding: 4pt 7pt;">1</td>
+		<td style="border: 0.5pt solid ; padding: 4pt 7pt;">0</td>
+
+		<td style="padding: 4pt 7pt;">= x<sub>4</sub></td>
+
+	</tr>
+	<tr>
+		<td style="border: 0.5pt solid ; padding: 4pt 7pt;">0</td>
+		<td style="border: 0.5pt solid ; padding: 4pt 7pt;">-2</td>
+		<td style="border: 0.5pt solid ; padding: 4pt 7pt;">-2</td>
+
+		<td style="border: 0.5pt solid ; padding: 4pt 7pt;">-3</td>
+		<td style="padding: 4pt 7pt;">→ min</td>
+	</tr>
+</tbody></table>
+</td><td>
+Second and third columns are bad columns
+<br> min → -∞ as x<sub>2</sub> or x<sub>5</sub> → +∞
+
+</td>
+
+
+</tr></tbody></table>
+</ul>
+
+
+
+
+
+
+<p> 3. Solve the following transportation problem </p>
+<ul>
+<table style="border-collapse: collapse;" cellspacing="0">				<!-- PROBLEM 3 -->
+
+	<tbody><tr>
+		<td style="border: 0.5pt solid ; padding: 2pt;"><sup>2</sup>&nbsp;</td>
+		<td style="border: 0.5pt solid ; padding: 2pt;"><sup>5</sup>&nbsp;</td>
+		<td style="border: 0.5pt solid ; padding: 2pt;"><sup>3</sup>&nbsp;</td>
+		<td style="border: 0.5pt solid ; padding: 2pt;"><sup>2</sup>&nbsp;</td>
+		<td style="border: 0.5pt solid ; padding: 2pt;"><sup>1</sup>&nbsp;</td>
+		<td style="border: 0.5pt solid ; padding: 2pt;"><sup>2</sup>&nbsp;</td>
+		<td style="border: 0.5pt solid ; padding: 2pt;"><sup>1</sup>&nbsp;</td>
+		<td style="border: 0.5pt solid ; padding: 2pt;"><sup>2</sup>&nbsp;</td>
+		<td style="border: 0.5pt solid ; padding: 2pt;"><sup>1</sup>&nbsp;</td>
+		<td style="border: 0.5pt solid ; padding: 4pt 7pt;">9</td>
+	</tr>
+
+	<tr>
+		<td style="border: 0.5pt solid ; padding: 2pt;"><sup>1</sup>&nbsp;</td>
+		<td style="border: 0.5pt solid ; padding: 2pt;"><sup>2</sup>&nbsp;</td>
+		<td style="border: 0.5pt solid ; padding: 2pt;"><sup>3</sup>&nbsp;</td>
+		<td style="border: 0.5pt solid ; padding: 2pt;"><sup>1</sup>&nbsp;</td>
+		<td style="border: 0.5pt solid ; padding: 2pt;"><sup>1</sup>&nbsp;</td>
+		<td style="border: 0.5pt solid ; padding: 2pt;"><sup>0</sup>&nbsp;</td>
+		<td style="border: 0.5pt solid ; padding: 2pt;"><sup>1</sup>&nbsp;</td>
+		<td style="border: 0.5pt solid ; padding: 2pt;"><sup>3</sup>&nbsp;</td>
+		<td style="border: 0.5pt solid ; padding: 2pt;"><sup>1</sup>&nbsp;</td>
+		<td style="border: 0.5pt solid ; padding: 4pt 7pt;">8</td>
+	</tr>
+
+	<tr>
+		<td style="border: 0.5pt solid ; padding: 2pt;"><sup>2</sup>&nbsp;</td>
+		<td style="border: 0.5pt solid ; padding: 2pt;"><sup>2</sup>&nbsp;</td>
+		<td style="border: 0.5pt solid ; padding: 2pt;"><sup>1</sup>&nbsp;</td>
+		<td style="border: 0.5pt solid ; padding: 2pt;"><sup>3</sup>&nbsp;</td>
+		<td style="border: 0.5pt solid ; padding: 2pt;"><sup>1</sup>&nbsp;</td>
+		<td style="border: 0.5pt solid ; padding: 2pt;"><sup>1</sup>&nbsp;</td>
+		<td style="border: 0.5pt solid ; padding: 2pt;"><sup>3</sup>&nbsp;</td>
+		<td style="border: 0.5pt solid ; padding: 2pt;"><sup>0</sup>&nbsp;</td>
+		<td style="border: 0.5pt solid ; padding: 2pt;"><sup>2</sup>&nbsp;</td>
+		<td style="border: 0.5pt solid ; padding: 4pt 7pt;">9</td>
+	</tr>
+
+	<tr>
+		<td style="border: 0.5pt solid ; padding: 2pt;"><sup>0</sup>&nbsp;</td>
+		<td style="border: 0.5pt solid ; padding: 2pt;"><sup>1</sup>&nbsp;</td>
+		<td style="border: 0.5pt solid ; padding: 2pt;"><sup>3</sup>&nbsp;</td>
+		<td style="border: 0.5pt solid ; padding: 2pt;"><sup>1</sup>&nbsp;</td>
+		<td style="border: 0.5pt solid ; padding: 2pt;"><sup>2</sup>&nbsp;</td>
+		<td style="border: 0.5pt solid ; padding: 2pt;"><sup>1</sup>&nbsp;</td>
+		<td style="border: 0.5pt solid ; padding: 2pt;"><sup>2</sup>&nbsp;</td>
+		<td style="border: 0.5pt solid ; padding: 2pt;"><sup>3</sup>&nbsp;</td>
+		<td style="border: 0.5pt solid ; padding: 2pt;"><sup>1</sup>&nbsp;</td>
+		<td style="border: 0.5pt solid ; padding: 4pt 7pt;">8</td>
+	</tr>
+	<tr>
+		<td style="border: 0.5pt solid ; padding: 4pt 7pt;">6</td>
+		<td style="border: 0.5pt solid ; padding: 4pt 7pt;">1</td>
+		<td style="border: 0.5pt solid ; padding: 4pt 7pt;">6</td>
+		<td style="border: 0.5pt solid ; padding: 4pt 7pt;">1</td>
+		<td style="border: 0.5pt solid ; padding: 4pt 7pt;">6</td>
+		<td style="border: 0.5pt solid ; padding: 4pt 7pt;">1</td>
+		<td style="border: 0.5pt solid ; padding: 4pt 7pt;">6</td>
+		<td style="border: 0.5pt solid ; padding: 4pt 7pt;">1</td>
+		<td style="border: 0.5pt solid ; padding: 4pt 7pt;">6</td>
+		<td style="border: 0.5pt solid ; padding: 4pt 7pt;"><sub>dem</sub><font size="5">\</font><sup>sup</sup></td>
+	</tr>
+</tbody></table>
+</ul>
+<p style="margin-left: 25px; color: blue;"> Solution: </p>
+
+<ul>
+<table>
+<tbody><tr>
+<td>
+<table style="border-collapse: collapse;" cellspacing="0">			
+	<tbody><tr>
+		<td style="padding: 4pt 7pt;"> </td>
+		<td style="padding: 4pt 7pt;"> 0 </td>
+		<td style="padding: 4pt 7pt;"> 1 </td>
+
+		<td style="padding: 4pt 7pt;"> 1 </td>
+		<td style="padding: 4pt 7pt;"> 1 </td>
+		<td style="padding: 4pt 7pt;"> 1 </td>
+		<td style="padding: 4pt 7pt;"> 0 </td>
+		<td style="padding: 4pt 7pt;"> 1 </td>
+
+		<td style="padding: 4pt 7pt;"> 0 </td>
+		<td style="padding: 4pt 7pt;"> 1 </td>
+		<td style="padding: 4pt 7pt;"> </td>
+	</tr>
+	<tr>
+		<td style="padding: 4pt 7pt;"> 0 </td>
+
+		<td style="border: 0.5pt solid ; padding: 2pt;"><sup>2</sup> (2)&nbsp;</td>
+		<td style="border: 0.5pt solid ; padding: 2pt;"><sup>5</sup> (4)&nbsp;</td>
+		<td style="border: 0.5pt solid ; padding: 2pt;"><sup>3</sup> (2)&nbsp;</td>
+		<td style="border: 0.5pt solid ; padding: 2pt;"><sup>2</sup> (1)&nbsp;</td>
+
+		<td style="border: 0.5pt solid ; padding: 2pt;"><sup>1</sup> 4 </td>
+		<td style="border: 0.5pt solid ; padding: 2pt;"><sup>2</sup> (2)&nbsp;</td>
+		<td style="border: 0.5pt solid ; padding: 2pt;"><sup>1</sup> 3 </td>
+		<td style="border: 0.5pt solid ; padding: 2pt;"><sup>2</sup> (2)&nbsp;</td>
+
+		<td style="border: 0.5pt solid ; padding: 2pt;"><sup>1</sup> 2 &nbsp; </td>
+		<td style="border: 0.5pt solid ; padding: 4pt 7pt;">
+				<strike>9</strike> <strike>5</strike> <strike>3</strike></td>
+	</tr>
+
+	<tr>
+		<td style="padding: 4pt 7pt;"> 0 </td>
+		<td style="border: 0.5pt solid ; padding: 2pt;"><sup>1</sup> (1) </td>
+		<td style="border: 0.5pt solid ; padding: 2pt;"><sup>2</sup> (1) </td>
+		<td style="border: 0.5pt solid ; padding: 2pt;"><sup>3</sup> (2) </td>
+
+		<td style="border: 0.5pt solid ; padding: 2pt;"><sup>1</sup> (0) </td>
+		<td style="border: 0.5pt solid ; padding: 2pt;"><sup>1</sup> (0)&nbsp;</td>
+		<td style="border: 0.5pt solid ; padding: 2pt;"><sup>0</sup> 1</td>
+		<td style="border: 0.5pt solid ; padding: 2pt;"><sup>1</sup> 3 </td>
+
+		<td style="border: 0.5pt solid ; padding: 2pt;"><sup>3</sup> (3)</td>
+		<td style="border: 0.5pt solid ; padding: 2pt;"><sup>1</sup> 4	</td>
+		<td style="border: 0.5pt solid ; padding: 4pt 7pt;">
+			<strike>8</strike> <strike>7</strike> <strike>4</strike></td>
+
+	</tr>
+	<tr>
+		<td style="padding: 4pt 7pt;"> 0 </td>
+		<td style="border: 0.5pt solid ; padding: 2pt;"><sup>2</sup> (2) </td>
+		<td style="border: 0.5pt solid ; padding: 2pt;"><sup>2</sup> (1) </td>
+
+		<td style="border: 0.5pt solid ; padding: 2pt;"><sup>1</sup> 6 </td>
+		<td style="border: 0.5pt solid ; padding: 2pt;"><sup>3</sup> (2) </td>
+		<td style="border: 0.5pt solid ; padding: 2pt;"><sup>1</sup> 2 </td>
+		<td style="border: 0.5pt solid ; padding: 2pt;"><sup>1</sup> (1) </td>
+
+		<td style="border: 0.5pt solid ; padding: 2pt;"><sup>3</sup> (2)&nbsp;</td>
+		<td style="border: 0.5pt solid ; padding: 2pt;"><sup>0</sup> 1 </td>
+		<td style="border: 0.5pt solid ; padding: 2pt;"><sup>2</sup> (1)&nbsp;</td>
+		<td style="border: 0.5pt solid ; padding: 4pt 7pt;"><strike>9</strike> <strike>8</strike> <strike>2</strike></td>
+
+	</tr>
+	<tr>
+		<td style="padding: 4pt 7pt;"> 0 </td>
+		<td style="border: 0.5pt solid ; padding: 2pt;"><sup>0</sup> 6 </td>
+		<td style="border: 0.5pt solid ; padding: 2pt;"><sup>1</sup> 1 </td>
+
+		<td style="border: 0.5pt solid ; padding: 2pt;"><sup>3</sup> (2)</td>
+		<td style="border: 0.5pt solid ; padding: 2pt;"><sup>1</sup> 1 </td>
+		<td style="border: 0.5pt solid ; padding: 2pt;"><sup>2</sup> (1)</td>
+		<td style="border: 0.5pt solid ; padding: 2pt;"><sup>1</sup> (1)</td>
+
+		<td style="border: 0.5pt solid ; padding: 2pt;"><sup>2</sup> (1)</td>
+		<td style="border: 0.5pt solid ; padding: 2pt;"><sup>3</sup> (3)</td>
+		<td style="border: 0.5pt solid ; padding: 2pt;"><sup>1</sup> (0)</td>
+		<td style="border: 0.5pt solid ; padding: 4pt 7pt;"><strike>8</strike> <strike>2</strike> <strike>1</strike></td>
+
+	</tr>
+	<tr>
+		<td style="padding: 4pt 7pt;"> </td>
+		<td style="border: 0.5pt solid ; padding: 4pt 7pt;"><strike>6</strike><br>&nbsp;</td>
+		<td style="border: 0.5pt solid ; padding: 4pt 7pt;"><strike>1</strike><br>&nbsp;</td>
+		<td style="border: 0.5pt solid ; padding: 4pt 7pt;"><strike>6</strike><br>&nbsp;</td>
+		<td style="border: 0.5pt solid ; padding: 4pt 7pt;"><strike>1</strike><br>&nbsp;</td>
+
+		<td style="border: 0.5pt solid ; padding: 4pt 7pt;"><strike>6</strike><br><strike>2</strike></td>
+		<td style="border: 0.5pt solid ; padding: 4pt 7pt;"><strike>1</strike><br>&nbsp;</td>
+		<td style="border: 0.5pt solid ; padding: 4pt 7pt;"><strike>6</strike><br><strike>3</strike></td>
+		<td style="border: 0.5pt solid ; padding: 4pt 7pt;"><strike>1</strike><br>&nbsp;</td>
+		<td style="border: 0.5pt solid ; padding: 4pt 7pt;"><strike>6</strike><br><strike>2</strike></td>
+
+		<td style="border: 0.5pt solid ; padding: 4pt 7pt;"><sub>dem</sub><font size="5">\</font><sup>sup</sup></td>
+	</tr>
+</tbody></table>
+</td>
+<td style="padding: 15pt;">								<br>
+All discrepancies are nonnegative,so solution is optimal				<br>
+min. cost = 1⋅4 + 1⋅3 + 1⋅2 + 0⋅1 + 1⋅3 + 1⋅4 + 1⋅6 
+		+ 1⋅2 + 0⋅1 + 0⋅6 + 1⋅1 + 1⋅1 + 1⋅0	<br>
+
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	 = 4 + 3 + 2 + 0 + 3 + 4 + 6 + 2 + 0 + 0 + 1 + 1 + 0				<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	 = 26										<br>
+											<br>
+Maximum profit for corresponding dual problem:						<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	= 0 + 1 +6 + 1 + 6 + 0 + 6 + 0 + 6 - 0 - 0 - 0 - 0				<br>
+
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	= 26										<br>
+</td>
+</tr>
+</tbody></table>
+</ul>
+
+
+
+
+
+
+
+
+<p> 4. Solve the following transportation problem </p>
+<ul>
+<table style="border-collapse: collapse;" cellspacing="0">			
+	<tbody><tr>
+		<td style="border: 0.5pt solid ; padding: 2pt;"><sup>3</sup>&nbsp;</td>
+		<td style="border: 0.5pt solid ; padding: 2pt;"><sup>1</sup>&nbsp;</td>
+		<td style="border: 0.5pt solid ; padding: 2pt;"><sup>3</sup>&nbsp;</td>
+		<td style="border: 0.5pt solid ; padding: 2pt;"><sup>2</sup>&nbsp;</td>
+
+		<td style="border: 0.5pt solid ; padding: 2pt;"><sup>1</sup>&nbsp;</td>
+		<td style="border: 0.5pt solid ; padding: 2pt;"><sup>2</sup>&nbsp;</td>
+		<td style="border: 0.5pt solid ; padding: 2pt;"><sup>0</sup>&nbsp;</td>
+		<td style="border: 0.5pt solid ; padding: 2pt;"><sup>2</sup>&nbsp;</td>
+		<td style="border: 0.5pt solid ; padding: 2pt;"><sup>1</sup>&nbsp;</td>
+		<td style="border: 0.5pt solid ; padding: 4pt 7pt;">9</td>
+
+	</tr>
+	<tr>
+		<td style="border: 0.5pt solid ; padding: 2pt;"><sup>5</sup>&nbsp;</td>
+		<td style="border: 0.5pt solid ; padding: 2pt;"><sup>1</sup>&nbsp;</td>
+		<td style="border: 0.5pt solid ; padding: 2pt;"><sup>3</sup>&nbsp;</td>
+		<td style="border: 0.5pt solid ; padding: 2pt;"><sup>1</sup>&nbsp;</td>
+		<td style="border: 0.5pt solid ; padding: 2pt;"><sup>1</sup>&nbsp;</td>
+
+		<td style="border: 0.5pt solid ; padding: 2pt;"><sup>5</sup>&nbsp;</td>
+		<td style="border: 0.5pt solid ; padding: 2pt;"><sup>1</sup>&nbsp;</td>
+		<td style="border: 0.5pt solid ; padding: 2pt;"><sup>3</sup>&nbsp;</td>
+		<td style="border: 0.5pt solid ; padding: 2pt;"><sup>1</sup>&nbsp;</td>
+		<td style="border: 0.5pt solid ; padding: 4pt 7pt;">8</td>
+	</tr>
+
+	<tr>
+		<td style="border: 0.5pt solid ; padding: 2pt;"><sup>2</sup>&nbsp;</td>
+		<td style="border: 0.5pt solid ; padding: 2pt;"><sup>2</sup>&nbsp;</td>
+		<td style="border: 0.5pt solid ; padding: 2pt;"><sup>0</sup>&nbsp;</td>
+		<td style="border: 0.5pt solid ; padding: 2pt;"><sup>3</sup>&nbsp;</td>
+		<td style="border: 0.5pt solid ; padding: 2pt;"><sup>1</sup>&nbsp;</td>
+
+		<td style="border: 0.5pt solid ; padding: 2pt;"><sup>1</sup>&nbsp;</td>
+		<td style="border: 0.5pt solid ; padding: 2pt;"><sup>3</sup>&nbsp;</td>
+		<td style="border: 0.5pt solid ; padding: 2pt;"><sup>0</sup>&nbsp;</td>
+		<td style="border: 0.5pt solid ; padding: 2pt;"><sup>2</sup>&nbsp;</td>
+		<td style="border: 0.5pt solid ; padding: 4pt 7pt;">9</td>
+	</tr>
+
+	<tr>
+		<td style="border: 0.5pt solid ; padding: 2pt;"><sup>2</sup>&nbsp;</td>
+		<td style="border: 0.5pt solid ; padding: 2pt;"><sup>3</sup>&nbsp;</td>
+		<td style="border: 0.5pt solid ; padding: 2pt;"><sup>0</sup>&nbsp;</td>
+		<td style="border: 0.5pt solid ; padding: 2pt;"><sup>1</sup>&nbsp;</td>
+		<td style="border: 0.5pt solid ; padding: 2pt;"><sup>2</sup>&nbsp;</td>
+
+		<td style="border: 0.5pt solid ; padding: 2pt;"><sup>1</sup>&nbsp;</td>
+		<td style="border: 0.5pt solid ; padding: 2pt;"><sup>2</sup>&nbsp;</td>
+		<td style="border: 0.5pt solid ; padding: 2pt;"><sup>0</sup>&nbsp;</td>
+		<td style="border: 0.5pt solid ; padding: 2pt;"><sup>2</sup>&nbsp;</td>
+		<td style="border: 0.5pt solid ; padding: 4pt 7pt;">8</td>
+	</tr>
+
+	<tr>
+		<td style="border: 0.5pt solid ; padding: 4pt 7pt;">6</td>
+		<td style="border: 0.5pt solid ; padding: 4pt 7pt;">1</td>
+		<td style="border: 0.5pt solid ; padding: 4pt 7pt;">6</td>
+		<td style="border: 0.5pt solid ; padding: 4pt 7pt;">1</td>
+		<td style="border: 0.5pt solid ; padding: 4pt 7pt;">6</td>
+
+		<td style="border: 0.5pt solid ; padding: 4pt 7pt;">1</td>
+		<td style="border: 0.5pt solid ; padding: 4pt 7pt;">6</td>
+		<td style="border: 0.5pt solid ; padding: 4pt 7pt;">1</td>
+		<td style="border: 0.5pt solid ; padding: 4pt 7pt;">6</td>
+		<td style="border: 0.5pt solid ; padding: 4pt 7pt;"><sub>dem</sub><font size="5">\</font><sup>sup</sup></td>
+
+	</tr>
+</tbody></table>
+</ul>
+<p style="margin-left: 25px; color: blue;"> Solution: </p>
+<ul>
+<table>
+<tbody><tr>
+<td>
+<table style="border-collapse: collapse;" cellspacing="0">			
+	<tbody><tr>
+		<td style="padding: 4pt 7pt;"> </td>
+		<td style="padding: 4pt 7pt;">2</td>
+
+		<td style="padding: 4pt 7pt;">1</td>
+		<td style="padding: 4pt 7pt;">0</td>
+		<td style="padding: 4pt 7pt;">1</td>
+		<td style="padding: 4pt 7pt;">1</td>
+		<td style="padding: 4pt 7pt;">1</td>
+		<td style="padding: 4pt 7pt;">0</td>
+
+		<td style="padding: 4pt 7pt;">0</td>
+		<td style="padding: 4pt 7pt;">1</td>
+		<td style="padding: 4pt 7pt;"> </td>
+	</tr>
+	<tr>
+		<td style="padding: 4pt 7pt;"> 0 </td>
+
+		<td style="border: 0.5pt solid ; padding: 2pt;"><sup>3</sup> (1)&nbsp;</td>
+		<td style="border: 0.5pt solid ; padding: 2pt;"><sup>1</sup> (0)&nbsp;</td>
+		<td style="border: 0.5pt solid ; padding: 2pt;"><sup>3</sup> (3)&nbsp;</td>
+		<td style="border: 0.5pt solid ; padding: 2pt;"><sup>2</sup> (1)&nbsp;</td>
+
+		<td style="border: 0.5pt solid ; padding: 2pt;"><sup>1</sup> 3 </td>
+		<td style="border: 0.5pt solid ; padding: 2pt;"><sup>2</sup> (1)&nbsp;</td>
+		<td style="border: 0.5pt solid ; padding: 2pt;"><sup>0</sup> 6 </td>
+		<td style="border: 0.5pt solid ; padding: 2pt;"><sup>2</sup> (2)&nbsp;</td>
+
+		<td style="border: 0.5pt solid ; padding: 2pt;"><sup>1</sup> (0)&nbsp;</td>
+		<td style="border: 0.5pt solid ; padding: 4pt 7pt;"><strike>9</strike> <strike>3</strike></td>
+	</tr>
+	<tr>
+		<td style="padding: 4pt 7pt;"> 0 </td>
+
+		<td style="border: 0.5pt solid ; padding: 2pt;"><sup>5</sup> (3) </td>
+		<td style="border: 0.5pt solid ; padding: 2pt;"><sup>1</sup> 1	</td>
+		<td style="border: 0.5pt solid ; padding: 2pt;"><sup>3</sup> (3) </td>
+		<td style="border: 0.5pt solid ; padding: 2pt;"><sup>1</sup> (0) </td>
+
+		<td style="border: 0.5pt solid ; padding: 2pt;"><sup>1</sup> 1	</td>
+		<td style="border: 0.5pt solid ; padding: 2pt;"><sup>5</sup> (4) </td>
+		<td style="border: 0.5pt solid ; padding: 2pt;"><sup>1</sup> (1)&nbsp;</td>
+		<td style="border: 0.5pt solid ; padding: 2pt;"><sup>3</sup> (3) </td>
+
+		<td style="border: 0.5pt solid ; padding: 2pt;"><sup>1</sup> 6	</td>
+		<td style="border: 0.5pt solid ; padding: 4pt 7pt;">
+				<strike>8</strike> <strike>7</strike> <strike>1</strike></td>
+	</tr>
+	<tr>
+
+		<td style="padding: 4pt 7pt;"> 0 </td>
+		<td style="border: 0.5pt solid ; padding: 2pt;"><sup>2</sup> 0	</td>
+		<td style="border: 0.5pt solid ; padding: 2pt;"><sup>2</sup> (1)	</td>
+		<td style="border: 0.5pt solid ; padding: 2pt;"><sup>0</sup> 6	</td>
+
+		<td style="border: 0.5pt solid ; padding: 2pt;"><sup>3</sup> (2)	</td>
+		<td style="border: 0.5pt solid ; padding: 2pt;"><sup>1</sup> 2	</td>
+		<td style="border: 0.5pt solid ; padding: 2pt;"><sup>1</sup> 1	</td>
+		<td style="border: 0.5pt solid ; padding: 2pt;"><sup>3</sup> (3)	</td>
+
+		<td style="border: 0.5pt solid ; padding: 2pt;"><sup>0</sup> (1)	</td>
+		<td style="border: 0.5pt solid ; padding: 2pt;"><sup>2</sup> (1)	</td>
+		<td style="border: 0.5pt solid ; padding: 4pt 7pt;">
+				<strike>9</strike> <strike>7</strike> <strike>6</strike></td>
+
+	</tr>
+	<tr>
+		<td style="padding: 4pt 7pt;"> 0 </td>
+		<td style="border: 0.5pt solid ; padding: 2pt;"><sup>2</sup> 6	</td>
+		<td style="border: 0.5pt solid ; padding: 2pt;"><sup>3</sup> (2) </td>
+
+		<td style="border: 0.5pt solid ; padding: 2pt;"><sup>0</sup> (0) </td>
+		<td style="border: 0.5pt solid ; padding: 2pt;"><sup>1</sup> 1	</td>
+		<td style="border: 0.5pt solid ; padding: 2pt;"><sup>2</sup> (1)&nbsp;</td>
+		<td style="border: 0.5pt solid ; padding: 2pt;"><sup>1</sup> (0) </td>
+
+		<td style="border: 0.5pt solid ; padding: 2pt;"><sup>2</sup> (2) </td>
+		<td style="border: 0.5pt solid ; padding: 2pt;"><sup>0</sup> 1	</td>
+		<td style="border: 0.5pt solid ; padding: 2pt;"><sup>2</sup> (1) </td>
+		<td style="border: 0.5pt solid ; padding: 4pt 7pt;">
+
+				<strike>8</strike> <strike>7</strike> <strike>1</strike></td>
+	</tr>
+	<tr>
+		<td style="padding: 4pt 7pt;"> </td>
+		<td style="border: 0.5pt solid ; padding: 4pt 7pt;"><strike>6</strike><br><br>&nbsp;</td>
+
+		<td style="border: 0.5pt solid ; padding: 4pt 7pt;"><strike>1</strike><br><br>&nbsp;</td>
+		<td style="border: 0.5pt solid ; padding: 4pt 7pt;"><strike>6</strike><br><br>&nbsp;</td>
+		<td style="border: 0.5pt solid ; padding: 4pt 7pt;"><strike>1</strike><br><br>&nbsp;</td>
+		<td style="border: 0.5pt solid ; padding: 4pt 7pt;"><strike>6</strike><br>
+							<strike>3</strike><br><strike>2</strike></td>
+		<td style="border: 0.5pt solid ; padding: 4pt 7pt;"><strike>1</strike><br><br>&nbsp;</td>
+
+		<td style="border: 0.5pt solid ; padding: 4pt 7pt;"><strike>6</strike><br><br>&nbsp;</td>
+		<td style="border: 0.5pt solid ; padding: 4pt 7pt;"><strike>1</strike><br><br>&nbsp;</td>
+		<td style="border: 0.5pt solid ; padding: 4pt 7pt;"><strike>6</strike><br><br>&nbsp;</td>
+		<td style="border: 0.5pt solid ; padding: 4pt 7pt;"><sub>dem</sub><font size="5">\</font><sup>sup</sup></td>
+	</tr>
+</tbody></table>
+
+</td>
+<td style="padding: 15pt;">								<br>
+All discrepancies are nonnegative,so solution is optimal				<br>
+min. cost = 1⋅3 + 0⋅6 + 1⋅1 + 1⋅1 + 1⋅6 + 2⋅0 + 0⋅6 
+		+ 1⋅2 + 1⋅1 + 2⋅6 + 1⋅1 + 0⋅1	<br>
+
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	 = 3 + 0 + 1 + 1 + 6 + 0 + 0 + 2 + 1 + 12 + 1 + 0				<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	 = 27										<br>
+											<br>
+Maximum profit for corresponding dual problem:						<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	= 12 + 1 + 0 + 1 + 6 + 1 + 0 + 0 + 6 - 0 - 0 - 0 - 0				<br>
+
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	= 27										<br>
+</td>
+</tr>
+</tbody></table>
+</ul>
+
+
+
+
+
+
+
+
+<p> 5. Solve the following job assignment problem </p>
+<ul>
+<table style="border-collapse: collapse;" cellspacing="0">			<!-- PROBLEM 5-->
+	<tbody><tr>
+		<td style="border: 0.5pt solid ; padding: 4pt 10pt;">1</td>
+		<td style="border: 0.5pt solid ; padding: 4pt 10pt;">2</td>
+		<td style="border: 0.5pt solid ; padding: 4pt 10pt;">3</td>
+		<td style="border: 0.5pt solid ; padding: 4pt 10pt;">4</td>
+		<td style="border: 0.5pt solid ; padding: 4pt 10pt;">2</td>
+	</tr>
+	<tr>
+		<td style="border: 0.5pt solid ; padding: 4pt 10pt;">2</td>
+		<td style="border: 0.5pt solid ; padding: 4pt 10pt;">3</td>
+		<td style="border: 0.5pt solid ; padding: 4pt 10pt;">4</td>
+		<td style="border: 0.5pt solid ; padding: 4pt 10pt;">1</td>
+		<td style="border: 0.5pt solid ; padding: 4pt 10pt;">2</td>
+	</tr>
+	<tr>
+		<td style="border: 0.5pt solid ; padding: 4pt 10pt;">3</td>
+		<td style="border: 0.5pt solid ; padding: 4pt 10pt;">1</td>
+		<td style="border: 0.5pt solid ; padding: 4pt 10pt;">5</td>
+		<td style="border: 0.5pt solid ; padding: 4pt 10pt;">3</td>
+		<td style="border: 0.5pt solid ; padding: 4pt 10pt;">5</td>
+	</tr>
+	<tr>
+		<td style="border: 0.5pt solid ; padding: 4pt 10pt;">1</td>
+		<td style="border: 0.5pt solid ; padding: 4pt 10pt;">3</td>
+		<td style="border: 0.5pt solid ; padding: 4pt 10pt;">4</td>
+		<td style="border: 0.5pt solid ; padding: 4pt 10pt;">0</td>
+		<td style="border: 0.5pt solid ; padding: 4pt 10pt;">1</td>
+	</tr>
+	<tr>
+		<td style="border: 0.5pt solid ; padding: 4pt 10pt;">5</td>
+		<td style="border: 0.5pt solid ; padding: 4pt 10pt;">5</td>
+		<td style="border: 0.5pt solid ; padding: 4pt 10pt;">2</td>
+		<td style="border: 0.5pt solid ; padding: 4pt 10pt;">1</td>
+		<td style="border: 0.5pt solid ; padding: 4pt 10pt;">0</td>
+	</tr>
+</tbody></table>
+</ul>
+<p style="margin-left: 25px; color: blue;"> Solution: </p>
+<ul>
+<table>
+<tbody><tr>
+<td>
+
+<table style="border-collapse: collapse;" cellspacing="0">
+	<tbody><tr>
+		<td style="padding: 4pt 7pt;"> </td>
+		<td style="padding: 4pt 7pt;"> </td>
+		<td style="padding: 4pt 7pt;"> </td>
+		<td style="padding: 4pt 7pt;">-2</td>
+		<td style="padding: 4pt 7pt;"> </td>
+
+		<td style="padding: 4pt 7pt;"> </td>
+	</tr>
+	<tr>
+		<td style="padding: 4pt 7pt;">-1</td>
+		<td style="border: 0.5pt solid ; padding: 4pt 7pt;">1*</td>
+		<td style="border: 0.5pt solid ; padding: 4pt 7pt;">2</td>
+		<td style="border: 0.5pt solid ; padding: 4pt 7pt;">3</td>
+
+		<td style="border: 0.5pt solid ; padding: 4pt 7pt;">4</td>
+		<td style="border: 0.5pt solid ; padding: 4pt 7pt;">2</td>
+	</tr>
+	<tr>
+		<td style="padding: 4pt 7pt;">-1</td>
+		<td style="border: 0.5pt solid ; padding: 4pt 7pt;">2</td>
+		<td style="border: 0.5pt solid ; padding: 4pt 7pt;">3</td>
+
+		<td style="border: 0.5pt solid ; padding: 4pt 7pt;">4*</td>
+		<td style="border: 0.5pt solid ; padding: 4pt 7pt;">1</td>
+		<td style="border: 0.5pt solid ; padding: 4pt 7pt;">2</td>
+	</tr>
+	<tr>
+		<td style="padding: 4pt 7pt;">-1</td>
+		<td style="border: 0.5pt solid ; padding: 4pt 7pt;">3</td>
+
+		<td style="border: 0.5pt solid ; padding: 4pt 7pt;">1*</td>
+		<td style="border: 0.5pt solid ; padding: 4pt 7pt;">5</td>
+		<td style="border: 0.5pt solid ; padding: 4pt 7pt;">3</td>
+		<td style="border: 0.5pt solid ; padding: 4pt 7pt;">5</td>
+	</tr>
+	<tr>
+		<td style="padding: 4pt 7pt;"> </td>		
+		<td style="border: 0.5pt solid ; padding: 4pt 7pt;">1</td>
+
+		<td style="border: 0.5pt solid ; padding: 4pt 7pt;">3</td>
+		<td style="border: 0.5pt solid ; padding: 4pt 7pt;">4</td>
+		<td style="border: 0.5pt solid ; padding: 4pt 7pt;">0*</td>
+		<td style="border: 0.5pt solid ; padding: 4pt 7pt;">1</td>
+	</tr>
+	<tr>
+		<td style="padding: 4pt 7pt;"> </td>
+
+		<td style="border: 0.5pt solid ; padding: 4pt 7pt;">5</td>
+		<td style="border: 0.5pt solid ; padding: 4pt 7pt;">5</td>
+		<td style="border: 0.5pt solid ; padding: 4pt 7pt;">2</td>
+		<td style="border: 0.5pt solid ; padding: 4pt 7pt;">1</td>
+		<td style="border: 0.5pt solid ; padding: 4pt 7pt;">0*</td>
+	</tr>
+
+</tbody></table>
+</td>
+<td style="padding: 8pt;"> → </td>
+<td>
+<table style="border-collapse: collapse;" cellspacing="0">
+	<tbody><tr><td style="padding: 4pt;">&nbsp;</td></tr>
+	<tr>
+		<td style="border: 0.5pt solid ; padding: 4pt 7pt;">0*</td>
+		<td style="border: 0.5pt solid ; padding: 4pt 7pt;">2</td>
+
+		<td style="border: 0.5pt solid ; padding: 4pt 7pt;">0</td>
+		<td style="border: 0.5pt solid ; padding: 4pt 7pt;">3</td>
+		<td style="border: 0.5pt solid ; padding: 4pt 7pt;">1</td>
+	</tr>
+	<tr>
+		<td style="border: 0.5pt solid ; padding: 4pt 7pt;">1</td>
+		<td style="border: 0.5pt solid ; padding: 4pt 7pt;">2</td>
+
+		<td style="border: 0.5pt solid ; padding: 4pt 7pt;">1*</td>
+		<td style="border: 0.5pt solid ; padding: 4pt 7pt;">0</td>
+		<td style="border: 0.5pt solid ; padding: 4pt 7pt;">1</td>
+	</tr>
+	<tr>
+		<td style="border: 0.5pt solid ; padding: 4pt 7pt;">2</td>
+		<td style="border: 0.5pt solid ; padding: 4pt 7pt;">0*</td>
+
+		<td style="border: 0.5pt solid ; padding: 4pt 7pt;">2</td>
+		<td style="border: 0.5pt solid ; padding: 4pt 7pt;">2</td>
+		<td style="border: 0.5pt solid ; padding: 4pt 7pt;">4</td>
+	</tr>
+	<tr>
+		<td style="border: 0.5pt solid ; padding: 4pt 7pt;">1</td>
+		<td style="border: 0.5pt solid ; padding: 4pt 7pt;">3</td>
+
+		<td style="border: 0.5pt solid ; padding: 4pt 7pt;">2</td>
+		<td style="border: 0.5pt solid ; padding: 4pt 7pt;">0*</td>
+		<td style="border: 0.5pt solid ; padding: 4pt 7pt;">1</td>
+	</tr>
+	<tr>
+		<td style="border: 0.5pt solid ; padding: 4pt 7pt;">5</td>
+		<td style="border: 0.5pt solid ; padding: 4pt 7pt;">5</td>
+
+		<td style="border: 0.5pt solid ; padding: 4pt 7pt;">0</td>
+		<td style="border: 0.5pt solid ; padding: 4pt 7pt;">1</td>
+		<td style="border: 0.5pt solid ; padding: 4pt 7pt;">0*</td>
+	</tr>
+</tbody></table>
+</td>
+<td style="padding: 8pt;">
+<br>	The only zeroes in rows 2 and 4 are in the same column ⇒ Zero-sum is not possible
+
+<br>	Sum of one is possible and therefore must be optimal
+<br>
+<br>	∴ minumum = 1 + 4 + 1 + 0 + 0 = 6
+</td>
+</tr>	
+</tbody></table>
+
+
+</ul></body></html>

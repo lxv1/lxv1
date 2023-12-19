@@ -1,0 +1,100 @@
+Date: Tue, 5 Dec 2006 11:12:01 EST
+Subject: Midterm 3 answers
+ 
+Saddle point. Value of game is 5
+Value of game is 9/5. Optimal strategy for row player is [ 4/5, 0, 0, 1/5, 0 
+]T. Optimal strategy for column player is [ 1/5, 4/5, 0, 0, 0, 0,  0 ].
+Value of game is 10/9. Optimal strategy for row player is [ 0, 2/9, 7/9 ]T. 
+Optimal strategy for column player is [ 0, 5/9, 0, 4/9 ].
+Value of game is 41/13. Optimal strategy for row player is [ 6/13, 3/13, 4/13 
+]T. Optimal strategy for column player is [ 3/13, 8/13, 2/ 13, 0, 0, 0, 0, 0 
+].
+Mean = 4.4, midrange = 4.5, central value = 4.5
+ 
+Benjamin Hvostal
+MATH 484 Section 1, Midterm 3
+---------
+Subject: MATH 484 Midterm 3 Section 1 Answers
+Date: Tue, 5 Dec 2006 11:12:32 -0500
+ 
+1.	Saddle point. Value of game is 5
+2.	Value of game is 9/5. Optimal strategy for row player is [ 4/5, 0,
+0, 1/5, 0 ]T. Optimal strategy for column player is [ 1/5, 4/5, 0, 0, 0, 0,
+0 ].
+3.	Value of game is 10/9. Optimal strategy for row player is [ 0, 2/9,
+7/9 ]T. Optimal strategy for column player is [ 0, 5/9, 0, 4/9 ].
+4.	Value of game is 41/13. Optimal strategy for row player is [ 6/13,
+3/13, 4/13 ]T. Optimal strategy for column player is [ 3/13, 8/13, 2/ 13, 0,
+0, 0, 0, 0 ].
+5.	Mean = 4.4, midrange = 4.5, central value = 4.5
+
+ 
+Benjamin Hvostal
+MATH 484 Section 1, Midterm 3
+----------
+Date: Tue, 5 Dec 2006 11:32:11 -0500
+Subject: Math 484 Section 1 Test Answers
+From: "CORY ALLEN BREAM" <cab5013@psu.edu>
+ 
+Number 1
+
+     value of game = 5
+
+Number 2
+
+     value of game = 9/5
+     optimal strategy for row player = [4/5, 0, 0, 1/5, 0]
+     optimal strategy for column player = [1/5, 4/5, 0, 0, 0]
+
+Number 3
+
+     value of game = 10/9
+     optimal strategy for row player = [0, 2/9, 7/9]
+     optimal strategy for column player = [0, 5/9, 0, 4/9]
+
+Number 4
+
+     value of game = 41/13
+     optimal strategy for row player = [6/13, 3/13, 4/13]
+     optimal strategy for column player = [3/13, 8/13, 2/13, 0, 0, 0, 0, 0]
+
+Number 5
+
+     mean = 4.4
+     midrange = 4.5
+     central value (median) = 4.5
+----------
+Date: Tue, 5 Dec 2006 13:17:07 -0500
+Subject: Math 484 Midterm 3 Section 1 Answers
+From: "CORY ALLEN BREAM" <cab5013@psu.edu>
+
+Number 1
+
+  value of game = 5
+  optimal strategy for row player = [0, 0, 1, 0, 0, 0]
+  optimal strategy for column player = [1, 0 ,0 ,0, 0, 0, 0]
+
+Number 2
+
+  value of game = 9/5
+  optimal strategy for row player = [4, 0, 0, 1, 0]/5
+  optimal strategy for column player = [1, 4, 0, 0, 0, 0, 0]/5
+
+Number 3
+
+  value of game = 10/9
+  optimal strategy for row player = [0, 2, 7]/9
+  optimal strategy for column player = [0, 5, 0, 4]/9
+
+Number 4
+
+  value of game = 41/13
+  optimal strategy for row player = [6, 3, 4]/13
+  optimal strategy for column player = [3, 8, 2, 0, 0, 0, 0, 0]/13
+
+Number 5
+
+  mean = 4.4
+  midrange =4.5
+  central value = 4.5
+---------------

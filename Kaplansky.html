@@ -1,0 +1,823 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="1265.21">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 17.0px Helvetica}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+    p.p3 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
+    p.p4 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Arial}
+    p.p5 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times}
+    p.p6 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; min-height: 14.0px}
+    p.p7 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; color: #042eee}
+    p.p8 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Arial; min-height: 14.0px}
+    p.p9 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 15.0px Arial}
+    p.p10 {margin: 0.0px 0.0px 0.0px 0.0px; font: 19.0px Times}
+    p.p11 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 17.0px Arial}
+    p.p12 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; color: #042eee}
+    p.p13 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 17.0px Arial; min-height: 20.0px}
+    p.p14 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; color: #042eee; min-height: 14.0px}
+    p.p15 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 12.0px Arial; min-height: 14.0px}
+    p.p16 {margin: 0.0px 0.0px 0.0px 0.0px; font: 17.0px Arial; min-height: 20.0px}
+    p.p17 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px Times}
+    p.p18 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px Arial}
+    p.p19 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 12.0px Helvetica; min-height: 14.0px}
+    p.p20 {margin: 0.0px 0.0px 0.0px 0.0px; font: 24.0px Times}
+    p.p21 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Arial}
+    p.p22 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Arial; min-height: 16.0px}
+    p.p23 {margin: 0.0px 0.0px 14.9px 0.0px; font: 18.0px Times; min-height: 23.0px}
+    p.p24 {margin: 0.0px 0.0px 0.0px 0.0px; font: 19.0px Times; color: #042eee}
+    p.p25 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 12.0px Times; min-height: 14.0px}
+    p.p26 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px Times; color: #060606}
+    p.p27 {margin: 0.0px 0.0px 12.0px 0.0px; font: 11.0px Times; color: #050505}
+    p.p28 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; color: #030303}
+    p.p29 {margin: 0.0px 0.0px 12.0px 0.0px; font: 12.0px Times; color: #050505; min-height: 14.0px}
+    p.p30 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Arial; color: #050505}
+    p.p31 {margin: 0.0px 0.0px 0.0px 0.0px; font: 17.0px Arial; color: #050505}
+    p.p32 {margin: 0.0px 0.0px 0.0px 0.0px; font: 18.0px Times; min-height: 23.0px}
+    p.p33 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; color: #344ef4}
+    p.p34 {margin: 0.0px 0.0px 12.0px 0.0px; font: 13.0px 'Times New Roman'}
+    p.p35 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px 'Times New Roman'}
+    p.p36 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px 'Times New Roman'}
+    p.p37 {margin: 0.0px 0.0px 0.0px 0.0px; font: 15.0px Times; min-height: 18.0px}
+    p.p38 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Arial; color: #050505; min-height: 14.0px}
+    p.p39 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 12.0px Arial; color: #050505; min-height: 14.0px}
+    p.p40 {margin: 0.0px 0.0px 0.0px 0.0px; font: 19.0px Arial; color: #050505}
+    p.p41 {margin: 0.0px 0.0px 0.0px 0.0px; font: 15.0px Times}
+    p.p42 {margin: 0.0px 0.0px 0.0px 0.0px; font: 16.0px Times}
+    p.p43 {margin: 0.0px 0.0px 0.0px 0.0px; font: 15.0px 'Times New Roman'}
+    p.p44 {margin: 0.0px 0.0px 12.0px 0.0px; font: 15.0px Arial}
+    p.p45 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px 'Apple Symbols'}
+    p.p46 {margin: 0.0px 0.0px 12.0px 0.0px; font: 13.0px Times}
+    p.p47 {margin: 0.0px 0.0px 0.0px 0.0px; font: 15.0px 'Apple Symbols'}
+    p.p48 {margin: 0.0px 0.0px 0.0px 0.0px; font: 15.0px Helvetica}
+    p.p49 {margin: 0.0px 0.0px 0.0px 0.0px; font: 15.0px Arial; min-height: 17.0px}
+    p.p50 {margin: 0.0px 0.0px 0.0px 0.0px; font: 19.0px Helvetica}
+    p.p51 {margin: 0.0px 0.0px 0.0px 0.0px; font: 15.0px Times; color: #042eee}
+    p.p52 {margin: 0.0px 0.0px 12.0px 0.0px; font: 12.0px Times; min-height: 14.0px}
+    p.p53 {margin: 0.0px 0.0px 0.0px 0.0px; font: 17.0px Arial}
+    p.p54 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px Times; min-height: 16.0px}
+    p.p55 {margin: 0.0px 0.0px 0.0px 0.0px; font: 7.0px Times; min-height: 8.0px}
+    p.p56 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times}
+    p.p57 {margin: 0.0px 0.0px 0.0px 0.0px; font: 18.0px Times}
+    p.p58 {margin: 0.0px 0.0px 12.0px 0.0px; font: 15.0px Times}
+    p.p59 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px Times; color: #042eee}
+    span.s1 {font: 12.0px Times}
+    span.s2 {font: 12.0px Arial}
+    span.s3 {text-decoration: underline}
+    span.s4 {text-decoration: underline ; color: #042eee}
+    span.s5 {font: 17.0px Arial; color: #000000}
+    span.s6 {color: #000000}
+    span.s7 {color: #042eee}
+    span.s8 {font: 12.0px 'Lucida Grande'}
+    span.s9 {font: 12.0px Symbol}
+    span.s10 {font: 12.0px Times; text-decoration: underline}
+    span.s11 {font: 15.0px STIXGeneral}
+    span.s12 {font: 15.0px Times}
+    span.s13 {font: 14.0px 'Apple Symbols'}
+    span.s14 {font: 13.0px Times}
+    span.s15 {font: 13.0px STIXGeneral}
+    span.s16 {font: 19.0px Times; text-decoration: underline}
+    span.s17 {color: #2730f3}
+    span.s18 {text-decoration: underline ; color: #2730f3}
+    span.s19 {font: 16.0px Times}
+    span.s20 {font: 12.0px Helvetica}
+    span.s21 {font: 12.0px Arial; color: #000000}
+    span.s22 {font: 12.0px 'Cambria Math'}
+    span.s23 {font: 12.0px Times; color: #042eee}
+    span.s24 {font: 14.0px 'Times New Roman'}
+    span.s25 {font: 12.0px 'Times New Roman'}
+    span.s26 {font: 12.0px 'Apple Symbols'}
+    span.s27 {font: 12.0px 'Arial Unicode MS'}
+    span.s28 {font: 12.0px Times; text-decoration: underline ; color: #042eee}
+    span.s29 {font: 19.0px Times; text-decoration: underline ; color: #2730f3}
+    span.s30 {font: 16.0px Times; text-decoration: underline ; color: #2730f3}
+    span.s31 {color: #272ff1}
+    span.s32 {text-decoration: underline ; color: #272ff1}
+    span.s33 {font: 13.0px Arial}
+    span.s34 {font: 15.0px Arial}
+    span.s35 {font: 18.0px 'Times New Roman'}
+    span.s36 {font: 16.0px 'Times New Roman'}
+    span.s37 {font: 14.0px Arial}
+    span.s38 {font: 15.0px Helvetica}
+    span.s39 {font: 15.0px Times; text-decoration: underline}
+    span.s40 {color: #2337f3}
+    span.s41 {text-decoration: underline ; color: #2337f3}
+    span.s42 {font: 13.0px Symbol}
+    span.s43 {font: 14.0px Helvetica}
+    span.s44 {font: 15.0px Symbol}
+    span.s45 {font: 11.0px Times; vertical-align: -3.0px}
+    span.s46 {font: 12.0px STIXGeneral}
+    span.s47 {font: 14.0px Times; text-decoration: underline}
+    span.s48 {font: 16.0px Symbol}
+    span.s49 {font: 12.0px 'Lucida Grande'; text-decoration: underline}
+    span.s50 {font: 13.0px Times; text-decoration: underline}
+    span.Apple-tab-span {white-space:pre}
+  </style>
+</head>
+<body>
+<p class="p1">Kaplansky.rtf</p>
+<p class="p2"><br></p>
+<p class="p3">see: Smith invariant factors;<span class="Apple-converted-space">  </span>Bezout ring, Prufer rings <span class="Apple-converted-space">  </span>edr,<span class="Apple-converted-space">  </span>Kaplansky problem</p>
+<p class="p2"><br></p>
+<p class="p3">see: principal.rtf,<span class="Apple-converted-space">  </span><span class="s1">Euclid.rtf <span class="Apple-converted-space">  </span></span><span class="s2">GE-rings.rtf<span class="Apple-converted-space"> </span></span></p>
+<p class="p3">similarity.rtf<span class="Apple-converted-space">  </span>similarity_local.rtf ; similarity_integer.rtf, similarity_holomorphic.rtf,<span class="Apple-converted-space">  </span>Kplansky.rtf<span class="Apple-converted-space">  </span>similarity_divisionRing.rtf</p>
+<p class="p2"><br></p>
+<p class="p4"><span class="Apple-converted-space">       </span>when every fin.gen. .module is the direct sum of cyclic modules <span class="Apple-converted-space">    </span>FGC ring<span class="Apple-converted-space"> </span></p>
+<p class="p5">Zbl 0057.01901 Kaplansky, Irving Infinite abelian groups. (English)<span class="Apple-converted-space"> </span></p>
+<p class="p5">(University of Michigan Publications in Mathematics. No. 2.) Ann Arbor: University of Michigan Press V, 91 p. (1954).<span class="Apple-converted-space">  </span>1965<span class="Apple-converted-space">  </span>5th printing<span class="Apple-tab-span">	</span><span class="Apple-converted-space">  </span>Kaplansky8.djvu 1MB. <span class="Apple-converted-space">  </span>MR0233887<span class="Apple-converted-space"> </span></p>
+<p class="p6"><br></p>
+<p class="p7"><span class="s3"><a href="https://commalg.subwiki.org/wiki/Elementary_divisor_ring"><b>Elementary divisor ring - Commalg</b></a></span></p>
+<p class="p5">May 12, 2008 - A commutative unital ring is termed an <i>elementary divisor ring</i> if for every matrix (not necessarily square) with entries in , there exist invertible ...</p>
+<p class="p8"><br></p>
+<p class="p8"><br></p>
+<p class="p9">wiki</p>
+<p class="p8"><br></p>
+<p class="p3">http://en.wikipedia.org/wiki/B%C3%A9zout_domain</p>
+<p class="p3">In mathematics, a Bézout domain is a form of a Prüfer domain. It is an integral domain in which the sum of two principal ideals is again a principal ideal. This means that for every pair of elements a Bézout identity holds, and that every finitely generated ideal is principal.</p>
+<p class="p3"><span class="Apple-converted-space"> </span>Any principal ideal domain (PID) is a Bézout domain, but a Bézout domain need not be a Noetherian ring, so it could have non-finitely generated ideals (which obviously excludes being a PID); if so, it is not a unique factorization domain (UFD), but still is a GCD domain.<span class="Apple-converted-space"> </span></p>
+<p class="p3">The theory of Bézout domains retains many of the properties of PIDs, without requiring the Noetherian property. Bézout domains are named after the French mathematician Étienne Bézout.</p>
+<p class="p2"><br></p>
+<p class="p3">https://en.wikipedia.org/wiki/Principal_ideal_ring</p>
+<p class="p3">If only the finitely generated right ideals of R are principal, then R is called a right Bézout ring. Left Bézout rings are defined similarly. These conditions are studied in domains as Bézout domains.</p>
+<p class="p2"><br></p>
+<p class="p3">invariant factors https://en.wikipedia.org/wiki/Invariant_factor</p>
+<p class="p2"><br></p>
+<p class="p3">Elementary divisors https://en.wikipedia.org/wiki/Elementary_divisors</p>
+<p class="p2"><br></p>
+<p class="p2"><br></p>
+<p class="p3"><a href="https://en.wikipedia.org/wiki/Smith_normal_form">Smith normal form </a>https://en.wikipedia.org/wiki/Smith_normal_form</p>
+<p class="p3">Smith, Henry J. Stephen (1861). "On systems of linear indeterminate equations and congruences". Phil. Trans. R. Soc. Lond. 151 (1): 293–326.<span class="Apple-converted-space">    </span><a href="http://rstl.royalsocietypublishing.org/content/151/293">Smith5.pdf</a></p>
+<p class="p3">K. R. Matthews, <a href="http://www.numbertheory.org/courses/MP274/smith.pdf">Smith normal form</a>. <a href="http://www.numbertheory.org/courses/MP274/">MP274</a>: Linear Algebra, Lecture Notes, University of Queensland, 1991. Matthews3.pdf</p>
+<p class="p8"><br></p>
+<p class="p10"><a href="https://en.wikipedia.org/wiki/Frobenius_normal_form"><b>Frobenius normal form</b></a><b> wiki</b></p>
+<p class="p5">In <a href="https://en.wikipedia.org/wiki/Linear_algebra"><span class="s4">linear algebra</span></a>, the <b>Frobenius normal form</b> or <b>rational canonical form</b> of a <a href="https://en.wikipedia.org/wiki/Square_matrix"><span class="s4">square matrix</span></a> <i>A</i> with entries in a <a href="https://en.wikipedia.org/wiki/Field_%28mathematics%29"><span class="s4">field</span></a> <i>F</i> is a <a href="https://en.wikipedia.org/wiki/Canonical_form"><span class="s4">canonical form</span></a> for <a href="https://en.wikipedia.org/wiki/Matrix_%28mathematics%29"><span class="s4">matrices</span></a> obtained by conjugation by invertible matrices over <i>F</i>.<span class="Apple-converted-space"> </span></p>
+<p class="p5">The form reflects a minimal decomposition of the vector space into subspaces that are cyclic for <i>A</i> (i.e., spanned by some vector and its repeated images under <i>A</i>).</p>
+<p class="p6"><br></p>
+<p class="p4">http://en.wikipedia.org/wiki/Krull_ring</p>
+<p class="p4">A Krull domain is a unique factorization domain if and only if every prime ideal of height one is principal.[1]</p>
+<p class="p6"><br></p>
+<p class="p8"><br></p>
+<p class="p4">https://en.wikipedia.org/wiki/Pr%C3%BCfer_domain</p>
+<p class="p4">A Prüfer domain is a semihereditary integral domain. Equivalently, a Prüfer domain may be defined as a commutative ring without zero divisors in which every non-zero finitely generated ideal is invertible. Many different characterizations of Prüfer domains are known.<span class="Apple-converted-space"> </span></p>
+<p class="p4">Bourbaki lists fourteen of them, (Gilmer 1972) has around forty, and (Fontana, Huckaba &amp; Papick 1997, p. 2) open with nine.</p>
+<p class="p8"><br></p>
+<p class="p8"><br></p>
+<p class="p11">A</p>
+<p class="p12"><span class="s5"><span class="Apple-converted-space"> </span></span><span class="s6"><b>MR3582841</b> <a href="http://www.ams.org.ezaccess.libraries.psu.edu/mathscinet/help/fullitem_help_full.html#pending">Pending</a><span class="Apple-converted-space">  </span><a href="http://www.ams.org.ezaccess.libraries.psu.edu/mathscinet/search/author.html?mrauthid=1107057"><span class="s3">Abdolyousefi, Marjan Sheibani</span></a><a href="http://www.ams.org.ezaccess.libraries.psu.edu/mathscinet/search/institution.html?code=IR-SEMNMS"><span class="s3">(IR-SEMNMS)</span></a>; <a href="http://www.ams.org.ezaccess.libraries.psu.edu/mathscinet/search/author.html?mrauthid=329481"><span class="s3">Chen, Huanyin</span></a><a href="http://www.ams.org.ezaccess.libraries.psu.edu/mathscinet/search/institution.html?code=PRC-HZNU"><span class="s3">(PRC-HZNU)</span></a></span></p>
+<p class="p5">Elementary matrix reduction over J-stable rings. (English summary)<span class="Apple-converted-space">  </span><a href="http://www.ams.org.ezaccess.libraries.psu.edu/mathscinet/search/journaldoc.html?id=1743"><span class="s7"><i>Comm. Algebra</i></span></a> <a href="http://www.ams.org.ezaccess.libraries.psu.edu/mathscinet/search/publications.html?pg1=ISSI&amp;s1=348099&amp;sort=oldest"><span class="s4">45 (2017), no. 5,</span></a> 1983–1995.<span class="Apple-converted-space">  </span><a href="http://www.ams.org.ezaccess.libraries.psu.edu/mathscinet/search/mscdoc.html?code=13F05,%2813E15%29"><span class="s4">13F05 (13E15)</span></a></p>
+<p class="p7"><span class="s3"><a href="http://www.tandfonline.com/doi/abs/10.1080/00927872.2016.1226874"><b>Elementary matrix reduction over J-stable rings</b></a></span></p>
+<p class="p5">MS Abdolyousefi, H Chen - Communications in Algebra, 2017 - Taylor &amp; Francis</p>
+<p class="p5">ABSTRACT A commutative ring R is J-stable provided that R<span class="s8">∕</span> aR has stable range 1 for all<span class="Apple-converted-space"> </span></p>
+<p class="p5">a<span class="s9">∉</span> J (R). A commutative ring R in which every finitely generated ideal principal is called a B<span class="Apple-converted-space"> </span></p>
+<p class="p5">é zout ring. A ring R is an elementary divisor ring provided that every matrix over R admits a</p>
+<p class="p6"><br></p>
+<p class="p7"><span class="s3"><a href="https://arxiv.org/abs/1504.04875"><b>Elementary Matrix Reduction Over Certain Rings</b></a></span></p>
+<p class="p5">MS Abdolyousefi, H Chen - arXiv preprint arXiv:1504.04875, 2015 - arxiv.org</p>
+<p class="p5">Abstract: We explore elementary matrix reduction over certain rings characterized by their<span class="Apple-converted-space"> </span></p>
+<p class="p5">localizations. Let $ R $ be a locally stable ring, we prove that $ R $ is an elementary divisor<span class="Apple-converted-space"> </span></p>
+<p class="p5">ring if and only if $ R $ is a Bezout ring. Elementary matrix reduction over some related</p>
+<p class="p6"><br></p>
+<p class="p5">See Chen</p>
+<p class="p8"><br></p>
+<p class="p8"><br></p>
+<p class="p11">B</p>
+<p class="p13"><br></p>
+<p class="p12"><span class="s3"><a href="https://zbmath.org/?q=an:1349.13019">Zbl 1349.13019</a> <a href="https://zbmath.org/authors/?q=ai:behboodi.mahmood"><span class="s10">Behboodi, M.</span></a></span><span class="s6">; <a href="https://zbmath.org/authors/?q=ai:heidari.s"><span class="s3">Heidari, S.</span></a>; <a href="https://zbmath.org/authors/?q=ai:roointan-isfahani.s"><span class="s3">Roointan-Isfahani, S.</span></a></span></p>
+<p class="p12"><span class="s3"><a href="https://zbmath.org/?q=an:06619820">Commutative rings whose proper ideals are direct sum of completely cyclic modules.</a></span><span class="s6"> <i>(English)</i><span class="Apple-converted-space"> </span></span></p>
+<p class="p12"><span class="s3"><a href="https://zbmath.org/journals/?q=se:00003089">J. Algebra Appl. 15, No. 9, Article ID 1650160, 12 p. (2016).</a></span><span class="s6">MSC:  <a href="https://zbmath.org/classification/?q=cc:13C05"><span class="s3">13C05</span></a> <a href="https://zbmath.org/classification/?q=cc:13E05"><span class="s3">13E05</span></a> <a href="https://zbmath.org/classification/?q=cc:13F10"><span class="s3">13F10</span></a> <a href="https://zbmath.org/classification/?q=cc:13E10"><span class="s3">13E10</span></a> <a href="https://zbmath.org/classification/?q=cc:13H99"><span class="s3">13H99</span></a></span></p>
+<p class="p14"><span class="s3"></span><br></p>
+<p class="p12"><span class="s6"><span class="Apple-converted-space"> </span><a href="https://zbmath.org/?q=an:1300.13009"><span class="s3">Zbl 1300.13009</span></a></span><span class="s3"> B<a href="https://zbmath.org/authors/?q=ai:behboodi.mahmood"><span class="s10">ehboodi, M.</span></a></span><span class="s6"> ; <a href="https://zbmath.org/authors/?q=ai:shojaee.seyed-hossein"><span class="s3">Shojaee, S.H.</span></a></span></p>
+<p class="p12"><span class="s3"><a href="https://zbmath.org/?q=an:06346516">Commutative local rings whose ideals are direct sums of cyclic modules.</a></span><span class="s6"> <i>(English)</i></span></p>
+<p class="p12"><span class="s3"><a href="https://zbmath.org/journals/?q=se:00002425">Algebr. Represent. Theory 17, No. 3, 971-982 (2014).</a></span><span class="s6"> Reviewer: <a href="https://zbmath.org/authors/?q=Frieda+Theron"><span class="s3">Frieda Theron (Potchefstroom)</span></a> MSC:  <a href="https://zbmath.org/classification/?q=cc:13C05"><span class="s3">13C05</span></a> <a href="https://zbmath.org/classification/?q=cc:13H99"><span class="s3">13H99</span></a> <a href="https://zbmath.org/classification/?q=cc:13C13"><span class="s3">13C13</span></a></span></p>
+<p class="p14"><span class="s3"></span><br></p>
+<p class="p12"><span class="s3"><a href="https://zbmath.org/?q=an:1244.13008">Zbl 1244.13008</a> <a href="https://zbmath.org/authors/?q=ai:behboodi.mahmood"><span class="s10">Behboodi, Mahmood</span></a></span><span class="s6"> ; <a href="https://zbmath.org/authors/?q=ai:ghorbani.atefeh"><span class="s3">Ghorbani, Atefeh</span></a>; <a href="https://zbmath.org/authors/?q=ai:moradzadeh-dehkordi.ali"><span class="s3">Moradzadeh-Dehkordi, A.</span></a></span></p>
+<p class="p12"><span class="s3"><a href="https://zbmath.org/?q=an:06022759">Commutative Noetherian local rings whose ideals are direct sums of cyclic modules.</a></span><span class="s6"> <i>(English)</i><span class="Apple-converted-space"> </span></span></p>
+<p class="p12"><span class="s3"><a href="https://zbmath.org/journals/?q=se:00000473">J. Algebra 345, No. 1, 257-265 (2011).</a></span><span class="s6"> Reviewer: <a href="https://zbmath.org/authors/?q=ai:hassanzadeh%2dhafshejani.seyed%2dhamid"><span class="s3">S. H. Hassanzadeh (Recife)</span></a> MSC:  <a href="https://zbmath.org/classification/?q=cc:13C05"><span class="s3">13C05</span></a> <a href="https://zbmath.org/classification/?q=cc:13E05"><span class="s3">13E05</span></a> <a href="https://zbmath.org/classification/?q=cc:13F10"><span class="s3">13F10</span></a> <a href="https://zbmath.org/classification/?q=cc:13H99"><span class="s3">13H99</span></a></span></p>
+<p class="p13"><br></p>
+<p class="p13"><br></p>
+<p class="p3">Zbl 1310.16002 Zabavsky, B.V.; Bilavska, S.I.</p>
+<p class="p3">Decomposition of finitely generated projective modules over Bezout ring. (English)<span class="Apple-converted-space"> </span></p>
+<p class="p3">Mat. Stud. 40, No. 1, 104-107 (2013). MSC:<span class="Apple-converted-space">  </span>16D40 16D25 16U30 R3154355<span class="Apple-converted-space">  </span>Bilavska2.pdf</p>
+<p class="p2"><br></p>
+<p class="p3">Zbl 1302.15020 Bilavska, S.I.; Vasyunyk, I.S. Reduction of a pair of matrices to a special triangular form over a ring of almost stable range 1. (Russian. English summary)<span class="Apple-converted-space">  </span>Mat. Stud. 37, No. 2, 136-141 (2012). MSC:<span class="Apple-converted-space">  </span>15B33 15A21 19B10</p>
+<p class="p3"><span class="Apple-converted-space"> </span>Bilavska3.pdf</p>
+<p class="p2"><br></p>
+<p class="p3">Zbl 1241.16001 Bilavska, S.I.; Zabavsky, B.V.</p>
+<p class="p3">On the structure of maximal non-finitely generated ideals of ring and Cohen’s theorem. (English)<span class="Apple-converted-space">  </span>Bul. Acad. Ştiinţe Repub. Mold., Mat. 2011, No. 1(65), 33-41 (2011).</p>
+<p class="p3">Reviewer: Septimiu Crivei (Cluj-Napoca) MSC:<span class="Apple-converted-space">  </span>16D25 16S15 16D80 16N60<span class="Apple-converted-space"> </span></p>
+<p class="p2"><br></p>
+<p class="p3">Zbl 1209.16008 Bilavs’ka, S.I. ; Zabavs’kyj, B.V.</p>
+<p class="p3">Stable rank of adequate ring. (Ukrainian. English summary)<span class="Apple-converted-space"> </span></p>
+<p class="p3">Mat. Stud. 33, No. 2, 212-214 (2010). MSC:<span class="Apple-converted-space">  </span>16E20 16U30 16S50<span class="Apple-converted-space"> </span></p>
+<p class="p2"><br></p>
+<p class="p3">S. I. Bilavska Bounded elementary divisor domains of stable range 1</p>
+<p class="p3">, Mat. Stud.<span class="Apple-converted-space">  </span>34<span class="Apple-converted-space">  </span>(2010),<span class="Apple-converted-space">  </span>44–48.<span class="Apple-converted-space">  </span>Bilavska.pdf</p>
+<p class="p3">It is proved that any restricted Bezout domain of stable rank 1 in which the Dubrovin</p>
+<p class="p3">condition is satisfied and where a maximal nonprincipal left ideal is an elementary divisor</p>
+<p class="p3">domain.</p>
+<p class="p13"><br></p>
+<p class="p15"><br></p>
+<p class="p3">MR0539854 (80g:13003) Brandal, Willy Commutative rings whose finitely generated modules decompose. Lecture Notes in Mathematics, 723. Springer, Berlin, 1979. 116 pp. ISBN: 3-540-09507-1 (Reviewer: R. A. Wiegand), 13C05 (13F05).<span class="Apple-converted-space"> </span></p>
+<p class="p3">Brandal.djvu. (full answer to Kaplansky problem).<span class="Apple-converted-space"> </span></p>
+<p class="p2"><br></p>
+<p class="p3">MR0466111 (57 #5993) Brandal, Willy; Wiegand, Roger Reduced rings whose finitely generated modules decompose. Comm. Algebra 6 (1978), no. 2, 195–201. (Reviewer: David W. Sharpe), 13C05<span class="Apple-converted-space"> </span></p>
+<p class="p2"><br></p>
+<p class="p3">MR0414543 (54 #2644) Brandal, Willy Constructing Bezout domains. Rocky Mountain J. Math. 6 (1976), no. 3, 383–399. (Reviewer: Johnny A. Johnson), 13G05</p>
+<p class="p16"><br></p>
+<p class="p17">Zbl 0431.13013 Brandal, Willy Conditions for being an FGC domain. (English) <span class="Apple-converted-space">  </span>Pac. J. Math. 94, 1-12 (1981). MSC:<span class="Apple-converted-space">  </span>13E15 13F05 13G05 13C05. <span class="s1"><b>MR0625804</b> <b>(82k:13009)</b></span></p>
+<p class="p18">Abstract<span class="Apple-converted-space">  </span>A domain R is said to be FGC if every finitely generated R-module decomposes into a direct sum of cyclic submodules. The main result is: if R is a domain with quotient field Q, then R is FGC if and only if all of the following three conditions are satisfied:<span class="Apple-converted-space"> </span></p>
+<p class="p18">(1) R is Bezout, (2) Q∕R is an injective R-module, and (3) there does not exist a continuous embedding of βN into spec R relative to the patch topology of spec R.<span class="Apple-converted-space"> </span></p>
+<p class="p18">This result is also true if (3) is replaced: (3′) every nonzero element of R is an element of only finitely many maximal ideals of R. Using entire functions, there exists an example of a domain satisfying (1) and (2), but not satisfying (3).<span class="Apple-converted-space"> </span></p>
+<p class="p18">Also presented are some partial results towards generalizing the main result to commutative rings.</p>
+<p class="p19"><br></p>
+<p class="p19"><br></p>
+<p class="p4">MR2437097 (2009k:47103) Brešar, Matej; Šemrl, Peter An extension of the Gleason-Kahane-Żelazko theorem: a possible approach to Kaplansky's problem. Expo. Math. 26 (2008), no. 3, 269–277. (Reviewer: Alexei Yu. Pirkovskiĭ), 47B48 (16R50 46H05)</p>
+<p class="p2"><br></p>
+<p class="p2"><br></p>
+<p class="p3">MR1200234 (93k:15028) Brown, William C. Matrices over commutative rings. Monographs and Textbooks in Pure and Applied Mathematics, 169. Marcel Dekker, Inc., New York, 1993. viii+281 pp. ISBN: 0-8247-8755-2 (Reviewer: Peter Butkovič), 15A33 (13-01).<span class="Apple-converted-space"> </span></p>
+<p class="p3">Brown.djvu 3MB, see principal.rtf</p>
+<p class="p2"><br></p>
+<p class="p2"><br></p>
+<p class="p2"><br></p>
+<p class="p11">C</p>
+<p class="p13"><br></p>
+<p class="p20"><b>Formalized linear algebra over Elementary Divisor Rings in Coq</b></p>
+<p class="p12"><span class="s3"><a href="https://arxiv.org/find/cs/1/au:+Cano_G/0/1/0/all/0/1">Guillaume Cano</a></span><span class="s6">, <a href="https://arxiv.org/find/cs/1/au:+Cohen_C/0/1/0/all/0/1"><span class="s3">Cyril Cohen</span></a>, <a href="https://arxiv.org/find/cs/1/au:+Denes_M/0/1/0/all/0/1"><span class="s3">Maxime Dénès</span></a>, <a href="https://arxiv.org/find/cs/1/au:+Mortberg_A/0/1/0/all/0/1"><span class="s3">Anders Mörtberg</span></a>, <a href="https://arxiv.org/find/cs/1/au:+Siles_V/0/1/0/all/0/1"><span class="s3">Vincent Siles</span></a></span></p>
+<p class="p5">(Submitted on 27 Jan 2016 (<a href="https://arxiv.org/abs/1601.07472v1"><span class="s4">v1</span></a>), last revised 20 Jun 2016 (this version, v2)) Cano.pdf</p>
+<p class="p5">This paper presents a Coq formalization of linear algebra over elementary divisor rings, that is, rings where every matrix is equivalent to a matrix in Smith normal form. The main results are the formalization that these rings support essential operations of linear algebra, the classification theorem of finitely presented modules over such rings and the uniqueness of the Smith normal form up to multiplication by units.<span class="Apple-converted-space"> </span></p>
+<p class="p5">We present formally verified algorithms computing this normal form on a variety of coefficient structures including Euclidean domains and constructive principal ideal domains. We also study different ways to extend B\'ezout domains in order to be able to compute the Smith normal form of matrices. The extensions we consider are: adequacy (i.e. the existence of a gdco operation), Krull dimension</p>
+<p class="p5"><span class="s11">≤1</span><span class="s12"> </span>and well-founded strict divisibility.</p>
+<p class="p5">Coq implements a program specification and mathematical higher-level language called <i>Gallina</i> that is based on an expressive formal language called the <i>Calculus of Inductive Constructions</i> that itself combines both a higher-order logic and a richly-typed functional programming language. Through a <i>vernacular</i> language of commands, Coq allows:</p>
+<p class="p13"><br></p>
+<p class="p13"><br></p>
+<p class="p21">Zbl 1342.13026<span class="Apple-converted-space">  </span>Chen, Huanyin; Sheibani, Marjan Elementary matrix reduction over Zabavsky rings. (English)<span class="Apple-converted-space"> </span></p>
+<p class="p21">Bull. Korean Math. Soc. 53, No. 1, 195-204 (2016).</p>
+<p class="p21">The authors prove that a Zabavsky ring R is an elementary divisor ring if and only if R is a Bézout ring, thus generalizing many known results.</p>
+<p class="p21">A Zabavsky ring, as defined by the authors, is a commutative ring R in which for any two comaximal elements a,b<span class="s13">∈</span>R, there exists an element y<span class="s13">∈</span>R such that a+by is feckly adequate. An element c<span class="s13">∈</span>R is feckly adequate if for any element a<span class="s13">∈</span>R there exist r,s<span class="s13">∈</span>R such that (1) c≡rs(modJ(R)); (2) rR+aR=R; (3) s ' R+aR≠R for each non-invertible divisor s ' of s.</p>
+<p class="p21">Other properties of commutative rings are studied as well. For example, the authors prove that a Bézout ring R is nearly adequate iff R/J(R) is regular iff R/J(R) is π-regular. All the necessary definitions are included in the paper.</p>
+<p class="p21">Reviewer: Moshe Roitman (Haifa)</p>
+<p class="p22"><br></p>
+<p class="p6"><b></b><br></p>
+<p class="p16"><br></p>
+<p class="p16"><br></p>
+<p class="p19"><br></p>
+<p class="p2"><br></p>
+<p class="p3">MR 0222065 (36 #5117) Cohn, P. M. (1968), "Bezout rings and their subrings", Proc. Cambridge Philos. Soc. 64: 251–264, doi:10.1017/s0305004100042791,<span class="Apple-converted-space"> </span></p>
+<p class="p2"><br></p>
+<p class="p2"><br></p>
+<p class="p11">D</p>
+<p class="p19"><br></p>
+<p class="p5"><span class="s7"><a href="http://www.ams.org.ezaccess.libraries.psu.edu/mathscinet/search/publdoc.html?arg3=&amp;co4=AND&amp;co5=AND&amp;co6=AND&amp;co7=AND&amp;dr=all&amp;pg4=AUCN&amp;pg5=TI&amp;pg6=MR&amp;pg7=ALLF&amp;pg8=ET&amp;review_format=html&amp;s4=Dubrovin%2Cn%2A&amp;s5=&amp;s6=&amp;s7=&amp;s8=All&amp;sort=Newest&amp;vfpref=html&amp;yearRangeFirst=&amp;yearRangeSecond=&amp;yrop=eq&amp;r=21&amp;mx-pid=883674"><b>R0883674</b><span class="s3"> </span></a><a href="http://www.ams.org.ezaccess.libraries.psu.edu/mathscinet/help/fullitem_help_full.html#review"><span class="Apple-converted-space"> </span></a></span> <a href="http://www.ams.org.ezaccess.libraries.psu.edu/mathscinet/search/author.html?mrauthid=60125"><span class="s4">Dubrovin, N. I.</span></a> On rings with elementary divisors. (Russian) <a href="http://www.ams.org.ezaccess.libraries.psu.edu/mathscinet/search/journaldoc.html?id=2173"><span class="s7"><i>Izv. Vyssh. Uchebn. Zaved. Mat.</i></span></a> <a href="http://www.ams.org.ezaccess.libraries.psu.edu/mathscinet/search/publications.html?pg1=ISSI&amp;s1=37026"><span class="s7">1986, </span></a><a href="http://www.ams.org.ezaccess.libraries.psu.edu/mathscinet/search/publications.html?pg1=ISSI&amp;s1=37026&amp;sort=oldest"><span class="s4">no. 11,</span></a> 14–20, 85. (Reviewer: P. M. Cohn) <a href="http://www.ams.org.ezaccess.libraries.psu.edu/mathscinet/search/mscdoc.html?code=16A34"><span class="s4">16A34</span></a></p>
+<p class="p4"><span class="Apple-converted-space"> </span>Zbl 0616.16002 Dubrovin, N.I. Rings with elementary divisors. (English. Russian original)</p>
+<p class="p4">Sov. Math. 30, No. 11, 16-24 (1986); translation from Izv. Vyssh. Uchebn. Zaved., Mat. 1986, No. 11(294), 14-20 (1986). Reviewer: P.M.Cohn MSC:<span class="Apple-converted-space">  </span>16N60 16L30 16P60 16Dxx 16D70 16S50</p>
+<p class="p4">Bourbaki <span class="Apple-converted-space">  </span>Every<span class="Apple-converted-space">  </span>comm PIR is product of PID and local PIRs <span class="Apple-converted-space">  </span>Zariski-Samuel<span class="Apple-converted-space">  </span>vol.1. <span class="Apple-converted-space">     </span></p>
+<p class="p5"><span class="s4"><a href="http://www.mathnet.ru/rus/ivm7647">О кольцах с элементарными делителями</a></span> Н. И. Дубровин <i>Изв. вузов. Матем.</i>, 1986, № 11,  14–20 Dubrovin.pdf</p>
+<p class="p8"><br></p>
+<p class="p3">MR0614814 (82g:16020) Dubrovin, N. I. Principal right ideal rings. (Russian) Izv. Vyssh. Uchebn. Zaved. Mat. 1981, no. 2, 30–37. (Reviewer: P. M. Cohn), 16A40</p>
+<p class="p4">Zbl 0461.16002 Dubrovin, N.I. On principal right ideal rings. (Russian)<span class="Apple-converted-space"> </span></p>
+<p class="p4">Izv. Vyssh. Uchebn. Zaved., Mat. 1981, No.2(225), 30-37 (1981).</p>
+<p class="p5"><span class="s4"><a href="http://www.mathnet.ru/rus/ivm4660">О кольцах главных правых идеалов</a></span> Н. И. Дубровин <i>Изв. вузов. Матем.</i>, 1981, № 2,  30–37<b>.<span class="Apple-converted-space">  </span>Dubrovin4.pdf</b></p>
+<p class="p2"><br></p>
+<p class="p3">MR1076083 (92b:16019) Alajbegović, Jusuf H.; Dubrovin, Nikolai I. Noncommutative Prüfer rings. J. Algebra 135 (1990), no. 1, 165–176. (Reviewer: H. H. Brungs), 16E60 (16D30 16H05 16N60 16P60 16W60)</p>
+<p class="p5"><span class="s4"><a href="http://www.mathnet.ru/rus/sm1352">Некоммутативные прюферовы кольца</a></span> Н. И. Дубровин <i>Матем. сб.</i>, <b>182</b>:9 (1991),  1251–1260.<span class="Apple-converted-space">  </span>Dubrovin3.pdf</p>
+<p class="p2"><br></p>
+<p class="p5"><span class="s7"><a href="http://www.ams.org.ezaccess.libraries.psu.edu/mathscinet/search/publdoc.html?arg3=&amp;co4=AND&amp;co5=AND&amp;co6=AND&amp;co7=AND&amp;dr=all&amp;pg4=AUCN&amp;pg5=TI&amp;pg6=MR&amp;pg7=ALLF&amp;pg8=ET&amp;review_format=html&amp;s4=Dubrovin%2Cn%2A&amp;s5=&amp;s6=&amp;s7=&amp;s8=All&amp;sort=Newest&amp;vfpref=html&amp;yearRangeFirst=&amp;yearRangeSecond=&amp;yrop=eq&amp;r=15&amp;mx-pid=1169372"><b>MR1169372</b><span class="s3"><span class="Apple-converted-space"> </span></span></a><a href="http://www.ams.org.ezaccess.libraries.psu.edu/mathscinet/help/fullitem_help_full.html#review"> </a><a href="http://www.ams.org.ezaccess.libraries.psu.edu/mathscinet/search/author.html?mrauthid=60125"><span class="s3">Dubrovin, N. I.</span></a></span> Noncommutative Krull rings. (Russian) ; <i>translated from </i><a href="http://www.ams.org.ezaccess.libraries.psu.edu/mathscinet/search/journaldoc.html?id=2173"><span class="s7"><i>Izv. Vyssh. Uchebn. Zaved. Mat.</i></span></a> <b>1991, </b><a href="http://www.ams.org.ezaccess.libraries.psu.edu/mathscinet/search/publications.html?pg1=ISSI&amp;s1=113329"><span class="s4">no. 8,</span></a> 13--19<a href="http://www.ams.org.ezaccess.libraries.psu.edu/mathscinet/search/journaldoc.html?id=1375"><span class="s4"> </span><span class="s7"><i>Soviet Math. (Iz. VUZ)</i></span></a> <b>35 </b>(1991), <a href="http://www.ams.org.ezaccess.libraries.psu.edu/mathscinet/search/publications.html?pg1=ISSI&amp;s1=113210&amp;sort=oldest"><span class="s4">no. 8,</span></a> 11–16 (Reviewer: Edmund R. Puczyłowski) <a href="http://www.ams.org.ezaccess.libraries.psu.edu/mathscinet/search/mscdoc.html?code=16H05,%2816K40%29"><span class="s4">16H05 (16K40)</span></a></p>
+<p class="p5"><span class="s4"><a href="http://www.mathnet.ru/rus/ivm5129">Некоммутативные кольца Крулля</a></span> Н. И. Дубровин <i>Изв. вузов. Матем.</i>, 1991, № 8,  13–19. Dubrovin2.pdf</p>
+<p class="p6"><br></p>
+<p class="p5">Н. И. Дубровин, “Проективный предел колец с элементарными делителями”, <i>Матем. сб.</i>, <b>119(161)</b>:1(9) (1982), 89–95</p>
+<p class="p5"><b>Аннотация:</b> В работе рассматриваются проективные пределы областей Безу и областей с элементарными делителями. Доказывается, что проективный предел коммутативных областей с элементарными делителями (при некоторых ограничениях) – область с элементарными делителями.<span class="Apple-converted-space"> </span></p>
+<p class="p5">Библиография: 7 названий.</p>
+<p class="p6"><br></p>
+<p class="p6"><br></p>
+<p class="p12"><span class="s6"><span class="Apple-converted-space"> </span><a href="https://zbmath.org/?q=an:1321.15049"><span class="s3">Zbl 1321.15049</span></a></span><span class="s3"> <a href="https://zbmath.org/authors/?q=ai:duffner.m-graca"><span class="s10">Duffner, M.Graça</span></a></span><span class="s6">; <a href="https://zbmath.org/authors/?q=ai:silva.fernando-conceicao"><span class="s3">Silva, Fernando C.</span></a> <a href="https://zbmath.org/?q=an:06485772"><span class="s3">On the interlacing inequalities for invariant factors.</span></a> <i>(English)</i></span></p>
+<p class="p12"><span class="s3"><a href="https://zbmath.org/journals/?q=se:00001605">Linear Algebra Appl. 486, 443-448 (2015).</a></span><span class="s6"> MSC:  <a href="https://zbmath.org/classification/?q=cc:15B33"><span class="s3">15B33</span></a> <a href="https://zbmath.org/classification/?q=cc:15A83"><span class="s3">15A83</span></a></span></p>
+<p class="p5">Summary: <i>E. Marques de Sá</i> [Linear Algebra Appl. 24, 33–50 (1979; <a href="https://zbmath.org/?q=an:0395.15009"><span class="s4">Zbl 0395.15009</span></a>)] and <i>R. C. Thompson</i> [Linear Algebra Appl. 24, 1–31 (1979; <a href="https://zbmath.org/?q=an:0395.15003"><span class="s4">Zbl 0395.15003</span></a>)] proved that the invariant factors of a matrix over a commutative principal ideal domain and the invariant factors of its submatrices are related by a set of divisibility inequalities, called the interlacing inequalities for invariant factors.</p>
+<p class="p5"><span class="Apple-converted-space"> </span>We extend this result to matrices over elementary divisor duo rings</p>
+<p class="p12"><span class="s6">.<a href="http://www.ams.org.ezaccess.libraries.psu.edu/mathscinet/search/publdoc.html?arg3=&amp;co4=AND&amp;co5=AND&amp;co6=AND&amp;co7=AND&amp;dr=all&amp;pg4=AUCN&amp;pg5=TI&amp;pg6=MR&amp;pg7=ALLF&amp;pg8=ET&amp;review_format=html&amp;s4=&amp;s5=%20On%20the%20interlacing%20inequalities%20for%20invariant%20factors.%20&amp;s6=&amp;s7=&amp;s8=All&amp;sort=Newest&amp;vfpref=html&amp;yearRangeFirst=&amp;yearRangeSecond=&amp;yrop=eq&amp;r=1&amp;mx-pid=3401772"><b>MR3401772</b></a></span></p>
+<p class="p8"><br></p>
+<p class="p8"><br></p>
+<p class="p8"><br></p>
+<p class="p8"><br></p>
+<p class="p8"><br></p>
+<p class="p2"><br></p>
+<p class="p8"><br></p>
+<p class="p11">F</p>
+<p class="p15"><br></p>
+<p class="p4">MR0929431 (89e:13030) Fuchs, László; Shelah, Saharon Kaplansky's problem on valuation rings. Proc. Amer. Math. Soc. 105 (1989), no. 1, 25–30. (Reviewer: J. M. Plotkin), 13L05 (03C60 03E35 13A18)</p>
+<p class="p5">Is every valuation ring<span class="s14"> </span><span class="s15"><i>R</i></span><span class="s14"> </span>the homomorphic image of some valuation domain?</p>
+<p class="p6"><br></p>
+<p class="p6"><br></p>
+<p class="p11">G</p>
+<p class="p23"><b></b><br></p>
+<p class="p6"><br></p>
+<p class="p12"><span class="s3"><a href="https://zbmath.org/?q=an:0927.16030">Zbl 0927.16030</a><span class="Apple-converted-space">  </span><a href="https://zbmath.org/authors/?q=ai:gatalevich.a-i"><span class="s10">Gatalevich, A.I.</span></a></span><span class="s6">; <a href="https://zbmath.org/authors/?q=ai:zabavsky.bogdan-v"><span class="s3">Zabavskij, B.V.</span></a> <a href="https://zbmath.org/?q=an:01240131"><span class="s3">Noncommutative elementary divisor rings.</span></a> <i>(English. Ukrainian original)</i><span class="Apple-converted-space"> </span></span></p>
+<p class="p12"><span class="s3"><a href="https://zbmath.org/journals/?q=se:00002186">J. Math. Sci., New York 96, No.2, 3013-3016 (1999); translation from Mat. Metody Fiz.-Mekh. Polya 40, No.4, 86-90 (1997).<span class="s10"></span></a></span></p>
+<p class="p5">Reviewer: V.G.Miladzhanov (Andizhan</p>
+<p class="p5">Gatalevich.pdf</p>
+<p class="p10"><b>Elementary divisor rings</b> have been studied by many authors [2-4]. However, the structure of<span class="Apple-converted-space"> </span></p>
+<p class="p10">these <b>rings</b> in the noncommutative case has not been sufficiently studied. In the present paper<span class="Apple-converted-space"> </span></p>
+<p class="p10">we obtain a description of some new classes of noncommutative <b>elementary divisor</b><span class="Apple-converted-space">  </span>domains.<span class="Apple-converted-space"> </span></p>
+<p class="p10">It is known that the class of elementary divisor domains is contained in the class of Btzout domains.<span class="Apple-converted-space"> </span></p>
+<p class="p10">Therefore we shall regard a ring as a Btzout domain with unit, that is, an integral domain in which every finitely generated ideal is a principal one-sided ideal.</p>
+<p class="p24"><span class="s3"><a href="https://scholar.google.com/scholar?cites=3801860170759997214&amp;as_sdt=5,39&amp;sciodt=0,39&amp;hl=en">Cited by 4</a></span><span class="s6"> <a href="https://scholar.google.com/scholar?q=related:Hgfbo67rwjQJ:scholar.google.com/&amp;hl=en&amp;as_sdt=0,39"><span class="s16">Related articles</span></a> <a href="https://scholar.google.com/scholar?cluster=3801860170759997214&amp;hl=en&amp;as_sdt=0,39"><span class="s16">All 4 versions</span></a> <a href="https://scholar.google.com/scholar?as_q=elementary+divisor+rings&amp;as_epq=&amp;as_oq=&amp;as_eq=&amp;as_occt=title&amp;as_sauthors=&amp;as_publication=&amp;as_ylo=&amp;as_yhi=&amp;hl=en&amp;as_sdt=0%2C39#"><span class="s16">Cite</span></a> <a href="https://scholar.google.com/scholar?as_q=elementary+divisor+rings&amp;as_epq=&amp;as_oq=&amp;as_eq=&amp;as_occt=title&amp;as_sauthors=&amp;as_publication=&amp;as_ylo=&amp;as_yhi=&amp;hl=en&amp;as_sdt=0%2C39#"><span class="s16">Save</span></a></span></p>
+<p class="p13"><br></p>
+<p class="p25"><br></p>
+<p class="p12"><span class="s6"><span class="Apple-converted-space"> </span><a href="https://zbmath.org/?q=an:1318.16005"><span class="s3">Zbl 1318.16005</span></a></span><span class="s3"> <a href="https://zbmath.org/authors/?q=ai:ghorbani.ayaz%7Cghorbani.atefeh%7Cghorbani.ali-a"><span class="s10">Ghorbani, A.</span></a></span><span class="s6">; <a href="https://zbmath.org/authors/?q=ai:esfahani.m-naji"><span class="s3">Naji Esfahani, M.</span></a> <a href="https://zbmath.org/?q=an:06447657"><span class="s3">On noncommutative FGC rings.</span></a> <i>(English)</i></span></p>
+<p class="p12"><span class="s3"><a href="https://zbmath.org/journals/?q=se:00003089">J. Algebra Appl. 14, No. 7, Article ID 1550109, 8 p. (2015).</a></span><span class="s6"> MSC:  <a href="https://zbmath.org/classification/?q=cc:16D70"><span class="s3">16D70</span></a> <a href="https://zbmath.org/classification/?q=cc:16U80"><span class="s3">16U80</span></a> <a href="https://zbmath.org/classification/?q=cc:16P50"><span class="s3">16P50</span></a> <a href="https://zbmath.org/classification/?q=cc:13C05"><span class="s3">13C05</span></a> <a href="https://zbmath.org/classification/?q=cc:13E05"><span class="s3">13E05</span></a> <a href="https://zbmath.org/classification/?q=cc:13F10"><span class="s3">13F10</span></a></span><span class="s3">.<span class="Apple-converted-space"> </span></span></p>
+<p class="p5"><b>MR3339407</b><span class="Apple-converted-space">  </span><a href="http://www.ams.org.ezaccess.libraries.psu.edu/mathscinet/search/author.html?mrauthid=698700"><span class="s4">Ghorbani, A.</span></a><a href="http://www.ams.org.ezaccess.libraries.psu.edu/mathscinet//search/institution.html?code=IR_IUT"><span class="s4">(IR-IUT)</span></a>; <a href="http://www.ams.org.ezaccess.libraries.psu.edu/mathscinet/search/author.html?mrauthid=1110711"><span class="s4">Naji Esfahani, M.</span></a><a href="http://www.ams.org.ezaccess.libraries.psu.edu/mathscinet//search/institution.html?code=IR_IUT"><span class="s4">(IR-IUT)</span></a> On noncommutative FGC rings. (English summary)<span class="Apple-converted-space"> </span></p>
+<p class="p12"><a href="http://www.ams.org.ezaccess.libraries.psu.edu/mathscinet/search/journaldoc.html?cn=J_Algebra_Appl"><i>J. Algebra Appl.</i></a><span class="s6"> <a href="http://www.ams.org.ezaccess.libraries.psu.edu/mathscinet/search/publications.html?pg1=ISSI&amp;s1=331609"><span class="s3">14 (2015), no. 7,</span></a> 1550109, 8 pp.<span class="Apple-converted-space">  </span><a href="http://www.ams.org.ezaccess.libraries.psu.edu/mathscinet/search/mscdoc.html?code=16L30,%2816D70,16P50,16U80%29"><span class="s3">16L30 (16D70 16P50 16U80)</span></a></span></p>
+<p class="p5">A commutative ring is called an FGC ring if finitely generated modules are direct sums of cyclic modules. The theory of commutative FGC rings is well established and there are several characterizations and classifications.<span class="Apple-converted-space"> </span></p>
+<p class="p5">The interest to noncommutative FGC rings can be mainly attributed to the following open problem stated by Kaplansky: Describe the rings in which every one-sided ideal is two-sided and over which every finitely generated<span class="Apple-converted-space"> </span></p>
+<p class="p5">module can be decomposed as a direct sum of cyclic modules.<span class="Apple-converted-space"> </span></p>
+<p class="p5">   The present paper makes some further steps towards a better knowledge on noncommutative FGC rings. One of its main results shows that a local Noetherian ring R<span class="Apple-converted-space">  </span>is FGC if and only if R is a principal ideal ring if and only if <span class="Apple-converted-space"> </span></p>
+<p class="p5">R is a uniserial ring, and if these assertions hold then<span class="Apple-converted-space">  </span>R is a duo ring. The authors also prove that a duo ring<span class="Apple-converted-space">  </span>R</p>
+<p class="p5">is a Noetherian left FGC ring if and only if R is a Noetherian right FGC ring if and only if R is a principal ideal ring.</p>
+<p class="p5">Reviewed by Septimiu Crivei<span class="s4"> <span class="Apple-converted-space"> </span></span></p>
+<p class="p14"><span class="s3"></span><br></p>
+<p class="p3">Giesbrecht M., Heinle A. (2012) A Polynomial-Time Algorithm for the Jacobson Form of a Matrix of Ore Polynomials. In: Gerdt V.P., Koepf W., Mayr E.W., Vorozhtsov E.V. (eds) Computer Algebra in Scientific Computing. CASC 2012. Lecture Notes in Computer Science, vol 7442. Springer, Berlin, Heidelberg</p>
+<p class="p3">We present a new algorithm to compute the Jacobson form of a matrix A of polynomials over the Ore domain F(z)[x;σ,δ]n×n, for a field F. The algorithm produces unimodular U, V and the diagonal Jacobson form J such that UAV = J. It requires time polynomial in degx(A), degz(A) and n. We also present tight bounds on the degrees of entries in U, V and J. The algorithm is probabilistic of the Las Vegas type: we assume we are able to generate random elements of F at unit cost, and will always produces correct output within the expected time. The main idea is that a randomized, unimodular, preconditioning of A will have a Hermite form whose diagonal is equal to that of the Jacobson form. From this the reduction to the Jacobson form is easy. Polynomial-time algorithms for the Hermite form<span class="Apple-converted-space"> </span></p>
+<p class="p14"><span class="s3"></span><br></p>
+<p class="p14"><span class="s3"></span><br></p>
+<p class="p5"><span class="s4"><a href="https://zbmath.org/?q=an:0073.02203">Zbl 0073.02203</a> <a href="https://zbmath.org/authors/?q=ai:gillman.leonard"><span class="s3">Gillman, Leonard</span></a></span>; <a href="https://zbmath.org/authors/?q=ai:henriksen.melvin"><span class="s4">Henriksen, Melvin</span></a> Some remarks about elementary divisor rings. <i>(English)</i><span class="Apple-converted-space">  </span><a href="https://zbmath.org/journals/?q=se:00000744"><span class="s4">Trans. Am. Math. Soc. 82, 362-365 (1956).</span></a><span class="s4">. </span><span class="s17"><b>MR0078979</b></span><span class="s18"> </span><span class="s17"><b>(18,9c)</b></span><span class="Apple-converted-space"> </span></p>
+<p class="p5">Gillman.pdf</p>
+<p class="p26">In this and the following paper <span class="s19">[2],</span>we are concerned with obtaining conditions on a commutative ring <i>S </i>with identity element in order <span class="s12">that </span>every matrix over <i>S </i>can be reduced to an equivalent diagonal matrixf").<span class="Apple-converted-space"> </span></p>
+<p class="p26">Following Kaplansky [4], we call such rings <i>elementary divisor </i>rings. A necessary condi- tion is <span class="s12">that </span><i>S </i>satisfy</p>
+<p class="p26"><span class="s12">F: </span><i>all finitely generated ideals are principal.</i></p>
+<p class="p27"><span class="s1">4. </span><span class="s20">I. </span><span class="s1">Kaplansky, </span><i>Elementary divisors an</i></p>
+<p class="p4">MR0078980 (18,9d) Gillman, Leonard; Henriksen, Melvin Rings of continuous functions in which every finitely generated ideal is principal. Trans. Amer. Math. Soc. 82 (1956), 366–391. (Reviewer: E. A. Michael), 09.3X</p>
+<p class="p4">Gillman4.pdf</p>
+<p class="p28"><span class="Apple-converted-space"> </span>Example 3.4 is of a topological space X such that the ring of continuous functions C(X) is Bezout but not Hermitian. The space X is the complement of a closed half-plane in its Stone–Čech compactification.</p>
+<p class="p29"><br></p>
+<p class="p30"><span class="Apple-converted-space"> </span>MR3451336<span class="Apple-converted-space">  </span>Gómez-Torrecillas, José(E-GRAN-AL); Lobillo, F. J.(E-GRAN-AL); Navarro, Gabriel(E-GRAN-CAI)</p>
+<p class="p30">An isomorphism test for modules over a non-commutative PID. Applications to similarity of Ore polynomials. (English summary)</p>
+<p class="p30">J. Symbolic Comput. 75 (2016), 149–170. 16S36 (16Z05 68W30)</p>
+<p class="p31">This paper presents new interesting theorems and algorithms to decide if two given left modules of finite length over Ore extensions over skew fields are isomorphic. Some restrictions are assumed; in particular, the Ore extension is finitely generated over its center.</p>
+<p class="p31"><span class="Apple-converted-space"> </span>The algorithms also include criteria to decide if two polynomials of Ore extensions are similar. Some examples of Ore extensions over finite fields illustrate the algorithms.</p>
+<p class="p32"><b></b><br></p>
+<p class="p32"><b></b><br></p>
+<p class="p4">MR0665169 (84c:13005) Estes, Dennis R.; Guralnick, Robert M. Module equivalences: local to global when primitive polynomials represent units. J. Algebra 77 (1982), no. 1, 138–157. (Reviewer: J. S. Hsia), 13A99 (10C05 13B99)<span class="Apple-converted-space"> </span></p>
+<p class="p4">Guralnick10.pdf</p>
+<p class="p32"><b></b><br></p>
+<p class="p4">MR0649724 (83e:15011) Guralnick, Robert M. Similarity of matrices over local rings. Linear Algebra Appl. 41 (1981), 161–174. (Reviewer: William H. Gustafson), 15A21 (15A54) <span class="Apple-converted-space"> </span></p>
+<p class="p4">(sr(H(„)) = 1 holomorphic functions in a domain„ in plane).</p>
+<p class="p33"><span class="s21"><span class="Apple-converted-space"> </span></span><span class="s3">Guralnick4.pdf.</span><span class="s6"><span class="Apple-converted-space">   </span></span></p>
+<p class="p32"><b></b><br></p>
+<p class="p12"><span class="s6"><span class="Apple-converted-space"> </span><a href="https://zbmath.org/?q=an:0641.16028"><span class="s3">Zbl 0641.16028</span></a></span><span class="s3"><span class="Apple-converted-space">  </span><a href="https://zbmath.org/authors/?q=ai:guralnick.robert-m"><span class="s10">Guralnick, Robert M.</span></a></span><span class="s6">; <a href="https://zbmath.org/authors/?q=ai:levy.lawrence-s"><span class="s3">Levy, Lawrence S.</span></a></span></p>
+<p class="p5">Presentations of modules when ideals need not be principal. <i>(English)</i></p>
+<p class="p12"><span class="s3"><a href="https://zbmath.org/journals/?q=se:00000446">Ill. J. Math. 32, No.4, 593-653 (1988).</a> </span><span class="s6">MR0955382 (90c:16004)<span class="Apple-converted-space">   </span></span></p>
+<p class="p5">Levy6.pdf</p>
+<p class="p5"><span class="Apple-converted-space"> </span>This paper studies presentations of modules over certain rings Λ. First Λ is described. This is a ring which is finitely generated, as a module, over a commutative Noetherian ring R of Krull dimension at most 1. Moreover Λ is an R-order in a semisimple Artinian ring and Λ is contained in a maximal R-order in A. Such a ring Λ is here called a ring-order algebra. Examples of such ring-order algebras include the usual orders over Dedekind domains in central simple algebras, and (with Λ=R) coordinate rings of affine curves.</p>
+<p class="p5"><span class="Apple-converted-space">   </span>The presentations which the paper studies are surjections f:P<span class="s9">→</span>U with P a projective Λ-module. Two presentations f, g of U by P are equivalent (f<span class="s9">∼</span>g) if there exist automorphisms α, β of P, U, respectively, such that βfα=g. In this language, the elementary divisor theorem says that, for a commutative principal ideal domain Λ=R, any two presentations of U by P are equivalent. One section of this paper leads to a result in this direction when Λ is a noncommutative principal ideal domain; but that result is improved and superseded by a related paper [the authors and C. Odenthal , Proc. Amer. Math. Soc. 103 (1988), no. 4, 1003–1011; see the following review].</p>
+<p class="p5"><span class="Apple-converted-space">   </span>The presentations are given a group structure described next. First, let us fix f, P, U as above. A module Q is in the genus of P, genP, if Q<span class="s22">𝔪≅</span>P<span class="s22">𝔪</span> for all maximal ideals <span class="s22">𝔪</span> of R. Similarly, if g:Q<span class="s9">→</span>V is such that g<span class="s22">𝔪∼</span>f<span class="s22">𝔪</span> for all <span class="s22">𝔪</span>, then g is in the genus of f, genf. If, further, there exists h<span class="s9">∈</span>genf such that f<span class="s9">⊕</span>h<span class="s9">∼</span>g<span class="s9">⊕</span>h then f, g are stably equivalent. The stable equivalence classes [g], with g<span class="s9">∈</span>genf, form a group G(f), in which [f]=0, after imposing the relation [s]=[g]+[h] if f<span class="s9">⊕</span>s<span class="s9">∼</span>g<span class="s9">⊕</span>h. This has a subgroup presf(P,U) consisting of those [g] with Q stably isomorphic to P (viz. P<span class="s9">⊕</span>H<span class="s9">≅</span>Q<span class="s9">⊕</span>H for some H<span class="s9">∈</span>genP) and V stably isomorphic to U.</p>
+<p class="p5"><span class="Apple-converted-space">   </span>This group presf(P,U), which is trivial when Λ is a maximal order, is then studied by means of a Mayer-Vietoris sequence. It is shown to be a homomorphic image of K1(Λ/IΛ) when P is a progenerator and kerf is faithful, where I denotes a conductor ideal from a maximal order to Λ. Consequences of this are then described, with fullest detail in the commutative case. For example, if, as in the integral representation theory case, Λ/IΛ is finite, one deduces that presf(P,U) is finite, with a uniform bound determined by Λ rather than by P or U. This detail fails to be true in the noncommutative case. Many other results and details are described.</p>
+<p class="p5">Reviewed by J. C. Robson</p>
+<p class="p34">From <span class="s23">Guralnick8.pdf<span class="Apple-converted-space">  </span>: </span>The Elementary Divisor Theorem above was proved in [GL '88] for the case that A is module-finite over its center.</p>
+<p class="p6"><br></p>
+<p class="p6"><br></p>
+<p class="p12"><span class="s3"><a href="https://zbmath.org/?q=an:0663.16014">Zbl 0663.16014</a> <span class="Apple-converted-space">  </span><a href="https://zbmath.org/authors/?q=ai:guralnick.robert-m"><span class="s10">Guralnick, Robert M.</span></a></span><span class="s6">; <a href="https://zbmath.org/authors/?q=ai:levy.lawrence-s"><span class="s3">Levy, Lawrence S.</span></a>; <a href="https://zbmath.org/authors/?q=ai:odenthal.charles-j"><span class="s3">Odenthal, Charles</span></a></span></p>
+<p class="p12"><span class="s3"><a href="https://zbmath.org/?q=an:04083846">Elementary divisor theorem for noncommutative PIDs.</a></span><span class="s6"> <i>(English)</i><span class="Apple-converted-space">  </span><a href="https://zbmath.org/journals/?q=se:00000623"><span class="s3">Proc. Am. Math. Soc. 103, No.4, 1003-1011 (1988).</span></a></span></p>
+<p class="p5">Reviewer: <a href="https://zbmath.org/authors/?q=ai:brungs.hans%2dheinrich"><span class="s4">H.-H.Brungs</span></a> MSC:  <a href="https://zbmath.org/classification/?q=cc:16Gxx"><span class="s4">16Gxx</span></a> <a href="https://zbmath.org/classification/?q=cc:16S50"><span class="s4">16S50</span></a> <a href="https://zbmath.org/classification/?q=cc:15A30"><span class="s4">15A30</span></a> <a href="https://zbmath.org/classification/?q=cc:16U30"><span class="s4">16U30</span></a> <a href="https://zbmath.org/classification/?q=cc:15A21"><span class="s4">15A21</span></a> <a href="https://zbmath.org/classification/?q=cc:15A72"><span class="s4">15A72</span></a><span class="s4">.</span><span class="s7"> . </span><b>MR0954973</b> <b>(90c:16005) Robson</b></p>
+<p class="p12">Guralnick8.pdf <span class="Apple-converted-space">  </span><a href="https://scholar.google.com/scholar?cites=2504843871509556864&amp;as_sdt=5,39&amp;sciodt=0,39&amp;hl=en"><span class="s3">Cited by 13</span></a><span class="s6"><span class="Apple-converted-space"> </span></span></p>
+<p class="p35">ABSTRACT. We prove that, over a PID, if two matrices A and B have the same size, present isomorphic modules and have rank &gt; 2, then A is equivalent to B.<span class="Apple-converted-space"> </span></p>
+<p class="p35">This answers a question raised by Nakayama in 1938. Our solution makes use of a number of facts about the algebraic K-theory of noetherian rings.</p>
+<p class="p36"><span class="s24">p. 1003 </span><span class="s25">It was apparently well known that additional invariants are needed, even in the </span>case of 1 x 1 matrices. For explicit examples, see [LR '74, 4.6, §5] and [GL '88]. <span class="Apple-converted-space">  </span>cf, Levy5.pdf<span class="Apple-converted-space">    </span>and <span class="s1">Levy6.pdf</span></p>
+<p class="p5">p.10031004 rank = # nonzero entries in a diagonal form/</p>
+<p class="p37"><br></p>
+<p class="p37"><br></p>
+<p class="p6"><br></p>
+<p class="p5"><b>MR0656440</b> <b>(83f:16037)</b> <a href="http://www.ams.org.ezaccess.libraries.psu.edu/mathscinet/search/author.html?mrauthid=78455"><span class="s4">Guralnick, Robert M.</span></a> Matrix equivalence and isomorphism of modules.<span class="Apple-converted-space"> </span></p>
+<p class="p5"><span class="s7"><a href="http://www.ams.org.ezaccess.libraries.psu.edu/mathscinet/search/journaldoc.html?journalName=Linear%20Algebra%20Appl."><i>Linear Algebra Appl.</i></a></span> <b>43 </b>(1982), 125–136.</p>
+<p class="p5">Guralnick9.pdf<span class="Apple-converted-space">    </span><a href="https://scholar.google.com/scholar?cites=9163810597400030750&amp;as_sdt=5,39&amp;sciodt=0,39&amp;hl=en"><span class="s4">Cited by 20</span></a></p>
+<p class="p5"><span class="Apple-converted-space"> </span>If two n×m matrices A, B over a (not necessarily commutative) ring R are equivalent, then they determine maps Rm<span class="s9">→</span>Rn that have isomorphic cokernels. The converse is true for R a field (or, more generally, a principal ideal domain), but false in general. The author shows here that the converse is true for rings R with 1 in the stable range of Rm (=the set of m×m matrices over R) and Rn.<span class="Apple-converted-space"> </span></p>
+<p class="p5">This class of rings includes the semiperfect rings and the module-finite algebras over commutative rings of dimension zero, among others. A closely related theorem was obtained by R. B. Warfield, Jr. [Comm. Algebra 6 (1978), no. 17, 1811–1828; MR0508083].</p>
+<p class="p5"><span class="Apple-converted-space">   </span>Now consider a module-finite algebra S over a commutative local Noetherian ring R with maximal ideal P. Let M and N be finitely generated S-modules. The author shows first that M<span class="s9">≅</span>N if either M̂ <span class="s9">≅</span>N̂<span class="Apple-converted-space">  </span>as S̃ -modules (where<span class="Apple-converted-space">  </span>̂<span class="Apple-converted-space">  </span>denotes P-adic completion) or M/PeM<span class="s9">≅</span>N/PeN for sufficiently large e.<span class="Apple-converted-space"> </span></p>
+<p class="p5">This improves a result of I. Reiner [Canad. J. Math. 31 (1979), no. 4, 808–811; MR0540906] and gives a new proof of a theorem of K. R. Goodearl and Warfield [Math. Ann. 233 (1976), no. 2, 157–168; MR0412230]. The author then shows that M<span class="s9">≅</span>N if M(t)<span class="s9">≅</span>N(t) for some finite t.</p>
+<p class="p5"><span class="Apple-converted-space">   </span>The ring R is said to have the equivalence property if given block matrices</p>
+<p class="p6"><br></p>
+<p class="p5">A=<span class="s9">⎛⎝⎜⎜</span>α110<span class="s26">⋱</span> 0αkk<span class="s9">⎞⎠⎟⎟</span>,B=<span class="s9">⎛⎝⎜⎜⎜</span>α110<span class="s26">⋱</span> αijαkk<span class="s9">⎞⎠⎟⎟⎟</span></p>
+<p class="p6"><br></p>
+<p class="p5">that are equivalent, then the equivalence can be effected by block upper triangular matrices with identity matrices in the diagonal blocks. R has the extension property if given a finitely presented R-module M with a chain of submodules 0<span class="s9">⊂</span>M0<span class="s9">⊂</span><span class="s27">⋯⊂</span>Mk=M such that M<span class="s9">≅⊕</span>ki=1Mi/Mi−1, it follows that each Mi is a direct summand of M.<span class="Apple-converted-space"> </span></p>
+<p class="p5">It is shown that the extension property implies the equivalence property for Artinian rings, and that semisimple Artinian rings have the equivalence property. Both properties hold for module-finite algebras over commutative rings, as well as for Artinian principal ideal rings.</p>
+<p class="p5"><span class="Apple-converted-space">   </span>The paper concludes with a discussion of the similarity property, defined analogously to the equivalence property. This property is shown to hold for module-finite algebras over commutative rings.</p>
+<p class="p5">Reviewed by William H. Gustafson</p>
+<p class="p5">ABSTRACT</p>
+<p class="p5">It is well known that if A and B are nX m matrices over a ring R, then cokerA - coker B does not imply A and B are equivalent. An elementary proof is given that the implication does hold if 1 is in the stable range of R.<span class="Apple-converted-space"> </span></p>
+<p class="p5">Furthermore, for certain R (including commutative rings), if A is block diagonal and B is block upper triangular with the same diagonal blocks as A, then coker A = coker B implies A and B are equivalent under a special equivalence.<span class="Apple-converted-space"> </span></p>
+<p class="p5">This extends results of Roth and Gustafson. As a corollary, a theorem on decomposition of modules is obtained.</p>
+<p class="p38"><br></p>
+<p class="p11">H</p>
+<p class="p39"><br></p>
+<p class="p10"><span class="Apple-converted-space">      </span><b>MR0379574</b> <b>(52 #479)</b><span class="Apple-converted-space">  </span><span class="s18">Henriksen, Melvin</span> On a class of regular rings that are elementary divisor rings.<span class="Apple-converted-space">  </span><span class="s17"><i>Arch. Math. (Basel)</i></span> <b>24 </b>(1973), 133--141.<span class="Apple-converted-space">  </span><span class="s18">16A30</span> A reg., GL =Um but sr(A) &gt;1. (Gillman)<span class="Apple-converted-space"> </span></p>
+<p class="p40">Reviewed by Oswaldo Lezama. <a href="https://zbmath.org/?q=an:0257.16015"><span class="s28">Zbl 0257.16015</span></a><span class="s28"><span class="Apple-converted-space">  </span></span><span class="s29">Henriksen.pdf</span></p>
+<p class="p8"><br></p>
+<p class="p12"><span class="s6"><span class="Apple-converted-space"> </span><a href="https://zbmath.org/?q=an:0073.02301"><span class="s3">Zbl 0073.02301</span></a></span><span class="s3"> <a href="https://zbmath.org/authors/?q=ai:henriksen.melvin"><span class="s10">Henriksen, Melvin</span></a></span><span class="s6"> <a href="https://zbmath.org/?q=an:03121685"><span class="s3">Some remarks on elementary divisor rings. II.</span></a> <i>(English)</i> <a href="https://zbmath.org/journals/?q=se:00000592"><span class="s3">Mich. Math. J. 3, 159-163 (1956).</span></a></span></p>
+<p class="p5"><span class="s30">Henriksen2.pdf<span class="Apple-converted-space">  </span></span><b>MR0092772</b> <b>(19,1155i)</b></p>
+<p class="p5"><b><span class="Apple-converted-space"> </span>This paper continues the investigations of Helmer [Bull. Amer. Math. Soc. 49 (1943), 225–236; MR0007744], Kaplansky [Trans. Amer. Math. Soc. 66 (1949), 464–491; MR0031470], and the author jointly with the reviewer [ibid. 82 (1956), 362–365, 366–391; MR0078980]. A commutative ring S with identity is called an elementary divisor (resp. Hermite) ring if for every matrix A over S there exist nonsingular P,Q such that PAQ (resp. AQ) is diagonal (resp. triangular). The main results are: (1) If all finitely generated ideals in S are principal, and if the Perlis-Jacobson radical R contains a prime ideal of S then S is an Hermite ring. (2) An Hermite ring S is an elementary divisor ring if and only if S/R is an elementary divisor ring. (3) If S is an Hermite ring and every element not in R is contained in only finitely many maximal ideals, then S is an elementary divisor ring Next, an example is given of an integral domain that is an elementary divisor ring but is not adequate (in the sense of Helmer). Finally, some open problems are stated.</b></p>
+<p class="p5"><b>Reviewed by L. Gillman</b></p>
+<p class="p8"><br></p>
+<p class="p11">I</p>
+<p class="p15"><br></p>
+<p class="p4">MR1694606 (2000c:20051) Ivanov, S. V. An asphericity conjecture and Kaplansky problem on zero divisors. J. Algebra 216 (1999), no. 1, 13–19. (Reviewer: William A. Bogley), 20F05 (57M07)</p>
+<p class="p8"><br></p>
+<p class="p8"><br></p>
+<p class="p12"><span class="s6"><span class="Apple-converted-space"> </span><a href="https://zbmath.org/?q=an:1042.13005"><span class="s3">Zbl 1042.13005</span></a></span><span class="s3"><span class="Apple-converted-space"> </span></span><span class="s21"> <a href="https://zbmath.org/authors/?q=ai:ivanov.george"><span class="s10">Ivanov, George</span></a></span><span class="s6">; <a href="https://zbmath.org/authors/?q=ai:vamos.peter"><span class="s3">Vámos, Peter</span></a> <a href="https://zbmath.org/?q=an:02012085"><span class="s3">A characterization of FGC rings.</span></a> <i>(English)</i></span></p>
+<p class="p12"><span class="s3"><a href="https://zbmath.org/journals/?q=se:00000200">Rocky Mt. J. Math. 32, No. 4, 1485-1492 (2002).</a></span><span class="s6"> MSC:  <a href="https://zbmath.org/classification/?q=cc:13C05"><span class="s3">13C05</span></a> <a href="https://zbmath.org/classification/?q=cc:13B10"><span class="s3">13B10</span></a> <a href="https://zbmath.org/classification/?q=cc:16D90"><span class="s3">16D90</span></a> <a href="https://zbmath.org/classification/?q=cc:13E15"><span class="s3">13E15</span></a></span><span class="s3"> .<span class="Apple-converted-space">  </span>Ivanov.pdf</span></p>
+<p class="p4">From the paper: We give a new characterization of commutative rings for which every finitely generated module is a direct sum of cyclics (FGC rings) using only the structure of the injective envelopes of simple modules. Some Baer-Kaplansky categories for FGC rings are studied:</p>
+<p class="p4">Definition. A (full) category of R-modules is said to be a Baer-Kaplansky category or to have the Baer-Kaplansky property if any two of its modules are isomorphic whenever their endomorphism rings are isomorphic (as rings).</p>
+<p class="p4">Theorem. Let R be an indecomposable FGC ring and let <span class="s22">𝒞</span> be a category of finitely generated R-modules each of which has a copy of R as a summand. Then <span class="s22">𝒞</span> is a Baer-Kaplansky category.</p>
+<p class="p6"><br></p>
+<p class="p8"><br></p>
+<p class="p11">K</p>
+<p class="p13"><br></p>
+<p class="p12"><span class="s3"><a href="https://zbmath.org/?q=an:0043.26702">Zbl 0043.26702</a> <a href="https://zbmath.org/authors/?q=ai:cohen.irvin-sol"><span class="s10">Cohen, I.S.</span></a></span><span class="s6">; <a href="https://zbmath.org/authors/?q=ai:kaplansky.irving"><span class="s3">Kaplansky, Irving</span></a> <a href="https://zbmath.org/?q=an:03066864"><span class="s3">Rings for which every module is a direct sum of cyclic modules.</span></a> <i>(English)</i><span class="Apple-converted-space"> </span></span></p>
+<p class="p12"><span class="s3"><a href="https://zbmath.org/journals/?q=se:00000579">Math. Z. 54, 97-101 (1951).</a> http://gdz.sub.uni-goettingen.de/en/dms/loader/img/?PID=GDZPPN002382199</span></p>
+<p class="p13"><br></p>
+<p class="p5"><span class="s31"><b>MR0031470</b></span><span class="s32"> </span><span class="s31"><b>(11,155b)</b></span> <span class="s32">Kaplansky, Irving</span> Elementary divisors and modules. <span class="s31"><i>Trans. Amer. Math. Soc.</i></span> <b>66, </b>(1949). 464--491. (Reviewer: J. Dieudonné) <span class="s32">09.1X </span><span class="s20">unit regular. Zbl 0036.01903</span></p>
+<p class="p4"><span class="s28"><a href="https://scholar.google.com/scholar?cites=4137281577468388774&amp;as_sdt=5,39&amp;sciodt=0,39&amp;hl=en">Cited by 377</a><span class="Apple-converted-space">  </span></span>Kaplansky7.pdf <span class="Apple-converted-space">  </span>cf Jacobson, Theory of Rings.</p>
+<p class="p41">p. 465<span class="Apple-converted-space">  </span>total divisor definition</p>
+<p class="p42">p. 465<span class="Apple-converted-space">  </span>Hermite ring<span class="s14"><span class="Apple-converted-space">  </span></span><span class="s33">definition:</span></p>
+<p class="p43"><span class="s34">p.465<span class="Apple-converted-space">  </span></span>where d<sub>i</sub><span class="Apple-converted-space">    </span>is a <span class="s35">total divisor </span>of d<sub>i+1</sub>. If every matrix over 72 admits diagonal reduction, we call 7? an <span class="s35">elementary divisor ring</span>.</p>
+<p class="p43"><span class="s34">p. 471<span class="Apple-converted-space">  </span>definition<span class="Apple-converted-space">  </span></span>a matrix A admits diagonal reduction</p>
+<p class="p43"><span class="s34">p. 471<span class="Apple-converted-space">  </span></span><span class="s36">Theorem 5.1. If all 1 by 2, 2 by 1, and 2 by 2 matrices over R admit diagonal </span>reduction, then all matrices admit diagonal reduction and R is an elementary divisor ring.</p>
+<p class="p43">proof ??? even for 3 by 2 matrices in noncommutative case.</p>
+<p class="p6"><br></p>
+<p class="p8"><br></p>
+<p class="p8"><br></p>
+<p class="p4"><span class="Apple-converted-space"> </span>Zbl 0046.25701 Kaplansky, Irving Modules over Dedekind rings and valuation rings. (English) Trans. Am. Math. Soc. 72, 327-340 (1952). MR46349 09.1X<span class="Apple-converted-space">  </span>Kaplansky12.pdf</p>
+<p class="p8"><br></p>
+<p class="p8"><br></p>
+<p class="p44">KRULL, W., Matrizen, Moduln, und verallgemeinerte Abelsche Gruppen im Bereich der ganzen algebra&amp;hen Zahlen, Heidelberger Akad. Wiss. 2 (1932), 13-38.</p>
+<p class="p44">See Levy5.pdf <span class="Apple-converted-space">  </span>p.445</p>
+<p class="p8"><br></p>
+<p class="p8"><br></p>
+<p class="p8"><br></p>
+<p class="p8"><br></p>
+<p class="p11">L</p>
+<p class="p13"><br></p>
+<p class="p12"><span class="s6"><span class="Apple-converted-space"> </span><a href="https://zbmath.org/?q=an:0283.13002"><span class="s3">Zbl 0283.13002</span></a></span><span class="s3"><span class="Apple-converted-space">  </span><a href="https://zbmath.org/authors/?q=ai:larsen.max-d"><span class="s10">Larsen, Max D.</span></a></span><span class="s6">; <a href="https://zbmath.org/authors/?q=ai:lewis.william-j"><span class="s3">Lewis, William J.</span></a>; <a href="https://zbmath.org/authors/?q=ai:shores.thomas-s"><span class="s3">Shores, Thomas S.</span></a></span></p>
+<p class="p5">Elementary divisor rings and finitely presented modules. <i>(English)</i> <a href="https://zbmath.org/journals/?q=se:00000744"><span class="s4">Trans. Am. Math. Soc. 187, 231-248 (1974).</span></a></p>
+<p class="p5"><span class="s4">Larsen2.pdf<span class="Apple-converted-space">  </span>refers to </span>Zbl 0014.14803 Fitting,<span class="Apple-converted-space"> </span></p>
+<p class="p5">Abstract: Throughout, rings are commutative with unit and modules are unital. We prove that <i>R</i> is an elementary divisor ring if and only if every finitely presented module over <i>R</i> is a direct sum of cyclic modules, thus providing a converse to a theorem of Kaplansky and answering a question of Warfield.<span class="Apple-converted-space"> </span></p>
+<p class="p5">We show that every Bezout ring with a finite number of minimal prime ideals is Hermite. So, in particular, semilocal Bezout rings are Hermite answering affirmatively a question of Henriksen. We show that every semihereditary Bezout ring is Hermite. Semilocal adequate rings are characterized and a partial converse to a theorem of Henriksen is established.</p>
+<p class="p5"><b>MR0335499</b> <b>(49 #280)</b></p>
+<p class="p5"><b><span class="Apple-converted-space"> </span>A commutative ring R with identity is (a) a Bézout ring when every finitely generated ideal is principal, (b) a Hermite ring when every 1×2 matrix over R is equivalent to a diagonal matrix and (c) an elementary divisor ring when every matrix over R is equivalent to a diagonal matrix. Clearly an elementary divisor ring is Hermite and a Hermite ring is Bézout. § 2 of the present note is mainly concerned with the problem of imposing extra conditions on a Bézout ring to make it Hermite. For example, it is shown that a Bézout ring that is either semihereditary or has a finite number of minimal prime ideals must be Hermite. In particular, a semilocal Bézout ring is Hermite, which answers a question posed by M. Henriksen [Michigan Math. J. 3 (1955/56), 159–163; MR0092772]. § 3 is concerned with finitely presented R-modules and diagonalization of matrices; here Bézout rings and elementary divisor rings are characterized in terms of diagonalization. Also it is shown that if every finitely presented R-module is a direct sum of cyclic modules, then R is an elementary divisor ring, which establishes the converse of a result of I. Kaplansky [Trans. Amer. Math. Soc. 66 (1949), 464–491; MR0031470]. § 4 is concerned with adequate rings, a special type of Bézout ring introduced by O. Helmer [Bull. Amer. Math. Soc. 49 (1943), 225–236; MR0007744]. The main results are a characterization of semilocal adequate rings and a partial converse of a result due to Henriksen [op. cit.] on the prime spectrum of an adequate ring.</b></p>
+<p class="p5"><b>Reviewed by D. Kirby</b></p>
+<p class="p6"><b></b><br></p>
+<p class="p16"><br></p>
+<p class="p15"><br></p>
+<p class="p12"><span class="s6"><span class="Apple-converted-space"> </span><a href="https://zbmath.org/?q=an:0282.16001"><span class="s3">Zbl 0282.16001</span></a></span><span class="s3"> <a href="https://zbmath.org/authors/?q=ai:levy.lawrence-s"><span class="s10">Levy, Lawrence S.</span></a></span><span class="s6">; <a href="https://zbmath.org/authors/?q=ai:robson.j-chris"><span class="s3">Robson, J.Chris</span></a> <a href="https://zbmath.org/?q=an:03442207"><span class="s3">Matrices and pairs of modules.</span></a> <i>(English)</i> <a href="https://zbmath.org/journals/?q=se:00000473"><span class="s3">J. Algebra 29, 427-454 (1974).</span></a> MSC:  <a href="https://zbmath.org/classification/?q=cc:16U30"><span class="s3">16U30</span></a> <a href="https://zbmath.org/classification/?q=cc:16D40"><span class="s3">16D40</span></a> <a href="https://zbmath.org/classification/?q=cc:16Gxx"><span class="s3">16Gxx</span></a> <a href="https://zbmath.org/classification/?q=cc:15B33"><span class="s3">15B33</span></a></span><span class="s3">. <span class="Apple-converted-space"> </span></span></p>
+<p class="p21">Levy5.pdf</p>
+<p class="p21">It is proved that each matrix over a principal ideal ring is equivalent to some diagonal matrix. Partial results are obtained on the uniqueness of the diagonal form obtained. These results are obtained by specializing some general properties about simultaneous decompositions of a projective module<span class="Apple-converted-space"> </span></p>
+<p class="p21">and a homomorphic image of finite (composition) length over any ring. These general results are also specialized to obtain results about matrices and projective modules over hereditary prime rings.<span class="Apple-converted-space"> </span></p>
+<p class="p21">refers to Goldie.pdf<span class="Apple-converted-space">  </span>see GE-rings.rtf</p>
+<p class="p4"><span class="s37">p. 452 <span class="Apple-converted-space">    </span>(4.6)<span class="Apple-converted-space">  </span></span>R be the skew polynomial ring in an indeterminate x over the complex numbers C where XC= EXfor c E C,</p>
+<p class="p5"><b>MR0340337</b> <b>(49 #5092)</b></p>
+<p class="p5"><b>At the end of the paper under review an example is given, illustrating a particularly simple case of the problem in question. It is as follows. Let C be the field of complex numbers and R the ring of polynomials in the indeterminate x over C with xc=c</b><span class="s9">⎯⎯⎯</span><b>x for all c</b><span class="s9">∈</span><b>C. Put a=x2+βi, b=x2−βi with β arbitrary, non-zero and real. As abr=rab for all r</b><span class="s9">∈</span><b>R, the ideal abR is 2-sided. However, both a and b are irreducible over R. Thus abR is maximal and the simple modules R/aR and R/bR over R are also simple over the simple Artinian ring R/abR, and hence isomorphic. On the other hand, is a</b><span class="s9">∼</span><b>b, i.e., are there invertible elements u,v</b><span class="s9">∈</span><b>R such that uav=b? As both u and v must be in C and as cx2=x2c for all c</b><span class="s9">∈</span><b>C, the answer is no. It follows that R/aR</b><span class="s9">≅</span><b>R/bR does not imply that a</b><span class="s9">∼</span><b>b.</b></p>
+<p class="p5"><b><span class="Apple-converted-space">   </span>In a wider context, let A and B denote two m×n matrices over a ring R; put A</b><span class="s9">∼</span><b>B if there are invertible matrices U,V such that UAV=B. Define cokerA=R(m)/A</b><span class="s9">⋅</span><b>R(n), i.e., the right R-module where R(m),R(n) are columns. If m=n=1, then the above example shows that cokerA</b><span class="s9">≅</span><b>cokerB does not imply A</b><span class="s9">∼</span><b>B. The authors state that they have no corresponding example for m=n=2.</b></p>
+<p class="p5"><b><span class="Apple-converted-space">   </span>To come to the beginning of the paper: Over which rings R is an arbitrary matrix A equivalent in the above sense to a diagonal one? This old problem is answered here in the affirmative in the case in which R is a ring with identity in which every one-sided ideal is principal. We quote from the paper: "The uniqueness assertion of the `elementary divisor theorem' states that, when R is a commutative PID, cokerA</b><span class="s9">≅</span><b>cokerB implies A</b><span class="s9">∼</span><b>B (A</b><span class="s9">∼</span><b>B implies cokerA</b><span class="s9">≅</span><b>cokerB for any ring R). Note that the above implication does not require any diagonalizability to make sense.'' However, the authors show that if R is a Dedekind prime ring with right projective cancellation, then cokerA</b><span class="s9">≅</span><b>cokerB implies that</b></p>
+<p class="p6"><b></b><br></p>
+<p class="p45">∣∣∣<span class="s1"><b>A001</b></span>∣∣∣∼∣∣∣<span class="s1"><b>B001</b></span>∣∣∣<span class="s1"><b>,</b></span></p>
+<p class="p6"><b></b><br></p>
+<p class="p5"><b>and it implies that A</b><span class="s9">∼</span><b>B if R is commutative.</b></p>
+<p class="p5"><b><span class="Apple-converted-space">   </span>The module-theoretic basis of the paper is too technical to be quoted in full, notwithstanding its importance. It is a "lifting and straightening theorem'', which has the following corollary: If P1 and P2 are projective modules over an arbitrary ring such that both can be mapped onto a module U of finite composition length, then U has a unique representation as U=P1</b><span class="s9">⊕</span><b>P2.</b></p>
+<p class="p5"><b><span class="Apple-converted-space">   </span>The paper is beautifully written.</b></p>
+<p class="p5"><b>Reviewed by C. F. Moppert</b></p>
+<p class="p6"><br></p>
+<p class="p6"><br></p>
+<p class="p6"><br></p>
+<p class="p8"><br></p>
+<p class="p8"><br></p>
+<p class="p8"><br></p>
+<p class="p11">M</p>
+<p class="p13"><br></p>
+<p class="p5"><span class="Apple-converted-space"> </span><a href="https://zbmath.org/?q=an:0144.03001"><span class="s4">Zbl 0144.03001</span></a><span class="s4"> <a href="https://zbmath.org/authors/?q=ai:matlis.eben"><span class="s3">Matlis, E.</span></a></span> Decomposable modules. <i>(English)</i></p>
+<p class="p12"><span class="s3"><a href="https://zbmath.org/journals/?q=se:00000744">Trans. Am. Math. Soc. 125, 147-179 (1966).</a><span class="Apple-converted-space">  </span></span><span class="s6"><b>MR0201465</b> <b>(34 #1349)</b></span></p>
+<p class="p12"><span class="s3">http://www.ams.org/journals/tran/1966-125-01/S0002-9947-1966-0201465-5/S0002-9947-1966-0201465-5.pdf</span></p>
+<p class="p13"><br></p>
+<p class="p12"><span class="s3"><a href="https://zbmath.org/?q=an:0090.25305">Zbl 0090.25305</a> <a href="https://zbmath.org/authors/?q=ai:matlis.eben"><span class="s10">Matlis, Eben</span></a></span><span class="s6"> <a href="https://zbmath.org/?q=an:03147649"><span class="s3">Injective modules over Prüfer rings.</span></a> <i>(English)</i><span class="Apple-converted-space">  </span><a href="https://zbmath.org/journals/?q=se:00000597"><span class="s3">Nagoya Math. J. 15, 57-69 (1959).</span></a></span><span class="s3"> </span><span class="s6"><b>MR0109840</b> <b>(22 #725)</b></span></p>
+<p class="p13"><br></p>
+<p class="p13"><br></p>
+<p class="p5">Zbl pre05206754 McGovern, Warren Wm.<span class="Apple-converted-space">  </span>Bézout<span class="Apple-converted-space">  </span>rings with almost stable range 1. (English)</p>
+<p class="p5">[J] J. Pure Appl. Algebra 212, No. 2, 340-348 (2008). ISSN 0022-4049</p>
+<p class="p5">=<span class="Apple-converted-space">  </span>MR2357336 (2008h:13033) McGovern, Warren Wm. Bézout rings with almost stable range 1. J. Pure Appl. Algebra 212 (2008), no. 2, 340–348. (Reviewer: François Couchot), 13F05 (06F20)<span class="Apple-converted-space"> </span></p>
+<p class="p5">McGovern.pdf<span class="Apple-converted-space">  </span><b>MR2357336</b> <b>(2008h:13033)</b></p>
+<p class="p5">A commutative ring A has stable range 1 if, <span class="s9">∀</span>a,b<span class="s9">∈</span>A such that aA+bA=A, <span class="s9">∃</span>x<span class="s9">∈</span>A such that (a+bx)A=A, and A has almost stable range 1 if every proper homomorphic image of A has stable range 1.</p>
+<p class="p5"><span class="Apple-converted-space"> </span>The main theorem states that every Bézout ring A (i.e., each finitely generated ideal is principal) with almost stable range 1, is an elementary divisor ring (i.e., each matrix over A has a diagonal reduction).<span class="Apple-converted-space"> </span></p>
+<p class="p5">Abstract Elementary divisor domains were defined by Kaplansky [I. Kaplansky, Elementary divisors and modules, Trans. Amer. Math. Soc. 66 (1949) 464–491] and generalized to rings with zero-divisors by Gillman and Henriksen [L. Gillman, M. Henriksen,<span class="Apple-converted-space"> </span></p>
+<p class="p5">Some remarks about elementary divisor rings, Trans. Amer. Math. Soc. 82 (1956) 362–365]. In [M.D. Larsen, W.J. Lewis, T.S. Shores,</p>
+<p class="p5">Elementary divisor rings and finitely presented modules, Trans. Amer. Math. Soc. 187 (1) (1974) 231–248], it was also proved that if a Hermite ring satisfies (N), then it is an elementary divisor ring.</p>
+<p class="p5"><span class="Apple-converted-space"> </span>The aim of this article is to generalize this result (as well as others) to a much wider class of rings. Our main result is that B́ezout rings whose proper homomorphic images all have stable range 1 (in particular, neat rings) are elementary divisor rings <span class="Apple-converted-space"> </span></p>
+<p class="p5">Kaplansky [14] defined the ring R to be an elementary divisor ring if every matrix M over R (not necessarily square) admits diagonal reduction, that is, there exist invertible square matrices P and Q such that PMQ is a diagonal matrix, say (dij), for which d ii is a divisor of di+1,i+1<span class="Apple-converted-space">  </span>for each i.<span class="Apple-converted-space"> </span></p>
+<p class="p5">He defined a ring R to be a right Hermite ring if every 1× 2 matrix over R admits diagonal reduction and showed that a right Hermite ring is a right B́ezout ring, i.e., a ring for which every finitely generated right ideal is principally generated.</p>
+<p class="p6"><br></p>
+<p class="p12"><span class="s3"><a href="https://zbmath.org/?q=an:1095.13025">Zbl 1095.13025</a> <a href="https://zbmath.org/authors/?q=ai:mcgovern.warren-wm"><span class="s10">McGovern, Warren Wm.</span></a></span><span class="s6"> Neat rings. <i>(English)</i><span class="Apple-converted-space">  </span><a href="https://zbmath.org/journals/?q=se:00000518"><span class="s3">J. Pure Appl. Algebra 205, No. 2, 243-265 (2006).</span></a></span></p>
+<p class="p5">McGovern2.pdf<span class="Apple-converted-space">  </span><a href="http://www.ams.org.ezaccess.libraries.psu.edu/mathscinet/search/publdoc.html?arg3=&amp;co4=AND&amp;co5=AND&amp;co6=AND&amp;co7=AND&amp;dr=pubyear&amp;pg4=AUCN&amp;pg5=TI&amp;pg6=MR&amp;pg7=ALLF&amp;pg8=ET&amp;review_format=html&amp;s4=&amp;s5=Neat%20rings&amp;s6=&amp;s7=&amp;s8=All&amp;sort=Newest&amp;vfpref=html&amp;yearRangeFirst=&amp;yearRangeSecond=&amp;yrop=eq&amp;r=4&amp;mx-pid=2203615"><span class="s7"><b>MR2203615</b></span></a></p>
+<p class="p5">A ring is clean if every element is a sum of a unit and an idempotent. A ring is neat if every proper factor of it is clean. The paper has several results on neat rings:</p>
+<p class="p5">(1) a collection of several equivalent conditions for a commutative ring to be clean.</p>
+<p class="p5">(2) classification of neatness for some classes of rings:</p>
+<p class="p5">(a) rings over which every finitely generated module is a direct sum of cyclics,</p>
+<p class="p5">(b) Bézout domains (in terms of their group of divisibility);</p>
+<p class="p5">(3) Other examples of neat rings:</p>
+<p class="p5">(a) every h-local domain;</p>
+<p class="p5">(b) every domain with Krull dimension.</p>
+<p class="p5">Besides these, the last two sections of the paper contain generalizations on rigid extension of lattice-ordered abelian groups and relating properties of the additive group of continuous functions of a topological space to its topology. These two sections are independent of the rest of the paper.</p>
+<p class="p46">A ring is called a <i>pm-ring </i>if every prime ideal is contained in a unique maximal ideal.</p>
+<p class="p16"><br></p>
+<p class="p15"><br></p>
+<p class="p4">MR2341356 Mbekhta, Mostafa; Zemánek, Jaroslav A spectral approach to the Kaplansky problem. Perspectives in operator theory, 319–320, Banach Center Publ., 75, Polish Acad. Sci., Warsaw, 2007, 46H05 (47B49)</p>
+<p class="p8"><br></p>
+<p class="p8"><br></p>
+<p class="p3"><span class="Apple-converted-space"> </span>Zbl 1308.68182 Middeke, Johannes A computational view on normal forms of matrices of Ore polynomials. (English) ACM Commun. Comput. Algebra 45, No. 3-4, 190-191 (2011).</p>
+<p class="p3">MSC:<span class="Apple-converted-space">  </span>68W30 15A21 15B33 16S36 16Z05 47G20<span class="Apple-converted-space"> </span></p>
+<p class="p2"><br></p>
+<p class="p3">Johannes Middeke A polynomial-time algorithm for the Jacobson</p>
+<p class="p3">form for matrices of differential operators.<span class="Apple-converted-space">  </span>2008 <span class="Apple-converted-space">  </span>Middeke.pdf</p>
+<p class="p47">We consider a ring R = K[∂;id,θ] of differential operators over a differential field (K,θ). This is a (left and right) principal ideal domain. Hence, if R is simple, then for every matrix M ∈ <span class="s38">nRn </span>there exist unimodular matrices S and T ∈ <span class="s38">nRn </span>and f ∈ R such that SMT = diag(1,...,1,f,0,...,0).<span class="Apple-converted-space"> </span></p>
+<p class="p47">The proof of the existence goes back to Jacobson, Nakayama and Teichmu ̈ller. Therefore, this strong diagonal form is known as Jacobson form in Zerz (2007, Theorem 3.2) or Teichmu ̈ller-Nakayama normal form in Ilchmann and Mehrmann (2005, Theo- rem 2.1).</p>
+<p class="p47">In this paper, we present a polynomial time algorithm for computing a strong diagonal form (which we will later call Jacobson form) in the case where M has R-linearly independent rows. The method exploits the well-known existence of cyclic vectors for the module R<span class="s38">n/RnM, and is applicable for all fields with “enough” constants<span class="Apple-converted-space"> </span></span></p>
+<p class="p48">and a “sufficiently” high degree over their constant field.<span class="Apple-converted-space"> </span></p>
+<p class="p48">We will achieve the form diag(1, . . . , 1, f ) even for non-simple R.</p>
+<p class="p49"><br></p>
+<p class="p8"><br></p>
+<p class="p11">N</p>
+<p class="p15"><br></p>
+<p class="p12"><span class="s3"><a href="https://zbmath.org/?q=an:0019.39005">Zbl 0019.39005</a> <a href="https://zbmath.org/authors/?q=ai:nakayama.tadasi"><span class="s10">Nakayama, Tadasi</span></a></span><span class="s6"> <a href="https://zbmath.org/?q=an:03031505"><span class="s3">A note on the elementary divisor theory in non-commutative domains.</span></a> <i>(English)</i><span class="Apple-converted-space">  </span><a href="https://zbmath.org/journals/?q=se:00003397"><span class="s3">Bull. Am. Math. Soc. 44, 719-723 (1938).</span></a></span><span class="s21"><span class="Apple-converted-space">   </span></span></p>
+<p class="p5">Nakayama.pdf<span class="Apple-converted-space">  </span><b>MR1563855</b></p>
+<p class="p17">p.720<span class="Apple-converted-space">  </span><i>Jacobson-Teichmiiller normal f orm</i></p>
+<p class="p17"><span class="s1"><b>p.720<span class="Apple-converted-space">  </span></b></span>Let us call, after Jacobson, an element <i>a bounded </i>if there is a two- sided ideal divisiblef by <i>a </i>and different from 0.</p>
+<p class="p5"><b>p. 720 similar left ideals, similar right ideals</b></p>
+<p class="p5"><b>p. 720-721<span class="Apple-converted-space">  </span>similar elements in a ring.</b></p>
+<p class="p6"><b></b><br></p>
+<p class="p6"><b></b><br></p>
+<p class="p6"><b></b><br></p>
+<p class="p11">R</p>
+<p class="p25"><b></b><br></p>
+<p class="p5"><b>Zbl 1281.13013 Roitman, Moshe The Kaplansky condition and rings of almost stable range 1. (English)<span class="Apple-converted-space"> </span></b></p>
+<p class="p5"><b>Proc. Am. Math. Soc. 141, No. 9, 3013-3018 (2013).<span class="Apple-converted-space">  </span></b><a href="https://arxiv.org/pdf/1107.3000.pdf"><b>arXiv</b></a></p>
+<p class="p5"><b>All rings in this review are commutative with unity. Two rectangular matrices A and B in M s,t (R) are equivalent if there exist invertible matrices P</b><span class="s9">∈</span><b>M s,s (R) and Q</b><span class="s9">∈</span><b>M t,t (R) such that B=PAQ. The ring R is K-Hermite if every rectangular matrix A over R is equivalent to an upper or a lower triangular matrix<span class="Apple-converted-space"> </span></b></p>
+<p class="p5"><b>(the term ‘K-Hermite ring’ was introduced by T. Y. Lam [Serre’s problem on projective modules. Springer Monographs in Mathematics. Berlin: Springer Verlag, (2006; Zbl 1101.13001)]). A ring R is an elementary divisor ring (EDR) if and only if every rectangular matrix A over R is equivalent to a diagonal matrix.<span class="Apple-converted-space"> </span></b></p>
+<p class="p5"><b>By Irving Kaplansky, a K-Hermite ring R is an EDD ring if and only if it satisfies condition: for any three elements a,b,c in R that generate the ideal R, there exist elements p,q</b><span class="s9">∈</span><b>R so that (pa,pb+qc)=R (the Kaplansky’s condition) [I. Kaplansky, Trans. Am. Math. Soc. 66, No. 2, 464–491 (1949; Zbl 0036.01903)].</b></p>
+<p class="p5"><b>The author presents some variants of the Kaplansky condition. One of the results:</b></p>
+<p class="p5"><b>Theorem 2.9. Let R be a K-Hermite ring. The following conditions are equivalent:</b></p>
+<p class="p5"><b>(1) R is an elementary divisor ring.</b></p>
+<p class="p5"><b>(2) For any elemets x,y,z</b><span class="s9">∈</span><b>R such that (x,y)=R, there exists an element λ</b><span class="s9">∈</span><b>R such that x+λy=uv, where (u,z)=(v,1-z)=R. Moreover, the elements u and v can be chosen such that (u,v)=R.</b></p>
+<p class="p5"><b>A ring R is called Bézout ring if each finitely generated ideal of R is principal. The author presents an example of a Bézout ring that is an elementary divisor ring but does not have almost stable rang 1. This result is the answer to a question of W. Wm. McGovern [J. Pure Appl. Algebra 212, No 2, 340–348 (2008, Zbl 1159.13010)].</b></p>
+<p class="p5"><b>Reviewer: Nikolay I. Kryuchkov (Ryazan)</b></p>
+<p class="p6"><b></b><br></p>
+<p class="p6"><br></p>
+<p class="p8"><br></p>
+<p class="p11">S</p>
+<p class="p13"><br></p>
+<p class="p50">Lectures on Modules over Principal Ideal Domains</p>
+<p class="p48">Parvati Shastri 7 May 2014<span class="Apple-converted-space">  </span>Shastri.pdf <span class="Apple-converted-space">  </span>commutative rings</p>
+<p class="p13"><br></p>
+<p class="p3">Zbl 0286.13006 Shores, Thomas S.; Wiegand, Roger</p>
+<p class="p3">Rings whose finitely generated modules are direct sums of cyclics. (English)<span class="Apple-converted-space"> </span></p>
+<p class="p3">J. Algebra 32, 152-172 (1974). MSC:<span class="Apple-converted-space">  </span>13C05 13F05<span class="Apple-converted-space">  </span><a href="http://www.ams.org.ezaccess.libraries.psu.edu/mathscinet/search/publdoc.html?arg3=&amp;co4=AND&amp;co5=AND&amp;co6=AND&amp;co7=AND&amp;dr=all&amp;pg4=AUCN&amp;pg5=TI&amp;pg6=PC&amp;pg7=ALLF&amp;pg8=ET&amp;review_format=html&amp;s4=&amp;s5=Rings%20whose%20finitely%20generated%20modules%20are%20direct%20sums%20of%20cyclics.&amp;s6=&amp;s7=&amp;s8=All&amp;sort=Newest&amp;vfpref=html&amp;yearRangeFirst=&amp;yearRangeSecond=&amp;yrop=eq&amp;r=3&amp;mx-pid=352080"><span class="s23"><b>MR0352080</b></span></a><span class="s23"><b><span class="Apple-converted-space">  </span>Shores.pdf</b></span></p>
+<p class="p2"><br></p>
+<p class="p3">Zbl 0277.13006 Shores, Thomas S.; Wiegand, Roger</p>
+<p class="p3">Decompositions of modules and matrices. (English)<span class="Apple-converted-space"> </span></p>
+<p class="p3">Bull. Am. Math. Soc. 79 (1973), 1277-1280 (1974). MSC:<span class="Apple-converted-space">  </span>13C05 15A21</p>
+<p class="p2"><br></p>
+<p class="p3">Zbl 0253.13003<span class="Apple-converted-space">  </span>Shores, Thomas S.; Wiegand, Roger</p>
+<p class="p3">Some criteria for Hermite rings and elementary divisor rings. (English)<span class="Apple-converted-space"> </span></p>
+<p class="p3">Can. J. Math. 26, 1380-1383 (1974). MSC:<span class="Apple-converted-space">  </span>13F10 / <span class="s1"><b>MR0352083</b> <b>(50 #4571) Shores2.pdf</b></span></p>
+<p class="p3">A commutative ring R with identity is (a) a Bézout ring when every finitely generated ideal is principal, (b) a Hermite ring when every matrix over R is equivalent to a triangular matrix, and (c) an elementary divisor ring when every matrix over R is equivalent to a diagonal matrix. Immediately an elementary divisor ring is Hermite and a Hermite ring is Bézout.<span class="Apple-converted-space"> </span></p>
+<p class="p3">M. D. Larsen, W. J. Lewis and the first author [Trans. Amer. Math. Soc. 187 (1974), 231–248; MR0335499] have imposed extra conditions on a Bézout ring to make it either Hermite or even an elementary divisor ring. In this note these results are extended.<span class="Apple-converted-space"> </span></p>
+<p class="p3">Thus, a Bézout ring with compact minimal prime spectrum and T-nilpotent nilradical is Hermite, and a Bézout ring with Noetherian maximal ideal spectrum is an elementary divisor ring.<span class="Apple-converted-space"> </span></p>
+<p class="p2"><br></p>
+<p class="p2"><br></p>
+<p class="p2"><br></p>
+<p class="p12"><span class="s3"><a href="https://zbmath.org/?q=an:1064.13011">Zbl 1064.13011</a> <a href="https://zbmath.org/authors/?q=ai:sjogren.jon-a"><span class="s10">Sjogren, Jon A.</span></a></span><span class="s6"><span class="Apple-converted-space"> </span></span><span class="s3"> <a href="https://zbmath.org/?q=an:02038436"><span class="s10">Principal rings and their invariant factors.</span></a></span><span class="s6"> <i>(English)</i><span class="Apple-converted-space">  </span><a href="https://zbmath.org/journals/?q=se:00001772"><span class="s3">Appl. Algebra Eng. Commun. Comput. 14, No. 4, 287-328 (2003).</span></a> Reviewer: <a href="https://zbmath.org/authors/?q=ai:kuo.yueh%2der"><span class="s3">Yueh-er Kuo (Knoxville)</span></a> MSC:  <a href="https://zbmath.org/classification/?q=cc:13F10"><span class="s3">13F10</span></a> <a href="https://zbmath.org/classification/?q=cc:13L05"><span class="s3">13L05</span></a> <a href="https://zbmath.org/classification/?q=cc:13%2d04"><span class="s3">13-04</span></a></span><span class="s3"><span class="Apple-converted-space"> </span></span></p>
+<p class="p5">Sjogren.pdf <span class="Apple-converted-space"> </span></p>
+<p class="p41">In this article, the author examines one topic from commutative algebra related to rings whose finitely presented modules may be given as a sum of cyclic modules. The purpose is to examine some of the fundamental results of the theory from the point of view of economy of logical development and algorithmic implementation.</p>
+<p class="p41">In section 2, the author reviews diagonalization algorithms for a f. p. module over a principal ideal domain.</p>
+<p class="p41">In section 4, the author establishes that any principal ideal ring is a Hermite ring, and thus the results of this section will also apply to any principal ideal ring. The author presents two diagonalization algorithms which will serve different purposes.</p>
+<p class="p41">By the results of section 5 we know that over a principal ring, two isomorphic f. g. torsion modules possess the same capacity ideals. In section 6 we see how this implies that the entire Smith forms are also equal.</p>
+<p class="p41">In appendix A, the author lists some join and meet formulas that are needed, and in appendix B, he shows how these equations correspond to true formulas relating sup and inf for functions, whose domain can be almost anything, into a totally ordered Abelian group.</p>
+<p class="p51"><span class="s6">Reviewer: <a href="https://zbmath.org/authors/?q=ai:kuo.yueh%2der"><span class="s39">Yueh-er Kuo (Knoxville)</span></a></span></p>
+<p class="p52"><br></p>
+<p class="p6"><br></p>
+<p class="p2"><br></p>
+<p class="p2"><br></p>
+<p class="p3">Zbl 0796.13007 Snashall, Nicole Scalar-reflexivity and FGC rings. (English)<span class="Apple-converted-space"> </span></p>
+<p class="p3">J. Algebra 165, No.2, 380-388 (1994).</p>
+<p class="p3">R is a CF ring, if every finite direct sum of cyclic R-modules M is isomorphic to a sum R/I 1 <span class="s26">⊕⋯⊕</span>R/I n , where I 1 <span class="s26">⊆</span>I 2 <span class="s26">⊆⋯⊆</span>I n <span class="s26">⊆</span>R. – R is an FSI ring, if the classical ring of quotients of R/I, for each ideal I, is self-injective. – R is an FGC ring, if every finitely generated module is a direct sum of cyclic submodules.</p>
+<p class="p3">This paper characterises the scalar-reflexive CF rings, showing that these are precisely the FSI rings. By using this result, the author proves that a Bezout CF ring which is scalar-reflexive is a FGC ring and conversely.</p>
+<p class="p3">Reviewer: M.Ştefănescu (Constantza)</p>
+<p class="p2"><br></p>
+<p class="p16"><br></p>
+<p class="p11">T</p>
+<p class="p13"><br></p>
+<p class="p5"><span class="Apple-converted-space"> </span><a href="https://zbmath.org/?q=an:0395.15003"><span class="s4">Zbl 0395.15003</span></a> · Thompson, R. C.: Interlacing inequalities for invariant factors. Linear algebra appl. 24, 1-31 (1979) · <a href="http://dx.doi.org/10.1016/0024-3795%2879%2990144-7"><span class="s4">doi:10.1016/0024-3795(79)90144-7</span></a></p>
+<p class="p14"><span class="s3"></span><br></p>
+<p class="p14"><span class="s3"></span><br></p>
+<p class="p5"><span class="s4"><a href="https://zbmath.org/?q=an:0017.10001">Zbl 0017.10001</a> <a href="https://zbmath.org/authors/?q=ai:teichmuller.oswald"><span class="s3">Teichmüller, Oswald</span></a></span> Der Elementarteilersatz für nichtkommutative Ringe. <i>(German)</i><span class="Apple-converted-space"> </span></p>
+<p class="p12"><span class="s3"><a href="https://zbmath.org/journals/?q=se:00003623">Sitzungsber. Preuß. Akad. Wiss., Phys.-Math. Kl. 1937, 169-177 (1937).</a> rv: Jacobson</span></p>
+<p class="p14"><span class="s3"></span><br></p>
+<p class="p14"><span class="s3"></span><br></p>
+<p class="p16"><br></p>
+<p class="p11">U</p>
+<p class="p6"><br></p>
+<p class="p5"><span class="s7"><a href="http://www.ams.org.ezaccess.libraries.psu.edu/mathscinet/search/publdoc.html?arg3=&amp;co4=AND&amp;co5=AND&amp;co6=AND&amp;co7=AND&amp;dr=all&amp;pg4=AUCN&amp;pg5=TI&amp;pg6=RVCN&amp;pg7=ALLF&amp;pg8=ET&amp;review_format=html&amp;s4=uzkov&amp;s5=&amp;s6=&amp;s7=direct&amp;s8=All&amp;vfpref=html&amp;yearRangeFirst=&amp;yearRangeSecond=&amp;yrop=eq&amp;r=1&amp;mx-pid=157986"><b>MR0157986</b><span class="s3"><span class="Apple-converted-space"> </span></span></a><a href="http://www.ams.org.ezaccess.libraries.psu.edu/mathscinet/help/fullitem_help_full.html#review"> </a><a href="http://www.ams.org.ezaccess.libraries.psu.edu/mathscinet/search/author.html?mrauthid=557664"><span class="s3">Uzkov, A. I.</span></a></span> On the decomposition of modules over a commutative ring into direct sums of cyclic submodules. (Russian) <a href="http://www.ams.org.ezaccess.libraries.psu.edu/mathscinet/search/journaldoc.html?cn=Mat_Sb_NS"><span class="s7"><i>Mat. Sb. (N.S.)</i></span></a> <b>62(104) </b>1963 469–475. (Reviewer: Z. Janko) <a href="http://www.ams.org.ezaccess.libraries.psu.edu/mathscinet/search/mscdoc.html?code=13.40,%2816.00%29"><span class="s4">13.40 (16.00)</span></a></p>
+<p class="p4">. <span class="Apple-tab-span">	</span>О разложимости модулей над коммутативным кольцом в прямые суммы циклических подмодулей А. И. Узков Матем. сб., 62(104):4 (1963),<span class="Apple-converted-space">  </span>469–475. Uzkov.pdf</p>
+<p class="p4">MR0157986 (28 #1214) If R is a Noetherian ring such that every finitely generated R-module is a direct sum of cyclic submodules, then R is a principal ideal ring.<span class="Apple-converted-space"> </span></p>
+<p class="p13"><br></p>
+<p class="p13"><br></p>
+<p class="p11">V</p>
+<p class="p13"><br></p>
+<p class="p5"><span class="s40"><b>MR1063538</b></span><span class="s41"> </span><span class="s40"><b>(91g:13011)</b></span> <span class="s41">Vámos, Peter</span> Decomposition problems for modules over valuation domains. <span class="s40"><i>J. London Math. Soc. (2)</i></span> <span class="s41">41 (1990), no. 1,</span> 10--26. (Reviewer: Alberto Facchini) <span class="s41">13C05 (13A18)</span></p>
+<p class="p8"><br></p>
+<p class="p53">MR0555570 (81h:13008) Vámos, P. Sheaf-theoretical methods in the solution of Kaplansky's problem. Applications of sheaves (Proc. Res. Sympos. Appl. Sheaf Theory to Logic, Algebra and Anal., Univ. Durham, Durham, 1977), pp. 732–738,<span class="Apple-converted-space"> </span></p>
+<p class="p53">Lecture Notes in Math., 753, Springer, Berlin, 1979. (Reviewer: R. A. Wiegand), 13C05 (13F05). Vamos.pdf</p>
+<p class="p5">This is an expository article dealing with the history and recent solution of the problem of characterising those commutative rings, all of whose finitely generated modules are direct sums of cyclics. The author provides historical perspective and gives an outline of the main ideas in the proof.<span class="Apple-converted-space"> </span></p>
+<p class="p5">(Complete proofs of the theorem may be found in either of the following papers [the reviewer and S. Wiegand, Abelian group theory (Proc. Second New Mexico State Univ. Conf., Las Cruces, N.M., 1976), pp. 406–423, Lecture Notes in Math., Vol. 616, Springer, Berlin, 1977; <a href="http://www.ams.org.ezaccess.libraries.psu.edu/mathscinet/search/publdoc.html?r=1&amp;pg1=MR&amp;s1=498528&amp;loc=fromrevtext"><span class="s4">MR0498528</span></a>; W. Brandal,<span class="Apple-converted-space"> </span></p>
+<p class="p5">Commutative rings whose finitely generated modules decompose, Lecture Notes in Math., Vol. 723, Springer, Berlin, 1979; <a href="http://www.ams.org.ezaccess.libraries.psu.edu/mathscinet/search/publdoc.html?r=1&amp;pg1=MR&amp;s1=539854&amp;loc=fromrevtext"><span class="s4">MR0539854</span></a>].)</p>
+<p class="p5">{For the collection containing this paper see <a href="http://www.ams.org.ezaccess.libraries.psu.edu/mathscinet/search/publdoc.html?pg1=MR&amp;s1=0555538"><span class="s4">MR0555538</span></a>.} Reviewed by R. A. Wiegand</p>
+<p class="p8"><br></p>
+<p class="p8"><br></p>
+<p class="p11">W</p>
+<p class="p13"><br></p>
+<p class="p5"><b>MR0508083</b> <b>(80c:16021)</b> <span class="Apple-converted-space">  </span><a href="http://www.ams.org.ezaccess.libraries.psu.edu/mathscinet/search/author.html?mrauthid=180640"><span class="s4">Warfield, R. B., Jr.</span></a><span class="Apple-converted-space">  </span>Stable equivalence of matrices and resolutions.<span class="Apple-converted-space">  </span><a href="http://www.ams.org.ezaccess.libraries.psu.edu/mathscinet/search/journaldoc.html?journalName=Comm.%20Algebra"><span class="s7"><i>Comm. Algebra</i></span></a> <b>6 </b>(1978), no. 17, 1811–1828. <span class="Apple-converted-space">  </span><a href="http://www.ams.org.ezaccess.libraries.psu.edu/mathscinet/search/mscdoc.html?code=16A54,%2815A33%29"><span class="s4">16A54 (15A33)</span></a></p>
+<p class="p17"><span class="Apple-converted-space"> </span>With a matrix over a ring R there is associated a particular module, namely the cokernel of the homomorphism of free modules defined by the matrix. A natural question, which has been discussed in earlier papers, is to what extent the module determines the equivalence class of the matrix.</p>
+<p class="p17"><span class="Apple-converted-space"> </span>It was shown by H. Fitting [Math. Ann 112 (1936), 572–582; Zbl 14, 148] that two matrices A,B which determine isomorphic modules become equivalent if suitably enlarged by the addition of zeros and ones, namely</p>
+<p class="p54"><br></p>
+<p class="p17"><span class="s42">⎡⎣⎢⎢⎢</span>Am×n0p×n0m×pIp||||||0(m+p)×(m+q)<span class="s42">⎤⎦⎥⎥⎥∼⎡⎣⎢⎢⎢</span>Bp×q0m×q0p×mIm||||||0(p+m)×(n+p)<span class="s42">⎤⎦⎥⎥⎥</span></p>
+<p class="p54"><br></p>
+<p class="p17">On the other hand, if the ring R is a noncommutative principal ideal domain or, more generally, a Dedekind prime ring with cancellation in the category of projective right R-modules, then results due, respectively, to K. Asano [Nichtkommutative Hauptidealringe, Actualités Sci. Indust. No. 696, Hermann, Paris, 1938; Zbl 22, 106] and L. S. Levy and the reviewer [J. Algebra 29 (1974), 427–454; MR0340337] show that if two m×n matrices A,B determine the same module then the (m+1)×(n+1) matrices [A001] and [B001] are equivalent. In this paper, the author first rederives Fitting's result and obtains some related results. He then proceeds to generalise the second result. The idea is that if the base ring R has some integer, d say, in its stable range, then this should limit the amount of enlargement required in Fitting's result. In fact it is shown that if A,B are m×n matrices which determine the same module M, then</p>
+<p class="p54"><br></p>
+<p class="p17"><span class="s42">⎡⎣⎢⎢⎢</span>Am×n0d×n0m×dId||||||0(m+d)×d<span class="s42">⎤⎦⎥⎥⎥∼⎡⎣⎢⎢⎢</span>Bm×n0d×n0m×dId||||||0(m+d)×d<span class="s42">⎤⎦⎥⎥⎥</span></p>
+<p class="p54"><br></p>
+<p class="p17">Morever, if M has projective dimension at most one, and cancellation holds in the category of projective right R-modules, then</p>
+<p class="p55"><br></p>
+<p class="p5">A<span class="Apple-converted-space">    </span>0 <span class="Apple-converted-space">      </span>B <span class="Apple-converted-space">  </span>0 <span class="Apple-converted-space"> </span></p>
+<p class="p5"><span class="Apple-converted-space">         </span><span class="s9">∼</span> <span class="Apple-converted-space">            </span>.</p>
+<p class="p5">0<span class="Apple-converted-space">  </span>I<sub>d-1</sub><span class="Apple-converted-space">      </span>0<span class="Apple-converted-space">  </span>I<sub>d-1</sub></p>
+<p class="p6"><br></p>
+<p class="p5">The paper includes several similar results, and other results concerned with free presentations of a module.</p>
+<p class="p5">Reviewed by J. C. Robson</p>
+<p class="p6"><br></p>
+<p class="p6"><br></p>
+<p class="p14"><span class="s3"></span><br></p>
+<p class="p14"><span class="s3"></span><br></p>
+<p class="p16"><br></p>
+<p class="p13"><br></p>
+<p class="p3"><span class="Apple-converted-space"> </span>Zbl 0003.20103 Wedderburn, J.H.M. Non-commutative domains of integrity. (English)</p>
+<p class="p3">J. Reine Angew. Math. 167, 129-141 (1932). =<span class="Apple-converted-space">  </span>JFM 58.0148.01</p>
+<p class="p3">Wedderburn, J. H. M. Noncommutative domains of integrity. (English)</p>
+<p class="p3">J. f. M. 167, 129-141 (1932).<span class="Apple-converted-space"> </span></p>
+<p class="p3">http://gdz.sub.uni-goettingen.de/en/dms/loader/img/?PID=GDZPPN002172011&amp;physid=PHYS_0136</p>
+<p class="p3">MR1581329<span class="Apple-converted-space">  </span>Wedderburn.pdf</p>
+<p class="p8"><br></p>
+<p class="p13"><br></p>
+<p class="p4">MR0498528 (58 #16635) Wiegand, Roger; Wiegand, Sylvia Commutative rings whose finitely generated modules are direct sums of cyclics. Abelian group theory (Proc. Second New Mexico State Univ. Conf., Las Cruces, N.M., 1976), pp. 406–423. Lecture Notes in Math., Vol. 616, Springer, Berlin, 1977. (Reviewer: R. B. Warfield Jr.), 13C05 (13F05)</p>
+<p class="p4">complete solution of Kaplansky problem</p>
+<p class="p8"><br></p>
+<p class="p4">Zbl 0565.13002 Wiegand, Roger Direct sum cancellation over noetherian rings. (English)<span class="Apple-converted-space"> </span></p>
+<p class="p4">Abelian groups and modules, Proc. Conf., Udine/Italy 1984, CISM Courses Lect. 287, 441-466 (1984). <span class="s1"><b>MR0789837</b> <b>(86h:13009)</b></span></p>
+<p class="p4"><span class="Apple-converted-space"> </span>Let X, Y and Z be modules over a commutative ring R. The cancellation problem is: determine conditions under which X<span class="s26">⊕</span>Z<span class="s26">≅</span>Y<span class="s26">⊕</span>Z implies X<span class="s26">≅</span>Y. This question is mostly studied for projective modules. In this paper attention is paid to finitely generated modules and especially to torsionfree modules X, Y.</p>
+<p class="p4"><span class="Apple-converted-space">   </span>The following result is obtained: Let R be a one-dimensional integral domain finitely generated as an algebra over an infinite field k.<span class="Apple-converted-space"> </span></p>
+<p class="p4">Let K be the quotient field of R and let k¯ be the algebraic closure of k in K. If k¯R is properly contained in R̃ , the integral closure of R in K, then torsionfree cancellation fails over R. The proof is based on the fact that if D(R)(=Ker(PicR→PicR̃ ))≠0 then there is an invertible ideal of R such that I<span class="s26">⊕</span>R̃ =R<span class="s26">⊕</span>R̃ , but I≠R.<span class="Apple-converted-space"> </span></p>
+<p class="p4">Also, the (quadratic) orders in quadratic number fields satisfying torsionfree cancellation are characterised in the paper. In the two last sections rings of dimension 2 and 3 are considered.</p>
+<p class="p4"><span class="Apple-converted-space">   </span>We should finally note that, apart from the new results, the author also gives a review of the existing results on the cancellation property for nonprojective modules.</p>
+<p class="p8"><br></p>
+<p class="p8"><br></p>
+<p class="p8"><br></p>
+<p class="p4">MR1131468 <span class="Apple-converted-space">  </span>Chouinard, Leo; Wiegand, Sylvia Ranks of indecomposable modules over one-dimensional rings. II. J. Pure Appl. Algebra 74 (1991), no. 2, 119–147. (Reviewer: Lawrence S. Levy) 13C05 (13E15)</p>
+<p class="p8"><br></p>
+<p class="p4">MR3007364 <span class="Apple-converted-space">  </span>Baeth, Nicholas R.; Wiegand, Roger Factorization theory and decompositions of modules. Amer. Math. Monthly 120 (2013), no. 1, 3–34. M(Reviewer: David F. Anderson) 13C05 (13-02 13A05 20M13</p>
+<p class="p8"><br></p>
+<p class="p16"><br></p>
+<p class="p15"><br></p>
+<p class="p8"><br></p>
+<p class="p8"><br></p>
+<p class="p11">Z</p>
+<p class="p13"><br></p>
+<p class="p4">Bohdan Zabavsky<span class="Apple-converted-space">  </span>DIAGONAL REDUCTION OF MATRICES OVER RINGS Publisher: Mathematical Studies Monograph Series VOLUME XVI, VNTL Publishers, Editor: Michael Zarichnyi, ISBN: 966-8849-19-1 / <span class="s43">VNTL Publishers 2012<span class="Apple-converted-space"> </span></span></p>
+<p class="p56"><span class="s43">Zabavs'kyj.pdf 1MB<span class="Apple-converted-space">    </span>264 references<span class="Apple-converted-space">        </span></span><b>[PDF] </b><a href="http://unial.in.ua/wp-content/uploads/2016/09/2012_zabavskii_book_diagonal_reduction_of_matrices_over_rings.pdf?x28843"><span class="s4"><b>Diagonal reduction of matrices over rings</b></span></a><span class="s4"><b> </b><a href="https://scholar.google.com/scholar?cites=6054310077286420288&amp;as_sdt=5,39&amp;sciodt=0,39&amp;hl=en"><span class="s3">Cited by 29</span></a></span><span class="s28"><span class="Apple-converted-space">  </span>refers tob </span><span class="s1">Zbl 0014.14803 Fitting,<span class="Apple-converted-space"> </span></span></p>
+<p class="p41">p.10<span class="Apple-converted-space">  </span>Definition 0.0.1 A ring R is called an elementary divisor ring, if, for an arbitrary matrix A of order n × m over R, there exist unimodular matrices P <span class="s44">∈</span> GL<span class="s45">n</span>(R) and Q <span class="s44">∈</span> GL<span class="s45">m</span>(R) such that</p>
+<p class="p41"><span class="Apple-converted-space">      </span>1) PAQ = D is a diagonal matrix, D = (d<span class="s45">i</span>); 2) Rd<span class="s45">i+1</span>R <span class="s44">⊆</span> Rd<span class="s45">i </span><span class="s44">∩</span> d<span class="s45">i</span>R.</p>
+<p class="p41">p.10<span class="Apple-converted-space">  </span>Definition 0.0.4 A ring R is called an diagonalizable, if for every square matrix A of order n over R there exist unimodular matrices P <span class="s44">∈</span> GL<span class="s45">n</span>(R) and Q <span class="s44">∈</span> GL<span class="s45">m</span>(R) such that PAQ = D is a diagonal matrix [159, 191].</p>
+<p class="p41">p.11<span class="Apple-converted-space">  </span>Definition 0.0.7 We say that matrices A and B over a ring R are equivalent if there are unimodular matrices P and Q of appropriate size such that B = PAQ.</p>
+<p class="p41"><span class="s1">p. 19 </span>Definition 1.2.9 A right (left) Bezout ring [158] is a ring in which every finitely generated right (left) ideal is principal.</p>
+<p class="p41"><span class="Apple-converted-space">      </span>A Bezout ring is a ring which is both right and left Bezout ring.</p>
+<p class="p41"><span class="s1">p.20 </span>Definition 1.2.11 An element of a ring is called an atom [73], if it is noninvertible, nonzero and cannot be represented as prod- uct of two noninvertible elements.<span class="s1"> <span class="Apple-converted-space">     </span></span></p>
+<p class="p41"><span class="s1"><span class="Apple-converted-space">      </span></span>An atomic decomposition of a given element is its decom- position as product of units and atoms [125].</p>
+<p class="p41"><span class="s2">p.23<span class="Apple-converted-space">  </span></span>Definition 1.2.23 A ring R is called directly finite or Dedekind-finite, if ab = 1 implies ba = 1 for any pair of el- ements a and b in R [82].</p>
+<p class="p41">p. 33 <span class="Apple-converted-space">  </span>Dubrovin condition: for any element a in R there exists an element<span class="s1"> </span>b in<span class="Apple-converted-space">  </span>R such that<span class="s1"><span class="Apple-converted-space">  </span></span>RaR = bR = Rb.</p>
+<p class="p41">p. 51<span class="Apple-converted-space">  </span>Definition 2.1.1 If for any row (a<span class="s45">1</span>,a<span class="s45">2</span>,...,a<span class="s45">n</span>) of length n over ring R one can find a unimodular matrix P <span class="s44">∈</span> GL<span class="s45">n</span>(R) such that<span class="s1"> </span>(a<span class="s45">1</span>,a<span class="s45">2</span>,...,a<span class="s45">n</span>)P = (d,0,...,0)<br>
+<span class="Apple-converted-space">      </span>for some d <span class="s44">∈</span> R, then the ring R is said to be a right n-Hermite<span class="s1"> </span>ring.</p>
+<p class="p8"><br></p>
+<p class="p8"><br></p>
+<p class="p4">Zbl 06387533 Zabavsky, B.V. Diagonal reduction of matrices over finite stable range rings. (Russian. English summary) Mat. Stud. 41, No. 1, 101-108 (2014).MSC:<span class="Apple-converted-space">  </span>16 15 16U80</p>
+<p class="p4">Zabavsky5.pdf</p>
+<p class="p8"><br></p>
+<p class="p4">MR2148827 (2006c:19002) Zabavsky, Bogdan Diagonalizability theorems for matrices over rings with finite stable range. Algebra Discrete Math. 2005, no. 1, 151–165. (Reviewer: Pere Ara), 19B10 (13F07 13F10).<span class="Apple-converted-space"> </span></p>
+<p class="p4">Zabavsky10.pdf Zbl 1091.15014 Kaplansky.rtf</p>
+<p class="p5">Summary: We construct the theory of diagonalizability for matrices over a Bézout ring with finite stable range. It is shown that every commutative Bézout ring with compact minimal prime spectrum is Hermite. It is also shown that a principal ideal domain with stable range 1 is an Euclidean domain, and every semilocal principal ideal domain is an Euclidean domain.<span class="Apple-converted-space"> </span></p>
+<p class="p5">It is proved that every matrix over an elementary divisor ring can be reduced to “almost” diagonal matrix by elementary transformations.</p>
+<p class="p8"><br></p>
+<p class="p4">MR3099971<span class="Apple-converted-space">  </span>Kysil, Tetyana; Zabavskiy, Bogdan; Domsha, Olga Reduction of matrices over Bezout domains of stable range 1 with Dubrovin's condition in which maximal nonprincipal ideals are two-sides. Algebra Discrete Math. 14 (2012), no. 2, 230–235. (Reviewer: Manouchehr Misaghian) 15B33 (13F05)</p>
+<p class="p8"><br></p>
+<p class="p4">MR3282758 Pending Zabavs'kyi, B. V.; Kuznits'ka, B. M. A stable range of class full matrices over elementary divisor ring. Translation of Ukraïn. Mat. Zh. 66 (2014), no. 5, 708–711. Ukrainian Math. J. 66 (2014), no. 5, 792–795. 19B10 (13F05 15B33 16S50)</p>
+<p class="p4">We prove that the class of full matrices of order 2 over elementary divisor ring has the stable range 1. <span class="Apple-converted-space">  </span>Zabavs'kyj2.pdf</p>
+<p class="p5">Summary: We prove that the class of full matrices of order 2 over elementary divisor ring has the stable range 1.</p>
+<p class="p8"><br></p>
+<p class="p4"><span class="Apple-converted-space"> </span>Zbl 1337.13016 Zabavsky, B.; Gatalevych, A.</p>
+<p class="p4">A commutative Bezout PM * domain is an elementary divisor ring. (English) Algebra Discrete Math. 19, No. 2, 295-301 (2015).</p>
+<p class="p4">The rings considered in the paper are commutative. Here are the main results:</p>
+<p class="p4">A PM * Bézout domain is an elementary divisor ring (a PM * -ring is a ring in which every nonzero prime ideal is contained in a unique maximal ideal).</p>
+<p class="p4">If R is an elementary divisor domain, and S=S(R) is the set of PM-elements of R, then the ring R S is an elementary divisor ring, (a PM-element of R is an element that is contained in a unique maximal ideal. As proved by the authors, the set S(R) is a saturated multiplicatively closed subset of R).</p>
+<p class="p4">If R is a Bézout domain such that U(R)=S(R), then R is an elementary divisor ring if and only if the stable range of R is equal to 1.</p>
+<p class="p4">If R is an elementary divisor domain, then there exists a nonzero element a<span class="s26">∈</span>R such that the stable range of R/Ra is equal to 1.</p>
+<p class="p4">Reviewer: Moshe Roitman (Haifa)</p>
+<p class="p8"><br></p>
+<p class="p5"><span class="s4"><a href="https://zbmath.org/?q=an:1321.13001">Zbl 1321.13001</a> <a href="https://zbmath.org/authors/?q=ai:zabavsky.bogdan-v"><span class="s3">Zabavsky, B.V.</span></a></span> Questions related to the<span class="s46"><i> K</i></span>-theoretical aspect of Bézout rings with various stable range conditions. <i>(English)</i><span class="Apple-converted-space"> </span></p>
+<p class="p12"><span class="s3"><a href="https://zbmath.org/journals/?q=se:00002401">Mat. Stud. 42, No. 1, 89-103 (2014).</a><span class="Apple-converted-space">  </span></span><span class="s6"><b>MR3381393</b></span></p>
+<p class="p5">Summary: We provide a list of open problems that are connected to the commutative and noncommutative ring theory,</p>
+<p class="p5"><span class="s46"><i>K</i></span>-theory and homological algebra. Some problems are solved now completely, some partially, and most of them, remaining still open, are supplemented with ideas and hints.</p>
+<p class="p7"><span class="s6"><b>[PDF] </b><a href="https://www.researchgate.net/profile/Bogdan_Zabavsky/publication/276078363_QUESTIONS_RELATED_TO_THE_K-THEORETICAL_ASPECT_OF_BEZOUT_RINGS_WITH_VARIOUS_STABLE_RANGE_CONDITIONS/links/5550b2f908ae12808b3904cf.pdf"><span class="s47"><b>Questions related to the K-theoretical aspect of Bezout rings with various stable range conditions</b></span></a></span></p>
+<p class="p5">BV Zabavsky - Mat. Stud, 2014 - researchgate.net <span class="Apple-converted-space">  </span><span class="s2"><span class="Apple-converted-space">  </span>Zabavsky4.pdf</span></p>
+<p class="p57">Introduction. The present paper contains a list of questions that were posed by the author to<span class="Apple-converted-space"> </span></p>
+<p class="p57">the participants of the scientific seminar “The Problems of Elementary Divisor Rings” over<span class="Apple-converted-space"> </span></p>
+<p class="p57">the years. The formulated questions vary from the simple checkup questions to the shorten</p>
+<p class="p2"><br></p>
+<p class="p3">Zbl 1335.13016 Zabavsky, B.V.; Pihura, O.V. Gelfand local Bezout domains are elementary divisor rings. (English)<span class="Apple-converted-space">  </span>Carpathian Math. Publ. 7, No. 2, 188-190 (2015)..</p>
+<p class="p3">Zabavsky7.pdf</p>
+<p class="p3">Summary: We introduce the Gelfand local rings. In the case of commutative Gelfand local Bezout domains we show that they are elementary divisor domains.</p>
+<p class="p3"><span class="Apple-converted-space">        </span>As a common generalization of local and (von Neumann) regular rings, Contessa in [1]</p>
+<p class="p3">called that a ring R is a VNL (von Neuman local) ring if for each a<span class="s26">∈</span> R either a or 1− a is a</p>
+<p class="p3">(von Neumann) regular element. In this analogy, we consider Gelfand local rings which are<span class="Apple-converted-space"> </span></p>
+<p class="p58"><i>Gelfand ring </i>if for every <i>a</i>, <i>b </i><span class="s48">∈</span><span class="s19"> </span><i>R </i>such that <i>a </i><span class="s19">+ </span><i>b </i><span class="s19">= </span>1 there exist <i>r</i>, <i>s </i><span class="s48">∈</span><span class="s19"> </span><i>R </i>such that <span class="s19">(</span>1 <span class="s19">+ </span><i>ar</i><span class="s19">)(</span>1 <span class="s19">+ </span><i>bs</i><span class="s19">) = </span>0.</p>
+<p class="p5"><span class="s4"><a href="https://zbmath.org/?q=an:1038.16008">Zbl 1038.16008</a><span class="Apple-converted-space">  </span><a href="https://zbmath.org/authors/?q=ai:zabavsky.bogdan-v"><span class="s3">Zabavs’kyj, B. V.</span></a></span> Reduction of matrices over Bezout rings of stable rank not exceeding 2. <i>(English. Ukrainian original)</i><span class="Apple-converted-space"> </span></p>
+<p class="p12"><span class="s3"><a href="https://zbmath.org/journals/?q=se:00000215">Ukr. Math. J. 55, No. 4, 665-670 (2003); translation from Ukr. Mat. Zh. 55, No. 4, 550-554 (2003).</a><span class="Apple-converted-space">  </span>Zabavsky6.pdf</span></p>
+<p class="p5">The author proves that a commutative Bezout ring is Hermitian if and only if it is a Bezout ring of stable rank 2. A non-commutative Bezout ring of stable rank 1 is a Hermitian ring. This implies that a semi-local Bezout ring is a Hermitian ring (for commutative rings this was proved by <i>M. D. Larsen, W. J. Lewis</i> and <i>T. S. Shores</i> [Trans. Am. Math. Soc. 187, 231-248 (1974; <a href="https://zbmath.org/?q=an:0283.13002"><span class="s4">Zbl 0283.13002</span></a>)]).</p>
+<p class="p5"><span class="Apple-converted-space"> </span>It is also shown that a Bezout domain of stable rank 1 with a two-element group of units is a ring of elementary divisors if and only if it is a duo-domain.</p>
+<p class="p12"><span class="s6">Reviewer: <a href="https://zbmath.org/authors/?q=ai:kochubei.anatoly%2dn"><span class="s3">A. N. Kochubei (Kyïv)</span></a></span></p>
+<p class="p14"><span class="s3"></span><br></p>
+<p class="p5"><span class="s4"><a href="https://zbmath.org/?q=an:1122.16025">Zbl 1122.16025</a><span class="Apple-converted-space">  </span><a href="https://zbmath.org/authors/?q=ai:zabavsky.bogdan-v"><span class="s3">Zabavsky, B.V.</span></a></span>; <a href="https://zbmath.org/authors/?q=ai:kysil.t-n"><span class="s4">Kysil’, T.N.</span></a> Nearly simple elementary divisor domains. <i>(English)</i><span class="Apple-converted-space"> </span></p>
+<p class="p12"><span class="s3"><a href="https://zbmath.org/journals/?q=se:00002097">Bul. Acad. Ştiinţe Repub. Mold., Mat. 2006, No. 3(52), 121-123 (2006).<span class="s10"></span></a></span></p>
+<p class="p5">Summary: It is proved that a nearly simple Bezout domain is an elementary divisor ring if and only if it is 2-simple.<span class="s4"><span class="Apple-converted-space">         </span></span></p>
+<p class="p12"><span class="s3">Bogdan Zabavsky <a href="https://www.researchgate.net/publication/251636898_Nearly_simple_elementary_divisor_domains"><span class="s10">Nearly simple elementary divisor domains<span class="Apple-converted-space">  </span>A</span></a>rticle (PDF Available) · January 2006</span><span class="s49"> </span><span class="s3">with</span><span class="s49"> </span><span class="s3">24 Reads</span></p>
+<p class="p5">It is proved that a nearly simple Bezout domain is an elementary divisor ring if and only if it is 2-simple. According to Kaplansky's definition (1), a ring R is an elementary divisor ring if every matrix over R is equivalent to a diagonal matrix with condition of complete divisibility of the diagonal elements. In (2) Zabavsky proved that a simple Bezout domain is an elementary divisor ring if and only if it is 2-simple. Nearly simple domains were constructed in (3-6). We prove that a nearly simple Bezout domain is an elementary divisor ring if and only if it is 2-simple. 2 Definitions Throughout R will always denote a ring (associative, but not necessarily com- mutative) with 1 6= 0. We shall write Rn for the ring of n ×n matrices with elements in R. By a unit of ring we mean an element with two-sided inverse. We'll say that matrix is unimodular if it is the unit of Rn. We denote by GLn(R) the group of units of Rn. The Jacobson radical of a ring R is denoted by J(R). An n by m matrix A = (aij) is said to be diagonal if aij = 0 for all i 6= j. We say that a matrix A admits a diagonal reduction if there exist unimodular matrices P <span class="s9">∈</span> GLn(R), Q <span class="s9">∈</span> GLm(R) such that P AQ is a diagonal matrix. We shall call two matrices A and B over a ring R equivalent (and write A <span class="s9">∼</span> B) if there exist unimodular matrices P, Q such that B = P AQ. If every matrix over R is equivalent to a diagonal matrix (dij) with the property that every dii is a total divisor of di+1,i+1 (Rdi+1,i+1R <span class="s9">⊆</span> diiR <span class="s9">∩</span> Rdii), then R is an elementary divisor ring. We recall that a ring R is said to be right (left) Hermite if every 1 by 2 (2 by 1) matrix admits a diagonal reduction, and if both, R is an Hermite ring. By a right (left) Bezout ring we mean a ring in which all finitely generated right (left) ideals are principal, and by a Bezout ring a ring which is both right and left Bezout (1). In any simple ring the property RaR = R holds for every element a <span class="s9">∈</span> R \ {0} and some depends on a. As R is a ring with identity then there exist elements</p>
+<p class="p6"><br></p>
+<p class="p7"><span class="s3"><a href="https://arxiv.org/abs/1508.07418"><b>Conditions for stable range of an </b><b>elementary divisor rings</b></a></span><b> arXiv</b></p>
+<p class="p5">B Zabavsky - arXiv preprint arXiv:1508.07418, 2015 - arxiv.org</p>
+<p class="p5">Zabavsky9.pdf</p>
+<p class="p7"><span class="s3"><a href="http://www.tandfonline.com/doi/abs/10.1080/00927872.2016.1259418"><b>Conditions for stable range of an </b><b>elementary divisor rings</b></a></span><b> comm algebra</b></p>
+<p class="p5"><span class="Apple-converted-space"> </span>Communications in Algebra, 2016 - Taylor &amp; Francis</p>
+<p class="p5">Abstract: Using the concept of ring of Gelfand range 1 we proved that a commutative Bezout<span class="Apple-converted-space"> </span></p>
+<p class="p5">domain is an <b>elementary divisor </b>ring iff it is a ring of Gelfand range 1. Obtained results give a<span class="Apple-converted-space"> </span></p>
+<p class="p5">solution of problem of <b>elementary divisor rings </b>for different classes of commutative Bezout<span class="Apple-converted-space"> </span></p>
+<p class="p42">A commutative ring R is called a Gelfand ring if for any a, b <span class="s48">∈</span> R such that a + b = 1 there exist elements x, y <span class="s48">∈</span> R such that (1 + ax)(1 + by) = 0.<span class="Apple-converted-space"> </span></p>
+<p class="p42">In the case of commutative rings the class of Gelfand rings is the same as the class of PM – rings [8].</p>
+<p class="p6"><br></p>
+<p class="p6"><br></p>
+<p class="p12"><span class="s6"><span class="Apple-converted-space"> </span><a href="https://zbmath.org/?q=an:0933.16028"><span class="s3">Zbl 0933.16028</span></a></span><span class="s3"><span class="Apple-converted-space">  </span><a href="https://zbmath.org/authors/?q=ai:zabavsky.bogdan-v"><span class="s10">Zabavs’kij, B.V.</span></a></span><span class="s6"> <a href="https://zbmath.org/?q=an:01366449"><span class="s3">Rings over which any matrix admits diagonal reduction by elementary transformations.</span></a> <i>(Ukrainian. English, Russian summaries)</i></span></p>
+<p class="p12"><span class="s3"><a href="https://zbmath.org/journals/?q=se:00002401">Mat. Stud. 8, No.2, 136-139 (1997).</a></span><span class="s6"> MSC:  <a href="https://zbmath.org/classification/?q=cc:16U30"><span class="s3">16U30</span></a> <a href="https://zbmath.org/classification/?q=cc:13G05"><span class="s3">13G05</span></a> <a href="https://zbmath.org/classification/?q=cc:13F07"><span class="s3">13F07</span></a> <a href="https://zbmath.org/classification/?q=cc:16S50"><span class="s3">16S50</span></a> <a href="https://zbmath.org/classification/?q=cc:15A21"><span class="s3">15A21</span></a></span></p>
+<p class="p6"><br></p>
+<p class="p12"><span class="s6"><span class="Apple-converted-space"> </span><a href="https://zbmath.org/?q=an:0642.16005"><span class="s3">Zbl 0642.16005</span></a></span><span class="s3"><span class="Apple-converted-space"> </span></span><span class="s6"> <a href="https://zbmath.org/authors/?q=ai:zabavsky.bogdan-v"><span class="s3">Zabavskij, B.V.</span></a> <a href="https://zbmath.org/?q=an:04045933"><span class="s3">Noncommutative elementary divisor rings.</span></a> <i>(English. Russian original)</i></span></p>
+<p class="p12"><span class="s3"><a href="https://zbmath.org/journals/?q=se:00000214">Ukr. Math. J. 39, No.4, 349-353 (1987); translation from Ukr. Mat. Zh. 39, No.4, 440-444 (1987).</a></span><span class="s6"> Reviewer: <a href="https://zbmath.org/authors/?q=G+A+Noskov"><span class="s3">G.A.Noskov</span></a> MSC:  <a href="https://zbmath.org/classification/?q=cc:16U80"><span class="s3">16U80</span></a> <a href="https://zbmath.org/classification/?q=cc:16Dxx"><span class="s3">16Dxx</span></a></span></p>
+<p class="p12"><span class="s3">Zabavsky8.pdf in<span class="Apple-converted-space">  </span>Russian<span class="Apple-converted-space">  </span>Zabavsky8E.pdf</span></p>
+<p class="p7"><span class="s3"><a href="http://link.springer.com/content/pdf/10.1007/BF01060766.pdf"><b>Noncommutative </b><b>elementary divisor rings</b></a></span></p>
+<p class="p5"><b>Elementary divisor rings </b>have been studied by many authors [i, 2]. However, the structure of<span class="Apple-converted-space"> </span></p>
+<p class="p5">these <b>rings </b>in the noncommutative case has been little studied. In this article we obtain a<span class="Apple-converted-space"> </span></p>
+<p class="p5">description of a class of noncom~ nutative domains of <b>elementary </b>details. It is known that the<span class="Apple-converted-space"> </span></p>
+<p class="p12"><span class="s3"><a href="https://scholar.google.com/scholar?cites=7773743762464459631&amp;as_sdt=5,39&amp;sciodt=0,39&amp;hl=en">Cited by 3</a></span><span class="s6"> <a href="https://scholar.google.com/scholar?q=related:b0ua0MPi4WsJ:scholar.google.com/&amp;hl=en&amp;as_sdt=0,39"><span class="s3">Related articles</span></a> <a href="https://scholar.google.com/scholar?cluster=7773743762464459631&amp;hl=en&amp;as_sdt=0,39"><span class="s3">All 4 versions</span></a> <a href="https://scholar.google.com/scholar?start=10&amp;q=allintitle:+elementary+divisor+rings&amp;hl=en&amp;as_sdt=0,39#"><span class="s3"><span class="Apple-converted-space"> </span></span></a></span></p>
+<p class="p14"><span class="s3"></span><br></p>
+<p class="p3">Zbl 1310.16002 Zabavsky, B.V.; Bilavska, S.I. Decomposition of finitely generated projective modules over Bezout ring. (English)<span class="Apple-converted-space">  </span>Mat. Stud. 40, No. 1, 104-107 (2013). MSC:<span class="Apple-converted-space">  </span>16D40 16D25 16U30 MR3154355 <span class="Apple-converted-space"> </span></p>
+<p class="p3">Bilavska2.pdf</p>
+<p class="p14"><span class="s3"></span><br></p>
+<p class="p6"><br></p>
+<p class="p6"><br></p>
+<p class="p13"><br></p>
+<p class="p5"><span class="s40"><b>MR0680358</b></span><span class="s41"> </span><span class="s40"><b>(85c:13011)</b></span> <span class="s41">Zaks, Abraham</span> On a problem of Kaplansky. II. Every finitely generated abelian group is the restricted Grothendieck group of a local, Noetherian, Krull domain. <span class="s40"><i>J. Algebra</i></span> <span class="s41">78 (1982), no. 2,</span> 265--272. <span class="s41">13D15 (13F20 20K05) Zaks.pdf</span></p>
+<p class="p8"><br></p>
+<p class="p4">MR0554847 (81k:13004) Zaks, Abraham On a problem of Kaplansky. J. Algebra 61 (1979), no. 1, 1–15. (Reviewer: Douglas L. Costa), 13D15 (13F20)</p>
+<p class="p4">Is every abelian group $G$G is the reduced Grothendieck group $\widetilde{G_0(R)}$of some local Noetherian domain $R$?</p>
+<p class="p8"><br></p>
+<p class="p8"><br></p>
+<p class="p12"><span class="s6"><b>MR3413171</b> <a href="http://www.ams.org.ezaccess.libraries.psu.edu/mathscinet/help/fullitem_help_full.html#indexed">Indexed</a><span class="Apple-converted-space">  </span><a href="http://www.ams.org.ezaccess.libraries.psu.edu/mathscinet/search/author.html?mrauthid=1019599"><span class="s3">Zheng, Licui</span></a><a href="http://www.ams.org.ezaccess.libraries.psu.edu/mathscinet/search/institution.html?code=PRC-CSU-SMS"><span class="s3">(PRC-CSU-SMS)</span></a>; <a href="http://www.ams.org.ezaccess.libraries.psu.edu/mathscinet/search/author.html?mrauthid=339820"><span class="s3">Liu, Jinwang</span></a><a href="http://www.ams.org.ezaccess.libraries.psu.edu/mathscinet/search/institution.html?code=PRC-HNUST-MCS"><span class="s3">(PRC-HNUST-MCS)</span></a>; <a href="http://www.ams.org.ezaccess.libraries.psu.edu/mathscinet/search/author.html?mrauthid=610087"><span class="s3">Liu, Weijun</span></a><a href="http://www.ams.org.ezaccess.libraries.psu.edu/mathscinet/search/institution.html?code=PRC-CSU-SMS"><span class="s3">(PRC-CSU-SMS)</span></a></span></p>
+<p class="p5">Generalized Serre problem over elementary divisor rings. (English summary)<span class="Apple-converted-space">  </span><a href="http://www.ams.org.ezaccess.libraries.psu.edu/mathscinet/search/journaldoc.html?id=5948"><span class="s7"><i>Math. Probl. Eng.</i></span></a> <a href="http://www.ams.org.ezaccess.libraries.psu.edu/mathscinet/search/publications.html?pg1=ISSI&amp;s1=328520"><span class="s7">2015, </span></a>Art. ID 926046, 5 pp.<span class="Apple-converted-space">  </span><a href="http://www.ams.org.ezaccess.libraries.psu.edu/mathscinet/search/mscdoc.html?code=15B33,%2820H25%29"><span class="s4">15B33 (20H25)</span></a></p>
+<p class="p7"><span class="s3"><a href="https://www.hindawi.com/journals/mpe/2015/926046/abs/"><b>Generalized serre problem over </b><b>elementary divisor rings</b></a></span></p>
+<p class="p17"><span class="s4"><a href="https://scholar.google.com/citations?user=iS_2K5oAAAAJ&amp;hl=en&amp;oi=sra">L Zheng</a></span>, J Liu, W Liu - Mathematical Problems in Engineering, 2015 - hindawi.com Zheng.pdf</p>
+<p class="p17">Matrix factorization has been widely investigated in the past years due to its fundamental<span class="Apple-converted-space"> </span></p>
+<p class="p17">importance in several areas of engineering. This paper investigates completion and zero<span class="Apple-converted-space"> </span></p>
+<p class="p17">prime factorization of matrices over <b>elementary divisor rings </b>(EDR). The Serre problem and<span class="Apple-converted-space"> </span></p>
+<p class="p59"><span class="s3"><a href="https://scholar.google.com/scholar?q=related:d8EjcaA0K-4J:scholar.google.com/&amp;hl=en&amp;as_sdt=0,39">Related articles</a></span><span class="s6"> <a href="https://scholar.google.com/scholar?cluster=17161868668722987383&amp;hl=en&amp;as_sdt=0,39"><span class="s50">All 7 versions</span></a> <a href="https://scholar.google.com/scholar?start=10&amp;q=allintitle:+elementary+divisor+rings&amp;hl=en&amp;as_sdt=0,39#"><span class="s50">Cite</span></a> <a href="https://scholar.google.com/scholar?start=10&amp;q=allintitle:+elementary+divisor+rings&amp;hl=en&amp;as_sdt=0,39#"><span class="s50">Save</span></a> <a href="https://scholar.google.com/scholar?start=10&amp;q=allintitle:+elementary+divisor+rings&amp;hl=en&amp;as_sdt=0,39#"><span class="s50">More</span></a></span></p>
+<p class="p8"><br></p>
+<p class="p8"><br></p>
+<p class="p8"><br></p>
+<p class="p8"><br></p>
+<p class="p8"><br></p>
+<p class="p8"><br></p>
+<p class="p8"><br></p>
+<p class="p8"><br></p>
+<p class="p8"><br></p>
+</body>
+</html>

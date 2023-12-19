@@ -1,0 +1,24 @@
+From: "Christine Bowers" <clb5335@psu.edu>
+Date: December 2, 2010 12:46:10 PM EST
+To: Leon Vaserstein <vstein@math.psu.edu>
+Subject: Midterm 3 Solutions
+
+1. Saddle Point Value of Game=1 Optimal Solution for Row Player: (1,0,0,0,0,0)T Optimal Solution for Column player: (1,0,0,0,0,0,0)  2. No Saddle Points Value of Game=2 An optimal solution (strategy)  for Row player: (0,0, .5, 0, .5)T An optimal solution (strategy)  for column player: (0, 2/3, 0, 1/3, 0, 0, 0) 
+3. No Saddle Points
+Value of Game  10/13 (added by LV)  ~0.76923
+An approximately optimal solution (strategy)  for row player: (0.15385,0.23077,0.61538)T
+An approximately optimal solution (strategy)  for column player: (0.53846,0.30769,0,0.15385)
+
+
+4.
+y=(-3/t) +3
+x= (-3t+6)/t
+when t ≠ 0;  (added by LV)
+no solution when t=0
+
+5. 
+mean=22/13
+central value=0
+mode=0
+midrange=3
+

@@ -1,0 +1,828 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="GENERATOR" content="Mozilla/4.61 [en] (X11; U; SunOS 5.7 sun4u) [Netscape]">
+</head>
+<body>
+From jrs296@psu.edu Thu Apr 20 20:20 EDT 2000
+<br>X-Mailer: Microsoft Outlook Express Macintosh Edition - 4.5 (0410)
+<br>Date: Thu, 20 Apr 2000 20:20:20 -0400
+<br>Subject: Code for performing Simplex Method
+<br>From: "Josh Sweetwood" &lt;jrs296@psu.edu>
+<br>To: vstein@math.psu.edu
+<br>Mime-version: 1.0
+<br>X-Priority: 3
+<br>Content-Type: multipart/mixed; boundary="MS_Mac_OE_3039106821_258926_MIME_Part"
+<br>Content-Length: 15845
+<p>Dr. Vaserstein,
+<p>&nbsp;&nbsp;&nbsp; This is the C++ code for performing the Simplex Method.&nbsp;
+It is
+<br>relatively simple to use.&nbsp; You just enter a matrix in the standard
+tableau
+<br>for we use in class and it shows you the steps it goes through to get
+the
+<br>answer (max).&nbsp; I can talk about it in class on Tuesday.&nbsp;
+If you have a
+<br>problem with the format of the attachments just let me know.&nbsp;
+Feel free to
+<br>e-mail me with any questions.&nbsp; Thanks.
+<p>Josh Sweetwoo
+<br>---------
+<br>// Fraction Class by Josh Sweetwood
+<p>#include &lt;iostream.h>
+<p>class Fraction
+<br>{
+<br>&nbsp;private:
+<br>&nbsp; int Numer;
+<br>&nbsp; int Denom;
+<br>&nbsp;
+<br>&nbsp; const Fraction Reduce( );
+<br>&nbsp;
+<br>&nbsp;public:
+<br>&nbsp; // Constructors
+<br>&nbsp; Fraction( int Num = 0, int Den = 1 ) :
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Numer( Num ), Denom( Den ) { }
+<br>&nbsp; Fraction( const Fraction &amp; Value );
+<br>&nbsp;
+<br>&nbsp; // Destructor
+<br>&nbsp; ~Fraction( ) { }
+<br>&nbsp;
+<br>&nbsp; // Assignments
+<br>&nbsp; const Fraction &amp; operator = ( const Fraction &amp; Value
+);
+<br>&nbsp; const Fraction &amp; operator += ( const Fraction &amp; Value
+);
+<br>&nbsp; const Fraction &amp; operator -= ( const Fraction &amp; Value
+);
+<br>&nbsp; const Fraction &amp; operator *= ( const Fraction &amp; Value
+);
+<br>&nbsp; const Fraction &amp; operator /= ( const Fraction &amp; Value
+);
+<br>&nbsp;
+<br>&nbsp; // Accessors
+<br>&nbsp; int Get_Numer( ) const { return Numer; }
+<br>&nbsp; int Get_Denom( ) const { return Denom; }
+<br>&nbsp; double Get_Decimal( )
+<br>&nbsp; {
+<br>&nbsp;&nbsp; double Decimal;
+<br>&nbsp;&nbsp; Decimal = 0;
+<br>&nbsp;&nbsp; if ( Denom != 0 )
+<br>&nbsp;&nbsp;&nbsp; Decimal = ( double(Numer) / double(Denom) );
+<br>&nbsp;&nbsp; return Decimal;
+<br>&nbsp; }
+<br>&nbsp;
+<br>&nbsp; // Nonmember friends
+<br>&nbsp;private:
+<br>&nbsp; friend ostream &amp; operator &lt;&lt;
+<br>&nbsp;&nbsp; ( ostream &amp; Out, const Fraction &amp; Value );
+<br>&nbsp; friend Fraction operator *
+<br>&nbsp;&nbsp; ( const Fraction &amp; A, const Fraction &amp; B );
+<br>&nbsp; friend Fraction operator /
+<br>&nbsp;&nbsp; ( const Fraction &amp; A, const Fraction &amp; B );
+<br>&nbsp; friend Fraction operator +
+<br>&nbsp;&nbsp; ( const Fraction &amp; A, const Fraction &amp; B );
+<br>&nbsp; friend Fraction operator -
+<br>&nbsp;&nbsp; ( const Fraction &amp; A, const Fraction &amp; B );
+<br>&nbsp; friend Fraction operator -
+<br>&nbsp;&nbsp; ( const Fraction &amp; A );
+<br>&nbsp; friend int Gcd ( int M, int N );
+<br>&nbsp; friend int operator &lt;
+<br>&nbsp;&nbsp; ( const Fraction &amp; A, const Fraction &amp; B );
+<br>&nbsp; friend int operator >
+<br>&nbsp;&nbsp; ( const Fraction &amp; A, const Fraction &amp; B );
+<br>&nbsp; friend int operator &lt;=
+<br>&nbsp;&nbsp; ( const Fraction &amp; A, const Fraction &amp; B );
+<br>&nbsp; friend int operator >=
+<br>&nbsp;&nbsp; ( const Fraction &amp; A, const Fraction &amp; B );
+<br>&nbsp; friend int operator ==
+<br>&nbsp;&nbsp; ( const Fraction &amp; A, const Fraction &amp; B );
+<br>&nbsp; friend int operator !=
+<br>&nbsp;&nbsp; ( const Fraction &amp; A, const Fraction &amp; B );
+<br>&nbsp;};
+<br>&nbsp;
+<br>&nbsp;//------------------------------------------------------//
+<br>&nbsp;// Implementation Starts Here&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+//
+<br>&nbsp;//------------------------------------------------------//
+<br>&nbsp;
+<br>&nbsp;Fraction::Fraction( const Fraction &amp; Value )
+<br>&nbsp;{
+<br>&nbsp; Numer = Value.Numer;
+<br>&nbsp; Denom = Value.Denom;
+<br>&nbsp;}
+<br>&nbsp;
+<br>&nbsp;int Gcd ( int M, int N )
+<br>&nbsp;{
+<br>&nbsp; int Rem;
+<br>&nbsp;
+<br>&nbsp; if (M &lt; 0 )
+<br>&nbsp;&nbsp; M *= -1;
+<br>&nbsp; if (N &lt; 0 )
+<br>&nbsp;&nbsp; N *= -1;
+<br>&nbsp;
+<br>&nbsp; while ( N > 0 )
+<br>&nbsp; {
+<br>&nbsp;&nbsp; Rem = M % N;
+<br>&nbsp;&nbsp; M = N;
+<br>&nbsp;&nbsp; N = Rem;
+<br>&nbsp; }
+<br>&nbsp; return M;
+<br>&nbsp;}
+<br>&nbsp;
+<br>&nbsp;const Fraction Fraction::Reduce ( )
+<br>&nbsp;{
+<br>&nbsp; int ThisGcd;
+<br>&nbsp;
+<br>&nbsp; ThisGcd = Gcd( Numer, Denom );
+<br>&nbsp; Numer /= ThisGcd;
+<br>&nbsp; Denom /= ThisGcd;
+<br>&nbsp;
+<br>&nbsp; if ( (Numer &lt; 0 &amp;&amp; Denom &lt; 0) || (Numer >= 0 &amp;&amp;
+Denom &lt; 0) )
+<br>&nbsp; {
+<br>&nbsp;&nbsp; Numer *= -1;
+<br>&nbsp;&nbsp; Denom *= -1;
+<br>&nbsp; }
+<br>&nbsp;
+<br>&nbsp; return *this;
+<br>&nbsp;}
+<br>&nbsp;
+<br>&nbsp;const Fraction &amp; Fraction::operator = ( const Fraction &amp;
+Value )
+<br>&nbsp;{
+<br>&nbsp; if ( this != &amp;Value )
+<br>&nbsp; {
+<br>&nbsp;&nbsp; Numer = Value.Numer;
+<br>&nbsp;&nbsp; Denom = Value.Denom;
+<br>&nbsp;&nbsp; Reduce( );
+<br>&nbsp; }
+<br>&nbsp; return *this;
+<br>&nbsp;}
+<br>&nbsp;
+<br>&nbsp;const Fraction &amp; Fraction::operator += ( const Fraction &amp;
+Value )
+<br>&nbsp;{
+<br>&nbsp; int LHNumer, RHNumer, LHDenom, RHDenom;
+<br>&nbsp; Fraction RValue;
+<br>&nbsp;
+<br>&nbsp; Reduce( );
+<br>&nbsp; RValue = Value;
+<br>&nbsp; RValue.Reduce( );
+<br>&nbsp;
+<br>&nbsp; LHNumer = Numer * RValue.Denom;
+<br>&nbsp; LHDenom = Denom * RValue.Denom;
+<br>&nbsp; RHNumer = RValue.Numer * Denom;
+<br>&nbsp; RHDenom = RValue.Denom * Denom;
+<br>&nbsp;
+<br>&nbsp; Numer = LHNumer + RHNumer;
+<br>&nbsp; Denom = LHDenom;
+<br>&nbsp;
+<br>&nbsp; Reduce( );
+<br>&nbsp;
+<br>&nbsp; return *this;
+<br>&nbsp;}
+<br>&nbsp;
+<br>&nbsp;const Fraction &amp; Fraction::operator -= ( const Fraction &amp;
+Value )
+<br>&nbsp;{
+<br>&nbsp; int LHNumer, RHNumer, LHDenom, RHDenom;
+<br>&nbsp; Fraction RValue;
+<br>&nbsp;
+<br>&nbsp; Reduce( );
+<br>&nbsp; RValue = Value;
+<br>&nbsp; RValue.Reduce( );
+<br>&nbsp;
+<br>&nbsp; LHNumer = Numer * RValue.Denom;
+<br>&nbsp; LHDenom = Denom * RValue.Denom;
+<br>&nbsp; RHNumer = RValue.Numer * Denom;
+<br>&nbsp; RHDenom = RValue.Denom * Denom;
+<br>&nbsp;
+<br>&nbsp; Numer = LHNumer - RHNumer;
+<br>&nbsp; Denom = LHDenom;
+<br>&nbsp;
+<br>&nbsp; Reduce( );
+<br>&nbsp;
+<br>&nbsp; return *this;
+<br>&nbsp;}
+<br>&nbsp;
+<br>&nbsp;const Fraction &amp; Fraction::operator *= ( const Fraction &amp;
+Value )
+<br>&nbsp;{
+<br>&nbsp; Fraction RValue;
+<br>&nbsp;
+<br>&nbsp; Reduce( );
+<br>&nbsp; RValue = Value;
+<br>&nbsp; RValue.Reduce( );
+<br>&nbsp;
+<br>&nbsp; Numer *= RValue.Numer;
+<br>&nbsp; Denom *= RValue.Denom;
+<br>&nbsp;
+<br>&nbsp; Reduce( );
+<br>&nbsp;
+<br>&nbsp; return *this;
+<br>&nbsp;}
+<br>&nbsp;
+<br>&nbsp;const Fraction &amp; Fraction::operator /= ( const Fraction &amp;
+Value )
+<br>&nbsp;{
+<br>&nbsp; Fraction RValue;
+<br>&nbsp;
+<br>&nbsp; Reduce( );
+<br>&nbsp; RValue = Value;
+<br>&nbsp; RValue.Reduce( );
+<br>&nbsp;
+<br>&nbsp; Numer *= RValue.Denom;
+<br>&nbsp; Denom *= RValue.Numer;
+<br>&nbsp;
+<br>&nbsp; Reduce( );
+<br>&nbsp;
+<br>&nbsp; return *this;
+<br>&nbsp;}
+<br>&nbsp;
+<br>&nbsp;ostream &amp; operator &lt;&lt; ( ostream &amp; Out, const Fraction
+&amp; Value )
+<br>&nbsp;{
+<br>&nbsp; Fraction RValue;
+<br>&nbsp;
+<br>&nbsp; RValue = Value;
+<br>&nbsp; RValue.Reduce( );
+<br>&nbsp;
+<br>&nbsp; if ( RValue.Denom == 0 )
+<br>&nbsp;&nbsp; Out &lt;&lt; "INF";
+<br>&nbsp; else if ( RValue.Denom == 1 || RValue.Numer == 0 )
+<br>&nbsp;&nbsp; Out &lt;&lt; RValue.Numer;
+<br>&nbsp; else
+<br>&nbsp;&nbsp; Out &lt;&lt; RValue.Numer &lt;&lt; "/" &lt;&lt; RValue.Denom;
+<br>&nbsp;
+<br>&nbsp; return Out;
+<br>&nbsp;}
+<br>&nbsp;
+<br>&nbsp;Fraction operator + ( const Fraction &amp; A, const Fraction
+&amp; B )
+<br>&nbsp;{
+<br>&nbsp; int LHNumer, RHNumer, LHDenom, RHDenom;
+<br>&nbsp; Fraction RA, RB, Answer;
+<br>&nbsp;
+<br>&nbsp; RA = A;
+<br>&nbsp; RB = B;
+<br>&nbsp;
+<br>&nbsp; RA.Reduce( );
+<br>&nbsp; RB.Reduce( );
+<br>&nbsp;
+<br>&nbsp; LHNumer = RA.Numer * RB.Denom;
+<br>&nbsp; LHDenom = RA.Denom * RB.Denom;
+<br>&nbsp; RHNumer = RB.Numer * RA.Denom;
+<br>&nbsp; RHDenom = RB.Denom * RA.Denom;
+<br>&nbsp;
+<br>&nbsp; Answer.Numer = LHNumer + RHNumer;
+<br>&nbsp; Answer.Denom = LHDenom;
+<br>&nbsp;
+<br>&nbsp; Answer.Reduce( );
+<br>&nbsp;
+<br>&nbsp; return Answer;
+<br>&nbsp;}
+<br>&nbsp;
+<br>&nbsp;Fraction operator - ( const Fraction &amp; A, const Fraction
+&amp; B )
+<br>&nbsp;{
+<br>&nbsp; int LHNumer, RHNumer, LHDenom, RHDenom;
+<br>&nbsp; Fraction RA, RB, Answer;
+<br>&nbsp;
+<br>&nbsp; RA = A;
+<br>&nbsp; RB = B;
+<br>&nbsp;
+<br>&nbsp; RA.Reduce( );
+<br>&nbsp; RB.Reduce( );
+<br>&nbsp;
+<br>&nbsp; LHNumer = RA.Numer * RB.Denom;
+<br>&nbsp; LHDenom = RA.Denom * RB.Denom;
+<br>&nbsp; RHNumer = RB.Numer * RA.Denom;
+<br>&nbsp; RHDenom = RB.Denom * RA.Denom;
+<br>&nbsp;
+<br>&nbsp; Answer.Numer = LHNumer - RHNumer;
+<br>&nbsp; Answer.Denom = LHDenom;
+<br>&nbsp;
+<br>&nbsp; Answer.Reduce( );
+<br>&nbsp;
+<br>&nbsp; return Answer;
+<br>&nbsp;}
+<br>&nbsp;
+<br>&nbsp;Fraction operator - ( const Fraction &amp; A )
+<br>&nbsp;{
+<br>&nbsp; Fraction RA;
+<br>&nbsp;
+<br>&nbsp; RA = A;
+<br>&nbsp;
+<br>&nbsp; RA.Reduce( );
+<br>&nbsp;
+<br>&nbsp; return Fraction ( -RA.Numer, RA.Denom );
+<br>&nbsp;}
+<br>&nbsp;
+<br>&nbsp;Fraction operator * ( const Fraction &amp; A, const Fraction
+&amp; B )
+<br>&nbsp;{
+<br>&nbsp; Fraction RA, RB, Answer;
+<br>&nbsp;
+<br>&nbsp; RA = A;
+<br>&nbsp; RB = B;
+<br>&nbsp;
+<br>&nbsp; RA.Reduce( );
+<br>&nbsp; RB.Reduce( );
+<br>&nbsp;
+<br>&nbsp; Answer = Fraction ( RA.Numer * RB.Numer, RA.Denom * RB.Denom
+);
+<br>&nbsp;
+<br>&nbsp; Answer.Reduce( );
+<br>&nbsp;
+<br>&nbsp; return Answer;
+<br>&nbsp;}
+<br>&nbsp;
+<br>&nbsp;Fraction operator / ( const Fraction &amp; A, const Fraction
+&amp; B )
+<br>&nbsp;{
+<br>&nbsp; Fraction RA, RB, Answer;
+<br>&nbsp;
+<br>&nbsp; RA = A;
+<br>&nbsp; RB = B;
+<br>&nbsp;
+<br>&nbsp; RA.Reduce( );
+<br>&nbsp; RB.Reduce( );
+<br>&nbsp;
+<br>&nbsp; Answer = Fraction ( RA.Numer * RB.Denom, RA.Denom * RB.Numer
+);
+<br>&nbsp;
+<br>&nbsp; Answer.Reduce( );
+<br>&nbsp;
+<br>&nbsp; return Answer;
+<br>&nbsp;}
+<br>&nbsp;
+<br>&nbsp;int operator &lt; ( const Fraction &amp; A, const Fraction &amp;
+B )
+<br>&nbsp;{
+<br>&nbsp; int LHCross, RHCross;
+<br>&nbsp; Fraction RA, RB;
+<br>&nbsp;
+<br>&nbsp; RA = A;
+<br>&nbsp; RB = B;
+<br>&nbsp;
+<br>&nbsp; RA.Reduce( );
+<br>&nbsp; RB.Reduce( );
+<br>&nbsp;
+<br>&nbsp; LHCross = B.Denom * A.Numer;
+<br>&nbsp; RHCross = A.Denom * B.Numer;
+<br>&nbsp;
+<br>&nbsp; if ( LHCross &lt; RHCross )
+<br>&nbsp;&nbsp; return 1;
+<br>&nbsp; else
+<br>&nbsp;&nbsp; return 0;
+<br>&nbsp;}
+<br>&nbsp;
+<br>&nbsp;int operator > ( const Fraction &amp; A, const Fraction &amp;
+B )
+<br>&nbsp;{
+<br>&nbsp; int LHCross, RHCross;
+<br>&nbsp; Fraction RA, RB;
+<br>&nbsp;
+<br>&nbsp; RA = A;
+<br>&nbsp; RB = B;
+<br>&nbsp;
+<br>&nbsp; RA.Reduce( );
+<br>&nbsp; RB.Reduce( );
+<br>&nbsp;
+<br>&nbsp; LHCross = B.Denom * A.Numer;
+<br>&nbsp; RHCross = A.Denom * B.Numer;
+<br>&nbsp;
+<br>&nbsp; if ( LHCross > RHCross )
+<br>&nbsp;&nbsp; return 1;
+<br>&nbsp; else
+<br>&nbsp;&nbsp; return 0;
+<br>&nbsp;}
+<br>&nbsp;
+<br>&nbsp;int operator &lt;= ( const Fraction &amp; A, const Fraction &amp;
+B )
+<br>&nbsp;{
+<br>&nbsp; int LHCross, RHCross;
+<br>&nbsp; Fraction RA, RB;
+<br>&nbsp;
+<br>&nbsp; RA = A;
+<br>&nbsp; RB = B;
+<br>&nbsp;
+<br>&nbsp; RA.Reduce( );
+<br>&nbsp; RB.Reduce( );
+<br>&nbsp;
+<br>&nbsp; LHCross = B.Denom * A.Numer;
+<br>&nbsp; RHCross = A.Denom * B.Numer;
+<br>&nbsp;
+<br>&nbsp; if ( LHCross &lt;= RHCross )
+<br>&nbsp;&nbsp; return 1;
+<br>&nbsp; else
+<br>&nbsp;&nbsp; return 0;
+<br>&nbsp;}
+<br>&nbsp;
+<br>&nbsp;int operator >= ( const Fraction &amp; A, const Fraction &amp;
+B )
+<br>&nbsp;{
+<br>&nbsp; int LHCross, RHCross;
+<br>&nbsp; Fraction RA, RB;
+<br>&nbsp;
+<br>&nbsp; RA = A;
+<br>&nbsp; RB = B;
+<br>&nbsp;
+<br>&nbsp; RA.Reduce( );
+<br>&nbsp; RB.Reduce( );
+<br>&nbsp;
+<br>&nbsp; LHCross = B.Denom * A.Numer;
+<br>&nbsp; RHCross = A.Denom * B.Numer;
+<br>&nbsp;
+<br>&nbsp; if ( LHCross >= RHCross )
+<br>&nbsp;&nbsp; return 1;
+<br>&nbsp; else
+<br>&nbsp;&nbsp; return 0;
+<br>&nbsp;}
+<br>&nbsp;
+<br>&nbsp;int operator == ( const Fraction &amp; A, const Fraction &amp;
+B )
+<br>&nbsp;{
+<br>&nbsp; Fraction RA, RB;
+<br>&nbsp;
+<br>&nbsp; RA = A;
+<br>&nbsp; RB = B;
+<br>&nbsp;
+<br>&nbsp; RA.Reduce( );
+<br>&nbsp; RB.Reduce( );
+<br>&nbsp;
+<br>&nbsp; if ( RA.Numer == RB.Numer &amp;&amp; RA.Denom == RB.Denom )
+<br>&nbsp;&nbsp; return 1;
+<br>&nbsp; else
+<br>&nbsp;&nbsp; return 0;
+<br>&nbsp;}
+<br>&nbsp;
+<br>&nbsp;int operator != ( const Fraction &amp; A, const Fraction &amp;
+B )
+<br>&nbsp;{
+<br>&nbsp; Fraction RA, RB;
+<br>&nbsp;
+<br>&nbsp; RA = A;
+<br>&nbsp; RB = B;
+<br>&nbsp;
+<br>&nbsp; RA.Reduce( );
+<br>&nbsp; RB.Reduce( );
+<br>&nbsp;
+<br>&nbsp; if ( RA.Numer != RB.Numer || RA.Denom != RB.Denom )
+<br>&nbsp;&nbsp; return 1;
+<br>&nbsp; else
+<br>&nbsp;&nbsp; return 0;
+<br>&nbsp;}
+<br>------------
+<br>#include "Fraction.h"
+<p>const int Maxcols = 10;
+<br>const int Maxrows = 10;
+<p>Fraction Matrix[Maxrows][Maxcols];
+<p>// Function Prototypes because my compiler sucks
+<br>void Enter_Dimensions(int &amp; x, int &amp; y);
+<br>void Print_Matrix(int rows, int cols);
+<br>void Enter_Matrix(int rows, int cols);
+<br>void Pivot(int rows, int cols, int prow, int pcol);
+<br>int Feasible(int rows, int cols);
+<br>int Optimal(int rows, int cols);
+<br>int Bad_Row(int rows, int cols);
+<br>int Bad_Column(int rows, int cols);
+<br>void Phase1_Pick_Pivot(int rows, int cols, int &amp; prow, int &amp;
+pcol);
+<br>void Phase2_Pick_Pivot(int rows, int cols, int &amp; prow, int &amp;
+pcol);
+<p>void Enter_Dimensions(int &amp; x, int &amp; y)
+<br>{
+<br>&nbsp;while ( x &lt;= 0 || x > Maxrows )
+<br>&nbsp;{
+<br>&nbsp; cout &lt;&lt; "Enter the number of&nbsp;&nbsp;&nbsp; Rows (max
+= " &lt;&lt; Maxrows &lt;&lt; "): ";
+<br>&nbsp; cin >> x;
+<br>&nbsp;}
+<br>&nbsp;while ( y &lt;= 0 || y > Maxcols )
+<br>&nbsp;{
+<br>&nbsp; cout &lt;&lt; "Enter the number of Columns (max = " &lt;&lt;
+Maxcols &lt;&lt; "): ";
+<br>&nbsp; cin >> y;
+<br>&nbsp;}
+<br>}
+<p>void Print_Matrix(int rows, int cols)
+<br>{
+<br>&nbsp;for (int i = 0; i &lt; rows; i++)
+<br>&nbsp;{
+<br>&nbsp; cout &lt;&lt; "{";
+<br>&nbsp; for (int j = 0; j &lt; cols; j++)
+<br>&nbsp; {
+<br>&nbsp;&nbsp; cout &lt;&lt; Matrix[i][j];
+<br>&nbsp;&nbsp; if ( (j + 1) &lt; cols )
+<br>&nbsp;&nbsp;&nbsp; cout &lt;&lt; ",";
+<br>&nbsp; }&nbsp; cout &lt;&lt; "}" &lt;&lt; endl;
+<br>&nbsp;}
+<br>}
+<p>void Enter_Matrix(int rows, int cols)
+<br>{
+<br>&nbsp;int entry;
+<br>&nbsp;
+<br>&nbsp;for (int i = 0; i &lt; rows; i++)
+<br>&nbsp;{
+<br>&nbsp; for (int j = 0; j &lt; cols; j++)
+<br>&nbsp; {
+<br>&nbsp;&nbsp; cout &lt;&lt; "Enter integer for row " &lt;&lt; (i+1)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;&lt; ", column " &lt;&lt;
+(j+1) &lt;&lt; ": ";
+<br>&nbsp;&nbsp; cin >> entry;
+<br>&nbsp;&nbsp; Matrix[i][j] = entry;
+<br>&nbsp; }
+<br>&nbsp;}
+<br>}
+<p>void Pivot(int rows, int cols, int prow, int pcol)
+<br>{
+<br>&nbsp;Fraction Orig_Matrix[Maxrows][Maxcols];
+<br>&nbsp;
+<br>&nbsp;// Save a copy of Matrix before pivoting
+<br>&nbsp;for (int i = 0; i &lt; rows; i++)
+<br>&nbsp;{
+<br>&nbsp; for (int j = 0; j &lt; cols; j++)
+<br>&nbsp; {
+<br>&nbsp;&nbsp; Orig_Matrix[i][j] = Matrix[i][j];
+<br>&nbsp; }
+<br>&nbsp;}
+<br>&nbsp;
+<br>&nbsp;// Calculate "A"
+<br>&nbsp;Matrix[prow][pcol] = 1 / Orig_Matrix[prow][pcol];
+<br>&nbsp;
+<br>&nbsp;// Calculate "B"
+<br>&nbsp;for (int j = 0; j &lt; pcol; j++)
+<br>&nbsp; Matrix[prow][j] = Orig_Matrix[prow][j] / Orig_Matrix[prow][pcol];
+<br>&nbsp;
+<br>&nbsp;for (int j = (pcol+1); j &lt; cols; j++)
+<br>&nbsp; Matrix[prow][j] = Orig_Matrix[prow][j] / Orig_Matrix[prow][pcol];
+<br>&nbsp;
+<br>&nbsp;// Calculate "C"
+<br>&nbsp;for (int i = 0; i &lt; prow; i++)
+<br>&nbsp; Matrix[i][pcol] = -(Orig_Matrix[i][pcol] / Orig_Matrix[prow][pcol]);
+<br>&nbsp;
+<br>&nbsp;for (int i = (prow+1); i &lt; rows; i++)
+<br>&nbsp; Matrix[i][pcol] = -(Orig_Matrix[i][pcol] / Orig_Matrix[prow][pcol]);
+<br>&nbsp;
+<br>&nbsp;// Calculate "D"
+<br>&nbsp;for (int i = 0; i &lt; prow; i++)
+<br>&nbsp;{
+<br>&nbsp; for (int j = 0; j &lt; pcol; j++)
+<br>&nbsp; {
+<br>&nbsp;&nbsp; Matrix[i][j] = (Orig_Matrix[i][j] -
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ((Orig_Matrix[prow][j] * Orig_Matrix[i][pcol])
+/
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Orig_Matrix[prow][pcol]));
+<br>&nbsp; }
+<br>&nbsp;}
+<br>&nbsp;
+<br>&nbsp;for (int i = (prow+1); i &lt; rows; i++)
+<br>&nbsp;{
+<br>&nbsp; for (int j = 0; j &lt; pcol; j++)
+<br>&nbsp; {
+<br>&nbsp;&nbsp; Matrix[i][j] = (Orig_Matrix[i][j] -
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ((Orig_Matrix[prow][j] * Orig_Matrix[i][pcol])
+/
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Orig_Matrix[prow][pcol]));
+<br>&nbsp; }
+<br>&nbsp;}
+<br>&nbsp;
+<br>&nbsp;for (int i = 0; i &lt; prow; i++)
+<br>&nbsp;{
+<br>&nbsp; for (int j = (pcol+1); j &lt; cols; j++)
+<br>&nbsp; {
+<br>&nbsp;&nbsp; Matrix[i][j] = (Orig_Matrix[i][j] -
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ((Orig_Matrix[prow][j] * Orig_Matrix[i][pcol])
+/
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Orig_Matrix[prow][pcol]));
+<br>&nbsp; }
+<br>&nbsp;}
+<br>&nbsp;
+<br>&nbsp;for (int i = (prow+1); i &lt; rows; i++)
+<br>&nbsp;{
+<br>&nbsp; for (int j = (pcol+1); j &lt; cols; j++)
+<br>&nbsp; {
+<br>&nbsp;&nbsp; Matrix[i][j] = (Orig_Matrix[i][j] -
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ((Orig_Matrix[prow][j] * Orig_Matrix[i][pcol])
+/
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Orig_Matrix[prow][pcol]));
+<br>&nbsp; }
+<br>&nbsp;}
+<br>&nbsp;
+<br>}
+<p>int Feasible(int rows, int cols)
+<br>{
+<br>&nbsp;int is_feasible = 1;
+<br>&nbsp;
+<br>&nbsp;for (int i = 0; i &lt; (rows-1); i++)
+<br>&nbsp;{
+<br>&nbsp; if ( Matrix[i][cols-1] &lt; 0 )
+<br>&nbsp;&nbsp; is_feasible = 0;
+<br>&nbsp;}
+<br>&nbsp;
+<br>&nbsp;return is_feasible;
+<br>}
+<p>int Optimal(int rows, int cols)
+<br>{
+<br>&nbsp;int is_optimal = 1;
+<br>&nbsp;
+<br>&nbsp;for (int j = 0; j &lt; (cols-1); j++)
+<br>&nbsp;{
+<br>&nbsp; if ( Matrix[rows-1][j] > 0 )
+<br>&nbsp;&nbsp; is_optimal = 0;
+<br>&nbsp;}
+<br>&nbsp;
+<br>&nbsp;if ( !Feasible(rows, cols) )
+<br>&nbsp; is_optimal = 0;
+<p>&nbsp;return is_optimal;
+<br>}
+<p>int Bad_Row(int rows, int cols)
+<br>{
+<br>&nbsp;int row_greaterthan_zero = 0, is_bad_row = 0;
+<br>&nbsp;
+<br>&nbsp;for (int i = 0; i &lt; (rows-1); i++)
+<br>&nbsp;{
+<br>&nbsp; row_greaterthan_zero = 1;
+<br>&nbsp; for (int j = 0; j &lt; (cols-1); j++)
+<br>&nbsp; {
+<br>&nbsp;&nbsp; if ( Matrix[i][j] &lt; 0 )
+<br>&nbsp;&nbsp;&nbsp; row_greaterthan_zero = 0;
+<br>&nbsp; }
+<br>&nbsp; if ( row_greaterthan_zero &amp;&amp; (Matrix[i][cols-1] &lt;
+0) )
+<br>&nbsp;&nbsp; is_bad_row = 1;
+<br>&nbsp;}
+<br>&nbsp;
+<br>&nbsp;return is_bad_row;
+<br>}
+<p>int Bad_Column(int rows, int cols)
+<br>{
+<br>&nbsp;int col_lessthan_zero = 0, is_bad_column = 0;
+<br>&nbsp;
+<br>&nbsp;for (int j = 0; j &lt; (cols-1); j++)
+<br>&nbsp;{
+<br>&nbsp; col_lessthan_zero = 1;
+<br>&nbsp; for (int i = 0; i &lt; (rows-1); i++)
+<br>&nbsp; {
+<br>&nbsp;&nbsp; if ( Matrix[i][j] > 0 )
+<br>&nbsp;&nbsp;&nbsp; col_lessthan_zero = 0;
+<br>&nbsp; }
+<br>&nbsp; if ( col_lessthan_zero &amp;&amp; Matrix[rows-1][j] > 0 )
+<br>&nbsp;&nbsp; is_bad_column = 1;
+<br>&nbsp;}
+<br>&nbsp;
+<br>&nbsp;return is_bad_column;
+<br>}
+<p>void Phase1_Pick_Pivot(int rows, int cols, int &amp; prow, int &amp;
+pcol)
+<br>{
+<br>&nbsp;int init_pcol, init_prow;
+<br>&nbsp;int done = 0;
+<br>&nbsp;Fraction Curr_Min_Ratio;
+<br>&nbsp;int Curr_Min_Row;
+<br>&nbsp;
+<br>&nbsp;for (int i = 0; i &lt; (rows-1); i++)
+<br>&nbsp;{
+<br>&nbsp; if ( !done &amp;&amp; Matrix[i][cols-1] &lt; 0 )
+<br>&nbsp; {
+<br>&nbsp;&nbsp; init_prow = i;
+<br>&nbsp;&nbsp; for (int j = 0; j &lt; (cols-1); j++)
+<br>&nbsp;&nbsp; {
+<br>&nbsp;&nbsp;&nbsp; if ( Matrix[init_prow][j] &lt; 0 )
+<br>&nbsp;&nbsp;&nbsp; {
+<br>&nbsp;&nbsp;&nbsp;&nbsp; init_pcol = j;
+<br>&nbsp;&nbsp;&nbsp;&nbsp; done = 1;
+<br>&nbsp;&nbsp;&nbsp; }
+<br>&nbsp;&nbsp; }
+<br>&nbsp; }
+<br>&nbsp;}
+<br>&nbsp;
+<br>&nbsp;pcol = init_pcol;&nbsp; // found pivot column
+<br>&nbsp;Curr_Min_Ratio = Matrix[init_prow][cols-1] / Matrix[init_prow][init_pcol];
+<br>&nbsp;Curr_Min_Row = init_prow;
+<br>&nbsp;
+<br>&nbsp;for (int i = 0; i &lt; init_prow; i++)
+<br>&nbsp;{
+<br>&nbsp; if ( Matrix[i][cols-1] >= 0 &amp;&amp; Matrix[i][init_pcol]
+> 0 )
+<br>&nbsp; {
+<br>&nbsp;&nbsp; if ( (Matrix[i][cols-1] / Matrix[i][init_pcol]) &lt; Curr_Min_Ratio
+)
+<br>&nbsp;&nbsp; {
+<br>&nbsp;&nbsp;&nbsp;&nbsp; Curr_Min_Ratio = Matrix[i][cols-1] / Matrix[i][init_pcol];
+<br>&nbsp;&nbsp;&nbsp; Curr_Min_Row = i;
+<br>&nbsp;&nbsp; }
+<br>&nbsp; }
+<br>&nbsp;}
+<br>&nbsp;
+<br>&nbsp;prow = Curr_Min_Row;
+<br>}
+<p>void Phase2_Pick_Pivot(int rows, int cols, int &amp; prow, int &amp;
+pcol)
+<br>{
+<br>&nbsp;int start = 1;
+<br>&nbsp;Fraction Curr_Min_Ratio;
+<br>&nbsp;int Curr_Min_Row;
+<br>&nbsp;
+<br>&nbsp;for (int j = 0; j &lt; (cols-1); j++)
+<br>&nbsp;{
+<br>&nbsp; if ( Matrix[rows-1][j] > 0 )
+<br>&nbsp;&nbsp; pcol = j;
+<br>&nbsp;}
+<br>&nbsp;
+<br>&nbsp;for (int i = 0; i &lt; (rows-1); i++)
+<br>&nbsp;{
+<br>&nbsp; if ( Matrix[i][pcol] > 0 )
+<br>&nbsp; {
+<br>&nbsp;&nbsp; if (start)
+<br>&nbsp;&nbsp; {
+<br>&nbsp;&nbsp;&nbsp; Curr_Min_Ratio = Matrix[i][cols-1] / Matrix[i][pcol];
+<br>&nbsp;&nbsp;&nbsp; Curr_Min_Row = i;
+<br>&nbsp;&nbsp;&nbsp; start = 0;
+<br>&nbsp;&nbsp; }
+<br>&nbsp;&nbsp; else
+<br>&nbsp;&nbsp; {
+<br>&nbsp;&nbsp;&nbsp; if ( (Matrix[i][cols-1] / Matrix[i][pcol]) &lt;
+Curr_Min_Ratio )
+<br>&nbsp;&nbsp;&nbsp; {
+<br>&nbsp;&nbsp;&nbsp;&nbsp; Curr_Min_Ratio = Matrix[i][cols-1] / Matrix[i][pcol];
+<br>&nbsp;&nbsp;&nbsp;&nbsp; Curr_Min_Row = i;
+<br>&nbsp;&nbsp;&nbsp; }
+<br>&nbsp;&nbsp; }
+<br>&nbsp; }
+<br>&nbsp;}
+<br>&nbsp;
+<br>&nbsp;prow = Curr_Min_Row;
+<br>}
+<br>&nbsp;
+<p>// Main Program Starts Here
+<br>int main()
+<br>{
+<br>&nbsp;int rows = 0, cols = 0;
+<p>&nbsp;Enter_Dimensions(rows, cols);
+<br>&nbsp;cout &lt;&lt; endl;
+<br>&nbsp;Enter_Matrix(rows, cols);
+<br>&nbsp;cout &lt;&lt; endl;
+<br>&nbsp;cout &lt;&lt; "Starting Matrix: " &lt;&lt; endl;
+<br>&nbsp;Print_Matrix(rows, cols);
+<br>&nbsp;cout &lt;&lt; endl;
+<p>&nbsp;// Perform Phase One
+<br>&nbsp;cout &lt;&lt; "Phase 1: " &lt;&lt; endl;
+<br>&nbsp;cout &lt;&lt; "-------- " &lt;&lt; endl;
+<br>&nbsp;cout &lt;&lt; endl;
+<br>&nbsp;while ( !Feasible(rows, cols) )
+<br>&nbsp;{
+<br>&nbsp; int pivot_row, pivot_col;
+<br>&nbsp;
+<br>&nbsp; if ( Bad_Row(rows, cols) )
+<br>&nbsp; {
+<br>&nbsp;&nbsp; cout &lt;&lt; "Problem is infeasible." &lt;&lt; endl;
+<br>&nbsp;&nbsp; return 1;
+<br>&nbsp; }
+<br>&nbsp;
+<br>&nbsp; Phase1_Pick_Pivot(rows, cols, pivot_row, pivot_col);
+<br>&nbsp;
+<br>&nbsp; Pivot(rows, cols, pivot_row, pivot_col);
+<br>&nbsp;
+<br>&nbsp; cout &lt;&lt; "Pivoted on ROW = " &lt;&lt; (pivot_row+1)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;&lt; ", COLUMN = " &lt;&lt;
+(pivot_col+1) &lt;&lt; endl;
+<br>&nbsp; Print_Matrix(rows, cols);
+<br>&nbsp; cout &lt;&lt; endl;
+<br>&nbsp;}
+<p>&nbsp;// Perform Phase Two
+<br>&nbsp;cout &lt;&lt; "Phase 2: " &lt;&lt; endl;
+<br>&nbsp;cout &lt;&lt; "-------- " &lt;&lt; endl;
+<br>&nbsp;cout &lt;&lt; endl;
+<br>&nbsp;while ( !Optimal(rows, cols) )
+<br>&nbsp;{
+<br>&nbsp; int pivot_row, pivot_col;
+<br>&nbsp;
+<br>&nbsp; if ( Bad_Column(rows, cols) )
+<br>&nbsp; {
+<br>&nbsp;&nbsp; cout &lt;&lt; "Problem is unbounded." &lt;&lt; endl;
+<br>&nbsp;&nbsp; return 1;
+<br>&nbsp; }
+<br>&nbsp;
+<br>&nbsp; Phase2_Pick_Pivot(rows, cols, pivot_row, pivot_col);
+<br>&nbsp;
+<br>&nbsp; Pivot(rows, cols, pivot_row, pivot_col);
+<br>&nbsp;
+<br>&nbsp; cout &lt;&lt; "Pivoted on ROW = " &lt;&lt; (pivot_row+1)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;&lt; ", COLUMN = " &lt;&lt;
+(pivot_col+1) &lt;&lt; endl;
+<br>&nbsp; Print_Matrix(rows, cols);
+<br>&nbsp; cout &lt;&lt; endl;
+<br>&nbsp;}
+<p>&nbsp;cout &lt;&lt; "---------------------------" &lt;&lt; endl;
+<br>&nbsp;cout &lt;&lt; "Solution (max) = " &lt;&lt; -(Matrix[rows-1][cols-1])
+&lt;&lt; endl;
+<br>&nbsp;cout &lt;&lt; "---------------------------" &lt;&lt; endl;
+<br>&nbsp;
+<br>&nbsp;return 0;
+<br>}
+<br>&nbsp;
+</body>
+</html>

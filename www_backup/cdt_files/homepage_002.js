@@ -1,0 +1,1 @@
+document.write('<a target="_new" href="http://ad.doubleclick.net/click;h=v2|2fbc|0|0|%2a|x;5426503;0-0;2;7939206;6-120|60;2784101|2783780|1;;%3fhttp://www.blackwalnutbodyworks.com"><img src="http://m.doubleclick.net/viewad/839968/1-9592_walnut_120x60.gif" border=0 alt="Click here to find out more!"></a>');

@@ -1,0 +1,318 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="GENERATOR" content="Mozilla/4.77 [en] (X11; U; SunOS 5.8 sun4u) [Netscape]">
+</head>
+<body>
+
+<center>
+<h1>
+Hoben Thomas</h1></center>
+
+<p><br>Let&nbsp; X be a randon variable with&nbsp; finite expectation for
+|X|.
+<br>Let&nbsp; X<sub>i</sub> be independent random variables with the same
+distribution as X, for
+<br>i = 1,..., T.
+<br>Let&nbsp; m<sub>1</sub>, ..., m<sub>T</sub>&nbsp; be&nbsp; increasing
+sequence of real numbers.
+<br>Let&nbsp;&nbsp; Y<sub>i</sub>= X<sub>i</sub> + m<sub>i</sub>.
+<br>For any permutation s&nbsp; of 1,2,..., T,&nbsp; let P(s) =&nbsp; P(Y<sub>s(1
+)</sub> &lt;... &lt; Y<sub>s(T))</sub>) .
+<p>Problem:&nbsp; P(id) =&nbsp; P(Y<sub>1</sub> &lt;... &lt; Y<sub>T</sub>)&nbsp;
+>=&nbsp;&nbsp; P(s)&nbsp; for every permutation&nbsp; s of 1,2,..., T.
+<p>Approximating&nbsp; the distribution by a discrete distribution, we
+can assume, without loss of generality,
+<br>that&nbsp; X takes n values&nbsp; x<sub>1</sub> &lt; ... x<sub>n</sub>&nbsp;&nbsp;&nbsp;
+with the same probability&nbsp; 1/n. Clearly, we can assume that&nbsp;
+n&nbsp; &lt;= T,
+<br>x<sub>1</sub>=0, m<sub>1</sub> = 0.
+<br>&nbsp;
+<p>When&nbsp; n =1, the inquality in&nbsp; the problem becomes 1 > 0 for
+s =/ id, so
+<br>we can assume that n > 1.
+<br>&nbsp;
+<p>When&nbsp; T =2=n,&nbsp;&nbsp; we have:
+<p>&nbsp; 1 = P(Y<sub>1</sub> &lt; Y<sub>2</sub>)&nbsp; > 0 =&nbsp;&nbsp;
+P(Y<sub> 2</sub> &lt;&nbsp; Y<sub>1</sub>)&nbsp;&nbsp; if&nbsp;&nbsp; m<sub>2</sub>
+>&nbsp; x<sub>2</sub>,
+<br>&nbsp;3/4 = P(Y<sub>1</sub> &lt; Y<sub>2</sub>)&nbsp; > 0 =&nbsp;&nbsp;
+P(Y<sub> 2</sub> &lt;&nbsp; Y<sub>1</sub>)&nbsp;&nbsp; if&nbsp;&nbsp; m<sub>2</sub>
+=&nbsp; x<sub>2</sub>,
+<br>&nbsp;3/4 = P(Y<sub>1</sub> &lt; X<sub>2</sub>)&nbsp; > 1/4 =&nbsp;&nbsp;
+P(Y<sub> 2</sub> &lt;&nbsp; Y<sub>1</sub>)&nbsp;&nbsp; if&nbsp;&nbsp; m<sub>2</sub>
+&lt;&nbsp; x<sub>2</sub>.
+<p>So the problem is solved for T = 2.
+<p>
+<hr WIDTH="100%">
+<br>Let now T = 3.&nbsp; If&nbsp; n = 2, we have:
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+permutation s such that&nbsp;&nbsp; Y<sub>s(1 )</sub> &lt;... &lt; Y<sub>s(T))</sub>
+<br>&nbsp;
+<table BORDER COLS=7 WIDTH="100%" NOSAVE >
+<tr>
+<td>i : X<sub>i</sub>=0</td>
+
+<td>i : X<sub>i</sub> = x<sub>2</sub></td>
+
+<td>1 2 3</td>
+
+<td>1 3 2</td>
+
+<td>2 1 3</td>
+
+<td>3 1 2</td>
+
+<td>2 3 1</td>
+</tr>
+
+<tr>
+<td>1 2</td>
+
+<td>3</td>
+
+<td>always</td>
+
+<td></td>
+
+<td></td>
+
+<td></td>
+
+<td></td>
+</tr>
+
+<tr>
+<td>1</td>
+
+<td>2 3</td>
+
+<td>always</td>
+
+<td></td>
+
+<td></td>
+
+<td></td>
+
+<td></td>
+</tr>
+
+<tr>
+<td>2</td>
+
+<td>1 3</td>
+
+<td>m<sub>2</sub> > x<sub>2</sub></td>
+
+<td></td>
+
+<td>m<sub>2</sub> &lt; x<sub>2</sub></td>
+
+<td></td>
+
+<td></td>
+</tr>
+
+<tr>
+<td>1 3&nbsp;</td>
+
+<td>2</td>
+
+<td>m<sub>3</sub>-m<sub>2</sub> > a</td>
+
+<td>m<sub>3</sub>-m<sub>2</sub> &lt; a</td>
+
+<td></td>
+
+<td></td>
+
+<td></td>
+</tr>
+
+<tr>
+<td>2 3</td>
+
+<td>1</td>
+
+<td>m<sub>2</sub> > x<sub>2</sub></td>
+
+<td></td>
+
+<td>m<sub>2</sub> &lt; x<sub>2</sub>&lt; m<sub>3</sub></td>
+
+<td></td>
+
+<td>m<sub>3</sub> &lt;&nbsp; x<sub>2&nbsp;</sub></td>
+</tr>
+
+<tr>
+<td>3</td>
+
+<td>1 2</td>
+
+<td>m<sub>3</sub>-m<sub>2</sub> > a</td>
+
+<td>m<sub>3</sub> > x<sub>2 </sub>&amp; m<sub>3</sub>-m<sub>2</sub> &lt;
+a</td>
+
+<td></td>
+
+<td>m<sub>3</sub> &lt;&nbsp; x<sub>2&nbsp;</sub></td>
+
+<td></td>
+</tr>
+</table>
+
+<p>Including the two cases when X<sub>1</sub>=X<sub>2</sub>=X<sub>3</sub>,
+we obtain that
+<br>&nbsp;P(id) > =&nbsp; 4/8&nbsp; > 2/8 >=&nbsp;&nbsp; P( s) for all
+s, and&nbsp;&nbsp;&nbsp; the problem is solved in the case T =3 = n+1.
+<br>In fact, we have&nbsp; P(id) > =&nbsp; 2/6&nbsp;&nbsp; >&nbsp; P( s)&nbsp;
+even we&nbsp; exclude these two cases.
+<br>Let now n = 3.
+<br>The cases when all Xi are distinct are covered by the following table:
+<br>&nbsp;
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+permutation s such that&nbsp;&nbsp; Y<sub>s(1 )</sub> &lt;... &lt; Y<sub>s(T))</sub>
+<table BORDER COLS=7 WIDTH="100%" NOSAVE >
+<tr>
+<td>permutation s such that&nbsp;&nbsp; X<sub>s(1 )</sub> &lt;...&nbsp;
+<br>&lt; X<sub>s(T))</sub></td>
+
+<td>1 2 3</td>
+
+<td>1 3 2</td>
+
+<td>2 1 3</td>
+
+<td>3 1 2</td>
+
+<td>2 3 1</td>
+
+<td>3 2 1</td>
+</tr>
+
+<tr>
+<td>1 2 3</td>
+
+<td>always</td>
+
+<td></td>
+
+<td></td>
+
+<td></td>
+
+<td></td>
+
+<td></td>
+</tr>
+
+<tr>
+<td>2 1 3</td>
+
+<td>m2 > x2</td>
+
+<td></td>
+
+<td>ma &lt; x2</td>
+
+<td></td>
+
+<td></td>
+
+<td></td>
+</tr>
+
+<tr>
+<td>1 3 2</td>
+
+<td>m3-m2>x3-x2</td>
+
+<td>m3-m2>x3-x2</td>
+
+<td></td>
+
+<td>m3&lt; x2</td>
+
+<td></td>
+
+<td></td>
+</tr>
+
+<tr>
+<td>3 1 2</td>
+
+<td>m2>x3</td>
+
+<td>x2&lt;m3&lt;x3</td>
+
+<td>m3&lt;x2</td>
+
+<td></td>
+
+<td></td>
+
+<td></td>
+</tr>
+
+<tr>
+<td>2 3 1</td>
+
+<td>m2>x3</td>
+
+<td></td>
+
+<td>m2&lt;x3 &amp;
+<br>m3>x3-x2</td>
+
+<td></td>
+
+<td>m3&lt;x3-x2</td>
+
+<td></td>
+</tr>
+
+<tr>
+<td>3 2 1</td>
+
+<td>m2>x3-x2 &amp;
+<br>m3-m2>x2</td>
+
+<td>m3>x3-x2 &amp;
+<br>m3-m2&lt;x2 &amp;
+<br>m3 > x3</td>
+
+<td>m3> b &amp;
+<br>m2&lt;x3-x2</td>
+
+<td></td>
+
+<td></td>
+
+<td>m3-m2&lt;x2 &amp;
+<br>m2 &lt; x3</td>
+</tr>
+</table>
+
+<p>Including the 21 cases when&nbsp; not all Xi are distinct, we have that
+<br>P(id) > 10/27 always,
+<br>while P(s) &lt; = 9/27 in every case. So the problem is solved in the
+case T = 3.
+<br>&nbsp;
+<p>Moreover, 0.9 P(id) > = P(s) for s =/ id.
+<br>&nbsp;
+<p>Example when&nbsp; P(Y3 &lt; Y1 &lt; Y2)&nbsp; = 0 &lt; P(Y3 &lt; Y2
+&lt; Y1) = 1/27 = P(X3 &lt; X2 &lt; X1) :
+<br>x2=1, x3 =2, m2 = 1.6, m3 = 2.5.
+<br>The example can be made symmetric by&nbsp; xi -> xi - 1 for i = 1,2,3.
+<p>
+<hr WIDTH="100%">
+<br>T=4, n=1. Then P(id) = 1 > 0 = P(s)&nbsp; for s =/ id.
+<br>T=4, n=2. Then P(id) >= 5/16 > 4/16 >= P(s) for s =/ id.
+<br>&nbsp;
+<br>&nbsp;
+</body>
+</html>

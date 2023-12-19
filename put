@@ -1,0 +1,212 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title>Teaching and Advising</title>
+  <meta name="Author" content="Dawn Rupp">
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="1265.21">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 32.0px 'Times New Roman'}
+    p.p3 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px 'Times New Roman'}
+    p.p4 {margin: 0.0px 0.0px 0.0px 0.0px; font: 11.0px Arial}
+    p.p5 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px Arial; min-height: 15.0px}
+    p.p6 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+    p.p7 {margin: 0.0px 0.0px 16.0px 0.0px; font: 13.0px 'Times New Roman'}
+    p.p8 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px 'Times New Roman'}
+    p.p9 {margin: 0.0px 0.0px 6.0px 0.0px; font: 13.0px 'Times New Roman'}
+    p.p10 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times}
+    p.p11 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px 'Times New Roman'; min-height: 16.0px}
+    p.p12 {margin: 0.0px 0.0px 6.0px 0.0px; font: 13.0px 'Times New Roman'; min-height: 16.0px}
+    p.p13 {margin: 0.0px 0.0px 12.0px 0.0px; font: 12.0px Times}
+    p.p14 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; min-height: 14.0px}
+    p.p15 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; color: #0000ee}
+    p.p16 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; color: #0000ee; min-height: 14.0px}
+    p.p17 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px 'Lucida Grande'; min-height: 16.0px}
+    p.p18 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px 'Lucida Grande'}
+    p.p19 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px 'Times New Roman'; color: #0000ee}
+    p.p20 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px 'Times New Roman'; color: #0012ff; min-height: 16.0px}
+    p.p21 {margin: 0.0px 0.0px 16.0px 0.0px; text-align: center; font: 15.0px 'Times New Roman'}
+    p.p22 {margin: 0.0px 0.0px 0.0px 0.0px; font: 10.0px 'Times New Roman'}
+    p.p23 {margin: 0.0px 0.0px 0.0px 0.0px; font: 10.0px 'Times New Roman'; min-height: 11.0px}
+    p.p24 {margin: 0.0px 0.0px 6.0px 0.0px; text-align: center; font: 13.0px 'Times New Roman'; min-height: 16.0px}
+    p.p27 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px 'Times New Roman'; color: #0000ee; min-height: 16.0px}
+    p.p28 {margin: 0.0px 0.0px 16.0px 0.0px; font: 13.0px 'Lucida Grande'; min-height: 16.0px}
+    span.s1 {font: 12.0px Helvetica}
+    span.s2 {font: 12.0px Times}
+    span.s3 {text-decoration: underline ; color: #0012ff}
+    span.s4 {font: 13.0px 'Lucida Grande'}
+    span.s5 {text-decoration: underline ; color: #0f3ffb}
+    span.s6 {text-decoration: underline}
+    span.s7 {text-decoration: underline ; color: #0f3bee}
+    span.s8 {color: #000000}
+    span.s9 {font: 13.0px 'Times New Roman'; text-decoration: underline ; color: #042eee}
+    span.s10 {font: 13.0px 'Times New Roman'}
+    span.s11 {text-decoration: underline ; color: #0000ee}
+    span.s12 {color: #0012ff}
+    span.s13 {color: #0000ee}
+    span.s14 {font: 16.0px 'Times New Roman'; color: #0012ff}
+    span.s15 {text-decoration: underline ; color: #2136ee}
+    span.s16 {text-decoration: underline ; color: #103ffb}
+    span.s17 {text-decoration: underline ; color: #000000}
+    span.s18 {font: 13.0px 'Times New Roman'; text-decoration: underline}
+    span.s19 {font: 10.0px 'Lucida Grande'}
+    span.s20 {font: 10.0px 'Times New Roman'; text-decoration: underline ; color: #0012ff}
+    span.s21 {text-decoration: underline ; color: #042eee}
+    span.s22 {color: #042eee}
+    span.s23 {text-decoration: underline ; color: #0433ff}
+    span.s24 {font: 12.0px Times; color: #0000ee}
+    span.s25 {font: 12.0px Times; color: #042eee}
+    span.s26 {font: 11.0px 'Times New Roman'}
+    span.s27 {font: 16.0px 'Times New Roman'}
+    span.s28 {font: 13.0px 'Times New Roman'; text-decoration: underline ; color: #0012ff}
+    span.s29 {font: 13.0px 'Times New Roman'; color: #0012ff}
+    span.s30 {font: 13.0px 'Times New Roman'; text-decoration: underline ; color: #0000ee}
+    span.s31 {font: 12.0px Times; text-decoration: underline ; color: #0000ee}
+    span.s32 {font: 15.0px Times; direction: ltr; unicode-bidi: embed}
+    span.s33 {font: 13.0px 'Lucida Grande'; color: #000000}
+    span.s34 {font: 10.0px 'Lucida Grande'; color: #000000}
+    span.s35 {font: 10.0px 'Times New Roman'; color: #000000}
+    span.s36 {font: 4.0px 'Times New Roman'; color: #000000}
+    span.s37 {font: 8.0px Times}
+    span.s38 {font: 3.0px Times}
+    span.s39 {font: 9.0px Times}
+    span.s40 {font: 12.0px Helvetica; color: #000000}
+    table.t1 {width: 603.0px; border-style: solid; border-width: 1.0px 1.0px 1.0px 1.0px; border-color: #808080 #808080 #808080 #808080}
+    td.td1 {width: 231.0px; border-style: solid; border-width: 1.0px 1.0px 1.0px 1.0px; border-color: #808080 #808080 #808080 #808080; padding: 1.0px 1.0px 1.0px 1.0px}
+    td.td2 {width: 364.0px; border-style: solid; border-width: 1.0px 1.0px 1.0px 1.0px; border-color: #808080 #808080 #808080 #808080; padding: 1.0px 1.0px 1.0px 1.0px}
+  </style>
+</head>
+<body>
+<p class="p1"><b>Teaching and Advising</b></p>
+<h2 style="margin: 0.0px 0.0px 19.0px 0.0px; text-align: center; font: 24.0px 'Times New Roman'"><b>by L.N.Vaserstein</b></h2>
+<h2 style="margin: 0.0px 0.0px 19.0px 0.0px; text-align: center; font: 24.0px 'Times New Roman'"><b>Fall<span class="Apple-converted-space">  </span>of 2016</b></h2>
+<p class="p3"><b>Math 484, Linear Programs . </b> <span class="Apple-converted-space"> </span></p>
+<p class="p4"><span class="s1">484.004<span class="Apple-converted-space">  </span></span>MWF 09:05-09:55a<span class="Apple-converted-space"> </span><span class="s1"> </span>123 EE East</p>
+<p class="p5"><br></p>
+<p class="p6"><br></p>
+<p class="p7"><b>Office hours: </b> MWF 8:30-8:55a<span class="Apple-converted-space">  </span>and by appointment<span class="Apple-converted-space"> </span><span class="s2"> </span><b>in </b>215 McAllister Bldg</p>
+<p class="p3"><b>Required textbook</b>: Introduction to Linear Programming by L.Vaserstein,  Prentice Hall, 2003.<span class="Apple-converted-space"> </span></p>
+<p class="p8">title page: <a href="http://personal.psu.edu/lxv1/LPbook/t.ps"><span class="s3">ps</span></a> | <a href="http://personal.psu.edu/lxv1/LPbook/t.pdf"><span class="s3">pdf</span></a> ||  copyright page:  <a href="http://personal.psu.edu/lxv1/LPbook/cip.ps"><span class="s3">ps</span></a> | <a href="http://personal.psu.edu/lxv1/LPbook/cip.pdf"><span class="s3">pdf</span></a> ||  contents&amp;preface: <a href="http://personal.psu.edu/lxv1/LPbook/dcp.ps"><span class="s3">ps</span></a> | <a href="http://personal.psu.edu/lxv1/LPbook/dcp.pdf"><span class="s3">pdf</span></a> || <span class="s4"><br>
+</span>student's manual: <a href="http://personal.psu.edu/lxv1/LPbook/sol2.ps"><span class="s3">ps</span></a> | sol2.<a href="http://personal.psu.edu/lxv1/LPbook/sol2.pdf"><span class="s3">pdf</span></a> || <a href="http://personal.psu.edu/lxv1/LPbook/corrections.txt"><span class="s3"> corrections to the textbook in plain text</span></a> | </p>
+<p class="p9">See Angel for <b>syllabus</b>. Every student is special, but the same grading policy (see the syllabus) is applied to<span class="Apple-converted-space">  </span>everyone</p>
+<p class="p10">regardless of race, creed, gender, ethnicity, age, family status, political views, need to graduate,<span class="Apple-converted-space">  </span>etc.</p>
+<p class="p11"><br></p>
+<p class="p9">The final grades will be given in the last class.<span class="Apple-converted-space">  </span>If you have any questions about your points at Angel, do not wait till the last week of classes to ask.</p>
+<p class="p9">Linear Algebra is a <b>prerequisite</b>.  You have to know :<span class="s4"><br>
+</span>what is a linear equation,<span class="s4"><br>
+</span>what it means to solve it,<span class="s4"><br>
+</span>how to solve any system of linear equations.</p>
+<p class="p9">This is needed for Linear Programming and will be tested.<span class="Apple-converted-space">  </span>No division by 0 is tolerated .</p>
+<p class="p12"><br></p>
+<p class="p9">No joint work allowed except for class participation.<span class="Apple-converted-space">  </span>It is NOT OK to show your homework or another test<span class="Apple-converted-space">  </span>to another student or look at another student's test (see academic <a href="http://personal.psu.edu/lxv1/integraty.txt"><span class="s5">i</span></a><a href="http://personal.psu.edu/lxv1/integrity.txt"><span class="s5">ntegrity</span></a>).</p>
+<p class="p9">Before coming to a class you are not register for, ask permission, vstein@math.psu.edu. This includes coming to a different section of Math 484.</p>
+<p class="p7"><span class="s4"><b><br>
+</b></span><b>Perpetual homework: </b>read every section of the textbook before the corresponding class  and do all exercises at the end of the section. <span class="s4"><br>
+</span>Your solutions to the  exercises  which are not<span class="Apple-converted-space">  </span>in the manual (more complicated ones are in the manual<span class="s6">,</span> so<span class="s6">l2.<a href="http://personal.psu.edu/lxv1/LPbook/sol2.pdf"><span class="s3">pdf</span></a></span> )<span class="s4"> </span>to be submitted into the appropriate Angel dropbox by the given deadlines.<span class="Apple-converted-space"> </span></p>
+<p class="p7">For all tests, give both the final answer and details (how you got the answer). If you use notes, books, computers, websites. etc. in your solutions, give proper references.  <span class="s4">No electronic devices (including computers) are allowed in tests in class. </span>If scanning homework, use white paper and black pen before scanning and check the result before submitting it. Not all homework will be graded.<span class="Apple-converted-space"> </span></p>
+<p class="p7">Do not sent me e-notes with size greater than 1mb. Any email concerning Math 484 should have Math 484.<span class="Apple-converted-space">  </span>on the Subject line.Your last name as registered with PSU should be on the From line or the Subject line. Do not send me any homework unless I request this.</p>
+<p class="p10">Bonus points are given for class participation <span class="Apple-converted-space">  </span>(see <a href="http://personal.psu.edu/lxv1/participation.html"><span class="s7">details</span></a>.), e.g., correcting me or students, asking or answering questions in class,<span class="Apple-converted-space">  </span>and anything good you do for class<span class="Apple-converted-space"> </span></p>
+<p class="p10">No points are given for health of family problems, yelling, crying, bribing, cheating (including lying, false reasons for missing tests,<span class="Apple-converted-space">  </span>and plagiarism), need to pass, not paying tuition on time, and learning little or nothing.</p>
+<p class="p13">No make-ups are given for missing tests in class unless an e-mail is sent to vstein@math.psu.edu BEFORE the class (the section you registered for),<span class="Apple-converted-space">  </span>Attendance and pictures will be taken during the midterms.<span class="Apple-converted-space"> </span></p>
+<p class="p14"><br></p>
+<p class="p15"><span class="s6"><a href="http://personal.psu.edu/lxv1/F16m1s.html">m1<span class="s2"><span class="Apple-converted-space">  </span></span></a></span><span class="s8"><span class="Apple-converted-space"> </span></span></p>
+<p class="p15"><span class="s6"><a href="http://personal.psu.edu/lxv1/F16m2s.html">m2<span class="s2"><span class="Apple-converted-space">   </span></span></a></span></p>
+<p class="p15"><span class="s6"><a href="http://personal.psu.edu/lxv1/F16m3s.html">m3<span class="s2"><span class="Apple-converted-space"> </span></span></a></span></p>
+<p class="p16"><br></p>
+<p class="p10">In their evaluations, some students wrote that it was easy to pass or to get A.</p>
+<p class="p10">On the other hand,<span class="Apple-converted-space">  </span>you can see from the links below<span class="Apple-converted-space">  </span>that the numbers of F grades were: 4 in Spring of 2013 and 9 in Fall of 2013. Students who believe they can pass this course without learning anything are set for a disappointment.</p>
+<p class="p14"><br></p>
+<p class="p10"><b>For students who did not register, h</b>ere is <a href="http://personal.psu.edu/lxv1/syllabusF16.rtf"><span class="s9">SyllabusF16\.rtf </span></a><span class="s10"><span class="Apple-converted-space">  </span>in rtf a</span>vailable for everybody.</p>
+<p class="p10">I do not sign permissions to add. If registered students drop, you can add without my permissions</p>
+<p class="p10">You should write me about coming to every class without registration.</p>
+<p class="p8"><span class="s2">See details<span class="Apple-converted-space">  </span></span>about <a href="http://personal.psu.edu/lxv1/homework.txt"><span class="s11">homework</span></a> .</p>
+<p class="p17"><br></p>
+<p class="p18">grades entered on Dec. 10,<span class="Apple-converted-space">  </span>2016 <span class="Apple-converted-space">  </span>37 students</p>
+<p class="p18">LD<span class="Apple-converted-space">  </span>F<span class="Apple-converted-space">  </span>D<span class="Apple-converted-space">  </span>C<span class="Apple-converted-space">  </span>C+</p>
+<p class="p18">10<span class="Apple-converted-space">  </span>4<span class="Apple-converted-space">  </span>3<span class="Apple-converted-space">  </span>2 <span class="Apple-converted-space">  </span>3</p>
+<p class="p17"><br></p>
+<p class="p17"><br></p>
+<h2 style="margin: 0.0px 0.0px 19.0px 0.0px; text-align: center; font: 24.0px 'Times New Roman'"><b>my links</b></h2>
+<p class="p19"><span class="s8">Simplex Method <a href="http://personal.psu.edu/lxv1/SimplexMethod.pdf"><span class="s10"><i>scheme</i></span></a></span><span class="s3">||</span><span class="s12"><span class="Apple-converted-space">  </span>theorem on 4 <a href="http://personal.psu.edu/lxv1/4.alt.html"><span class="s11">a</span></a><a href="http://personal.psu.edu/lxv1/4alt.html"><span class="s11">lternatives</span><span class="s13"><span class="Apple-converted-space">  </span></span></a>||</span></p>
+<p class="p8"><span class="s11"><a href="http://personal.psu.edu/lxv1/Hungarian.pdf">Hungarian<span class="s14"><span class="Apple-converted-space"> </span></span></a></span> Method<span class="Apple-converted-space">  </span>||<span class="Apple-converted-space">  </span> M<a href="http://personal.psu.edu/lxv1/Matching.pdf"><span class="s15">atching  </span></a> <span class="Apple-converted-space">  </span> | <a href="http://personal.psu.edu/lxv1/kuhn-munkres.pdf"><span class="s15"> job </span></a><span class="s1">assignment problem</span>   |</p>
+<p class="p19"><span class="s6"><a href="http://personal.psu.edu/lxv1/stable.html">stable marriage</a></span><span class="s8"> problem</span></p>
+<p class="p11"><br></p>
+<p class="p8">academic <a href="http://personal.psu.edu/lxv1/integraty.txt"><span class="s16">i</span></a><a href="http://personal.psu.edu/lxv1/integrity.txt"><span class="s16">ntegrity</span></a>  (what is cheating)| in plain text, <span class="Apple-converted-space">  </span><a href="http://personal.psu.edu/lxv1/integrity.html"><span class="s11">more</span></a> info in html.</p>
+<p class="p19"><span class="s6"><a href="http://personal.psu.edu/lxv1/syllabusF16.rtf">SyllabusF16\.rtf <span class="Apple-converted-space">  </span></a></span><span class="s8"><span class="Apple-converted-space"> </span></span></p>
+<p class="p8"><span class="s11"><a href="http://personal.psu.edu/lxv1/details.rtf">Details <span class="s17">t</span></a></span>o Syllabus in rtf.</p>
+<p class="p19"><span class="s8">Class<a href="http://personal.psu.edu/lxv1/participation.html"><span class="s18"> participation.</span></a> in html</span></p>
+<p class="p8"><span class="s11"><a href="http://personal.psu.edu/lxv1/FAQ.html">FAQ</a></span> in html</p>
+<p class="p8">more on <a href="http://personal.psu.edu/lxv1/homework.txt"><span class="s11">homework</span></a> in txt</p>
+<p class="p20"><br></p>
+<p class="p21">previous teaching web pages</p>
+<p class="p22"><span class="s11"><a href="http://personal.psu.edu/lxv1/teachingS00.html">Spring 2000 </a></span>   |   <a href="http://personal.psu.edu/lxv1/teachingF00.html"><span class="s3">Fall 2000</span></a>   | <a href="http://personal.psu.edu/lxv1/teachingS01.html"><span class="s3">Spring 2001  </span></a>|  Fall <a href="http://www.math.psu.edu/roe/GTA/home.html"><span class="s3">2001</span></a> Roe | <a href="http://personal.psu.edu/lxv1/teachingS02.html"><span class="s3">Spring 2002  </span></a>|| Fall 2002  <a href="http://personal.psu.edu/lxv1/teachingF02a.html"><span class="s12"><b>Math 436</b></span></a><b>  |</b><a href="http://personal.psu.edu/lxv1/teachingF02b.html"><span class="s12"><b>Math 486</b></span></a> || <a href="http://personal.psu.edu/lxv1/teachingS03.html"><span class="s3">Spring</span></a> 2003 |<span class="s19"><br>
+<a href="http://personal.psu.edu/lxv1/teachingF03.html"><span class="s20">Fall</span></a></span> 2003 |  <a href="http://personal.psu.edu/lxv1/teachingS04.html"><span class="s3">Spring</span></a> 2004 games | <a href="http://personal.psu.edu/lxv1/teachingF04.html"><span class="s3">Fall</span></a> 2004 | <a href="http://personal.psu.edu/lxv1/teachingS5.html"><span class="s3">Spring </span></a>2005 | | <a href="http://personal.psu.edu/lxv1/teachingF5.html"><span class="s3">Fall </span></a>2005 | <a href="http://personal.psu.edu/lxv1/teachingS06.html"><span class="s3">Spring </span></a>2006 |  <a href="http://personal.psu.edu/lxv1/teachingF6.html"><span class="s3">Fall</span></a>  2006 | <a href="http://personal.psu.edu/lxv1/teachingS7.html"><span class="s3">Spring</span></a> 2007 games |  <a href="http://personal.psu.edu/lxv1/teachingF7.html"><span class="s3">Fall</span></a>  2007 |<span class="s19"><br>
+</span> <span class="s3">Spring</span> 2008 games | <a href="http://personal.psu.edu/lxv1/teachingF8.html"><span class="s3">Fall</span></a> 2008 LP | <a href="file:///home/faculty/vstein/www/teachingF9.html"><span class="s3">Fall</span></a> 2009 | <a href="http://personal.psu.edu/lxv1/teachingS10.html"><span class="s3">Spring</span></a> 2010 Games|  | <a href="http://personal.psu.edu/lxv1/teachingF10.html"><span class="s3">Fall</span></a> 2010 LP | <a href="http://personal.psu.edu/lxv1/teachingS2011.html"><span class="s3">Spring</span></a> 2011 games| ||<span class="Apple-converted-space">  </span><a href="http://personal.psu.edu/lxv1/teachingF11.html"><span class="s11">Fall</span></a> of 2011 ||<span class="Apple-converted-space">  </span><a href="http://personal.psu.edu/lxv1/teachingS12.html"><span class="s11">Spring</span></a> of 2012 |</p>
+<p class="p22">| F<a href="http://personal.psu.edu/lxv1/teachingF12.html"><span class="s11">all 201</span></a>2 || <a href="http://personal.psu.edu/lxv1/teachingS13.html"><span class="s11">Spring</span></a> 2013 ||<a href="http://personal.psu.edu/lxv1/teachingF13.html"><span class="s11"> Fall </span></a>2013 || <a href="http://personal.psu.edu/lxv1/teachingS14.html"><span class="s11">Spring </span></a>2014 | | <a href="http://personal.psu.edu/lxv1/teachingF14.html"><span class="s21">Fall</span><span class="s22"><span class="Apple-converted-space">  </span></span><span class="s21">2</span></a>014 ||<span class="Apple-converted-space">  </span><a href="http://personal.psu.edu/lxv1/teachingS15.html"><span class="s11">Spring </span></a>2015<span class="Apple-converted-space">  </span>||<span class="Apple-converted-space"> </span><a href="http://personal.psu.edu/lxv1/teachingF15.html"><span class="s11"> </span><span class="s21">Fall</span><span class="s22"><span class="Apple-converted-space"> </span></span><span class="s11"> </span></a>2015 | <a href="http://personal.psu.edu/lxv1/teachingS16.html"><span class="s11">Spring</span></a> 2016 |</p>
+<p class="p23"><br></p>
+<p class="p24"><br></p>
+<h2 style="margin: 0.0px 0.0px 19.0px 0.0px; text-align: center; font: 24.0px 'Times New Roman'"><b>PSU links</b></h2>
+<p class="p17"><br></p>
+<p class="p8">|  <a href="http://www.math.psu.edu/UG/"><span class="s23">math undergrad</span></a>  <a href="https://www.math.psu.edu/ug/courses"><span class="s11">math courses </span></a>|  math instr  <a href="http://www.math.psu.edu/ug/manual.htm"><span class="s23">manual</span></a>  |<span class="Apple-converted-space">  </span><a href="http://personal.psu.edu/lxv1/feedback.html"><span class="s23">| feedback </span></a>   (send anonymous email to professor)  | </p>
+<p class="p19"><span class="s8">|<a href="http://www-groups.mcs.st-andrews.ac.uk/%7Ehistory/Mathematicians/Nash.html"><span class="s18"> PSU </span></a><a href="http://personal.psu.edu/lxv1/auction.html"><span class="s18">auctions</span></a>| <a href="http://personal.psu.edu/lxv1/alg/antheory/numtheory.html"><span class="s18">PSU algebra and number theory</span></a>  (with OR at math dept)|<span class="Apple-converted-space"> </span></span></p>
+<p class="p8"><span class="s24"><a href="http://science.psu.edu/current-students/Lunch.html"><b>Take a Professor to Lunch</b></a></span><span class="s25"><b><span class="Apple-converted-space"> </span></b></span><span class="s26"> |</span> <a href="http://personal.psu.edu/lxv1/lunch.html"><span class="s23">free lunch</span></a>  | <span class="s4"><br>
+</span>Teach for  <a href="http://www.teachforamerica.org/"><span class="s3">America</span></a> (for seniors) | National Security Education <a href="http://www.iie.org/nsep/"><span class="s3">Program</span></a> |<span class="s4"><br>
+</span> | <a href="http://www.psu.edu/spacegrant/mure/"><span class="s3">MURE</span></a> |<a href="http://www.psu.edu/spacegrant/wiser/dr_leon_vaserstein.html"><span class="s3">wiser</span></a>   <span class="s27"> |</span><span class="s26"><span class="Apple-converted-space">  </span><a href="http://ss360.libraries.psu.edu/DBdescpgs/PSU00793"><span class="s25"><b>Medianet (Penn State's audiovisual database)</b></span></a></span><span class="s4"><br>
+<a href="http://spirit.ee.psu.edu/"><span class="s28">SPIRIT</span></a></span>  || <a href="http://www.ie.psu.edu/or/"><span class="s3">PSU OR</span></a>   | <a href="http://www.psu.edu/bulletins/bluebook/"><span class="s3">blue book</span></a><span class="Apple-converted-space">  </span>- courses|  <a href="file:///home/faculty/vstein/www/graduate%20courses%20penn%20state"><span class="s3">white</span></a> book - graduate courses ||<span class="s4"><br>
+<a href="http://www.psu.edu/celt/socrates/socrates.htmlhttps://www.schreyerinstitute.psu.edu/pdf/PennStateTeacherII_R1.pdf"><span class="s28">teaching</span><span class="s29"><span class="Apple-converted-space"> </span></span><span class="s30"> |</span></a></span> entering  grades and class lists by <a href="https://www.lionpath.psu.edu/psp/CSPRD/EMPLOYEE/HRMS/h/?tab=DEFAULT">LionPath</a> |<span class="s4"><br>
+</span><span class="s11">|</span><span class="s13">|| <a href="http://registrar.psu.edu/academic_calendar/fall16.cfm"><span class="s17">F16</span><span class="s21"> calendar</span><span class="s17"> </span><span class="s8"><span class="Apple-converted-space"> </span></span></a> ||<span class="Apple-converted-space">   </span></span> <a href="https://cms.psu.edu/default.asp"><span class="s3">Angel</span></a> | <span class="Apple-converted-space">  </span>| <a href="http://personal.psu.edu/lxv1/coop.txt"><span class="s23">coop</span></a>  | <a href="https://public.lionpath.psu.edu/psp/CSPRD/EMPLOYEE/HRMS/c/COMMUNITY_ACCESS.CLASS_SEARCH.GBL?PORTALPARAM_PTCNAV=HC_CLASS_SEARCH_GBL&amp;EOPP.SCNode=HRMS&amp;EOPP.SCPortal=EMPLOYEE&amp;EOPP.SCName=CO_EMPLOYEE_SELF_SERVICE&amp;EOPP.SCLabel=Self%20Service&amp;EOPP.SCPTfname=CO_EMPLOYEE_SELF_SERVICE&amp;FolderPath=PORTAL_ROOT_OBJECT.CO_EMPLOYEE_SELF_SERVICE.HC_CLASS_SEARCH_GBL&amp;IsFolder=false"><span class="s31">LiomPath Math 484.4</span></a><span class="s2"><span class="Apple-converted-space"> </span></span> |<span class="Apple-converted-space"> </span></p>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; color: #0000ee"><a href="http://www.psu.edu/ufs/policies/separate_policy/42-27.htmhttp://senate.psu.edu/policies-and-rules-for-undergraduate-students/42-00-acquisition-of-credit/#42-27"><b>Policy 42-27: Class <i>Attendance</i></b></a></h3>
+<p class="p10">Accordingly, it is the policy of the University that class <i>attendance</i> by <i>students</i> be encouraged and that all instructors organize and conduct their courses with this <b>...</b></p>
+<h3 style="margin: 0.0px 0.0px 14.0px 0.0px; font: 14.0px Times; color: #0000ee"><a href="http://www.psu.edu/oue/aappm/E-11-class-attendance.html"><b>E-11 Procedure</b></a><b> attendance</b></h3>
+<p class="p24"><br></p>
+<h2 style="margin: 0.0px 0.0px 19.0px 0.0px; text-align: center; font: 24.0px 'Times New Roman'"><b>web links</b></h2>
+<p class="p8"><span class="s11"><a href="http://www.math.cornell.edu/%7Enumb3rs/">NUMB3RS<span class="s17"> </span></a></span>  is a CBS show mixing math and crime . It<span class="s4"><br>
+</span>premieres on Sunday,  January 23, 2005 10PM ET (after football).</p>
+<p class="p8"><span class="Apple-converted-space"> </span>errors lead to <a href="http://www.math.psu.edu/dna/455.f96/disasters.html"><span class="s23">disasters</span></a> |</p>
+<h1 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px 'Times New Roman'; color: #0000ee"><span class="s32"><a href="http://www.youtube.com/watch?v=MOzevd3XbAI"><b>Rites of Love and Math -- Official Trailer</b></a></span><span class="s33"><br>
+</span><span class="s34"><br>
+</span><span class="s35">15. Linear algebra:  <a href="http://www.math.technion.ac.il/iic/"><span class="s18">International Linear Algebra Society </span></a></span><span class="s8">  |MathWorld<span class="Apple-converted-space">  </span><a href="http://mathworld.wolfram.com/topics/LinearAlgebra.html"><span class="s18">definitions</span></a> | </span><span class="s33"><br>
+<a href="http://forum.swarthmore.edu/advanced/game.html"><span class="s18">games and math programming</span></a></span><span class="s8">  | </span><span class="s33"><br>
+</span><span class="s35">03 Logic: <span class="Apple-converted-space">   </span></span><span class="s36"> <a href="http://www.google.com/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=1&amp;ved=0CDgQFjAA&amp;url=http%3A%2F%2Fen.wikipedia.org%2Fwiki%2FList_of_fallacies&amp;ei=kR4FUcnuF7Ku0AH45oDgCA&amp;usg=AFQjCNFnIDA9fFsFZ6BJFSYlIeGu5oUO5Q&amp;sig2=fMmwLS-0hMNmpmaBsEgSYw&amp;bvm=bv.41524429,d.dmQ"><span class="s37"><b>List of <i>fallacies</i> - Wikipedia, the free encyclopedia</b></span></a></span><span class="s37"><b> |</b></span><span class="s38"><b> </b><a href="http://www.google.com/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=2&amp;ved=0CEUQFjAB&amp;url=http%3A%2F%2Fwww.theskepticsguide.org%2Flogicalfallacies.asp&amp;ei=kR4FUcnuF7Ku0AH45oDgCA&amp;usg=AFQjCNGMLdSS88zUB3eN7yxoyhPfrzreBw&amp;sig2=wwvY8LUZhjEYtzGYoIpvCA&amp;bvm=bv.41524429,d.dmQ"><span class="s39"><b>Top 20 <i>Logical Fallacies</i> - The Skeptics' Guide to the Universe</b></span></a></span><span class="s39"><b> | </b><a href="http://www.google.com/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=4&amp;ved=0CFMQFjAD&amp;url=http%3A%2F%2Fwww.nizkor.org%2Ffeatures%2Ffallacies%2F&amp;ei=kR4FUcnuF7Ku0AH45oDgCA&amp;usg=AFQjCNGqfkITQ1V_M2hDjwPOCnROWE7viQ&amp;sig2=64uhsGtacc0RjaE5W92qww&amp;bvm=bv.41524429,d.dmQ"><b><i>Fallacies</i></b></a></span></h1>
+<p class="p19"><span class="s8">01 history<span class="Apple-converted-space">  </span>and biography:<span class="Apple-converted-space">  </span>|  <a href="http://www-groups.dcs.st-and.ac.uk/%7Ehistory/Mathematicians/Dantzig_George.html"><span class="s18">Dantzig</span></a>    at <a href="http://www.stanford.edu/dept/eesor/people/faculty/dantzig/"><span class="s18">Stanford</span></a> || <a href="http://www-groups.dcs.st-and.ac.uk/%7Ehistory/Mathematicians/Kantorovich.html"><span class="s18">Kantorovich</span></a> | <a href="http://www-groups.mcs.st-andrews.ac.uk/%7Ehistory/Mathematicians/Nash.html"><span class="s18">Nash |</span></a> </span><span class="s33"><br>
+</span><span class="s35">90. Operations research, mathematical programming: </span><span class="s8">  |<a href="http://glossary.computing.society.informs.org/"><span class="s18"> Mathematical Programming Glossary </span></a> | <a href="http://www-unix.mcs.anl.gov/otc/Guide/faq/linear-programming-faq.html#Q1"><span class="s18">FAQ</span></a> on LP | </span><span class="s33"><br>
+</span><span class="s8">     |   <a href="http://ubmail.ubalt.edu/%7Eharsham/ref/RefSim.htm"><span class="s18">Bibliography for Discrete Event Systems Simulation: Optimization and Sensitivity Analysis </span></a>   | </span><span class="s33"><br>
+</span><span class="s8">     |   <a href="http://solon.cma.univie.ac.at/%7Eneum/glopt.html"><span class="s18">Global optimization page</span></a> (U Wien) | <a href="http://cad.bu.edu/go"><span class="s18">Global optimization page</span></a> (BU) | </span><span class="s33"><br>
+</span><span class="s8">     |   <a href="http://moa.math.nat.tu-bs.de/welcome.html"><span class="s18">Mathematical Optimization TU Braunschweig </span></a>    |  <a href="http://www.math.uu.nl/people/beukers/anneal/anneal.html"><span class="s18">traveling salesman</span></a>   | <a href="http://www.cs.caltech.edu/%7Eyale/ec126/"><span class="s18">Interesting Models </span></a>  | </span><span class="s33"><br>
+</span><span class="s8">     | <a href="http://ubmail.ubalt.edu/%7Eharsham/opre640/opre640.htm"><span class="s18">Applied Management Science</span></a>   |  <a href="http://www.informs.org/"><span class="s18">INFORMS Online</span></a>  | <a href="http://www.informs.org/Resources/"><span class="s18">INFORMS</span></a>  Resources|</span><span class="s33"><br>
+</span><span class="s8"> ||  <a href="http://www.informs.org/Resources/Computer_Programs/"><span class="s18">software</span></a> |</span><span class="s33"><br>
+<a href="http://www.informs.org/Funds/funding.html"><span class="s18">Opportunities for Research Funding in Operations Research / Management Sciences</span></a></span><span class="s8"> | </span><span class="s33"><br>
+<a href="http://people.hofstra.edu/faculty/Stefan_Waner/RealWorld/simplex.html"><span class="s18">simplex</span></a></span><span class="s8"> |  <a href="http://www.ifors.ms.unimelb.edu.au/tutorial/simplex/"><span class="s18"> LP tutoral </span></a></span><span class="s33"><br>
+<a href="http://en.wikipedia.org/wiki/Hungarian_algorithm"><span class="s18">Hungarian algorithm - Wiki</span></a></span><span class="s8">  |  </span><span class="s33"><br>
+</span><span class="s35">91  Game theory, economics, social and behavioral sciences: </span><span class="s8"> |  <a href="http://www.cs.jhu.edu/%7Ecallahan/lifepage.html"><span class="s18">Game of Life</span></a>  | <a href="http://www.math.com/students/wonders/life/life.html"><span class="s18">2</span></a> | |  <a href="http://www.ics.uci.edu/%7Eeppstein/cgt/"><span class="s18">games</span></a>   | <a href="http://www.econ.canterbury.ac.nz/personal_pages/paul_walker/gt/hist.htm"><span class="s18">Chronology of Game Theory</span></a> | </span><span class="s33"><br>
+<a href="http://www.blackjackinfo.com/"><span class="s18">blackjack</span></a></span><span class="s8">  | <a href="http://www.hitorstand.net/"><span class="s18">blackjack</span></a>| <a href="http://home.pacbell.net/fransg/nim.htm"><span class="s18">Nim</span></a>  || <a href="http://www.math.toronto.edu/mathnet/games/monty.html"><span class="s18">car &amp;goats</span></a> (the Monty Hall problem) | <a href="http://www.mindspring.com/%7Ejimvb/monthall.htm"><span class="s18">2</span></a> | <a href="http://delphiforfun.org/Programs/car_and_goats.htm"><span class="s18">3</span></a> |<a href="http://shomenuchi.hippopotamus.com/CarGoatPuzzle.htm"><span class="s18">4</span></a> | <a href="http://math.rice.edu/%7Eddonovan/montyurl.html"><span class="s18">5</span></a> |<span class="Apple-converted-space"> </span><a href="http://www.youtube.com/watch?v=mhlc7peGlGg"><span class="s18"> 6</span></a> || </span><span class="s40">Prisoner's <a href="http://www.youtube.com/watch?v=ED9gaAb2BEw"><span class="s6">Dilemma</span></a> |</span><span class="s8"> <a href="http://forum.swarthmore.edu/advanced/game.html"><span class="s18">games and math programming</span></a>  | matrix <a href="http://www.math.ucla.edu/%7Etom/gamesolve.html"><span class="s18">game</span></a> solver | </span><span class="s33"><br>
+<a href="http://www.ics.uci.edu/%7Eeppstein/ca/"><span class="s18">cellular automata</span></a></span><span class="s8"> | <a href="http://www.ics.uci.edu/%7Eeppstein/cgt/"><span class="s18">combinatorial game theory</span></a> | <a href="http://www.uniovi.es/UniOvi/Apartados/Departamento/Psicologia/metodos/"><span class="s18">Mathematical Psychology</span></a>  | </span><span class="s33"><br>
+</span><span class="s8">Education: <a href="http://www.de.ufpe.br/%7Etoom/my-articles/engeduc/index.htm"><span class="s18">A.Toom </span></a>| </span><span class="s33"><br>
+</span><span class="s35">college math: </span><span class="s8">  <a href="http://www.sisweb.com/math/tables.htm"><span class="s18">Dave's Tables </span></a><a href="http://www.coolmath.com/"><span class="s18">Cool Math</span></a>  <a href="http://www.msri.org/people/staff/joe/CECtalk"><span class="s18">MBone</span></a><a href="http://forum.swarthmore.edu/dr.math/dr-math.html"><span class="s18">Ask Dr. Math </span></a>  <a href="http://www.math.vanderbilt.edu/%7Eschectex/commerrs/"><span class="s18">Common UG math errors </span></a>  <a href="http://archives.math.utk.edu/tutorials.html"><span class="s18">WEB Tutorials</span></a> </span><span class="s33"><br>
+</span><span class="s8">| <a href="http://www.rose-hulman.edu/mathjournal/"><span class="s18">Mathematics Journal for Undergraduates</span></a>  |  <a href="http://www.buzzfeed.com/babymantis/20-spectacularly-nerdy-math-jokes-1opu"><span class="s18">math jokes </span></a>  more:    <a href="http://www.xs4all.nl/%7Ejcdverha/scijokes/1.html"><span class="s18">2</span></a> | <a href="http://www.csun.edu/%7Ehcmth014/comicfiles/newcomics.html"><span class="s18">3</span></a> |  <a href="http://www.math.utah.edu/%7Echerk/mathjokes.html"><span class="s18">4</span></a>  | <a href="http://www.dctech.com/physics/humor_math.php"><span class="s18">5</span></a>   <a href="http://www.cgaportals.com/listings/Math%20Humor/63486"><span class="s18">|6</span></a> | <a href="http://www.reocities.com/CapeCanaveral/Lab/3550/jokes2.htm"><span class="s18">http://www.reocities.com/CapeCanaveral/Lab/3550/jokes2.htm</span></a>7 |</span></p>
+<p class="p11"><br></p>
+<p class="p11"><br></p>
+<p class="p27"><br></p>
+<table width="603.0" cellspacing="0" cellpadding="0" class="t1">
+  <tbody>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p19"><span class="s6"><a href="http://personal.psu.edu/lxv1/vitae.html">Resume</a></span><span class="s8"> </span><span class="s33"><br>
+<a href="http://personal.psu.edu/lxv1/research.html"><span class="s18">Research</span></a></span><span class="s8"> </span><span class="s33"><br>
+<a href="http://personal.psu.edu/lxv1/publications.html"><span class="s18">Publications</span></a></span><span class="s8"> </span><span class="s33"><br>
+<a href="http://personal.psu.edu/lxv1/advising.html"><span class="s18">advising</span></a></span></p>
+      </td>
+      <td valign="middle" class="td2">
+        <p class="p19"><span class="s6"><a href="http://personal.psu.edu/lxv1/students.html">Graduate Students</a></span><span class="s8"> </span><span class="s33"><br>
+<a href="http://personal.psu.edu/lxv1/index.html"><span class="s18">Home Page</span></a></span><span class="s8"> </span><span class="s33"><br>
+<a href="http://personal.psu.edu/lxv1/pictures.html"><span class="s18">Pictures</span></a></span><span class="s8"> </span><span class="s33"><br>
+<a href="http://personal.psu.edu/lxv1/Nash"><span class="s18">Nash</span></a></span></p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<p class="p28"><br></p>
+</body>
+</html>

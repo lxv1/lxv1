@@ -1,0 +1,60 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="GENERATOR" content="Mozilla/4.77 [en] (X11; U; SunOS 5.8 sun4u) [Netscape]">
+   <meta name="Author" content="Vaserstein">
+   <title>Poker</title>
+</head>
+<body>
+
+<center>
+<h1>
+Poker</h1></center>
+
+<p><br>1 pack, 52 cards, 4 suits.
+<br>---
+<br>3 of a&nbsp; kind&nbsp; (but not 4 of a kind):
+<p>5 cards&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Probability
+<p>A,A,A,no ace, no ace&nbsp;&nbsp; (4/52)* (3/51)* (2/50)*(48/49)*(47/48)&nbsp;
+= 47/270725
+<p>3 aces, 2&nbsp; otherss in any order&nbsp;&nbsp;&nbsp; (47/270725)*
+(5*4/2)&nbsp; = 94/54145
+<p>3 of a kind&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+(94/54145)*13=94/4165 ~ 0.022569 ~ 1/44.
+<p>approximation from a book: 1/47 ~ 0.0212766
+<br>many packs: (1/13)*(1/13)*(1/13)*(12/13)*(12/13)*10*13 ~ 0.0504184
+<p>---
+<br>2 pairs (but not 3 of a kind):
+<p>5 cards&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Probability
+<p>A,A,9,9, no A,9&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+(4/52)* (3/51)*(4/52)* (3/51)*(44/48)=11/586092
+<p>2 aces, 2 nines, another&nbsp; in any order&nbsp;&nbsp;&nbsp;&nbsp;
+(11/586092)*(5*4/2)*3=55/97682
+<p>2 pairs&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (55/97682)*(13*12/2) =165/3757
+~ 0.043918 ~ 1/23.
+<p>approximation from a book: 1/21 ~0.047619
+<br>many packs:(1/13)*(1/13)*(1/13)*(1/13)*(11/13)*30*13*6 ~ 0.0693253
+<br>____________________________
+<br>Probability of 4 of a kind
+<p>A,A,A,A, another card&nbsp; (4/52)*(3/51)*(2/50)*(1/49)*(48/48)=1/ 270725
+<br>4 aces in any order 5*(1/ 270725)=1/ 54145
+<br>4 of a kind&nbsp;&nbsp; 13*(1/ 54145) =1/4165 ~ 0.000240096
+<p>many packs: (1/13)^3(12/13)*5=60/28561 ~&nbsp; 0.00210077
+<br>--------
+<p>Probability of a pair (but not 3 of a kind or 2 pairs)
+<p>A,A,no ace, no ace or pair with the third card, no ace or pair with
+third or fourth card:
+<br>&nbsp;&nbsp;&nbsp;&nbsp; (4/52)*(3/51)*(48/50)*(44/49)*(40/48)=176/54145
+<p>two aces (but not 3 aces or two pairs):
+<br>10*(176/54145)=352/10829.
+<p>a pair:
+<br>(352/10829)*13=352/833 ~ 0.422569.
+<p>many decks:&nbsp; (1/13)*(12/13)*(11/13)*(10/13)*10 =&nbsp; 13200/28561
+~&nbsp; 0.462169.
+<br>___________________________________
+<br>&nbsp;
+</body>
+</html>

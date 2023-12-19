@@ -1,0 +1,584 @@
+%
+\input amstex
+\documentstyle{amsppt}
+\NoBlackBoxes
+
+\leftheadtext{George E. Andrews}
+\def\c{\cite}
+\def\fr{\frac}
+\def\ovbeta{\overline{\beta}}
+\def\pf{\hfill $\square$}
+
+\topmatter
+\title A Bailey Lemma from the Quintuple product  \endtitle
+
+\author George E. Andrews$^{(1)}$ \endauthor
+
+\dedicatory To the memory of Srinivasa Ramanujan \enddedicatory
+
+\abstract 
+In a previous paper, the discovery of further Rogers-Ramanujan
+type identities from new Bailey Lemmas was discussed.  In that
+paper, the starting point was a product of independent Jacobi
+triple products.  In this paper, we start from the quintuple
+product.
+\endabstract
+\endtopmatter
+
+\document
+\footnote""{$^{(1)}$Partially supported by the National Science Foundation 
+under Grant DMS-9206993.}
+
+\subhead
+1. \ Introduction
+\endsubhead
+
+In his second paper, \c6 on Rogers-Ramanujan type identities, L.
+J. Rogers began with an umbral transformation of Jacobi's triple
+product.  In \c4, I used Rogers' idea on a product of several
+Jacobi triple products.  As a result, multi-dimensional Bailey chains
+(see \c3 for the origin of this term) followed naturally, and some
+new Pentagonal Number Theorems were found.  For example, for $|q| < 1$.
+$$
+\align
+	& \sum_{m,n,p\geqq 0}  \fr{q^{m^2 + n^2 + p^2}}{(q)_{m+n-p}
+	(q)_{m+p-n}(q)_{p+n-m}} \tag1.1   \\
+	& = \fr1{(q)_{\infty}^3} \sum_{i,j,k = -\infty}^{\infty}
+	(-1)^{i+j+k} q^{\fr12 i(3i-1)+\fr12 j(3j - 1) + \fr12
+	k(3k-1)+ij+ik+jk}\,,
+\endalign
+$$
+where
+$$
+	(a)_n = (a;q)_n = (1 - a)(1 - aq) \cdots (1 - aq^{n-1})\,,
+\tag1.2
+$$
+and
+$$
+	(a)_{\infty} = \lim_{n \rightarrow \infty} (a)_n\,.
+\tag1.3
+$$
+In the above sum, the indices are restricted so that each of 
+$m+n-p$, $m+p-n$ and $p+n-m$ is non-negative, or for simplicity
+we may assume $1/(q)_n = 0$ when $n < 0$.
+
+In this paper, our starting point will be the quintuple product
+identity \c{5; p. 134, Ex. 5.6}
+$$
+	\sum_{n=-\infty}^{\infty} (-1)^n q^{n(3n-1)/2} z^{3n}
+	(1 + zq^n) = (q)_{\infty} (-z)_{\infty} (- q/z)_{\infty}
+	(qz^2;q^2)_{\infty} (qz^{-2};q^2)_{\infty}\,.
+\tag1.4
+$$
+In Section 2, we shall obtain the Bailey lemmas that this identity
+implies.  In Section 3, we note that the simplest application of our
+Bailey lemmas is Euler's Pentagonal Number Theorem.  In Section 4, we
+develop backaground necessary for our deeper applications in Section
+5.  The difficulty arising in this latter application makes clear that
+more extensive studies of classical very well poised basic
+hypergeometric series will be necessary for general application of the
+Quintuple Product Bailey Lemma.
+
+The result we shall prove in Section 5 is
+$$
+\align
+	\sum_{r,n,t,j \geqq 0} & \fr{(-1)^t \, q^{n^2+n + 
+	j(3j+1)/2 +
+	r(3r - 1)/2 + t(11t-1)/2 + 5rt + 5jt + 2jr + jn} (q)_{r+t+j}
+	(1 - q^{6r+12t + 6j +6})}{(q)_r (q)_n (q)_t (q)_j}
+	\tag1.5
+	\\
+	& = \fr{(q^7;q^7)_{\infty}(-q^2;q^7)_{\infty}(-q^5;q^7)_{\infty}
+	(q^3;q^{14})_{\infty} (q^{11};q^{14})_{\infty}}{(q;q^2)_{\infty}}
+	\;.
+\endalign
+$$
+The right-hand side resembles but is, in fact, quite different
+from \c{7; p. 160, eq. (80)}.
+
+\subhead
+2. \ New Bailey Lemmas
+\endsubhead
+
+Using Jacobi's Triple Product \c{2; p. 21, eq. (2.2.10)}
+$$
+	\sum_{n=-\infty}^{\infty} q^{n^2} y^n = (q^2;q^2)_{\infty}
+	(-yq;q^2)_{\infty} (-y^{-1} q;q^2)_{\infty},
+\tag2.1
+$$
+we rewrite (1.4) as
+$$
+\align
+	\sum_{n=-\infty}^{\infty} & (-1)^n q^{n(3n-1)/2}z^{3n}
+	(1 + zq^n) \tag2.2  \\
+	& = \fr1{(-q;q)_{\infty}} (-z)_{\infty}
+	(-q/z)_{\infty} \sum_{r=-\infty}^{\infty} (-1)^r
+	z^{2r} q^{r^2}\,.
+\endalign
+$$
+
+Next we expand the two products in the numerator of (2.2) using
+Euler's identity \c{2; p. 19, eq. (2.2.6)}
+$$
+	\sum_{n=0}^{\infty}  \fr{q^{\binom{n}{2}}y^n}{(q)_n}
+	= (-y)_{\infty}.
+\tag2.3
+$$
+
+Hence
+$$
+\align
+	& \sum_{n=-\infty}^{\infty} (-1)^n q^{n(3n-1)/2} z^{3n}
+	(1 + zq^n)  \tag2.4   \\
+	& = \fr1{(-q;q)_{\infty}} \sum_{i=0}^{\infty}
+	\fr{q^{\binom{i}{2}}z^i}{(q)_i} \sum_{j=0}^{\infty}
+	\fr{q^{\binom{j+1}{2}}z^{-j}}{(q)_j} \sum_{r=-\infty}^{\infty}
+	(-1)^r z^{2r} q^{r^2}\,.
+\endalign
+$$
+
+Following the original ideas of Rogers, we replace all odd powers 
+of $z$ by $0$ and all even powers $z^{2n}$ by $\alpha_n$; furthermore
+in the $i$ and $j$ sum we replace $i$ by $n + h$ and $j$ by $n - h$
+(which is admissable because only even power of $z$ are not 
+annihilated).
+
+Hence we obtain (subject to obvious convergence conditions):
+\proclaim
+{Lemma 1}
+$$
+\align
+	\sum_{n=-\infty}^{\infty} & q^{n(6n-1)} \alpha_{3n} -
+	\sum_{n=-\infty}^{\infty} q^{(2n-1)(3n-1)} \alpha_{3n-1}
+	\tag2.5  \\
+	& = \fr1{(-q;q)_{\infty}}\; \sum_{n\geqq 0}\;
+	\sum_{r=-\infty}^{\infty} \;(-1)^r q^{r^2 + n^2}
+	\beta_n(r)\,,
+\endalign
+$$
+where
+$$
+	\beta_n(r) = \sum_{h=-n}^n \;\fr{q^{h^2 - h} \alpha_{h+r}}
+		{(q)_{n-h}\,(q)_{n+h}}\;.
+\tag2.6
+$$
+\endproclaim
+
+On the other hand, we may replace all even powers of $z$ in (2.4)
+by $0$ and all odd powers $z^{2n-1}$ by $\alpha_n$; this time
+$i = n+h-1$ and $j = n-h$.
+
+We now obtain (upon replacing $n$ by $n + 1$):
+
+\proclaim
+{Lemma 2}
+$$
+\align
+	\sum_{n=-\infty}^{\infty} & q^{n(6n+1)} \alpha_{3n+1} -
+	\sum_{n=-\infty}^{\infty} q^{(2n-1)(3n-2)} \alpha_{3n-1}
+	\tag2.7  \\
+	& = \fr1{(-q;q)_{\infty}}\; \sum_{n\geqq 0}\;
+	\sum_{r=-\infty}^{\infty} \; q^{r^2+n^2+n}(-1)^r \ovbeta_n(r)\,,
+\endalign
+$$
+where
+$$
+	\ovbeta_n(r) = \sum_{h=-n-1}^{n} \;
+	\fr{q^{h^2} \alpha_{h+r+1}}{(q)_{n-h}\,(q)_{n+h+1}}\;.
+\tag2.8
+$$
+\endproclaim
+
+\subhead{3. \ Euler's Pentagonal Number Theorem}\endsubhead
+
+Let us examine Lemma 1, when $\alpha_n = (-1)^n$.  In this case,
+the left-hand side of (2.5) becomes
+$$
+\align
+	\sum_{n=-\infty}^{\infty} & q^{n(6n-1)} (-1)^n + 
+		\sum_{n=-\infty}^{\infty} (-1)^n q^{6n^2 - 5n+1}
+		\tag3.1   \\
+	& = \sum_{n=-\infty}^{\infty} (-1)^n (-q)^{n(3n-1)/2}\,.
+\endalign
+$$
+Putting $\alpha_{h+r} = (-1)^{h+r}$ in (2.6), we find by 
+\c{5; p. 238, (II.21)}
+$$
+	\beta_n(r) = \fr{q^n (-1)^r}{(q^2;q^2)_n}
+\tag3.2
+$$
+Hence under the substitution $\alpha_n = (-1)^n$, the right-hand
+side of (2.5) becomes
+$$
+\align
+	\fr1{(-q;q)_{\infty}} &\; \sum_{n\geqq 0}\; \sum_{r=-\infty}^{\infty}
+	\; \fr{q^{r^2+n^2+n}}{(q^2;q^2)_n}  \tag3.3   \\
+	& = \fr1{(-q;q)_{\infty}} \;(q^2;q^2)_{\infty} (-q;q^2)_{\infty}^2
+	(-q^2;q^2)_{\infty}   \\
+	& \hskip 1.5in \text{ (by (2.1) and (2.3))}   \\
+	& = (-q;-q)_{\infty}\,.
+\endalign
+$$
+
+Matching up (3.1) and (3.3) and changing $q$ into $-q$, we find
+Euler's Pentagonal Number Theorem \c{2; p. 11, eq. (1.3.1)}
+$$
+	(q)_{\infty} = \sum_{n=-\infty}^{\infty} (-1)^n 
+	q^{n(3n-1)/2}\,.
+\tag3.4
+$$
+
+Of course, this provides no compelling reason to study Lemmas 1 or 2.
+Indeed, Euler's Pentagonal Number Theorem is, in fact, a Corollary
+of Jacobi's Triple Product itself.  Consequently, we must await 
+Section 5 to see really new identities following from the Lemmas
+in Section 2.
+
+\subhead
+4. \ Background from Very Well-Poised Series
+\endsubhead
+
+We require for Section 5, new representations of some of the series
+appearing in \c{1; p. 433}.  In particular,
+$$
+	C_{1,r}(a;x;q) = \sum_{n\geqq 0} x^n a^{-n} q^{n^2 + n - rn}
+	\fr{(1 - x^r q^{2nr})(x)_n(a)_n}{(1 - x)(q)_n \left(
+	\fr{xq}{a}\right)_n}\;,
+\tag4.1
+$$
+and
+$$
+	H_{1,r}(a;x;q) = \fr{\left(\fr{xq}{a}\right)_{\infty}}
+	{(xq)_{\infty}}\;C_{1,r} (a;x;q)\,.
+\tag4.2
+$$
+
+
+From \c{1; p. 439, eq. (3.7)}, we see that
+$$
+	H_{1,1} (a; x; q) = 1\,,
+\tag4.3
+$$
+and from \c{1; p. 439, eq. (3.4)}, we deduce that 
+$$
+	H_{1,2} (a; xq; q) = 1 + \fr{xq}{a}\,.
+\tag4.4
+$$
+
+From \c{1; p.l 435, eqs. (2.1) with $k = \lambda = 1$, $i = 
+2-r$},
+$$
+	J_{1,r} (a;x;q) = H_{1,r-1}(a;x;q) - x\,H_{1,r-2}
+	(a;x;q)\,,
+\tag4.5
+$$
+where we have invoked \c{1; p. 435, eq. (2.3)}.  The $J_{1,r}
+(a;x;q)$ is defined in \c{1; p. 433, eq. (1.4)}, but it will be
+eliminated shortly.  So its exact definition is not required here.
+Also from \c{1; p. 435, eq. (2.2)}
+$$
+	J_{1,r}(a;x;q) = H_{1,r} (a;xq;q) - \fr{xq}{a}
+	H_{1,r-1} (a;xq;q)\,.
+\tag4.6
+$$
+
+Eliminating $J_{1,r}(a;x;q)$ from (4.5) and (4.6), we find
+$$
+	H_{1,r}(a;xq;q) = \fr{xq}{a} H_{1,r-1}(a;xq;q) + 
+	H_{1,r-1}(a;x;q) - x H_{1,r-2} (a;x;q)\,.
+\tag4.7
+$$
+
+Equations (4.3), (4.4) and (4.7) reveal tha the $H_{1,r}(a;x;q)$
+are polynomials in $x,a^{-1},q$ and $q^{-1}$.
+
+Our final result in this section provides an explicit representation
+for these polynomials.
+
+\proclaim
+{Lemma 3}  For each integer $r \geqq 1$,
+$$
+	H_{1,r} (a;xq^{r-1};q) = \sum_{r-1\geqq t,j\geqq 0}
+	\bmatrix r - t - 1 \\ t,j,r - 2t - j - 1 \endbmatrix
+	(-1)^t x^{t+j} a^{-j} q^{(t+j)^2 + \binom{t}{2}} 
+\tag4.8
+$$
+where $\bmatrix A \\ B,C,A - B -C \endbmatrix = (q;q)_A\big/
+\big((q;q)_B(q;q)_C(q;q)_{A-B-C}\big)$
+\endproclaim
+
+\demo
+{Proof}  Let us designate the right-hand side of (4.8) as 
+$h_r(xq^{r-1})$.  By inspection we see that 
+$$
+	h_1(x) = 1\,,
+\tag4.9
+$$
+and
+$$
+	h_2(xq) = 1 + \fr{xq}{a}\,,
+\tag4.10
+$$
+
+Next
+$$
+\align
+ 	& \fr{xq^{r-1}}{a} h_{r-1}(xq^{r-1}) + h_{r-1} (xq^{r-2}) -
+	xq^{r-2}h_{r-2} (xq^{r-2})  \tag4.11   \\
+	& = \sum_{t,j\geqq 0} \bmatrix r - t - 2 \\ t,j,r-2t-j-2
+	\endbmatrix (-1)^t x^{t+j+1} a^{-j-1} q^{(t+j)^2 +
+	\binom{t}{2} + t+j+r-1}  \\
+	& + \sum_{t,j\geqq 0} \bmatrix r - t - 2 \\ t,j,r-2t-j-2
+	\endbmatrix (-1)^t x^{t+j} a^{-j} q^{(t+j)^2+\binom{t}{2}}
+	\\
+	& - \sum_{t,j\geqq 0} \bmatrix r - t - 3 \\ t,j,r-2t-j-3
+	\endbmatrix (-1)^t x^{t+j+1} a^{-j} q^{(t+j)^2 + \binom{t}{2}
+	+t+j+r-2}
+	\\
+	& = \sum_{t,j\geqq 0} \bmatrix r - t - 2 \\ t,j-1,r-2t-j-1
+	\endbmatrix (-1)^t x^{t+j} a^{-j} q^{(t+j-1)^2 + \binom{t}{2}
+	+ t + j + r-2}
+	\\
+	& + \sum_{t,j\geqq 0} \bmatrix r - t - 2 \\ t,j,r-2t-j-2
+	\endbmatrix (-1)^t x^{t+j} a^{-j} q^{(t+j)^2 + \binom{t}{2}}
+	\\
+	& + \sum_{t,j\geqq 0} \bmatrix r - t - 2 \\ t-1,j,r-2t-j-1
+	\endbmatrix (-1)^t x^{t+j} a^{-j} q^{(t+j-1)^2+\binom{t-1}{2}
+	+t + j + r-3}
+	\\
+	& = \sum_{t,j\geqq 0} \fr{(q;q)_{r-t-2}}{(q;q)_t(q;q)_j
+	(q;q)_{r-2t-j-1}} (-1)^t x^{t+j} a^{-j} q^{(t+j)^2+\binom{t}{2}}
+	\\
+	& \qquad\quad \times \left\{ (1-q^j) q^{-2t-2j+1+t+j+r-2}
+		+ (1 -q^{r-2t-j-1}) \right.
+	\\
+	& \qquad\qquad\quad + \left.(1 - q^t) q^{-2t-2j+1+j+r-2}\right\}
+	\\
+	& = \sum_{t,j\geqq 0} \fr{(q;q)_{r-t-1} (-1)^t x^{t+j} a^{-j}
+	q^{(t+j)^2 + \binom{t}{2}}}{(q;q)_t(q;q)_j(q;q)_{r-2t-j-1}}
+	\;.
+	\\
+	& = h_r (xq^{r-1})\,. 	
+\endalign
+$$
+
+So by (4.9) and (4.10) $h_r(xq^{r-1})$ satisfies the same initial
+conditions as $H_r(a;xq^{r-1};q)$  (see (4.3) and (4.4)).
+
+In addition by (4.11) and (4.7), we see that $h_r(xq^{r-1})$ and
+$H_{1,r}(a;xq^{r-1};q)$ satisfy the same second order recurrence.
+Therefore
+$$
+	H_{1,r}(a;xq^{r-1};q) = h_r(xq^{r-1}),
+\tag4.12
+$$
+and Lemma 3 is proved.  \pf
+\enddemo
+
+\proclaim
+{Corollary}  For $r \geqq 1$.
+$$
+\align
+	& C_{1,r}(a;x;q)  \\
+	& = \fr{(xq)_{\infty}}{\left(\fr{xq}{a}\right)_{\infty}}
+	\sum_{r-1\geqq t,j\geqq 0} \bmatrix r - t - 1 \\
+	t,j,r-2t-j-1\endbmatrix (-1)^t x^{t+j} a^{-j} 
+	q^{(t+j)^2+\binom{t}{2} + (1 - r)(t+j)}
+\endalign
+$$
+\endproclaim
+
+\demo
+{Proof}  This follows imeediately from Lemma 3 and (4.2).  \pf
+\enddemo
+
+\subhead
+5. \ Proof of Identity (1.5)
+\endsubhead
+
+We shall utilize Lemma 2 in the instance
+$$
+	\alpha_n = (-1)^n q^{\binom{n}{2}}\,.
+\tag5.1
+$$
+Hence in this case,
+$$
+\align
+	& \ovbeta_n(r) = \sum_{h=0}^n \fr{q^{h^2} (-1)^{h+r+1} 
+		q^{\binom{h+r+1}{2}}}{(q)_{n-h}(q)_{n+h+1}}  
+		\tag5.2     \\
+	& \qquad\quad + \sum_{h=0}^n \fr{q^{(-h-1)^2} (-1)^{h+r}
+	q^{\binom{-h+r}{2}}}{(q)_{n-h}(q)_{n+h+1}}   \\
+	& = (-1)^{r+1}q^{\binom{n+1}{2}} \sum_{h=0}^n
+		\fr{q^{h^2+\binom{h+1}{2}+ hr}(-1)^h}{(q)_{n-h}
+		(q)_{n+h+1}}\;(1 - q^{2h+1-2hr-r})
+	\\
+	& = \fr{(-1)^{r+1}q^{\binom{r+1}{2}}}{(q)_n(q)_{n+1}}
+		\sum_{h=0}^n \fr{(q^{-n})_h}{(q^{n+2})_h}\;
+		q^{h^2 + h + h(r+n)}(1 - q^{(2h+1)(1-r)})
+	\\
+	& = \fr{(-1)^{r+1}q^{\binom{r+1}{2}}}{(q)_n(q^2;q)_n}\;
+		C_{1,1-r} (q^{-n}; q;q)
+	\\
+	& = \fr{(-1)^{r}q^{\binom{r}{2}+1}}{(q)_n(q^2;q)_n}\;
+		C_{1,r-1} (q^{-n}; q;q)\,.
+\endalign
+$$
+
+Next we consdier the left-hand side of (2.7) under the 
+substitution (5.1).  The result is
+$$
+\align
+	& \sum_{n=-\infty}^{\infty} q^{n(6n+1)} (-1)^{3n+1}
+	q^{\binom{3n+1}{2}} - \sum_{n=-\infty}^{\infty}
+	q^{6n^2 - 7n+2} (-1)^{3n-1} q^{\binom{3n-1}{2}}
+	\\
+	& = - \sum_{n=-\infty}^{\infty} q^{\fr{21}{2} n^2 + \fr{5n}{2}}
+	(-1)^n + \sum_{n=-\infty}^{\infty} q^{\fr{21n^2}{2} - \fr{23}{2}
+	n+3}(-1)^n
+	\\
+	& = - \sum_{n=-\infty}^{\infty} (-1)^n q^{\fr{21}{2} n^2 + 
+	\fr{5n}{2}} - \sum_{n=-\infty}^{\infty} (-1)^n q^{\fr{21}{2}
+	n^2 + \fr{19n}{2} + 2}
+	\\
+	& = - (q^7;q^7)_{\infty} (-q^2;q^7)_{\infty} (-q^5;q^7)_{\infty}
+	(q^3;q^{14})_{\infty} (q^{11};q^{14})_{\infty}
+\endalign
+$$
+(by (1.4)).
+
+As for the right-hand side of (2.7), we find that it is (noting
+that $\ovbeta_n(1) = 0$ by (5.2))
+$$
+\aligned
+	& \fr1{(-q;q)_{\infty}} \left\{ \sum_{n\geqq 0}\;
+		\sum_{r=2}^{\infty} q^{r^2 + n^2 + n} (-1)^r
+		\ovbeta_n(r) \right.    \\
+	& \qquad + \left. \sum_{n\geq 0} \; \sum_{r=0}^{\infty} q^{r^2+n^2+n}
+		(-1)^r \ovbeta_n(-r)\right\}  \\
+	& = \fr1{(-q;q)_{\infty}} \;\sum_{n\geqq 0}\; q^{n^2 + n}
+		\sum_{r=0}^{\infty} (-1)^r (q^{4r+r} \ovbeta_n(r+2)
+		+ \ovbeta_n(-r))  \\
+	& = \fr1{(-q;q)_{\infty}} \sum_{n\geqq 0} \fr{q^{n^2 + n}}
+		{(q)_n(q^2;q)_n} \; \sum_{r=0}^{\infty} q^{r^2} (-1)^r
+		((-1)^r q^{\binom{r+2}{2} + 4r+5} C_{1,r+1}(q^{-n};q;q)
+	\\
+	& \hskip 1in - (-1)^r q^{\binom{r}{2}} C_{1,r+1}(q^{-n};q;q)
+	\\
+	& = \fr{-1}{(-q;q)_{\infty}} \sum_{n\geqq 0}\;
+		\fr{q^{n^2 +n}}{(q)_n(q^2;q)_n} \;\sum_{r=0}^{\infty}
+		q^{r(3r-1)/2} C_{1,r+1}(q^{-h}; q;q)   \\
+	& \hskip 1.5in \times (1 - q^{6r+6}) 
+	\\
+	& = \fr{-1}{(-q;q)_{\infty}} \sum_{n\geqq 0} 
+		\fr{q^{n^2 +n}}{(q)_n(q^2;q)_n} \;\sum_{r=0}^{\infty}
+		q^{r(3r-1)/2}(1 - q^{6r+6})
+	\\
+	& \hskip .5in (q^2;q)_n \sum_{0\leqq t,j\leqq r} \bmatrix
+		r - t \\ t,j,r - 2t - j\endbmatrix (-1)^t q^{nj}
+	\\
+	& \hskip 1in \times q^{(t+j)^2+\binom{t}{2} + (t+j)(1-r)}
+	\\
+	& \hskip 1.5in \text{(by Lemma 3)} 
+	\\
+	& = \fr{-1}{(-q;q)_{\infty}} \sum_{r,n,t,j\geqq 0}
+		(-1)^t \fr{q^{n^2+n+j(3j+1)/2 +r(3r-1)/2+t(11t-
+			1)/2+5rt+5jt+2jr+jn} 
+			(q)_{r+t+j}(1 - q^{4r+12t+6j+6})}
+			{(q)_n(q)_t(q)_j(q)_r}
+\endaligned
+$$
+which is identity (1.5), as desired.
+
+\subhead
+6. \ Conclusion
+\endsubhead
+
+The essential role of Lemma 3 in the proof of (1.5) indicates 
+clearly the difficulties entailed in the applications of either 
+Lemma 1 or Lemma 2.  Indeed, in order to apply these lemmas, 
+it seems likely that one will at a minimum require analogs of
+Lemma 3 for the $C_{k,i}((a);x;q)_{\lambda}$ of \c{1; p. 433, 
+eq. (1.1)} with $i$ an arbitrary positive integer.
+
+\Refs
+
+\ref
+  \no 1
+  \by G. E. Andrews
+  \paper $q$-Difference equations for certain well-poised basic
+	hypergeometric series
+  \jour Quart. J. Math., Oxford Ser.
+  \vol 19
+  \yr 1968
+  \pages 433--447
+\endref
+
+
+\ref
+  \no 2
+  \by G. E. Andrews
+  \paper The Theory of Partitions
+  \paperinfo Encycl. of Math and Its Appl., Vol. 2, G.-C. Rota ed.,
+	Addison-Wesley, REading Mass. 1976.  Reissued:  Cambridge
+	University Press, Cambridge, 1988
+\endref
+
+\ref
+  \no 3
+  \by G. E. Andrews
+  \paper Multiple series Rogers-Ramanujan identities
+  \jour Pacific J. Math.
+  \vol 114
+  \yr 1984
+  \pages 267--283
+\endref
+
+\ref
+  \no 4
+  \by G. E. Andrews
+  \paper Umbral calculus, Bailey chains, and pentagonal number
+	theorems
+  \jour J. Comb. Th., Ser. A
+  \vol 91
+  \yr 2000
+  \pages 464--475
+\endref
+
+\ref
+  \no 5
+  \by G. Gasper and M. Rahman
+  \paper Basic Hypergeometric Series
+  \paperinfo Encycl. of Math. and Its Appl., Vol. 35, G.-C. Rota ed.,
+	Cambridge University Press, Cambridge, 1990
+\endref
+ 
+\ref
+  \no 6
+  \by L. J. Rogers
+  \paper On two theorems of combinatory analysis and some allied
+	identities
+  \jour Proc. London Math. Soc. (2)
+  \vol 16
+  \yr 1917
+  \pages 315--336
+\endref
+
+\ref
+  \no 7
+  \by L. J. Slater
+  \paper Further identities of the Rogers-Ramanujan type
+  \jour Proc. London Math. Soc. (2)
+  \vol 54
+  \yr 1952
+  \pages 147--167
+\endref
+\endRefs
+
+\vskip .5in
+
+\noindent The Pennsylvania State University  \newline
+University Park, Pennsylvania 16802  \newline
+U.S.A. \newline
+e-mail: \ andrews\@math.psu.edu
+\enddocument

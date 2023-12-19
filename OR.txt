@@ -1,0 +1,29 @@
+From: Jeya Chandra <mjc3@engr.psu.edu>
+Date: September 3, 2009 10:44:16 AM EDT
+To: Antonios Armaou <armaou@engr.psu.edu>, "Catherine M. Harmonosky" <CMHIE@engr.psu.edu>, Jose Ventura <jav1@psu.edu>, George Kesidis <Kesidis@engr.psu.edu>, Vittal Prabhu <prabhu@engr.psu.edu>, Patrick Reed <preed@engr.psu.edu>, "Venky N. Shankar" <Shankarv@engr.psu.edu>, Thorsten Wagener <thorsten@engr.psu.edu>, "aravi@psu.edu" <aravi@psu.edu>, "arvindr@psu.edu" <arvindr@psu.edu>, "ccb102@psu.edu" <ccb102@psu.edu>, "cdr14@psu.edu" <cdr14@psu.edu>, "costas@psu.edu" <costas@psu.edu>, "DeSarboWS@aol.com" <DeSarboWS@aol.com>, "dguide@psu.edu" <dguide@psu.edu>, "djm3@psu.edu" <djm3@psu.edu>, "dkl5@psu.edu" <dkl5@psu.edu>, "DPassmore@psu.edu" <DPassmore@psu.edu>, "dthomas@psu.edu" <dthomas@psu.edu>, "ekatok@psu.edu" <ekatok@psu.edu>, "eur@psu.edu" <eur@psu.edu>, "exd13@psu.edu" <exd13@psu.edu>, "fa2@psu.edu" <fa2@psu.edu>, "fup2@psu.edu" <fup2@psu.edu>, "fyj@psu.edu" <fyj@psu.edu>, "g5l@psu.edu" <g5l@psu.edu>, "gbk@psu.edu" <gbk@psu.edu>, "hbn2@psu.edu" <hbn2@psu.edu>, "hzh@psu.edu" <hzh@psu.edu>, "i2v@psu.edu" <i2v@psu.edu>, "jch@psu.edu" <jch@psu.edu>, "jss15@psu.edu" <jss15@psu.edu>, "junshu@psu.edu" <junshu@psu.edu>, "k1c@psu.edu" <k1c@psu.edu>, "kchatterjee@psu.edu" <kchatterjee@psu.edu>, "mbf10@psu.edu" <mbf10@psu.edu>, "mcs5@psu.edu" <mcs5@psu.edu>, "mem14@psu.edu" <mem14@psu.edu>, "mjc3@psu.edu" <mjc3@psu.edu>, "mpt@psu.edu" <mpt@psu.edu>, "pmg14@psu.edu" <pmg14@psu.edu>, "pnw@psu.edu" <pnw@psu.edu>, "r2w@psu.edu" <r2w@psu.edu>, "rrb2@psu.edu" <rrb2@psu.edu>, "rvr@psu.edu" <rvr@psu.edu>, "rwysk@psu.edu" <rwysk@psu.edu>, "sfa@psu.edu" <sfa@psu.edu>, "shx@psu.edu" <shx@psu.edu>, "sjoshi@psu.edu" <sjoshi@psu.edu>, "skumara@psu.edu" <skumara@psu.edu>, "tfriesz@psu.edu" <tfriesz@psu.edu>, "tharrison@psu.edu" <tharrison@psu.edu>, "tjl12@psu.edu" <tjl12@psu.edu>, "tmc7@psu.edu" <tmc7@psu.edu>, "ttc@psu.edu" <ttc@psu.edu>, "tws8@psu.edu" <tws8@psu.edu>, "tyy1@psu.edu" <tyy1@psu.edu>, "vstein@math.psu.edu" <vstein@math.psu.edu>, "wjr9@psu.edu" <wjr9@psu.edu>, "wlm@psu.edu" <wlm@psu.edu>, "wpa@psu.edu" <wpa@psu.edu>, "young@meteo.psu.edu" <young@meteo.psu.edu>, "zanhuang@psu.edu" <zanhuang@psu.edu>
+Subject: OR Colloquium on September 8
+
+OR COLLOQUIUM
+4:15 – 5:30 pm
+September  8, 2009
+102 Leonhard Building
+ 
+By
+ 
+Dr. Leonid Vaserstein
+Professor, Department of Mathematics
+Pennsylvania State University
+ 
+Linear Programming, Matrix Games and Linear Approximation
+ 
+ 
+Abstract
+ 
+ 
+Linear Programming is about optimization of linear functions subject to linear constraints; Matrix Games is about 2-player 0-sum games; Linear Approximation is about approximate solutions for system of  linear equations. Several connections between these 3 big areas of applied mathematics (and some other areas, e.g., statistics) are known. We will show that these 3 areas are equivalent (at least, from the computational point of view).
+ 
+ 
+ 
+LOCATION:   102  LEONHARD BUILDING:  REFRESHMENTS:  4:15 – 4:30 (outside 102 Leonhard)
+ 
+ 

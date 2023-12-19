@@ -1,0 +1,66 @@
+  \magnification=1100
+\hsize=4.5 true in
+\vsize=7.5 true in
+
+% \pageno=-3
+\nopagenumbers
+
+%The arabic number and the chapter title should be minimally
+%20 or 22 points, rather than the 13 or 14 pt font you have now.  The word
+%"chapter" could be 18 pts in size. 
+
+\font\ch=cmbx10 at 18truept
+\font\ten=cmr10 at 9truept
+\font\tenit=cmmi10 at 9truept
+\font\chtitle=cmbx10 at 21truept
+
+\font\eighteenbf=cmbx10 scaled\magstep4  % 20.736x1.1=22.8096
+\font\sixteenbf=cmbx10 scaled\magstep3 %17.28x1.1=19.008
+\font\fourteenbf=cmbx10 scaled\magstep2 % 14.4x1.1=15.84 was fontsize for ch title
+\font\twelvebf=cmbx10 scaled\magstep1 %12x1.1=13.2 was fontsize for ch
+
+\noindent
+{\eighteenbf Introduction to }
+\medskip
+\noindent
+{\eighteenbf    Linear Programming}
+\vskip 1.8in
+
+\noindent
+{\fourteenbf LEONID NISON VASERSTEIN}
+\smallskip
+
+\noindent
+$Penn\ State\ University$
+\bigskip
+
+in collaboration with
+
+\bigskip
+
+\noindent
+{\fourteenbf CHRISTOPHER CATTELIER BYRNE}
+\smallskip
+
+\noindent
+$Penn\ State\ University$
+\bigskip
+
+\input psfig
+\vskip2.2in
+\psfig{figure=logomath..eps}
+%\psfig{figure=tlogo.eps}
+%$$\psfig{figure=logomath.eps,height=4cm}$$
+\vskip-0.5in
+
+\hskip1.15in {\twelvebf Pearson Education, Inc.}
+\medskip
+% \noindent PRENTICE HALL, 
+
+\hskip1.15in  Upper  Saddle River,  New   Jersey 
+  07458
+
+
+ 
+\end
+\filbreak

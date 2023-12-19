@@ -1,0 +1,1 @@
+document.write('<a target="_new" href="http://ad.doubleclick.net/click;h=v2|2fbc|0|0|%2a|i;5710848;0-0;0;7939206;47-120|30;2929304|2933611|1;;%3fhttp://quickenloans.quicken.com/Jump/Tools/30sma-hbc.asp?Source=KRD_130x601a"><img src="http://m.doubleclick.net/viewad/839513/ref120x30gr1168.gif" border=0 alt="Click here to find out more!"></a>');

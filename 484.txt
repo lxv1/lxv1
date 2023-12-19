@@ -1,0 +1,4 @@
+484. LINEAR PROGRAMS AND RELATED PROBLEMS (3) 
+Introduction to theory and applications of linear programming; 
+the simplex algorithm and new methods of solution; duality theory. 
+Prerequisites: MATH 220; MATH 230 or 231.

@@ -1,0 +1,29 @@
+From: "KAYLA LYNN KODA" <klk5244@psu.edu>
+Date: December 3, 2009 12:01:14 PM EST
+To: Leon Vaserstein <vstein@math.psu.edu>
+Subject: math 484: midterm 3 answers
+
+Kayla Koda
+klk5244
+
+1) Saddle point; value of game =2
+Row Player: [0, 0, 1, 0, 0, 0]
+Column Player: [0, 1, 0, 0, 0, 0, 0]
+
+2) Value of game=2
+Row Player: [0, 1/2, 1/2, 0, 0]
+Column Player:[0, 0, 0, 0, 1, 0, 0]
+
+3) Value of game = 6/5
+Row Player: [0, 1/5, 4/5]
+Column Player: [0, 1/5, 0, 4/5]
+
+4) 
+x=(6-3t)/(4-t)
+y=3/(4-t)
+if t=4 there is no solution
+
+5)
+Mean = 31/13
+Midrange = 7/2 = 3.5
+Central Value = 0

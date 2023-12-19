@@ -1,0 +1,89 @@
+\magnification=1100
+
+\hsize=4.5 true in
+\vsize=7.5 true in
+
+\def\blackbox{\vrule height 1.2ex width 1.0ex depth -.2ex}
+
+ \input psfig 
+% at least 20 problems per chapter
+% $10 per book
+%Illistrator for figures
+% contract in November, this Dec complete
+
+\font\ch=cmbx10 at 18truept
+\font\chtitle=cmbx10 at 21truept
+\font\fourteenbf=cmbx10 scaled\magstep2
+\font\twelvebf=cmbx10 scaled\magstep1
+%\magnification=\magstep1
+\catcode`\@=11
+\def\m@th{\mathsurround=0pt }
+
+%this is the code to write matrices 
+
+\def\matriz#1{\,\vcenter{\normabaselines\m@th
+\ialign{\hfil$##$\hfil&&\quad\hfil$##$\hfil\crcr
+\mathstrut\crcr\noalign{\kern-\baselineskip}
+#1\crcr\mathstrut\crcr\noalign{\kern-\baselineskip}}}\,}
+
+%this is the code to write tableaux with square brackets 
+ 
+\newdimen\p@renwd\setbox0=\hbox{\tenex B}\p@renwd=\wd0 
+\def\rowtab#1{\begingroup \m@th\setbox0=\vbox{\def\cr{\crcr\noalign{\kern2pt\global\let\cr=\endline}}
+\ialign{$##$\hfil\kern2pt\kern\p@renwd&\thinspace\hfil$##$\hfil
+&&\quad\hfil$##$\hfil\crcr
+\omit\strut\hfil\crcr\noalign{\kern-\baselineskip}
+#1\crcr\omit\strut\cr}}
+\setbox2=\vbox{\unvcopy0 \global\setbox1=\lastbox}
+\setbox2=\hbox{\unhbox1 \unskip \global\setbox1=\lastbox}
+\setbox2=\hbox{$\kern\wd1\kern-\p@renwd \left [ \kern-\wd1
+\global\setbox1=\vbox{\box1\kern2pt}
+\vcenter{\kern-\ht1 \unvbox0 \kern-\baselineskip} \,\right]$}
+\;\vbox{\kern\ht1\box2}\endgroup}
+
+\def\bull{\vrule height .9ex width .9ex depth -.05ex }
+
+\pageno=166
+% till page 95, but a lot of empty space in pictures
+% \def\title{\hfil{\fourteenbf Chapter VI:  Transportation Problems}\hfil}
+ 
+\headline={\ifnum\pageno=166 \else\ifodd\pageno\rightheadline\else \leftheadline\fi\fi}
+ 
+\def\rightheadline{\tenrm\hfil{\it\S  16. Phase 1}\quad {\bf\folio}}
+\def\leftheadline{\tenrm{\bf\folio}\quad{\it Chapter 6  Transportation Problems} \hfil}
+\voffset=2\baselineskip
+
+ \bigskip
+ \bigskip
+ \bigskip
+\noindent
+\noindent  {\ch  Chapter} {\chtitle 6}
+\bigskip
+ \bigskip
+\noindent 
+{\chtitle Transportation Problems}
+ \medskip
+\hrule
+ \bigskip
+\bigskip
+
+\noindent
+{\twelvebf   \S  16. Phase 1}
+
+\smallskip
+\noindent 
+
+	Thus, $w_{ij}=c_{ij}+u_i-v_j=0$ for all chosen positions $(i,j)$.  It turns out that these equations determine potentials uniquely up to an additive constant.  This follows from the fact that the chosen positions determine a tree in the graphical representation (Figure 16.5).
+\vskip -2.5in
+$$\psfig{figure=Fig.16.5b.eps,height=4in,width=4in}$$
+\centerline{{\bf Figure 16.5.}  Tree}
+\centerline{ for the feasible solution of Example 15.7}  
+\filbreak
+
+\end
+
+tex testfig
+
+dvips -o testfig.ps testfig.dvi
+
+ps2pdf testfig.ps

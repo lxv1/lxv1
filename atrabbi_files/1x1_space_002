@@ -1,0 +1,138 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+<TITLE>The Digital Collegian - 404 Error - File Not Found</TITLE>
+<LINK REL=STYLESHEET TYPE="text/css" HREF="/style_sheets/links.css">
+</HEAD>
+<BODY BGCOLOR="#ffffff" TEXT="#000000" LINK="#0000ff" VLINK="#000099" ALINK="#9999ff">
+<A NAME="top"></A>
+<TABLE WIDTH=600 CELLSPACING=0 CELLPADDING=0 BORDER=0>
+<TR><TD WIDTH="600" COLSPAN="3" VALIGN="TOP" ALIGN="left">
+</TD></TR>
+<TR>
+<TD WIDTH="130" VALIGN="TOP" ALIGN="left">
+<IMG SRC="/graphics/blank120.gif" WIDTH="130" HEIGHT="90">
+<IMG SRC="/graphics/redesign/sidebar40.gif" WIDTH=125 HEIGHT=488 ALT="" BORDER=0 USEMAP="#sidebar">
+
+<MAP NAME="sidebar">
+<AREA ALT="HOME" COORDS="0,0,125,31" HREF="/">
+<AREA ALT="NEWS" COORDS="0,31,125,57" HREF="/local_news/local_news.asp">
+<AREA ALT="SPORTS" COORDS="0,57,125,81" HREF="/sports/sports.asp">
+<AREA ALT="OPINIONS" COORDS="0,81,125,105" HREF="/opinions/opinions.asp">
+<AREA ALT="ARTS" COORDS="0,105,125,129" HREF="/arts/arts.asp">
+<AREA ALT="WEATHER" COORDS="0,129,125,153" HREF="/weather/weather.asp">
+<AREA ALT="CALENDAR" COORDS="0,153,125,177" HREF="/datebook/datebook.asp">
+<AREA ALT="CLASSIFIEDS" COORDS="0,177,125,204" HREF="/classads/classifieds.asp">
+<AREA ALT="MAGAZINE" COORDS="0,204,125,244" HREF="/archive/2002/05/05-13-02cm/05-13-02index.asp">
+<AREA ALT="MAGAZINE" COORDS="0,244,125,282" HREF="/archive/2001/10/10-29-01cm/10-29-01index.asp">
+<AREA ALT="MAGAZINE" COORDS="0,282,125,320" HREF="/archive/2001/08/08-18-01cm/08-18-01index.asp">
+<AREA ALT="SCI-HEALTH" COORDS="0,320,125,344" HREF="/archive/news_specials/scitech/scitech.asp">
+<AREA ALT="WEB FEATURES" COORDS="0,344,125,367" HREF="/archive/news_specials/default.asp">
+<AREA ALT="ABOUT US" COORDS="0,367,125,391" HREF="/archive/collegian_info/collegian_info.asp">
+<AREA ALT="CONTACT US" COORDS="0,391,125,415" HREF="/feedback/feedback.asp">
+<AREA ALT="LINKS" COORDS="0,415,125,439" HREF="/links/links.asp">
+<AREA ALT="BACK ISSUES" COORDS="0,439,125,463" HREF="/back_issues/back_issues.asp">
+<AREA ALT="POWER SEARCH" COORDS="0,463,125,488" HREF="/back_issues/search.asp">
+</MAP>
+<BR>
+
+</TD><TD WIDTH=10>&nbsp;</TD>
+
+<TD WIDTH="460" VALIGN="top">
+<A HREF="http://www.collegian.psu.edu/"><IMG SRC="/masthead_small7.gif" WIDTH=350 HEIGHT=80 ALT="The Digital Collegian - Published independently by students at Penn State" BORDER="0"></A>
+
+<BR><P>
+
+<FONT FACE="times new roman,times" SIZE="+3">
+
+File Not Found
+
+<BR>
+
+</FONT>
+
+<FONT FACE="times new roman,times" SIZE="+1" COLOR="#003399">
+
+HTTP Error 404
+
+</FONT>
+
+<BR><P>The Web server cannot find the file or script you asked for. Please check the URL to ensure that the path is correct.
+
+<BR><P>Please contact the server's administrator at <A HREF="mailto:collegian@psu.edu">collegian@psu.edu</A> if this problem continues.
+<P><BR>
+
+
+<DIV ALIGN="center">
+<DIV CLASS="smaller">
+<FONT FACE="verdana,arial,sans-serif" SIZE="-1">
+<SPAN CLASS="smaller">
+<B>
+<A HREF="#top">TOP</A>&nbsp;
+<A HREF="/" TARGET="_parent">HOME</A>
+</B>
+</SPAN>
+</FONT>
+</DIV>
+<DIV ALIGN="center"><IMG SRC="/1x1_pixel_spacer.gif" WIDTH=1 HEIGHT=8 ALT="" BORDER=0></DIV>
+<DIV CLASS="smaller">
+<FONT FACE="verdana,arial,sans-serif" SIZE="-1">
+<SPAN CLASS="smaller">
+<A HREF="/local_news/local_news.asp" TARGET="_parent">NEWS</A>&nbsp;
+<A HREF="/sports/sports.asp" TARGET="_parent">SPORTS</A>&nbsp;
+<A HREF="/opinions/opinions.asp" TARGET="_parent">OPINIONS</A>&nbsp;
+<A HREF="/arts/arts.asp" TARGET="_parent">ARTS</A>&nbsp;
+<A HREF="/weather/weather.asp" TARGET="_parent">WEATHER</A>&nbsp;
+<A HREF="/datebook/datebook.asp" TARGET="_parent">CALENDAR</A><BR>
+<A HREF="/classads/classifieds.asp" TARGET="_parent">CLASSIFIEDS</A>&nbsp;
+<A HREF="/archive/2002/05/05-13-02cm/05-13-02index.asp" TARGET="_parent">MAGAZINE</A>&nbsp;
+<A HREF="/archive/news_specials/scitech/scitech.asp" TARGET="_parent">SCI-TECH</A>
+</SPAN>
+</FONT>
+</DIV>
+<DIV ALIGN="center"><IMG SRC="/1x1_pixel_spacer.gif" WIDTH=1 HEIGHT=8 ALT="" BORDER=0></DIV>
+<DIV CLASS="smallest">
+<FONT FACE="arial,sans-serif" SIZE="1">
+<SPAN CLASS="smallest">
+<A HREF="/archive/news_specials/default.asp" TARGET="_parent">Web Features</A>&nbsp;
+<A HREF="/archive/collegian_info/collegian_info.asp" TARGET="_parent">About Us</A>&nbsp;
+<A HREF="/feedback/feedback.asp" TARGET="_parent">Contact Us</A>&nbsp;
+<A HREF="/links/links.asp" TARGET="_parent">Links</A>&nbsp;
+<A HREF="/back_issues/back_issues.asp" TARGET="_parent">Back Issues</A>&nbsp;
+</SPAN>
+</FONT>
+</DIV>
+
+<FORM ACTION="/scripts/samples/search/query.idq" TARGET="_parent" CLASS="smaller">
+
+<INPUT TYPE="text" NAME="CiRestriction" SIZE="30" MAXLENGTH="100" STYLE="background-color: #F5F5F5;" TITLE="Please enter search terms here." onMouseOver="window.status='Please enter search terms here.'" onMouseOut="window.status=''">
+<INPUT TYPE="submit" VALUE="Search" CLASS="smallest" STYLE="background: #DCDCDC; color: Black;" TITLE="Click to submit search.">
+<INPUT TYPE="HIDDEN" NAME="CiMaxRecordsPerPage" VALUE="10">
+<INPUT TYPE="HIDDEN" NAME="CiScope" VALUE="/">
+<INPUT TYPE="HIDDEN" NAME="TemplateName" VALUE="query">
+<INPUT TYPE="HIDDEN" NAME="CiSort" VALUE="rank[d]">
+<INPUT TYPE="HIDDEN" NAME="HTMLQueryForm" VALUE="http://www.collegian.psu.edu/samples/search/query.htm">
+
+<DIV CLASS="smallest">
+<FONT FACE="verdana,arial,sans-serif" SIZE="-2">
+<SPAN CLASS="smallest">Search default: Exact phrase, not case sensitive. <BR>Options: AND, NEAR, OR, AND NOT.&nbsp;<A HREF="/back_issues/search.asp" TARGET="_parent" TITLE="Click for additional search options.">Power search</A></SPAN>
+</FONT>
+</DIV>
+</FORM>
+
+<B>Copyright &copy; 2002 Collegian Inc.</B><BR>
+
+<FONT SIZE="-1" FACE="Verdana, Arial, Helvetica">
+
+Updated
+
+2002-5-23&nbsp;&nbsp;11:55:01  &nbsp;&nbsp;-5
+
+<BR>
+
+</FONT>
+</DIV>
+</TD></TR>
+</TABLE>
+</BODY>
+</HTML>

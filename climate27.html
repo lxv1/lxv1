@@ -1,0 +1,845 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="1265.21">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 23.0px Times; color: #0000ee}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 18.0px Times; color: #0000ee}
+    p.p3 {margin: 0.0px 0.0px 0.0px 0.0px; font: 15.0px Times; color: #0f3bee}
+    p.p4 {margin: 0.0px 0.0px 0.0px 0.0px; font: 17.0px Times; color: #0000ee}
+    p.p5 {margin: 0.0px 0.0px 12.0px 0.0px; font: 12.0px Times; min-height: 14.0px}
+    p.p6 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 12.0px Times; color: #0000ee}
+    p.p7 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; color: #0000ee}
+    p.p8 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 12.0px Helvetica; min-height: 14.0px}
+    p.p9 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 17.0px Helvetica}
+    p.p10 {margin: 0.0px 0.0px 14.0px 0.0px; font: 14.0px Times; color: #042eee; min-height: 18.0px}
+    p.p11 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; color: #0000ee}
+    p.p12 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times}
+    p.p13 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; color: #042eee; min-height: 14.0px}
+    p.p14 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; min-height: 14.0px}
+    p.p15 {margin: 0.0px 0.0px 14.0px 0.0px; font: 14.0px Times; color: #0000ee}
+    p.p16 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 14.0px Helvetica; min-height: 17.0px}
+    p.p17 {margin: 0.0px 0.0px 16.0px 0.0px; font: 19.0px Times; color: #0000ee}
+    p.p18 {margin: 0.0px 0.0px 16.1px 0.0px; font: 19.0px Times; color: #0000ee}
+    p.p19 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 12.0px Times}
+    p.p20 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 12.0px Times; min-height: 14.0px}
+    p.p21 {margin: 0.0px 0.0px 0.0px 0.0px; font: 21.0px Times; color: #0000ee}
+    p.p22 {margin: 0.0px 0.0px 16.1px 0.0px; font: 18.0px Times; color: #0000ee}
+    p.p23 {margin: 0.0px 0.0px 0.0px 0.0px; font: 24.0px Times; color: #0000ee}
+    p.p26 {margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px Times; color: #0000ee}
+    p.p27 {margin: 0.0px 0.0px 14.9px 0.0px; font: 18.0px Times; color: #0000ee}
+    p.p28 {margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px Helvetica; color: #0000ee}
+    p.p29 {margin: 0.0px 0.0px 16.1px 0.0px; font: 12.0px Times; min-height: 14.0px}
+    p.p30 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 17.0px Times}
+    p.p31 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 14.0px Helvetica}
+    p.p32 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+    p.p33 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 18.0px Times}
+    p.p34 {margin: 0.0px 0.0px 0.0px 0.0px; font: 18.0px Times; min-height: 23.0px}
+    p.p35 {margin: 0.0px 0.0px 0.0px 0.0px; font: 18.0px Helvetica; min-height: 22.0px}
+    p.p36 {margin: 0.0px 0.0px 0.0px 0.0px; font: 18.0px Helvetica; color: #0000ee}
+    p.p37 {margin: 0.0px 0.0px 0.0px 0.0px; font: 18.0px Helvetica; color: #0f3bee; min-height: 22.0px}
+    p.p38 {margin: 0.0px 0.0px 0.0px 0.0px; font: 20.0px Times; color: #0000ee}
+    p.p39 {margin: 0.0px 0.0px 0.0px 0.0px; font: 18.0px Times}
+    p.p40 {margin: 0.0px 0.0px 0.0px 0.0px; font: 20.0px Times; color: #0f3bee}
+    p.p41 {margin: 0.0px 0.0px 0.0px 0.0px; font: 16.0px Times; min-height: 19.0px}
+    p.p42 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; color: #0000ee}
+    p.p43 {margin: 0.0px 0.0px 0.0px 0.0px; font: 19.0px Times}
+    p.p44 {margin: 0.0px 0.0px 0.0px 0.0px; font: 15.0px Times; color: #0000ee}
+    p.p45 {margin: 0.0px 0.0px 0.0px 0.0px; font: 17.0px Times; min-height: 20.0px}
+    p.p46 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 12.0px 'Lucida Grande'}
+    p.p48 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; color: #0f3bee; min-height: 14.0px}
+    p.p49 {margin: 0.0px 0.0px 0.0px 0.0px; font: 16.0px Times; color: #0000ee}
+    p.p50 {margin: 0.0px 0.0px 0.0px 0.0px; font: 15.0px Times}
+    p.p51 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px Times; color: #042eee; min-height: 16.0px}
+    p.p52 {margin: 0.0px 0.0px 16.6px 0.0px; font: 16.0px Times}
+    p.p53 {margin: 0.0px 0.0px 0.0px 0.0px; font: 24.0px Times; color: #042eee; min-height: 29.0px}
+    p.p54 {margin: 0.0px 0.0px 0.0px 0.0px; font: 15.0px Helvetica; color: #0000ee}
+    p.p55 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
+    p.p57 {margin: 0.0px 0.0px 0.0px 0.0px; font: 23.0px Courier; color: #0000ee}
+    p.p58 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 12.0px Helvetica}
+    p.p59 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; color: #0f3bee; min-height: 14.0px}
+    p.p60 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px Times; color: #0000ee}
+    p.p61 {margin: 0.0px 0.0px 0.0px 0.0px; font: 9.0px Times; min-height: 11.0px}
+    p.p62 {margin: 0.0px 0.0px 16.0px 0.0px; font: 14.0px Times; color: #0000ee}
+    p.p63 {margin: 0.0px 0.0px 16.0px 0.0px; font: 14.0px Times; color: #0f3bee; min-height: 18.0px}
+    p.p64 {margin: 0.0px 0.0px 16.0px 0.0px; font: 14.0px Times; color: #0f3bee}
+    li.li12 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times}
+    li.li25 {margin: 0.0px 0.0px 0.0px 0.0px; font: 9.0px Times}
+    span.s1 {font: 18.0px Times; color: #0000ee}
+    span.s2 {color: #0f3bee}
+    span.s3 {font: 20.0px Times; color: #042eee}
+    span.s4 {color: #000000}
+    span.s5 {text-decoration: underline}
+    span.s6 {text-decoration: underline ; color: #0f3bee}
+    span.s7 {direction: ltr; unicode-bidi: embed}
+    span.s8 {font: 24.0px Times; color: #000000}
+    span.s9 {font: 12.0px Times; color: #000000}
+    span.s10 {text-decoration: underline ; color: #042eee}
+    span.s11 {font: 11.0px Times; color: #000000}
+    span.s12 {color: #042eee}
+    span.s13 {font: 15.0px Times; color: #000000}
+    span.s14 {font: 12.0px Times}
+    span.s15 {font: 12.0px 'Lucida Grande'}
+    span.s16 {font: 12.0px Times; text-decoration: underline ; color: #0f3bee}
+    span.s17 {font: 18.0px 'Lucida Grande'}
+    span.s18 {font: 18.0px Helvetica; text-decoration: underline}
+    span.s19 {font: 18.0px Times; text-decoration: underline}
+    span.s20 {font: 18.0px Times; color: #000000}
+    span.s21 {color: #0000ee}
+    span.s22 {font: 12.0px Times; color: #0f3bee}
+    span.s23 {font: 15.0px Times}
+    span.s24 {font: 24.0px Times}
+    span.s25 {text-decoration: underline ; color: #666666}
+    span.s26 {font: 16.0px Times; color: #0f3bee}
+    span.s27 {font: 19.0px Times; color: #000000}
+    span.s28 {font: 18.0px Times}
+    span.s29 {font: 10.0px Times}
+    span.s30 {color: #4787ff}
+    span.s31 {font: 12.0px Helvetica; color: #000000}
+    span.s32 {font: 12.0px Times; text-decoration: underline}
+    span.s33 {font: 24.0px Times; text-decoration: underline}
+    span.s34 {font: 12.0px Helvetica; text-decoration: underline}
+    span.s35 {font: 14.0px 'Palatino Linotype'; color: #000000}
+    span.s36 {font: 17.0px Times}
+    span.s37 {font: 17.0px Times; text-decoration: underline}
+    span.s38 {font: 13.0px Times; color: #0f3bee}
+    span.s39 {font: 12.0px Times; color: #042eee}
+    span.Apple-tab-span {white-space:pre}
+    ul.ul1 {list-style-type: disc}
+  </style>
+</head>
+<body>
+<p class="p1"><a href="https://lxv1.github.io/climate.html"><b>Climate</b></a></p>
+<p class="p2"><a href="https://lxv1.github.io/climate1.html"><b>1. Old History</b></a></p>
+<p class="p3"><span class="s1"><a href="https://lxv1.github.io/climate2.webarchive"><b>2. Plots</b><span class="s2"><b> </b></span></a></span><b>webarchive; </b><a href="https://lxv1.github.io/climate2.pdf"><span class="s3"><b>pdf</b></span></a></p>
+<p class="p2"><a href="https://lxv1.github.io/climate3.html"><b>3. 70's: Global cooling -- Ice Age Coming</b></a></p>
+<p class="p2"><a href="https://lxv1.github.io/climate4.html"><b>4. Wikipedia on climate</b></a></p>
+<p class="p2"><a href="https://lxv1.github.io/climate5.html"><b>5. 2000's : Climate Change</b></a></p>
+<p class="p2"><a href="https://lxv1.github.io/climate6.html"><b>6. USA government on climate</b></a></p>
+<p class="p2"><a href="https://lxv1.github.io/climate7.html"><b>7. Other countries on climate</b></a></p>
+<p class="p2"><a href="https://lxv1.github.io/climate8.html"><b>8. Math Reviews on climate</b></a></p>
+<p class="p2"><a href="https://lxv1.github.io/climate9.html"><b>9. News 2007-2009</b></a></p>
+<p class="p2"><a href="https://lxv1.github.io/climate10.html"><b>10. 2010</b></a></p>
+<p class="p2"><a href="https://lxv1.github.io/climate11.html"><b>11. 2011</b></a></p>
+<p class="p4"><a href="https://lxv1.github.io/climate12.html"><b>12. 2012</b></a></p>
+<p class="p4"><a href="https://lxv1.github.io/climate13.html"><b>13. 2013</b></a></p>
+<p class="p4"><a href="https://lxv1.github.io/climate14.html"><b>14. 2014</b></a></p>
+<p class="p4"><a href="https://lxv1.github.io/climate15.html"><b>15. 2015</b></a></p>
+<p class="p2"><a href="https://lxv1.github.io/climate16.html"><b>16. 2016</b></a></p>
+<p class="p2"><a href="https://lxv1.github.io/climate17.html"><b>17. 2017</b></a></p>
+<p class="p2"><a href="https://lxv1.github.io/climate18.htm;"><b>18.2018</b></a></p>
+<p class="p5"><br></p>
+<p class="p5"><br></p>
+<p class="p6"><a href="https://lxv1.github.io/climate20.html"><b>20. Related topics</b></a></p>
+<p class="p7"><a href="https://lxv1.github.io/climate21.html"><b>21. Overpopulation</b></a></p>
+<p class="p7"><a href="https://lxv1.github.io/climate22.html"><b>22. Sea level</b></a></p>
+<p class="p7"><a href="https://lxv1.github.io/climate23.html"><b>23. Ice</b></a></p>
+<p class="p7"><a href="https://lxv1.github.io/climate24.html"><b>24. PSU</b></a></p>
+<p class="p7"><a href="https://lxv1.github.io/climate25.html"><b>25. Climate in Russian</b></a></p>
+<p class="p7"><a href="https://lxv1.github.io/climate26.html"><b>26,<span class="Apple-converted-space">  </span>CO2</b></a></p>
+<p class="p7"><a href="https://lxv1.github.io/climate27.html"><b>27. Energy</b></a></p>
+<p class="p7"><a href="https://lxv1.github.io/climate28.html"><b>28. Publications</b></a></p>
+<p class="p7"><a href="https://lxv1.github.io/climate29.html"><b>29. Food<span class="Apple-converted-space"> </span></b></a></p>
+<p class="p7"><a href="https://lxv1.github.io/climate30.html"><b>30. Ozone</b></a></p>
+<p class="p7"><a href="https://lxv1.github.io/climate31.webarchive"><b>31. Cartoons and magazine covers</b></a><span class="s4"><b> webarchive; </b><a href="https://lxv1.github.io/climate31.pdf"><b>pdf</b></a></span></p>
+<p class="p7"><a href="https://lxv1.github.io/climate32.html"><b>32. Life</b></a></p>
+<p class="p7"><a href="https://lxv1.github.io/climate33.html"><b>33. Acid rain</b></a></p>
+<p class="p7"><a href="https://lxv1.github.io/climate34.html"><b>34. Environment</b></a></p>
+<p class="p7"><a href="https://lxv1.github.io/climate35.html"><b>35. DDT</b></a></p>
+<p class="p7"><a href="https://lxv1.github.io/climate36.html"><b>36. Nuclear winter</b></a></p>
+<p class="p7"><a href="https://lxv1.github.io/climate37.html"><b>37. Polar inversion</b></a></p>
+<p class="p7"><a href="https://lxv1.github.io/climate38.html"><b>38. Warming in solar system</b></a></p>
+<p class="p7"><a href="https://lxv1.github.io/climate39.html"><b>39. NASA Global Land-Ocean Temperature</b></a></p>
+<p class="p7"><a href="https://lxv1.github.io/climate40.html"><b>40. Films and videos</b></a></p>
+<p class="p7"><a href="https://lxv1.github.io/climate41.html"><b>41. Cosmic rays</b></a></p>
+<p class="p7"><a href="https://lxv1.github.io/climate42.html"><b>42. Pollution</b></a></p>
+<p class="p7"><a href="https://lxv1.github.io/climate43.html"><b>43. Wind</b></a></p>
+<p class="p7"><a href="https://lxv1.github.io/climate44.html"><b>44. Global dimming</b></a></p>
+<p class="p7"><a href="https://lxv1.github.io/climate45.html"><b>45. State College temperature</b></a></p>
+<p class="p7"><a href="https://lxv1.github.io/climate46.html"><b>46. Urban heat island</b></a></p>
+<p class="p7"><a href="https://lxv1.github.io/climate47.html"><b>47. Jpkes</b></a></p>
+<p class="p7"><a href="https://lxv1.github.io/climate48.html"><b>48. Vermont climate</b></a></p>
+<p class="p7"><a href="https://lxv1.github.io/climate49.html"><b>49. California climate</b></a></p>
+<p class="p7"><a href="https://lxv1.github.io/climate50.html"><b>50. Humanity</b></a></p>
+<p class="p8"><br></p>
+<p class="p8"><br></p>
+<p class="p8"><br></p>
+<p class="p9"><b>27. Energy</b></p>
+<p class="p10"><br></p>
+<p class="p11"><a href="http://en.wikipedia.org/wiki/Alternative_energy"><b><i>Alternative energy</i> - Wiki</b></a></p>
+<p class="p12"><i>Alternative energy</i> is any energy source that is an alternative to fossil fuel. The term "alternative" presupposes a set of undesirable energy technologies against <b>...</b></p>
+<p class="p7"><span class="s5"><a href="http://en.wikipedia.org/wiki/Alternative_energy#Definitions">Definitions</a></span><span class="s4"> - <a href="http://en.wikipedia.org/wiki/Alternative_energy#History"><span class="s5">History</span></a> - <a href="http://en.wikipedia.org/wiki/Alternative_energy#Common_types_of_alternative_energy"><span class="s5">Common types of alternative energy</span></a></span></p>
+<p class="p13"><br></p>
+<p class="p11"><a href="http://en.wikipedia.org/wiki/United_States_energy_independence"><b><i>United States energy</i> independence - Wiki</b></a></p>
+<p class="p12">Trend of net <i>energy</i> imports into the <i>United States</i>, 1985-<i>2014</i> (<i>US Energy</i> Information ... If total <i>energy</i> is looked at, the <i>U.S.</i> is over 70% <i>self</i>-<i>sufficient</i>. <i>Energy</i> ...</p>
+<p class="p14"><br></p>
+<p class="p11"><a href="http://en.wikipedia.org/wiki/Renewable_energy"><b><i>Renewable energy</i> - Wiki</b></a></p>
+<p class="p12"><i>Renewable energy</i> is energy that comes from resources which are continually replenished such as sunlight, wind, rain, tides, waves and geothermal heat. About <b>...</b></p>
+<p class="p14"><br></p>
+<p class="p11"><a href="http://en.wikipedia.org/wiki/Sustainable_energy"><b>Sustainable <i>energy</i> - Wik</b></a></p>
+<p class="p12">Jump to <a href="https://www.google.com/url?url=http://en.wikipedia.org/wiki/Sustainable_energy%23Clean_energy_investments&amp;rct=j&amp;q=clean+energy&amp;usg=AFQjCNHOMqHrsCly0yDPLAVHZVUR30U8tQ&amp;sa=X&amp;ei=h3gsUcXTCMfy0QHpqoCQCA&amp;ved=0CGMQygQwBQ"><span class="s2"><i>Clean energy</i></span><span class="s6"> investments</span></a>‎: 2010 was a record year for green <i>energy</i> investments. According to a report from Bloomberg New <i>Energy</i> Finance, <b>...</b></p>
+<p class="p14"><br></p>
+<p class="p13"><br></p>
+<p class="p15"><a href="http://dotearth.blogs.nytimes.com/"><b>Natural Resources and the Environment - <i>Dot Earth</i> Blog - NYTimes ...</b></a></p>
+<p class="p11"><a href="http://www.alternateenergyhawaii.com/"><b>Hawaii Solar Energy &amp; Power | <i>Alternate Energy</i> Hawaii - Oahu, Maui</b></a></p>
+<p class="p12"><i>Alternate Energy</i> Hawaii provides the highest quality materials for Solar Hawaii, Solar Panels Oahu and Solar Energy Maui.</p>
+<p class="p14"><br></p>
+<p class="p11"><a href="http://www.altenergy.org/"><b><i>Alternative Energy</i> - Wind, Solar, Hydro and other alt energy sources ...</b></a></p>
+<p class="p12">AltEnergy.org is helping public awareness of the coming <i>energy</i> crunch while working on creative solutions to ease the inevitable transition.</p>
+<p class="p7"><span class="s5"><a href="http://www.altenergy.org/renewables/solar.html">Solar Energy</a></span><span class="s4"> - <a href="http://www.altenergy.org/renewables/renewables.html"><span class="s5">Renewable Energy</span></a> - <a href="http://www.altenergy.org/renewables/hydroelectric.html"><span class="s5">Hydroelectric Power</span></a> - <a href="http://www.altenergy.org/renewables/biomass.html"><span class="s5">Biomass Energy</span></a></span></p>
+<p class="p16"><br></p>
+<p class="p11"><a href="http://www.epa.gov/cleanenergy/"><b><i>Clean Energy</i> | US EPA</b></a></p>
+<p class="p12">Today, more than ever, consumers have the ability — and the interest — to invest in <i>clean energy</i>. <i>Clean energy</i> includes energy efficiency and <i>clean energy</i> <b>...</b></p>
+<p class="p14"><br></p>
+<p class="p11"><a href="http://www.ucsusa.org/clean_energy/"><b><i>Clean Energy</i> | Union of Concerned Scientists</b></a></p>
+<p class="p12">Examines benefits and costs of <i>energy</i> use, and promotes <i>energy</i> technologies that are <i>renewable</i>, safe, and cost-effective.</p>
+<p class="p16"><br></p>
+<p class="p11"><a href="http://www.huffingtonpost.com/news/renewable-energy/"><b><i>Green Energy</i>: Pictures, Videos, Breaking News</b></a></p>
+<p class="p12">Big News on <i>Green Energy</i>. Includes blogs, news, and community conversations about <i>Green Energy</i>.</p>
+<p class="p14"><br></p>
+<p class="p17"><span class="s7"><a href="http://en.wikipedia.org/wiki/Hydraulic_fracturing"><b>Hydraulic fracturing</b></a></span></p>
+<p class="p14"><br></p>
+<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 19.0px Times; color: #0000ee"><a href="https://books.google.at/books?id=k_okDwAAQBAJ&amp;pg=PP7&amp;lpg=PP7&amp;dq=bloomsburg%27s+investments+to+green+energy&amp;source=bl&amp;ots=9qkS8DAIhZ&amp;sig=JrnuhUspFDKSOu966ddJ676h34w&amp;hl=en&amp;sa=X&amp;ved=0ahUKEwipnqvq9L7UAhVDiRoKHYr9B8cQ6AEIigEwCQ#v=onepage&amp;q=bloomsburg%27s%20investments%20to%20green%20energy&amp;f=false"><b>Guide to Michael Bloomberg’s &amp; et al Climate of Hope by Instaread</b></a><span class="s4"><b> </b></span><span class="s8"><b><span class="Apple-converted-space">  </span></b></span><span class="s9">By Instaread</span></h1>
+<p class="p14"><br></p>
+<p class="p19">-------by year———</p>
+<p class="p20"><br></p>
+<p class="p21"><a href="http://www.foxnews.com/opinion/2011/06/03/four-dirty-secrets-about-clean-energy/"><b>Four Dirty Secrets about Clean Energy</b></a><span class="s8"><b> </b></span><span class="s9">June 03, 2011</span></p>
+<p class="p7"><span class="s4">By <a href="http://www.foxnews.com/archive/alex-epstein"><span class="s5">Alex Epstein</span></a></span><span class="s10"> FoxNews</span></p>
+<p class="p20"><br></p>
+<p class="p14"><br></p>
+<p class="p11"><a href="http://www.worldenergyoutlook.org/"><b>World <i>Energy Outlook</i>: IEA</b></a><span class="s4"><b> </b></span><span class="s9">12 November 2012</span></p>
+<p class="p12">The 2012 edition of the World <i>Energy Outlook</i> was released on 12 November 2012. Drawing on the latest data and policy <b>...</b></p>
+<p class="p14"><br></p>
+<p class="p14"><br></p>
+<p class="p11"><a href="http://www.google.com/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=18&amp;ved=0CHoQFjAHOAo&amp;url=http%3A%2F%2Fwww.renewableenergyworld.com%2Frea%2Fnews%2Farticle%2F2013%2F02%2Fbillionaire-moguls-fighting-for-and-against-renewable-energy%3Fcmpid%3Drss&amp;ei=eO0gUZalMerr0QGQw4CoBw&amp;usg=AFQjCNEEx7LIqE_CcCbfqTuaFYxfSYupXw&amp;sig2=ocbj8F5ZgDSReGa7XXisJQ&amp;bvm=bv.42553238,d.dmQ"><b>Billionaire Moguls Fighting for and Against <i>Renewable Energy</i> ...</b></a><span class="s2"><b> </b></span><span class="s11">Feb 14, 2013</span></p>
+<p class="p12">Two of the most recognizable wealthy businessmen in the Western World appear to have very different opinions on the viability of <i>renewable</i> <b>...</b></p>
+<p class="p14"><br></p>
+<p class="p11"><a href="http://www.mnn.com/eco-glossary/green-energy"><b><i>Green Energy</i> News | MNN - Mother Nature Network</b></a><span class="s2"><b> </b></span><span class="s9">Feb 25, 2013</span></p>
+<p class="p12"><i>Green energy</i> is an umbrella term used to describe any sort of energy that is produced with less negative impact on the environment than <b>...</b></p>
+<p class="p14"><br></p>
+<p class="p11"><a href="http://thinkprogress.org/climate/2013/03/01/1661221/state-department-report-keystone-xl-is-environmentally-sound/"><b>State Department Report: Keystone XL Is Environmentally Sound ...</b></a><span class="s4"><b> </b></span><span class="s9"><i>March</i> 2, <i>2013</i></span></p>
+<p class="p12">More jobs would be created shipping by rail. Plus railroad isn't nearly the “<i>climate</i> lock in” of a new pipeline which <b>...</b></p>
+<p class="p14"><br></p>
+<p class="p11"><a href="http://www.google.com/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=2&amp;ved=0CD0QFjAB&amp;url=http%3A%2F%2Fenergyoutlook.blogspot.com%2F&amp;ei=twY6UdzOE8TB0QH3m4HIAQ&amp;usg=AFQjCNFR7lERSHdzFl0yrk07C0b5gZnbBQ&amp;sig2=613B6hkGToLquejulG7oJQ&amp;bvm=bv.43287494,d.dmQ"><b><i>Energy Outlook</i></b></a><span class="s2"><b><i> </i></b></span><span class="s11">March 5, 2013</span></p>
+<p class="p12">I've read a number of stories on President Obama's nomination of MIT physicist Ernest Moniz to be the next Secretary of <i>Energy</i>. This overview <b>...</b></p>
+<p class="p14"><br></p>
+<p class="p22"><a href="http://www.forbes.com/sites/realspin/2013/03/14/germanys-green-energy-disaster-a-cautionary-tale-for-world-leaders/"><b>Germany's Green Energy Disaster: A Cautionary Tale For World Leaders</b></a><span class="s8"><b> </b></span><span class="s11">March 14, 2013</span></p>
+<p class="p14"><br></p>
+<p class="p14"><br></p>
+<p class="p14"><br></p>
+<p class="p2"><a href="http://www.energy-daily.com/reports/The_entropy_of_nations_999.html"><b>The entropy of nations</b></a><span class="s4"><b><span class="Apple-converted-space"> </span></b></span><span class="s9"> Jan 06, 2014</span></p>
+<p class="p12">by Staff Writers College Park MD (SPX)</p>
+<p class="p14"><br></p>
+<p class="p11"><a href="http://www.google.com/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=5&amp;sqi=2&amp;ved=0CD4QFjAE&amp;url=http%3A%2F%2Fwww.forbes.com%2Fsites%2Fbrighammccown%2F2014%2F01%2F07%2Fthree-major-energy-themes-to-watch-in-2014%2F&amp;ei=XagZU7m0IIf_0AGJoYDwDA&amp;usg=AFQjCNFf9DXzd2lhvcZzNDuK87ybDkc9eQ&amp;sig2=_pmeNvkuCx7zfNDTYiCnmA&amp;bvm=bv.62578216,d.dmQ"><b>3 Major <i>Energy</i> Themes to Watch in <i>2014</i> - Forbes</b></a><span class="s12"><b><span class="Apple-converted-space"> </span></b></span><span class="s9"> Jan 07, 2014</span></p>
+<p class="p12"><span class="Apple-converted-space"> </span><i>Clean Energy</i> is making headway, with more progress needed.</p>
+<p class="p14"><br></p>
+<p class="p11"><a href="http://www.google.com/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=1&amp;ved=0CCsQFjAA&amp;url=http%3A%2F%2Fwww.bloomberg.com%2Fnews%2F2014-01-15%2Fu-s-will-be-energy-self-sufficient-by-2035-on-shale-bp-says.html&amp;ei=nj-EU-atGozQsQS23oCgBA&amp;usg=AFQjCNF5VFqXAYXVDLwup7RkyP8SrTVTUg&amp;sig2=Pkv_y2I4uvAT-BKU8mP1Nw&amp;bvm=bv.67720277,d.cWc"><b><i>US</i> Will Be <i>Energy Self</i>-<i>Sufficient</i> by 2035 on Shale, BP Says</b></a><span class="s2"><b> </b></span><span class="s9">Jan 15, 2014</span></p>
+<p class="p12">Bloomberg L.P.</p>
+<p class="p12"><i>U.S.</i> Will Be <i>Energy Self</i>-<i>Sufficient</i> by 2035 on Shale, BP Says. By Brian Swint <i>2014</i>-01-15T15:00:00Z. - Comments Email Print. Share. Facebook · Twitter ...</p>
+<p class="p14"><br></p>
+<p class="p11"><a href="http://www.google.com/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=2&amp;ved=0CDQQFjAB&amp;url=http%3A%2F%2Fwww.eia.gov%2Fforecasts%2Fsteo%2Freport%2Frenew_co2.cfm&amp;ei=ET6EU7_KHuTlsATI5oG4Cw&amp;usg=AFQjCNFHgjW9URBSHZFQ7CD43-NGCgcmCA&amp;sig2=jGcWW0_dGP2JVC5fb6bCqA&amp;bvm=bv.67720277,d.cWc"><b><i>U.S. Energy</i> Information Administration (EIA) - Report</b></a><span class="s12"><b> </b></span><span class="s9">May 6,<span class="Apple-converted-space">  </span>2014</span></p>
+<p class="p12">Energy Information Administration</p>
+<p class="p12">EIA projects total renewables consumption for electricity and heat generation will grow by about 3.3% in <i>2014</i>. Hydropower is projected to increase by 2.9%, ...</p>
+<p class="p14"><br></p>
+<h1 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 24.0px Times; color: #0000ee"><a href="http://www.wsj.com/articles/germanys-expensive-gamble-on-renewable-energy-1409106602"><b>Germany's Expensive Gamble on Renewable Energy</b></a><span class="s4"><b> </b></span><span class="s13"><i>WSJ</i></span><span class="s4"><b> </b></span><span class="s9">Aug. 26, 2014<span class="Apple-converted-space"> </span></span></h1>
+<h2 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 11.0px Times">Companies Worry Cost of Plan to Trim Nuclear, Fossil Fuels Will Undermine Competitiveness <span class="s14">By<span class="Apple-converted-space">  </span>Matthew Karnitschnig<span class="Apple-converted-space"> </span></span></h2>
+<p class="p14"><br></p>
+<p class="p11"><a href="http://www.google.com/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=10&amp;ved=0CFAQFjAJ&amp;url=http%3A%2F%2Fwww.bloombergview.com%2Farticles%2F2014-09-22%2Fgermany-s-green-energy-is-an-expensive-success&amp;ei=59czVNzuOYGsyATIuYDACA&amp;usg=AFQjCNFtXLk-3wCXYUFXbblZgHvb-TSM7w&amp;sig2=9uityxksCMqS89vxYahT7g&amp;bvm=bv.76943099,d.aWw"><b><i>Germany's</i> Green <i>Energy</i> Is an Expensive Success ...</b></a><span class="s4"><b> </b></span><span class="s9">Sep 22, 2014<span class="Apple-converted-space"> </span></span></p>
+<p class="p12"><i>Germany's</i> policy of switching to clean <i>energy</i> looks like a failure on the surface, but it has succeeded in changing people's thinking for the ...</p>
+<ul class="ul1">
+  <li class="li25"><span class="Apple-tab-span">	</span><span class="Apple-converted-space"> </span></li>
+</ul>
+<p class="p26"><a href="http://www.bbc.com/news/blogs-echochambers-29651742"><b>Is the oil crash a secret US war on Russia?</b></a><span class="s4"><b> </b></span><span class="s9">16 October 2014<span class="Apple-converted-space"> </span></span></p>
+<p class="p14"><br></p>
+<p class="p22"><a href="http://www.cnbc.com/id/102094881#."><b>This is the price that would kill U.S. oil production growth</b></a><span class="s8"><b> </b></span><span class="s9">16 October 2014<span class="Apple-converted-space"> </span></span></p>
+<p class="p14"><br></p>
+<p class="p27"><a href="http://green-energyproducts.net/consumer-burden-german-green-energy-subsidies-hurt-taxpayers/"><b>Consumer Burden: German green energy subsidies hurt taxpayers</b></a><span class="s4"><b><span class="Apple-converted-space">  </span></b></span><span class="s9">January 13, 2015<span class="Apple-converted-space"> </span></span></p>
+<p class="p14"><br></p>
+<p class="p28"><a href="http://www.technologist.eu/europes-real-energy-problem/"><b>Europe’s real energy problem</b></a><span class="s4"><b><span class="Apple-converted-space">  </span></b></span><span class="s9">Jul 8, 2015</span></p>
+<h1 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 24.0px Times; color: #0000ee"><a href="http://www.bbc.com/news/science-environment-32399908"><b>From the carbon bubble to 'dirty energy'</b></a><span class="s4"><b> </b></span><span class="s9">April 27, 2015<span class="Apple-converted-space"> </span></span></h1>
+<p class="p12">By Helen Briggs BBC Environment Correspondent</p>
+<p class="p14"><br></p>
+<p class="p14"><br></p>
+<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 18.0px Times; color: #0000ee"><a href="http://www.businessinsider.com/europe-renewable-energy-grid-problem-2016-3?IR=T"><b>Europe has adopted clean energy with so much gusto that it's created a strange new problem</b></a><span class="s9"> Mar. 30, 2016,</span></h1>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; color: #0000ee"><a href="https://eelegal.org/press-release/"><b>Paris Agreement - New Treaty With Fatal Results - eelegal.org‎</b></a><b> </b><span class="s9">April 19, 2016</span></h3>
+<p class="p12">The UNs New Climate Policy Will Impoverish Thousands. See How In Our Video April 19, 2016</p>
+<ul class="ul1">
+  <li class="li12"></li>
+</ul>
+<p class="p29"><br></p>
+<p class="p12">-------</p>
+<p class="p14"><br></p>
+<p class="p30"><b>contents</b></p>
+<p class="p31">biofuels</p>
+<p class="p31">coal</p>
+<p class="p31">gas</p>
+<p class="p31">geo</p>
+<p class="p30">methane hydrate</p>
+<p class="p31">nuclear</p>
+<p class="p31">oil</p>
+<p class="p31">solar</p>
+<p class="p31">tide</p>
+<p class="p31">wind</p>
+<p class="p16"><br></p>
+<p class="p32"><br></p>
+<p class="p19"><span class="s15">↓↓↓</span><b> biofuels </b><span class="s15">↓↓↓</span></p>
+<p class="p14"><br></p>
+<p class="p11"><a href="http://en.wikipedia.org/wiki/Biofuel"><b><i>Biofuel</i> - Wikipedia, the free encyclopedia</b></a></p>
+<p class="p12">A <i>biofuel</i> is a type of fuel whose energy is derived from biological carbon fixation. <i>Biofuels</i> include fuels derived from biomass conversion, as well as solid <b>...</b></p>
+<p class="p7"><span class="s5"><a href="http://en.wikipedia.org/wiki/Aviation_biofuel">Aviation biofuel</a></span><span class="s4"> - <a href="http://en.wikipedia.org/wiki/List_of_biofuel_companies_and_researchers"><span class="s5">List of biofuel companies</span></a> - <a href="http://en.wikipedia.org/wiki/Second_generation_biofuels"><span class="s5">Second generation biofuels</span></a></span></p>
+<p class="p14"><br></p>
+<p class="p11"><a href="http://environment.nationalgeographic.com/environment/global-warming/biofuel-profile/"><b><i>Biofuel</i> Facts, <i>Biofuel</i> Information - National Geographic</b></a></p>
+<p class="p12">Learn about <i>Biofuels</i> and other alternative energy sources with National Geographic.</p>
+<p class="p14"><br></p>
+<p class="p11"><a href="http://www.alternative-energy-news.info/technology/biofuels/"><b><i>Biofuels</i> - Solid, liquid, or gas fuels made from biomass</b></a></p>
+<p class="p12">News and Information about <i>Biofuel</i> and Biomass Fuel Technology. In order to be considered a <i>biofuel</i> the fuel must contain over 80 percent renewable <b>...</b></p>
+<p class="p14"><br></p>
+<p class="p11"><a href="http://biofuel.org.uk/"><b><i>BioFuel</i> Information: Home</b></a></p>
+<p class="p12"><i>Biofuel</i> information site. Information about types of <i>biofuel</i>, advantages and disadvantages of <i>biofuel</i> and how to make <i>biofuel</i>.</p>
+<p class="p14"><br></p>
+<p class="p11"><a href="http://environment.about.com/od/fossilfuels/a/biofuels.htm"><b><i>Biofuels</i> - The <i>Pros and Cons</i> of <i>Biofuels</i></b></a></p>
+<p class="p12"><i>Biofuels</i> such as ethanol and <i>biodiesel</i> offer a cleaner alternative to fossil fuels. Derived from plants, <i>biofuels</i> are renewable and more environmentally friendly <b>...</b></p>
+<p class="p14"><br></p>
+<p class="p11"><a href="http://www.energyformankind.org/biofuel-energy/biofuels-pros-and-cons/"><b><i>Biofuels Pros And Cons</i></b></a></p>
+<p class="p12">One of the forms of renewable energy sources that has taken center stage is <i>biofuel</i>. This is an energy source derived from organic matter. <i>Biofuel</i> comes from <b>...</b></p>
+<p class="p14"><br></p>
+<p class="p14"><br></p>
+<p class="p12">--</p>
+<p class="p11"><a href="http://green.autoblog.com/2013/02/25/fraudster-turned-non-existent-biofuel-into-luxury-cars-sentence/"><b>Fraudster turned non-existent <i>biofuel</i> into luxury cars, sentenced to 12 years</b></a><span class="s2"><b> </b></span><span class="s16">Feb 25, 2012</span></p>
+<p class="p12"><span class="s7">Rodney Hailey, who was in the news last summer for selling more than $9 million in Renewable Identification Numbers (RIN) credits for <i>biofuel</i> <b>...</b></span></p>
+<p class="p14"><br></p>
+<p class="p11"><a href="http://thehill.com/blogs/e2-wire/e2-wire/279329-court-decision-on-key-rule-delivers-setback-to-biofuel-industry"><b>Court delivers blow to <i>biofuel</i> industry in ruling against EPA - The Hill</b></a><span class="s4"><b> </b></span><span class="s9">Jan 25, 2013<span class="Apple-converted-space"> </span></span></p>
+<p class="p12">A federal court delivered a blow to the <i>biofuels</i> industry Friday when it ruled the Environmental Protection Agency (EPA) must lower certain <b>...</b></p>
+<p class="p14"><br></p>
+<p class="p11"><a href="http://www.foxnews.com/politics/2013/01/31/despite-court-ruling-epa-raises-biofuel-estimate/"><b>Despite court ruling, EPA raises <i>biofuel</i> estimate | Fox News</b></a><span class="s4"><b> </b></span><span class="s9">Jan 31, 2013<span class="Apple-converted-space"> </span></span></p>
+<p class="p12">Days after a federal appeals court said the Obama administration is setting overly optimistic production quotas for the struggling <i>biofuels</i> <b>...</b></p>
+<p class="p14"><br></p>
+<p class="p11"><a href="http://articles.washingtonpost.com/2013-02-01/business/36673187_1_cellulosic-ethanol-corn-based-ethanol-renewable-fuel"><b>Government's plan to expand <i>biofuel</i> use runs into multiple bumps in ...</b></a><span class="s4"><b> </b></span><span class="s9">Feb 1, 2013<span class="Apple-converted-space"> </span></span></p>
+<p class="p12">The road to wider <i>biofuel</i> use may have been paved with good intentions, but it has turned out to be full of potholes. When Congress in 2007 <b>...</b></p>
+<p class="p14"><br></p>
+<p class="p2"><a href="http://www.renewableenergyworld.com/rea/news/article/2013/01/top-10-biofuels-predictions-for-2013"><b>Top 10 Biofuels Predictions for 2013</b></a><span class="s9"> Jan 04, 2014 </span></p>
+<p class="p12">As <b>2013</b> begins, here at the Digest we resist the holiday temptation to look back over the challenges and highlights of the year gone by, and instead once ...</p>
+<p class="p14"><br></p>
+<p class="p2"><a href="http://watchdog.org/190918/killing-ethanol-mandate/"><b>Will new Congress take on ethanol? </b></a><span class="s4"><b><span class="Apple-converted-space"> </span></b></span><span class="s9"> January 9, 2015 <span class="Apple-converted-space"> </span></span></p>
+<p class="p7"><span class="s4">By <a href="http://watchdog.org/author/rnikolewski/"><span class="s5">Rob Nikolewski</span></a> <span class="Apple-converted-space"> </span></span></p>
+<p class="p14"><br></p>
+<p class="p14"><br></p>
+<p class="p19"><span class="s15">↑↑↑ </span><b>biofuels </b><span class="s15">↑↑↑</span></p>
+<p class="p14"><br></p>
+<p class="p14"><br></p>
+<p class="p14"><br></p>
+<p class="p33"><span class="s17">↓↓↓</span><b>coal energy </b><span class="s17">↓↓↓</span></p>
+<p class="p34"><br></p>
+<p class="p35"><br></p>
+<p class="p36"><span class="s5"><a href="http://en.wikipedia.org/wiki/Coal#Major_coal_consumers">coal wiki<span class="s18"></span></a></span></p>
+<p class="p37"><br></p>
+<p class="p38"><a href="http://en.wikipedia.org/wiki/Clean_coal"><b><i>Clean coal</i> - Wikipedia, the free encyclopedia</b></a></p>
+<p class="p39">In the United States, <i>clean coal</i> is a term for technology that mitigates emissions of carbon dioxide (CO2) and other greenhouse gasses that arise from the <b>...</b></p>
+<p class="p2"><span class="s4">‎<a href="http://en.wikipedia.org/wiki/Clean_coal#Technology"><span class="s19">Technology</span></a> - ‎<a href="http://en.wikipedia.org/wiki/Clean_coal#Environment"><span class="s19">Environment</span></a> - ‎<a href="http://en.wikipedia.org/wiki/Clean_coal#Gasification"><span class="s19">Gasification</span></a> - ‎<a href="http://en.wikipedia.org/wiki/Clean_coal#Byproducts"><span class="s19">Byproducts</span></a></span></p>
+<p class="p34"><br></p>
+<p class="p38"><a href="http://en.wikipedia.org/wiki/Clean_coal_technology"><b><i>Clean coal</i> technology - Wikipedia, the free encyclopedia</b></a></p>
+<p class="p39"><i>Clean coal</i> technology is a collection of technologies being developed to mitigate the environmental impact of coal energy generation. When coal is used as a <b>...</b></p>
+<p class="p35"><br></p>
+<p class="p38"><a href="http://www.wri.org/publication/global-coal-risk-assessment"><b><i>Global Coal Risk Assessment</i>: <i>Data Analysis and Market Research</i> ...</b></a></p>
+<p class="p39"><i>Coal</i>-fired power plants are a major source of greenhouse gas emissions—one that could be increasing significantly <i>globally</i>. This working paper analyzes <b>...</b></p>
+<p class="p34"><br></p>
+<p class="p38"><a href="http://pdf.wri.org/global_coal_risk_assessment.pdf"><b><i>GLObAL COAL RISK ASSESSmENT</i>: <i>DATA ANALySIS AND</i> </b></a><span class="s2"><b>Market Research</b></span></p>
+<p class="p39">File Format: PDF/Adobe Acrobat</p>
+<p class="p39">2012. “<i>Global Coal Risk Assessment</i>: <i>Data Analysis and Market</i>. <i>Research</i>”. WRI Working Paper. World Resources Institute,. Washington DC. Available online at <b>...</b></p>
+<p class="p34"><br></p>
+<p class="p38"><a href="http://hotair.com/archives/2008/11/02/obama-well-bankrupt-any-new-coal-plants/"><b><i>Obama</i>: We'll bankrupt any new <i>coal plants</i> « Hot Air</b></a><span class="s4"><b> </b></span><span class="s20">Nov 2, 2008<span class="Apple-converted-space"> </span></span></p>
+<p class="p39">So, if somebody wants to build a <i>coal plant</i>, they can — it's just that it will .... if McCain himself called <i>Obama</i> out on the <i>quote</i> from that location.</p>
+<p class="p34"><br></p>
+<p class="p38"><a href="http://www.youtube.com/watch?v=Hd0tvBRi91o"><b><i>Coal</i> is <i>Renewable</i> - New Evidence - YouTube</b></a><span class="s4"><b> </b></span><span class="s20">Jun 14, 2009<span class="Apple-converted-space"> </span></span></p>
+<p class="p39">Uploaded by Stuart Adams</p>
+<p class="p39">This is a teaching <i>resource</i> video used to demonstrate the difference in depth and moisture content of fossil ...</p>
+<p class="p34"><br></p>
+<p class="p38"><a href="http://www.google.com/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=4&amp;ved=0CDoQFjAD&amp;url=http%3A%2F%2Fwww.politifact.com%2Fohio%2Fstatements%2F2011%2Fmar%2F14%2Fohio-coal-association%2Fohio-coal-industry-says-obama-promised-bankrupt-co%2F&amp;ei=5dy8U9WjIYOMyASt44D4Ag&amp;usg=AFQjCNFyNS8N0mgq2OACIyNZ9ePXq8ikFQ&amp;sig2=s2XOmrCKsMO9QDpt_ueRsQ&amp;bvm=bv.70138588,d.aWw"><b>Ohio <i>coal</i> industry says <i>Obama</i> promised to bankrupt <i>coal</i> ...</b></a><span class="s12"><b> </b></span><span class="s20">Mar 14, 2011</span></p>
+<p class="p39">PolitiFact.com</p>
+<p class="p39">"In 2008, President <i>Obama</i> said, 'If someone wants to build a new <i>coal</i>-<i>fired</i> power <i>plant</i> they can, but it will bankrupt them because they will be ...</p>
+<p class="p34"><br></p>
+<p class="p23"><a href="http://www.governing.com/gov-data/energy-environment/coal-plants-to-shut-down-from-EPA-regulations.html"><b>Coal Plants Affected by EPA Regulations</b></a><span class="s2"><b> 2012</b></span></p>
+<p class="p39">The Associated Press reports more than 32 mostly coal-fired power plants will close and another 36 plants could also be forced to shut down as a result of new EPA rules regulating air pollution.</p>
+<p class="p39">Click the icons in the map to view details for each plant affected by the EPA rules. Red icons indicate at least one unit will retire; yellow icons denote at least one unit at a power plant is at risk of retirement.</p>
+<p class="p34"><br></p>
+<p class="p38"><a href="http://www.thenewamerican.com/tech/energy/item/16250-obama-epa-war-on-coal-to-shut-200-coal-fired-plants-devastate-economy"><b><i>Obama</i> EPA War on <i>Coal</i> to Shut 200+ <i>Coal</i>-<i>Fired Plants</i> ...</b></a><span class="s20"> Aug 9, 2013<span class="Apple-converted-space"> </span></span></p>
+<p class="p39">America is staring at a fast-approaching energy disaster that needn't happen. The recent discovery and development of vast deposits of oil and ...</p>
+<p class="p34"><br></p>
+<p class="p38"><a href="http://www.google.com/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=9&amp;ved=0CFwQFjAI&amp;url=http%3A%2F%2Fonline.wsj.com%2Fnews%2Farticles%2FSB10001424127887323864604579069550916021262&amp;ei=jCW8U6y3H8uZyATV7YHIDA&amp;usg=AFQjCNFcu2tB6zmwZ1PXmsQpZZu_9RBiqQ&amp;sig2=cBZv1BoSwS6otGBEgwHCwA&amp;bvm=bv.70138588,d.aWw"><b><i>EPA</i> Plan to Curb New <i>Coal</i>-Fired Power Plants - WSJ</b></a><span class="s4"><b> </b></span><span class="s20">Sept. 11, 2013<span class="Apple-converted-space"> </span></span></p>
+<p class="p39">The Wall Street Journal</p>
+<p class="p39">The <i>Environmental Protection Agency</i> first proposed a stringent standard for <i>coal</i>-fired plants last year, prompting an election-year debate about whether ...</p>
+<p class="p34"><br></p>
+<p class="p21"><a href="http://www.huffingtonpost.com/2014/01/07/coal-use-germany-nuclear_n_4554166.html"><b>Coal Use In Germany On The Rise As Country Seeks To Quit ...</b></a><span class="s8"><b> </b></span><span class="s20">Jan 07, 2014</span></p>
+<p class="p39">The latest <b>coal</b>-fired <b>power</b> station of German <b>power</b> provider RWE is pictured on Thursday, Nov. 14, <b>2013</b> in Hamm, Germany. (AP …</p>
+<p class="p34"><br></p>
+<p class="p38"><a href="http://www.forbes.com/sites/lorensteffy/2014/02/14/coal-makes-a-comeback-despite-natural-gas-abundance/"><b><i>Coal</i> Makes A Comeback Despite Natural Gas Abundance ...</b></a><span class="s20">2/14/<i>2014</i></span></p>
+<p class="p39">Forbes</p>
+<p class="p34"><br></p>
+<p class="p40"><span class="s21"><a href="http://www.google.com/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=1&amp;ved=0CB8QFjAA&amp;url=http%3A%2F%2Finstituteforenergyresearch.org%2Ftopics%2Fpolicy%2Fpower-plant-closures%2F&amp;ei=SOC8U_ySDcmvyAT_v4H4Bw&amp;usg=AFQjCNGJo3mdLHPO5Q9YX_TL7RwKfYrwIA&amp;sig2=MDu4nYyzvXEnz5OMGtLatg&amp;bvm=bv.70138588,d.aWw"><b>Power </b><span class="s2"><b><i>Plant</i> Closures - IER</b></span></a></span><b> </b><span class="s20">May 13, 2014<span class="Apple-converted-space"> </span></span></p>
+<p class="p39">Institute for Energy Research</p>
+<p class="p39">So if somebody wants to build a <i>coal</i>-<i>fired plant</i> they can. ... Updated List of Power <i>Plants</i> Set to <i>Close</i> According to EPA's Modeling and Public ...</p>
+<p class="p34"><br></p>
+<p class="p38"><a href="http://www.wired.com/2014/03/clean-coal/"><b><i>Renewables</i> Aren't Enough. Clean <i>Coal</i> Is the Future | WIRED</b></a><span class="s12"><b> </b></span><span class="s20">Mar 25, 2014</span></p>
+<p class="p39">Wired</p>
+<p class="p39"><span class="Apple-converted-space"> </span>- <i>Coal</i> supplies over 40 percent of global electricity needs, and that ... publicized—than any <i>renewable</i>-energy technology for decades to come.</p>
+<p class="p41"><br></p>
+<p class="p38"><a href="http://www.forbes.com/sites/christopherhelman/2014/06/02/obama-epa-issues-coal-killing-rules-to-cut-carbon-emissions-30-percent/"><b>Obama <i>EPA</i> Issues <i>Coal</i>-Killing Rules To Cut Carbon ...</b></a><span class="s12"><b> </b></span><span class="s20">Jun 2, 2014<span class="Apple-converted-space"> </span></span></p>
+<p class="p39"><i>Coal</i> miners and owners of <i>coal</i>-fired power plants. Don't expect their shares to sell off on today's rule revelation though — <i>EPA</i> has been ...</p>
+<p class="p34"><br></p>
+<p class="p38"><a href="http://www.bloomberg.com/news/2014-04-13/post-fukushima-japan-chooses-coal-over-renewable-energy.html"><b>Post-Fukushima Japan Chooses <i>Coal</i> Over <i>Renewable</i> ...</b></a><span class="s12"><b> </b></span><span class="s20">Apr 13, 2014<span class="Apple-converted-space"> </span></span></p>
+<p class="p39">Bloomberg L.P.</p>
+<p class="p39">Prime Minister Shinzo Abe is pushing Japan's <i>coal</i> industry to expand sales at home and abroad, undermining hopes among environmentalists ...</p>
+<p class="p34"><br></p>
+<p class="p38"><a href="http://cleantechnica.com/2014/08/11/abbotts-praise-coal-need-know-renewable-energy-target-review/"><b>Abbott's Praise Of <i>Coal</i> All You Need To Know About ...</b></a><span class="s12"><b> </b></span><span class="s20">Aug 11, 2014<span class="Apple-converted-space"> </span></span></p>
+<p class="p39">- Australia waits for <i>Renewable</i> Energy Target Review and how it will affect the <i>renewable</i> energy industry.</p>
+<p class="p34"><br></p>
+<p class="p14"><br></p>
+<p class="p14"><br></p>
+<p class="p19"><span class="s15">↑↑↑ </span><b>coal energy<span class="Apple-converted-space">  </span></b><span class="s15">↑↑↑</span></p>
+<p class="p20"><br></p>
+<p class="p14"><br></p>
+<p class="p14"><br></p>
+<p class="p14"><br></p>
+<p class="p19"><span class="s15">↓↓↓ </span><b>gas natural </b><span class="s15">↓↓↓</span></p>
+<p class="p14"><br></p>
+<p class="p14"><br></p>
+<p class="p17"><span class="s7"><a href="http://en.wikipedia.org/wiki/List_of_countries_by_natural_gas_production"><b>List of countries by natural gas production wiki</b></a></span></p>
+<p class="p14"><br></p>
+<p class="p11"><a href="http://www.usatoday.com/news/opinion/editorials/story/2012-03-25/natural-gas-cheap-energy/53775968/1"><b><i>Natural gas</i> production boom alters energy <i>outlook</i> – </b></a><a href="http://usatoday.com/"><b>USATODAY.com</b></a><span class="s4"><b> </b></span><span class="s9">Mar 25, 2012<span class="Apple-converted-space"> </span></span></p>
+<p class="p12"><span class="Apple-converted-space"> </span>•Applied to <i>industrial</i> uses, both to generate power and as a feedstock for petrochemicals, <i>natural gas</i> could jump-start manufacturing <b>...</b></p>
+<p class="p14"><br></p>
+<p class="p42"><span class="s5"><a href="http://paid.outbrain.com/network/redir?key=87267bae53fc0e540e894410f0086d32&amp;rdid=733261103&amp;type=RPM_/M3_ny&amp;in-site=false&amp;idx=2&amp;pc_id=19212224&amp;req_id=6d5b13a9f66eb09ff60f03c56de99ca9&amp;agent=blog_JS_rec&amp;recMode=1&amp;reqType=1&amp;wid=101&amp;adsCats=2004,-1,-1&amp;refPub=1142&amp;prs=true&amp;scp=false&amp;fcapElementId=19301&amp;origSrc=3036505&amp;did=639253303">You Won't Believe The Next Big Thing in Energy!</a></span><span class="s4"> (Ideas Lab)   </span><span class="s9">October 16, 2013<span class="Apple-converted-space"> </span></span></p>
+<p class="p43"><b>Report: Natural Gas Poised to Usher in Next Big Energy Trend</b></p>
+<p class="p12">By Brock N Meeks<span class="Apple-converted-space"> </span></p>
+<p class="p14"><br></p>
+<p class="p44"><a href="http://online.wsj.com/news/articles/SB10001424052702304591604579292801583210532"><b>Natural Gas Finishes 2013 As Best-Performing Commodity</b></a><span class="s2"><b> </b></span><span class="s9">Jan 1, 2014<span class="Apple-converted-space"> </span></span></p>
+<p class="p12"><i>The Wall Street Journal<span class="Apple-converted-space"> </span></i></p>
+<p class="p12">"Everyone anticipated prices to recover some from last year, so it's not a surprise," said Kent Bayazitoglu, an analyst for energy consulting firm Gelber &amp; Associates in Houston.<span class="Apple-converted-space"> </span></p>
+<p class="p12">Compared with past years, "<b>gas</b> remains…</p>
+<p class="p14"><br></p>
+<p class="p2"><a href="http://www.worldtribune.com/2014/11/21/energy-firm-plans-expansion-israels-tamar-gas-field-pipeline-egypt/"><b>Energy firm plans expansion of Israel's Tamar gas field ...</b></a><span class="s4"><b> </b></span><span class="s9">Nov 21, 2014</span></p>
+<p class="p12">The <b>gas</b> field has been prepared for an upgrade of up to $2 billion by Spain’s Union Fenosa <b>Gas</b>. Under the project, UFG would bolster <b>Tamar</b>’s <b>production</b> ...</p>
+<p class="p14"><br></p>
+<p class="p19"><span class="s15">↑↑↑ </span><b>natural gas<span class="Apple-converted-space">  </span></b><span class="s15">↑↑↑</span></p>
+<p class="p14"><br></p>
+<p class="p14"><br></p>
+<p class="p14"><br></p>
+<p class="p19"><span class="s15">↓↓↓ </span><b>geothermal </b><span class="s15">↓↓↓</span></p>
+<p class="p14"><br></p>
+<p class="p11"><a href="http://geothermalprosandcons.net/"><b><i>Geothermal Pros and Cons</i></b></a></p>
+<p class="p12"><i>Geothermal Pros and Cons</i> gives you the pros and cons about everything geothermal: Cost, installation, drilling, configuration options, tips, tricks, and a whole <b>...</b></p>
+<p class="p14"><br></p>
+<p class="p11"><a href="http://energyinformative.org/geothermal-energy-pros-and-cons/"><b><i>Geothermal</i> Energy <i>Pros and Cons</i> - Energy Informative</b></a></p>
+<p class="p12">This article is well-researched and contains every aspect a balanced <i>geothermal</i> energy <i>pros and cons</i> list should contain.</p>
+<p class="p14"><br></p>
+<p class="p12">--</p>
+<p class="p11"><a href="http://www.triplepundit.com/2012/06/geothermal-energy-pros-cons/"><b><i>Geothermal</i> Energy: <i>Pros and Cons</i></b></a><span class="s4"><b> </b></span><span class="s9">Jun 15, 2012<span class="Apple-converted-space"> </span></span></p>
+<p class="p12">The core of the Earth, some 4000 miles beneath its surface, is a fiery morass of superheated gas and molten rock which exists at roughly 7200 <b>...</b></p>
+<p class="p14"><br></p>
+<p class="p11"><a href="http://finance.yahoo.com/news/geothermal-energy-2013-expanding-global-170000517.html"><b>Geothermal Energy in 2013: Expanding Global Growth</b></a><span class="s2"><b><span class="Apple-converted-space">  </span></b></span><span class="s9"><span class="Apple-converted-space">      </span>12/24/2013</span></p>
+<p class="p12"><i>Yahoo! Finance ·</i></p>
+<p class="p12">As the <b>geothermal</b> industry wraps up an exciting and challenging year, the sector has positioned itself to grow more by 2020 than ever before.<span class="Apple-converted-space"> </span></p>
+<p class="p12">“We are seeing new technology developments move forward and new projects…</p>
+<p class="p14"><br></p>
+<p class="p14"><br></p>
+<p class="p19"><span class="s15">↑↑↑<span class="Apple-converted-space"> </span></span><b> geothermal </b><span class="s15">↑↑↑</span></p>
+<p class="p14"><br></p>
+<p class="p14"><br></p>
+<p class="p14"><br></p>
+<p class="p30"><span class="s15">↓↓↓ </span>methane hydrate<span class="s14"><b> </b></span><span class="s15">↓↓↓</span></p>
+<p class="p45"><br></p>
+<p class="p11"><a href="http://en.wikipedia.org/wiki/Methane_clathrate"><b><i>Methane</i> clathrate - Wikipedia, the free encyclopedia</b></a></p>
+<p class="p12">Jump to <a href="https://www.google.com/url?url=http://en.wikipedia.org/wiki/Methane_clathrate%23Natural_gas_hydrates_.28NGH.29_vs._liquified_natural_gas_.28LNG.29_in_transportation&amp;rct=j&amp;q=methane+hydrate&amp;usg=AFQjCNE3nmDBCoDuGgGaUFPa8-w7O33JeA&amp;sa=X&amp;ei=UDY_UYqhJtOp0AG58YCYDA&amp;ved=0CDoQygQwAA"><span class="s6">Natural gas </span><span class="s2"><i>hydrates</i></span><span class="s6"> (NGH) vs. liquified natural gas (LNG) in </span><span class="s2"><b>...</b></span></a>‎: Since <i>methane</i> clathrates are stable at a higher temperature than <b>...</b></p>
+<p class="p7"><span class="s5"><a href="http://en.wikipedia.org/wiki/Methane_clathrate#Structure_and_composition">Structure and composition</a></span><span class="s4"> - <a href="http://en.wikipedia.org/wiki/Methane_clathrate#Natural_deposits"><span class="s5">Natural deposits</span></a> - <a href="http://en.wikipedia.org/wiki/Methane_clathrate#Hydrates_in_natural_gas_processing"><span class="s5">Hydrates in natural gas processing</span></a></span></p>
+<p class="p45"><br></p>
+<p class="p11"><a href="http://www.netl.doe.gov/technologies/oil-gas/futuresupply/methanehydrates/maincontent.htm"><b><i>Methane Hydrates</i> - The National R&amp;D Program</b></a></p>
+<p class="p12">The National <i>Methane Hydrate</i> R&amp;D Program, a cooperative program sponsored through NETL, promotes the understanding of <i>methane hydrates</i>, their role in <b>...</b></p>
+<p class="p14"><br></p>
+<p class="p11"><a href="http://science.howstuffworks.com/environmental/green-tech/energy-production/frozen-fuel4.htm"><b>HowStuffWorks "The Risky Business of Mining <i>Methane Hydrate</i>"</b></a></p>
+<p class="p12">Mining <i>methane hydrate</i> is discussed in this section. Learn about mining <i>methane hydrate</i>.</p>
+<p class="p45"><br></p>
+<p class="p44"><a href="http://www.reuters.com/article/2013/03/12/us-methane-hydrates-japan-idUSBRE92B07620130312"><b>Japan achieves first gas extraction from offshore <i>methane hydrate</i></b></a><span class="s2"><b><i> </i></b></span><span class="s22"><i>March 12, 2013</i></span></p>
+<p class="p44"><span class="s9"><br>
+<a href="http://www.neurope.eu/article/japan-successfully-extracts-gas-methane-hydrate"><span class="s23"><b>Japan successfully extracts gas from <i>methane hydrate</i></b></span></a></span><span class="s2"><b><i> </i></b></span><span class="s22"><i>March 12, 2013</i></span></p>
+<p class="p14"><br></p>
+<p class="p11"><a href="http://geology.com/articles/methane-hydrates/"><b><i>Methane Hydrate</i>: The World's Largest Natural Gas Resource</b></a></p>
+<p class="p7"><span class="s5"><a href="https://plus.google.com/114439129854993501280">by Hobart King</a></span><span class="s4"> - in 60 Google+ circles - <a href="https://www.google.com/search?q=methane+hydrate&amp;hl=en&amp;client=firefox-a&amp;hs=Kul&amp;rls=org.mozilla:en-US:official&amp;channel=np&amp;tbs=ppl_ids:--114439129854993501280-,ppl_nps:Hobart+King,ppl_aut:1&amp;sa=X&amp;ei=UDY_UYqhJtOp0AG58YCYDA&amp;ved=0CHEQnxYwCA"><span class="s5">More by Hobart King</span></a></span></p>
+<p class="p12"><i>Methane hydrate</i> resources beneath Arctic permafrost and along subsea continent margins contain more hydrocarbon than all of the world's oil, natural gas and <b>...</b></p>
+<p class="p14"><br></p>
+<p class="p11"><a href="http://www.nature.com/scitable/knowledge/library/methane-hydrates-and-contemporary-climate-change-24314790"><b><i>Methane Hydrates</i> and Contemporary Climate Change | Learn ...</b></a></p>
+<p class="p7"><span class="s4">by CD Ruppel - 2011 - <a href="http://scholar.google.com/scholar?hl=en&amp;lr=&amp;cites=1487422616779754391&amp;um=1&amp;ie=UTF-8&amp;sa=X&amp;ei=UDY_UYqhJtOp0AG58YCYDA&amp;ved=0CIwBEM4CMAw"><span class="s5">Cited by 3</span></a> - <a href="http://scholar.google.com/scholar?hl=en&amp;lr=&amp;q=related:lwsKQP1ipBQJ:scholar.google.com/&amp;um=1&amp;ie=UTF-8&amp;sa=X&amp;ei=UDY_UYqhJtOp0AG58YCYDA&amp;ved=0CI0BEM8CMAw"><span class="s5">Related articles</span></a></span></p>
+<p class="p12">Climate-sensitive <i>methane hydrates</i> are a tiny fraction of global deposits and should not contribute measurably to atmospheric methane increases in the 21st <b>...</b></p>
+<p class="p45"><br></p>
+<p class="p30"><span class="s15">↑↑↑<span class="Apple-converted-space"> </span></span><span class="s14"><b> </b></span>methane hydrate<span class="s14"><b> </b></span><span class="s15">↑↑↑</span></p>
+<p class="p14"><br></p>
+<p class="p14"><br></p>
+<p class="p14"><br></p>
+<p class="p19"><span class="s15">↓↓↓ </span>nuclear<b> </b><span class="s15">↓↓↓</span></p>
+<p class="p14"><br></p>
+<p class="p14"><br></p>
+<p class="p11"><a href="http://en.wikipedia.org/wiki/Nuclear_power"><b><i>Nuclear power</i> - Wikipedia, the free encyclopedia</b></a></p>
+<p class="p12"><i>Nuclear power</i> is the use of sustained nuclear fission to generate heat and electricity. <i>Nuclear power</i> plants provided about 5.7% of the world's energy and 13% <b>...</b></p>
+<p class="p7"><span class="s5"><a href="http://en.wikipedia.org/wiki/Nuclear_power_plant">Nuclear power plant</a></span><span class="s4"> - <a href="http://en.wikipedia.org/wiki/Nuclear_power_by_country"><span class="s5">Nuclear power by country</span></a> - <a href="http://en.wikipedia.org/wiki/Nuclear_power_in_the_United_States"><span class="s5">Nuclear power in the United ...</span></a></span></p>
+<p class="p14"><br></p>
+<p class="p11"><a href="http://www.epa.gov/cleanenergy/energy-and-you/affect/nuclear.html"><b><i>Nuclear Energy</i> | Clean Energy | US EPA</b></a></p>
+<p class="p12"><i>Nuclear energy</i> originates from the splitting of uranium atoms in a process called fission. Fission releases energy that can be used to make steam, which is used <b>...</b></p>
+<p class="p14"><br></p>
+<p class="p14"><br></p>
+<p class="p19"><span class="s15">↑↑↑ </span><b>nuclear<span class="Apple-converted-space">  </span></b><span class="s15">↑↑↑</span></p>
+<p class="p14"><br></p>
+<p class="p14"><br></p>
+<p class="p14"><br></p>
+<p class="p46">↓↓↓ <span class="s14"><b>oil </b></span>↓↓↓</p>
+<p class="p14"><br></p>
+<p class="p11"><a href="http://en.wikipedia.org/wiki/Peak_oil"><b><i>Peak oil</i> - Wikipedia, the free encyclopedia</b></a></p>
+<p class="p12"><i>Peak oil</i> is the point in time when the maximum rate of petroleum extraction is reached, after which the rate of production is expected to enter terminal decline.</p>
+<p class="p7"><span class="s5"><a href="http://en.wikipedia.org/wiki/Predicting_the_timing_of_peak_oil">Predicting the timing of peak oil</a></span><span class="s4"> - <a href="http://en.wikipedia.org/wiki/Category:Peak_oil"><span class="s5">Category:Peak oil</span></a> - <a href="http://en.wikipedia.org/wiki/Mitigation_of_peak_oil"><span class="s5">Mitigation of peak oil</span></a> - <a href="http://en.wikipedia.org/wiki/Category:People_associated_with_peak_oil"><span class="s5">People</span></a></span></p>
+<p class="p14"><br></p>
+<p class="p11"><a href="http://www.google.com/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=10&amp;ved=0CIcBEBYwCQ&amp;url=http%3A%2F%2Fwww.conspiracyplanet.com%2Fchannel.cfm%3Fchannelid%3D63%26contentid%3D2170%26page%3D2&amp;ei=fPY5UdGwE7G60AGslICQAQ&amp;usg=AFQjCNGqlQafPcAty23u3Us56sclpkpeVg&amp;sig2=zCiU8Ct2m22F3HIABkPiQw&amp;bvm=bv.43287494,d.dmQ"><b>Scientific Evidence <i>Debunks Peak Oil</i> Hoax - Conspiracy Planet</b></a></p>
+<p class="p12">Scientific Evidence <i>Debunks Peak Oil</i> Hoax, " Dismissal of the Claims of a Biological Connection for Natural Petroleum (Scientific Paper Published In 'Energia') <b>...</b></p>
+<p class="p14"><br></p>
+<p class="p17"><span class="s7"><a href="http://en.wikipedia.org/wiki/List_of_countries_by_oil_production"><b>List of countries by oil production wiki</b></a></span></p>
+<p class="p11"><a href="http://en.wikipedia.org/wiki/Keystone_Pipeline"><b><i>Keystone Pipeline</i> - Wikipedia, the free encyclopedia</b></a></p>
+<p class="p12">The <i>Keystone Pipeline</i> System is a pipeline system to transport synthetic crude oil and diluted bitumen ("dilbit") from the Athabasca oil sands region in <b>...</b></p>
+<p class="p7"><span class="s5"><a href="http://en.wikipedia.org/wiki/Keystone_Pipeline#Description">Description</a></span><span class="s4"> - <a href="http://en.wikipedia.org/wiki/Keystone_Pipeline#Partnership"><span class="s5">Partnership</span></a> - <a href="http://en.wikipedia.org/wiki/Keystone_Pipeline#History"><span class="s5">History</span></a> - <a href="http://en.wikipedia.org/wiki/Keystone_Pipeline#Original_and_extended_route"><span class="s5">Original and extended route</span></a></span></p>
+<p class="p14"><br></p>
+<p class="p11"><a href="http://www.google.com/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=4&amp;ved=0CCgQFjAD&amp;url=http%3A%2F%2Fwww.omichron.com%2Frenewablecrude.html&amp;ei=BUoiVOfSOMufyATHi4GYBA&amp;usg=AFQjCNESqstrtTQJffdKsU-t9KjeY4k8TQ&amp;sig2=MUOLzgQeK_IHvQNcZ73v3A"><b><i>RENEWABLE</i> CRUDE - welcome</b></a></p>
+<p class="p12">CRUDE <i>OIL</i> IS A <i>RENEWABLE</i> RESOURCE. IT MAY SEEM HARD TO BELIEVE, BUT CRUDE <i>OIL</i> ACTUALLY IS A <i>RENEWABLE</i> RESOURCE, AND IT IS ...</p>
+<p class="p14"><br></p>
+<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 30.0px Times"><a href="https://en.wikipedia.org/wiki/Predicting_the_timing_of_peak_oil"><b>Predicting the timing of peak oil </b></a><span class="s24"><b>wiki</b></span></h1>
+<p class="p14"><br></p>
+<p class="p14"><br></p>
+<p class="p14"><br></p>
+<p class="p19"><b>oil 2011</b></p>
+<p class="p14"><br></p>
+<p class="p2"><a href="http://www.ey.com/US/en/Newsroom/News-releases/Oil-demand-likely-to-increase;-supply-less-certain"><b>Oil demand likely to increase; supply less certain</b></a><span class="s4"><b> </b></span><span class="s9">3 August 2011</span></p>
+<p class="p12">According to Ernst &amp; Young LLP’s quarterly outlook<span class="Apple-converted-space">  </span>Houston</p>
+<p class="p14"><br></p>
+<p class="p19"><b>oil 2012</b></p>
+<p class="p11"><a href="http://www.forbes.com/sites/boblutz/2012/02/06/fulsome-fossil-fuels-and-the-peak-oil-myth/"><b>Fulsome Fossil Fuels And The '<i>Peak Oil</i>' <i>Myth</i> - Forbes</b></a><span class="s4"><b> </b></span><span class="s9">Feb 6, 2012<span class="Apple-converted-space"> </span></span></p>
+<p class="p12">Not likely. (Photo credit: Viktor Hertz) Here's what we all know to be true: petroleum products are being consumed by an increasingly mobile <b>...</b></p>
+<p class="p14"><br></p>
+<p class="p11"><a href="http://seekingalpha.com/article/841401-peak-oil-myth-debunking-the-peak-oil-theory"><b><i>Peak Oil Myth</i>: Debunking The Peak Oil Theory - Seeking Alpha</b></a><span class="s4"><b> </b></span><span class="s9">Sep 1, 2012<span class="Apple-converted-space"> </span></span></p>
+<p class="p12">One of the most important energy theories for investors in energy of any sorts is the notion of "<i>peak oil</i>", or the idea that at some point, we're <b>...</b></p>
+<p class="p14"><br></p>
+<p class="p11"><a href="http://www.technologyreview.com/news/425509/peak-oil-debunked/"><b><i>Peak Oil Debunked</i> | MIT Technology Review</b></a><span class="s4"><b> </b></span><span class="s9">Sep 22, 2011<span class="Apple-converted-space"> </span></span></p>
+<p class="p12">Daniel Yergin's new book is a valuable guide to how energy drives the world's economy.</p>
+<p class="p14"><br></p>
+<p class="p11"><a href="http://www.technologyreview.com/view/507376/iea-says-us-oil-production-will-exceed-saudi-arabias/"><b>IEA World Energy <i>Outlook</i> Says U.S. <i>Oil Production</i> Will Beat Saudi ...</b></a><span class="s4"><b> </b></span><span class="s9">Nov 13, 2012<span class="Apple-converted-space"> </span></span></p>
+<p class="p12">Shale gas and new <i>oil</i>-<i>extraction</i> technology are changing the energy map, but global demand is also set to grow.</p>
+<p class="p14"><br></p>
+<p class="p11"><a href="http://peakoildebunked.blogspot.com/"><b><i>Peak Oil Debunked</i></b></a><span class="s4"><b> </b></span><span class="s9">Nov 15, 2012</span></p>
+<p class="p12"><i>Peak Oil Debunked</i>. Debunking peak oil hype with facts and figures, and exposing the agendas behind peak oil. DISCLAIMER FOR IDIOTS: <b>...</b></p>
+<p class="p14"><br></p>
+<p class="p48"><br></p>
+<p class="p19"><b>oil 2013</b></p>
+<p class="p11"><a href="http://moneymorning.com/tag/keystone-pipeline-pros-and-cons/"><b><i>keystone pipeline pros and cons</i> – Money Morning - Only the News ...</b></a><span class="s4"><b> </b></span><span class="s9">Feb 14, 2013<span class="Apple-converted-space"> </span></span></p>
+<p class="p12">For more than four years, the controversial <i>Keystone</i> XL <i>pipeline</i> has been at the center of a heated battle between opponents and supporters.</p>
+<p class="p14"><br></p>
+<p class="p49"><a href="http://finance.yahoo.com/news/positive-outlook-oil-industry-2013-132000471.html"><b>Positive Outlook for Oil Industry in 2013 as EIA and OPEC Raise Forecasts for Global Oil Demand </b></a><span class="s9">Feb 26, 2013</span></p>
+<p class="p50">Five Star Equities Provides Stock Research on Bill Barrett and Penn West Petroleum</p>
+<p class="p14"><br></p>
+<p class="p11"><a href="http://www.huffingtonpost.com/bill-frezza/belief-in-peak-oil-logica_b_2756350.html"><b>Bill Frezza: Belief In <i>Peak Oil</i> Logically Implies Failure Of Alternative ...</b></a><span class="s4"><b> </b></span><span class="s9">Feb 25, 2013</span></p>
+<p class="p12">Next time you hear a <i>Peak Oil</i> alarmist prophesying doom, calm him down by pointing out that if natural energy resources were to ever run dry, <b>...</b></p>
+<p class="p7"><span class="s5"><a href="http://www.thedailybeast.com/articles/2013/03/04/let-s-pursue-a-new-version-of-peak-oil.html">Let's Pursue a New Version of '<i>Peak Oil</i>'</a></span><span class="s2"><span class="Apple-converted-space"> </span></span><span class="s4"> March 5, 2013<br>
+<i>Daily Beast</i>‎<span class="Apple-converted-space"> </span></span></p>
+<p class="p14"><br></p>
+<p class="p49"><a href="http://www.fastcoexist.com/1681539/is-peak-oil-a-myth"><b>Is <i>Peak Oil</i> A Myth?</b></a><span class="s2"><b><span class="Apple-converted-space"> </span></b></span><span class="s9"> March 7, 2013</span></p>
+<p class="p12"><i>Co.Exist</i> ‎- <a href="https://plus.google.com/106378341492545442423"><span class="s25">by Ben Schiller</span></a> ‎ <br>
+<span class="s7">At times, the idea of "<i>peak oil</i>" has been almost interchangeable with climate change. Campaigners for action on global warming have often relied on a practical <b>...</b></span><br>
+<br>
+<a href="http://thehill.com/blogs/e2-wire/e2-wire/286501-bp-ceo-peak-oil-talked-quieted-by-abundance"><span class="s26"><b>BP CEO: '<i>Peak oil</i>' talk quieted by abundance</b></span></a><span class="s26"><b><span class="Apple-converted-space"> </span></b></span> March 7, 2013<br>
+<i>The Hill (blog)</i>‎<span class="Apple-converted-space"> </span></p>
+<p class="p14"><br></p>
+<p class="p11"><a href="http://www.powerlineblog.com/archives/2013/10/no-reason-just-hate-thats-a-modern-liberal.php"><b>No Reason, Just Hate: That's a Modern Liberal | Power Line</b></a><span class="s4"><b> </b></span><span class="s9">Oct 22, 2013<span class="Apple-converted-space"> </span></span></p>
+<p class="p12">- But instead of trying to advance a rational argument, what do <i>liberals</i> do? They can't talk about the <i>pipeline</i> except by trotting out their own pet ...</p>
+<p class="p51"><br></p>
+<p class="p11"><a href="http://grist.org/news/bankrupt-fracking-firm-suing-new-york-governor-to-end-moratorium/"><b>Bankrupt fracking firm suing New York governor to end moratorium </b></a><span class="s27"><b><span class="Apple-converted-space"> </span></b></span><span class="s8"><b> </b></span><span class="s9">19 Dec 2013</span></p>
+<p class="p14"><br></p>
+<p class="p14"><br></p>
+<p class="p19"><b>oil 2014</b></p>
+<p class="p14"><br></p>
+<p class="p11"><a href="https://ricochet.com/archives/the-real-reason-liberals-oppose-the-keystone-pipeline/"><b>The Real Reason Liberals Oppose the Keystone Pipeline | Ricochet</b></a><span class="s4"><b> </b></span><span class="s9">Feb 5, 2014<span class="Apple-converted-space"> </span></span></p>
+<p class="p12">- On May 7, 2013, as part of a vacation to Washington D.C., I dragged my 6-year-old son and 11-year-old daughter to a subcommittee hearing in ...</p>
+<p class="p20"><br></p>
+<p class="p11"><a href="http://www.pennenergy.com/articles/pennenergy/2014/02/oil-and-gas-the-return-of-peak-oil-and-mikhail-khodorkovsky.html"><b>The return of <i>peak oil</i> and Mikhail Khodorkovsky - Pennenergy</b></a><span class="s4"><b> </b></span><span class="s9">Feb 12, 2014</span></p>
+<p class="p12"><i>Peak oil</i> entered our lexicon in 1956 and has since framed countless <b>....</b> and money laundering, pushing back his release until <i>2014</i>.</p>
+<p class="p14"><br></p>
+<p class="p11"><a href="http://www.cnbc.com/id/101460011"><b>I'd vote 'yes' on <i>Keystone</i> pipeline: Warren <i>Buffett</i> - CNBC</b></a><span class="s12"><b> </b></span><span class="s9">Mar 3, 2014</span></p>
+<p class="p12">Warren <i>Buffett</i> tells CNBC he backs the <i>Keystone</i> Pipeline even though it would take away some business ...</p>
+<p class="p14"><br></p>
+<p class="p49"><a href="http://www.bloomberg.com/news/2014-07-04/u-s-seen-as-biggest-oil-producer-after-overtaking-saudi.html"><b><i>U.S.</i> Seen as Biggest <i>Oil</i> Producer After Overtaking Saudi ...</b></a><span class="s9">Jul 4, 2014</span></p>
+<p class="p12"><i>Bloomberg</i><span class="Apple-converted-space"> </span></p>
+<p class="p12">By Grant Smith <i>2014</i>-07-04T15:56:13Z ... <i>U.S. production</i> of crude <i>oil</i>, along with liquids separated from natural gas, surpassed all other countries this year with ...</p>
+<p class="p14"><br></p>
+<p class="p52"><span class="s21"><a href="http://www.politico.com/magazine/story/2014/11/keystone-pipeline-is-a-canard-113102.html"><b>Why Keystone Is a Canard</b></a></span><span class="s12"><b><span class="Apple-converted-space"> </span></b></span><span class="s28"><b> </b></span><span class="s14">23 November 2014</span><span class="s29"><b><span class="Apple-converted-space">  </span></b></span><span class="s14"><i>Politico</i></span></p>
+<p class="p18"><a href="http://www.bbc.com/news/business-30174650"><b>Oil price slide and sanctions 'cost Russia $140bn'</b></a><span class="s4"><b> </b></span><span class="s9"><span class="Apple-converted-space"> </span></span><span class="s8"><b> </b></span><span class="s9">Nov 24, 2014</span></p>
+<p class="p7"><a href="http://www.californiaeminentdomainreport.com/2014/11/articles/inverse-condemnation-regulatory-takings/the-unintended-effects-of-protecting-the-environment-how-banning-fracking-can-lead-san-benito-county-to-bankruptcy/"><b>The Unintended Effects of Protecting the Environment – How Banning Fracking Can Lead San Benito County To Bankruptcy</b></a><span class="s8"><b> </b></span><span class="s4">Nov 24, 2014</span></p>
+<p class="p7"><span class="s4">By <a href="http://www.nossaman.com/ashaverdian"><span class="s5">Artin Shaverdian</span></a></span></p>
+<p class="p53"><br></p>
+<p class="p19"><b>oil 2015</b></p>
+<p class="p54"><a href="http://americasmarkets.usatoday.com/2015/01/08/oil-companies-face-new-risk-bankruptcy/"><b>Oil companies face new risk: Bankruptcy!</b></a><span class="s30"><b> </b></span><span class="s31"><i>Jan 8, 2015</i></span></p>
+<p class="p55"><i>USA TODAY MONEY <span class="Apple-converted-space"> </span></i></p>
+<p class="p55">Falling <b>oil</b> prices aren’t just going to siphon billions from the coffers of <b>oil</b> companies. But it also threatens…</p>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; min-height: 14.0px"><br></h3>
+<p class="p14"><br></p>
+<p class="p19"><b>oil 2016</b></p>
+<p class="p20"><br></p>
+<p class="p11"><a href="https://www.sayanythingblog.com/entry/pipeline-protest-wasnt-really-pipeline/"><b>The Dakota Access Pipeline Protest Which Isn't Really About a ...</b></a><span class="s9"> Aug 15, 2016</span></p>
+<p class="p12"><span class="Apple-converted-space"> </span>- Protesters of the Dakota Access <i>pipeline</i> and officers face off at a work site of the .... <i>Liberals</i> are the problem. .... Why do you <i>hate</i> our Mother?</p>
+<p class="p14"><br></p>
+<p class="p11"><a href="https://mises.org/blog/real-reason-oppose-dakota-access-pipeline"><b>The Real Reason to Oppose the Dakota Access Pipeline | Mises Wire</b></a><span class="s4"><b> </b></span><span class="s9">Nov 29, 2016<span class="Apple-converted-space"> </span></span></p>
+<p class="p12">- The ongoing protest over the Dakota Access <i>Pipeline</i> near Standing Rock Indian ... In North Dakota, however, the <i>pipeline</i> passes through private property and .... I know <i>leftists</i> often point to tribal communities as an example of how to live .... The show demonstrates that much of the <i>hate</i> originated with the ...</p>
+<p class="p14"><br></p>
+<p class="p11"><a href="http://dailyhive.com/vancouver/pipelines-can-save-us-from-hostility-and-hate-opinion"><b>Opinion: Pipelines can save us from hostility and hate | Daily Hive ...</b></a><span class="s4"><b> </b></span><span class="s9">Dec 1, 2016</span></p>
+<p class="p12"><span class="Apple-converted-space"> </span>- Guest contributor Bruce Allen explains why even <i>progressives</i> should support <i>pipelines</i> in Canada.</p>
+<p class="p20"><br></p>
+<p class="p20"><br></p>
+<p class="p19"><b>oil 2017</b></p>
+<p class="p20"><br></p>
+<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 19.0px Times; color: #0000ee"><a href="http://www.theblaze.com/news/2017/02/23/dakota-access-pipeline-protesters-left-sensitive-wildlife-habitat-trashed-and-destroyed/"><b>Dakota Access Pipeline protesters left ‘sensitive wildlife habitat’ trashed and destroyed</b></a><span class="s8"><b> </b><a href="http://www.theblaze.com/author/bmorse/"><span class="s32">Brandon Morse</span></a></span><span class="s9"> Feb 23, 2017</span></h1>
+<p class="p14"><br></p>
+<p class="p14"><br></p>
+<p class="p19"><b>oil 2018</b></p>
+<p class="p20"><b></b><br></p>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; color: #0000ee"><span class="s5"><a href="https://www.vox.com/energy-and-environment/2018/5/15/17351236/california-rooftop-solar-pv-panels-mandate-energy-experts"><b>California's rooftop solar panel mandate: the case for and against - Vox</b></a></span><span class="s4"><b> May 15, 2018</b></span></h3>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times"><span class="Apple-converted-space"> </span><i>California</i> will require <i>solar panels</i> on <i>all</i> new homes. That's not ... <i>California Rooftop</i> Solar Mandate to Boost Sales 14% Over 4 Years .</h3>
+<p class="p20"><b></b><br></p>
+<h1 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 17.0px Times"><a href="https://www.energytoday.net/technology/this-is-how-big-oil-will-die/"><b>This Is How Big Oil Will Die</b></a><b> </b><span class="s24"><b><span class="Apple-converted-space">  </span></b></span><span class="s14">2018-05-17</span></h1>
+<p class="p7"><span class="s4"><b>Seth Miller </b>the <a href="https://www.energysociety.org/"><span class="s5">American Energy Society</span></a></span></p>
+<p class="p12"><a href="https://en.wikipedia.org/wiki/Keystone_Pipeline">The Keystone XL c</a>losed thanks to a confluence of technologies that came together faster than anyone in the oil and gas industry had ever seen.</p>
+<p class="p12">But in 2025, no one wants the oil.</p>
+<p class="p20"><b></b><br></p>
+<p class="p20"><br></p>
+<p class="p14"><br></p>
+<p class="p14"><br></p>
+<p class="p46">↑↑↑ <span class="s14"><b>oil<span class="Apple-converted-space">  </span></b></span>↑↑↑</p>
+<p class="p20"><br></p>
+<p class="p14"><br></p>
+<p class="p14"><br></p>
+<p class="p14"><br></p>
+<p class="p19"><span class="s15">↓↓↓</span><b> solar energy <span class="Apple-converted-space">  </span></b><span class="s15">↓↓↓</span></p>
+<p class="p14"><br></p>
+<p class="p11"><a href="http://www.mercurysolarsystems.com/"><b>Solar Panels | <i>Mercury Solar</i> Systems</b></a></p>
+<p class="p12"><i>Mercury Solar</i> Systems provides solar power systems for commercial and residential properties in the New York Metro Area, Pennsylvania, Westchester, <b>...</b></p>
+<p class="p14"><br></p>
+<p class="p11"><a href="http://www.sciencedaily.com/releases/2010/07/100719083044.htm"><b>Breakthrough in thin-film <i>solar</i> cells: New insights into the <i>indium</i> ...</b></a><span class="s9"> Jul 20, 2010<span class="Apple-converted-space"> </span></span></p>
+<p class="p12">Scientists have made a major breakthrough in their search for more efficient thin-film <i>solar</i> cells. Computer simulations designed to investigate <b>...</b></p>
+<p class="p11"><a href="http://en.wikipedia.org/wiki/Germanium"><b><i>Germanium</i> - Wikipedia, the free encyclopedia</b></a></p>
+<p class="p12"><i>Germanium's</i> major end uses in the present are fiber-optic systems and infrared optics. It is used in <i>solar</i> cell applications. <i>Germanium</i> compounds are used for <b>...</b></p>
+<p class="p14"><br></p>
+<p class="p11"><a href="http://www.copper.org/publications/newsletters/innovations/2007/05/solar_energy.html"><b><i>Copper</i>-based <i>Solar</i> Cells - <i>Copper</i> Development Association</b></a></p>
+<p class="p12">Innovations, online magazine for <i>copper</i>.org: Electrical: May 2007 - <i>Copper</i>-based <i>Solar</i> Cells: Good for the Environment, Good for the Consumer.</p>
+<p class="p14"><br></p>
+<p class="p11"><a href="http://en.wikipedia.org/wiki/Cadmium_telluride_photovoltaics"><b><i>Cadmium</i> telluride photovoltaics - Wikipedia, the free encyclopedia</b></a></p>
+<p class="p12">Jump to <a href="https://www.google.com/url?url=http://en.wikipedia.org/wiki/Cadmium_telluride_photovoltaics%23SCI_and_First_Solar&amp;rct=j&amp;q=cadmium+solar&amp;usg=AFQjCNEDKGuFIvk-omV6PvpbTjjq4hQFGQ&amp;sa=X&amp;ei=wesgUbXBF8Xo0gHD2IHgDA&amp;ved=0CDcQygQwAA"><span class="s6">SCI and First </span><span class="s2"><i>Solar</i></span></a>‎: The major commercial success to emerge from the turmoil of the 1990s was <i>Solar</i> Cells Incorporated (SCI). Founded in 1999 <b>...</b></p>
+<p class="p7"><span class="s5"><a href="http://en.wikipedia.org/wiki/Cadmium_telluride_photovoltaics#Background">Background</a></span><span class="s4"> - <a href="http://en.wikipedia.org/wiki/Cadmium_telluride_photovoltaics#History"><span class="s5">History</span></a> - <a href="http://en.wikipedia.org/wiki/Cadmium_telluride_photovoltaics#Issues"><span class="s5">Issues</span></a> - <a href="http://en.wikipedia.org/wiki/Cadmium_telluride_photovoltaics#Market_viability"><span class="s5">Market viability</span></a></span></p>
+<p class="p14"><br></p>
+<p class="p11"><a href="http://en.wikipedia.org/wiki/Cadmium_telluride"><b><i>Cadmium</i> telluride - Wikipedia, the free encyclopedia</b></a></p>
+<p class="p12"><i>Cadmium</i> telluride (CdTe) is a crystalline compound formed from <i>cadmium</i> and tellurium. It is used as an infrared optical window and a <i>solar</i> cell material.</p>
+<p class="p14"><br></p>
+<p class="p11"><a href="http://www.washingtonpost.com/politics/specialreports/solyndra-scandal"><b><i>Solyndra</i> Scandal | Full Coverage of Failed Solar Startup - The ...</b></a></p>
+<p class="p12">Full coverage of <i>Solyndra</i>, the California-based solar company that went bankrupt after receiving $535 million in federal loan guarantees from the Obama <b>...</b></p>
+<p class="p14"><br></p>
+<p class="p11"><a href="http://abcnews.go.com/Blotter/Solyndra/"><b><i>Solyndra</i> - ABC News</b></a></p>
+<p class="p12">Complete coverage of the controversial government loan guarantee to the now-bankrupt solar firm <i>Solyndra</i>.</p>
+<p class="p14"><br></p>
+<p class="p11"><a href="http://www.quora.com/Solyndra/Why-did-Solyndra-fail"><b>Solyndra: <i>Why did Solyndra fail</i>? - Quora</b></a></p>
+<p class="p12">US solar panel company <i>Solyndra</i> suspended operations and declared bankruptcy in August 2011 [1]. Prior to this it received over $500 million in federal loan <b>...</b></p>
+<p class="p14"><br></p>
+<p class="p11"><a href="http://www.google.com/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=2&amp;ved=0CDUQFjAB&amp;url=http%3A%2F%2Fen.wikipedia.org%2Fwiki%2FSolyndra&amp;ei=RKMZU6f6LYaS0gHQqoCwAw&amp;usg=AFQjCNG5c3eSpMQzBZr85jEDaVmAEy4Iiw&amp;sig2=O2herTXitMy6fHE6EZvQZA&amp;bvm=bv.62578216,d.dmQ"><b><i>Solyndra</i> - Wikipedia, the free encyclopedia</b></a></p>
+<p class="p12"><i>Solyndra</i> was a manufacturer of cylindrical panels of copper indium gallium selenide (CIGS) thin-film solar cells based in Fremont, California. Although the <b>...</b></p>
+<p class="p14"><br></p>
+<h2 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 18.0px Times; color: #0000ee"><a href="https://gigaom.com/2008/09/25/cadmium-the-dark-side-of-thin-film/"><b>Gigaom | Cadmium: The Dark Side of Thin-Film?</b></a></h2>
+<p class="p12"><b>Cadmium: The Dark Side of Thin-Film</b>? by Robert Mullins Sep 25, ... <b>Cadmium</b>, a byproduct of ... Solar Tubes Startup <b>Solyndra</b> Signs $250M Sale</p>
+<p class="p14"><br></p>
+<p class="p14"><br></p>
+<p class="p14"><br></p>
+<h2 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 18.0px Times; color: #0000ee"><a href="http://www.nytimes.com/gwire/2011/09/06/06greenwire-solyndra-bankruptcy-reveals-dark-clouds-in-sol-45598.html?pagewanted=all"><b>Solyndra Bankruptcy Reveals Dark Clouds in Solar Power ...</b></a><span class="s9"> Sep 06, 2011 </span></h2>
+<h2 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times"><b>Solyndra</b> had some unique problems, ... Ariz.-based First Solar makes panels that avoid the cost of silicon by using <b>cadmium</b> telluride thin film.</h2>
+<h2 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; min-height: 14.0px"><br></h2>
+<p class="p26"><span class="s7"><a href="https://www.youtube.com/watch?v=3EGTIhtdwic"><b>SOLYNDRA - INSIDE DEALS - SHADY RESULTS</b></a></span><span class="s4"><b> </b></span><span class="s9"><b>Oct 7, 2011</b></span></p>
+<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px Times; color: #0000ee"><span class="s7"><a href="http://www.edn.com/design/power-management/4368710/4/Solyndra-Its-technology-and-why-it-failed"><b>Solyndra and Obama and friends got $535 Millon Dollars of your tax money!</b></a></span><span class="s4"><b> </b></span><span class="s9"><b>Oct 24, 2011</b></span></h1>
+<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px Times; color: #0000ee"><a href="http://www.edn.com/design/power-management/4368710/4/Solyndra-Its-technology-and-why-it-failed"><b>Solyndra: Its technology and why it failed</b></a><span class="s4"><b><span class="Apple-converted-space">  </span></b><a href="http://www.edn.com/user/rich.pell"><span class="s33">Rich Pell</span></a></span><span class="s9"> -November 21, 2011</span></h1>
+<p class="p14"><br></p>
+<p class="p14"><br></p>
+<p class="p11"><a href="http://sanfrancisco.cbslocal.com/2012/04/28/solyndra-not-dealing-with-toxic-waste-at-milpitas-facility/"><b><i>Solyndra</i> Not Dealing With Toxic Waste At Milpitas Facility « CBS ...</b></a><span class="s4"><b> </b></span><span class="s9">Apr 28, 2012<span class="Apple-converted-space"> </span></span></p>
+<p class="p12">Three months after CBS 5 caught <i>Solyndra</i> tossing millions of <b>...</b> He said some materials, such as <i>cadmium</i>, are toxic, and hard to dispose of.</p>
+<p class="p14"><br></p>
+<p class="p11"><a href="http://www.fireandreamitchell.com/2012/04/29/obamas-solyndra-leaving-behind-toxic-waste-at-its-milpitas-facility/"><b>Obama's <i>Solyndra</i> leaving behind toxic waste at it's Milpitas facility ...</b></a><span class="s4"><b> </b></span><span class="s9">Apr 29, 2012<span class="Apple-converted-space"> </span></span></p>
+<p class="p12">Obama's <i>Solyndra</i> leaving behind toxic waste at it's Milpitas facility <b>...</b> of <i>Solyndra's</i> Milipitas plant said some materials, such as <i>cadmium</i>, are <b>...</b></p>
+<p class="p14"><br></p>
+<p class="p11"><a href="http://lonelyconservative.com/2012/04/bankrupt-green-company-solyndra-having-trouble-disposing-of-toxic-waste/"><b>Bankrupt 'Green' Company <i>Solyndra</i> Having Trouble Disposing of ...</b></a><span class="s4"><b> </b></span><span class="s9">Apr 30, 2012</span></p>
+<p class="p12">No wonder the bankrupt green company <i>Solyndra</i> is handing out big <b>...</b> He said some materials, such as <i>cadmium</i>, are toxic, and hard to <b>...</b></p>
+<p class="p14"><br></p>
+<p class="p11"><a href="http://www.cafepharma.com/boards/archive/index.php/t-500611.html"><b>Another Libtarded Irony: <i>Solyndra</i> Toxic Waste Problem [Archive ...</b></a><span class="s4"><b> </b></span><span class="s9">Apr 30, 2012</span></p>
+<p class="p12">[Archive] Another Libtarded Irony: <i>Solyndra</i> Toxic Waste Problem Political <b>...</b> that the production process of solar panels has <i>cadmium</i> waste?</p>
+<p class="p14"><br></p>
+<p class="p11"><a href="http://news.heartland.org/newspaper-article/2012/08/03/abound-solar-follows-solyndra-bankruptcy"><b>Abound Solar Follows <i>Solyndra</i> into Bankruptcy | Heartlander ...</b></a><span class="s4"><b> </b></span><span class="s9">Aug 3, 2012<span class="Apple-converted-space"> </span></span></p>
+<p class="p12">Impressed by <i>Solyndra</i>, Obama Triples Down on Solar Power <b>...</b> Abound Solar planned to produce solar panels using the chemical <i>cadmium</i> <b>...</b></p>
+<p class="p14"><br></p>
+<p class="p11"><a href="http://www.washingtontimes.com/news/2012/feb/23/solyndra-abandons-efforts-to-go-clean-and-green/?page=all"><b><i>Solyndra</i> abandons efforts to go clean and green - Washington Times</b></a><span class="s9"> Feb 23, 2012<span class="Apple-converted-space"> </span></span></p>
+<p class="p12">Federal officials hailed <i>Solyndra</i> LLC's plan to create clean energy when they <b>...</b> consist, in part, of open containers of unidentified chemical <i>waste</i> and lead <b>...</b><span class="Apple-converted-space"> </span></p>
+<p class="p12">A smaller sign on the front of the machine says “<i>toxic</i>” next to what <b>...</b></p>
+<p class="p14"><br></p>
+<p class="p14"><br></p>
+<p class="p14"><br></p>
+<p class="p11"><a href="http://www.sustainablebusiness.com/index.cfm/go/news.display/id/24565"><b><i>Hazardous</i> Waste Weighs on <i>Solar</i> Industry's Footprint</b></a><span class="s4"><b> </b></span><span class="s9">Feb 13, 2013<span class="Apple-converted-space"> </span></span></p>
+<p class="p12">As the industry grows, <i>hazardous</i> waste is becoming a bigger issue, <b>...</b> After installing a <i>solar panel</i>, "it would take one to three months of <b>...</b></p>
+<p class="p14"><br></p>
+<p class="p11"><a href="http://www.kcet.org/news/rewire/solar/photovoltaic-pv/solar-powers-toxic-footprint.html"><b><i>Solar</i> Power's <i>Toxic</i> Footprint | Photovoltaic (PV) | ReWire | KCET</b></a><span class="s12"><b> </b></span><span class="s9">Feb 18, 2013</span></p>
+<p class="p7"><span class="s5"><a href="https://www.google.com/search?q=solar+panels+toxic&amp;client=firefox-a&amp;hs=3Lu&amp;rls=org.mozilla:en-US:official&amp;channel=sb&amp;tbs=ppl_ids:--100562415844382241634-,ppl_nps:Chris+Clarke,ppl_aut:1">by Chris Clarke</a></span></p>
+<p class="p12"><span class="Apple-converted-space"> </span>Solar manufacturers in California produced over 46 million pounds of <b>...</b> <i>hazardous</i> waste for the manufacture of a typical <i>solar panel</i> is <b>...</b></p>
+<p class="p14"><br></p>
+<p class="p11"><a href="http://www.kcet.org/news/rewire/solar/photovoltaic-pv/state-rejects-loosening-toxic-waste-regs-on-old-solar-panels.html"><b>Trashing Old <i>Solar Panels</i> is a More Complicated Process Than You ...</b></a><span class="s12"><b> </b></span><span class="s9">Oct 17, 2013<span class="Apple-converted-space"> </span></span></p>
+<p class="p7"><span class="s5"><a href="https://www.google.com/search?q=solar+panels+toxic&amp;client=firefox-a&amp;hs=3Lu&amp;rls=org.mozilla:en-US:official&amp;channel=sb&amp;tbs=ppl_ids:--100562415844382241634-,ppl_nps:Chris+Clarke,ppl_aut:1">by Chris Clarke</a></span><span class="s4"><span class="Apple-converted-space"> </span></span></p>
+<p class="p12">- A state administrative agency has rejected a bid by the California Department of <i>Toxic</i> Substances Control (DTSC) to exempt discarded <i>solar</i> <b>...</b></p>
+<p class="p14"><br></p>
+<p class="p11"><a href="http://cen.acs.org/articles/91/web/2013/10/Flexible-Solar-Cells-Release-Toxic.html"><b>Flexible <i>Solar Cells</i> Could Release <i>Toxic</i> Metals After Disposal ...</b></a><span class="s4"><b> </b></span><span class="s9">Oct 29, 2013</span></p>
+<p class="p12">From backpacks that recharge cellphones to window glazing that generates <i>solar</i> power, there is a growing market for flexible thin-film <b>...</b></p>
+<p class="p14"><br></p>
+<p class="p11"><a href="http://www.foxnews.com/us/2013/10/31/bankrupt-solar-panel-firm-took-stimulus-money-left-toxic-mess-says-report/"><b>Bankrupt <i>solar panel</i> firm took stimulus money, left a <i>toxic</i> mess ...</b></a><span class="s12"><b> </b></span><span class="s9">Oct 31, 2013<span class="Apple-converted-space"> </span></span></p>
+<p class="p12">Fox News Channel</p>
+<p class="p12">- A former facility for a Colorado-based <i>solar panel</i> maker that received <b>...</b> last year will cost millions to clean due to the <i>toxic</i> mess left behind, the <b>...</b></p>
+<p class="p14"><br></p>
+<p class="p21"><a href="http://www.bbc.com/news/business-26464901"><b>Chaori Solar in landmark Chinese bond default</b></a><span class="s8"><b> </b></span><span class="s9"><i>March 7, 2014</i>.<span class="Apple-converted-space">   </span></span></p>
+<p class="p12">By Kim Gittleson Business reporter, BBC News, Singapore</p>
+<p class="p12">Solar panel maker Shanghai Chaori Solar Energy Science &amp; Technology has defaulted on interest payments owed on its bond, say media reports quoting the firm.</p>
+<p class="p12">It is the first Chinese firm ever to default on its onshore corporate bonds.</p>
+<p class="p14"><br></p>
+<p class="p57"><a href="http://abcnews.go.com/Technology/wireStory/emerging-solar-plants-scorch-birds-mid-air-25017031"><b>Solar plants scorch thousands of birds from sky...</b></a><span class="s9">Aug 18, 2014,</span></p>
+<p class="p12">VANPAH DRY LAKE, Calif. — abc news</p>
+<p class="p14"><br></p>
+<p class="p14"><br></p>
+<p class="p2"><a href="http://www.renewableenergyworld.com/rea/news/article/2014/10/ldk-files-for-bankruptcy-in-u-s-court-on-china-solar-glut"><b>LDK Files for Bankruptcy in U.S. Court on China Solar Glut</b></a><span class="s4"><b> </b></span><span class="s9">Nov 01, 2014 </span></p>
+<p class="p12">LDK <b>Solar</b> Co., the Chinese <b>solar</b>- cell maker that defaulted on its bonds this year, filed for <b>bankruptcy</b> in the U.S. to help carry out restructurings ...</p>
+<p class="p14"><br></p>
+<p class="p2"><a href="http://seekingalpha.com/article/2630375-solar-power-inc-why-this-1-billion-company-could-fall-by-more-than-80-percent"><b>Solar Power, Inc: Why This $1 Billion Company Could Fall ...</b></a><span class="s12"><b> </b></span><span class="s9">Nov 03, 2014 </span></p>
+<p class="p12"><b>Solar</b> <b>Power</b>, Inc. (OTCQB:SOPW): Why ... The company continues to release positive press releases with no mention of LDK<span class="Apple-converted-space"> </span></p>
+<p class="p12"><b>Solar</b>'s <b>bankruptcy</b> ... <b>2014</b>. On October 21 ...</p>
+<p class="p14"><br></p>
+<p class="p14"><br></p>
+<p class="p14"><br></p>
+<p class="p14"><br></p>
+<p class="p19"><span class="s15">↑↑↑ </span><b>solar energy<span class="Apple-converted-space">  </span></b><span class="s15">↑↑↑</span></p>
+<p class="p14"><br></p>
+<p class="p14"><br></p>
+<p class="p14"><br></p>
+<p class="p46">↓↓↓ <span class="s14">tide<b> </b></span>↓↓↓</p>
+<p class="p14"><br></p>
+<p class="p14"><br></p>
+<p class="p11"><a href="http://en.wikipedia.org/wiki/Tidal_power"><b><i>Tidal</i> power - Wikipedia, the free encyclopedia</b></a></p>
+<p class="p12">Jump to <a href="https://www.google.com/url?url=http://en.wikipedia.org/wiki/Tidal_power%23Generation_of_tidal_energy&amp;rct=j&amp;q=tide+energy&amp;usg=AFQjCNFX3g5jGYUIQVzSw3vkqhIwy6aO3Q&amp;sa=X&amp;ei=zgc6UcCzHfCH0QGQxoCwDw&amp;ved=0CDoQygQwAA"><span class="s6">Generation of </span><span class="s2"><i>tidal energy</i></span></a>‎: <i>Tidal</i> power is the only technology that draws on <i>energy</i> inherent in the orbital characteristics of the Earth–Moon <b>...</b></p>
+<p class="p7"><span class="s5"><a href="http://en.wikipedia.org/wiki/List_of_tidal_power_stations">List of tidal power stations</a></span><span class="s4"> - <a href="http://en.wikipedia.org/wiki/Rance_Tidal_Power_Station"><span class="s5">Rance Tidal Power Station</span></a> - <a href="http://en.wikipedia.org/wiki/Category:Tidal_power"><span class="s5">Category:Tidal power</span></a></span></p>
+<p class="p14"><br></p>
+<p class="p12">---</p>
+<p class="p2"><a href="http://www.environmentalleader.com/2013/04/10/the-present-and-future-of-tidal-power/"><b>The Present and Future of Tidal Power · Environmental ...</b></a><span class="s4"><b> </b></span><span class="s9">Apr 10, 2013 </span></p>
+<p class="p12">In the world of renewable <b>energy</b>, <b>tidal</b> <b>power</b> is one of the more abstract, obscured points of discussion. It’s not nearly as mechanically developed …</p>
+<p class="p14"><br></p>
+<p class="p2"><a href="http://www.forbes.com/sites/kensilverstein/2013/06/06/tidal-energy-could-be-next-big-wave/"><b>Tidal Energy Could Be Next Big Wave - Forbes</b></a><span class="s4"><b> </b></span><span class="s9">Jun 06, 2013</span></p>
+<p class="p12">The U.S. Department of <b>Energy</b> has just unveiled a floating off-shore wind platform that it thinks could make a big splash. But it has already been working ...</p>
+<p class="p14"><br></p>
+<p class="p14"><br></p>
+<p class="p46">↑↑↑ <span class="s14">tide<b><span class="Apple-converted-space">  </span></b></span>↑↑↑</p>
+<p class="p14"><br></p>
+<p class="p14"><br></p>
+<p class="p14"><br></p>
+<p class="p58"><span class="s15">↓↓↓ </span><b>wind energy</b><span class="s14"><b> </b></span><span class="s15">↓↓↓</span></p>
+<p class="p32"><br></p>
+<p class="p32"><br></p>
+<p class="p11"><a href="http://en.wikipedia.org/wiki/Wind_power"><b><i>Wind</i> power - Wikipedia, the free encyclopedia</b></a></p>
+<p class="p12">Jump to <a href="http://en.wikipedia.org/wiki/Wind_power#Wind_farms"><span class="s12"><b>Wind farms</b></span></a> - Main article: <i>Wind farm</i>. <i>Wind turbines</i> at the Jepirachí Eolian Park in La Guajira, Colombia. A <i>wind farm</i> is a group of <i>wind turbines</i> in <b>...</b></p>
+<p class="p32"><br></p>
+<p class="p42"><span class="s5"><a href="http://www.clepair.net/europhysics201203.html">WIND TURBINES AS YET UNSUITABLE AS ELECTRICITY PROVIDERS.<span class="s34"></span></a></span></p>
+<p class="p32"><br></p>
+<p class="p55">C. le Pair, F. Udo &amp; K. de Groot<span class="Apple-converted-space">  </span>(Europhysics)</p>
+<p class="p59"><br></p>
+<p class="p32"><br></p>
+<p class="p55">*******</p>
+<p class="p32"><br></p>
+<p class="p55">Consumer Reports just completed a full year study with the best selling turbine, made by  Honeywell, costing $11,000 installed.</p>
+<p class="p55">On a rooftop in Yonkers. Vetted as correct by company representatives.</p>
+<p class="p32"><br></p>
+<p class="p55">In 15 months it has delivered 4kWh total (=$0.40)</p>
+<p class="p55">"enough only to power a window air conditioner for one afternoon."</p>
+<p class="p32"><br></p>
+<p class="p42"><span class="s5"><a href="http://news.consumerreports.org/home/2012/08/results-of-consumer-reports-wind-turbine-tests.html">http://news.consumerreports.org/home/2012/08/results-of-consumer-reports-wind-turbine-tests.html<span class="s34"></span></a></span></p>
+<p class="p32"><br></p>
+<p class="p55">The best selling turbine, if it worked continuously would recover its costs in 35000 years.</p>
+<p class="p55">Its lifetime if only 20 years. Its total output during its 20 years lifetime is</p>
+<p class="p32"><br></p>
+<p class="p55">$0.40/(15 months) * (12 months)*20 years = $6.40</p>
+<p class="p32"><br></p>
+<p class="p55">$7 would pay for the dumping truck driver tip,</p>
+<p class="p55">but not for what is called the tipping fee, which could run into hundreds of dollars.</p>
+<p class="p32"><br></p>
+<p class="p2"><a href="http://www.jokebuddha.com/Wind"><b>Wind Jokes | Funny Humor by Joke Buddha</b></a></p>
+<p class="p12">Only the best funny <b>Wind</b> jokes and best <b>Wind</b> websites as selected and voted by visitors of Joke Buddha website</p>
+<p class="p32"><br></p>
+<p class="p32"><br></p>
+<p class="p32"><br></p>
+<p class="p58">wind by year</p>
+<p class="p32"><br></p>
+<p class="p11"><a href="https://www.wind-watch.org/alerts/2009/02/26/is-wind-power-really-green-preserve-grey-highlands-ad/"><b>Is <i>wind power</i> really <i>green</i>? Preserve Grey Highlands ad | Wind Watch</b></a><span class="s4"><b> </b></span><span class="s9">Feb 26, 2009<span class="Apple-converted-space"> </span></span></p>
+<p class="p12">Is <i>wind power</i> really <i>green</i>? Examine the facts, then decide for yourself. Denmark is the world's most wind-intensive nation with more than ...</p>
+<p class="p14"><br></p>
+<p class="p2"><a href="http://www.katu.com/news/local/87439577.html"><b>Wind power’s dirty secret? Its carbon footprint | Local ...</b></a><span class="s9"> Mar 12, 2010 </span></p>
+<p class="p12">PORTLAND, Ore. – In 10 years Oregon has handed out $1.3 billion in tax credits for renewable <b>energy</b> and conservation projects like <b>wind</b> <b>power</b>, but ...</p>
+<p class="p32"><br></p>
+<p class="p11"><a href="http://theresilientearth.com/?q=content/wind-power-green-and-deadly"><b><i>Wind Power</i>: <i>Green</i> and Deadly | The Resilient Earth</b></a><span class="s4"><b> </b></span><span class="s9">May 3, 2010<span class="Apple-converted-space"> </span></span></p>
+<p class="p12">Greens may be about to do to <i>wind power</i> what they have previously done to the nuclear industry, creating red tape and legal barriers to <i>green</i> <b>...</b></p>
+<p class="p14"><br></p>
+<p class="p27"><a href="http://windpowerfraud.com/"><b>Wind Power Fraud</b></a><span class="s4"><b><span class="Apple-converted-space">  </span></b></span><span class="s35">06-23-10</span></p>
+<p class="p11"><a href="http://articles.economictimes.indiatimes.com/2012-03-19/news/31210516_1_wind-turbines-wind-power-wind-farms"><b><i>Green</i> Power: <i>Wind power</i> does not help to avert climate change ...</b></a><span class="s4"><b> </b></span><span class="s9">Mar 19, 2012<span class="Apple-converted-space"> </span></span></p>
+<p class="p12">Efforts to stem global warming have nurtured a strong urge worldwide to deploy renewable energy. As a result, the use of <i>wind turbines</i> has <b>...</b></p>
+<p class="p32"><br></p>
+<p class="p11"><a href="http://www.google.com/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=50&amp;ved=0CH4QFjAJOCg&amp;url=http%3A%2F%2Ffinance.townhall.com%2Fcolumnists%2Fmaritanoon%2F2012%2F05%2F13%2Fwind_energy_the_next_green_blackhole%2Fpage%2Ffull%2F&amp;ei=Shg-UfffMqHi0gGrz4CwDw&amp;usg=AFQjCNERyFBwH4inCbaczCPkECMinKGElQ&amp;sig2=JSG0Xk5b9W_da4AaA4wOnw&amp;bvm=bv.43287494,d.dmQ"><b><i>Wind Energy</i>: The Next <i>Green</i> Black-Hole - Marita Noon - Townhall ...</b></a><span class="s4"><b> </b></span><span class="s9">May 13, 2012</span></p>
+<p class="p12"><i>Wind Energy</i>: The Next <i>Green</i> Black-Hole - Marita Noon: The <i>wind energy</i> industry has been having a hard time.</p>
+<p class="p32"><br></p>
+<p class="p11"><a href="http://www.nationalreview.com/articles/334599/deval-ued-wind-power-kevin-d-williamson"><b>Deval-ued <i>Wind Power</i> - National Review Online</b></a><span class="s4"><b> </b></span><span class="s9">Dec 3, 2012<span class="Apple-converted-space"> </span></span></p>
+<p class="p12"><i>Green</i>-energy delusions inflict a heavy cost on a Massachusetts town. <b>...</b> According to the trade publication, <i>Wind Energy</i> Update, the typical <b>...</b></p>
+<p class="p14"><br></p>
+<p class="p32"><br></p>
+<p class="p55">wind 2013</p>
+<p class="p32"><br></p>
+<p class="p11"><a href="http://green.blogs.nytimes.com/2013/01/03/the-wind-industry-gets-to-draw-another-breath/"><b>The <i>Wind</i> Industry Gets to Draw Another Breath - <i>Green</i> Blog - The ...</b></a><span class="s4"><b> </b></span><span class="s9">Jan 3, 2013<span class="Apple-converted-space"> </span></span></p>
+<p class="p12">An extension of the tax credit for <i>wind</i> power production has the advantage that construction does not need to be completed by the end of 2013.</p>
+<p class="p32"><br></p>
+<p class="p60"><a href="http://wattsupwiththat.com/2013/02/25/rethinking-wind-power-harvard-study-shows-it-to-be-overestimated/"><b>Rethinking wind power – Harvard study shows it to be overestimated</b></a><span class="s4"><b><span class="Apple-converted-space"> </span></b></span><span class="s9"> <a href="http://wattsupwiththat.com/2013/02/25/rethinking-wind-power-harvard-study-shows-it-to-be-overestimated/"><span class="s5">February 25, 2013</span></a><span class="Apple-converted-space"> </span></span></p>
+<p class="p7"><span class="s4">by <a href="http://wattsupwiththat.com/author/wattsupwiththat/"><span class="s5">Anthony Watts</span></a></span></p>
+<p class="p48"><br></p>
+<p class="p11"><a href="http://frontpagemag.com/2013/dgreenfield/green-wind-farms-create-more-carbon-than-they-save/"><b><i>Green Wind Farms</i> Create More Carbon Than They Save</b></a><span class="s4"><b> </b></span><span class="s9">Feb 28, 2013</span></p>
+<p class="p12">Clearly the only way to make <i>Green Energy</i> is greener is by imposing a Carbon tax on it. And use that tax to fund truly low carbon solutions like <b>...</b></p>
+<p class="p48"><br></p>
+<p class="p4"><span class="s5"><a href="http://www.myfoxdc.com/story/21573102/bald-eagles-focus-of-e-shore-wind-farm-dispute">Bald eagles focus of E. Shore <span class="s36"><i>wind farm</i></span><span class="s37"> dispute</span></a></span><span class="s6"> </span><span class="s22">March 11, 2013</span></p>
+<p class="p12"><i>MyFox Washington DC</i>‎</p>
+<p class="p61"><span class="Apple-converted-space"> </span></p>
+<p class="p62"><a href="http://www.bbc.co.uk/news/world-us-canada-25058346"><b>US firm Duke Energy pays out over wind farm eagle deaths</b></a><span class="s8"><b> </b></span><span class="s9">22 November 2013<span class="Apple-converted-space"> </span></span></p>
+<p class="p63"><br></p>
+<p class="p64">wind 2014</p>
+<p class="p49"><a href="http://inhabitat.com/uk-breaks-several-wind-power-generation-records-in-december-2013/"><b>UK Shatters Wind Power Records in December 2013 by Generating 2.8 Million MWh</b></a><span class="s2"><b><span class="Apple-converted-space">  </span></b></span><span class="s9">J<i>Inhabitat<span class="Apple-converted-space">  </span></i>an 8, 2014</span></p>
+<p class="p12">The UK broke a series of <b>wind</b> <b>energy</b> records in December <b>2013</b> – including the record for most <b>wind</b> <b>power</b> produced in a single month. In December, Britain…<span class="Apple-converted-space"> </span></p>
+<p class="p14"><br></p>
+<p class="p2"><a href="http://www.theguardian.com/environment/2014/jan/06/wind-power-spain-electricity-2013"><b>Wind power was Spain's top source of electricity in 2013</b></a><span class="s38"><b> </b></span><span class="s9"><span class="Apple-converted-space">  </span><a href="http://theguardian.com/"><span class="s12"><i>theguardian.com</i></span></a></span><span class="s39"><i><span class="Apple-converted-space"> </span></i></span><span class="s9"> Jan 7, 2014</span></p>
+<p class="p14"><br></p>
+<p class="p2"><a href="http://www.fool.com/investing/general/2014/01/19/is-this-dirty-little-secret-enough-to-tarnish-wind.aspx"><b>Is This Dirty Little Secret Enough to Tarnish Wind Energy ...</b></a><span class="s9"> Jan 19, 2014</span></p>
+<p class="p12"><b>Wind turbines</b> have a <b>dirty</b> little secret. This clean <b>power</b> generator isn't entirely clean. <b>Wind</b> actually requires a <b>dirty</b> partner to get the job done.</p>
+<p class="p14"><br></p>
+<p class="p11"><a href="http://www.google.com/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=12&amp;sqi=2&amp;ved=0CI8BEKkCMAs&amp;url=http%3A%2F%2Fwww.independent.ie%2Fbusiness%2Firish%2Fproposals-for-giant-wind-farms-are-shelved-30071008.html&amp;ei=R6YZU7zOLYb60wHktYCYDA&amp;usg=AFQjCNHJT8ZPkFASkuIGJsB7ne13kIJC1w&amp;sig2=hyxJXnXcenU4DnzRypOAeA&amp;bvm=bv.62578216,d.dmQ"><b>Proposals for giant <i>wind farms</i> are shelved</b></a><span class="s12"><b><span class="Apple-converted-space">  </span></b></span><span class="s9"><i>Irish Independent </i></span><span class="s39">Mar 7, 2014</span></p>
+<p class="p12">PLANS to erect thousands of <i>wind turbines</i> across the midlands to export power to the UK have been shelved, the Irish Independent has learnt.</p>
+<p class="p14"><br></p>
+<p class="p2"><a href="http://news.heartland.org/newspaper-article/2014/04/10/fierce-winter-forces-maryland-renewable-energy-company-bankruptcy"><b>Fierce Winter Forces Maryland Renewable Energy Company ...</b></a><span class="s4"><b> </b></span><span class="s9">Apr 10, 2014 </span></p>
+<p class="p12">Maryland renewable <b>power</b> provider Clean Currents announced it is going into <b>bankruptcy</b>, adding another chapter to a long line of renewable <b>energy</b> …</p>
+<p class="p14"><br></p>
+<p class="p2"><a href="http://www.businessweek.com/news/2014-08-04/impsa-s-wind-power-energy-declared-in-bankruptcy-by-brazil-judge"><b>Impsa Affiliate Declared in Bankruptcy by Brazil Judge ...</b></a><span class="s9"> Aug 04, 2014</span></p>
+<p class="p12"><span class="Apple-converted-space"> </span>(Corrects headline and first paragraph to show Impsa and WPE are sister companies in story published on Aug. 4.) <b>Wind</b> <b>Power</b> <b>Energy</b> SA, owned by …</p>
+<p class="p14"><br></p>
+<p class="p14"><br></p>
+<p class="p14"><br></p>
+<p class="p19"><span class="s15">↑↑↑ </span><b>wind energy<span class="Apple-converted-space">  </span></b><span class="s15">↑↑↑</span></p>
+</body>
+</html>

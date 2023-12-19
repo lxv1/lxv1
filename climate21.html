@@ -1,0 +1,855 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="1265.21">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 23.0px Times; color: #042eee}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 18.0px Times; color: #042eee}
+    p.p3 {margin: 0.0px 0.0px 0.0px 0.0px; font: 15.0px Times; color: #0f3bee}
+    p.p4 {margin: 0.0px 0.0px 0.0px 0.0px; font: 17.0px Times; color: #042eee}
+    p.p5 {margin: 0.0px 0.0px 12.0px 0.0px; font: 12.0px Times; min-height: 14.0px}
+    p.p6 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 12.0px Times; color: #042eee}
+    p.p7 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; color: #042eee}
+    p.p8 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; color: #042eee; min-height: 14.0px}
+    p.p9 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; min-height: 14.0px}
+    p.p10 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 23.0px Times}
+    p.p11 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times}
+    p.p12 {margin: 0.0px 0.0px 0.0px 0.0px; font: 15.0px Times}
+    p.p13 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times}
+    p.p14 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px Times}
+    p.p15 {margin: 0.0px 0.0px 0.0px 0.0px; font: 24.0px Times; min-height: 29.0px}
+    p.p16 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 24.0px Times}
+    p.p17 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 24.0px Times; min-height: 29.0px}
+    p.p21 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Helvetica; color: #0000ee}
+    p.p22 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
+    p.p23 {margin: 0.0px 0.0px 16.0px 0.0px; text-align: center; font: 19.0px Times}
+    p.p24 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; color: #0000ee}
+    p.p25 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; color: #0000ee}
+    p.p26 {margin: 0.0px 0.0px 16.0px 0.0px; font: 14.0px Times}
+    p.p27 {margin: 0.0px 0.0px 16.0px 0.0px; font: 12.0px Times; min-height: 14.0px}
+    p.p28 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 17.0px Times}
+    p.p29 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 12.0px Times; min-height: 14.0px}
+    p.p30 {margin: 0.0px 0.0px 0.0px 0.0px; font: 19.0px Times; min-height: 23.0px}
+    p.p31 {margin: 0.0px 0.0px 0.0px 0.0px; font: 18.0px Helvetica}
+    p.p32 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; color: #0000ee}
+    p.p33 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+    p.p34 {margin: 0.0px 0.0px 0.0px 0.0px; font: 18.0px Times; color: #0000ee}
+    p.p35 {margin: 0.0px 0.0px 0.0px 0.0px; font: 17.0px Times; color: #0000ee}
+    p.p37 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 18.0px Times}
+    p.p38 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 18.0px Times; min-height: 23.0px}
+    p.p39 {margin: 0.0px 0.0px 0.0px 0.0px; font: 18.0px Times; min-height: 23.0px}
+    p.p40 {margin: 0.0px 0.0px 0.0px 0.0px; font: 19.0px Times; color: #0000ee}
+    p.p41 {margin: 0.0px 0.0px 16.0px 0.0px; font: 18.0px Times; color: #0000ee}
+    p.p42 {margin: 0.0px 0.0px 0.0px 0.0px; font: 21.0px Times; color: #0000ee}
+    p.p43 {margin: 0.0px 0.0px 14.0px 0.0px; font: 17.0px Times; color: #0000ee}
+    p.p44 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: justify; font: 21.0px Times; color: #0000ee}
+    p.p45 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: justify; font: 12.0px Times}
+    p.p46 {margin: 0.0px 0.0px 0.0px 0.0px; font: 21.0px Helvetica; color: #0000ee}
+    p.p47 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: justify; font: 12.0px Times; min-height: 14.0px}
+    p.p48 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 19.0px Times; min-height: 23.0px}
+    p.p49 {margin: 0.0px 0.0px 0.0px 0.0px; font: 24.0px Times}
+    p.p51 {margin: 0.0px 0.0px 14.0px 0.0px; font: 14.0px Times; color: #0000ee}
+    p.p52 {margin: 0.0px 0.0px 14.0px 0.0px; font: 12.0px Times; min-height: 14.0px}
+    p.p54 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px Times; min-height: 16.0px}
+    p.p55 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; color: #0f3bee; min-height: 14.0px}
+    p.p56 {margin: 0.0px 0.0px 0.0px 0.0px; font: 15.0px Times; min-height: 18.0px}
+    p.p57 {margin: 0.0px 0.0px 0.0px 0.0px; font: 17.0px Times; min-height: 20.0px}
+    p.p61 {margin: 0.0px 0.0px 0.0px 0.0px; font: 7.0px Times; min-height: 8.0px}
+    p.p62 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; min-height: 18.0px}
+    p.p64 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; color: #0f3bee}
+    p.p65 {margin: 0.0px 0.0px 12.0px 0.0px; font: 14.0px Times}
+    p.p67 {margin: 0.0px 0.0px 16.1px 0.0px; font: 12.0px Times}
+    span.s1 {font: 18.0px Times; color: #042eee}
+    span.s2 {color: #0f3bee}
+    span.s3 {font: 20.0px Times; color: #042eee}
+    span.s4 {color: #000000}
+    span.s5 {direction: ltr; unicode-bidi: embed}
+    span.s6 {text-decoration: underline}
+    span.s7 {text-decoration: underline ; color: #0000ee}
+    span.s8 {font: 12.0px Times; color: #000000}
+    span.s9 {font: 18.0px Times; color: #000000}
+    span.s10 {text-decoration: underline ; color: #042eee}
+    span.s11 {font: 10.0px Times; color: #042eee}
+    span.s12 {font: 10.0px Times; text-decoration: underline ; color: #042eee}
+    span.s13 {color: #042eee}
+    span.s14 {font: 10.0px Times; color: #0000ee}
+    span.s15 {font: 10.0px Times; text-decoration: underline ; color: #0000ee}
+    span.s16 {font: 24.0px Times; color: #000000}
+    span.s17 {text-decoration: underline ; color: #4787ff}
+    span.s18 {font: 14.0px Helvetica; color: #000000}
+    span.s19 {font: 10.0px Helvetica; color: #4787ff}
+    span.s20 {font: 10.0px Helvetica; text-decoration: underline ; color: #4787ff}
+    span.s21 {font: 19.0px Times}
+    span.s22 {font: 12.0px Times; text-decoration: underline}
+    span.s23 {font: 14.0px Times}
+    span.s24 {font: 14.0px Times; color: #0f3bee}
+    span.s25 {font: 12.0px Times; text-decoration: underline ; color: #0000ee}
+    span.s26 {font: 12.0px Times; color: #0f3bee}
+    span.s27 {font: 21.0px Times; color: #0000ee}
+    span.s28 {font: 21.0px Times}
+    span.s29 {font: 22.0px Times; color: #000000}
+    span.s30 {font: 14.0px Times; color: #0000ee}
+    span.s31 {font: 18.0px Times}
+    span.s32 {color: #0000ee}
+    span.s33 {font: 14.0px Times; color: #000000}
+    span.s34 {font: 14.0px Helvetica}
+    span.s35 {font: 12.0px Helvetica; text-decoration: underline}
+    span.s36 {font: 12.0px Times; color: #042eee}
+    span.s37 {font: 24.0px Times; color: #0000ee}
+    span.s38 {font: 12.0px Times}
+    span.s39 {font: 13.0px Times; color: #000000}
+    span.s40 {font: 15.0px Times; color: #000000}
+    span.s41 {font: 24.0px Times}
+    span.s42 {font: 4.0px Times}
+    span.s43 {font: 14.0px Times; color: #042eee}
+    span.s44 {font: 17.0px Times; color: #000000}
+    span.s45 {font: 14.0px Symbol; text-decoration: underline}
+    span.Apple-tab-span {white-space:pre}
+  </style>
+</head>
+<body>
+<p class="p1"><a href="https://lxv1.github.io/climate.html"><b>Climate</b></a></p>
+<p class="p2"><a href="https://lxv1.github.io/climate1.html"><b>1. Old History</b></a></p>
+<p class="p3"><span class="s1"><a href="https://lxv1.github.io/climate2.webarchive"><b>2. Plots</b><span class="s2"><b> </b></span></a></span><b>webarchive; </b><a href="https://lxv1.github.io/climate2.pdf"><span class="s3"><b>pdf</b></span></a></p>
+<p class="p2"><a href="https://lxv1.github.io/climate3.html"><b>3. 70's: Global cooling -- Ice Age Coming</b></a></p>
+<p class="p2"><a href="https://lxv1.github.io/climate4.html"><b>4. Wikipedia on climate</b></a></p>
+<p class="p2"><a href="https://lxv1.github.io/climate5.html"><b>5. 2000's : Climate Change</b></a></p>
+<p class="p2"><a href="https://lxv1.github.io/climate6.html"><b>6. USA government on climate</b></a></p>
+<p class="p2"><a href="https://lxv1.github.io/climate7.html"><b>7. Other countries on climate</b></a></p>
+<p class="p2"><a href="https://lxv1.github.io/climate8.html"><b>8. Math Reviews on climate</b></a></p>
+<p class="p2"><a href="https://lxv1.github.io/climate9.html"><b>9. News 2007-2009</b></a></p>
+<p class="p2"><a href="https://lxv1.github.io/climate10.html"><b>10. 2010</b></a></p>
+<p class="p2"><a href="https://lxv1.github.io/climate11.html"><b>11. 2011</b></a></p>
+<p class="p4"><a href="https://lxv1.github.io/climate12.html"><b>12. 2012</b></a></p>
+<p class="p4"><a href="https://lxv1.github.io/climate13.html"><b>13. 2013</b></a></p>
+<p class="p4"><a href="https://lxv1.github.io/climate14.html"><b>14. 2014</b></a></p>
+<p class="p4"><a href="https://lxv1.github.io/climate15.html"><b>15. 2015</b></a></p>
+<p class="p2"><a href="https://lxv1.github.io/climate16.html"><b>16. 2016</b></a></p>
+<p class="p2"><a href="https://lxv1.github.io/climate17.html"><b>17. 2017</b></a></p>
+<p class="p2"><a href="https://lxv1.github.io/climate18.htm;"><b>18.2018</b></a></p>
+<p class="p5"><br></p>
+<p class="p5"><br></p>
+<p class="p6"><a href="https://lxv1.github.io/climate20.html"><b>20. Related topics</b></a></p>
+<p class="p7"><a href="https://lxv1.github.io/climate21.html"><b>21. Overpopulation</b></a></p>
+<p class="p7"><a href="https://lxv1.github.io/climate22.html"><b>22. Sea level</b></a></p>
+<p class="p7"><a href="https://lxv1.github.io/climate23.html"><b>23. Ice</b></a></p>
+<p class="p7"><a href="https://lxv1.github.io/climate24.html"><b>24. PSU</b></a></p>
+<p class="p7"><a href="https://lxv1.github.io/climate25.html"><b>25. Climate in Russian</b></a></p>
+<p class="p7"><a href="https://lxv1.github.io/climate26.html"><b>26,<span class="Apple-converted-space">  </span>CO2</b></a></p>
+<p class="p7"><a href="https://lxv1.github.io/climate27.html"><b>27. Energy</b></a></p>
+<p class="p7"><a href="https://lxv1.github.io/climate28.html"><b>28. Publications</b></a></p>
+<p class="p7"><a href="https://lxv1.github.io/climate29.html"><b>29. Food<span class="Apple-converted-space"> </span></b></a></p>
+<p class="p7"><a href="https://lxv1.github.io/climate30.html"><b>30. Ozone</b></a></p>
+<p class="p7"><a href="https://lxv1.github.io/climate31.webarchive"><b>31. Cartoons and magazine covers</b></a><span class="s4"><b> webarchive; </b><a href="https://lxv1.github.io/climate31.pdf"><b>pdf</b></a></span></p>
+<p class="p7"><a href="https://lxv1.github.io/climate32.html"><b>32. Life</b></a></p>
+<p class="p7"><a href="https://lxv1.github.io/climate33.html"><b>33. Acid rain</b></a></p>
+<p class="p7"><a href="https://lxv1.github.io/climate34.html"><b>34. Environment</b></a></p>
+<p class="p7"><a href="https://lxv1.github.io/climate35.html"><b>35. DDT</b></a></p>
+<p class="p7"><a href="https://lxv1.github.io/climate36.html"><b>36. Nuclear winter</b></a></p>
+<p class="p7"><a href="https://lxv1.github.io/climate37.html"><b>37. Polar inversion</b></a></p>
+<p class="p7"><a href="https://lxv1.github.io/climate38.html"><b>38. Warming in solar system</b></a></p>
+<p class="p7"><a href="https://lxv1.github.io/climate39.html"><b>39. NASA Global Land-Ocean Temperature</b></a></p>
+<p class="p7"><a href="https://lxv1.github.io/climate40.html"><b>40. Films and videos</b></a></p>
+<p class="p7"><a href="https://lxv1.github.io/climate41.html"><b>41. Cosmic rays</b></a></p>
+<p class="p7"><a href="https://lxv1.github.io/climate42.html"><b>42. Pollution</b></a></p>
+<p class="p7"><a href="https://lxv1.github.io/climate43.html"><b>43. Wind</b></a></p>
+<p class="p7"><a href="https://lxv1.github.io/climate44.html"><b>44. Global dimming</b></a></p>
+<p class="p7"><a href="https://lxv1.github.io/climate45.html"><b>45. State College temperature</b></a></p>
+<p class="p7"><a href="https://lxv1.github.io/climate46.html"><b>46. Urban heat island</b></a></p>
+<p class="p7"><a href="https://lxv1.github.io/climate47.html"><b>47. Jpkes</b></a></p>
+<p class="p7"><a href="https://lxv1.github.io/climate48.html"><b>48. Vermont climate</b></a></p>
+<p class="p7"><a href="https://lxv1.github.io/climate49.html"><b>49. California climate</b></a></p>
+<p class="p7"><a href="https://lxv1.github.io/climate50.html"><b>50. Humanity</b></a></p>
+<p class="p8"><br></p>
+<p class="p9"><br></p>
+<p class="p9"><br></p>
+<p class="p10"><b>21. Overpopulation</b></p>
+<p class="p11">contents:</p>
+<p class="p12">data</p>
+<p class="p12">video</p>
+<p class="p13"><span class="s5"><b>Bible</b></span></p>
+<p class="p13"><span class="s5"><b>Malthusianism</b></span></p>
+<p class="p14"><b>Neo-Malthusianism</b></p>
+<p class="p14"><b>Wiki</b></p>
+<p class="p12"><b>by year</b></p>
+<p class="p15"><br></p>
+<p class="p16">data</p>
+<p class="p17"><br></p>
+<p class="p5"><br></p>
+<h2 style="margin: 0.0px 0.0px 14.9px 0.0px; font: 18.0px Times; color: #0000ee"><a href="https://www.census.gov/population/international/data/idb/worldgrgraph.php"><b>World Population Growth Rates: 1950-2050 - Census.gov</b></a></h2>
+<h2 style="margin: 0.0px 0.0px 14.9px 0.0px; font: 18.0px Times; color: #0000ee; min-height: 23.0px"><br></h2>
+<h2 style="margin: 0.0px 0.0px 14.9px 0.0px; text-align: center; font: 18.0px Times; color: #0000ee"><b>video</b></h2>
+<h2 style="margin: 0.0px 0.0px 14.9px 0.0px; font: 18.0px Times; color: #0000ee; min-height: 23.0px"><br></h2>
+<p class="p21"><a href="https://overpopulationisamyth.com/"><b>Overpopulation is a myth |</b></a></p>
+<p class="p22">Are people hungry because there's not enough food on Planet Earth, or is the answer more complex? Read the science behind this video... Episode 2: 2.1 Kids: …</p>
+<p class="p17"><br></p>
+<p class="p17"><br></p>
+<p class="p9"><br></p>
+<p class="p23"><span class="s5">Bible</span></p>
+<p class="p24"><span class="s6"><a href="http://biblehub.com/genesis/9-1.htm">Genesis 9:1</a></span></p>
+<p class="p11">Then God blessed Noah and his sons, saying to them, "Be fruitful and increase in number and fill the earth.</p>
+<p class="p24"><span class="s6"><a href="http://biblehub.com/kjv/genesis/9.htm">King James Bible</a></span></p>
+<p class="p11">And you, be ye fruitful, and multiply; bring forth abundantly in the earth, and multiply therein.</p>
+<p class="p24"><span class="s6"><a href="http://biblehub.com/isv/genesis/9.htm">International Standard Version</a></span></p>
+<p class="p11">Now as for you, be productive and multiply; spread out over the land and multiply throughout it."</p>
+<p class="p9"><br></p>
+<p class="p11">Genesis 1:28</p>
+<p class="p24"><span class="s6"><a href="http://biblehub.com/genesis/1.htm">The Sixth Day: Creatures on Land</a></span></p>
+<p class="p11">…<a href="http://biblehub.com/genesis/1-27.htm"><span class="s7">27</span></a>God created man in His own image, in the image of God He created him; male and female He created them. <a href="http://biblehub.com/genesis/1-28.htm"><span class="s7">28</span></a>God blessed them; and God said to them, "Be fruitful and multiply, and fill the earth, and subdue it; and rule over the fish of the sea and over the birds of the sky and over every living thing that moves on the earth." <a href="http://biblehub.com/genesis/1-29.htm"><span class="s7">29</span></a>Then God said, "Behold, I have given you every plant yielding seed that is on the surface of all the earth, and every tree which has fruit yielding seed; it shall be food for you;…</p>
+<p class="p24"><span class="s6"><a href="http://biblehub.com/kjv/genesis/1.htm">King James Bible</a></span></p>
+<p class="p11">And God blessed them, and God said unto them, Be fruitful, and multiply, and replenish the earth, and subdue it: and have dominion over the fish of the sea, and over the fowl of the air, and over every living thing that moveth upon the earth.</p>
+<p class="p24"><span class="s6"><a href="http://biblehub.com/isv/genesis/1.htm">International Standard Version</a></span></p>
+<p class="p11">God blessed the humans by saying to them, "Be fruitful, multiply, fill the earth, and subdue it! Be masters over the fish in the ocean, the birds that fly, and every living thing that crawls on the earth!"</p>
+<p class="p9"><br></p>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; color: #0000ee"><a href="http://www.gotquestions.org/population-control.html"><b>What does the Bible say about population control?</b></a></h3>
+<p class="p11">Answer: The <i>Bible</i> doesn't say anything about population control. Instead, humans are ... The <i>biblical</i> answer to “<i>over-population</i>” is not to demand fewer people.</p>
+<p class="p9"><br></p>
+<p class="p9"><br></p>
+<p class="p9"><br></p>
+<p class="p23"><span class="s5">Malthusianism</span></p>
+<p class="p25"><a href="http://www.google.com/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=20&amp;ved=0CGUQFjAJOAo&amp;url=http%3A%2F%2Frebirthofreason.com%2FArticles%2FSchieder%2FAyn_Rand_and_the_End_of_Malthus.shtml&amp;ei=JyCYUKHRHofJ0QGhpICIAQ&amp;usg=AFQjCNHq3XFsex_Rqv82mHofagXT0IQvuQ&amp;sig2=vOSpSI7abn158oYJ8PTGvg"><b>Ayn Rand and the End of <i>Malthus</i></b></a></p>
+<p class="p11"><i>Malthus</i>, an English parson that was also a scholar of history, social <b>...</b> China, with its totalitarian regimentation, Tiananmen type killings, <i>fascist</i> and Soviet's, etc.</p>
+<p class="p9"><br></p>
+<p class="p25"><a href="http://www.google.com/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=23&amp;ved=0CC4QFjACOBQ&amp;url=http%3A%2F%2Fdwardmac.pitzer.edu%2FAnarchist_Archives%2Fbookchin%2Fgp%2Fperspectives8.html&amp;ei=vCCYULCSD7KP0QHX64F4&amp;usg=AFQjCNE3yzKkLN569qk5oKI3dq7pbpHGXg&amp;sig2=pEJZRIMjdQBsaARbAYvvWg"><b>The Population Myth</b></a><span class="s2"><b> </b></span><span class="s8">No. 8, July 1988</span></p>
+<p class="p11">In the days of the Industrial Revolution, Thomas <i>Malthus</i>, a craven English parson, <b>...</b> Arizona writer -- a "cultural" issue that was riddled by <i>fascist</i> sociobiology.</p>
+<p class="p9"><br></p>
+<p class="p25"><a href="http://www.google.com/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=43&amp;ved=0CC4QFjACOCg&amp;url=http%3A%2F%2Fwww.globalenvironmentalsociety.net%2Findex.php%3Foption%3Dcom_content%26view%3Darticle%26id%3D144%3Amalthus-children%26catid%3D35%3Asocial-responsibility%26Itemid%3D57&amp;ei=mSGYUJ61GYj40gHx9IGADg&amp;usg=AFQjCNFfv98y2T9zpNCJlyUpzdDfRFl4aw&amp;sig2=tj5cxP2uJXEd53mlMTtUeA"><b><i>Malthus</i>' Children</b></a></p>
+<p class="p11"><i>Malthus</i> has been an influence on many notable thinkers since, not least <b>...</b> repression, <i>fascism</i>, eugenics and racial discrimination, the term '<i>Malthusian</i>' has <b>...</b></p>
+<p class="p9"><br></p>
+<p class="p25"><a href="http://american_almanac.tripod.com/malthsay.htm"><b>What the Malthusians Say</b></a></p>
+<p class="p11"><i>Malthus</i> himself, as a paid writer for the British East India Company, was an <b>....</b> is out of control, it requires authoritarian government, even <i>fascism</i>, to reduce it.</p>
+<p class="p26">Printed in <i>The American Almanac</i>, 1994</p>
+<p class="p27"><br></p>
+<p class="p28"><b>Neo-Malthusianism</b></p>
+<p class="p29"><br></p>
+<p class="p25"><a href="http://www.ecofascism.com/review16.html"><b>Gibson's Environmentalism - Environmentalism is <i>fascism</i></b></a></p>
+<p class="p11"><i>Malthus</i> sought to refute widespread views such as those of Condorcet who <b>.....</b> Murphy &amp; Co; a firm infamous for its involvement in a <i>fascist</i> coup d' etat plot.</p>
+<p class="p9"><br></p>
+<p class="p25"><a href="http://www.google.com/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=70&amp;ved=0CGQQFjAJODw&amp;url=http%3A%2F%2Fwww.deleonism.org%2Ftext%2F87081501.htm&amp;ei=RSKYULH2E8bH0AGVyIHQAQ&amp;usg=AFQjCNELwNYJ1blaGtQdBIRY5J6UgeceTg&amp;sig2=XqEYXxYoIs_vIzGFs4hC7g"><b>Overpopulation Theories Being Dredged Up Again</b></a><span class="s2"><b><span class="Apple-converted-space">  </span></b></span><span class="s8">from The People August 15, 1987 Page 5</span></p>
+<p class="p11"><i>Malthus</i> said yes, contending in his 1798 Essay on the Principles of <b>...</b> direct colonization that befell most of Africa, being occupied by <i>fascist</i> Italy for only a brief <b>...</b></p>
+<p class="p9"><br></p>
+<p class="p25"><a href="http://politicalhumor.about.com/od/environment/ig/Environment-Cartoons/Earth-Day-and-Global-Warming.htm"><b><i>Earth</i> Day and <i>Human Infestation</i> - Political Cartoon</b></a></p>
+<p class="p11">A political cartoon about <i>Earth</i> Day. <b>...</b> <i>Earth</i> Day and Global Warming. <i>Earth</i> Day and Global Warming · Cagle Cartoons. 7 of 54. Gallery Index: Environment <b>...</b></p>
+<p class="p9"><br></p>
+<p class="p25"><a href="http://www.infestedwithhumans.com/"><b><i>Infested</i> with <i>Humans</i>: <i>Earth</i> Temperature and Global Warming</b></a><span class="s2"><b> </b></span><span class="s8"><b>E</b>arth <b>T</b>emperature and <b>G</b>lobal <b>W</b>arming</span></p>
+<p class="p11">This simulation of temperature is based on a recent estimate of <i>Earth's</i> average temperature and a conservative estimate of the warming trend. There is pretty <b>...</b></p>
+<p class="p9"><br></p>
+<p class="p25"><a href="http://www.green-agenda.com/gaia.html"><b>The Green Agenda - The Gaia Hypothesis</b></a></p>
+<p class="p11">In reality Gaia is actually a revival of the “<i>Earth</i>-goddess” found in many <b>....</b> are all part of the Gaians mission to save "Mother <i>Earth</i>" from her <i>human infestation</i>.</p>
+<p class="p9"><br></p>
+<p class="p25"><a href="http://www.overpopulationawareness.org/kuwait/en/videos/overpopulation/obama-and-the-czars-john-holdren_2552.html"><b>Video's | Obama and The Czars - John <i>Holdren</i> | <i>Overpopulation</i> ...</b></a></p>
+<p class="p11">Videos Description This video is about Dr. John <i>Holdren</i>, Obama's chosen 'Science Czar. ' I made this because I'm sick of the press not telling the People about <b>...</b></p>
+<p class="p30"><br></p>
+<p class="p25"><a href="http://www.jayhanson.us/page27.htm"><b><i>Overpopulation</i> -- The Population Explosion, by Paul and Anne Ehrlich</b></a></p>
+<p class="p11"><i>Overpopulation</i>, Human <i>Overpopulation</i>, Julian Simon, Science, Ecology, <b>...</b> Professor John P. <i>Holdren</i> of the University of California has generated an <b>...</b></p>
+<p class="p11">The above review is from: [p.p. 282-289] <b>STEADY STATE ECONOMICS</b>, Daly; Island Press, 1991. ISBN 1-55963-071-X</p>
+<p class="p30"><br></p>
+<p class="p25"><a href="http://zombietime.com/john_holdren/"><b>John <i>Holdren</i>, Obama's Science Czar, says: Forced abortions and ...</b></a></p>
+<p class="p11"><i>Holdren</i> and his co-authors once again speculate about unbelievably draconian solutions to what they feel is an <i>overpopulation</i> crisis. But what's especially <b>...</b></p>
+<p class="p30"><br></p>
+<p class="p25"><a href="http://www.populationelephant.com/PEPeople.html"><b><i>Overpopulation</i> - The Population Elephant</b></a></p>
+<p class="p11"><i>Holdren</i> has been a long-time, passionate, spokesperson about <i>overpopulation</i> and climate change. He is the best hope so far for at least some discussion of <b>...</b></p>
+<p class="p30"><br></p>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; color: #0000ee"><a href="https://books.google.com/books?id=PWPyKNSd4-EC&amp;pg=PT197&amp;lpg=PT197&amp;dq=kerry+overpopulation&amp;source=bl&amp;ots=B1MU-gP3Qe&amp;sig=dLBio5h6LrnjILARnBR-bzAfEe4&amp;hl=en&amp;sa=X&amp;ei=3RWdVdzcJoWgyQTZ2IawBg&amp;ved=0CDEQ6AEwAw"><b>John F. Kerry: The Boston Globe Biography - Google Books Result</b></a></h3>
+<p class="p11"><span class="s7"><a href="https://www.google.com/search?biw=1439&amp;bih=1035&amp;tbm=bks&amp;q=inauthor:%22Michael+Kranish%22&amp;sa=X&amp;ei=3RWdVdzcJoWgyQTZ2IawBg&amp;ved=0CDIQ9AgwAw">Michael Kranish</a></span>, ‎<a href="https://www.google.com/search?biw=1439&amp;bih=1035&amp;tbm=bks&amp;q=inauthor:%22Brian+Mooney%22&amp;sa=X&amp;ei=3RWdVdzcJoWgyQTZ2IawBg&amp;ved=0CDMQ9AgwAw"><span class="s7">Brian Mooney</span></a>, ‎<a href="https://www.google.com/search?biw=1439&amp;bih=1035&amp;tbm=bks&amp;q=inauthor:%22Nina+J.+Easton%22&amp;sa=X&amp;ei=3RWdVdzcJoWgyQTZ2IawBg&amp;ved=0CDQQ9AgwAw"><span class="s7">Nina J. Easton</span></a> - 2013 - ‎Biography &amp; Autobiography</p>
+<p class="p11">Heinz and <i>Kerry</i> knew each other casually through her late husband. ... pro-choice,” said she believed the church must come toterms with <i>overpopulation</i>.</p>
+<p class="p30"><br></p>
+<p class="p25"><a href="http://www.populationinstitute.org/"><b>Environmental Problems</b></a></p>
+<p class="p11">Reduce Population Growth &amp; Help Our Environment. Learn More Today!</p>
+<p class="p9"><br></p>
+<p class="p25"><a href="http://www.populationconnection.org/"><b>Zero Population Growth</b></a></p>
+<p class="p11">Population growth threatens natural resources and wildlife habitats.</p>
+<p class="p30"><br></p>
+<p class="p25"><a href="http://www.google.com/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=38&amp;ved=0CHMQFjAHOB4&amp;url=http%3A%2F%2Fdavidszondy.com%2Ffuture%2FDystopias%2Foverpopulation.htm&amp;ei=28PYUIivB47O0QGK34DABg&amp;usg=AFQjCNFuarB09uq9hRYdrHvEkj75V5vxJg&amp;sig2=wFWxkB07lxPwZLlmTmnwQg"><b>Overpopulation</b></a></p>
+<p class="p11">A particularly popular (if that's the right word) end of the world scenario from the mid-'60s on was <i>overpopulation</i>. Ever since Malthus published his idea that <b>...</b></p>
+<p class="p30"><br></p>
+<p class="p25"><a href="http://e360.yale.edu/feature/the_population_bomb_has_it_been_defused/2042/"><b>Has the <i>Population Bomb</i> Been Defused? by Fred Pearce: Yale ...</b></a><span class="s4"><b> </b></span><span class="s8">Aug 11, 2008<span class="Apple-converted-space"> </span></span></p>
+<p class="p11">Paul Ehrlich still believes that overpopulation imperils the Earth's future. But the good news is we are approaching a demographic turning point: <b>...</b></p>
+<p class="p9"><br></p>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; color: #0000ee"><a href="http://www.google.com/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=3&amp;ved=0CCkQFjAC&amp;url=http%3A%2F%2Fwww.goodreads.com%2Fquotes%2Ftag%2Foverpopulation&amp;ei=jhSdVaF_lrTIBLCwstgG&amp;usg=AFQjCNGi2YUugVLQX-OGf9a1TX34VTdqMA&amp;bvm=bv.96952980,d.aWw"><b>Quotes About Overpopulation (24 quotes) - Goodreads</b></a></h3>
+<p class="p11">24 quotes have been tagged as <i>overpopulation</i>: Pentti Linkola: 'I could never find two ... Quotes tagged as "<i>overpopulation</i>" (showing 1-24 of 24) ... Adolf <i>Hitler</i>.</p>
+<p class="p15"><br></p>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; color: #0000ee"><a href="http://www.npg.org/"><b>Negative Population Growth</b></a></h3>
+<p class="p11">We believe that our nation is already vastly <i>overpopulated</i> in terms of the long-range carrying ... It also appears in the Washington Times on April 10, <i>2017</i>.</p>
+<p class="p15"><br></p>
+<p class="p15"><br></p>
+<p class="p15"><br></p>
+<p class="p31"><b>Hitler</b></p>
+<p class="p32"><span class="s6"><a href="http://www.hitler.org/writings/Mein_Kampf/mkv1ch04.html">http://www.hitler.org/writings/Mein_Kampf/mkv1ch04.html</a></span><span class="s4"><span class="Apple-converted-space"> </span></span></p>
+<p class="p22">Without doubt the productivity of the soil can be increased up to a certain limit. But only up to a<span class="Apple-converted-space"> </span></p>
+<p class="p22">certain limit, and not continuously without end. For a certain time it will be possible to compensate for<span class="Apple-converted-space"> </span></p>
+<p class="p22">the increase of the German people without having to think of hunger, by increasing the productivity of<span class="Apple-converted-space"> </span></p>
+<p class="p22">our soil. But beside this, we must face the fact that our demands on life ordinarily rise even more<span class="Apple-converted-space"> </span></p>
+<p class="p22">rapidly than the number of the population. Man's requirements with regard to food and clothing<span class="Apple-converted-space"> </span></p>
+<p class="p22">increase from year to year, and even now, for example, stand in no relation to the requirements of<span class="Apple-converted-space"> </span></p>
+<p class="p22">our ancestors, say a hundred years ago. It IS, therefore, insane to believe that every rise in<span class="Apple-converted-space"> </span></p>
+<p class="p22">production provides the basis for an increase in population: no; this is true only up to a certain<span class="Apple-converted-space"> </span></p>
+<p class="p22">degree, since at least a part of the increased production of the soil is spent in satisfying the<span class="Apple-converted-space"> </span></p>
+<p class="p22">increased needs of men. But even with the greatest limitation on the one hand and the utmost industry<span class="Apple-converted-space"> </span></p>
+<p class="p22">on the other, here again a limit will one day be reached, created by the soil itself. With the utmost<span class="Apple-converted-space"> </span></p>
+<p class="p22">toil it will not be possible to obtain any more from it, and then, though postponed for a certain time,<span class="Apple-converted-space"> </span></p>
+<p class="p22">catastrophe again manifests itself. First, there will be hunger from time to time, when there is famine,<span class="Apple-converted-space"> </span></p>
+<p class="p22">etc. As the population increases, this will happen more and more often, so that finally it will only be<span class="Apple-converted-space"> </span></p>
+<p class="p22">absent when rare years of great abundance fill the granaries. But at length the time approaches when<span class="Apple-converted-space"> </span></p>
+<p class="p22">even then it will not be possible to satisfy men's needs, and hunger has become the eternal<span class="Apple-converted-space"> </span></p>
+<p class="p22">companion of such a people. Then Nature must help again and make a choice among those whom<span class="Apple-converted-space"> </span></p>
+<p class="p22">she has chosen for life; but again man helps himself; that is, he turns to artificial restriction of his<span class="Apple-converted-space"> </span></p>
+<p class="p22">increase with all the above-indicated dire consequences for race and species.</p>
+<p class="p33"><br></p>
+<p class="p22">The objection may still be raised that this future will face the whole of humanity in any case and that<span class="Apple-converted-space"> </span></p>
+<p class="p22">consequently the individual nation can naturally not avoid this fate.</p>
+<p class="p22">At first glance this seems perfectly correct. Yet here the following must be borne in mind:</p>
+<p class="p33"><br></p>
+<p class="p22">Assuredly at a certain time the whole of humanity will be compelled, in consequence of the<span class="Apple-converted-space"> </span></p>
+<p class="p22">impossibility of making the fertility of the soil keep pace with the continuous increase in population, to<span class="Apple-converted-space"> </span></p>
+<p class="p22">halt the increase of the human race and either let Nature again decide or, by self-help if possible,<span class="Apple-converted-space"> </span></p>
+<p class="p22">create the necessary balance, though, to be sure, in a more correct way than is done today. But then this<span class="Apple-converted-space"> </span></p>
+<p class="p22">will strike all peoples, while today only those races are stricken with such suffering which no longer<span class="Apple-converted-space"> </span></p>
+<p class="p22">possess the force and strength to secure for themselves the necessary territories in this world.<span class="Apple-converted-space"> </span></p>
+<p class="p22">For as matters stand there are at the present time on this earth immense areas of unused soil, only<span class="Apple-converted-space"> </span></p>
+<p class="p22">waiting for the men to till them. But it is equally true that Nature as such has not reserved this soil for the<span class="Apple-converted-space"> </span></p>
+<p class="p22">future possession of any particular nation or race; on the contrary, this soil exists for the people which<span class="Apple-converted-space"> </span></p>
+<p class="p22">possesses the force to take it and the industry to cultivate it.</p>
+<p class="p33"><br></p>
+<p class="p22">Nature knows no political boundaries. First, she puts living creatures on this globe and watches the<span class="Apple-converted-space"> </span></p>
+<p class="p22">free play of forces. She then confers the master's right on her favorite child, the strongest in courage<span class="Apple-converted-space"> </span></p>
+<p class="p22">and industry.</p>
+<p class="p15"><br></p>
+<h2 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 18.0px Times; color: #0000ee"><a href="http://floatinguniversity.com/lectures-cohen"><b>Lectures: Cohen - Floating University</b></a></h2>
+<p class="p11"><b>JOEL</b> <b>COHEN</b>, Abby <b>Rockefeller</b> Mauzé Professor of Populations, <b>Rockefeller</b> University, ... <b>Lecture</b> 1. Malthus Miffed: Are People the Problem, the Solution, or Both?</p>
+<p class="p15"><br></p>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; color: #0000ee"><a href="http://www.goodreads.com/quotes/tag/overpopulation"><b>Quotes About Overpopulation (24 quotes) - Goodreads</b></a></h3>
+<p class="p11">24 quotes have been tagged as <i>overpopulation</i>: Pentti Linkola: 'I could never find two people who are perfectly equal: one will always be more valuable th...</p>
+<p class="p15"><br></p>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 17.0px Times; color: #0000ee"><a href="http://www.vhemt.org/"><b>Voluntary Human Extinction Movement</b></a></h3>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times"><b>Phasing out the human race by voluntarily ceasing to breed will allow Earth’s biosphere to return to good health.</b></h3>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times"><b>Crowded conditions and resource shortages will improve as we become less dense.</b></h3>
+<h3 style="margin: 0.0px 0.0px 14.0px 0.0px; font: 14.0px Times; color: #0000ee; min-height: 18.0px"><br></h3>
+<p class="p15"><br></p>
+<p class="p15"><br></p>
+<p class="p37"><b>Wiki</b></p>
+<p class="p38"><br></p>
+<p class="p25"><a href="http://www.google.com/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=2&amp;ved=0CDsQFjAB&amp;url=http%3A%2F%2Fen.wikipedia.org%2Fwiki%2FPaul_R._Ehrlich&amp;ei=fK6xUsPbIsPksAShuoD4Ag&amp;usg=AFQjCNH901ESLQ40Z9_fJj3GajeKxbmqqA&amp;sig2=r-Rz9XGhum6y0crV4KoH5A&amp;bvm=bv.58187178,d.cWc"><b><i>Paul</i> R. <i>Ehrlich</i> </b></a><span class="s9"><b>wiki</b></span></p>
+<p class="p11"><i>Paul</i> Ralph <i>Ehrlich</i> (born May 29, 1932) is an American biologist and educator who is the Bing Professor of Population Studies in the department of Biological <b>...</b></p>
+<p class="p11">On the first <a href="http://en.wikipedia.org/wiki/Earth_Day"><span class="s10">Earth Day</span></a> in 1970, he warned that "[i]n ten years all important animal life in the sea will be extinct. Large areas of coastline will have to be evacuated because of the stench of dead fish."<a href="http://en.wikipedia.org/wiki/Paul_R._Ehrlich#cite_note-Reason-22"><span class="s11">[</span><span class="s12">22</span><span class="s11">]</span></a> In a 1971 speech, he predicted that: "By the year 2000 the <a href="http://en.wikipedia.org/wiki/United_Kingdom"><span class="s10">United Kingdom</span></a> will be simply a small group of impoverished islands, inhabited by some 70 million hungry people ... If I were a gambler, I would take even money that <a href="http://en.wikipedia.org/wiki/England"><span class="s10">England</span></a> will not exist in the year 2000."<a href="http://en.wikipedia.org/wiki/Paul_R._Ehrlich#cite_note-Reason-22"><span class="s11">[</span><span class="s12">22</span></a></p>
+<p class="p39"><br></p>
+<p class="p11">Malthusian population alarmist Paul Ehrlich in his 1986 book “The Machinery of Nature” announced Holdren’s prediction that 1 billion people would die from a global cooling “eco-disaster.”</p>
+<p class="p24"><span class="s4">Read more at <a href="http://www.wnd.com/2010/01/121447/#4FXkqZCdgf91tePP.99"><span class="s6">http://www.wnd.com/2010/01/121447/#4FXkqZCdgf91tePP.99</span></a></span></p>
+<p class="p39"><br></p>
+<p class="p34"><a href="http://en.wikipedia.org/wiki/John_Holdren"><b>John <i>Holdren</i><span class="Apple-converted-space">  </span></b></a><span class="s4"><b>wiki</b></span></p>
+<p class="p11"><i>Overpopulation</i> was an early concern and interest. In a 1969 article, <i>Holdren</i> and co-author Paul R. Ehrlich argued, "if the population control measures are not <b>...</b></p>
+<p class="p9"><br></p>
+<p class="p11"><span class="s7"><a href="http://www.wnd.com/index.php?pageId=112317">WND previously reported</a></span> President Obama’s science czar John Holdren was among the scientists who predicted 1 billion people would die in “carbon-dioxide induced” famines in a coming new ice age by 2020.</p>
+<p class="p24"><span class="s4">Read more at <a href="http://www.wnd.com/2010/01/121447/#4FXkqZCdgf91tePP.99"><span class="s6">http://www.wnd.com/2010/01/121447/#4FXkqZCdgf91tePP.99</span></a></span></p>
+<p class="p39"><br></p>
+<p class="p25"><a href="http://en.wikipedia.org/wiki/Thomas_Robert_Malthus"><b>Thomas Robert <i>Malthus</i> </b></a><span class="s9"><b>wiki</b></span></p>
+<p class="p11">His <a href="https://en.wikipedia.org/wiki/An_Essay_on_the_Principle_of_Population"><span class="s13"><i>An Essay on the Principle of Population</i></span></a> observed that sooner or later population will be checked by <a href="https://en.wikipedia.org/wiki/Famine"><span class="s10">famine</span></a> and <a href="https://en.wikipedia.org/wiki/Disease"><span class="s10">disease</span></a>, leading to what is known as a <a href="https://en.wikipedia.org/wiki/Malthusian_catastrophe"><span class="s10">Malthusian catastrophe</span></a>.</p>
+<p class="p39"><br></p>
+<p class="p25"><a href="https://en.wikipedia.org/wiki/Agenda_21"><b>Agenda 21 - Wiki</b></a></p>
+<p class="p11"><i>Agenda 21</i> is a non-binding, voluntarily implemented action plan of the United Nations with regard to sustainable development. It is a product of the Earth ...</p>
+<p class="p24"><span class="s4">‎<a href="https://en.wikipedia.org/wiki/United_Nations_Conference_on_Sustainable_Development"><span class="s6">United Nations Conference on</span></a> - ‎<a href="https://en.wikipedia.org/wiki/ICLEI"><span class="s6">ICLEI</span></a> - ‎<a href="https://en.wikipedia.org/wiki/Agenda_21_for_culture"><span class="s6">Agenda 21 for culture</span></a></span></p>
+<p class="p39"><br></p>
+<p class="p25"><a href="http://www.clubofrome.org/"><b>THE <i>CLUB OF ROME</i> (www.<i>clubofrome</i>.org)</b></a></p>
+<p class="p11">The official Website of the <i>CLUB OF ROME</i>: The <i>CLUB OF ROME</i> is a global think tank and centre of innovation and initiative. As a non-profit, non <b>...</b></p>
+<p class="p24"><span class="s4">‎<a href="http://www.clubofrome.org/?p=324"><span class="s6">About</span></a> - ‎<a href="http://www.clubofrome.org/?p=6166"><span class="s6">Plundering the Planet</span></a> - ‎<a href="http://www.clubofrome.org/?p=703"><span class="s6">The count-up to 2052</span></a> - ‎<a href="http://www.clubofrome.org/?p=2419"><span class="s6">Membership</span></a></span></p>
+<p class="p9"><br></p>
+<p class="p25"><a href="http://www.google.com/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=2&amp;ved=0CDcQFjAB&amp;url=http%3A%2F%2Fen.wikipedia.org%2Fwiki%2FClub_of_Rome&amp;ei=NCYRU5oYhYHRAfLCgJAJ&amp;usg=AFQjCNGt4HgTyATWqn0Ply18p2oP7NmBVw&amp;sig2=_zWZ_Bbf4eq0f18Sw2-cSw&amp;bvm=bv.62286460,d.dmQ"><b><i>Club of Rome</i> </b></a><span class="s9"><b>wiki</b></span></p>
+<p class="p11">The <i>Club of Rome</i> is a global think tank that deals with a variety of international political issues. Founded in 1968 at Accademia dei Lincei in Rome, Italy, the <b>...</b></p>
+<p class="p24"><span class="s4">‎<a href="http://en.wikipedia.org/wiki/Club_of_Rome#Formation"><span class="s6">Formation</span></a> - ‎<a href="http://en.wikipedia.org/wiki/Club_of_Rome#Organization"><span class="s6">Organization</span></a> - ‎<a href="http://en.wikipedia.org/wiki/Club_of_Rome#National_associations"><span class="s6">National associations</span></a> - ‎<a href="http://en.wikipedia.org/wiki/Club_of_Rome#Current_activities"><span class="s6">Current activities</span></a></span></p>
+<p class="p9"><br></p>
+<p class="p25"><a href="http://www.theforbiddenknowledge.com/hardtruth/clubofrome.htm"><b><i>Club of Rome</i> - The Forbidden Knowledge</b></a></p>
+<p class="p11">In 1976, the United States Association of the <i>Club of Rome</i> (USACOR) was <b>...</b> Affairs, a member of the <i>Club of Rome</i> and the Council on Foreign Relations.</p>
+<p class="p39"><br></p>
+<p class="p40"><a href="https://en.wikipedia.org/wiki/Deep_ecology"><b>Deep ecology </b></a><span class="s9"><b>wiki</b></span></p>
+<p class="p11"><i>Deep ecology</i> is a contemporary ecological and environmental philosophy characterized by its advocacy of the inherent worth of living beings regardless of their instrumental utility to human needs, and advocacy for a radical restructuring of modern human societies in accordance with such ideas.</p>
+<p class="p39"><br></p>
+<p class="p40"><a href="http://en.wikipedia.org/wiki/Demographic_threat"><b><i>Demographic</i> threat </b></a><span class="s9"><b>wiki</b></span></p>
+<p class="p11">The concept of demographic threat (or <i>demographic bomb</i>) is a term used in political conversation to refer to population increases from within a minority ethnic <b>...</b></p>
+<p class="p15"><br></p>
+<h1 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 19.0px Times; color: #0000ee"><a href="https://en.wikipedia.org/wiki/An_Essay_on_the_Principle_of_Population#Reception_and_influence"><b>An Essay on the Principle of Population</b></a><span class="s4"><b> </b></span><span class="s9"><b>wiki</b></span></h1>
+<p class="p11">The book <b><i>An Essay on the Principle of Population</i></b> was first published in 1798 under the alias <a href="https://en.wikipedia.org/wiki/Joseph_Johnson_%28publisher%29"><span class="s7">Joseph Johnson</span></a>,<a href="https://en.wikipedia.org/wiki/An_Essay_on_the_Principle_of_Population#cite_note-1"><span class="s14">[</span><span class="s15">1</span><span class="s14">]</span></a><a href="https://en.wikipedia.org/wiki/An_Essay_on_the_Principle_of_Population#cite_note-EssayEL-2"><span class="s14">[</span><span class="s15">2</span><span class="s14">]</span></a> but the author was soon identified as <a href="https://en.wikipedia.org/wiki/Thomas_Robert_Malthus"><span class="s7">Thomas Robert Malthus</span></a>.</p>
+<p class="p15"><br></p>
+<p class="p41"><span class="s5"><a href="http://en.wikipedia.org/wiki/Human_overpopulation"><b>Human overpopulation</b></a></span><span class="s4"><b> wiki</b></span></p>
+<p class="p42"><a href="https://en.wikipedia.org/wiki/The_Limits_to_Growth"><b>The Limits to Growth<span class="Apple-converted-space"> </span></b></a><span class="s16"><b> </b></span><span class="s9"><b>wiki</b></span></p>
+<p class="p11"><b><i>The Limits to Growth</i></b> is a 1972 book about the <a href="https://en.wikipedia.org/wiki/Computer_simulation"><span class="s10">computer simulation</span></a> of exponential <a href="https://en.wikipedia.org/wiki/Economic_growth"><span class="s10">economic</span></a> and <a href="https://en.wikipedia.org/wiki/Population_growth"><span class="s10">population growth</span></a> with finite resource supplies.<a href="https://en.wikipedia.org/wiki/The_Limits_to_Growth#cite_note-1"><span class="s11">[</span><span class="s12">1</span><span class="s11">]</span></a> Funded by the <a href="https://en.wikipedia.org/wiki/Volkswagen_Foundation"><span class="s10">Volkswagen Foundation</span></a><a href="https://en.wikipedia.org/wiki/The_Limits_to_Growth#cite_note-Jens_Rehl.C3.A4nder.2C_Barbara_Riegler.2C_german-2"><span class="s11">[</span><span class="s12">2</span><span class="s11">]</span></a> and commissioned by the <a href="https://en.wikipedia.org/wiki/Club_of_Rome"><span class="s10">Club of Rome</span></a> it was first presented at the <a href="https://en.wikipedia.org/wiki/St._Gallen_Symposium"><span class="s10">St. Gallen Symposium</span></a>. Its authors were <a href="https://en.wikipedia.org/wiki/Donella_Meadows"><span class="s10">Donella H. Meadows</span></a>, <a href="https://en.wikipedia.org/wiki/Dennis_Meadows"><span class="s10">Dennis L. Meadows</span></a>, <a href="https://en.wikipedia.org/wiki/J%C3%B8rgen_Randers"><span class="s10">Jørgen Randers</span></a>, and William W. Behrens III.</p>
+<p class="p15"><br></p>
+<h2 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 18.0px Times; color: #0000ee"><a href="https://en.wikipedia.org/wiki/Growth_Fetish"><b>Growth Fetish - Wik</b></a><b>i</b></h2>
+<p class="p11"><b>Growth Fetish</b> is a book about economics and politics by the Australian liberal political theorist Clive Hamilton. Published in 2003 it became a best-seller in ...</p>
+<p class="p15"><br></p>
+<p class="p41"><span class="s5"><a href="http://en.wikipedia.org/wiki/Malthusians"><b>Malthusianism</b></a></span><span class="s4"><b> wiki</b></span></p>
+<p class="p43"><a href="http://en.wikipedia.org/wiki/Malthusian_catastrophe"><b><i>Malthusian</i> catastrophe </b></a><span class="s9"><b>wiki</b></span></p>
+<p class="p25"><a href="http://en.wikipedia.org/wiki/Misanthropy"><b>Misanthropy </b></a><span class="s9"><b>wiki</b></span></p>
+<p class="p11">Misanthropy is the general hatred, mistrust or disdain of the <i>human</i> species or <b>...</b> a number of writers of satire, such as William S. Gilbert ("I <i>hate</i> my fellow-man").</p>
+<p class="p30"><br></p>
+<p class="p25"><a href="http://en.wikipedia.org/wiki/The_Population_Bomb"><b>The <i>Population Bomb</i> </b></a><span class="s9"><b>wiki</b></span></p>
+<p class="p11">The <i>Population Bomb</i> is a best-selling book written by Stanford University Professor Paul R. Ehrlich and his wife, Anne Ehrlich (who was uncredited), in 1968.</p>
+<p class="p30"><br></p>
+<p class="p44"><a href="https://en.wikipedia.org/wiki/Population_Connection"><b>Population Connection</b></a><span class="s13"><b> </b></span><span class="s9"><b>wiki</b></span></p>
+<p class="p45"><b>Population Connection</b> (formerly Zero Population Growth or ZPG) is a non-profit organization in the United States that raises awareness of population challenges and advocates for improved global access to <a href="https://en.wikipedia.org/wiki/Family_planning"><span class="s10">family planning</span></a> and <a href="https://en.wikipedia.org/wiki/Reproductive_health"><span class="s10">reproductive health</span></a> care. The organization was founded in 1968 by <a href="https://en.wikipedia.org/wiki/Paul_R._Ehrlich"><span class="s10">Paul R. Ehrlich</span></a>, <a href="https://en.wikipedia.org/wiki/Richard_Bowers"><span class="s10">Richard Bowers</span></a>, and <a href="https://en.wikipedia.org/wiki/Charles_Remington"><span class="s10">Charles Remington</span></a> in the wake of Ehrlich's best-selling book, <a href="https://en.wikipedia.org/wiki/The_Population_Bomb"><span class="s13"><i>The Population Bomb</i></span></a>. The organization adopted its current name in 2002.</p>
+<p class="p15"><br></p>
+<p class="p46"><span class="s6"><a href="http://www.google.com/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=5&amp;ved=0CEAQFjAE&amp;url=http://en.wikipedia.org/wiki/World_population&amp;ei=dlRrVP6_KuPLsASF3IL4Aw&amp;usg=AFQjCNF5Vz6be6lfyS2e7SdlXWC3nrxFYA&amp;bvm=bv.79908130,d.cWc">World population</a></span><span class="s17"> </span><span class="s18"><b>wiki</b></span></p>
+<p class="p22">During the European <a href="http://en.wikipedia.org/wiki/British_Agricultural_Revolution"><span class="s17">Agricultural</span></a> and <a href="http://en.wikipedia.org/wiki/Industrial_Revolution"><span class="s17">Industrial Revolutions</span></a>, the <a href="http://en.wikipedia.org/wiki/Life_expectancy"><span class="s17">life expectancy</span></a> of children increased dramatically.<a href="http://en.wikipedia.org/wiki/World_population#cite_note-50"><span class="s19">[</span><span class="s20">49</span><span class="s19">]</span></a> The percentage of the children born in London who <a href="http://en.wikipedia.org/wiki/Infant_mortality"><span class="s17">died before the age of five</span></a> decreased from 74.5% in 1730–1749 to 31.8% in 1810–1829.<a href="http://en.wikipedia.org/wiki/World_population#cite_note-Buer-51"><span class="s19">[</span><span class="s20">50</span><span class="s19">]</span></a><a href="http://en.wikipedia.org/wiki/World_population#cite_note-52"><span class="s19">[</span><span class="s20">51</span><span class="s19">]</span></a> Between 1700 and 1900, Europe’s population increased from about 100 million to over 400 million.<a href="http://en.wikipedia.org/wiki/World_population#cite_note-53"><span class="s19">[</span><span class="s20">52</span><span class="s19">]</span></a> Altogether, the areas populated by people of European descent comprised 36% of the world's population in 1900.<a href="http://en.wikipedia.org/wiki/World_population#cite_note-54"><span class="s19">[</span><span class="s20">53</span><span class="s19">]</span></a></p>
+<p class="p15"><br></p>
+<p class="p9"><br></p>
+<p class="p9"><br></p>
+<p class="p47"><br></p>
+<p class="p48"><br></p>
+<p class="p48"><br></p>
+<p class="p48"><br></p>
+<p class="p16">by year</p>
+<p class="p17"><br></p>
+<p class="p49"><b>2000</b></p>
+<p class="p15"><br></p>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; color: #0000ee"><a href="http://www.theguardian.com/world/2000/may/11/population"><b>Over-population warning as India's billionth baby is born ...</b></a><span class="s8"> <i>The Guardian</i> May 11, 2000<span class="Apple-converted-space"> </span></span></h3>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times">Last modified on Tuesday 12 January 2016 ...</h3>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 19.0px Times; min-height: 23.0px"><br></h3>
+<p class="p17"><br></p>
+<p class="p49"><b>2001</b></p>
+<p class="p15"><br></p>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; color: #0000ee"><a href="http://www.google.com/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=10&amp;ved=0CIQBEBYwCQ&amp;url=http%3A%2F%2Fwww.euthanasia.com%2Fpopmyth.html&amp;ei=4k8mUfGVDoWG9QSLiIH4Cw&amp;usg=AFQjCNH0f_5NfNaHsgepnTgu7iklZ15bTQ&amp;sig2=qkcrzTm-DRt5ce15ZBVMeQ&amp;bvm=bv.42661473,d.eWU"><b>New UN Report Challenges <i>Overpopulation</i> Myth</b></a></h3>
+<p class="p11">New UN Report Challenges <i>Overpopulation</i> Myth <b>...</b> "World Population Monitoring <i>2001</i>," prepared by the Population Division of the Department of Economic <b>...</b></p>
+<p class="p15"><br></p>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; color: #0000ee"><a href="http://www.theinterim.com/2001/aug/17thetruthabout.html"><b>The Truth about "<i>Overpopulation</i>" - Interim, August <i>2001</i></b></a></h3>
+<p class="p11">The Truth about "<i>Overpopulation</i>". By Eli Schuster. Ever since Paul Ehrlich released his 1968 book The Population Bomb, many in the modern world have been <b>...</b></p>
+<p class="p15"><br></p>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; color: #0000ee"><a href="http://bravenewworld.in/2011/12/10/overpopulation-resources-famine/"><b><i>Overpopulation</i>, Resources &amp; Famine | Brave New World</b></a><span class="s8"> Dec 10, 2011<span class="Apple-converted-space"> </span></span></h3>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times">Global <i>overpopulation</i> is a far more important issue than global warming <b>...</b> because it means losing votes (Kolankiewicz &amp; Beck, <i>2001</i>, April).</h3>
+<p class="p15"><br></p>
+<p class="p15"><br></p>
+<p class="p49"><b>2002</b></p>
+<p class="p15"><br></p>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; color: #0000ee"><a href="http://www.ebay.com/ctg/Overpopulation-John-Zeaman-2002-Hardcover-/2012666"><b><i>Overpopulation</i> by John Zeaman <i>2002</i>, Hardcover | eBay</b></a></h3>
+<p class="p11">We couldn't find any "Brand New" listings for this product at this time but these other conditions are available. Very Good; Good <b>...</b></p>
+<p class="p30"><br></p>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; color: #0000ee"><a href="http://books.google.com/books/about/Overpopulation.html?id=QYO6GwAACAAJ"><b><i>Overpopulation</i> - John Zeaman - Google Books</b></a></h3>
+<p class="p11">Franklin Watts, May 1, <i>2002</i> - 128 pages <b>...</b> as food, water, and shelter, the impact that <i>overpopulation</i> has on the environment, and finally, population control.</p>
+<p class="p15"><br></p>
+<p class="p15"><br></p>
+<p class="p49"><b>2003</b></p>
+<p class="p9"><br></p>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; color: #0000ee"><a href="http://www.frostywooldridge.com/overpop/overpop.html"><b><i>Overpopulation</i> - Frosty Wooldridge - speaker, author ...</b></a></h3>
+<p class="p11"><i>Overpopulation</i> - Frosty Wooldridge - speaker, author, environmentalist, patriot, bicyclist. <b>...</b> and future generations. Published in the Denver Post, May 8, <i>2003</i> <b>...</b></p>
+<p class="p15"><br></p>
+<p class="p15"><br></p>
+<p class="p49"><b>2004</b></p>
+<p class="p15"><br></p>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; color: #0000ee"><a href="http://www.ncpa.org/sub/dpd/index.php?Article_ID=3753"><b>Malthusian <i>Overpopulation</i> Concerns</b></a><b> </b><span class="s8">March 22, <i>2004</i>.<span class="Apple-converted-space"> </span></span></h3>
+<p class="p11">Malthusian <i>Overpopulation</i> Concerns. Some environmental advocates claim that human population growth causes intolerable pollution and will <b>...</b></p>
+<p class="p9"><br></p>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; color: #0000ee"><a href="http://www.grinningplanet.com/2004/03-23/overpopulation-sprawl-environment-article.htm"><b>US Population Growth - Sprawl and <i>Overpopulation</i></b></a><span class="s8"> Mar 23, 2004</span></h3>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times">Environmental article about US human population growth, urban sprawl, traffic congestion, and quality of life.</h3>
+<p class="p15"><br></p>
+<p class="p15"><br></p>
+<p class="p49"><b>2005</b></p>
+<p class="p15"><br></p>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; color: #0000ee"><a href="http://www.biologicaldiversity.org/campaigns/overpopulation/extinction/index.html"><b><i>Overpopulation</i> and Extinction - Center for Biological Diversity</b></a><b> </b><span class="s8">December 7, <i>2005</i>.<span class="Apple-converted-space"> </span></span></h3>
+<p class="p11"><i>Overpopulation</i> main page <b>...</b> <i>Overpopulation</i> and Oceans <b>....</b> <i>2005</i>. Earth is All Out of New Farmland. [4] McKee, J. K., P. W. Sciulli, C. D. <b>...</b></p>
+<p class="p9"><br></p>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; color: #0000ee"><a href="http://www.overpopulation.org/whyPopMatters.html"><b>Why Population Matters - World <i>Overpopulation</i> Awareness</b></a><b> </b><span class="s8">June <i>2005</i> U</span></h3>
+<p class="p11">N. doclink <b>...</b> says: Calling humanity a plague is bound to be misunderstood by people who are not yet convinced of the impacts of <i>overpopulation</i>.</p>
+<p class="p9"><br></p>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; color: #0000ee"><a href="http://www.newmediaexplorer.org/sepp/2005/03/20/overpopulation_does_population_growth_follow_food_supply.htm"><b><i>Overpopulation</i> - Does Population Growth Follow Food Supply ...</b></a><b> </b><span class="s8">Mar 20, 2005<span class="Apple-converted-space"> </span></span></h3>
+<p class="p11">by C Gupta - 2005 - <a href="http://scholar.google.com/scholar?hl=en&amp;lr=&amp;q=related:GfddIYhyQSQJ:scholar.google.com/&amp;um=1&amp;ie=UTF-8&amp;sa=X&amp;ei=knEjUYaTIsjO0QH504CoDQ&amp;ved=0CHsQzwIwCDgK"><span class="s7">Related articles</span></a></p>
+<p class="p11">– Steven Earl Salmony on 3 March <i>2005</i>: Please take note of apparently unforeseen scientific data regarding the human <i>overpopulation</i> of Earth.</p>
+<p class="p15"><br></p>
+<p class="p15"><br></p>
+<p class="p49"><b>2006</b></p>
+<p class="p15"><br></p>
+<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 12.0px Times; color: #0000ee"><span class="s21"><a href="http://www.independent.co.uk/environment/overpopulation-is-main-threat-to-planet-521925.html"><b>Overpopulation 'is main threat to planet' </b></a><a href="http://www.independent.co.uk/author/science-editor"><span class="s22">Science Editor</span></a></span><span class="s4">, <a href="http://www.independent.co.uk/author/steve-connor"><span class="s6">Steve Connor</span></a> <span class="Apple-converted-space">  </span>7 January 2006</span></h1>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; color: #0000ee"><a href="http://www.google.com/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=7&amp;ved=0CEgQFjAG&amp;url=http%3A%2F%2Fwww.prisonplanet.com%2Farticles%2Fapril2006%2F030406massculling.htm&amp;ei=qRedVdOnMdSmyATL4JnABg&amp;usg=AFQjCNHB1vL-Bdot3xVB0qTUYt60ensanA&amp;bvm=bv.96952980,d.aWw"><b>Top Scientist Advocates Mass Culling 90% Of Human ...</b></a><b> </b><span class="s8">April 3 2006 .</span></h3>
+<p class="p11"><i>Paul</i> Joseph Watson &amp; Alex Jones/Prison Planet.com | .. as he jumped into a doomsday malthusian rant about <i>overpopulation</i> destroying the earth. .... Pianka's ideology is in the same league as Hitler, <i>Pol Pot</i>, and the rest of ...</p>
+<p class="p30"><br></p>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; color: #0000ee"><a href="http://www.frankfuredi.com/articles/misanthropy-20060418.shtml"><b>Frank Furedi : Confronting the New Misanthropy</b></a><span class="s8"> Apr 18, 2006</span></h3>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times">If anything, today's neo-<i>Malthusian</i> thinking is far more dismal and <i>misanthropic</i> than the original thing. For all his intellectual pessimism and ...</h3>
+<p class="p30"><br></p>
+<p class="p51"><a href="http://www.youtube.com/watch?v=PlY-TNsbcMI"><b><i>Humans</i>! - YouTube</b></a><span class="s2"><b> </b></span><span class="s8">May 23, 2006</span></p>
+<p class="p25"><a href="http://www.independent.co.uk/environment/overpopulation-is-main-threat-to-planet-521925.html"><b><i>Overpopulation</i> 'is main threat to planet' - Environment - The ...</b></a><span class="s4"><b> </b></span><span class="s8">Jan 7, 2006</span></p>
+<p class="p11">Climate change and global pollution cannot be adequately tackled without addressing the neglected issue of the world's booming population, <b>...</b></p>
+<p class="p52"><br></p>
+<p class="p25"><a href="http://www.google.com/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=15&amp;ved=0CIkBEBYwDg&amp;url=http%3A%2F%2Feconpapers.repec.org%2FRePEc%3Amve%3Ajournl%3Av%3A32%3Ay%3A2006%3Ai%3A2%3Ap%3A1-8&amp;ei=OhaYUMiZG-XZ0QHcloDoBA&amp;usg=AFQjCNE81tT9stx-xo6SCJHN48WK3pKyfg&amp;sig2=d3M15WlQi1nD02Fi41ngLQ"><b>EconPapers: Madmen in Authority: Adolf <i>Hitler</i> and the <i>Malthusian</i> ...</b></a></p>
+<p class="p11">by K McCormick<span class="Apple-converted-space">  </span><a href="http://econpapers.repec.org/article/mvejournl/"><span class="s2"><i>he Journal of Economics</i></span></a>, 2006, vol. 32, issue 2, pages 1-8</p>
+<p class="p11"><b>Abstract:</b> Keynes famously asserted that dead economists exert influence on madmen in authority. For Hitler, the economist appears to be Malthus. Hitler was obsessed with the Malthusian idea that the amount of available land limits population. Hitler never gave credit to anyone else for his ideas, so it is impossible to be certain about their origin. A case can be made that Hitler was influenced by Malthus as interpreted by Arthur Moeller van den Bruck, whose book The Third Reich captivated the Nazi party.</p>
+<p class="p15"><br></p>
+<p class="p15"><br></p>
+<p class="p49"><b>2007</b></p>
+<p class="p15"><br></p>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; color: #0000ee"><a href="http://www.cnn.com/2007/TECH/science/09/25/overpopulation.overview/index.html"><b><i>Overpopulation</i> could be people, planet problem - </b></a><a href="http://cnn.com/"><b>CNN.com</b></a><span class="s4"><b> </b></span><span class="s8">Sep 25, 2007</span></h3>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times">By the year 2050, China will no longer be the most populous country in the world.</h3>
+<p class="p30"><br></p>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; color: #0000ee"><a href="http://www.telegraph.co.uk/comment/3643551/Global-over-population-is-the-real-issue.html"><b>Global <i>over-population</i> is the real issue - Telegraph</b></a><b> </b><span class="s8">25 Oct <i>2007</i>.<span class="Apple-converted-space"> </span></span></h3>
+<p class="p11">By Boris Johnson. Comments. It is a tragic measure of how far the world has changed <b>...</b></p>
+<p class="p9"><br></p>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; color: #0000ee"><a href="http://www.dailymail.co.uk/sciencetech/article-1346357/World-faces-overpopulation-disaster-number-people-set-rise-75-million-EACH-YEAR.html"><b>World faces <i>overpopulation</i> 'disaster' as number of people set to rise ...</b></a><span class="s4"><b> </b></span><span class="s8">Jan 12, 2011<span class="Apple-converted-space"> </span></span></h3>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times">The world is edging closer to <i>overpopulation</i> Armageddon as swelling <b>...</b> The world's urban population is likely to increase from a <i>2007</i> figure of <b>...</b></h3>
+<p class="p15"><br></p>
+<p class="p15"><br></p>
+<p class="p49"><b>2008</b></p>
+<p class="p15"><br></p>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; color: #0000ee"><a href="http://scienceblogs.com/aardvarchaeology/2008/11/24/the-ethics-of-overpopulation/"><b>The Ethics of <i>Overpopulation</i> – Aardvarchaeology</b></a><span class="s4"><b> </b></span><span class="s8">Nov 24, 2008</span></h3>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times">There are too many of us on Earth, our numbers keep growing, and we need to do something about it. Now, let's never lose sight of the reason <b>...</b></h3>
+<p class="p15"><br></p>
+<p class="p15"><br></p>
+<p class="p49"><b>2009</b></p>
+<p class="p15"><br></p>
+<p class="p24"><span class="s23"><a href="http://www.google.com/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=1&amp;ved=0CDcQFjAA&amp;url=http%3A%2F%2Fwww.pop.org%2Fcontent%2Fpresident-obamas-bizarre-science-czar--dr-1958&amp;ei=6rnYUPvGA-i40gHNl4CADQ&amp;usg=AFQjCNEpZNocwxDcsmugimoDMLBMZAciZw&amp;sig2=2s3RWxFwqcnv4ZhJ273w1w&amp;bvm=bv.1355534169,d.dmQ"><b>President Obama's Bizarre "Science Czar": Dr. John R </b><b><i>Holdren</i> ...</b></a></span><span class="s24"><b> </b></span><span class="s4">By Steven W. Mosher</span><span class="s2"><span class="Apple-tab-span">	</span><a href="http://www.pop.org/taxonomy/term/164"><span class="s25">PRI Review: 2009 (v19, n5) September/October</span></a></span></p>
+<p class="p11"><i>Holdren</i>, who has co-authored hooks on population control with Ehrlich and his wife, <b>...</b> families but for society as well, apart from the problems of <i>overpopulation</i>.</p>
+<p class="p9"><br></p>
+<p class="p25"><a href="http://www.pop.org/content/obamas-population-fundamentalist-986"><b>Obama's Population Fundamentalist | Population Research Institute</b></a><span class="s2"><b> </b></span><span class="s8">By Colin Mason</span><span class="s26"><span class="Apple-tab-span">	</span><a href="http://www.pop.org/category/weekly-briefing/weekly-briefing-2009-v11"><span class="s7">Weekly Briefing: 2009 (v11)</span></a></span></p>
+<p class="p11">To the best of our knowledge, <i>Holdren</i> has never publicly disavowed his belief in <i>overpopulation</i> and radical population control measures. It doesn't matter that <b>...</b></p>
+<p class="p39"><br></p>
+<p class="p25"><a href="http://www.sciencedaily.com/releases/2009/04/090418075752.htm"><b>Worst Environmental Problem? <i>Overpopulation</i>, Experts Say</b></a><span class="s4"><b> </b></span><span class="s8">Apr 20, 2009<span class="Apple-converted-space"> </span></span></p>
+<p class="p11"><i>Overpopulation</i> is the world's top environmental issue, followed closely by climate change and the need to develop renewable energy <b>...</b></p>
+<p class="p9"><br></p>
+<p class="p25"><a href="http://www.republicanoperative.com/forums/f10/overpopulation-according-john-holdren-21809/"><b><i>Overpopulation</i> According to John <i>Holdren</i></b></a><span class="s4"><b><span class="Apple-converted-space">  </span></b></span><span class="s8">Jul 30, 2009</span></p>
+<p class="p11">Obama's new Science Czar is a real fruitcake. I took the time to do a little math this morning. Here are some surprising results that debunk the.</p>
+<p class="p9"><br></p>
+<p class="p25"><a href="http://www.lesjones.com/2009/07/11/john-holdren-obamas-science-czar-advocated-totalitarian-measures-to-address-overpopulation/"><b>John <i>Holdren</i>, Obama's science czar, advocated totalitarian ...</b></a><span class="s4"><b> </b></span><span class="s8">Jul 11, 2009<span class="Apple-converted-space"> </span></span></p>
+<p class="p11">Via Ace of Spades, Zombietime has unearthed a book of environmental extremism written by Obama's science czar, John <i>Holdren</i>, and <b>...</b></p>
+<p class="p9"><br></p>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; color: #0000ee"><a href="http://www.youtube.com/watch?v=vZVOU5bfHrM"><b>Overpopulation: The Making of a Myth - YouTube</b></a><b> </b><span class="s8">Jul 23, 2009<span class="Apple-converted-space"> </span></span></h3>
+<p class="p11">- Uploaded by Colinpri1</p>
+<p class="p11">The pilot episode of PRI's POP 101 series, this video takes a fresh, humorous approach to the demographic ...</p>
+<p class="p9"><br></p>
+<h2 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 18.0px Times; color: #0000ee"><a href="https://au.answers.yahoo.com/question/index?qid=20090906213118AAtsJjf"><b>Go forth and multiply, is this the biblical answer to ...</b></a><span class="s8"> Sep 07, 2009</span></h2>
+<h2 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times"><b>Go forth and multiply</b>, is this the biblical answer to shrinking resources and <b>over population</b> of the planet?</h2>
+<p class="p9"><br></p>
+<h2 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 18.0px Times; color: #0000ee"><a href="http://www.wnd.com/2009/09/110768/"><b>Holdren: Sterilize welfare recipients - WND</b></a><span class="s8"> Sep 23, 2009 </span></h2>
+<h2 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times"><b>Holdren</b>: Sterilize <b>welfare recipients</b> Obama boss suggested ways to save planet, ... <b>Jerome</b> <b>R</b>. <b>Corsi</b>, a Harvard Ph.D., is a <b>WND</b> senior staff reporter.</h2>
+<p class="p9"><br></p>
+<p class="p25"><a href="http://www.google.com/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=2&amp;ved=0CC0QFjAB&amp;url=http%3A%2F%2Fwww.dakotavoice.com%2F2009%2F09%2Fmalthus-sustainability-and-hitler-final-solutions%2F&amp;ei=OhaYUMiZG-XZ0QHcloDoBA&amp;usg=AFQjCNHpA3_593oJAfy1SP4ullhVhDiSkA&amp;sig2=qpV0Rm6SqOm7GVZznWU6sA"><b><i>Malthus</i>, Sustainability, and <i>Hitler</i>: Final Solutions</b></a><span class="s4"><b> </b></span><span class="s8">Sep 29, 2009<span class="Apple-converted-space"> </span></span></p>
+<p class="p11"><span class="Apple-converted-space"> </span>By Clark M. Jones When I began looking at sustainability this last spring and summer I was challenged by some who think I am too hard on the <b>...</b></p>
+<p class="p9"><br></p>
+<h2 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 18.0px Times; color: #0000ee"><a href="http://www.wnd.com/2009/09/111475/"><b>Holdren: Seize Babies Born to Unwed Women</b></a><span class="s4"><b> </b></span><span class="s8">Sep 30, 2009 </span></h2>
+<h2 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times">John <b>Holdren</b> Obama science czar John <b>Holdren</b> stated in a college textbook that illegitimate children born to unwed mothers could ... <b>Jerome</b> <b>R</b>. <b>Corsi</b>, ...</h2>
+<h2 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; min-height: 14.0px"><br></h2>
+<h2 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 15.0px Times; color: #0000ee"><a href="http://www.fourwinds10.net/siterun_data/government/fraud/us_government/news.php?q=1254846660"><b>Holdren warned of coming ice age &gt;&gt; Four Winds 10 - Truth ...</b></a><b> </b><span class="s8">Oct. 6, 2009.<span class="Apple-converted-space"> </span></span></h2>
+<p class="p11"><b>Jerome</b> <b>R</b>. <b>Corsi</b> John ... <b>Holdren</b> and Ehrlich attributed the cause of global cooling to "a reduced transparency of the atmosphere to incoming light as a ...</p>
+<h2 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; min-height: 14.0px"><br></h2>
+<h2 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 18.0px Times; color: #0000ee"><a href="http://www.iceagenow.com/Holdren_Ice_age_will_kill_1_billion_by_2020.htm"><b>Holdren: Ice age will kill 1 billion by 2020</b></a><b> </b><span class="s8">Oct<span class="Apple-converted-space">  </span>9, 2009 </span></h2>
+<p class="p11">Obama's science chief blames humans By <b>Jerome</b> <b>R</b>. <b>Corsi</b> __<span class="Apple-converted-space">  </span>“White House science czar ...</p>
+<p class="p9"><br></p>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; color: #0000ee"><a href="http://www.spiked-online.com/newsite/article/7723"><b>Too many people? No, too many Malthusians | Environment ...</b></a><span class="s8"> Spiked Nov 19, 2009<span class="Apple-converted-space"> </span></span></h3>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times">This time <i>overpopulation</i> is definitely going to cause social and ... by a deeply held <i>misanthropy</i> that continually overlooks mankind's ability to ...</h3>
+<p class="p54"><br></p>
+<p class="p25"><a href="http://www.google.com/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=10&amp;ved=0CIEBEBYwCQ&amp;url=http%3A%2F%2Fwww.wnd.com%2F2009%2F12%2F118497%2F&amp;ei=6rnYUPvGA-i40gHNl4CADQ&amp;usg=AFQjCNESVYfv6pTFTEYMSLuF5mhlw7IuXA&amp;sig2=tyOcVZcZDdGoXTopO7C2hg&amp;bvm=bv.1355534169,d.dmQ"><b><i>Holdren's</i> guru: Dispose of 'excess children' like puppies</b></a><span class="s4"><b> </b></span><span class="s8">Dec 9, 2009<span class="Apple-converted-space"> </span></span></p>
+<p class="p11">Just as Brown had called for world government to control <i>overpopulation</i> to prevent eco-disasters, <i>Holdren's</i> call for a planetary regime was <b>...</b></p>
+<p class="p15"><br></p>
+<p class="p15"><br></p>
+<p class="p49"><b>2010</b></p>
+<p class="p15"><br></p>
+<p class="p25"><a href="http://www.greenisthenewred.com/blog/avatar-recruiting-eco-terrorists/2460/"><b>Avatar Labeled “Recruiting Film for Eco-terrorists”</b></a><span class="s4"><b> </b></span><span class="s8">Jan 5, 2010<span class="Apple-converted-space"> </span></span></p>
+<p class="p11">You see environmentalists truly believe that <i>humans</i> are an <i>infestation</i> upon the <i>earth</i>. What did you think about the message of the film?</p>
+<p class="p9"><br></p>
+<p class="p25"><a href="http://www.google.com/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=3&amp;ved=0CEYQFjAC&amp;url=http%3A%2F%2Fendoftheamericandream.com%2Farchives%2Fthe-dangerous-myth-of-overpopulation&amp;ei=6rnYUPvGA-i40gHNl4CADQ&amp;usg=AFQjCNE85x1HuOH8mDav2w4viMbTSFIxVg&amp;sig2=W23x-cvemhJzTcLNBDQ4Ug&amp;bvm=bv.1355534169,d.dmQ"><b>The Dangerous Myth Of <i>Overpopulation</i></b></a><span class="s4"><b> </b></span><span class="s8">May 6, 2010<span class="Apple-converted-space"> </span></span></p>
+<p class="p11">Not only that, but Barack Obama's top science advisor, John P. <i>Holdren</i>, actually <b>...</b> The sad thing is that the earth is not <i>overpopulated</i> at all.</p>
+<p class="p9"><br></p>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; color: #0000ee"><a href="http://darrowmillerandfriends.com/2010/09/07/exploding-the-myth-of-overpopulation/"><b>Exploding the Myth of Overpopulation | Darrow Miller and ...</b></a><span class="s8"> Sep 7, 2010<span class="Apple-converted-space"> </span></span></h3>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times">The <i>overpopulation</i> theory is a myth that deserves to be cast in the dustbin of history. ... The <i>Bible</i> has a very different perspective on humanity.</h3>
+<p class="p9"><br></p>
+<p class="p25"><a href="http://www.abc.net.au/news/2010-10-07/warmingtomisanthropy/39750"><b>Warming to misanthropy - The Drum (Australian ... - ABC</b></a><span class="s13"><b> </b></span><span class="s8">Oct 6, 2010<span class="Apple-converted-space"> </span></span></p>
+<p class="p11">Australian Broadcasting Corporation</p>
+<p class="p11"><span class="Apple-converted-space"> </span>AGW is similar to the theory of Thomas <i>Malthus</i>, the 18th century clergyman who thought that human population would outstrip natural ...</p>
+<p class="p9"><br></p>
+<p class="p25"><a href="http://moderneugenicsblog.wordpress.com/tag/over-population/page/2/"><b><i>over-population</i> « Eugenics Watchdog</b></a><span class="s2"><b> </b></span><span class="s8">October 8, 2010</span></p>
+<p class="p11">Posts about <i>over-population</i> written by Death To The New World Order. <b>...</b> John <i>Holdren</i> Remains Unashamed About Hero-Worship of Eugenicist. October 8 <b>...</b></p>
+<p class="p9"><br></p>
+<p class="p25"><a href="http://www.google.com/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=2&amp;ved=0CCcQFjAB&amp;url=http%3A%2F%2Ffvdb.wordpress.com%2F2010%2F10%2F13%2Fon-malthus-overpopulation-myth-and-the-fascist-rh-bill%2F&amp;ei=4hqYUPfjMbS80QGu6oC4DQ&amp;usg=AFQjCNExEksFRVNHellm0W3towv2c3W5IQ&amp;sig2=9b5-M1_zFyNFkX4nFyZyEQ"><b>On <i>Malthus</i>, Overpopulation Myth, and the <i>Fascist</i> RH Bill « THE ...</b></a><span class="s4"><b> </b></span><span class="s8">Oct 13, 2010<span class="Apple-converted-space"> </span></span></p>
+<p class="p11">I had a debate with a Filipino Freethinker who strongly and passionately support the <i>fascist</i> Reproductive Health bill. I'd like to re-post it here for <b>...</b></p>
+<p class="p9"><br></p>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; color: #0000ee"><a href="http://www.youtube.com/watch?v=lOQ4W8td_cw"><b>Steven Mosher - The Overpopulation Myth - YouTube</b></a><b> </b><span class="s8">Dec 22, 2010<span class="Apple-converted-space"> </span></span></h3>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times">Uploaded by womantowomanshow</h3>
+<p class="p11">Steven Mosher is interviewed by LouAnn Edwards at the <i>2010</i> National ... to Life Conference in Pittsburgh, and ...</p>
+<h3 style="margin: 0.0px 0.0px 14.0px 0.0px; font: 14.0px Times; color: #0000ee; min-height: 18.0px"><br></h3>
+<p class="p9"><br></p>
+<p class="p15"><br></p>
+<p class="p49"><b>2011</b></p>
+<p class="p15"><br></p>
+<p class="p25"><a href="http://www.google.com/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=19&amp;ved=0CGEQFjAIOAo&amp;url=http%3A%2F%2Fwww.spiked-online.com%2Findex.php%2Fsite%2Farticle%2F10077%2F&amp;ei=HBmYUPvWBKWz0QGKtoDgAw&amp;usg=AFQjCNFKyqDH4U9lBfY8cT4CTZxmocw_6g&amp;sig2=x-MreEHof9gYgbO92YLWLA"><b>The definitive guide to modern-day Malthusians | Brendan O'Neill ...</b></a><span class="s8">Jan 13, 2011<span class="Apple-converted-space"> </span></span></p>
+<p class="p11">Either way, the <i>Malthusian</i> attitude – the idea that every problem we face is a <b>...</b> Most likely to say: 'People say you're <i>Hitler</i> if you say it, but the <b>...</b></p>
+<p class="p15"><br></p>
+<p class="p11"><span class="s27"><a href="http://drtimball.com/2011/antihuman/"><b>Antihuman</b></a></span><span class="s28"><b> </b></span>by Dr. Tim Ball on February 7, 2011</p>
+<p class="p24"><span class="s4">in <a href="http://drtimball.com/category/atmosphere/"><span class="s6">Atmosphere</span></a>,<a href="http://drtimball.com/category/land/"><span class="s6">Land</span></a>,<a href="http://drtimball.com/category/philosophy/"><span class="s6">Philosophy</span></a>,<a href="http://drtimball.com/category/politics/"><span class="s6">Politics</span></a></span></p>
+<p class="p15"><br></p>
+<p class="p25"><a href="http://www.freerepublic.com/focus/f-chat/2703931/posts"><b><i>Overpopulation</i> scare a century old and without substance</b></a><span class="s4"><b> </b></span><span class="s8">Apr 6, 2011<span class="Apple-converted-space"> </span></span></p>
+<p class="p11">For people who buy into the notion of <i>overpopulation</i> (and have you noticed <b>...</b> <i>Holdren</i> and Ehrlich famously lost on all 5 public bets they made <b>...</b></p>
+<p class="p9"><br></p>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; color: #0000ee"><a href="http://quadrant.org.au/magazine/2011/05/the-personal-costs-of-spurning-green-misanthropy/"><b>The Personal Costs of Spurning Green Misanthropy ...</b></a><span class="s8"> Apr 28, 2011</span></h3>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times">Perhaps this is because the same crypto-Marxist <i>misanthropy</i> that .... The key to <i>overpopulation</i>, therefore, is “employing all the advances in ...</h3>
+<p class="p9"><br></p>
+<p class="p25"><a href="http://www.google.com/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=43&amp;ved=0CEQQFjACOCg&amp;url=http%3A%2F%2Fdrtimball.com%2F2011%2Fclimate-change-threat-is-continuation-of-malthusian-population-claims%2F&amp;ei=kb3YUIHWCrO_0QH_t4GQCQ&amp;usg=AFQjCNGRlQGrp4xThZ_l8DkdpV6dTfgLXA&amp;sig2=fsrLu0ztIzZS-DfSbwmvsQ&amp;bvm=bv.1355534169,d.dmQ"><b>Climate Change Threat is Continuation of Malthusian Population ...</b></a><span class="s4"><b> </b></span><span class="s8">May 3, 2011<span class="Apple-converted-space"> </span></span></p>
+<p class="p11">Paul Ehrlich published articles with John <i>Holdren</i> with ideas and claims that are now totally discredited. Ehrlich claimed <i>overpopulation</i> would <b>...</b></p>
+<p class="p55"><br></p>
+<p class="p25"><a href="http://articles.latimes.com/2011/may/15/opinion/la-ed-population-20110515"><b>Global population: Defusing the <i>population bomb</i> - Los Angeles Times</b></a><span class="s4"><b> </b></span><span class="s8">May 15, 2011<span class="Apple-converted-space"> </span></span></p>
+<p class="p11">It's getting crowded out there. According to an updated report from the United Nations, the planet's <i>population</i> is not following the expected <b>...</b></p>
+<p class="p55"><br></p>
+<p class="p35"><a href="http://drtimball.com/2011/co2-insanity-kill-the-plants-kill-the-people/"><b>CO2 Insanity: Kill the Plants, Kill the People</b></a><span class="s29"><b> </b></span><span class="s8">by Dr. Tim Ball on May 16, 2011</span></p>
+<p class="p24"><span class="s4">in <a href="http://drtimball.com/category/atmosphere/"><span class="s6">Atmosphere</span></a>,<a href="http://drtimball.com/category/data/"><span class="s6">Data</span></a>,<a href="http://drtimball.com/category/government/"><span class="s6">Government</span></a>,<a href="http://drtimball.com/category/legal/"><span class="s6">Legal</span></a>,<a href="http://drtimball.com/category/philosophy/"><span class="s6">Philosophy</span></a>,<a href="http://drtimball.com/category/politics/"><span class="s6">Politics</span></a>,<a href="http://drtimball.com/category/theory/"><span class="s6">Theory</span></a></span></p>
+<p class="p30"><br></p>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; color: #0000ee"><a href="http://www.heritage.org/research/commentary/2011/08/liberal-overpopulation-alarmists-are-exactly-wrong"><b>Liberal Overpopulation Alarmists are Exactly Wrong</b></a><span class="s8"><i> The Heritage Foundation</i> Aug 2, 2011</span></h3>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times"><span class="Apple-converted-space"> </span><i>Liberal Overpopulation</i> Alarmists are Exactly Wrong ... They're deadly serious in proposing to rein in what they see as teeming <i>overpopulation</i>.</h3>
+<p class="p30"><br></p>
+<p class="p25"><a href="http://www.nytimes.com/2011/06/08/opinion/08friedman.html"><b>The <i>Earth Is Full</i> - </b></a><a href="http://nytimes.com/"><b>NYTimes.com</b></a><span class="s4"><b> </b></span><span class="s8">Jun 7, 2011<span class="Apple-converted-space"> </span></span></p>
+<p class="p11">We are in denial about the severity of the climate crisis and just how big of a response is going to be needed.</p>
+<p class="p9"><br></p>
+<p class="p25"><a href="http://thinkprogress.org/climate/2011/06/08/240372/tom-friedman-the-great-disruption/"><b>"The <i>Earth Is Full</i>": Tom Friedman on “The Great Disruption ...</b></a><span class="s4"><b> </b></span><span class="s8">Jun 8, 2011<span class="Apple-converted-space"> </span></span></p>
+<p class="p11">First, here's the opening of Friedman's op-ed, “The <i>Earth Is Full</i>,” currently the most e-mailed piece on the NY Times website: You really do have <b>...</b></p>
+<p class="p56"><br></p>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; color: #0000ee"><a href="http://dailycaller.com/2015/06/10/jerry-brown-worries-about-overpopulation-amid-ca-drought/"><b>Jerry Brown Worries About 'Overpopulation' Amid CA Drought</b></a><span class="s8"> <i>The Daily Caller </i>Jun 10, 2015<span class="Apple-converted-space"> </span></span></h3>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times">Devin Nunes told The Daily Caller's <i>Kerry</i> Picket in an interview.</h3>
+<p class="p56"><br></p>
+<p class="p25"><a href="file:///Users/anchik2/Desktop/www.cobdencentre.org/.../global-warming-the-new-malthusian-scare/"><b>Global warming: the new Malthusian scare » The Cobden Centre</b></a><span class="s4"> </span><span class="s8">22 June 2011.<span class="Apple-converted-space"> </span></span></p>
+<p class="p56"><br></p>
+<p class="p25"><a href="http://forum.prisonplanet.com/index.php?topic=185377.30;wap2"><b>How to tell if someone has been brainwashed by Malthusian propaganda</b></a><span class="s4"><b> </b></span><span class="s8">Jun 25, 2011</span></p>
+<p class="p11"><i>Overpopulation</i> is a Myth: Plenty of Food and Space Exists <b>...</b> study to date of John P. <i>Holdren's</i> Ecoscience in a bombshell new video interview <b>...</b></p>
+<p class="p9"><br></p>
+<p class="p25"><a href="http://articles.marketwatch.com/2011-06-28/commentary/30788709_1_population-growth-population-bomb-global-population"><b><i>Population bomb</i>: 9 billion march to WWIII - MarketWatch</b></a><span class="s4"><b> </b></span><span class="s8">Jun 28, 2011<span class="Apple-converted-space"> </span></span></p>
+<p class="p11">SAN LUIS OBISPO, Calif. (MarketWatch) — Sshh. Don't tell anyone. But “while you are reading these words, four people will have died from <b>...</b></p>
+<p class="p9"><br></p>
+<p class="p25"><a href="http://2012forum.com/forum/viewtopic.php?f=3&amp;t=24268"><b>2012 Forum • Culling the <i>Human Infestation</i></b></a><span class="s4"><b> </b></span><span class="s8">Jul 8, 2011</span></p>
+<p class="p11">Culling of the <i>Human Infestation</i> <b>...</b> that the powers that be wanna lower the population to 10% of current living beings on this planet <i>earth</i>.</p>
+<p class="p9"><br></p>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; color: #0000ee"><a href="http://www.exposeobama.com/tag/overpopulation/"><b><i>overpopulation</i> | Expose Obama</b></a><span class="s4"><b> </b></span><span class="s8">Jul 26, 2011<span class="Apple-converted-space"> </span></span></h3>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times">Norway's Amazing Pro-gay,Pro-choice,Anti-racist,<i>Masonic</i>,Big <b>....</b> Clinton,Ileana Ros-Lehtinen,John Boehner,<i>overpopulation</i>,Planned <b>...</b></h3>
+<p class="p9"><br></p>
+<p class="p25"><a href="http://www.cnn.com/2011/10/28/opinion/pearce-population-fertility/index.html"><b>How women defused <i>population bomb</i> - </b></a><a href="http://cnn.com/"><b>CNN.com</b></a><span class="s4"><b> </b></span><span class="s8">Oct 31, 2011<span class="Apple-converted-space"> </span></span></p>
+<p class="p11">This week the world will reach 7 billion people. Understandably that raises concern about a soaring world <i>population</i>. But there is a good news <b>...</b></p>
+<p class="p9"><br></p>
+<p class="p9"><br></p>
+<p class="p9"><br></p>
+<p class="p25"><a href="http://www.google.com/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=4&amp;ved=0CEsQFjAD&amp;url=http%3A%2F%2Fwww.abovetopsecret.com%2Fforum%2Fthread649612%2Fpg1&amp;ei=rSyfUJXVMOWB0QHkq4GACg&amp;usg=AFQjCNEogWOO_3MxBOPqhiZQZjJS0v3coA&amp;sig2=Y8KbNjLrZDUfVYqP_SAujQ"><b>Earth's <i>Human infestation</i> [WRAP], page 1</b></a><span class="s4"><b> </b></span><span class="s8">Nov 1, 2011</span></p>
+<p class="p11">I wonder how many of our members are old enough to remember when that commercial ran? It seems like not so long ago that people were <b>...</b></p>
+<p class="p9"><br></p>
+<p class="p25"><a href="http://www.canadianbusiness.com/blogs-and-comment/population-bomb-theory-is-a-myth-in-a-vacuum/"><b><i>Population bomb</i> theory is a <i>myth</i> in a vacuum - Canadian Business</b></a><span class="s4"><b> </b></span><span class="s8">Nov 2, 2011<span class="Apple-converted-space"> </span></span></p>
+<p class="p11">There's no coming apocalypse. In fact, thanks to technology, things will keep getting better.</p>
+<p class="p57"><br></p>
+<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 19.0px Times; color: #0000ee"><span class="s5"><a href="https://www.youtube.com/watch?v=9jPvH5Pw5ic"><b>Overpopulation Myth, Occupy Mao &amp; More: Infowars Nightly News</b></a></span><span class="s16"><b> </b></span><span class="s8"><b>Nov 6, 2011</b></span></h1>
+<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px Times; color: #0000ee"><span class="s5"><a href="https://www.youtube.com/watch?v=No35jbmP-H0&amp;ebc=ANyPxKqEWED8HEYF-JYjDDFxLXbSKOg3Vr7IyELBnxnX7TZBOt3Si0vgggxa4Tx86d-D-wJvQSY5rSGfnIoRd5Tv7G0S8c3tdA"><b>ACADEMIА. Мир в демографическом зеркале. Сергей Капица. ч.1</b></a></span><span class="s4"><b><span class="Apple-converted-space">  </span></b></span><span class="s8"><b>Dec 1, 2011</b></span></h1>
+<p class="p15"><br></p>
+<p class="p49"><b>2012</b></p>
+<p class="p15"><br></p>
+<p class="p25"><a href="http://thearrowsoftruth.com/tag/overpopulation/"><b><i>overpopulation</i> - The Arrows of Truth</b></a><span class="s4"><b> </b></span><span class="s8">Feb 4, 2012<span class="Apple-converted-space"> </span></span></p>
+<p class="p11">Archive for <i>overpopulation</i> <b>...</b> If John P. <i>Holdren</i> has his way, you will need a Birth Permit or Licence before you are legally allowed to have <b>...</b></p>
+<p class="p9"><br></p>
+<p class="p9"><br></p>
+<h2 style="margin: 0.0px 0.0px 14.0px 0.0px; font: 18.0px Times; color: #0000ee"><a href="http://stuartbramhall.aegauthorblogs.com/2012/02/10/the-club-of-rome-and-the-new-world-order/"><b>The Club of Rome and the New World Order</b></a><span class="s4"><b> </b></span><span class="s8">Feb 10, 2012<span class="Apple-converted-space"> </span></span></h2>
+<p class="p9"><br></p>
+<p class="p25"><a href="http://popbombs.blogspot.com/"><b><i>Population Bomb Myth</i></b></a><span class="s4"><b> </b></span><span class="s8">Mar 3, 2012</span></p>
+<p class="p11">Countries with growing <i>population</i> and improving rule of law, education, health and governance will fare much better than those with shrinking <b>...</b></p>
+<p class="p9"><br></p>
+<p class="p11"><span class="s30"><a href="http://www.youtube.com/watch?v=DZT6YpCsapg"><b>Paul Gilding: The </b><b><i>Earth</i> is <i>full</i> - YouTube</b></a></span><span class="s23"><b> </b></span>Mar 1, 2012<span class="Apple-converted-space">  </span>Uploaded by TEDtalksDirector</p>
+<p class="p11">Have we used up all our resources? Have we filled up all the livable space on <i>Earth</i>? Paul <b>...</b></p>
+<p class="p9"><br></p>
+<p class="p9"><br></p>
+<p class="p25"><a href="http://www.cnn.com/2012/04/08/opinion/gilding-earth-limits/index.html"><b>The <i>Earth</i> is <i>full</i> - </b></a><a href="http://cnn.com/"><b>CNN.com</b></a><span class="s4"><b> </b></span><span class="s8">Apr 8, 2012</span></p>
+<p class="p11">Paul Gilding says the limits to the <i>earth's</i> resources will put a brake on economic growth, and we should get ready.</p>
+<p class="p39"><br></p>
+<p class="p25"><a href="http://tnation.t-nation.com/free_online_forum/world_news_war/ecofascism_and_the_neomalthusian_agenda"><b>Eco-<i>Fascism</i> and the Neo-<i>Malthusian</i> Agenda - T-Nation</b></a><span class="s4"><b> </b></span><span class="s8">Apr 21, 2012</span></p>
+<p class="p11">Off-topic discussions related to the world we live in | Writing for Forbes Magazine climate change alarmist Steve Zwick calls for skeptics of <b>...</b></p>
+<p class="p9"><br></p>
+<p class="p25"><a href="http://www.google.com/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=8&amp;ved=0CFcQFjAH&amp;url=http%3A%2F%2Fwww.oneworldchronicle.com%2F%3Fp%3D1209&amp;ei=4hqYUPfjMbS80QGu6oC4DQ&amp;usg=AFQjCNHtPy0oSGwdsbrvZWyVK8t91SRTfA&amp;sig2=_3wBbi_ZWAXS0waADoINgQ"><b>Church of <i>Malthus</i> – ” The Earth is Full” | OneWorldChronicle</b></a><span class="s4"><b> </b></span><span class="s8">Apr 16, 2012<span class="Apple-converted-space"> </span></span></p>
+<p class="p11">Church of <i>Malthus</i> evangelist, Paul Gilding in his “the Earth is Full” talk, tells us one million years of human progress has “finally” reached its <b>...</b></p>
+<p class="p9"><br></p>
+<p class="p25"><a href="http://www.bibliotecapleyades.net/mistic/religionsplanetearth43.htm"><b>The Church of <i>Malthus</i> - Haters of Humanity</b></a><span class="s4"><b> </b></span><span class="s8">Apr 14, 2012<span class="Apple-converted-space"> </span></span></p>
+<p class="p11">corporate-<i>fascists</i> its patriarchs, <b>...</b> Video: Church of <i>Malthus</i> evangelist, Paul Gilding in his "the Earth is Full" talk, tells us one million years of <b>...</b></p>
+<p class="p15"><br></p>
+<p class="p25"><a href="http://www.nowpublic.com/culture/human-infestation-earth"><b>The <i>human infestation of Earth</i> | NowPublic News Coverage</b></a><span class="s4"><b> </b></span><span class="s8">Apr 28, 2012<span class="Apple-converted-space"> </span></span></p>
+<p class="p11"><i>Human</i> beings appear to be a parasitical <i>infestation</i> on the planet <i>Earth</i>. At the same time, they are magical adorable creatures. So on one <b>...</b></p>
+<p class="p61"><br></p>
+<p class="p61"><br></p>
+<p class="p30"><br></p>
+<p class="p25"><a href="http://www.google.com/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=45&amp;ved=0CFUQFjAEOCg&amp;url=http%3A%2F%2Fwww.mercatornet.com%2Fsheila_liaugminas%2Fview%2F10665&amp;ei=kb3YUIHWCrO_0QH_t4GQCQ&amp;usg=AFQjCNEcgtg97rRurbZMxRhgJZ4Q4ZE-_g&amp;sig2=gwQpUcHQ7SpNGWixS56W9Q"><b><i>Overpopulation</i>, anti-humanism, and Cheng Guangcheng</b></a><span class="s4"><b> </b></span><span class="s8">May 7, 2012</span></p>
+<p class="p11"><i>Overpopulation</i>, anti-humanism, and Cheng Guangcheng <b>...</b> The human race is not, as later Malthus admirers John <i>Holdren</i> (currently <b>...</b></p>
+<p class="p62"><br></p>
+<p class="p25"><a href="http://www.larouchepub.com/pr/2012/120522_argentina_v_green.html"><b>Argentina To Take Lead against Green <i>Fascism</i></b></a><span class="s4"><b> </b></span><span class="s8">May 22, 2012</span></p>
+<p class="p11">against Green <i>Fascism</i> <b>...</b> and government officials discussed Argentina's anti-<i>Malthusian</i> position going into the Rio summit in late June.</p>
+<p class="p62"><br></p>
+<p class="p25"><a href="http://www.lifesitenews.com/news/michelle-duggar-were-not-anywhere-near-being-overpopulated1/"><b>Michelle Duggar: 'We're not anywhere near being <i>overpopulated</i> ...</b></a><span class="s4"><b> </b></span><span class="s8">Mar 30, 2012<span class="Apple-converted-space"> </span></span></p>
+<p class="p11">“The idea of <i>overpopulation</i> is not accurate because, really, the entire <b>...</b> The Obama administration's Science Czar, John <i>Holdren</i>, described <b>...</b></p>
+<p class="p9"><br></p>
+<p class="p25"><a href="http://distributistreview.com/mag/2012/05/eugenics-the-war-of-capitalism-and-socialism-against-humanity-part-1/"><b>Eugenics: The War of Capitalism and Socialism Against Humanity</b></a><span class="s4"><b> </b></span><span class="s8">May 22, 2012<span class="Apple-converted-space"> </span></span></p>
+<p class="p11">– <i>Hitler</i>, however, did not come up with this out of the blue, he was inspired, <b>...</b><span class="Apple-converted-space"> </span></p>
+<p class="p11"><i>Malthus</i> was a clergyman and a professor of history who wrote An <b>...</b></p>
+<p class="p9"><br></p>
+<p class="p25"><a href="http://www.larouchepub.com/other/2012/3918queen_science.html"><b>The British Queen's Science? <i>Fascist</i> Austerity &amp; Genocide</b></a><span class="s4"><b> </b></span><span class="s8">May 4, 2012<span class="Apple-converted-space"> </span></span></p>
+<p class="p11"><i>Fascist</i> Austerity &amp; Genocide <b>...</b> <i>Malthusian</i> depopulation agenda was at the Copenhagen Climate Change summit in December 2009, where it <b>...</b></p>
+<p class="p30"><br></p>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; color: #0000ee"><a href="https://stillfinditsohard.wordpress.com/2012/07/05/overpopulation-and-why-some-people-should-be-first-in-line-to-be-made-to-prevent-it/"><b>Overpopulation and why some people should be first in line ...</b></a><span class="s8"> Jul 5, 2012</span></h3>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times"><i>Overpopulation</i>, that is there being too many of a singular organism in a ... or <i>Pol Pot</i> deciding his people can either be slaves or soldiers until ...</h3>
+<p class="p30"><br></p>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times"><span class="s30"><a href="http://www.spectator.co.uk/2012/08/malthuss-children/"><b>Malthus's children<span class="Apple-converted-space"> </span></b></a></span><i> The Spectator A</i>ug 25, 2012<span class="Apple-converted-space"> </span></h3>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times">Two hundred years ago, the creepy Revd Thomas <i>Malthus</i> would take to his pulpit to rail against the copulating lower orders. Author of An ...</h3>
+<p class="p30"><br></p>
+<p class="p25"><a href="http://newsjunkiepost.com/2012/08/25/surviving-the-man-made-apocalypse-will-we-fight-for-water-and-food/"><b>The Apocalypse of <i>Overpopulation</i> and Climate Change: Fighting for ...</b></a><span class="s4"><b> </b></span><span class="s8">Aug 25, 2012<span class="Apple-converted-space"> </span></span></p>
+<p class="p11">The two main causes are purely man made in the form of <i>overpopulation</i> and climate change. As a specie we are heading for a cliff to be <b>...</b></p>
+<p class="p9"><br></p>
+<p class="p25"><a href="http://occupycorporatism.com/the-myth-of-overpopulation-force-mass-sterilizations-in-developing-nations/"><b>The Myth of <i>Overpopulation</i>: Force Mass Sterilizations in Developing ...</b></a><span class="s4"><b> </b></span><span class="s8">Oct 5, 2012</span></p>
+<p class="p11">Economists claim that <i>overpopulation</i> is causing poverty in underdeveloped nations. In the Philippines, there is an initiative to control the <b>...</b></p>
+<p class="p9"><br></p>
+<p class="p25"><a href="http://www.infowars.com/overpopulation-is-a-eugenics-agenda-lie/"><b><i>Overpopulation</i> Is a Eugenics Agenda Lie Alex Jones' Infowars ...</b></a><span class="s4"><b> </b></span><span class="s8">Nov 1, 2012</span></p>
+<p class="p11">Nearly every day, the mainstream media dispenses new articles reinforcing the idea that humans are infesting the earth, overpopulating it like <b>...</b></p>
+<p class="p9"><br></p>
+<p class="p25"><a href="http://www.google.com/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=31&amp;ved=0CB4QFjAAOB4&amp;url=http%3A%2F%2Fwww.freedomsphoenix.com%2FOpinion%2F118411-2012-09-09-malthus-was-right-sort-of.htm&amp;ei=TSGYUN3tFOXp0gGdiIHgAg&amp;usg=AFQjCNHTcf6zoWaZWLzpXWU1yAn2gaxgnw&amp;sig2=bk3iqpQ6y43CltGHoqbNog"><b><i>Malthus</i> was right...sort of</b></a><span class="s4"><b> </b></span><span class="s8">Sep 9, 2012</span></p>
+<p class="p11">Back in the early 1800s, Thomas <i>Malthus</i> predicted that the world's population <b>...</b> Luckily, <i>Malthus</i> turned out to be wrong, mostly because the <b>...</b></p>
+<p class="p9"><br></p>
+<p class="p25"><a href="http://www.checkfactspolitics.com/2012/12/05/overpopulation-or-depopulation/"><b><i>Overpopulation</i> or Depopulation - Check Facts Politics</b></a><span class="s4"><b> </b></span><span class="s8">Dec 5, 2012<span class="Apple-converted-space"> </span></span></p>
+<p class="p11"><i>Overpopulation</i> or Depopulation <b>...</b> John P. <i>Holdren</i> who is the current US director of the office of science and technology policy and the top <b>...</b></p>
+<p class="p9"><br></p>
+<p class="p25"><a href="http://www.lifenews.com/2012/11/28/united-states-faces-demographic-bomb-coming-underpopulation-problems/"><b>United States Faces <i>Demographic Bomb</i>, Coming Underpopulation ...</b></a><span class="s4"><b> </b></span><span class="s8">Nov 28, 2012<span class="Apple-converted-space"> </span></span></p>
+<p class="p11">In view of the many public efforts to increase access to contraception and sterilization, it is reasonable to suppose that we face a baby-boom <b>...</b></p>
+<p class="p15"><br></p>
+<p class="p49"><b>2013</b></p>
+<p class="p15"><br></p>
+<p class="p25"><a href="http://www.slate.com/articles/technology/future_tense/2013/01/world_population_may_actually_start_declining_not_exploding.html"><b>World population may actually start declining, not exploding. - Slate</b></a><span class="s2"><b> </b></span><span class="s8">Jan. 9 <i>2013</i><span class="Apple-converted-space"> </span></span></p>
+<p class="p11">The world's seemingly relentless march toward <i>overpopulation</i> achieved a notable milestone in <b>...</b> About That <i>Overpopulation</i> Problem <b>...</b></p>
+<p class="p9"><br></p>
+<p class="p25"><a href="http://www.brendanmyers.net/blog/2013/02/too-many-people/"><b>Too many people, or too much misanthropy? - Brendan Myers</b></a><span class="s8"><span class="Apple-converted-space">  </span>Feb 23, 2013</span></p>
+<p class="p11">But it's nothing but <i>misanthropy</i>. ... In other words, the problem of human <i>over-population</i> is directly related to our ability to, and even our ...</p>
+<p class="p30"><br></p>
+<p class="p25"><a href="http://www.firstthings.com/web-exclusives/2013/01/environmentalisms-deep-misanthropy"><b>Environmentalism's Deep Misanthropy - First Things</b></a><span class="s8"> Jan 25, 2013<span class="Apple-converted-space"> </span></span></p>
+<p class="p11">Deep <i>misanthropy</i> has helped renew the <i>Malthusian</i> drive to radically depopulate the planet of people as a remedy for environmental ills and ...</p>
+<p class="p30"><br></p>
+<h1 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 24.0px Times; color: #0000ee"><a href="http://www.breitbart.com/blog/2013/03/04/re-it-s-not-about-climate-change-it-s-about-population-control/"><b>Re: It's Not About Climate Change. It's About Population Control</b></a><span class="s4"><b> </b></span><span class="s8">Marcgh 4, 2013</span></h1>
+<h2 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 18.0px Times; color: #0000ee"><span class="s4"><b>In response to </b><a href="http://www.breitbart.com/InstaBlog/all/20130304T195001/It-s-Not-Climate-Change-It-s-Population-Control"><span class="s31"><b>It’s Not Climate Change. It’s Population Control</b></span></a><b>:</b></span></h2>
+<p class="p11">And some of them will come right out and tell you so.</p>
+<p class="p11">Speaking at a luncheon during the UN Climate Change Conference in Cancun, Mexico, December 5 2010, Ted Turner, a member of the <a href="http://therearenosunglasses.wordpress.com/2008/08/16/club-of-rome-the-first-global-revolution/"><span class="s32"><b>Club of Rome, </b></span></a>a group of highly influential <b> </b><a href="http://en.wikipedia.org/wiki/Neo-Malthusianism"><span class="s32"><b>Neo-Malthusian</b></span></a> global elitists,  <b>urged world leaders to institute a one-child policy to save the earth.</b></p>
+<p class="p24"><span class="s4">Tell me <a href="http://www.theglobeandmail.com/news/national/ted-turner-urges-global-one-child-policy-to-save-planet/article1825977/"><b>this man’s ideas aren’t just a little scary.</b></a></span></p>
+<p class="p30"><br></p>
+<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px Times; color: #0000ee"><span class="s5"><a href="https://www.youtube.com/watch?v=WT_CxJfFgh0"><b>Over Population is a Myth</b></a></span><span class="s4"><b> <span class="Apple-converted-space">  </span></b></span><span class="s33"><i>youtube</i></span><span class="s4"><b> </b></span><span class="s8">Apr 14, 2013 <span class="Apple-converted-space"> </span></span></h1>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; color: #0000ee"><a href="http://conservativenewager.com/2013/07/23/overpopulation-another-liberal-bout-of-baseless-hysteria/"><b>Overpopulation, another liberal bout of baseless hysteria ...</b></a><span class="s8"> Jul 23, 2013</span></h3>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times">So a friend shared with me this gruesomely titled article, “Top Democrat Pushing For “One Child” Population Control In America.” Now, the ...</h3>
+<p class="p30"><br></p>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; color: #0000ee"><a href="http://www.google.com/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=2&amp;ved=0CCcQFjAB&amp;url=http%3A%2F%2Fwww.depopulation.newworldorderuniversity.com%2FWordpress%2F%3Fp%3D136&amp;ei=qRedVdOnMdSmyATL4JnABg&amp;usg=AFQjCNHA_l12E3Udsu3GGp0GRc561OGP2w&amp;bvm=bv.96952980,d.aWw"><b>The World Depopulation Agenda » Quotes from the ...</b></a><span class="s8"> Jul 28, 2013<span class="Apple-converted-space"> </span></span></h3>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times"><span class="Apple-converted-space"> </span>“The present vast <i>overpopulation</i>, now far beyond the world carrying ... It is interesting to note that <i>Pol Pot's</i> genocidal plans were drawn up in ...</h3>
+<p class="p30"><br></p>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; color: #0000ee"><a href="http://www.nytimes.com/2013/09/14/opinion/overpopulation-is-not-the-problem.html"><b><i>Overpopulation</i> Is Not the Problem - </b></a><a href="http://nytimes.com/"><b>NYTimes.com</b></a><b><span class="Apple-converted-space"> </span></b><span class="s8"> September 13, <i>2013</i>.</span></h3>
+<p class="p11">By ERLE C. ELLIS. Published: BALTIMORE — MANY scientists believe that by transforming the earth's <b>...</b></p>
+<p class="p9"><br></p>
+<p class="p25"><a href="http://www.huffingtonpost.com/alon-tal/overpopulation-is-still-t_b_3990646.html"><b><i>Overpopulation</i> Is Still the Problem | Alon Tal - Huffington Post</b></a><span class="s2"><b> </b></span><span class="s8">September 27, <i>2013</i>.</span></p>
+<p class="p11"><i>Overpopulation</i> remains the leading driver of hunger, desertification, species depletion and a range of social maladies across <b>...</b></p>
+<p class="p9"><br></p>
+<p class="p32"><span class="s34"><a href="https://www.pop.org/content/debunking-myth-overpopulation"><b>Debunking the Myth of Overpopulation | PRI</b></a></span><span class="s4"> by AR Morse - ‎<a href="https://scholar.google.com/scholar?biw=1975&amp;bih=1197&amp;bav=on.2,or.&amp;um=1&amp;ie=UTF-8&amp;lr&amp;q=related:WxS28Zr5vf3L4M:scholar.google.com/"><span class="s35">Related articles</span></a> Sep 30, 2013</span></p>
+<p class="p22"><span class="Apple-converted-space"> </span>- We are contacted all the time by people asking for how they can refute the arguments of those who believe that the world is <i>overpopulated</i>.</p>
+<p class="p9"><br></p>
+<p class="p64"><span class="s32"><a href="http://www.marketwatch.com/story/climate-report-proves-humans-are-the-new-dinosaurs-2013-10-12"><b>World's top problem is </b><span class="s24"><b><i>overpopulation</i>, not climate - Paul B. Farrell ...</b></span></a></span><span class="s8">Oct. 14, <i>2013</i>,</span></p>
+<p class="p11">The U.N.'s 2,000 scientists know <i>overpopulation</i> is Earth's only real problem. Get it? Earth has only one real problem, there's the <b>...</b></p>
+<p class="p9"><br></p>
+<p class="p64"><span class="s32"><a href="http://www.newyorker.com/arts/critics/books/2013/10/21/131021crbo_books_kolbert"><b>Elizabeth Kolbert: The Clash </b><span class="s24"><b><i>over Population</i> Growth : The New Yorker</b></span></a></span><b> </b><span class="s8">Oct. 21, <i>2013</i>,</span></p>
+<p class="p11">Books. Head Count. Fertilizer, fertility, and the clashes <i>over population</i> growth. by Elizabeth Kolbert October 21, <i>2013</i>. Print; More <b>...</b></p>
+<p class="p9"><br></p>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; color: #0000ee"><a href="http://www.slate.com/articles/health_and_science/energy_around_the_world/2013/11/overpopulation_in_east_africa_thomas_malthus_stephen_hawking_and_dan_brown.html"><b>Is <i>Overpopulation</i> Really the Problem? - Slate</b></a><b> </b><span class="s8">Nov 15, 2013<span class="Apple-converted-space"> </span></span></h3>
+<p class="p11">A mother carries her baby on her back near the Jesuit-run Upendo program in Nairobi's Kangemi slum, on April 23, <i>2013</i>. With no sport utility <b>...</b></p>
+<p class="p9"><br></p>
+<p class="p9"><br></p>
+<p class="p9"><br></p>
+<p class="p49"><b>2014</b></p>
+<p class="p15"><br></p>
+<h2 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; color: #0000ee"><a href="http://wattsupwiththat.com/2014/01/05/overpopulation-the-fallacy-behind-the-fallacy-of-global-warming/"><b>Overpopulation: The Fallacy Behind The Fallacy Of Global</b></a><b> Warming </b><span class="s8">Jan 05, 2014</span></h2>
+<h2 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times">Guest essay by Dr. Tim Ball <b>Global Warming</b> was just one issue The Club of Rome (TCOR) targeted in its campaign to reduce <b>world population</b>. In 1993 …</h2>
+<p class="p11"><span class="s7"><a href="http://en.wikipedia.org/wiki/Alexander_King_%28scientist%29">Alexander King</a></span> with Bertrand Schneider wrote <i>The First Global Revolution </i>stating,</p>
+<p class="p11">“The common enemy of humanity is man. In searching for a new enemy to unite us, we came up with the idea that pollution, the threat of global warming, water shortages, famine and the like would fit the bill.<span class="Apple-converted-space"> </span></p>
+<p class="p11">All these dangers are caused by human intervention, and it is only through changed attitudes and behavior that they can be overcome. The real enemy then, is humanity itself.”</p>
+<h2 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; min-height: 14.0px"><br></h2>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; color: #0000ee"><a href="https://plus.google.com/115424620065763429160/posts/GLtRjEk2Xyb"><b>Pol Pot was pretty rad actually. He cared about over population</b></a><span class="s8"><span class="Apple-converted-space">    </span>Jan 7, 2014<span class="Apple-converted-space"> </span></span></h3>
+<p class="p9"><br></p>
+<h2 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 18.0px Times; color: #0000ee"><a href="https://answers.yahoo.com/question/index?qid=20140225214413AAw3GZC"><b>Did god consider overpopulation when he said to "go forth ...</b></a><span class="s8">Feb 26, 2014</span></h2>
+<p class="p11"><span class="Apple-converted-space"> </span>one of the things he said in Genesis was "<b>go forth and multiply</b>" which meant to have as much offspri...</p>
+<p class="p9"><br></p>
+<p class="p34"><a href="http://beforeitsnews.com/opinion/2014/03/americas-greatest-tragedy-of-the-21st-century-human-overpopulation-2448476.html"><b>America’s greatest tragedy of the 21st century: human ...</b></a><span class="s13"><b> </b></span><span class="s8"><b><i>beforeitsnews.com</i></b><i> › </i><a href="http://beforeitsnews.com/opinion"><i>Opinion</i></a></span><span class="s36"><i> </i></span><span class="s8">Mar 18, 2014</span></p>
+<p class="p11"> · Important books to read and educate yourself: Life on the Brink: Environmentalists Confront <b>Overpopulation</b>, edited by Philip Cafaro and Eileen Crist, …</p>
+<p class="p9"><br></p>
+<p class="p65"><span class="s37"><a href="http://www.rense.com/general96/club.html"><b>The Club Of Rome</b></a></span><span class="s38"><span class="Apple-converted-space">  </span></span>By Jim Kiran<span class="Apple-converted-space">  </span>3-22-14</p>
+<h2 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 18.0px Times; color: #0000ee"><a href="http://www.commdiginews.com/politics-2/overpopulation-is-killing-the-american-dream-15562/"><b>Overpopulation is killing the American Dream | Communities ...</b></a><b> </b><span class="s8">April 21, <b>2014</b><span class="Apple-converted-space"> </span></span></h2>
+<p class="p11">OCALA, Fla.,The overwhelming majority of Americans believe that our country is headed in the wrong direction. According to Rasmussen Reports, 61 ...</p>
+<p class="p9"><br></p>
+<h2 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 18.0px Times; color: #0000ee"><a href="http://beforeitsnews.com/opinion/2014/05/houston-planet-earths-got-a-big-problem-human-overpopulation-2449056.html"><b>Houston, Planet Earth's Got A Big Problem: Human Overpopulation<span class="Apple-converted-space"> </span></b></a><b> </b><span class="s8"><b><i>beforeitsnews.com</i></b><i> › </i><a href="http://beforeitsnews.com/opinion"><span class="s13"><i>Opinion</i></span></a></span><span class="s36"><i> </i></span><span class="s8">May 05, 2014 </span></h2>
+<p class="p11">· THE BIG FIVE FACTORS OF DENIAL OF CLIMATE CHANGE, <b>HUMAN</b> <b>OVERPOPULATION</b> AND ACCELERATING CONSEQUENCES . ... <b>2014</b>, but it didn’t …</p>
+<p class="p9"><br></p>
+<h2 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 18.0px Times; color: #0000ee"><a href="http://www.ecointernet.org/2014/05/17/on-overpopulation-and-ecosystem-collapse/"><b>On Overpopulation and Ecosystem Collapse | EcoInternet</b></a><b> </b><span class="s8">by <a href="http://www.ecointernet.org/author/dr-glen-barry/"><span class="s10">Glen Barry</span></a><span class="Apple-converted-space">  </span>May 17, 2014</span></h2>
+<p class="p11">Earth's biosphere is collapsing and dying as human industrial growth overwhelms ecosystems and abruptly changes climate. Equity, education, condoms, and lowe</p>
+<p class="p9"><br></p>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; color: #0000ee"><a href="http://www.thenewamerican.com/usnews/health-care/item/19345-obama-s-ebola-czar-thinks-overpopulation-is-top-challenge"><b>Obama's “Ebola Czar” Thinks Overpopulation Is Top ...</b></a><span class="s8"> Oct 21, 2014<span class="Apple-converted-space"> </span></span></h3>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times"><i>Obama's</i> “Ebola Czar” Thinks <i>Overpopulation</i> Is Top Challenge. In addition to having essentially no medical qualifications for the newly ...</h3>
+<p class="p9"><br></p>
+<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 19.0px Times; color: #0000ee"><span class="s5"><a href="https://www.youtube.com/watch?v=Uu12KCt3o1I"><b>Overpopulation - The Future of Planet Earth - Documentary<span class="Apple-converted-space"> </span></b></a></span><span class="s16"><b> </b></span><span class="s39"><i>youtube</i></span><span class="s16"><b> </b></span><span class="s8">Nov 25, 2014</span></h1>
+<p class="p9"><br></p>
+<p class="p9"><br></p>
+<p class="p9"><br></p>
+<p class="p9"><br></p>
+<p class="p49"><b>2015</b></p>
+<p class="p15"><br></p>
+<h2 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 18.0px Times; color: #0000ee"><a href="http://journal-neo.org/2015/01/01/world-overpopulation-hold-on-buddy/"><b>World Overpopulation? Hold On, Buddy! | New Eastern …</b></a><b><span class="Apple-converted-space"> </span></b><span class="s13"><b> </b></span><span class="s8">Jan 1, 2015</span></h2>
+<p class="p11">Electronic analytical journal New Eastern Outlook 2010-<b>2015</b> Republishing of the articles is welcomed with reference to NEO. The views of the authors do not ...</p>
+<p class="p9"><br></p>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 17.0px Times; color: #0000ee"><a href="http://news.yahoo.com/pope-rows-back-rabbits-comments-praises-large-families-110433728.html"><b>Pope rows back from 'rabbits' comments, praises large families </b></a><span class="s40">J</span><span class="s8">an 21, 2015</span></h3>
+<p class="p11">Pope Francis on Wednesday described large families as a "gift from God", just days after he said Catholics did not need to "breed like rabbits".<span class="Apple-converted-space"> </span></p>
+<p class="p11">In an apparent attempt to put the controversial comments he made on his way back from a visit to the Philippines into context, the Argentinian argued that…</p>
+<p class="p9"><br></p>
+<h5 style="margin: 0.0px 0.0px 16.6px 0.0px; font: 21.0px Times; color: #0000ee"><a href="http://www.chicagotribune.com/news/opinion/letters/ct-overpopulation-shadows-the-popes-encyclical-20150624-story.html"><b>Overpopulation shadows the pope's encyclical</b></a><span class="s4"><b><span class="Apple-converted-space">  </span></b></span><span class="s8"><i>Chicago Tribune · </i>Jan 24, 2015</span></h5>
+<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 12.0px Times; color: #0000ee"><span class="s41"><a href="http://peakoilbarrel.com/the-problem-of-the-human-population/"><b>The Problem of the Human Population</b></a></span><span class="s16"><b> </b></span><span class="s4">by <a href="http://peakoilbarrel.com/author/darwinianonegmail-com/"><span class="s6">Ron Patterson</span></a> Posted on <a href="http://peakoilbarrel.com/the-problem-of-the-human-population/">03/26/2015</a></span></h1>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; color: #0000ee"><a href="http://www.lifenews.com/2015/06/03/the-new-york-times-finally-throws-in-the-towel-on-the-myth-of-overpopulation/"><b>"Overpopulation" Myth - LifeNews.com</b></a><b> </b><span class="s8">Jun 3, <i>2015</i> | 1</span></h3>
+<p class="p11">Steven Mosher and Anne Roback Morse<span class="Apple-converted-space">  </span>Washington, DC. 8. 0 ... with the specter of <i>overpopulation</i>—and the population apocalypse that ...</p>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; color: #0000ee"><a href="http://www.nytimes.com/roomfordebate/2015/06/08/is-overpopulation-a-legitimate-threat-to-humanity-and-the-planet"><b>Is Overpopulation a Legitimate Threat to Humanity and the<span class="Apple-converted-space"> </span></b><span class="s42"><b> </b></span></a><span class="s4"><b>Planet?</b></span><span class="s16"><b> </b></span><span class="s8"><span class="Apple-converted-space">  </span>The New York Times June 8, <i>2015</i> .</span></h3>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times">.. examines how the apocalyptic predictions about <i>overpopulation</i> made by the biologist Paul Ehrlich, ... Is the threat of <i>overpopulation</i> overblown?</h3>
+<p class="p24"><span class="s4">‎<a href="http://www.nytimes.com/roomfordebate/2015/06/08/is-overpopulation-a-legitimate-threat-to-humanity-and-the-planet/overconsumption-is-a-grave-threat-to-humanity"><span class="s6">Overconsumption Is a Grave ...</span></a> - ‎<a href="http://www.nytimes.com/roomfordebate/2015/06/08/is-overpopulation-a-legitimate-threat-to-humanity-and-the-planet/paul-ehrlichs-population-bomb-argument-was-right"><span class="s6">Ehrlich Was Right</span></a> - ‎<a href="http://www.nytimes.com/roomfordebate/2015/06/08/is-overpopulation-a-legitimate-threat-to-humanity-and-the-planet/its-not-a-numbers-problem"><span class="s6">It's Not a Numbers Problem</span></a></span></p>
+<p class="p9"><br></p>
+<p class="p34"><a href="http://www.lifenews.com/2015/07/01/population-controllers-predicted-overpopulation-would-destroy-the-world-they-were-wrong/"><b>Population Controllers Predicted Overpopulation Would Destroy the World, They Were Wrong</b></a><span class="s4"><b><span class="Apple-converted-space"> </span></b></span><span class="s43"><b> </b></span><span class="s8">July 1, 2015</span></p>
+<p class="p9"><br></p>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 19.0px Times; color: #0000ee"><a href="http://popular-archaeology.com/issue/summer-2015/article/classic-ancient-maya-collapse-not-caused-by-overpopulation-and-deforestation-say-researchers"><b>Classic ancient Maya “collapse” - Popular Archaeology</b></a><span class="s44"><span class="Apple-converted-space"> </span></span><span class="s8"> John Stonestreet   <i>Life News </i>Jul 16, 2015</span></h3>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times">Classic ancient Maya “collapse” not caused by <i>overpopulation</i> and ... Cultivation of the Tropical Woodlands, Left Coast Press, June <i>2015</i>.</h3>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; min-height: 14.0px"><br></h3>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times"><span class="s30"><a href="http://permaculturenews.org/2015/08/14/permaculture-and-the-myth-of-overpopulation/"><b>Permaculture and the Myth of Overpopulation </b></a><b><span class="Apple-converted-space"> </span></b></span> Permaculture Research Institute August 14, <i>2015</i><span class="Apple-converted-space"> </span></h3>
+<p class="p11">Permaculture and the Myth of <i>Overpopulation</i>. ... and the Myth of <i>Overpopulation</i>.by Lisa DePiano &amp; filed under Community, General. 8+1</p>
+<p class="p9"><br></p>
+<p class="p25"><a href="http://astronaut.com/more-people-more-problems-overpopulation-and-the-importance-of-space-research/"><b>More People, More Problems: Overpopulation and the ...</b></a><span class="s8"> Dec 20, 2015<span class="Apple-converted-space"> </span></span></p>
+<p class="p11">Finding a planet that can provide resources necessary for survival might be the only solution to <i>overpopulation</i>. A planet that people could ...</p>
+<p class="p9"><br></p>
+<p class="p9"><br></p>
+<p class="p49"><b>2016</b></p>
+<p class="p15"><br></p>
+<p class="p25"><a href="http://www.theguardian.com/global-development-professionals-network/2016/jan/11/europe-africa-overpopulated-global-population"><b>Isn't it Europe that is overpopulated, rather than Africa ...</b></a><span class="s8"><i> The Guardian </i>Jan 11, 2016 -</span></p>
+<p class="p11">Last modified on Friday 15 ... Africa is crowded with western <i>overpopulation</i> experts giving money to ...</p>
+<p class="p9"><br></p>
+<p class="p25"><a href="http://www.theguardian.com/global-development-professionals-network/2016/jan/11/population-growth-in-africa-grasping-the-scale-of-the-challenge"><b>Population growth in Africa: grasping the scale of the ...</b></a><span class="s8"> <i>The Guardian </i>Jan 11, 2016</span></p>
+<p class="p11">Isn't it Europe that is <i>overpopulated</i>, rather than Africa? ... Monday 11 January <i>2016</i> 06.05 EST Last modified on Monday 11 January <i>2016</i> ...</p>
+<p class="p9"><br></p>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; color: #0000ee"><a href="http://www.theguardian.com/lifeandstyle/2016/jan/26/overpopulation-sustainability-environment-eco-friendly-initiatives"><b>Are eco-friendly initiatives pointless unless we tackle ...</b></a><span class="s8"><i> The Guardian</i> Jan 26, 2016<span class="Apple-converted-space"> </span></span></h3>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times">Last modified on Tuesday 26 January <i>2016</i> 11.27 EST. Share on ... Is <i>overpopulation</i> really the problem?</h3>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; min-height: 14.0px"><br></h3>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; color: #0000ee"><a href="http://nypost.com/2016/02/15/overpopulation-could-force-us-to-live-underwater-researchers-say/"><b>Overpopulation could force us to live underwater: researchers</b></a><span class="s8"> <i>New York Post <span class="Apple-converted-space"> </span></i> February 15, <i>2016</i><span class="Apple-converted-space"> </span></span></h3>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times">Scientists believe that earth's <i>overpopulation</i> will someday force mankind to live in underwater “bubble cities.” The notion of mass ...</h3>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; min-height: 14.0px"><br></h3>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; min-height: 14.0px"><br></h3>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; min-height: 14.0px"><br></h3>
+<p class="p49"><b>2017</b></p>
+<p class="p15"><br></p>
+<p class="p67"><span class="s37"><a href="https://www.thoughtco.com/funny-environment-cartoons-4122794"><b>Environment Cartoons </b></a></span>by <a href="https://www.thoughtco.com/daniel-kurtzman-2733371"><span class="s10">Daniel Kurtzman</span></a> Updated January 13, 2017</p>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; color: #0000ee"><a href="http://truththeory.com/2017/01/15/4-overpopulation-myths-will-make-rethink-current-power-structure/"><b>4 Overpopulation Myths That Will Make You Rethink The Current ...</b></a><span class="s8"> Jan 15, 2017</span></h3>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times"><span class="Apple-converted-space"> </span>- 4 <i>Overpopulation</i> Myths That Will Make You Rethink The Current Power Structure. Posted on <i>2017</i>/01/15 ... Are We Are <i>Overpopulated</i>?</h3>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; min-height: 14.0px"><br></h3>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; color: #0000ee"><a href="http://www.dw.com/en/lets-talk-about-overpopulation/a-37481009"><b>Let</b><span class="s45">′</span><b>s talk about overpopulation... | eco@africa | DW |<span class="Apple-converted-space"> </span></b></a><span class="s8"> Feb 10, 2017</span></h3>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times"><span class="Apple-converted-space"> </span>- Let's talk about <i>overpopulation</i>... <i>Overpopulation</i> is seen as one of the biggest environmental threats our planet faces. ... On the whole, population growth is happening fastest in poorer countries with less access to education and healthcare.</h3>
+<p class="p9"><br></p>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; color: #0000ee"><a href="http://dailysignal.com/2017/05/31/overpopulation-fears-hoax-heres-higher-populations-actually-good-thing/"><b>'Overpopulation' Fears Are a Hoax. Here's Why Higher Populations ...</b></a><span class="s8"> May 31, <i>2017</i> /.</span></h3>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times"><span class="Apple-converted-space"> </span>Twitter · Facebook · Google+ ..</h3>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; min-height: 14.0px"><br></h3>
+<p class="p49"><b>2018</b></p>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; min-height: 14.0px"><br></h3>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; color: #0000ee"><a href="https://the1a.org/shows/2018-01-03/more-people-more-problems-growing-population"><b>More People, More Problems? - 1A</b></a><span class="s8"><span class="Apple-converted-space">  </span>Jan 3, 2018<span class="Apple-converted-space"> </span></span></h3>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times"><span class="Apple-converted-space"> </span>The warning, as such things tend to be, was dire. “At this late date nothing can prevent a substantial increase in the world death rate…” Stanford University Professor Paul R. Ehrlich said the planet was getting too crowded. Lives could be saved by stretching and more evenly distributing food, but it would ...</h3>
+<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 12.0px Times; min-height: 14.0px"><br></h1>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; color: #0000ee"><a href="https://reason.com/blog/2018/01/18/negative-population-growth-scaremongers"><b>High School Students Are Very Worried About Overpopulation. They ...</b></a><span class="s8"> Jan 18, 2018</span></h3>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times"><span class="Apple-converted-space"> </span>- Founded in 1972, during the heyday of <i>overpopulation</i> hysteria, NPG's goal is "to slow, halt, and eventually reverse U.S. population growth—eventually stabilizing at a size that is sustainable over the long term." America's "optimal population," it adds, is "approximately 150–200 million people (our nation's ...</h3>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; color: #0000ee"><a href="https://www.gatesnotes.com/2018-Annual-Letter"><b>10 tough questions we get asked | Bill Gates - Gates Notes</b></a><span class="s8"> Feb 13, 2018</span></h3>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times"><span class="Apple-converted-space"> </span>- Bill and Melinda Gates share their <i>2018</i> Annual Letter. ... Does saving kids' lives lead to <i>overpopulation</i>? Image. Melinda: We asked ourselves the same question at first. Hans Rosling, the brilliant and inspiring public health advocate who died last year, was great at answering it. I wrote about the issue at ...</h3>
+<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px Times; min-height: 29.0px"><br></h1>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; min-height: 14.0px"><br></h3>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; min-height: 14.0px"><br></h3>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; min-height: 14.0px"><br></h3>
+<p class="p9"><br></p>
+<p class="p9"><br></p>
+</body>
+</html>

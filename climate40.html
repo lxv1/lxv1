@@ -1,0 +1,801 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="1265.21">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 24.0px Times; color: #0000ee}
+    p.p3 {margin: 0.0px 0.0px 0.0px 0.0px; font: 19.0px Times; color: #0000ee}
+    p.p4 {margin: 0.0px 0.0px 0.0px 0.0px; font: 16.0px Times; color: #0f3bee}
+    p.p5 {margin: 0.0px 0.0px 0.0px 0.0px; font: 18.0px Times; color: #0000ee}
+    p.p6 {margin: 0.0px 0.0px 0.0px 0.0px; font: 17.0px Times; color: #0000ee}
+    p.p7 {margin: 0.0px 0.0px 0.0px 0.0px; font: 18.0px Times; color: #0f3bee; min-height: 23.0px}
+    p.p8 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 14.0px Helvetica; color: #0000ee}
+    p.p9 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; color: #0000ee}
+    p.p10 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px Helvetica; color: #0000ee}
+    p.p11 {margin: 0.0px 0.0px 16.1px 0.0px; font: 14.0px Times; color: #0000ee}
+    p.p12 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; color: #0000ee; min-height: 14.0px}
+    p.p13 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; color: #0f3bee; min-height: 14.0px}
+    p.p14 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px Helvetica; min-height: 16.0px}
+    p.p15 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 12.0px Helvetica; color: #0f3bee; min-height: 14.0px}
+    p.p16 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Helvetica; color: #0f3bee; min-height: 17.0px}
+    p.p17 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 21.0px Helvetica}
+    p.p18 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 21.0px Helvetica; min-height: 25.0px}
+    p.p19 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; color: #0000ee}
+    p.p20 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times}
+    p.p21 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; color: #0000ee}
+    p.p22 {margin: 0.0px 0.0px 14.0px 0.0px; font: 14.0px Times; color: #0000ee; min-height: 18.0px}
+    p.p23 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; min-height: 14.0px}
+    p.p24 {margin: 0.0px 0.0px 0.0px 0.0px; font: 24.0px Times; color: #0000ee}
+    p.p25 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 14.0px Helvetica; color: #0f3bee; min-height: 17.0px}
+    p.p26 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 18.0px Times}
+    p.p28 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; min-height: 18.0px}
+    p.p29 {margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px Times; color: #0000ee}
+    p.p31 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 14.0px Times; min-height: 18.0px}
+    p.p32 {margin: 0.0px 0.0px 0.0px 0.0px; font: 18.0px Times}
+    p.p33 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 18.0px Times; min-height: 23.0px}
+    p.p34 {margin: 0.0px 0.0px 0.0px 0.0px; font: 21.0px Times; color: #0000ee}
+    p.p37 {margin: 0.0px 0.0px 0.0px 0.0px; font: 24.0px Times; color: #0000ee; min-height: 29.0px}
+    p.p38 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px Helvetica}
+    p.p39 {margin: 0.0px 0.0px 0.0px 0.0px; font: 24.0px Arial; color: #0000ee}
+    p.p40 {margin: 0.0px 0.0px 0.0px 0.0px; font: 20.0px Times; color: #0000ee}
+    p.p41 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; color: #0000ee; min-height: 14.0px}
+    p.p42 {margin: 0.0px 0.0px 16.0px 0.0px; font: 24.0px Times; color: #0000ee}
+    p.p43 {margin: 0.0px 0.0px 0.0px 0.0px; font: 24.0px Times; min-height: 29.0px}
+    p.p44 {margin: 0.0px 0.0px 0.0px 0.0px; font: 22.0px Times; color: #0000ee}
+    p.p47 {margin: 0.0px 0.0px 0.0px 0.0px; font: 24.0px Helvetica; color: #0000ee}
+    p.p48 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
+    p.p52 {margin: 0.0px 0.0px 0.0px 0.0px; font: 23.0px Times; color: #0000ee}
+    p.p53 {margin: 0.0px 0.0px 14.9px 0.0px; font: 18.0px Times; color: #0000ee}
+    p.p54 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; color: #0f3bee; min-height: 14.0px}
+    p.p55 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; color: #0000ee; min-height: 18.0px}
+    p.p58 {margin: 0.0px 0.0px 0.0px 0.0px; font: 22.0px Times; color: #0000ee; min-height: 28.0px}
+    p.p59 {margin: 0.0px 0.0px 0.0px 0.0px; font: 15.0px Times; min-height: 18.0px}
+    p.p61 {margin: 0.0px 0.0px 16.0px 0.0px; font: 12.0px Times; min-height: 14.0px}
+    p.p62 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 24.0px Times; color: #0000ee; min-height: 29.0px}
+    p.p65 {margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px Helvetica; color: #0000ee}
+    p.p67 {margin: 0.0px 0.0px 0.0px 0.0px; font: 18.0px Times; min-height: 23.0px}
+    p.p68 {margin: 0.0px 0.0px 0.0px 0.0px; font: 19.0px Times; min-height: 23.0px}
+    p.p69 {margin: 0.0px 0.0px 16.1px 0.0px; font: 16.0px Times; color: #0000ee}
+    p.p70 {margin: 0.0px 0.0px 14.0px 0.0px; font: 16.0px Times; color: #0000ee}
+    p.p71 {margin: 0.0px 0.0px 0.0px 0.0px; font: 20.0px Arial; color: #0000ee}
+    p.p72 {margin: 0.0px 0.0px 0.0px 0.0px; font: 20.0px Arial; min-height: 23.0px}
+    p.p74 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 12.0px Times; min-height: 14.0px}
+    p.p75 {margin: 0.0px 0.0px 16.1px 0.0px; font: 21.0px Helvetica; color: #0000ee}
+    p.p76 {margin: 0.0px 0.0px 0.0px 0.0px; font: 21.0px Helvetica; color: #0000ee; min-height: 25.0px}
+    p.p80 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px Arial; color: #323333; min-height: 15.0px}
+    p.p82 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 13.0px Arial; color: #323333; min-height: 15.0px}
+    p.p83 {margin: 0.0px 0.0px 0.0px 0.0px; font: 20.0px Arial; color: #0000ee; min-height: 23.0px}
+    p.p84 {margin: 0.0px 0.0px 12.0px 0.0px; font: 12.0px Times; min-height: 14.0px}
+    span.s1 {font: 19.0px Times; color: #0000ee}
+    span.s2 {font: 19.0px Times}
+    span.s3 {font: 21.0px Times; color: #0000ee}
+    span.s4 {color: #0f3bee}
+    span.s5 {color: #0000ee}
+    span.s6 {text-decoration: underline}
+    span.s7 {font: 12.0px Times; color: #000000}
+    span.s8 {color: #000000}
+    span.s9 {font: 12.0px Times; text-decoration: underline}
+    span.s10 {text-decoration: underline ; color: #0000ee}
+    span.s11 {direction: ltr; unicode-bidi: embed}
+    span.s12 {font: 12.0px Times}
+    span.s13 {font: 14.0px Times; color: #000000}
+    span.s14 {font: 24.0px Times}
+    span.s15 {font: 24.0px Times; color: #000000; direction: ltr; unicode-bidi: embed}
+    span.s16 {font: 24.0px Times; color: #000000}
+    span.s17 {font: 13.0px Times; color: #000000}
+    span.s18 {font: 13.0px Arial; color: #101010}
+    span.s19 {font: 19.0px Times; color: #000000}
+    span.s20 {font: 20.0px Times}
+    span.s21 {text-decoration: underline ; color: #0000ee; direction: ltr; unicode-bidi: embed}
+    span.s22 {font: 12.0px Times; color: #042eee}
+    span.s23 {font: 12.0px 'Lucida Grande'}
+    span.s24 {font: 17.0px Times; color: #000000}
+    span.s25 {font: 12.0px Helvetica; color: #000000}
+    span.s26 {color: #042eee}
+    span.s27 {font: 24.0px Times; text-decoration: underline ; color: #042eee}
+    span.s28 {font: 12.0px Times; text-decoration: underline ; color: #042eee}
+    span.s29 {font: 19.0px Times; color: #0000ee; direction: ltr; unicode-bidi: embed}
+    span.s30 {font: 12.0px Monaco; color: #000000}
+    span.s31 {font: 15.0px Times; color: #000000}
+    span.s32 {font: 9.0px Times; color: #000000}
+    span.s33 {font: 18.0px Arial; color: #232323}
+    span.s34 {font: 18.0px Times; text-decoration: underline}
+    span.s35 {font: 15.0px Times}
+    span.s36 {color: #000000; direction: ltr; unicode-bidi: embed}
+    span.s37 {font: 18.0px Times; color: #000000; direction: ltr; unicode-bidi: embed}
+    span.s38 {font: 14.0px Times; color: #0000ee}
+    span.s39 {font: 14.0px Times}
+    span.s40 {font: 18.0px Times}
+    span.s41 {text-decoration: underline ; direction: ltr; unicode-bidi: embed}
+    span.s42 {text-decoration: underline ; color: #042eee; direction: ltr; unicode-bidi: embed}
+    span.s43 {font: 12.0px Helvetica; color: #000000; direction: ltr; unicode-bidi: embed}
+    span.s44 {font: 18.0px Times; color: #000000}
+    span.s45 {font: 18.0px Times; color: #042eee; direction: ltr; unicode-bidi: embed}
+    span.s46 {font: 24.0px Times; color: #0000ee; direction: ltr; unicode-bidi: embed}
+    span.s47 {font: 24.0px Times; direction: ltr; unicode-bidi: embed}
+    span.s48 {font: 12.0px Helvetica; text-decoration: underline}
+    span.s49 {color: #004276}
+    span.s50 {font: 16.0px Times; direction: ltr; unicode-bidi: embed}
+    span.s51 {font: 20.0px Arial}
+    span.s52 {font: 19.0px Times; text-decoration: underline}
+    span.s53 {font: 24.0px Helvetica; color: #000000}
+    span.s54 {font: 15.0px Helvetica; color: #000000}
+    span.s55 {font: 22.0px Times}
+    span.s56 {font: 22.0px Times; color: #000000}
+    span.s57 {font: 12.0px Helvetica}
+    span.s58 {font: 12.0px Helvetica; text-decoration: underline ; color: #042eee}
+    span.s59 {text-decoration: underline ; color: #042eee}
+    span.s60 {font: 12.0px Helvetica; color: #4787ff}
+    span.s61 {font: 12.0px Times; direction: ltr; unicode-bidi: embed}
+    span.s62 {font: 22.0px Times; color: #0000ee}
+    span.s63 {font: 24.0px Times; color: #0000ee}
+    span.s64 {font: 15.0px Arial; color: #000000}
+    span.s65 {font: 17.0px Times}
+    span.s66 {font: 13.0px Arial; color: #323333}
+    span.s67 {font: 30.0px Times; color: #000000}
+    td.td1 {width: 1.0px}
+    td.td2 {width: 311.0px}
+  </style>
+</head>
+<body>
+<p class="p1"><br></p>
+<p class="p2"><a href="http://www.math.psu.edu/vstein/climate.html"><b>Climate</b></a></p>
+<p class="p3"><a href="http://www.math.psu.edu/vstein/climate1.html"><b>1. Old History</b></a></p>
+<p class="p4"><span class="s1"><a href="http://www.math.psu.edu/vstein/climate2.webarchive"><b>2. Plots</b></a></span><span class="s2"><b> </b></span><b>webarchive; </b><a href="http://www.math.psu.edu/vstein/climate2.pdf"><span class="s3"><b>pdf</b></span></a></p>
+<p class="p3"><a href="http://www.math.psu.edu/vstein/climate3.html"><b>3. 70's: Global cooling -- Ice Age Coming</b></a></p>
+<p class="p3"><a href="http://www.math.psu.edu/vstein/climate4.html"><b>4. Wikipedia on climate</b></a></p>
+<p class="p3"><a href="http://www.math.psu.edu/vstein/climate5.html"><b>5. 2000's : Climate Change</b></a></p>
+<p class="p3"><a href="http://www.math.psu.edu/vstein/climate6.html"><b>6. USA government on climate</b></a></p>
+<p class="p3"><a href="http://www.math.psu.edu/vstein/climate7.html"><b>7. Other countries on climate</b></a></p>
+<p class="p3"><a href="http://www.math.psu.edu/vstein/climate8.html"><b>8. Math Reviews on climate</b></a></p>
+<p class="p3"><a href="http://www.math.psu.edu/vstein/climate9.html"><b>9. News 2007-2009</b></a></p>
+<p class="p3"><a href="http://www.math.psu.edu/vstein/climate10.html"><b>10. 2010</b></a></p>
+<p class="p3"><a href="http://www.math.psu.edu/vstein/climate11.html"><b>11. 2011</b></a></p>
+<p class="p5"><a href="http://www.math.psu.edu/vstein/climate12.html"><b>12. 2012</b></a></p>
+<p class="p5"><a href="http://www.math.psu.edu/vstein/climate13.html"><b>13. 2013</b></a></p>
+<p class="p5"><a href="http://www.math.psu.edu/vstein/climate14.html"><b>14. 2014</b></a></p>
+<p class="p5"><a href="http://www.math.psu.edu/vstein/climate15.html"><b>15. 2015</b></a></p>
+<p class="p5"><a href="http://www.math.psu.edu/vstein/climate16.html"><b>16. 2016</b></a></p>
+<p class="p6"><a href="http://www.math.psu.edu/vstein/climate17.html"><b>17. 2017</b></a></p>
+<p class="p6"><a href="http://www.math.psu.edu/vstein/climate18.html"><b>18. 2018</b></a></p>
+<p class="p7"><br></p>
+<p class="p8"><a href="http://www.math.psu.edu/vstein/climate20.html"><b>20. Related topics</b></a></p>
+<p class="p9"><a href="http://www.math.psu.edu/vstein/climate21.html"><b>21. Overpopulation</b></a></p>
+<p class="p9"><a href="http://www.math.psu.edu/vstein/climate22.html"><b>22. Sea level</b></a></p>
+<p class="p9"><a href="http://www.math.psu.edu/vstein/climate23.html"><b>23. Ice</b></a></p>
+<p class="p9"><a href="http://www.math.psu.edu/vstein/climate24.html"><b>24. PSU</b></a></p>
+<p class="p9"><a href="http://www.math.psu.edu/vstein/climate25.html"><b>25. Climate in Russian</b></a></p>
+<p class="p9"><a href="http://www.math.psu.edu/vstein/climate26.html"><b>26,<span class="Apple-converted-space">  </span>CO2</b></a></p>
+<p class="p9"><a href="http://www.math.psu.edu/vstein/climate27.html"><b>27. Energy</b></a></p>
+<p class="p9"><a href="http://www.math.psu.edu/vstein/climate28.html"><b>28. Publications</b></a></p>
+<p class="p9"><a href="http://www.math.psu.edu/vstein/climate29.html"><b>29. Food<span class="Apple-converted-space"> </span></b></a></p>
+<p class="p9"><a href="http://www.math.psu.edu/vstein/climate30.html"><b>30. Ozone</b></a></p>
+<p class="p9"><a href="http://www.math.psu.edu/vstein/climate31.webarchive"><b>31. Cartoons and magazine covers</b></a><span class="s4"><b> webarchive; </b><a href="http://www.math.psu.edu/vstein/climate31.pdf"><span class="s5"><b>pdf</b></span></a></span></p>
+<p class="p9"><a href="http://www.math.psu.edu/vstein/climate32.html"><b>32. Life</b></a></p>
+<p class="p9"><a href="http://www.math.psu.edu/vstein/climate33.html"><b>33. Acid rain</b></a></p>
+<p class="p9"><a href="http://www.math.psu.edu/vstein/climate34.html"><b>34. Environment</b></a></p>
+<p class="p9"><a href="http://www.math.psu.edu/vstein/climate35.html"><b>35. DDT</b></a></p>
+<p class="p9"><a href="http://www.math.psu.edu/vstein/climate36.html"><b>36. Nuclear winter</b></a></p>
+<p class="p9"><a href="http://www.math.psu.edu/vstein/climate37.html"><b>37. Polar inversion</b></a></p>
+<p class="p9"><a href="http://www.math.psu.edu/vstein/climate38.html"><b>38. Warming in solar system</b></a></p>
+<p class="p10"><span class="s6"><a href="http://www.math.psu.edu/vstein/climate39.html">39. NASA Global Land-Ocean Temperature</a></span></p>
+<p class="p10"><a href="http://www.math.psu.edu/vstein/climate40.html"><b>40. Films and videos</b></a></p>
+<p class="p9"><a href="http://www.math.psu.edu/vstein/climate41.html"><b>41. Cosmic rays</b></a></p>
+<p class="p9"><a href="http://www.math.psu.edu/vstein/climate42.html"><b>42. Pollution</b></a></p>
+<p class="p9"><a href="http://www.math.psu.edu/vstein/climate43.html"><b>43. Wind</b></a></p>
+<p class="p9"><a href="http://www.math.psu.edu/vstein/climate44.html"><b>44. Global dimming</b></a></p>
+<p class="p9"><a href="http://www.math.psu.edu/vstein/climate45.html"><b>45. State College temperature</b></a></p>
+<p class="p9"><a href="http://www.math.psu.edu/vstein/climate46.html"><b>46. Urban heat island</b></a></p>
+<p class="p9"><a href="http://www.math.psu.edu/vstein/climate47.html"><b>47. Jpkes</b></a></p>
+<p class="p9"><a href="http://www.math.psu.edu/vstein/climate48.html"><b>48. Vermont climate</b></a></p>
+<p class="p9"><a href="http://www.math.psu.edu/vstein/climate49.html"><b>49. California climate</b></a></p>
+<p class="p11"><a href="http://www.math.psu.edu/vstein/climate50.html"><b>50. Humanity</b></a></p>
+<p class="p12"><br></p>
+<p class="p12"><br></p>
+<p class="p13"><br></p>
+<p class="p14"><br></p>
+<p class="p15"><br></p>
+<p class="p16"><br></p>
+<p class="p16"><br></p>
+<p class="p16"><br></p>
+<p class="p16"><br></p>
+<p class="p17"><b>40. Films and videos</b></p>
+<p class="p18"><br></p>
+<p class="p19"><a href="http://topdocumentaryfilms.com/the-big-freeze/"><b><i>The Big Freeze</i> - Top Documentary <i>Films</i></b></a></p>
+<p class="p20">Imagine our world in the not-too-distant future? In parts of the northern hemisphere, the temperature plummets to -90 F. At 130 below, public transportation fails.</p>
+<p class="p20">Those caught outside freeze to death. Buildings collapse under the weight of snow and ice.</p>
+<p class="p20">The power goes out, society collapses, and anarchy takes its place.</p>
+<p class="p20">Could this be a vision of our future? In this documentary, Naked Science examines what may cause temperatures to plummet and how this could spell disaster for our planet.</p>
+<p class="p18"><br></p>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; color: #0000ee"><a href="http://truthandarttv.com/globalwarming"><b>'Global Warming' HOAX - Truth and Art TV</b></a></h3>
+<p class="p20"><i>Global Warming</i> Dead on Arrival IPCC Report is a <i>Hoax</i> ... and professor Michael E. Mann at <i>Pennsylvania State</i> University, who has been an important scientist ...</p>
+<p class="p18"><br></p>
+<p class="p19"><a href="http://www.youtube.com/watch?v=nJBU8ZYbXyw"><b><i>The big freeze</i> 1993 - YouTube</b></a> <span class="s7"><b>Published on Dec 23, 2012</b></span></p>
+<p class="p20">A silent comedy. Two accident-prone plumbers go to fix the plumbing at a home for retired gentle-folk on the coldest day of the year in Finland. Everything that can go wrong for these plumbers goes wrong.</p>
+<p class="p21"><span class="s8">45 min  -  <a href="http://www.imdb.com/genre/Comedy?ref_=tt_ov_inf"><span class="s6">Comedy</span></a>  -  <a href="http://www.imdb.com/title/tt0106410/releaseinfo?ref_=tt_ov_inf"><span class="s6">17 November 1993 (Finland)</span></a></span></p>
+<p class="p22"><br></p>
+<p class="p23"><br></p>
+<h1 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 24.0px Times; color: #0000ee"><a href="http://www.imdb.com/title/tt1350479/?ref_=nm_flmg_slf_6"><b>The Big Chill (1999)</b></a></h1>
+<p class="p21"><span class="s8">TV Movie  -  60 min  -  <a href="http://www.imdb.com/genre/Documentary?ref_=tt_ov_inf"><span class="s6">Documentary</span></a>  -  <a href="http://www.imdb.com/title/tt1350479/releaseinfo?ref_=tt_ov_inf"><span class="s6">27 November 1999 (UK)</span></a></span></p>
+<p class="p20">Scientists relate global warming effects on ice, theorizing a possible "min-ice-age" from a fresh water shut down of warm water currents in North Atlantic.</p>
+<h4 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times"><b>Director:</b></h4>
+<p class="p21"><span class="s6"><a href="http://www.imdb.com/name/nm2223088/?ref_=tt_ov_dr">Jonathan Renouf<span class="s9"></span></a></span></p>
+<h4 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times"><b>Writer:</b></h4>
+<p class="p21"><span class="s6"><a href="http://www.imdb.com/name/nm2223088/?ref_=tt_ov_wr">Jonathan Renouf<span class="s9"></span></a></span></p>
+<h4 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times"><b>Stars:</b></h4>
+<p class="p21"><span class="s6"><a href="http://www.imdb.com/name/nm1580868/?ref_=tt_ov_st">Richard Alley</a></span><span class="s8">, <a href="http://www.imdb.com/name/nm1580961/?ref_=tt_ov_st"><span class="s6">Wally Broecker</span></a>, <a href="http://www.imdb.com/name/nm2581446/?ref_=tt_ov_st"><span class="s6">Russell Coope</span></a> | <a href="http://www.imdb.com/title/tt1350479/fullcredits?ref_=tt_ov_st_sm"><span class="s6">See full cast and crew</span></a> »</span></p>
+<p class="p23"><br></p>
+<p class="p23"><br></p>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; color: #0000ee"><a href="http://www.google.com/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=1&amp;ved=0CCkQFjAA&amp;url=http%3A%2F%2Fen.wikipedia.org%2Fwiki%2FDeep_Freeze_%28film%29&amp;ei=ruoJU-PcLemIyAHPuoEg&amp;usg=AFQjCNF-jQWc86Vy-JyBQ6mfyxWrKNfn_w&amp;sig2=DcHvwMV7ak7xMOWiz_qW8A&amp;bvm=bv.61725948,d.aWc"><b><i>Deep Freeze</i> (<i>film</i>) - Wikipedia, the free encyclopedia</b></a></h3>
+<p class="p20"><i>Deep Freeze</i> (also known as Ice Crawlers) is a 2003 horror <i>film</i> directed by John Carl Buechler. Written by Robert Boris, Dennis A. Pratt, and Matthew Jason <b>...</b></p>
+<p class="p23"><br></p>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; color: #0000ee"><a href="https://en.wikipedia.org/wiki/Quintet_%28film%29"><b>Quintet (film) - Wikipedia</b></a></h3>
+<p class="p20">The story takes place during a new <a href="https://en.wikipedia.org/wiki/Ice_age"><span class="s10">ice age</span></a>. The camera tracks a blank, frozen, seemingly deserted <a href="https://en.wikipedia.org/wiki/Tundra"><span class="s10">tundra</span></a> until two blurry, distant figures can just be made out. They are the seal hunter Essex (<a href="https://en.wikipedia.org/wiki/Paul_Newman"><span class="s10">Paul Newman</span></a>) and his pregnant companion, Vivia (<a href="https://en.wikipedia.org/wiki/Brigitte_Fossey"><span class="s10">Brigitte Fossey</span></a>), the daughter of one of Essex's late hunting partners. They are traveling north, where Essex hopes to reunite with his brother, Francha (<a href="https://en.wikipedia.org/wiki/Thomas_Hill_%28actor%29"><span class="s10">Thomas Hill</span></a>).</p>
+<p class="p23"><br></p>
+<p class="p23"><br></p>
+<p class="p23"><br></p>
+<p class="p25"><br></p>
+<p class="p26"><b>2006</b></p>
+<p class="p25"><br></p>
+<h1 style="margin: 0.0px 0.0px 16.0px 0.0px; font: 19.0px Times; color: #0000ee"><span class="s11"><a href="http://www.youtube.com/watch?v=8ZUoYGAI5i0"><b>An Inconvenient Truth</b></a></span><span class="s8"><b> 2006</b></span></h1>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; color: #0000ee"><a href="http://geolor.com/The_Day_After_Tomorrow_Movie.htm"><b>The Day After Tomorrow - Good and Bad Science in <i>the Movie</i></b></a></h3>
+<p class="p20">Nov 10, 2006 - Good and Bad Science as Presented in <i>the Movie</i> <b>...</b> key fictional aspects of the <i>film</i> revolve around 2 adjectives: exaggerated and <i>abrupt</i>. <b>...</b> in a severe global <i>deep freeze</i> which sets the stage for the fictional drama in the <i>film</i>.</p>
+<p class="p28"><br></p>
+<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px Times; color: #0000ee"><span class="s11"><a href="https://www.youtube.com/watch?v=ICGal_8qI8c"><b>Top 10 Climate Change Lies Exposed</b></a></span><span class="s8"><b> </b></span><span class="s7"><b>Jul 19, 2016</b></span></h1>
+<h3 style="margin: 0.0px 0.0px 14.0px 0.0px; font: 14.0px Times; min-height: 18.0px"><br></h3>
+<table cellspacing="0" cellpadding="0">
+  <tbody>
+    <tr>
+      <td rowspan="2" valign="middle" class="td1">
+        <p class="p23"><br></p>
+      </td>
+      <td valign="middle" class="td2">
+        <p class="p23"><br></p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<p class="p26"><b>2007</b></p>
+<p class="p31"><br></p>
+<p class="p32"><span class="s5"><a href="http://www.imdb.com/title/tt0199248/?ref_=tt_ov_inf"><b>Modern Marvels</b></a></span><b>: Season 13, Episode 32</b></p>
+<p class="p24"><a href="http://www.imdb.com/title/tt1112507/?ref_=fn_al_tt_7"><b>Deep Freeze (25 Sep. 2007)</b></a></p>
+<p class="p20">TV Episode  -  60 min  -  <a href="http://www.imdb.com/genre/Documentary?ref_=tt_ov_inf"><span class="s4">Documentary</span></a> | <a href="http://www.imdb.com/genre/History?ref_=tt_ov_inf"><span class="s4">History</span></a></p>
+<p class="p20">Forget everything you thought you knew about the cold because Modern Marvels: Deep Freeze takes the technology of cold to the extreme. Think your home freezer is "cool"? How about a 12-story ice box filled with 135 million pounds of ice cream?<span class="Apple-converted-space"> </span></p>
+<p class="p20">Take a tour of arctic vaults that store billions of seeds and learn how scientists have mastered temperatures of minus 100 degrees Fahrenheit... and below. See how engineers turn the gases we breathe into ultra cool liquids and blistering cold solids.<span class="Apple-converted-space"> </span></p>
+<p class="p20">Explore how the cold not only preserves and chills, but shatters rubber tires, creates super-sized energy and fuels the rockets that have taken us into the deep freeze of outer space. And just when you think it can't get any colder, go inside Alcor<span class="Apple-converted-space"> </span></p>
+<p class="p20">where researchers keep cadavers chilled to the bone in hopes of future revival. It's time to chill out on Modern Marvels: Deep Freeze.</p>
+<h3 style="margin: 0.0px 0.0px 14.0px 0.0px; font: 14.0px Times; min-height: 18.0px"><br></h3>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; color: #0000ee"><a href="http://www.youtube.com/watch?v=Fz8KiA-YMt8"><b>Global Warming Debate - Richard <i>Lindzen</i>, part 2 of 10 - <i>YouTube</i></b></a><b><i><span class="Apple-converted-space">  </span></i></b><span class="s7">- Uploaded by Othniel Harris Apr 11, 2007<span class="Apple-converted-space"> </span></span></h3>
+<p class="p20">The goal of IQ2 US is to raise the level of public discourse on our most challenging issues. To provide a new <b>...</b></p>
+<h3 style="margin: 0.0px 0.0px 14.0px 0.0px; font: 14.0px Times; min-height: 18.0px"><br></h3>
+<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px Times; color: #0000ee"><span class="s11"><a href="https://www.youtube.com/watch?v=XlGIep4jiRw"><b>Global Warming Al Gore is a Crook</b></a></span><span class="s8"><b><span class="Apple-converted-space">  </span></b></span><span class="s7"><b>Dec 31, 2007</b></span></h1>
+<h3 style="margin: 0.0px 0.0px 14.0px 0.0px; font: 14.0px Times; min-height: 18.0px"><br></h3>
+<p class="p26"><b>2008</b></p>
+<p class="p33"><br></p>
+<p class="p3"><a href="https://www.youtube.com/watch?v=0UUM9rGMMbA"><b>State of Fear: Hollywood the News Media and Global Warming <span class="Apple-converted-space"> </span></b></a><span class="s12"> </span><span class="s13">Feb 15, 2008</span></p>
+<p class="p28"><br></p>
+<h1 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 21.0px Times; color: #0000ee"><span class="s11"><a href="http://www.youtube.com/watch?v=qi6n_-wB154"><b>Nancy Pelosi and Newt Gingrich Commercial on Climate Change</b></a></span><span class="s14"><b> </b></span><span class="s7">Apr 17, 2008</span></h1>
+<p class="p20">This ad is part of the "We Can Solve It" global warming ad campaign sponsored by former Vice President Al Gore's Alliance for Climate Protection.</p>
+<p class="p28"><br></p>
+<h1 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 24.0px Times; color: #0000ee"><span class="s11"><a href="https://www.youtube.com/watch?feature=player_embedded&amp;v=7W-BePJOLbw"><b>Apocalypse? No! - Why there is no Global Warming Crisis</b><span class="s15"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><b><span class="Apple-converted-space"> </span></b></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></a></span><span class="s8"><b> </b></span><span class="s7">May 22, 2008</span></h1>
+<p class="p20">Lord Christopher Monckton was an advisor to Margaret Thatcher &amp; has been following the Global Warming issue with growing concern the facts have not been properly revealed.<br>
+This nine minute excerpt of his New DVD gives you some good information to think about</p>
+<p class="p23"><br></p>
+<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px Times; color: #0000ee"><span class="s11"><a href="https://www.youtube.com/watch?v=r-kW2Fi3jhg"><b>Al Gore Is A LIAR - Slanders Serious Debate</b><span class="s15"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><b><span class="Apple-converted-space"> </span></b></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></a></span><span class="s8"><b> <span class="Apple-converted-space">  </span></b></span><span class="s7">May 31, 2008</span></h1>
+<h1 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 24.0px Times; color: #0000ee"><span class="s11"><a href="http://www.youtube.com/watch?v=FfHW7KR33IQ"><b>Al Gore sued by over 30.000 Scientists for Global Warming fraud<span class="Apple-converted-space"> </span></b></a></span> <span class="s7">Jul 5, 2008</span></h1>
+<h1 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; min-height: 14.0px"><br></h1>
+<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 19.0px Times; color: #0000ee"><span class="s11"><a href="https://www.youtube.com/watch?v=Qzf6z-oHP8U&amp;ebc=ANyPxKpJOQqWvEsR0v8lFEXJivyaqj8TQo0pjnxvAPlmqSWDuLX6JdXkPDfxvmKUbuVJ55gOSR1y13hTIR3x6MzCMt5GOVZxOQ"><b>GLOBAL WARMING DENIER ROY SPENCER v. SEN. BARBARA BOXER</b></a></span><span class="s16"><b><span class="Apple-converted-space">  </span></b></span><span class="s7"><b>Jul 22, 2008</b></span></h1>
+<h1 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 24.0px Times; color: #0000ee"><span class="s11"><a href="https://www.youtube.com/watch?v=BB0aFPXr4n4"><b>George Carlin on Global Warming</b></a></span><span class="s8"><b> </b></span><span class="s17"><b>D</b>ec 26, 2008</span></h1>
+<h1 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px Times">2.6M</h1>
+<h1 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 24.0px Times; color: #0000ee; min-height: 29.0px"><br></h1>
+<p class="p5"><a href="http://www.imdb.com/title/tt0949731/?ref_=ttmd_ql"><b>The Happening (2008)</b></a><b> (</b><span class="s9">film)</span></p>
+<h3 style="margin: 0.0px 0.0px 14.0px 0.0px; font: 14.0px Times; min-height: 18.0px"><br></h3>
+<h3 style="margin: 0.0px 0.0px 14.0px 0.0px; font: 14.0px Times; min-height: 18.0px"><br></h3>
+<p class="p26"><b>2009</b></p>
+<p class="p31"><br></p>
+<h1 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 24.0px Times; color: #0000ee"><span class="s11"><a href="http://www.youtube.com/watch?v=WbLK4RZDdzI"><b>Al Gore once again exposed as disingenuous fraud</b></a></span> <span class="Apple-converted-space"> </span><span class="s7"><b> </b></span><span class="s13">Apr 24, 2009</span></h1>
+<h1 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; min-height: 18.0px"><br></h1>
+<h1 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 24.0px Times; color: #0000ee"><span class="s11"><a href="https://www.youtube.com/watch?v=G7VUg7nG3lw#t=54.499804417"><b>Newt Rips Gore's 'Facts' To Pieces</b></a></span><span class="s8"><b><span class="Apple-converted-space">  </span></b></span><span class="s13">Apr 24, 2009</span></h1>
+<p class="p38">corals <span class="Apple-converted-space">  </span>antarctic ice</p>
+<p class="p28"><br></p>
+<h1 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 24.0px Times; color: #0000ee"><span class="s11"><a href="http://www.youtube.com/watch?v=vFK-UTGH1Zw"><b>Al Gore's Lies Exposed By Congress</b></a></span><span class="Apple-converted-space">  </span><span class="s13">May 29, 2009</span></h1>
+<p class="p20">Al Gores LIES on how he think Global Warming is caused by a LIFE GIVING GAS called C02 are exposed by Rep. Steve Scalise.<br>
+Al Gore OWNS the Carbon Trading Companies and OCCIDENTAL Petrol.<br>
+He does not care about the environment, he only cares about money and ENSLAVING YOU!</p>
+<p class="p23"><br></p>
+<p class="p39"><span class="s6"><a href="https://www.youtube.com/watch?v=G7VUg7nG3lw#t=54.499804417">Newt Rips Gore's 'Facts' To Pieces</a></span><span class="s8"> </span><span class="s18">Apr 24, 2009</span></p>
+<p class="p23"><br></p>
+<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px Times; color: #0000ee"><span class="s11"><a href="https://www.youtube.com/watch?v=BEPFmwvqdDo"><b>Al Gore is a fraud and refuses to debate global warming</b></a></span><span class="s8"><b><span class="Apple-converted-space">  </span></b></span><span class="s7"><b>Nov 6, 2009</b></span></h1>
+<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px Times; color: #0000ee"><span class="s11"><a href="https://www.youtube.com/watch?v=1QL_HaYgLYA"><b>Church of Global Warming - Part 1 of 6</b></a></span><span class="s8"><b><span class="Apple-converted-space">  </span></b></span><span class="s7"><b>Nov 18, 2009</b></span></h1>
+<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px Times; color: #0000ee"><span class="s11"><a href="https://www.youtube.com/watch?v=P2153PnMzSw"><b>Alex Jones on Climategate: Hoax of all time a global Ponzi scheme</b></a></span><span class="s19"> Nov 24, 2009</span></h1>
+<p class="p40"><span class="s6"><a href="https://www.youtube.com/watch?v=NCHi44Iv-g0">'Global Warming bogus, Ice Age approaching<span class="s20"><span class="Apple-converted-space">  </span></span></a></span><span class="s7">11/26/2009</span></p>
+<p class="p23"><br></p>
+<h1 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 24.0px Times; color: #0000ee"><span class="s11"><a href="http://www.youtube.com/watch?v=fAlMomLvu_4"><b>Censoring The Decrease in Global Temperatures</b></a></span> <span class="s7">Uploaded on Dec 1, 2009</span></h1>
+<h1 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; min-height: 18.0px"><br></h1>
+<h1 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 24.0px Times; color: #0000ee"><span class="s11"><a href="http://www.youtube.com/watch?v=-sHg3ZztDAw#aid=P-fjXD06iz0"><b>Richard Lindzen, Ph.D. Lecture Deconstructs Global Warming Hyst</b><span class="s15"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><b>ery</b></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></a></span><span class="Apple-converted-space">  </span><span class="s13">Dec 7, 2009</span></h1>
+<p class="p20">Learn the science behind Global Warming hysteria in light of the recent ClimateGate developments, and share this video everywhere.<br>
+(PDF Link of "Curriculum Vitae of Richard Siegmund Lindzen") <span class="s21">http://tinyurl.com/yjxpct6</span><br>
+Lindzen WSJ Column Summary of Video: <span class="s21">http://tinyurl.com/yh9t9j8</span><br>
+Not only did this Gang of Climate Hysteria Criminals corrupt the science behind global warming (e.g destroying data, excluding dissent from the peer-review process, ignoring FOIA requests, etc.), their science never had any backing.</p>
+<p class="p28"><br></p>
+<p class="p5"><a href="http://www.youtube.com/watch?v=ZDAl42BjSHU"><b>Dennis Miller on the Fraud that is Global Warming </b></a><span class="s7">Dec 9, 2009<span class="Apple-converted-space"> </span></span></p>
+<p class="p23"><br></p>
+<p class="p5"><a href="https://www.youtube.com/watch?v=9GdX61Xn-uU"><b>A discussion about the Climate Change scam - The Daily ...</b></a><span class="s22"> </span><span class="s7">12/4/2009</span></p>
+<p class="p20">raw date not available</p>
+<p class="p28"><br></p>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; color: #0000ee"><a href="http://www.youtube.com/watch?v=PCrUQo3vbuc"><b>Richard <i>Lindzen</i> at International Conference on Climate ... - <i>YouTube</i></b></a><b><i> </i></b><span class="s7">Dec 27, 2009<span class="Apple-converted-space"> </span></span></h3>
+<p class="p20">Richard <i>Lindzen</i> talks about the problems with global warming alarmists. This is the 7th video in the series on <b>...</b></p>
+<p class="p28"><br></p>
+<h3 style="margin: 0.0px 0.0px 14.0px 0.0px; font: 14.0px Times; min-height: 18.0px"><br></h3>
+<p class="p26"><b>2010</b></p>
+<h1 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 24.0px Times; color: #0000ee"><a href="http://www.imdb.com/title/tt1578723/?ref_=fn_al_tt_3"><b>The Big Freeze (2010)</b></a><b><span class="Apple-converted-space"> </span></b><span class="s7"> Jan 6, 2010</span></h1>
+<p class="p20">TV Movie  -  <a href="http://www.imdb.com/genre/News?ref_=tt_ov_inf"><span class="s10">News</span></a>  -<span class="Apple-converted-space"> </span><a href="http://www.imdb.com/title/tt1578723/releaseinfo?ref_=tt_ov_inf"><span class="s10"> (UK)</span></a></p>
+<p class="p41"><br></p>
+<h1 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 24.0px Times; color: #0000ee"><span class="s11"><a href="http://www.youtube.com/watch?v=vYj5baVfB0Y"><b>Godfrey Bloom exposes global warming scammers</b></a></span><span class="Apple-converted-space">  </span><span class="s7">Jan 20, 2010</span></h1>
+<p class="p20"><span class="s21"><a href="http://www.ukipmeps.org/">http://www.ukipmeps.org</a></span> <br>
+<span class="s23">►</span> European Parliament, Strasbourg - 20.01.2010 <br>
+<span class="s23">►</span> Debate: Council and Commission statements - Outcome of the Copenhagen summit on climate change<br>
+Speaker: Godfrey Bloom MEP, UKIP (Yorkshire &amp; Lincs.), EFD group.<br>
+The document mentioned by Godfrey Bloom is a paper collated by Richard Treadgold, of the Climate Conversation Group, from a combined research project undertaken by members of the Climate Conversation Group and the New Zealand Climate Science Coalition.</p>
+<p class="p23"><br></p>
+<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px Times; color: #0000ee"><span class="s11"><a href="https://www.youtube.com/watch?v=AgZU5uvM5Ok"><b>Global Warming - Bill Nye Versus Joe Bastardi</b></a></span><span class="s8"><b><span class="Apple-converted-space">  </span></b></span><span class="s7"><b>Feb 28, 2010</b></span></h1>
+<p class="p42"><span class="s11"><a href="https://www.youtube.com/watch?v=gJwayalLpYY"><b>Climate I: Is The Debate Over?</b></a></span><span class="s8"><b> </b></span><span class="s7">Mar 10, 2010<span class="Apple-converted-space"> </span></span></p>
+<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px Times; color: #0000ee"><span class="s11"><a href="https://www.youtube.com/watch?v=hpHXGJIGaVY"><b>Hitler Rant about Global Warming</b></a></span><span class="s8"><b> </b></span><span class="s7">Mar 12, 2010<span class="Apple-converted-space"> </span></span></h1>
+<p class="p29"><span class="s11"><a href="https://www.youtube.com/watch?v=mV-j4cB8qmg&amp;feature=player_detailpage"><b>IPCC Scientist: 30 Years of Global Cooling</b></a></span><span class="s8"><b> </b></span><span class="s7">Mar 14, 2010<span class="Apple-converted-space"> </span></span></p>
+<h1 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 24.0px Times; color: #0000ee"><span class="s11"><a href="http://www.youtube.com/watch?v=i1CR0v7dwXU"><b>Why you should not worry</b></a></span> <span class="Apple-converted-space">  </span><span class="s7">Jul 29, 2010</span></h1>
+<p class="p20">MIT scientist Richard Lindzen explains his doubts about the dangers of global warming.</p>
+<p class="p43"><br></p>
+<p class="p44"><a href="https://www.youtube.com/watch?v=OuoP1c5Uimc"><b>The History behind the Climate Change Fraud 1/5<span class="Apple-converted-space"> </span></b></a><span class="s24"> </span><span class="s7">Oct 31, 2010</span></p>
+<h1 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 22.0px Times; color: #0000ee"><span class="s11"><a href="https://www.youtube.com/watch?v=RfdqLZEEn-w"><b>The History behind the Climate Change Fraud 2/5</b></a></span><span class="s16"><b> </b></span><span class="s7">Oct 31, 2010</span></h1>
+<h1 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 22.0px Times; color: #0000ee"><span class="s11"><a href="https://www.youtube.com/watch?v=0ZJUGoA5dFU"><b>The History behind the Climate Change Fraud 3/5</b></a></span><span class="s16"><b> </b></span><span class="s7">Oct 31, 2010<span class="Apple-converted-space"> </span></span></h1>
+<p class="p44"><span class="s11"><a href="https://www.youtube.com/watch?v=hvy5lsg9pCs"><b>The History behind the Climate Change Fraud 4/5 </b></a></span><span class="s7">Nov 1, 2010</span></p>
+<p class="p44"><span class="s11"><a href="https://www.youtube.com/watch?v=qOtru-qHSVY"><b>The History behind the Climate Change Fraud 5/5</b></a></span><b> </b><span class="s7">Nov<span class="Apple-converted-space">  </span>2, 2010</span></p>
+<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px Times; min-height: 29.0px"><br></h1>
+<p class="p41"><br></p>
+<h1 style="margin: 0.0px 0.0px 16.0px 0.0px; font: 24.0px Times; min-height: 29.0px"><br></h1>
+<h3 style="margin: 0.0px 0.0px 14.0px 0.0px; font: 14.0px Times; min-height: 18.0px"><br></h3>
+<h3 style="margin: 0.0px 0.0px 14.0px 0.0px; font: 14.0px Times; min-height: 18.0px"><br></h3>
+<p class="p26"><b>2011</b></p>
+<p class="p31"><br></p>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; color: #0000ee"><a href="http://topdocumentaryfilms.com/science-under-attack/"><b><i>Science Under Attack</i> - Watch Free Documentary Online</b></a><b> 2011</b></h3>
+<p class="p20"><b>...</b> <i>under attack</i>, and why <i>public trust</i> in key <i>scientific</i> theories <i>has</i> been eroded - from... <b>...</b> for example, are rightly going to <i>lose</i> the respect and <i>trust</i> of the <i>public</i>.</p>
+<p class="p23"><br></p>
+<p class="p47"><a href="http://www.google.com/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=5&amp;ved=0CDwQtwIwBA&amp;url=http://www.youtube.com/watch?v=3AA19sublTY&amp;ei=-VZrVKPQN6HjsATU-ICQDw&amp;usg=AFQjCNHTouzOlkqxr7suVmxzjodg5mOQHA"><b>Global Warming Panic explained</b></a><span class="s8"><b><span class="Apple-converted-space"> </span></b></span><span class="s25"><b> </b>Jan 10, 2011</span></p>
+<p class="p48">A liberal tries to explain why she thinks the world will end, and what should be done about it.</p>
+<p class="p1"><br></p>
+<p class="p5"><a href="http://www.imdb.com/title/tt1846072/?ref_=fn_al_tt_10"><b>Deep Freeze (25 Feb. 2011)</b></a></p>
+<p class="p20">TV Episode  -  60 min  -  <a href="http://www.imdb.com/genre/Reality-TV?ref_=tt_ov_inf"><span class="s26">Reality-TV</span></a></p>
+<p class="p20">ra Alaska makes a special canine delivery to four-time Iditarod champion Lance Mackey in Fairbanks. After the first snow in Unalakleet,</p>
+<p class="p20"><span class="Apple-converted-space"> </span>Jim and Ferno cope with an influx of schoolteachers on their busiest day of the year.</p>
+<p class="p1"><br></p>
+<p class="p44"><span class="s11"><a href="http://www.youtube.com/watch?v=JlCNrdna9CI"><b>Climategate 'hide the decline' in depth explanation by Stephen McIntyre 1/3</b></a></span><span class="s8"><b><span class="Apple-converted-space"> </span></b></span><span class="s16"><b> </b></span><span class="s7">Mar 19, 2011</span></p>
+<p class="p20">4th International Conference on Climate Change</p>
+<p class="p23"><br></p>
+<h1 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 24.0px Times; color: #0000ee"><span class="s11"><a href="https://www.youtube.com/watch?v=rIAn-mHM6nM"><b>Molyneux VS Global Warming (Molyneux wins)</b></a></span><span class="s8"><b><span class="Apple-converted-space">  </span></b><a href="https://www.youtube.com/channel/UCcT2Z7Dw_lZWLJm_V1rlQKA"><span class="s27">Adam vs. The Man</span></a></span><span class="s28"> </span><span class="s7">Uploaded on Jun 21, 2011</span></h1>
+<p class="p20">It's Stefan Molyneux, Host of Freedomain Radio versus global warming!</p>
+<p class="p23"><br></p>
+<h1 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times"><span class="s29"><a href="http://www.youtube.com/watch?v=vvObfrs3qoE"><b>Why The Global Warming Agenda Is Wrong</b></a></span><span class="s1"> </span>Jun 29, 2011<br>
+A debunking of the global warming agenda, from Roy W. Spencer, former NASA climatologist and climate expert. For more on this topic, purchase his new Broadside,<span class="Apple-converted-space"> </span></h1>
+<h1 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times">"The Bad Science and Bad Policy of Obama's Global Warming Agenda" by clicking here:</h1>
+<h1 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; min-height: 14.0px"><br></h1>
+<p class="p29"><span class="s11"><a href="https://www.youtube.com/watch?v=ElEwhE7B-8o"><b>Al Gore's Inconvenient SCAM, Lies versus Lord Monckton Truth and Logic</b><span class="s15"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><b><span class="Apple-converted-space"> </span></b></span></span></span></span></span></span></span></span></span></span></a></span><span class="s8"><b> </b></span><span class="s7"><b>Jul 26, 2011</b></span></p>
+<p class="p23"><br></p>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 28.0px Times; color: #0000ee"><span class="s11"><a href="http://www.youtube.com/watch?v=52Mx0_8YEtg"><b>The Great Global Warming Swindle Full Movie</b></a></span><b> 2011</b> <span class="s7">Aug 17, 2011</span></h3>
+<p class="p20"><span class="s10"><a href="https://www.youtube.com/channel/UCaMMOFEtnnSyS60EeUCtAdQ">Kazza0423</a></span><br>
+Originally broadcasted March 8, 2007 on British Channel 4.<br>
+A documentary, by British television producer Martin Durkin, which argues against the virtually unchallenged consensus that global warming is man-made.<span class="Apple-converted-space"> </span></p>
+<p class="p20">A statement from the makers of this film asserts that the scientific theory of anthropogenic global warming could very well be "the biggest scam of modern times."</p>
+<p class="p23"><br></p>
+<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px Times; color: #0000ee"><span class="s11"><a href="https://www.youtube.com/watch?v=Pj8GlqiOAIs"><b>IPCC's Ben Santer admits GW hoax</b></a></span><span class="s8"><b> </b></span><span class="s7">Aug 17, 2011</span></h1>
+<p class="p5"><a href="https://www.youtube.com/watch?v=2JZuwRv7G3A"><b>Lord Monckton: Global Warming Exposed Fraud 1/5</b></a><span class="s8"><b><span class="Apple-converted-space"> </span></b></span><span class="s7"> · 8/22/2011</span></p>
+<p class="p20">IPCC <span class="Apple-converted-space">  </span>M Strong</p>
+<p class="p23"><br></p>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; color: #0000ee"><a href="http://www.google.com/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=8&amp;ved=0CFMQtwIwBw&amp;url=http%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DG69SFZekTS8&amp;ei=apcVVPasOcunyAT5j4KQCg&amp;usg=AFQjCNGlFasCwZMhx1HoioAjIeX_HDd8gg&amp;sig2=A5xOFXzk9H19olItainqow&amp;bvm=bv.75097201,d.aWw"><b><i>Satan's</i> Minions and <i>Global Warming</i> - Wakeup.tv - YouTube</b></a> <span class="s7">Sep 3, 2011</span></h3>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; min-height: 14.0px"><br></h3>
+<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 19.0px Times; color: #0000ee"><span class="s11"><a href="https://www.youtube.com/watch?v=potLQR7-_Tg"><b>Climate Science Debate : Global Warming Alarmist VS. Global Warming Skeptic</b></a></span><span class="s16"><b> </b></span><span class="s7"><b>Oct 19, 2011</b></span></h1>
+<h3 style="margin: 0.0px 0.0px 14.0px 0.0px; font: 14.0px Times; color: #0000ee"><a href="http://www.youtube.com/watch?v=LqJVHzxWQDU"><b><i>Mike Hulme</i> - Why We Disagree About Climate Change - YouTube</b></a><span class="s8"><b> </b></span><span class="s30">Nov 24, 2011</span></h3>
+<h3 style="margin: 0.0px 0.0px 14.0px 0.0px; font: 12.0px Monaco; min-height: 16.0px"><br></h3>
+<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px Times; color: #0000ee"><span class="s11"><a href="https://www.youtube.com/watch?v=LSC1J0PRIs0"><b>Low PH in Saltwater Tanks Solved in 3 Easy Steps</b></a></span><span class="s8"><b> </b></span><span class="s7"><b>Dec 5, 2011</b></span></h1>
+<p class="p23"><br></p>
+<p class="p23"><br></p>
+<p class="p26"><b>2012</b></p>
+<p class="p33"><br></p>
+<p class="p23"><br></p>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 18.0px Times; color: #0000ee"><a href="http://blip.tv/slowtv/the-honest-broker-science-and-politics-roger-pielke-jr-5953305"><b>The Honest Broker: Science and Politics. Roger Pielke Jr</b></a></h3>
+<p class="p20">Scientists, and experts more generally, have choices about the roles that they play in today's political debates on topics such as global warming, genetically modified foods, and food and drug safety, just to name a few.<span class="Apple-converted-space"> </span></p>
+<p class="p20">At this Lowy Lecture, Professor in Environmental Studies at the University of Colorado Roger Pielke discusses how we can understand these choices, their theoretical and empirical bases, what considerations are<span class="Apple-converted-space"> </span></p>
+<p class="p20">important to think about when deciding, and the consequences for the individual scientist and the broader scientific enterprise.<br>
+Presented by the Lowy Institute, February 2012</p>
+<p class="p23"><br></p>
+<h1 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 24.0px Times; color: #0000ee"><span class="s11"><a href="http://www.youtube.com/watch?v=NUFGh89bvp0"><b>Michael Mann: The Hockey Stick and Climate Wars</b></a></span><b> </b><span class="s7">Mar 7, 2012</span></h1>
+<p class="p20">An original video (by Peter Sinclair) for the Yale Forum on Climate Change &amp; The Media focuses on climate scientist Michael Mann and his first-hand view of his hockey stick and 'climate wars'</p>
+<p class="p23"><br></p>
+<p class="p5"><a href="https://www.youtube.com/watch?v=vc6CHHrCV7g"><b>Global Warming DISPELLED by Nobel Laureate!</b></a><span class="s8"><b> </b></span><span class="s7"><span class="Apple-converted-space">  </span>3/7/2012</span></p>
+<p class="p23"><br></p>
+<h1 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 18.0px Times; color: #0000ee"><span class="s11"><a href="http://www.youtube.com/watch?v=kht8LAdpyMI"><b>Breaking! Head Climate Monger Jumps Ship: Marc Morano Reports</b></a></span><span class="s16"><b><span class="Apple-converted-space">  </span></b></span><span class="s7"><i>Climate Depot [</i></span><span class="s31">James Lovelock</span><span class="s32">] </span><span class="s7">Apr 24, 2012</span></h1>
+<h1 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; min-height: 14.0px"><br></h1>
+<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px Times; color: #0000ee"><span class="s11"><a href="https://www.youtube.com/watch?v=vapMyAvbsbg"><b>Al Gore - I Was Wrong About Global Warming... Learn About It.mp4</b></a></span><span class="s8"><b> </b></span><span class="s7"><b>n Mar 4, 2012</b></span></h1>
+<h1 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 23.0px Times; color: #0000ee"><span class="s11"><a href="http://www.youtube.com/watch?v=fWInyaMWBY8"><b>James Hansen: Why I must speak out about climate change</b></a></span> <span class="s7">Mar 7, 2012</span></h1>
+<p class="p20"><span class="s21"><a href="http://www.ted.com/">http://www.ted.com</a></span> Top climate scientist James Hansen tells the story of his involvement in the science of and debate over global climate change. In doing so he outlines the overwhelming evidence<span class="Apple-converted-space"> </span></p>
+<p class="p20">that change is happening and why that makes him deeply worried about the future.</p>
+<p class="p23"><br></p>
+<h1 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 24.0px Times; color: #0000ee"><span class="s11"><a href="https://www.youtube.com/watch?v=I0leiwOx6w0"><b>Is Global Warming FAKE ? (Neil Degrasse Tyson vs Bob Lutz)</b><span class="s15"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><b> </b></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></a></span><span class="s7"><span class="Apple-converted-space">  </span>Mar 27, 2012</span></h1>
+<p class="p20">Who would you believe..astrophysicist or former CEO of GM....??</p>
+<p class="p23"><br></p>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 17.0px Times; color: #0000ee"><a href="http://www.youtube.com/watch?v=veLJSKXZJbw"><b>Prof. Richard <i>Lindzen</i> reveals the real reason for the ... - <i>YouTube</i></b></a><span class="Apple-converted-space">  </span><span class="s7">Uploaded by MrJacktemplar Apr 10, 2012</span></h3>
+<p class="p20">Richard <i>Lindzen</i> at International Conference on Climate Change by The Auto <b>...</b> Richard <i>Lindzen</i> Pans <b>...</b></p>
+<p class="p23"><br></p>
+<h1 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 24.0px Times; color: #0000ee"><span class="s11"><a href="http://www.youtube.com/watch?v=aEaFzhoS67I"><b>Former NASA Scientists... Global Warming Hoax</b></a></span><span class="Apple-converted-space">  </span><span class="s7">Apr 12, 2012</span></h1>
+<p class="p20">Former NASA scientists, astronauts,... GLOBAL WARMING A HOAX!!!<span class="Apple-converted-space">  </span><span class="s33">Terry J. Lovell</span></p>
+<p class="p23"><br></p>
+<p class="p53"><a href="https://stevengoddard.wordpress.com/2012/05/04/global-warming-supporters-say-that-they-are-not-like-terrorists/"><b>Global Warming Supporters Say That They Are Not Like Terrorists</b></a><span class="s8"><b><span class="Apple-converted-space">  </span></b><a href="https://stevengoddard.wordpress.com/2012/05/04/global-warming-supporters-say-that-they-are-not-like-terrorists/"><span class="s34">May 4, 2012</span></a></span></p>
+<p class="p32"><span class="s5"><a href="http://www.imdb.com/title/tt1051155/?ref_=tt_ov_inf"><b>The Universe</b></a></span><b>: Season 6, Episode 11</b><span class="Apple-converted-space">  </span><span class="s14"><b>Deep Freeze </b></span><span class="s35">20 May 2012</span></p>
+<p class="p20">TV Episode  -  45 min  -  <a href="http://www.imdb.com/genre/Documentary?ref_=tt_ov_inf"><span class="s4">Documentary</span></a> | <a href="http://www.imdb.com/genre/History?ref_=tt_ov_inf"><span class="s4">History</span></a></p>
+<p class="p20">There is an extraordinary range of temperatures in the universe. This program examines the extreme lower temperature range, the temperature we live in and below, explaining how cold is essential for the formation of habits suitable for life.</p>
+<p class="p20">- <i>Written by </i><a href="http://www.imdb.com/search/title?plot_author=David%20Foss&amp;view=simple&amp;sort=alpha&amp;ref_=ttpl_pl_1"><span class="s4"><i>David Foss</i></span></a></p>
+<p class="p54"><br></p>
+<h1 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 24.0px Times; color: #0000ee"><span class="s11"><a href="https://www.youtube.com/watch?v=OqsRD4HPtH0"><b>Global Warming or a New Ice Age: Documentary Film</b></a></span><span class="s8"><b> </b></span><span class="s7">Jun 22, 2012</span></h1>
+<p class="p20">Global cooling was a conjecture during the 1970s of imminent cooling of the Earth's surface and atmosphere along with a posited commencement of glaciation. This hypothesis had little support in the scientific community,<span class="Apple-converted-space"> </span></p>
+<p class="p20">but gained temporary popular attention due to a combination of a slight downward trend of temperatures from the 1940s to the early 1970s and press reports that did not accurately reflect the eflect the scientific understanding of ice age cycles.</p>
+<p class="p20">In contrast to the global cooling conjecture, the current scientific opinion on climate change is that the Earth has not durably cooled, but undergone global warming throughout the twentieth century.</p>
+<p class="p23"><br></p>
+<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px Times; color: #0000ee"><span class="s11"><a href="https://www.youtube.com/watch?v=hET-zSJDbgA"><b>John Stossel - Economic Myths: Made In America, College, Overpopulation, &amp; More</b></a></span><span class="s36"><b> </b></span><span class="s37">7/26/12</span></h1>
+<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px Times; color: #0000ee"><span class="s11"><a href="https://www.youtube.com/watch?v=KDFH0Hs4Q8s&amp;feature=player_embedded"><b>Dr. Christy: Heatwave not what "Global Warming Looks Like" Rather what "Mother Nature Looks Like"</b></a></span><span class="s8"><b> </b></span><span class="s7">Aug 1, 2012</span></h1>
+<h1 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 24.0px Times; color: #0000ee"><span class="s11"><a href="http://www.youtube.com/watch?v=Moum_SZ5NNY"><b>Hockey Stick to the Head</b></a></span><span class="s8"><b><span class="Apple-converted-space">  </span></b></span><span class="s7">Aug 21, 2012</span></h1>
+<p class="p20">Professor Richard Muller discusses the validity of Michael Mann's hockey stick concept of exponential temperature rise, and his own work in studying the Earth's surface temperature.</p>
+<p class="p55"><br></p>
+<p class="p3"><span class="s11"><a href="http://www.youtube.com/watch?v=gWT-EWKIR3M"><b>Climate Realist Marc Morano Debates Bill Nye the Science Guy on Global Warming</b></a></span><span class="s13"><b> </b>Dec 4, 2012 </span><span class="s7"><span class="Apple-converted-space"> </span></span></p>
+<p class="p20">355,201 views</p>
+<p class="p23"><br></p>
+<p class="p23"><br></p>
+<p class="p55"><br></p>
+<p class="p26"><b>2013</b></p>
+<p class="p33"><br></p>
+<p class="p23"><br></p>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 19.0px Times; color: #0000ee"><a href="http://topdocumentaryfilms.com/what-is-one-degree/"><b><i>What is One Degree</i>? - Watch Free Documentary Online</b></a><b> 2013</b></h3>
+<p class="p20">Be the first <i>one</i> to rate this film. <b>...</b> then you'll like this <i>one</i> too. <b>...</b> Living in Northern Canada, trust me that the world 'mean' of 1 <i>degree</i> warmer makes a 'freaking' <b>...<span class="Apple-converted-space"> </span></b></p>
+<p class="p23"><br></p>
+<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px Times; color: #0000ee"><span class="s11"><a href="https://www.youtube.com/watch?v=wgHqwqoQvVg"><b>Noam Chomsky "Global Warming and The Common Good"</b><span class="s15"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><b> </b></span></span></span></span></span></span></span></span></span></span></span></span></span></span></a></span><span class="s7"><b>Feb 8, 2013</b></span></h1>
+<h1 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 24.0px Times; color: #0000ee"><span class="s11"><a href="http://www.youtube.com/watch?v=0gDErDwXqhc"><b>Climate Change in 12 Minutes - The Skeptic's Case</b></a></span><span class="s8"><b> </b></span><span class="s7">By Dr. David M.W. Evans Feb 20, 2013</span></h1>
+<p class="p23"><br></p>
+<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px Times; color: #0000ee"><span class="s11"><a href="https://www.youtube.com/watch?v=iEPW_P7GVB8"><b>Climate Change HOAX exposed by Geologist straight to the UK Govt</b></a></span><span class="s8"><b> </b></span><span class="s7">Mar 7, 2013</span></h1>
+<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px Times; color: #0000ee"><span class="s11"><a href="https://www.youtube.com/watch?t=16&amp;v=2ROw_cDKwc0"><b>Presentation Prof. Murry Salby in Hamburg on 18 April 2013</b></a></span><span class="s8"><b><span class="Apple-converted-space">  </span></b></span><span class="s7"><b>Jun 9, 2013</b></span></h1>
+<h1 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 24.0px Times; color: #0000ee"><span class="s11"><a href="http://www.youtube.com/watch?v=D-m09lKtYT4"><b>The Great Global Warming Swindle Full Movie</b></a></span> <span class="s7">Apr 2, 2013</span></h1>
+<p class="p23"><br></p>
+<p class="p24"><span class="s11"><a href="http://www.youtube.com/watch?v=6iM_f_j7H08"><b>Richard Alley - Abrupt Climate Change</b></a></span> <span class="s7">Apr 18, 2013</span></p>
+<p class="p20">Dr. Richard Alley found widely cited evidence of abrupt climate changes in ice cores during field research in Antarctica, Greenland and Alaska.</p>
+<p class="p23"><br></p>
+<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px Times; color: #0000ee"><span class="s11"><a href="https://www.youtube.com/watch?v=nBnVeh9udkk"><b>Fox News is Definitely Certain that Climate Change is a Hoax</b></a></span><span class="s8"><b> </b></span><span class="s7">Apr 23, 2013</span></h1>
+<h1 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 24.0px Times; color: #0000ee"><span class="s11"><a href="http://www.youtube.com/watch?v=_CM9YR6PZKo"><b>Freeman Dyson Blasts Global Warming Alarmism</b></a></span><span class="Apple-converted-space"> </span><span class="s7"><b> </b>May 9, 2013</span></h1>
+<p class="p20">Professor Freeman Dyson, theoretical physicist blasts the alarmist stance taken by some IPCC scientists on the science of global warming / climate change.</p>
+<p class="p23"><br></p>
+<h1 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 24.0px Times; color: #0000ee"><span class="s11"><a href="http://www.youtube.com/watch?v=C35pasCr6KI"><b>Climate Scientists Laugh at Global Warming Hysteria</b></a></span><b> </b><span class="s7">May 15, 2013</span></h1>
+<p class="p20">Respected Australian scientists laugh at Julia Gillard, David Suzuki and other climate change drama queens.<br>
+Professor Bob Carter of James Cook University is a Marine Geologist.<br>
+Professor Peter Reid of James Cook University is a Marine Physics specialist.<br>
+Professor Garth Paltridge is a former Cheif Scientist at the CSIRO and is an Atmospheric Physicist.<br>
+Listen to 100 years of experience in the field!</p>
+<p class="p23"><br></p>
+<h1 style="margin: 0.0px 0.0px 16.0px 0.0px; font: 24.0px Times; color: #0000ee"><span class="s11"><a href="http://www.youtube.com/watch?v=eYKggC5VOzA"><b>Climate Scientist Gavin Schmidt runs in fear from a debate</b></a></span><span class="s8"><b> </b></span><span class="s7">May 15, 2013</span></h1>
+<p class="p23"><br></p>
+<h1 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 24.0px Times; color: #0000ee"><span class="s11"><a href="http://www.youtube.com/watch?v=00Y9EZDdpUw"><b>Climate Scientists Jump Ship as CO2 Theory Collapses</b></a></span> <span class="s7">May 29, 2013</span></h1>
+<p class="p20">Climate Scientists like Professor Judith Curry abandon alarmism as the Carbon Dioxide theory collapses in acrimony.<br>
+Common sense prevails as temperature data proves that global warming isn't happening(as predicted).<br>
+Sceptics proved right as the groupthink of the climate change hysteria is revealed.<br>
+Climate scientist Hans von Storch; "Unfortunately in climate science there is a tendency to proclaim absolute truths and to link these immediately to instructions on actions to take,' von Storch said. '</p>
+<p class="p20">The climate pope tells us what has to be done, and for the people it's: keep your mouths shut. Scientists have been taking over the roles of medicine men and priests. That's not the job of scientists.<span class="Apple-converted-space"> </span></p>
+<p class="p20">Science is supposed to help understand problems, show the possibilities that exist in dealing with them. The best is to show many possibilities. Then the political process has to decide the path to take.'<br>
+But some of his colleagues in science like to use 'stories that point to a catastrophe,' said the professor of meteorology. One example was the assumption that our region would see 'murderous violent storms'.<span class="Apple-converted-space"> </span></p>
+<p class="p20">But there was no data showing this. 'It all has a cultural, anthropological background' . 'If you sin, then you will be punished. And the punishment always takes on an environmental dimension which also<span class="Apple-converted-space"> </span></p>
+<p class="p20">included storms in the past. In former times it was God's punishment. Today it's punishment by Nature. Nature is to keep man in check. And for this we see idiotic films like The Day After Tomorrow.''<br>
+"With snappy and short statements like 'snow will be a thing of the past', the loud speakers among the scientists are putting the credibility of science at stake.'"<br>
+British environmentalist James Lovelock admitted that,<br>
+"The problem is we don't know what the climate is doing. We thought we knew 20 years ago. That led to some alarmist books—mine included—because it looked clear-cut, but it hasn't happened." <br>
+"The climate is doing its usual tricks. There's nothing much really happening yet. We were supposed to be halfway toward a frying world now."</p>
+<p class="p23"><br></p>
+<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px Times; color: #0000ee"><span class="s11"><a href="https://www.youtube.com/watch?v=oN_oynx1D8w"><b>Warmists Stunned by Roger Pielke in Senate Testimony on Climate Change</b></a></span><span class="s8"><b> </b></span><span class="s7"><b>Jul 22, 2013</b></span></h1>
+<p class="p23"><br></p>
+<h1 style="margin: 0.0px 0.0px 16.0px 0.0px; font: 19.0px Times; color: #0000ee"><span class="s11"><a href="http://www.youtube.com/watch?v=Vp0Mp1KxPOM"><b>Global Warming Conspiracy Theory Jesse Ventura</b></a></span><span class="s8"><b><span class="Apple-converted-space">  </span></b></span><span class="s31">Aug 6, 2013</span></h1>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times"><span class="s38"><a href="http://www.youtube.com/watch?v=ctY6tbyEUkE"><b><i>John Casey</i></b><b> - COLD SUN - - YouTube</b></a></span><span class="s39"><b><span class="Apple-converted-space">  </span></b></span>Uploaded by John Nelson<span class="Apple-converted-space">  </span>Aug 24, 2013<span class="Apple-converted-space"> </span></h3>
+<p class="p20">In Cold Sun, author <i>John</i> L. <i>Casey</i>, a former White House national space policy advisor, <i>N.A.S.A</i> <b>...</b></p>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; min-height: 14.0px"><br></h3>
+<h1 style="margin: 0.0px 0.0px 16.0px 0.0px; font: 20.0px Times; color: #0000ee"><span class="s11"><a href="http://www.youtube.com/watch?v=NwKtCJIVHK4"><b>John Casey: Myth of Global Warming, the Coming Real Cataclysmic Ice Age<span class="Apple-converted-space"> </span></b></a></span><span class="s8"><b> </b></span><span class="s31">Sept 22, 2013</span></h1>
+<h1 style="margin: 0.0px 0.0px 16.0px 0.0px; font: 22.0px Times; color: #0000ee"><span class="s11"><a href="http://www.youtube.com/watch?v=LOyBfihjQvI"><b>The IPCC Exposed</b></a></span><span class="s8"><b> </b></span><span class="s31">Sept 27, 2013</span></h1>
+<p class="p52"><a href="https://www.youtube.com/watch?v=OnDO0stI2GE"><b>Bill McKibben Laments "The End of Nature"</b></a><b> </b><span class="s31">Sept 27, 2013</span></p>
+<p class="p58"><br></p>
+<p class="p34"><a href="https://www.youtube.com/watch?v=HF9LNuH3IpU"><b>Invalid Arguments: Climate Change </b></a><span class="s8"><b><span class="Apple-converted-space"> </span></b></span><span class="s7"> </span><span class="s31">Sept 27, 2013</span></p>
+<p class="p59"><br></p>
+<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px Times; color: #0000ee"><span class="s11"><a href="https://www.youtube.com/watch?v=LOyBfihjQvI&amp;ebc=ANyPxKrjkc9NfUxUPDJKfPyRz27sXXyVlxEYBXwum-YznhUNpGGHlZFUfnvL1MG8B4Pqm1ZHmMNCxldSMXK-zEO3mFTBTCx3cg"><b>The IPCC Exposed</b></a></span><span class="s8"><b><span class="Apple-converted-space"> </span></b></span><span class="s7"> </span><span class="s31">Sept 27, 2013</span></h1>
+<h1 style="margin: 0.0px 0.0px 16.0px 0.0px; font: 17.0px Times; color: #0000ee"><span class="s11"><a href="https://www.youtube.com/watch?v=r5SitwF0SFg"><b>Lord Christopher Monckton ends the Global Warming Debate and proves its a Hoax</b></a></span><span class="s16"><b> </b></span><span class="s7">Oct 24, 2013<span class="Apple-converted-space"> </span></span></h1>
+<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px Times; color: #0000ee"><span class="s11"><a href="http://www.youtube.com/watch?v=4LkMweOVOOI"><b>Dr Don Easterbrook Exposes Climate Change Hoax</b></a></span><span class="s8"><b> </b></span><span class="s7">Dec 4, 2013</span></h1>
+<p class="p34"><span class="s6"><a href="https://www.youtube.com/watch?v=Ee8exiJzSkk">Biblical Snowstorm Snow Falls in Egypt For The First Time <span class="s40">. </span></a></span><span class="s7">Dec 14, 2013</span></p>
+<p class="p23"><br></p>
+<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px Times; color: #0000ee"><span class="s11"><a href="https://www.youtube.com/watch?v=E4C5_RztBiw"><b>Amazing snow covering the pyramids and Sphinx</b></a></span><span class="s8"><b> </b></span><span class="s7">Dec 14, 2013</span></h1>
+<p class="p41"><br></p>
+<p class="p23"><br></p>
+<p class="p61"><br></p>
+<p class="p26"><b>2014</b></p>
+<p class="p62"><br></p>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; color: #0000ee"><a href="http://voices.yahoo.com/disneys-frozen-future-movies-tackling-global-12469181.html"><b>Disney's 'Frozen' and the Future of Movies Tackling <i>Global Cooling</i> ...</b></a><b> </b><span class="s7">Yahoo! Jan 1, 2014<span class="Apple-converted-space"> </span></span></h3>
+<p class="p20"><span class="Apple-converted-space"> </span>After seeing <i>global cooling</i> in animated family <i>films</i> like the "Ice Age" franchise and Disney's "Frozen", will we see <i>global cooling</i> in adult sci-fi <b>...</b></p>
+<p class="p23"><br></p>
+<p class="p19"><span class="s11"><a href="http://www.youtube.com/watch?v=Xx9I9L8lnNk"><b>Global Warming Scam is Dead - Nation freezes, Idiot "Liberals" in denial - Chris Hayes on MSNBC</b></a></span><span class="s8"><b><span class="Apple-converted-space">  </span></b>Jan 4, 2014</span></p>
+<p class="p20">"<b>Global Warming</b>" becomes "Climate Change" as the World freezes, Millions of Americans are out of work &amp; this mindless, idiot <b>...</b></p>
+<p class="p23"><br></p>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; color: #0000ee"><span class="s11"><a href="http://www.youtube.com/watch?v=1_b8WXowpSA"><b>Global Cooling: Is an Ice Age Coming?</b></a></span><span class="s8"><b> </b>Jan 7, 2014</span></h3>
+<p class="p21"><span class="s8">by <a href="http://www.youtube.com/user/CBNonline"><span class="s41">The Christian Broadcasting Network</span></a></span> <span class="s8">4,030 views</span></p>
+<p class="p20">The climate is changing, but it's not changing the way the climate change crowd predicted it would. Nature has made a mockery of <b>...</b></p>
+<h1 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 15.0px Times; color: #0000ee"><span class="s11"><a href="http://www.youtube.com/watch?feature=player_embedded&amp;v=nwWqZ6_J2w0"><b>Glenn Beck: White House Global Warming Chart Completely Torn A</b></a></span><span class="s8"><b>part</b></span><span class="s16"><b><span class="Apple-converted-space">  </span></b></span><span class="s7">Jan 9, 2014</span></h1>
+<p class="p20">Pat&amp;Stu took this graph from Obama's Science Advisor, Dr. Holdren, and blew it to pieces!</p>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; color: #0000ee"><span class="s11"><a href="http://www.youtube.com/watch?v=hKv1A2u5iAs"><b>In 1974, Time Magazine Said the Polar Vortex was Caused by Global Cooling</b></a></span><b><span class="Apple-converted-space"> </span></b><span class="s16"><b> </b></span><span class="s7">Jan 9, 2014</span></h3>
+<p class="p20">"But a theory that can confront any contingency with unflagging success cannot be falsified. Its control of the facts is an illusion.</p>
+<p class="p23"><br></p>
+<p class="p19"><a href="http://www.youtube.com/watch?v=ThVoO39cFT8"><b>Michael Savage interviews Dr. Richard <i>Lindzen</i> about facts and myths of climate change - <i>YouTube</i></b></a><span class="s26"><b><i> </i></b></span><span class="s7">Jan 10, 2014<span class="Apple-converted-space"> </span></span></p>
+<p class="p20">Uploaded by ReallyBigSomething</p>
+<p class="p20">Michael Savage interviews Dr. Richard <i>Lindzen</i> about facts and myths of climate change (01/09/2014 <b>...</b></p>
+<p class="p23"><br></p>
+<h1 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 24.0px Times; color: #0000ee"><a href="http://m4gw.com/global-cooling-deniers-is-an-ice-age-coming/"><b>Global Cooling Deniers: Is an Ice Age Coming?</b></a><span class="s8"><b> </b></span><span class="s7">Jan 11, 2014</span></h1>
+<p class="p21"><span class="s8">By <a href="http://m4gw.com/author/M4GW/"><span class="s6">Elmer</span></a> in <a href="http://m4gw.com/category/global-cooling-deniers/"><span class="s6">Global Cooling Deniers</span></a>, <a href="http://m4gw.com/category/news/"><span class="s6">News</span></a>, <a href="http://m4gw.com/category/opinion/"><span class="s6">Opinion</span></a></span></p>
+<p class="p23"><br></p>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 20.0px Times; color: #0000ee"><a href="http://www.google.com/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=29&amp;ved=0CHIQFjAIOBQ&amp;url=http%3A%2F%2Fwww.infowars.com%2Fmit-professor-exposes-climate-change-hysteria%2F&amp;ei=2KxJU4yrEIqF0AHVm4DQDQ&amp;usg=AFQjCNFYTFQ2W5rsqapV5AwfZ5qqZ3yMzw&amp;sig2=jvNIw2khf7e_ZYFWDeJgnA&amp;bvm=bv.64542518,d.dmQ"><b>MIT Professor Exposes <i>Climate</i> Change <i>Hysteria</i> Alex ...</b></a><b><span class="Apple-converted-space">  </span></b><span class="s7">Alex Jones Jan 17, 2014<span class="Apple-converted-space"> </span></span></h3>
+<p class="p20">A world-renowned <i>climate</i> expert is speaking out against the government's ridiculous and continued <i>climate</i> change <i>hysteria</i> ...</p>
+<p class="p23"><br></p>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; color: #0000ee"><a href="https://www.youtube.com/watch?v=2Lye5liWuZw"><b>Physicist William Happer Schooled The CNBC Crowd On ... - YouTube</b></a><b><span class="Apple-converted-space">  </span></b><span class="s7">Jan 17, 2014<span class="Apple-converted-space"> </span></span></h3>
+<p class="p20"><i>Global warming</i> is the biggest scientific hoax of all time.﻿ ... As for <i>Dr</i>. <i>Happer</i>, he has published not a single ...</p>
+<p class="p23"><br></p>
+<h3 style="margin: 0.0px 0.0px 14.0px 0.0px; font: 19.0px Times; color: #0000ee"><a href="http://www.youtube.com/watch?v=quh8KmQR9-M"><b>Shocking Truth:<i>Global Cooling</i>,The Little <i>Ice Age</i> Begins in <i>2014</i> ...</b></a><b><span class="Apple-converted-space">  </span></b><span class="s7">Feb 4, 2014</span></h3>
+<p class="p24"><span class="s11"><a href="http://www.youtube.com/watch?v=7ItmaEvX77Y"><b>John Casey Exposes Global Warming Fraud</b></a></span><span class="s8"><b> </b></span><span class="s7">Feb 9, 2014</span></p>
+<p class="p20">In this video Mr. Casey exposes the global warming fraud and brings your attention to an ice age threat which is threatening our planet and the peak point is about 2030 - 2031.<span class="Apple-converted-space"> </span></p>
+<p class="p20">This video has been uploaded with Mr. John Casey's written permission and is copyright of Mr. John Casey.<br>
+Mr. John L. Casey is the former White House space program adviser, consultant to NASA Headquarters, and space shuttle engineer. He is the President of Space and Science Research Center <a href="http://www.spaceandscience.net/"><span class="s42">http://www.spaceandscience.net</span></a><br>
+He is one of America's most successful climate change researchers and climate prediction experts. Mr. Casey is the leading advocate in the US for a national and international plan to prepare for the next climate change to one<span class="Apple-converted-space"> </span></p>
+<p class="p20">of a dangerous cold climate era.<span class="Apple-converted-space"> </span></p>
+<p class="p20">This new cold era is caused by a historic decline in the Sun's energy output, what he calls a "solar hibernation." <br>
+He is the author of the internationally acclaimed climate science book, "Cold Sun" which describes the rationale for understanding why global warming has ended and the effects of the new cold climate era.</p>
+<p class="p55"><br></p>
+<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px Times; color: #0000ee"><span class="s11"><a href="https://www.youtube.com/watch?v=Pou3sGedeK4"><b>Freeman Dyson: A Global Warming Heretic &amp; Denier</b></a></span><span class="s8"><b> </b></span><span class="s7">Feb 9, 2014</span></h1>
+<h3 style="margin: 0.0px 0.0px 14.0px 0.0px; font: 14.0px Times; color: #0000ee"><a href="http://www.youtube.com/watch?v=NhN9UxWcphg"><b>NEW Polar Vortex coming, Southern Snow, Overall <i>Global Cooling</i></b></a><b><i> </i></b><span class="s7">Feb 10, 2014</span></h3>
+<h3 style="margin: 0.0px 0.0px 14.0px 0.0px; font: 14.0px Times; color: #0000ee"><a href="http://www.youtube.com/watch?v=B8ngTqHxgvA"><b><i>GLOBAL COOLING</i> is advancing -- New ... - YouTube</b></a><b><span class="Apple-converted-space">  </span></b><span class="s7">Feb 11, 2014</span></h3>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; color: #0000ee"><span class="s11"><a href="http://www.youtube.com/watch?v=vqT5LhVPc9Q"><b>Global Warming Scammer Al Gore predicts no Arctic ice In 2013 Summer ice sheet highest </b></a></span><span class="s7">since 2006 Feb 12, 2014</span></h3>
+<p class="p20"><b>Global Warming</b> Scammer Al Gore predicts no Arctic ice In 2013 Summer ice sheet highest since 2006 videos.. Please click here <b>...</b></p>
+<p class="p23"><br></p>
+<h1 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 24.0px Times; color: #0000ee"><span class="s11"><a href="https://www.youtube.com/watch?v=X9m0aY8qGOk"><b>Libertarian Caller: "Global Warming is Bullshit," Epic Debate Ensue</b></a></span><span class="s36"><b>s</b></span><span class="s8"><b> </b></span><span class="s7">Feb 21, 2014</span></h1>
+<p class="p20">Libertarian caller 'James from the South' calls in to debate a number of libertarian talking points and throws in one we don't believe we've had from a Libertarian caller before..."global warming is bullshit"...</p>
+<p class="p23"><br></p>
+<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px Times; color: #0000ee"><span class="s11"><a href="https://www.youtube.com/watch?v=hoCUe-BvX5I"><b>Climate Scientist "The Ocean Ate My Global Warming"</b></a></span><span class="s8"><b> </b></span><span class="s13">Mar 4 2014</span></h1>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; color: #0000ee"><span class="s11"><a href="http://www.youtube.com/watch?v=b0Q4AUnKiJg"><b>CPAC 2014 - What's the Deal with Global Warming?</b></a></span><span class="s8"><b> </b>Mar 7, 2014</span></h3>
+<p class="p20">An Al Gore fever dream? Real but with caveats? Real but irrelevant? Joe Bast (President, The Heartland Institute) moderates the <b>...</b></p>
+<p class="p23"><br></p>
+<p class="p29"><span class="s11"><a href="https://www.youtube.com/watch?v=SyUDGfCNC-k"><b>How the Global Warming Scare Began</b></a></span><span class="s8"><b><span class="Apple-converted-space">  </span></b></span><span class="s7">Mar 12, 2014</span></p>
+<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px Times; color: #0000ee"><span class="s11"><a href="https://www.youtube.com/watch?v=aOG24mXhKWY"><b>Conservative Pundits Demand Bill Nye Stop Bullying Them on Climate Change</b></a></span><span class="s8"><b> </b></span><span class="s7"><b>May 12, 2014</b></span></h1>
+<p class="p65"><a href="https://www.youtube.com/watch?v=XKmMv-I4ZQ8"><b>CLIMATE CROOKS - The Religion of Global Warming Guest: Terry Cook</b></a><span class="s8"><b><span class="Apple-converted-space">  </span></b></span><span class="s43"><b>Mar 14, 2014</b></span></p>
+<p class="p37"><br></p>
+<h1 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 24.0px Times; color: #0000ee"><span class="s11"><a href="https://www.youtube.com/watch?v=7P5RW0Tmp-U"><b>John Coleman of KUSI: How the Global Warming Scare Began</b></a></span><span class="s8"><b> </b></span><span class="s7">Mar 13, 2014</span></h1>
+<p class="p20">A great scientist named Roger Revelle had Al Gore in his class at Harvard and the Global Warming campaign was born.<span class="Apple-converted-space"> </span></p>
+<p class="p20">Revelle tried to calm things down years later, but Gore said Revelle was senile and refused to debate.<span class="Apple-converted-space"> </span></p>
+<p class="p20">John Coleman documents the entire story and shows how our tax dollars are perpetuating the Global Warming alarmist campaign even though temperatures have not risen in years and years.</p>
+<p class="p23"><br></p>
+<h1 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 19.0px Times; color: #0000ee"><span class="s11"><a href="https://www.youtube.com/watch?v=jAWbRWlSlpk"><b>Weather Channel Founder DESTROYS Global Warming Mythology - John Coleman</b></a></span><span class="s16"><b> </b></span><span class="s7"><b>Mar 27, 2014</b></span></h1>
+<p class="p20">Is Global Warming really happening? There are many voices in opposition to the theory and our guest today is just one of those. His name is John Coleman who was the original weathercaster on<span class="Apple-converted-space"> </span></p>
+<p class="p20">"Good Morning, America." After that Coleman founded and served as CEO and President of the Weather Channel.</p>
+<p class="p23"><br></p>
+<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px Times; color: #0000ee"><span class="s11"><a href="https://www.youtube.com/watch?v=ppQl6KYyMqA"><b>Lord Monckton on Climate Change</b></a></span><span class="s8"><b><span class="Apple-converted-space">  </span></b></span><span class="s7">May 6, 2014</span></h1>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 20.0px Times; color: #0000ee"><a href="https://wattsupwiththat.com/2014/07/01/why-does-it-always-seem-to-snow-in-hollywood-global-warming-films/"><b>Why does it always seem to snow in Hollywood Global Warming Films ...</b></a><span class="s44"> </span><span class="s7">Jul 1, 2014</span></h3>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times"><span class="Apple-converted-space"> </span>- I mean, can anyone think of a Hollywood global warming <i>film</i> which .... Even the droughts and famines are regularly triggered by <i>global cooling</i>.</h3>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; min-height: 14.0px"><br></h3>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; color: #0000ee"><a href="http://thefederalist.com/2014/07/01/global-warming-the-movie-starring-freezing/"><b>"Global Warming, the Movie" Starring: Freezing - The Federalist</b></a><span class="s7"> Jul 1, 2014<span class="Apple-converted-space"> </span></span></h3>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times">- Why do <i>global</i> warming <i>movies</i> cast freezing as their featured star? ... tax for <i>global</i> warming (<i>cooling</i>), based on phoney-baloney climate ...</h3>
+<p class="p37"><br></p>
+<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px Times; color: #0000ee"><span class="s11"><a href="https://www.youtube.com/watch?v=ExgKJpJyDXQ"><b>Global Warming / Climate Change Hoax - Dr. Roy Spencer (1)</b><span class="s15"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><b> </b></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></a></span><span class="s7">Jul 10, 2014</span></h1>
+<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px Times; color: #0000ee"><span class="s11"><a href="https://www.youtube.com/watch?v=IrD6k4Vv01k"><b>Joe Bastardi; 9th International Conference on Climate Change</b></a></span><span class="s8"><b> </b></span><span class="s7">Jul 30, 2014</span></h1>
+<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px Times; color: #0000ee"><span class="s11"><a href="https://www.youtube.com/watch?v=HeCqcKYj9Oc"><b>Climate Scientist Murry Salby Demolishes the Global Warming Alarm</b></a></span><span class="s8"><b> </b></span><span class="s7"><b>Aug 13, 2014</b></span></h1>
+<p class="p5"><span class="s11"><a href="https://www.youtube.com/watch?v=V-StCO6IBEM"><b>New Ice Age Near - 58 part evidence (II) </b><span class="s45"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><b>by Rolf Witzsche 8,682 views</b></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></a></span><span class="s26"><b> </b></span><span class="s22"><span class="Apple-converted-space">  </span></span><span class="s7">Aug 17, 2014</span></p>
+<p class="p23"><br></p>
+<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px Times; color: #0000ee"><span class="s11"><a href="https://www.youtube.com/watch?v=HO7m-3Et-bc"><b>best documetary Little Ice Age Big Chill History Channel</b><span class="s15"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><b> </b></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></a></span><span class="s7">Aug 21, 2014</span></h1>
+<h1 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 19.0px Times; color: #0000ee"><span class="s11"><a href="https://www.youtube.com/watch?v=3lJQkYJ12JI"><b>"Weather Channel Founder Calls Global Warming THE GREATEST SCAM IN HISTORY!"</b></a></span><span class="s16"><b> </b></span><span class="s7">Aug 24, 2014</span></h1>
+<h1 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times">Patrick Moore Greenpeace cofounder</h1>
+<h1 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; color: #0000ee; min-height: 18.0px"><br></h1>
+<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 20.0px Times; color: #0000ee"><span class="s11"><a href="https://www.youtube.com/watch?v=2tvpaD4oatk"><b>Michael Loftus on the lies behind the global warming scare industry</b></a></span><span class="s16"><b> </b></span><span class="s17">Sept 17, 2914</span></h1>
+<h1 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times"><span class="s46"><a href="https://www.youtube.com/watch?v=2bRrg96UtMc"><b>Last Hours</b></a></span><span class="s14"><b> </b></span>Sep 19, 2014</h1>
+<p class="p20">The film “Last Hours” is the 2nd film in the Green World Rising Series ( the first one is "Carbon" that is available on this channel).<span class="Apple-converted-space"> </span></p>
+<p class="p20">Last Hours describes a science-based climate scenario where a tipping point to runaway climate change is triggered by massive releases of frozen methane.</p>
+<p class="p20">Methane, a powerful greenhouse gas, has already started to percolate into the open seas and atmosphere from methane hydrate</p>
+<p class="p67"><br></p>
+<h2 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 18.0px Times; color: #0000ee"><a href="http://m4gw.com/awesome-global-warming-comic/"><b>Awesome Global Warming Comic - Minnesotans For Global ...</b></a><b> </b><span class="s7">Sep 19, 2014</span></h2>
+<p class="p20">Tom Nelson. Survey: Research on climate blogs; Response to Don Cheadle; ICYMI: JoNova on skeptical blogosphere, Nov 2013; Anybody have any problem with UN …</p>
+<p class="p23"><br></p>
+<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px Times; color: #0000ee"><span class="s11"><a href="https://www.youtube.com/watch?v=OWXoRSIxyIU"><b>13 Misconceptions About Global Warming</b></a></span><span class="s8"><b> </b></span><span class="s7">Sep 22, 2014</span></h1>
+<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px Times; color: #0000ee"><span class="s11"><a href="https://www.youtube.com/watch?v=5IevqUUWD4o&amp;ebc=ANyPxKrXcgw3tUqjJkP18EHIBrAyzA4XYCl6aU7DcjvIUWSHrVzXScgpF6L3iMyUJ0YLRQJxjeaSarM_AjS1M83lsbmvnueSyg"><b>Arctic Death Spiral and the Methane Time Bomb</b></a></span><span class="s8"><b><span class="Apple-converted-space">  </span></b></span><span class="s7"><b>Sep 23, 2014</b></span></h1>
+<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px Times; color: #0000ee"><span class="s11"><a href="https://www.youtube.com/watch?v=krNzhiiqErk"><b>Lord Monckton dissects DiCaprio`s "Last hours" movie Part 1</b></a></span><span class="s8"><b> </b></span><span class="s7"><b>Sep 30, 2014</b></span></h1>
+<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px Times; color: #0000ee"><span class="s11"><a href="https://www.youtube.com/watch?v=KJ66mpFJVnw"><b>Lord Monckton dissects DiCaprios "Last Hours" movie Part 2</b></a></span><span class="s8"><b><span class="Apple-converted-space">  </span></b></span><span class="s7"><b>Sep 30, 2014</b></span></h1>
+<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px Times; color: #0000ee"><span class="s11"><a href="https://www.youtube.com/watch?v=cxn0jssauig"><b>Has a New Ice Age Begun ?</b></a></span><span class="s8"><b> </b></span><span class="s7">Oct 5, 2014</span></h1>
+<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px Times; color: #0000ee"><span class="s11"><a href="https://www.youtube.com/watch?v=XQanWtkSDHE"><b>NASA Scientist John L. Casey Warns of the Coming Cold Crisis 2015</b></a></span><span class="s8"><b><span class="Apple-converted-space">  </span></b></span><span class="s7"><b>Oct 14, 2014</b></span></h1>
+<h1 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 24.0px Times; color: #0000ee"><span class="s11"><a href="https://www.youtube.com/watch?v=gMdYmAo08O4"><b>The Myth of Carbon Pollution</b></a></span><span class="s8"><b> </b></span><span class="s7">Oct 16, 2014</span></h1>
+<p class="p20">Dr. William Happer (Princeton U) , Chairman of the George C. Marshall Institute,</p>
+<p class="p23"><br></p>
+<p class="p29"><span class="s11"><a href="https://www.youtube.com/watch?v=dKVSHyezW30"><b>Dr. Richard Alley on Undersea Methane</b><span class="s15"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><b><span class="Apple-converted-space"> </span></b></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></a></span><span class="s8"><b> </b></span><span class="s7"><b>Oct 16, 2014</b></span></p>
+<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px Times; color: #0000ee"><span class="s11"><a href="https://www.youtube.com/watch?v=Ih0x0sZ1ElA"><b>10/21/2014 -- Global Cooling -- North Pole Ice growing rapidly + South Pole Record Levels</b><span class="s47"><b></b></span></a></span></h1>
+<h1 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 19.0px Times; color: #0000ee"><span class="s11"><a href="https://www.youtube.com/watch?v=DPtK9tm1kp4"><b>John Coleman Global Warming Is a Complete Hoax to Megyn Kelly. Weather Channel Founder Kelly File</b></a></span><span class="s16"><b> </b></span><span class="s7">Oct 27, 2014</span></h1>
+<p class="p20">megyn kelly and john coleman, weather channel founder talk about the hoax called global warming. John Coleman, meteorologist and co-founder of The Weather Channel,<span class="Apple-converted-space"> </span></p>
+<p class="p20">told Megyn Kelly tonight that he doesn’t believe global warming is real and laughed out loud at anyone who buys into what Al Gore is selling.</p>
+<p class="p68"><br></p>
+<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 20.0px Times; color: #0000ee"><span class="s11"><a href="https://www.youtube.com/watch?v=CD8k7SGH13c"><b>NASA Predicts Ice Age, Food Riots, Mass Deaths And Super Earthquakes</b></a></span><span class="s16"><b> </b></span><span class="s31">Nov 20, 2014</span></h1>
+<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px Times; color: #0000ee"><span class="s11"><a href="https://www.youtube.com/watch?v=8VgV_ltI4kY"><b>2015 ICE AGE COMING ?</b></a></span><span class="s8"><b> </b></span><span class="s31">Nov 21, 2014</span></h1>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; color: #0000ee"><a href="http://www.newsmax.com/FastFeatures/global-warming-movies-skeptics/2014/11/21/id/608443/"><b>Global Warming Films: 4 Influential Movies for Climate Change Skeptics</b></a><span class="s7"> Nov 21, 2014</span></h3>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times"><span class="Apple-converted-space"> </span>- <i>Global</i> Warming <i>Movies</i>: 4 Influential <i>Films</i> for Climate Change Skeptics ... cyclical changes in the planet's warming and <i>cooling</i> that has taken ...</h3>
+<p class="p37"><br></p>
+<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 19.0px Times; color: #0000ee"><span class="s11"><a href="https://www.youtube.com/watch?v=uwjF4MemjL8"><b>NASA 2015 Predictions Will Drop Your Jaw to the Floor: Mini-Ice Age, Deaths, Earthquakes, Riots</b></a></span><span class="s16"><b> </b></span><span class="s31">Nov 21, 2014</span></h1>
+<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 19.0px Times; color: #0000ee"><span class="s11"><a href="https://www.youtube.com/watch?v=6ocCh5yDaqs"><b>Mini Ice Age 2015-2035 | 30 Top Scientists Predict Global Cooling 2015-2050 (27)</b><span class="s36"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><b> </b></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></a></span><span class="s13">Dec 13, 2014</span></h1>
+<h1 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 24.0px Times; color: #0000ee"><a href="http://iceagenow.info/2014/12/video-30-top-scientists-predict-global-cooling-2015-2050/"><b>Video – 30 Top Scientists Predict Global Cooling 2015-2050</b></a><span class="s8"><b><span class="Apple-converted-space"> </span></b></span><span class="s19"><b> <span class="Apple-converted-space">  </span></b></span><span class="s13">Dec 14, 2014</span></h1>
+<h1 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; min-height: 18.0px"><br></h1>
+<h1 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 24.0px Times; color: #0000ee"><span class="s11"><a href="https://www.youtube.com/watch?v=Ta-1uXAanxE"><b>Pope Francis and Low Oil Prices to Save the Planet: Climate Meltdown Roundup For Dec 31, 2014</b><span class="s47"><b></b></span></a></span></h1>
+<p class="p21"><span class="s8"><i>By </i><a href="http://iceagenow.info/author/xilef/"><i>Robert</i></a><i><span class="Apple-converted-space">  </span>· </i><a href="http://iceagenow.info/2014/12/video-30-top-scientists-predict-global-cooling-2015-2050/#comments"><i>48 Comments</i></a></span></p>
+<p class="p43"><br></p>
+<p class="p44"><a href="http://en.wikipedia.org/wiki/Interstellar_%28film%29"><b>Interstellar</b></a><span class="s26"><b> 2014</b></span><span class="s8"><b> (film)</b></span></p>
+<p class="p9"><span class="s6"><a href="http://interstellarfilm.wikia.com/wiki/Dr._Mann">http://interstellarfilm.wikia.com/wiki/Dr._Mann<span class="s48"></span></a></span></p>
+<p class="p48">The main villain, Dr. Mann cooks climate data.</p>
+<p class="p68"><br></p>
+<p class="p5"><a href="http://www.imdb.com/title/tt2802144/"><b>Kingsman: The Secret Service (2014) - IMDb</b></a><span class="s8"><b> </b></span><span class="s16">(film)</span></p>
+<p class="p48">The main villain, Valentine is saving the planet from humans and global warming.<span class="Apple-converted-space"> </span></p>
+<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px Times; min-height: 29.0px"><br></h1>
+<p class="p26"><b>2015</b></p>
+<p class="p33"><br></p>
+<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px Times; color: #0000ee"><span class="s11"><a href="https://www.youtube.com/watch?v=YI6wkC9GAUw"><b>Doomsday Prophet's Eco-Nazi Predictions For 2015</b></a></span><span class="s8"><b><span class="Apple-converted-space">  </span></b></span><span class="s7"><b>Jan 1, 2015</b></span></h1>
+<p class="p23"><br></p>
+<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px Times; color: #0000ee"><span class="s11"><a href="https://www.youtube.com/watch?v=BebPLpv44wU"><b>Harrison Ford, OPEC and Lesbian Bonobos Team Up to Save Planet</b></a></span><span class="s8"><b> </b></span><span class="s7"><b>Jan 2, 2015</b></span></h1>
+<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px Times; color: #0000ee"><span class="s11"><a href="https://www.youtube.com/watch?v=3zr93cTR45w"><b>RAW: Canadian deep freeze</b></a></span><span class="s8"><b> </b></span><span class="s13">Jan 5, 2015</span></h1>
+<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px Times; color: #0000ee"><a href="http://www.sunnewsnetwork.ca/video/search/all/source/the-source/polar-ice-caps-more-stable-than-predicted/3974331924001/page/2"><b>Polar ice caps more stable than predicted</b></a><span class="s8"><b> </b></span><span class="s13">Jan 6, 2015</span></h1>
+<p class="p40"><a href="https://www.youtube.com/watch?v=YI6wkC9GAUw"><b>Doomsday Prophet's Eco-Nazi Predictions For 2015</b></a><b><span class="Apple-converted-space">  </span></b><span class="s7"><b>Jan 12, 2015</b></span></p>
+<p class="p37"><br></p>
+<p class="p29"><span class="s11"><a href="https://www.youtube.com/watch?v=GL8DUdYSbi0"><b>Arctic polar caps 46% increase .Global cooling for the next 30 years !</b></a></span><span class="s8"><b> </b></span><span class="s7"><b>Jan 14, 2015</b></span></p>
+<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px Times; color: #0000ee"><span class="s11"><a href="https://www.youtube.com/watch?v=qygjHbvx7vM"><b>Hidden Agenda of Global Warming Hoax: One-World Government</b><span class="s15"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><b><span class="Apple-converted-space"> </span></b></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></a></span><span class="s8"><b> </b></span><span class="s7">Jan 17, 2015</span></h1>
+<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 16.0px Times; color: #0000ee"><span class="s11"><a href="https://www.youtube.com/watch?v=62cgE3D3O6k"><b>GLOBAL WARMING HOAX EXPOSED: NASA &amp; NOAA Can no longer spin the numbers to propagate the hoax !</b></a></span><span class="s16"><b><span class="Apple-converted-space">  </span></b></span><span class="s13">Jan 25, 2015</span></h1>
+<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px Times; color: #0000ee"><a href="http://www.breitbart.com/video/2015/01/26/mayor-thanks-sharpton-for-climate-change-work-during-blizzard-report/"><b>Mayor Thanks Sharpton for Climate Change Work, During Blizzard Report</b></a><span class="s8"><b><span class="Apple-converted-space">  </span></b></span><span class="s13">Jan 26, 2015</span></h1>
+<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px Times; color: #0000ee"><a href="http://video.foxnews.com/v/4015798272001/climate-alarmists-blame-global-warming-before-blizzard/?#sp=show-clips"><b>Climate alarmists blame global warming before blizzard</b></a><span class="s8"><b> </b></span><span class="s7">Jan. 27, 2015</span></h1>
+<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px Times; color: #0000ee"><a href="http://www.sciencedaily.com/videos/0d211df4e3f24c4bdbb8b56044e1daf9.htm"><b>Why Researchers Say We Should Cut Back On Biofuel</b></a><span class="s49"><b><span class="Apple-converted-space">  </span></b></span><span class="s7">Jan 29, 2015</span></h1>
+<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px Times; color: #0000ee"><span class="s11"><a href="https://www.youtube.com/watch?v=PIdyPdRrgKo"><b>Fox News Host: Climate Change Hoax Costs Us Our Freedom!</b></a></span><span class="s8"><b> </b></span><span class="s7">Feb 12, 2015</span></h1>
+<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px Times; color: #0000ee"><span class="s11"><a href="https://www.youtube.com/watch?v=1s72g109fO8"><b>Boston blizzard 2015 - Global warming mini documentary</b></a></span><span class="s8"><b> </b></span><span class="s7">Feb 15, 2015</span></h1>
+<p class="p70"><span class="s11"><a href="https://www.youtube.com/watch?v=euLW6ikVWhE"><b>The Sick Joke of Fighting Global Warming: Climate Change Meltdown Roundup For Feb 18, 2015</b><span class="s50"><b></b></span></a></span></p>
+<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px Times; color: #0000ee"><span class="s11"><a href="https://www.youtube.com/watch?v=jeX5j441DNQ"><b>Alan Watt<span class="Apple-converted-space">  </span>Global Warming: TOTAL Farce! Pretend to Sweat, While Freezin' Your Arse</b></a></span><span class="s8"><b> </b></span><span class="s7">Feb 22, 2015</span></h1>
+<p class="p29"><span class="s11"><a href="https://www.youtube.com/watch?v=50NSMPv31hk"><b>Climate Change Scam: Al Gore False Predictions</b></a></span><span class="s8"><b> </b></span><span class="s7"><b>Mar 4, 2015</b></span></p>
+<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px Times; color: #0000ee"><span class="s11"><a href="https://www.youtube.com/watch?v=gyGl7nrDYaI"><b>Terrible Truths About Global Warming &amp; World Domination! (2015)</b></a></span><span class="s8"><b> </b></span><span class="s7">Mar 18, 2015</span></h1>
+<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px Times; color: #0000ee"><span class="s11"><a href="https://www.youtube.com/watch?v=BiKfWdXXfIs"><b>Freeman Dyson on the Global Warming Hysteria</b></a></span><span class="s8"><b> </b></span><span class="s7"><b>Apr 6, 2015</b></span></h1>
+<p class="p71"><span class="s6"><a href="https://www.youtube.com/watch?v=nSokHmURVBU">William Happer "The Myth of Carbon Pollution"<span class="s51"><span class="Apple-converted-space"> </span></span></a></span><span class="s8"> Apr 8, 2915</span></p>
+<p class="p72"><br></p>
+<h1 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 16.0px Times; color: #0000ee"><a href="https://www.youtube.com/watch?v=L7wQp0Ir5Vc"><b>Mark Steyn’s Stand Against Climate Alarmism: In-Depth with the Climate Crybully Conniption-Inducer</b></a><span class="s16"><b> </b></span><span class="s7">Apr 25, 2016</span></h1>
+<p class="p20">135,657 views<span class="Apple-converted-space"> </span></p>
+<p class="p37"><br></p>
+<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px Times; color: #0000ee"><span class="s11"><a href="https://www.youtube.com/watch?v=hQcyNepgFK8"><b>Dark Winter - Segment 6</b></a></span><span class="s8"><b><span class="Apple-converted-space">  </span></b></span><span class="s7"><b>Jun 12, 2015</b></span></h1>
+<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px Times; color: #0000ee"><span class="s11"><a href="https://www.youtube.com/watch?v=1FKB1fzX1Eo"><b>Climatologist Tim Ball - The Corruption of Climate Science - 10th ICCC</b></a></span><span class="s8"><b> </b></span><span class="s7"><b>Jun 12, 2015</b></span></h1>
+<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px Times; color: #0000ee"><span class="s11"><a href="https://www.youtube.com/watch?v=yTTaXqVEGkU"><b>The 97% Consensus? Global Warming Unmasked!</b></a></span><span class="s8"><b><span class="Apple-converted-space">  </span></b></span><span class="s7"><b>Jun 12, 2015</b></span></h1>
+<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px Times; color: #0000ee"><span class="s11"><a href="https://www.youtube.com/watch?v=tbAgl7w_Vws"><b>Mark Steyn - The Fraudulent Hockey Stick - 10th ICCC</b></a></span><span class="s8"><b><span class="Apple-converted-space">  </span></b></span><span class="s7"><b>Jun 14, 2015</b></span></h1>
+<p class="p29"><a href="https://www.youtube.com/watch?v=6bARjABDqok"><b>Mark Steyn vs Michael Mann, Climate Change: The Facts, Keynote 4</b></a><span class="s8"><b>, ICCC10<span class="Apple-converted-space"> </span></b></span><span class="s7"> <span class="Apple-converted-space">  </span>191K Jul 2, 2015</span></p>
+<h1 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 24.0px Times; color: #0000ee"><span class="s11"><a href="https://www.youtube.com/watch?v=TCy_UOjEir0"><b>Nobel Laureate Smashes the Global Warming Hoax</b></a></span><span class="s8"><b> </b></span><span class="s7"><b>Jul 12, 2015</b></span></h1>
+<p class="p20">Nobel laureate Ivar Giaever's speech at the Nobel Laureates meeting 1st July 2015.</p>
+<p class="p23"><br></p>
+<p class="p6"><a href="https://www.youtube.com/watch?v=ELxwdEzu6eM"><b>Scientists Warn of New Mini Ice Age to Hit by 2030</b></a><b><span class="Apple-converted-space">  </span></b><span class="s7"> <a href="http://www.bing.com/videos/search?q=ShantiUniverse&amp;qft=+Filterui:userpage-shantiuniverse&amp;FORM=VQCHNL"><span class="s26">ShantiUniverse</span></a></span><span class="s22"> </span><span class="s7">7/13/2015</span></p>
+<h1 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; min-height: 14.0px"><br></h1>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; color: #0000ee"><a href="https://www.youtube.com/watch?v=RkdbSxyXftc"><b>What They Haven't Told You about Climate Change - YouTube</b></a><b> </b><span class="s7">by PragerU Jul 27, 2015</span></h3>
+<p class="p20">Since time immemorial, our climate has been and will always be changing. Patrick Moore explains why “<i>climate</i> ...</p>
+<p class="p68"><br></p>
+<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px Times; color: #0000ee"><span class="s11"><a href="https://www.youtube.com/watch?v=e3AO1TbajXY"><b>Have Storms Gotten Worse Since Hurricane Katrina?</b></a></span><span class="s8"><b> </b></span><span class="s7"><b>Aug 26, 2015</b></span></h1>
+<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px Times; color: #0000ee"><span class="s11"><a href="https://www.youtube.com/watch?v=Jt6I1R1l6bc"><b>Why the Left overthrew Tony Abbott as PM</b></a></span><span class="s36"><b> <span class="Apple-converted-space">  </span></b></span><span class="s7"><b>Sep 18, 2015</b></span></h1>
+<h1 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 24.0px Times; color: #0000ee"><span class="s11"><a href="https://www.youtube.com/watch?v=n32xl9fy0Wo"><b>Our Last Year of Freedom? - Christopher Moncktons Warning</b></a></span><span class="s8"><b> </b></span><span class="s7"><b>Oct 26, 2015</b></span></h1>
+<p class="p20">Lord Christopher Monckton of Brenchley gives a timely warning in September 2014 at the Irish Club in Brisbane, Australia about the possible loss of our hard-won freedoms and democracies to un-elected<span class="Apple-converted-space"> </span></p>
+<p class="p20">bureaucrats at the UN in the upcoming Paris COP21 meeting.</p>
+<p class="p23"><br></p>
+<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px Times; color: #0000ee"><span class="s11"><a href="https://www.youtube.com/watch?v=FsTweZIRpos"><b>Climate Science for the Layman - Professor Happer</b></a></span><span class="s8"><b> </b></span><span class="s7"><b>Nov 30, 2015</b></span></h1>
+<h3 style="margin: 0.0px 0.0px 14.0px 0.0px; font: 19.0px Times; color: #0000ee"><a href="https://pjmedia.com/lifestyle/2015/12/1/7-stupid-movies-about-climate-change/"><b>7 Stupid Movies About Climate Change</b></a><span class="s8"><b> </b></span><span class="s7"> 12/1/2015</span></h3>
+<p class="p44"><span class="s6"><a href="https://www.youtube.com/watch?v=o026MpoxQmQ">Climate Hustle Paris Premiere</a></span><span class="s8"> <span class="Apple-converted-space"> </span></span><span class="s7"> <a href="https://www.youtube.com/watch?v=o026MpoxQmQ"><span class="s6">YouTube</span></a>  · 12/8/2015</span></p>
+<p class="p23"><br></p>
+<p class="p3"><span class="s6"><a href="https://www.youtube.com/watch?v=eZLAt-cEIW0">Preview of "The Climate Hustle" with Marc Morano</a></span><span class="s8"><span class="Apple-converted-space"> </span><a href="https://www.youtube.com/watch?v=eZLAt-cEIW0"><span class="s2"> Y</span><span class="s52">ouTube</span></a></span><span class="s7">  · 12/2/2015</span></p>
+<p class="p23"><br></p>
+<h1 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 21.0px Times; color: #0000ee"><a href="http://www.motherjones.com/environment/2015/12/ted-cruz-climate-change-pause"><b>Watch This Navy Admiral Destroy Ted Cruz's Climate Myths<span class="Apple-converted-space"> </span></b></a><span class="s16"><b> </b></span><span class="s44"><i>MotherJones</i></span><span class="s16"><b> </b></span><span class="s7">Dec. 8, 2015<span class="Apple-converted-space"> </span></span></h1>
+<p class="p21"><span class="s8">—By <a href="http://www.motherjones.com/authors/jeremy-schulman"><span class="s6">Jeremy Schulman</span></a></span></p>
+<p class="p41"><br></p>
+<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 19.0px Times; color: #0000ee"><a href="https://www.youtube.com/watch?v=bTM13sI2BFQ"><b>Mark Steyn rebukes democrats in climate hearing: 'You're effectively enforcing a state ideology'</b></a><span class="s16"><b> </b></span><span class="s7">Dec. 8, 2015<span class="Apple-converted-space"> </span></span></h1>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; color: #0000ee"><a href="https://www.youtube.com/watch?v=tULDE_gYmuc"><b>Princeton Professor and climate denier William Happer ... - YouTube</b></a><b> </b><span class="s7">Dec 8, 2015 -</span></h3>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times">Uploaded by Greenpeace USA</h3>
+<p class="p20">Princeton <i>Professor</i> and climate denier William <i>Happer</i> exposed for fossil ..... Greenpeace are the biggest ...</p>
+<p class="p23"><br></p>
+<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 16.0px Times; color: #0000ee"><a href="https://www.youtube.com/watch?v=Oh6zDbWMuP0"><b>Tables turned: Scientist Judith Curry and Author Mark Steyn question, school Sen Markey on climate</b></a><span class="s7"><span class="Apple-converted-space">  </span>Dec 8, 2015</span></h1>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; color: #0000ee"><a href="https://www.youtube.com/watch?v=J6ec1DsMH1M"><b>Greenpeace Reveals Professors Paid to Deny Climate Change ...</b></a><b> </b><span class="s7">Dec 10, 2015</span></h3>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times"><span class="Apple-converted-space"> </span>- Uploaded by TheLipTV2</h3>
+<p class="p20">Greenpeace Reveals <i>Professors</i> Paid to Deny <i>Climate Change</i> ... at US universities and ousted <i>Dr</i>. William ...</p>
+<p class="p23"><br></p>
+<p class="p23"><br></p>
+<p class="p71"><span class="s6"><a href="https://www.youtube.com/watch?v=SXxHfb66ZgM">Nobel Laureate in Physics; "Global Warming is Pseudoscience"<span class="s51"><span class="Apple-converted-space"> </span></span></a></span><span class="s8"> </span><span class="s7">Dec 17, 2015</span></p>
+<p class="p23"><br></p>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 20.0px Times; color: #0000ee"><a href="https://www.youtube.com/watch?v=G_5az5OIX2k"><b>Nobel Laureate Smashes the Global Warming Hoax ...</b></a><b><span class="Apple-converted-space">  </span></b><span class="s7">Dec 25, 2015<span class="Apple-converted-space"> </span></span></h3>
+<p class="p20">mirrored and copied from https://www.youtube.com/channel/UCAR0Oi4L0Om4F26uwpANgCg <i>Nobel laureate</i> ... Mike Mann</p>
+<p class="p23"><br></p>
+<p class="p23"><br></p>
+<h1 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 24.0px Times; color: #0000ee"><a href="http://www.imdb.com/title/tt2780714/"><b>Antarctic Edge: 70° South (2015)</b></a></h1>
+<h4 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times"><b>Director: </b><a href="http://www.imdb.com/name/nm0782355?ref_=tt_ov_dr"><span class="s5">Dena Seidel</span></a> <b>Writer: </b><a href="http://www.imdb.com/name/nm0782355?ref_=tt_ov_wr"><span class="s5">Dena Seidel</span></a> (story)</h4>
+<h4 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; color: #0000ee"><span class="s8"><b>Stars: </b><a href="http://www.imdb.com/name/nm5398459?ref_=tt_ov_st_sm"><span class="s6">Naderev Sano</span></a>, <a href="http://www.imdb.com/name/nm7525861?ref_=tt_ov_st_sm"><span class="s6">Oscar Schofield</span></a>, <a href="http://www.imdb.com/name/nm7525862?ref_=tt_ov_st_sm"><span class="s6">Hugh Ducklow</span></a> | <a href="http://www.imdb.com/title/tt2780714/fullcredits?ref_=tt_ov_st_sm"><span class="s6">See full cast &amp; crew</span></a> »</span></h4>
+<p class="p23"><br></p>
+<p class="p23"><br></p>
+<p class="p23"><br></p>
+<p class="p23"><br></p>
+<p class="p26"><b>2016</b></p>
+<p class="p33"><br></p>
+<p class="p6"><span class="s6"><a href="https://www.youtube.com/watch?v=VCoqRk7QwVU">Dennis Miller Weigh On Global Warming &amp; Putin O'Reilly</a></span><span class="Apple-converted-space"> </span><span class="s12"> </span><span class="s7">1/21/2016</span></p>
+<p class="p33"><br></p>
+<p class="p6"><span class="s6"><a href="https://www.youtube.com/watch?v=vkmDu_H1aAo">Global warming is a SCAM w/ Prof Ian Plimer</a></span><span class="s12"><span class="Apple-converted-space">  </span>Feb 5, 2016</span></p>
+<p class="p74"><br></p>
+<h2 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 18.0px Times; color: #0000ee"><a href="http://www.globalclimatescam.com/al-gore/leo-dicaprios-manbearpig-speech-at-the-oscars/"><b>Leo DiCaprio’s ManBearPig Speech at the Oscars | Global ...</b></a><b> </b><span class="s7">March 1, 2016</span></h2>
+<p class="p20">Recent Posts. <b>Leo DiCaprio’s ManBearPig Speech at the Oscars</b>; Why I like Obama’s Oil Tax With Just A Few Tweaks; Reprieve! Binding Paris treaty now voluntary mush<span class="Apple-converted-space"> </span></p>
+<p class="p23"><br></p>
+<p class="p75"><a href="http://grist.org/climate-energy/david-kochs-impact-on-the-longest-fossil-fuel-sit-in-ever/"><b>MIT’s long-running divestment sit-in ends, but the fight isn’t over</b></a><span class="s53"><b>  </b></span><span class="s54">March 3, 2016</span></p>
+<p class="p21"><span class="s55"><a href="https://www.youtube.com/watch?v=B1KYvz7FFrE"><b>Global Cooling</b></a></span><span class="s56"><b> </b></span><span class="s24"><span class="Apple-converted-space"> </span></span><span class="s8"> <a href="http://www.bing.com/videos/search?q=worldcyclesinstitute&amp;qft=+Filterui:userpage-ucrfo1ayuy6jf3pp7uouwidq&amp;FORM=VQCHNL"><span class="s6">worldcyclesinstitut</span></a></span><span class="s26">e </span><span class="s8">3/13/2016</span></p>
+<p class="p76"><br></p>
+<p class="p47"><a href="http://iceagenow.info/heavy-snowfall-north-india-video/"><b>Heavy snowfall in North India – Video</b></a><span class="s8"><b><span class="Apple-converted-space"> </span></b><a href="http://iceagenow.info/heavy-snowfall-north-india-video/"><span class="s57"> </span></a><a href="http://iceagenow.info/author/xilef/"><span class="s58">Robert</span></a></span><span class="s25"> <a href="http://iceagenow.info/heavy-snowfall-north-india-video/#comments"><span class="s59">1 Comment</span></a></span><span class="s58"> </span><span class="s31">March 15, 2016</span></p>
+<p class="p48">North India on high alert due to freezing temperatures due to heavy snowfall. </p>
+<p class="p1"><br></p>
+<p class="p65"><a href="http://iceagenow.info/heavy-snowfall-hits-erzurum-turkey/"><b>Heavy snowfall paralyzes Erzurum, Turkey – Video</b></a><span class="s8"><b><span class="Apple-converted-space">  </span></b><a href="http://iceagenow.info/author/xilef/"><span class="s48">Robert</span></a></span><span class="s60"><span class="Apple-converted-space"> </span><a href="http://iceagenow.info/heavy-snowfall-hits-erzurum-turkey/"><span class="s10"> </span></a></span><span class="s31">March 15, 2016</span></p>
+<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px Times; color: #0000ee"><span class="s11"><a href="https://www.youtube.com/watch?v=VzCXwF39enc&amp;t=95s"><b>Global warming Is a Blatant Lie &amp; this Short video proves it</b></a></span><span class="s36"><b> .</b></span><span class="s8"><b><span class="Apple-converted-space">  </span></b></span><span class="s7"><b>May 3, 2016</b></span></h1>
+<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px Times; color: #0000ee"><span class="s11"><a href="https://www.youtube.com/watch?v=RAbELlpAxe8"><b>Head to Head - Climate change: Fact or fiction?</b><span class="s15"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><b> </b></span></span></span></span></span></span></span></span></a><a href="https://www.youtube.com/channel/UCNye-wNBqNL5ZzHSJj3l8Bg"><span class="s61"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed">Al Jazeera English</span></span></span></span></span></span></span></span></a></span><span class="s9"> </span><span class="s7"><b>May 16, 2016</b></span></h1>
+<p class="p20"><span class="s62"><a href="https://www.youtube.com/watch?v=d-ZyXbks4i4"><b>America Ice age</b></a></span><span class="Apple-converted-space">    </span><a href="http://www.bing.com/videos/search?q=seawapa.org&amp;qft=+Filterui:userpage-uccnrj7hatjamhuxqcp24gzq&amp;FORM=VQCHNL"><span class="s26">seawapa.org</span></a><span class="Apple-converted-space">  </span>· 7/6/2016</p>
+<p class="p59"><br></p>
+<p class="p5"><a href="https://www.youtube.com/watch?v=Rvi8UVa6iFE"><b>Global Warming Is Repeating Itself...4 Million Years Later</b></a><b> <span class="Apple-converted-space">  </span></b><span class="s31">July</span><span class="s9"> 13, 2016</span></p>
+<p class="p41"><br></p>
+<p class="p5"><a href="https://www.youtube.com/watch?v=4DpTkk0R03U"><b>Mini Ice Age: History Shows Global Cooling Is Coming, Not ...</b></a><b> </b><a href="http://www.bing.com/videos/search?q=DAHBOO77&amp;qft=+Filterui:userpage-dahboo77&amp;FORM=VQCHNL"><span class="s22">DAHBOO77</span></a><span class="s22"><span class="Apple-converted-space">  </span></span><span class="s7">7/3/2016<span class="Apple-converted-space"> </span></span></p>
+<p class="p23"><br></p>
+<h1 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 24.0px Times; color: #0000ee"><span class="s11"><a href="https://www.youtube.com/watch?v=sGZqWMEpyUM"><b>Prof Salby Atmospheric Carbon, 18 July 2016, University College London</b></a></span><span class="s8"><b><span class="Apple-converted-space"> </span></b></span><span class="s7"> Aug 1, 2016<span class="Apple-converted-space"> </span></span></h1>
+<h1 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 16.0px Georgia">Astrophysicist Dr. Murry Salby Compares CO2 ‘Pseudo-Science’ To The Medical Quackery Of Blood-Letting!</h1>
+<h1 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 18.0px Times; color: #0000ee; min-height: 23.0px"><br></h1>
+<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 12.0px Times"><span class="s63"><a href="http://nypost.com/2016/10/14/the-great-barrier-reef-is-dead-at-25-million-years-old/"><b>Great Barrier Reef dead at 25 million</b></a></span><span class="s14"><b> <span class="Apple-converted-space">  </span></b></span>By Tom Gillespie, The Sun October 14, 2016 |</h1>
+<h1 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 24.0px Times; color: #0000ee"><span class="s11"><a href="https://www.youtube.com/watch?v=90CkXVF-Q8M"><b>Before the Flood - Full Movie | National Geographic</b></a></span><span class="s8"><b><span class="Apple-converted-space">  </span></b></span><span class="s7"><b>Oct 30, 2016</b></span></h1>
+<p class="p20">Join Leonardo DiCaprio as he explores the topic of climate change, and discovers what must be done today to prevent catastrophic disruption of life on our planet.</p>
+<p class="p67"><br></p>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; color: #0000ee"><a href="https://www.youtube.com/watch?v=FsTweZIRpos"><b>Climate Science for the Layman - Professor Happer - YouTube</b></a><b> </b><span class="s7">Nov 30, 2015 -<span class="Apple-converted-space"> </span></span></h3>
+<p class="p20"><i>Climate science for the layman</i> as <i>Professor</i> of Physics at Princeton University makes it simple. For a ...</p>
+<p class="p23"><br></p>
+<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px Times; color: #0000ee"><span class="s11"><a href="https://www.youtube.com/watch?v=WCU6bzRypZ4"><b>Global Warming Debunked | William Happer and Stefan Molyneux</b></a></span><span class="s7"> <span class="Apple-converted-space">  </span><b>Dec 3, 2016</b></span></h1>
+<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px Times; color: #0000ee"><span class="s11"><a href="https://www.youtube.com/watch?v=t69huBU8xyM"><b>Update 2: The most cost effective way to increase coral growth? | 52 Weeks of Reefing #BRS160</b><span class="s15"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><b><span class="Apple-converted-space"> </span></b></span></span></span></span></span></span></span></a></span><span class="s8"><b> </b></span><span class="s7"><b>Dec 9, 2016</b></span></h1>
+<p class="p23"><br></p>
+<p class="p23"><br></p>
+<p class="p26"><b>2017</b></p>
+<p class="p33"><br></p>
+<p class="p71"><span class="s6"><a href="https://www.youtube.com/watch?v=EHFfOOF-6Fs&amp;t=352s">Global Warming Is A blatant LIE &amp; This video scientifically Proves it.</a></span><span class="s8"> </span><span class="s64">Jan 22, 2017</span></p>
+<p class="p33"><br></p>
+<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px Times; color: #0000ee"><span class="s11"><a href="https://www.youtube.com/watch?v=DJBDI7jVMqM"><b>Global Warming Hoax, Best Document Ever</b></a></span><span class="s8"><b><span class="Apple-converted-space">  </span></b></span><span class="s7"><b>Feb 5, 2017</b></span></h1>
+<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px Times; color: #0000ee"><span class="s11"><a href="https://www.youtube.com/watch?v=NZAs_h0-8Pc"><b>NOAA Whistleblower Confirms Global Warming Is A Scam</b><span class="s15"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><span style="direction: ltr; unicode-bidi: embed"><b><span class="Apple-converted-space"> </span></b></span></span></span></span></span></span></span></a></span><span class="s8"><b> </b></span><span class="s7"><b>Feb 13, 2017</b></span></h1>
+<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px Times; color: #0000ee"><a href="https://www.youtube.com/watch?v=FqiZQnwNQ_A"><b>Climate Change salesman Bill Nye is Destroyed</b></a><span class="s8"><b><span class="Apple-converted-space">  </span></b></span><span class="s7">Apr 23, 2017</span></h1>
+<p class="p34"><span class="s11"><a href="https://www.youtube.com/watch?v=y09kyx9YgUM"><b>Climate Expert Jim Hansen explains the Climate Crisis</b></a></span><span class="s65"> </span><span class="s7"><b>May 20, 2017</b></span></p>
+<p class="p23"><br></p>
+<p class="p29"><a href="https://www.youtube.com/watch?v=QtkYHu6Lt1c"><b>Mark Steyn: Trump Vs. The Global Warming Lunatics</b></a><span class="s8"><b> </b></span><span class="s7">Jun 2, 2017</span></p>
+<p class="p71"><span class="s6"><a href="https://www.youtube.com/watch?v=hfuDe35yB-I">CLIMATE CHANGE IS A HOAX, Real meteorologist destroys CNN host<span class="s51"><span class="Apple-converted-space"> </span></span></a></span><span class="s8"> </span><span class="s66">Jun 7, 2017</span></p>
+<p class="p80"><br></p>
+<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 18.0px Times; color: #0000ee"><a href="https://www.youtube.com/watch?v=4YMttEhtgpk"><b>The Climate Change Hoax, with Professor Willie Soon at Camp Constitution 7-3-17</b></a><span class="s16"><b><span class="Apple-converted-space"> </span></b></span><span class="s7"> Jul 13, 2017</span></h1>
+<p class="p69"><a href="https://www.youtube.com/watch?v=NjlC02NsIt0"><b>GLOBAL WARMING IS THE BIGGEST FRAUD IN HISTORY</b></a><span class="s67"><b> </b></span><span class="s16"><b>- </b></span><span class="s19"><b>Dan Pena</b></span><span class="s16"><b> </b></span><span class="s17">D</span><span class="s7">ec 28, 2017</span></p>
+<p class="p80"><br></p>
+<p class="p26"><b>2018</b></p>
+<p class="p33"><br></p>
+<h1 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 18.0px Times; color: #0000ee"><a href="https://www.youtube.com/watch?v=H4vaquCoLA4"><b>Bitterly Cold Global Warming ft. Richard Lindzen</b></a><span class="s8"><b> </b></span><span class="s7">Published on Jan 9, 2018</span></h1>
+<p class="p20">106,485 views <a href="https://www.youtube.com/channel/UCaeO5vkdj5xOQHp4UmIN6dw"><span class="s10">The Daily Wire</span></a></p>
+<p class="p23"><br></p>
+<p class="p23"><br></p>
+<p class="p33"><br></p>
+<p class="p82"><br></p>
+<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px Times; min-height: 29.0px"><br></h1>
+<p class="p83"><br></p>
+<p class="p84"><br></p>
+<p class="p1"><br></p>
+<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px Times; color: #0000ee; min-height: 29.0px"><br></h1>
+<h3 style="margin: 0.0px 0.0px 14.0px 0.0px; font: 14.0px Times; min-height: 18.0px"><br></h3>
+<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px Times; min-height: 29.0px"><br></h1>
+<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px Times; color: #0000ee; min-height: 29.0px"><br></h1>
+<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px Times; min-height: 29.0px"><br></h1>
+<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px Times; min-height: 29.0px"><br></h1>
+<h3 style="margin: 0.0px 0.0px 14.0px 0.0px; font: 14.0px Times; min-height: 18.0px"><br></h3>
+<p class="p23"><br></p>
+<p class="p23"><br></p>
+<p class="p23"><br></p>
+</body>
+</html>

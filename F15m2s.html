@@ -1,0 +1,1667 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="1265.21">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; min-height: 18.0px}
+    p.p3 {margin: 0.0px 0.0px 12.0px 0.0px; font: 14.0px Times}
+    p.p4 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px 'Lucida Grande'}
+    p.p5 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px 'Lucida Grande'; min-height: 17.0px}
+    p.p6 {margin: 0.0px 0.0px 12.0px 0.0px; font: 14.0px Times; min-height: 18.0px}
+    p.p7 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times}
+    p.p8 {margin: 0.0px 0.0px 0.0px 0.0px; font: 16.0px Times}
+    p.p9 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 14.0px Times}
+    p.p10 {margin: 0.0px 0.0px 0.0px 0.0px; font: 6.0px Times}
+    p.p11 {margin: 0.0px 0.0px 0.0px 0.0px; font: 17.0px Times}
+    p.p12 {margin: 0.0px 0.0px 0.0px 0.0px; font: 3.0px Times}
+    p.p13 {margin: 0.0px 0.0px 0.0px 0.0px; font: 7.0px Times}
+    p.p14 {margin: 0.0px 0.0px 0.0px 0.0px; font: 19.0px Times}
+    p.p15 {margin: 0.0px 0.0px 0.0px 0.0px; font: 9.0px Times; min-height: 11.0px}
+    span.s1 {font: 14.0px 'Lucida Grande'}
+    span.s2 {text-decoration: underline}
+    span.s3 {font: 7.0px Times}
+    span.s4 {font: 19.0px Times}
+    span.s5 {font: 17.0px Times}
+    span.s6 {font: 12.0px Times}
+    span.s7 {font: 14.0px Times}
+    span.s8 {font: 6.0px Times}
+    span.s9 {font: 18.0px Times}
+    table.t1 {border-collapse: collapse}
+    table.t2 {width: 564.0px; border-style: solid; border-width: 1.0px 1.0px 1.0px 1.0px; border-color: #808080 #808080 #808080 #808080}
+    td.td1 {width: 34.0px; border-style: solid; border-width: 1.0px 1.0px 1.0px 1.0px; border-color: #cbcbcb #cbcbcb #cbcbcb #cbcbcb; padding: 0.0px 5.0px 0.0px 5.0px}
+    td.td2 {width: 33.0px; border-style: solid; border-width: 1.0px 1.0px 1.0px 1.0px; border-color: #cbcbcb #cbcbcb #cbcbcb #cbcbcb; padding: 0.0px 5.0px 0.0px 5.0px}
+    td.td3 {width: 29.0px; border-style: solid; border-width: 1.0px 1.0px 1.0px 1.0px; border-color: #cbcbcb #cbcbcb #cbcbcb #cbcbcb; padding: 0.0px 5.0px 0.0px 5.0px}
+    td.td4 {width: 27.0px; border-style: solid; border-width: 1.0px 1.0px 1.0px 1.0px; border-color: #cbcbcb #cbcbcb #cbcbcb #cbcbcb; padding: 0.0px 5.0px 0.0px 5.0px}
+    td.td5 {width: 20.0px; border-style: solid; border-width: 1.0px 1.0px 1.0px 1.0px; border-color: #cbcbcb #cbcbcb #cbcbcb #cbcbcb; padding: 0.0px 5.0px 0.0px 5.0px}
+    td.td6 {width: 13.0px; border-style: solid; border-width: 1.0px 1.0px 1.0px 1.0px; border-color: #cbcbcb #cbcbcb #cbcbcb #cbcbcb; padding: 0.0px 5.0px 0.0px 5.0px}
+    td.td7 {width: 32.0px; border-style: solid; border-width: 1.0px 1.0px 1.0px 1.0px; border-color: #cbcbcb #cbcbcb #cbcbcb #cbcbcb; padding: 0.0px 5.0px 0.0px 5.0px}
+    td.td8 {width: 16.0px; border-style: solid; border-width: 1.0px 1.0px 1.0px 1.0px; border-color: #cbcbcb #cbcbcb #cbcbcb #cbcbcb; padding: 0.0px 5.0px 0.0px 5.0px}
+    td.td9 {width: 23.0px; border-style: solid; border-width: 1.0px 1.0px 1.0px 1.0px; border-color: #cbcbcb #cbcbcb #cbcbcb #cbcbcb; padding: 0.0px 5.0px 0.0px 5.0px}
+    td.td10 {width: 19.0px; border-style: solid; border-width: 1.0px 1.0px 1.0px 1.0px; border-color: #cbcbcb #cbcbcb #cbcbcb #cbcbcb; padding: 0.0px 5.0px 0.0px 5.0px}
+    td.td11 {width: 24.0px; border-style: solid; border-width: 1.0px 1.0px 1.0px 1.0px; border-color: #cbcbcb #cbcbcb #cbcbcb #cbcbcb; padding: 0.0px 5.0px 0.0px 5.0px}
+    td.td12 {width: 18.0px; border-style: solid; border-width: 1.0px 1.0px 1.0px 1.0px; border-color: #cbcbcb #cbcbcb #cbcbcb #cbcbcb; padding: 0.0px 5.0px 0.0px 5.0px}
+    td.td13 {width: 15.0px; border-style: solid; border-width: 1.0px 1.0px 1.0px 1.0px; border-color: #cbcbcb #cbcbcb #cbcbcb #cbcbcb; padding: 0.0px 5.0px 0.0px 5.0px}
+    td.td14 {width: 26.0px; border-style: solid; border-width: 1.0px 1.0px 1.0px 1.0px; border-color: #cbcbcb #cbcbcb #cbcbcb #cbcbcb; padding: 0.0px 5.0px 0.0px 5.0px}
+    td.td15 {width: 41.0px; border-style: solid; border-width: 1.0px 1.0px 1.0px 1.0px; border-color: #cbcbcb #cbcbcb #cbcbcb #cbcbcb; padding: 0.0px 5.0px 0.0px 5.0px}
+    td.td16 {width: 42.0px; border-style: solid; border-width: 1.0px 1.0px 1.0px 1.0px; border-color: #cbcbcb #cbcbcb #cbcbcb #cbcbcb; padding: 0.0px 5.0px 0.0px 5.0px}
+    td.td17 {width: 36.0px; border-style: solid; border-width: 1.0px 1.0px 1.0px 1.0px; border-color: #cbcbcb #cbcbcb #cbcbcb #cbcbcb; padding: 0.0px 5.0px 0.0px 5.0px}
+    td.td18 {width: 10.0px; border-style: solid; border-width: 1.0px 1.0px 1.0px 1.0px; border-color: #cbcbcb #cbcbcb #cbcbcb #cbcbcb; padding: 0.0px 5.0px 0.0px 5.0px}
+    td.td19 {width: 17.0px; border-style: solid; border-width: 1.0px 1.0px 1.0px 1.0px; border-color: #cbcbcb #cbcbcb #cbcbcb #cbcbcb; padding: 0.0px 5.0px 0.0px 5.0px}
+    td.td20 {width: 14.0px; border-style: solid; border-width: 1.0px 1.0px 1.0px 1.0px; border-color: #cbcbcb #cbcbcb #cbcbcb #cbcbcb; padding: 0.0px 5.0px 0.0px 5.0px}
+    td.td21 {width: 8.0px; border-style: solid; border-width: 1.0px 1.0px 1.0px 1.0px; border-color: #cbcbcb #cbcbcb #cbcbcb #cbcbcb; padding: 0.0px 5.0px 0.0px 5.0px}
+    td.td22 {width: 27.0px; border-style: solid; border-width: 1.0px 1.0px 1.0px 1.0px; border-color: #808080 #808080 #808080 #808080; padding: 2.0px 2.0px 2.0px 2.0px}
+    td.td23 {width: 28.0px; border-style: solid; border-width: 1.0px 1.0px 1.0px 1.0px; border-color: #808080 #808080 #808080 #808080; padding: 2.0px 2.0px 2.0px 2.0px}
+    td.td24 {width: 38.0px; border-style: solid; border-width: 1.0px 1.0px 1.0px 1.0px; border-color: #808080 #808080 #808080 #808080; padding: 2.0px 2.0px 2.0px 2.0px}
+    td.td25 {width: 47.0px; border-style: solid; border-width: 1.0px 1.0px 1.0px 1.0px; border-color: #808080 #808080 #808080 #808080; padding: 2.0px 2.0px 2.0px 2.0px}
+    td.td26 {width: 54.0px; border-style: solid; border-width: 1.0px 1.0px 1.0px 1.0px; border-color: #808080 #808080 #808080 #808080; padding: 2.0px 2.0px 2.0px 2.0px}
+    td.td27 {width: 52.0px; border-style: solid; border-width: 1.0px 1.0px 1.0px 1.0px; border-color: #808080 #808080 #808080 #808080; padding: 2.0px 2.0px 2.0px 2.0px}
+    td.td28 {width: 62.0px; border-style: solid; border-width: 1.0px 1.0px 1.0px 1.0px; border-color: #808080 #808080 #808080 #808080; padding: 2.0px 2.0px 2.0px 2.0px}
+    td.td29 {width: 57.0px; border-style: solid; border-width: 1.0px 1.0px 1.0px 1.0px; border-color: #808080 #808080 #808080 #808080; padding: 2.0px 2.0px 2.0px 2.0px}
+    td.td30 {width: 46.0px; border-style: solid; border-width: 1.0px 1.0px 1.0px 1.0px; border-color: #808080 #808080 #808080 #808080; padding: 2.0px 2.0px 2.0px 2.0px}
+    td.td31 {width: 93.0px; border-style: solid; border-width: 1.0px 1.0px 1.0px 1.0px; border-color: #808080 #808080 #808080 #808080; padding: 2.0px 2.0px 2.0px 2.0px}
+    td.td32 {width: 55.0px; border-style: solid; border-width: 1.0px 1.0px 1.0px 1.0px; border-color: #cbcbcb #cbcbcb #cbcbcb #cbcbcb; padding: 0.0px 5.0px 0.0px 5.0px}
+    td.td33 {width: 54.0px; border-style: solid; border-width: 1.0px 1.0px 1.0px 1.0px; border-color: #cbcbcb #cbcbcb #cbcbcb #cbcbcb; padding: 0.0px 5.0px 0.0px 5.0px}
+    td.td34 {width: 47.0px; border-style: solid; border-width: 1.0px 1.0px 1.0px 1.0px; border-color: #cbcbcb #cbcbcb #cbcbcb #cbcbcb; padding: 0.0px 5.0px 0.0px 5.0px}
+    td.td35 {width: 58.0px; border-style: solid; border-width: 1.0px 1.0px 1.0px 1.0px; border-color: #cbcbcb #cbcbcb #cbcbcb #cbcbcb; padding: 0.0px 5.0px 0.0px 5.0px}
+    td.td36 {width: 44.0px; border-style: solid; border-width: 1.0px 1.0px 1.0px 1.0px; border-color: #cbcbcb #cbcbcb #cbcbcb #cbcbcb; padding: 0.0px 5.0px 0.0px 5.0px}
+    td.td37 {width: 53.0px; border-style: solid; border-width: 1.0px 1.0px 1.0px 1.0px; border-color: #cbcbcb #cbcbcb #cbcbcb #cbcbcb; padding: 0.0px 5.0px 0.0px 5.0px}
+    td.td38 {width: 100.0px; border-style: solid; border-width: 1.0px 1.0px 1.0px 1.0px; border-color: #cbcbcb #cbcbcb #cbcbcb #cbcbcb; padding: 0.0px 5.0px 0.0px 5.0px}
+    td.td39 {width: 49.0px; border-style: solid; border-width: 1.0px 1.0px 1.0px 1.0px; border-color: #cbcbcb #cbcbcb #cbcbcb #cbcbcb; padding: 0.0px 5.0px 0.0px 5.0px}
+  </style>
+</head>
+<body>
+<p class="p1">Math 484.3.<span class="Apple-converted-space">  </span>November 4, 2015.   Midterm 2.  <span class="s1"><br>
+</span>10 problems, 5 pts each. <span class="Apple-converted-space">  </span>Write your name here<span class="Apple-converted-space">  </span><span class="s2">Vaserstein</span></p>
+<p class="p1">No electronics is allowed. <span class="Apple-converted-space">  </span>Write both answers and details. Write only answers on scantron. Return this page and the scantron.<span class="Apple-converted-space"> </span></p>
+<p class="p1">If you do not like any given answers, explain why here and choose (E) at scantron.</p>
+<p class="p1">Do not talk with other students in class even after finishing your papers.</p>
+<p class="p2"><br></p>
+<p class="p3">26. The linear program given by a standard row tableau with the matrix</p>
+<table cellspacing="0" cellpadding="0" class="t1">
+  <tbody>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="Apple-converted-space"> </span>1</p>
+      </td>
+      <td valign="middle" class="td2">
+        <p class="p1">0</p>
+      </td>
+      <td valign="middle" class="td3">
+        <p class="p1">0</p>
+      </td>
+      <td valign="middle" class="td4">
+        <p class="p1">-3</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1">-1</p>
+      </td>
+      <td valign="middle" class="td2">
+        <p class="p1">0</p>
+      </td>
+      <td valign="middle" class="td3">
+        <p class="p1">-1</p>
+      </td>
+      <td valign="middle" class="td4">
+        <p class="p1">2</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1">-1</p>
+      </td>
+      <td valign="middle" class="td2">
+        <p class="p1">-1</p>
+      </td>
+      <td valign="middle" class="td3">
+        <p class="p1">-1</p>
+      </td>
+      <td valign="middle" class="td4">
+        <p class="p1">-1</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1">-1</p>
+      </td>
+      <td valign="middle" class="td2">
+        <p class="p1">-2</p>
+      </td>
+      <td valign="middle" class="td3">
+        <p class="p1">-2</p>
+      </td>
+      <td valign="middle" class="td4">
+        <p class="p1">-2</p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<p class="p2"><br></p>
+<p class="p1">(A) is infeasible, (B) is unbounded, (C) has an optimal solution.</p>
+<p class="p2"><br></p>
+<p class="p1"><b>Solution.<span class="Apple-converted-space"> </span></b> The third row is bad, so the LP is infeasible.<span class="Apple-converted-space">  </span>(A).</p>
+<p class="p2"><br></p>
+<p class="p3">27. The linear program given by a standard row tableau with the matrix</p>
+<table cellspacing="0" cellpadding="0" class="t1">
+  <tbody>
+    <tr>
+      <td valign="middle" class="td5">
+        <p class="p1">-1</p>
+      </td>
+      <td valign="middle" class="td6">
+        <p class="p1">-1</p>
+      </td>
+      <td valign="middle" class="td3">
+        <p class="p1">2</p>
+      </td>
+      <td valign="middle" class="td7">
+        <p class="p1">-3</p>
+      </td>
+      <td valign="middle" class="td8">
+        <p class="p1">-1</p>
+      </td>
+      <td valign="middle" class="td9">
+        <p class="p1">1</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td5">
+        <p class="p1">0</p>
+      </td>
+      <td valign="middle" class="td6">
+        <p class="p1">1</p>
+      </td>
+      <td valign="middle" class="td3">
+        <p class="p1">-1</p>
+      </td>
+      <td valign="middle" class="td7">
+        <p class="p1">2</p>
+      </td>
+      <td valign="middle" class="td8">
+        <p class="p1">3</p>
+      </td>
+      <td valign="middle" class="td9">
+        <p class="p1">-1</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td5">
+        <p class="p1">3</p>
+      </td>
+      <td valign="middle" class="td6">
+        <p class="p1">-1</p>
+      </td>
+      <td valign="middle" class="td3">
+        <p class="p1">4</p>
+      </td>
+      <td valign="middle" class="td7">
+        <p class="p1">-5</p>
+      </td>
+      <td valign="middle" class="td8">
+        <p class="p1">2</p>
+      </td>
+      <td valign="middle" class="td9">
+        <p class="p1">-1</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td5">
+        <p class="p1">-7</p>
+      </td>
+      <td valign="middle" class="td6">
+        <p class="p1">6</p>
+      </td>
+      <td valign="middle" class="td3">
+        <p class="p1">-1</p>
+      </td>
+      <td valign="middle" class="td7">
+        <p class="p1">-8</p>
+      </td>
+      <td valign="middle" class="td8">
+        <p class="p1">0</p>
+      </td>
+      <td valign="middle" class="td9">
+        <p class="p1">0</p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<p class="p1">The number of choices for the pivot entry consistent with the simplex method is</p>
+<p class="p2"><br></p>
+<p class="p1">(A) 0, (B) 1, (C)2,<span class="Apple-converted-space">  </span>(D) 3.</p>
+<p class="p2"><br></p>
+<p class="p1"><b>Solution.<span class="Apple-converted-space">  </span></b>There are no bad rows and the tableau is not row-feasible.</p>
+<p class="p1">We consider positive entries in the second row, they give possible pivot columns.</p>
+<table cellspacing="0" cellpadding="0" class="t1">
+  <tbody>
+    <tr>
+      <td valign="middle" class="td5">
+        <p class="p1">-1</p>
+      </td>
+      <td valign="middle" class="td10">
+        <p class="p1">-1*</p>
+      </td>
+      <td valign="middle" class="td11">
+        <p class="p1">2</p>
+      </td>
+      <td valign="middle" class="td7">
+        <p class="p1">-3*</p>
+      </td>
+      <td valign="middle" class="td8">
+        <p class="p1">-1</p>
+      </td>
+      <td valign="middle" class="td9">
+        <p class="p1">1</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td5">
+        <p class="p1">0</p>
+      </td>
+      <td valign="middle" class="td10">
+        <p class="p1"><b>1</b>*</p>
+      </td>
+      <td valign="middle" class="td11">
+        <p class="p1">-1</p>
+      </td>
+      <td valign="middle" class="td7">
+        <p class="p1"><b>2</b></p>
+      </td>
+      <td valign="middle" class="td8">
+        <p class="p1"><b>3</b>*</p>
+      </td>
+      <td valign="middle" class="td9">
+        <p class="p1">-1</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td5">
+        <p class="p1">3</p>
+      </td>
+      <td valign="middle" class="td10">
+        <p class="p1">-1</p>
+      </td>
+      <td valign="middle" class="td11">
+        <p class="p1">4</p>
+      </td>
+      <td valign="middle" class="td7">
+        <p class="p1">-5</p>
+      </td>
+      <td valign="middle" class="td8">
+        <p class="p1">2</p>
+      </td>
+      <td valign="middle" class="td9">
+        <p class="p1">-1</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td5">
+        <p class="p1">-7</p>
+      </td>
+      <td valign="middle" class="td10">
+        <p class="p1">6</p>
+      </td>
+      <td valign="middle" class="td11">
+        <p class="p1">-1</p>
+      </td>
+      <td valign="middle" class="td7">
+        <p class="p1">-8</p>
+      </td>
+      <td valign="middle" class="td8">
+        <p class="p1">0</p>
+      </td>
+      <td valign="middle" class="td9">
+        <p class="p1">0</p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<p class="p2"><br></p>
+<p class="p1">There are 4 choices. (E).</p>
+<p class="p2"><br></p>
+<p class="p3">28. The linear program given by a standard row tableau with the matrix</p>
+<table cellspacing="0" cellpadding="0" class="t1">
+  <tbody>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1">-1</p>
+      </td>
+      <td valign="middle" class="td2">
+        <p class="p1">0</p>
+      </td>
+      <td valign="middle" class="td3">
+        <p class="p1">-2</p>
+      </td>
+      <td valign="middle" class="td4">
+        <p class="p1">1</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1">0</p>
+      </td>
+      <td valign="middle" class="td2">
+        <p class="p1">-1</p>
+      </td>
+      <td valign="middle" class="td3">
+        <p class="p1">3</p>
+      </td>
+      <td valign="middle" class="td4">
+        <p class="p1">-2</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1">-3</p>
+      </td>
+      <td valign="middle" class="td2">
+        <p class="p1">-1</p>
+      </td>
+      <td valign="middle" class="td3">
+        <p class="p1">0</p>
+      </td>
+      <td valign="middle" class="td4">
+        <p class="p1">0</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1">7</p>
+      </td>
+      <td valign="middle" class="td2">
+        <p class="p1">-6</p>
+      </td>
+      <td valign="middle" class="td3">
+        <p class="p1">-1</p>
+      </td>
+      <td valign="middle" class="td4">
+        <p class="p1">-8</p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<p class="p2"><br></p>
+<p class="p1">(A) is infeasible, (B) is unbounded, (C) has an optimal solution.</p>
+<p class="p2"><br></p>
+<p class="p1"><b>Solution. </b>Let<span class="Apple-converted-space">  </span>x1, x2, x3 be the variables on top.<span class="Apple-converted-space">  </span>The third row reads -3x1 - x2 ≥ 0, hence x1 = x2 = 0.<span class="Apple-converted-space">  </span>Now our problem is x3 ≥ 0,<span class="Apple-converted-space">  </span>-2x3 +1 ≥ 0,<span class="Apple-converted-space">  </span>3x3 -2<span class="Apple-converted-space">  </span>≥<span class="Apple-converted-space">  </span>0, x3 &lt;=1/2, x3&gt;=2/3, Contradiction, hence<span class="Apple-converted-space">  </span>(A).</p>
+<p class="p2"><br></p>
+<p class="p1">29. The optimal value for the linear program given by a standard<span class="Apple-converted-space">  </span>row tableau with the matrix</p>
+<p class="p2"><br></p>
+<table cellspacing="0" cellpadding="0" class="t1">
+  <tbody>
+    <tr>
+      <td valign="middle" class="td8">
+        <p class="p1">-2</p>
+      </td>
+      <td valign="middle" class="td10">
+        <p class="p1">-3</p>
+      </td>
+      <td valign="middle" class="td10">
+        <p class="p1">2</p>
+      </td>
+      <td valign="middle" class="td12">
+        <p class="p1">0</p>
+      </td>
+      <td valign="middle" class="td3">
+        <p class="p1">-1</p>
+      </td>
+      <td valign="middle" class="td8">
+        <p class="p1">2</p>
+      </td>
+      <td valign="middle" class="td13">
+        <p class="p1">-1</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td8">
+        <p class="p1">-1</p>
+      </td>
+      <td valign="middle" class="td10">
+        <p class="p1">-2</p>
+      </td>
+      <td valign="middle" class="td10">
+        <p class="p1">9</p>
+      </td>
+      <td valign="middle" class="td12">
+        <p class="p1">1</p>
+      </td>
+      <td valign="middle" class="td3">
+        <p class="p1">0</p>
+      </td>
+      <td valign="middle" class="td8">
+        <p class="p1">6</p>
+      </td>
+      <td valign="middle" class="td13">
+        <p class="p1">1</p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<p class="p2"><br></p>
+<p class="p1">is (A) 0.2, (B)<span class="Apple-converted-space">  </span>-4,<span class="Apple-converted-space">  </span>(C) 2, <span class="Apple-converted-space">  </span>(D) 4.</p>
+<p class="p2"><br></p>
+<p class="p1"><b>Solution. <span class="Apple-converted-space"> </span></b> We consider the column problem, with the variable at the left margin being x. Then</p>
+<p class="p1">x ≥ 0,<span class="Apple-converted-space">  </span>2x -1 ≥ 0,<span class="Apple-converted-space">  </span>3x<span class="Apple-converted-space">  </span>-2<span class="Apple-converted-space">  </span>≥ 0,<span class="Apple-converted-space">    </span>-2x + 9 ≥ 0, <span class="Apple-converted-space">  </span>x <span class="Apple-converted-space">  </span>≥ 0, <span class="Apple-converted-space">  </span>-2x + 6 ≥ 0, <span class="Apple-converted-space">  </span>x + 1 -&gt; max,</p>
+<p class="p1">or <span class="Apple-converted-space">  </span>x ≥ 1 x ≤ 3, <span class="Apple-converted-space">  </span>x + 1 -&gt; max.<span class="Apple-converted-space">  </span>So max =<span class="Apple-converted-space">  </span>4 at x = 3. . The row problem has the same optimal value. <b>(D).</b></p>
+<p class="p2"><br></p>
+<p class="p1">30. The optimal value for the linear program given by a standard row tableau with the matrix</p>
+<p class="p2"><br></p>
+<table cellspacing="0" cellpadding="0" class="t1">
+  <tbody>
+    <tr>
+      <td valign="middle" class="td11">
+        <p class="p1">-2</p>
+      </td>
+      <td valign="middle" class="td3">
+        <p class="p1">-3</p>
+      </td>
+      <td valign="middle" class="td4">
+        <p class="p1">-4</p>
+      </td>
+      <td valign="middle" class="td14">
+        <p class="p1">1</p>
+      </td>
+      <td valign="middle" class="td14">
+        <p class="p1">1</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td11">
+        <p class="p1">1</p>
+      </td>
+      <td valign="middle" class="td3">
+        <p class="p1">2</p>
+      </td>
+      <td valign="middle" class="td4">
+        <p class="p1">3</p>
+      </td>
+      <td valign="middle" class="td14">
+        <p class="p1">-1</p>
+      </td>
+      <td valign="middle" class="td14">
+        <p class="p1">1</p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<p class="p2"><br></p>
+<p class="p1">is (A) 1/2, (B) 2/3, (C) 3/4, (D) 1.</p>
+<p class="p2"><br></p>
+<p class="p1"><b>Solution. </b>The tableau is row feasible with the 4th column being bad. <span class="Apple-converted-space">  </span>The row problem is unbounded, and the column problem is infeasible.<span class="Apple-converted-space">  </span><b>(E).</b></p>
+<p class="p2"><br></p>
+<p class="p1">31. A linear program is given a standard row tableau with the matrix</p>
+<p class="p4"><span class="Apple-converted-space"> </span>0<span class="Apple-converted-space">    </span>1<span class="Apple-converted-space">  </span>-1<span class="Apple-converted-space">    </span>1</p>
+<p class="p4"><span class="Apple-converted-space"> </span>1 <span class="Apple-converted-space">  </span>-1 <span class="Apple-converted-space">  </span>0<span class="Apple-converted-space">    </span>1</p>
+<p class="p4">-1<span class="Apple-converted-space">    </span>0 <span class="Apple-converted-space">  </span>1<span class="Apple-converted-space">    </span>2</p>
+<p class="p4">-1<span class="Apple-converted-space">  </span>-1<span class="Apple-converted-space">    </span>2<span class="Apple-converted-space">    </span>0 .</p>
+<p class="p1">Setting the variables on the top to be<span class="Apple-converted-space">  </span>1, 2, and 3, we obtain</p>
+<p class="p1">(A) an infeasible solution, (B) an optimal solution, (C) a feasible solution which is not optimal.</p>
+<p class="p2"><br></p>
+<p class="p1"><b>Solution. </b><span class="Apple-converted-space">  </span>Here are the values for all 6 variables in the row problem:</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space"> </span>1<span class="Apple-converted-space">      </span>2<span class="Apple-converted-space">      </span>3 <span class="Apple-converted-space">    </span>1</p>
+<p class="p1">------------------</p>
+<p class="p4"><span class="Apple-converted-space">  </span>0<span class="Apple-converted-space">    </span>1<span class="Apple-converted-space">  </span>-1<span class="Apple-converted-space">    </span>1 <span class="Apple-converted-space">  </span>= <span class="Apple-converted-space">  </span>0</p>
+<p class="p4"><span class="Apple-converted-space">  </span>1<span class="Apple-converted-space">  </span>-1<span class="Apple-converted-space">    </span>0<span class="Apple-converted-space">    </span>1 <span class="Apple-converted-space">  </span>= <span class="Apple-converted-space">  </span>0</p>
+<p class="p4">-1<span class="Apple-converted-space">    </span>0<span class="Apple-converted-space">    </span>1 <span class="Apple-converted-space">  </span>2 <span class="Apple-converted-space">  </span>= <span class="Apple-converted-space">  </span>4</p>
+<p class="p4">-1<span class="Apple-converted-space">  </span>-1 <span class="Apple-converted-space">    </span>2<span class="Apple-converted-space">    </span>0<span class="Apple-converted-space">              </span>.</p>
+<p class="p2"><br></p>
+<p class="p1">So we get a feasible solution. Now we look for a complementary feasible solution of the column problem.</p>
+<p class="p1"><span class="Apple-converted-space"> </span>For the dual variables <span class="Apple-converted-space">  </span>a, b, c at the left margin we obtain 3 linear equations by complementary slackness:</p>
+<p class="p1">c = 0,<span class="Apple-converted-space">  </span>-b -1 ≥ 0. So there are no complementary feasible solution of the column problem. (C).</p>
+<p class="p2"><br></p>
+<p class="p1">32. A linear program <span class="Apple-converted-space">  </span>given a standard<span class="Apple-converted-space">  </span>row<span class="Apple-converted-space">  </span>tableau with the matrix</p>
+<p class="p2"><br></p>
+<p class="p4">2 <span class="Apple-converted-space">  </span>t</p>
+<p class="p4">t <span class="Apple-converted-space">  </span>0 .</p>
+<p class="p5"><br></p>
+<p class="p1">For which<span class="Apple-converted-space">  </span>numbers t it has an optimal solution?</p>
+<p class="p1">(A) t ≥ 0,<span class="Apple-converted-space">  </span>(B) all t, (C) t ≤ 0. (D) t ≥ 1/2.</p>
+<p class="p5"><br></p>
+<p class="p1"><b>Solution.<span class="Apple-converted-space">  </span></b>If<b> t<span class="Apple-converted-space"> </span></b> ≥ 0, the tableau is optimal. If t &lt; 0,<span class="Apple-converted-space">  </span>pivoting on 2 produces a feasible tableau with a bad column. (A)</p>
+<p class="p2"><br></p>
+<p class="p1">33. A linear program given by a standard row tableau with the matrix</p>
+<p class="p2"><span class="Apple-converted-space"> </span></p>
+<table cellspacing="0" cellpadding="0" class="t1">
+  <tbody>
+    <tr>
+      <td valign="middle" class="td15">
+        <p class="p1">-4</p>
+      </td>
+      <td valign="middle" class="td16">
+        <p class="p1">-2</p>
+      </td>
+      <td valign="middle" class="td2">
+        <p class="p1"><span class="Apple-converted-space"> </span>0</p>
+      </td>
+      <td valign="middle" class="td17">
+        <p class="p1">-6</p>
+      </td>
+      <td valign="middle" class="td17">
+        <p class="p1"><span class="Apple-converted-space"> </span>2</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td15">
+        <p class="p1">-2</p>
+      </td>
+      <td valign="middle" class="td16">
+        <p class="p1">-2</p>
+      </td>
+      <td valign="middle" class="td2">
+        <p class="p1">-7</p>
+      </td>
+      <td valign="middle" class="td17">
+        <p class="p1">-4</p>
+      </td>
+      <td valign="middle" class="td17">
+        <p class="p1"><span class="Apple-converted-space"> </span>1</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td15">
+        <p class="p1"><span class="Apple-converted-space"> </span>3</p>
+      </td>
+      <td valign="middle" class="td16">
+        <p class="p1"><span class="Apple-converted-space"> </span>2</p>
+      </td>
+      <td valign="middle" class="td2">
+        <p class="p1">-8</p>
+      </td>
+      <td valign="middle" class="td17">
+        <p class="p1">-4</p>
+      </td>
+      <td valign="middle" class="td17">
+        <p class="p1"><span class="Apple-converted-space"> </span>1</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td15">
+        <p class="p1"><span class="Apple-converted-space"> </span>1</p>
+      </td>
+      <td valign="middle" class="td16">
+        <p class="p1">-2</p>
+      </td>
+      <td valign="middle" class="td2">
+        <p class="p1">-2</p>
+      </td>
+      <td valign="middle" class="td17">
+        <p class="p1"><span class="Apple-converted-space">  </span>2</p>
+      </td>
+      <td valign="middle" class="td17">
+        <p class="p1"><span class="Apple-converted-space"> </span>-1</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td15">
+        <p class="p1"><span class="Apple-converted-space"> </span>-1</p>
+      </td>
+      <td valign="middle" class="td16">
+        <p class="p1"><span class="Apple-converted-space"> </span>-1</p>
+      </td>
+      <td valign="middle" class="td2">
+        <p class="p1">-1</p>
+      </td>
+      <td valign="middle" class="td17">
+        <p class="p1"><span class="Apple-converted-space">  </span>-1</p>
+      </td>
+      <td valign="middle" class="td17">
+        <p class="p1"><span class="Apple-converted-space"> </span>0</p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<p class="p2"><br></p>
+<p class="p1">How many choices for the first <span class="Apple-converted-space">  </span>pivot entry which are consistent with Simplex Method?</p>
+<p class="p1">(A) 0, (B) 3, (C)<span class="Apple-converted-space">  </span>4,<span class="Apple-converted-space">  </span>(D)<span class="Apple-converted-space">  </span>6.</p>
+<p class="p2"><br></p>
+<p class="p1"><b>Solution.</b></p>
+<p class="p2"><span class="Apple-converted-space"> </span></p>
+<table cellspacing="0" cellpadding="0" class="t1">
+  <tbody>
+    <tr>
+      <td valign="middle" class="td15">
+        <p class="p1">-4*</p>
+      </td>
+      <td valign="middle" class="td16">
+        <p class="p1">-2</p>
+      </td>
+      <td valign="middle" class="td2">
+        <p class="p1"><span class="Apple-converted-space"> </span>0</p>
+      </td>
+      <td valign="middle" class="td17">
+        <p class="p1">-6</p>
+      </td>
+      <td valign="middle" class="td17">
+        <p class="p1"><span class="Apple-converted-space"> </span>2</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td15">
+        <p class="p1">-2*</p>
+      </td>
+      <td valign="middle" class="td16">
+        <p class="p1">-2</p>
+      </td>
+      <td valign="middle" class="td2">
+        <p class="p1">-7</p>
+      </td>
+      <td valign="middle" class="td17">
+        <p class="p1">-4*</p>
+      </td>
+      <td valign="middle" class="td17">
+        <p class="p1"><span class="Apple-converted-space"> </span>1</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td15">
+        <p class="p1"><span class="Apple-converted-space"> </span>3</p>
+      </td>
+      <td valign="middle" class="td16">
+        <p class="p1"><span class="Apple-converted-space"> </span>2</p>
+      </td>
+      <td valign="middle" class="td2">
+        <p class="p1">-8</p>
+      </td>
+      <td valign="middle" class="td17">
+        <p class="p1">-4*</p>
+      </td>
+      <td valign="middle" class="td17">
+        <p class="p1"><span class="Apple-converted-space"> </span>1</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td15">
+        <p class="p1"><span class="Apple-converted-space"> </span>1</p>
+      </td>
+      <td valign="middle" class="td16">
+        <p class="p1">-2</p>
+      </td>
+      <td valign="middle" class="td2">
+        <p class="p1">-2</p>
+      </td>
+      <td valign="middle" class="td17">
+        <p class="p1"><span class="Apple-converted-space">  </span>2</p>
+      </td>
+      <td valign="middle" class="td17">
+        <p class="p1"><span class="Apple-converted-space"> </span>-1</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td15">
+        <p class="p1"><span class="Apple-converted-space"> </span>-1</p>
+      </td>
+      <td valign="middle" class="td16">
+        <p class="p1"><span class="Apple-converted-space"> </span>-1</p>
+      </td>
+      <td valign="middle" class="td2">
+        <p class="p1">-1</p>
+      </td>
+      <td valign="middle" class="td17">
+        <p class="p1"><span class="Apple-converted-space">  </span>-1</p>
+      </td>
+      <td valign="middle" class="td17">
+        <p class="p1"><span class="Apple-converted-space"> </span>0</p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<p class="p1"><br>
+<b>(C) .</b></p>
+<p class="p2"><br></p>
+<p class="p1">34. The optimal value of the<span class="Apple-converted-space">  </span>job assignment problem</p>
+<p class="p2"><br></p>
+<table cellspacing="0" cellpadding="0" class="t1">
+  <tbody>
+    <tr>
+      <td valign="top" class="td18">
+        <p class="p3">1</p>
+      </td>
+      <td valign="middle" class="td19">
+        <p class="p3">0</p>
+      </td>
+      <td valign="middle" class="td20">
+        <p class="p3">3</p>
+      </td>
+      <td valign="middle" class="td21">
+        <p class="p3">1</p>
+      </td>
+      <td valign="middle" class="td19">
+        <p class="p3">2</p>
+      </td>
+      <td valign="middle" class="td21">
+        <p class="p3">2</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td18">
+        <p class="p3">0</p>
+      </td>
+      <td valign="middle" class="td19">
+        <p class="p3">1</p>
+      </td>
+      <td valign="middle" class="td20">
+        <p class="p3">3</p>
+      </td>
+      <td valign="middle" class="td21">
+        <p class="p3">2</p>
+      </td>
+      <td valign="middle" class="td19">
+        <p class="p3">1</p>
+      </td>
+      <td valign="middle" class="td21">
+        <p class="p3">1</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td18">
+        <p class="p3">3</p>
+      </td>
+      <td valign="middle" class="td19">
+        <p class="p3">0</p>
+      </td>
+      <td valign="middle" class="td20">
+        <p class="p3">2</p>
+      </td>
+      <td valign="middle" class="td21">
+        <p class="p3">2</p>
+      </td>
+      <td valign="middle" class="td19">
+        <p class="p3">4</p>
+      </td>
+      <td valign="middle" class="td21">
+        <p class="p3">2</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td18">
+        <p class="p3">1</p>
+      </td>
+      <td valign="middle" class="td19">
+        <p class="p3">2</p>
+      </td>
+      <td valign="middle" class="td20">
+        <p class="p3">0</p>
+      </td>
+      <td valign="middle" class="td21">
+        <p class="p3">1</p>
+      </td>
+      <td valign="middle" class="td19">
+        <p class="p3">2</p>
+      </td>
+      <td valign="middle" class="td21">
+        <p class="p3">2</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td18">
+        <p class="p3">0</p>
+      </td>
+      <td valign="middle" class="td19">
+        <p class="p3">0</p>
+      </td>
+      <td valign="middle" class="td20">
+        <p class="p3">3</p>
+      </td>
+      <td valign="middle" class="td21">
+        <p class="p3">1</p>
+      </td>
+      <td valign="middle" class="td19">
+        <p class="p3">0</p>
+      </td>
+      <td valign="middle" class="td21">
+        <p class="p3">0</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td18">
+        <p class="p3">1</p>
+      </td>
+      <td valign="middle" class="td19">
+        <p class="p3">2</p>
+      </td>
+      <td valign="middle" class="td20">
+        <p class="p3">1</p>
+      </td>
+      <td valign="middle" class="td21">
+        <p class="p3">0</p>
+      </td>
+      <td valign="middle" class="td19">
+        <p class="p3">1</p>
+      </td>
+      <td valign="middle" class="td21">
+        <p class="p3">1</p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<p class="p3">is (A)<span class="Apple-converted-space">  </span>1, (B)<span class="Apple-converted-space">  </span>2,<span class="Apple-converted-space">  </span>(C)<span class="Apple-converted-space">  </span>3, (D) 4.</p>
+<p class="p3"><b>Solution.</b><span class="Apple-converted-space">  </span>The cost is<span class="Apple-converted-space">  </span>≥ 0, and there is a zero in each row and column. However we cannot place the flow at positions with the zero cost because the big (3 by 4)</p>
+<p class="p3">positive block in the northeast corner. We destroy the block<span class="Apple-converted-space">  </span>subtracting 1 from each of 3 first rows and adding 1 to each of the first 2 columns. Here is the resulting cost matrix:</p>
+<table cellspacing="0" cellpadding="0" class="t1">
+  <tbody>
+    <tr>
+      <td valign="top" class="td18">
+        <p class="p3">1</p>
+      </td>
+      <td valign="middle" class="td19">
+        <p class="p3">0</p>
+      </td>
+      <td valign="middle" class="td20">
+        <p class="p3">2</p>
+      </td>
+      <td valign="middle" class="td21">
+        <p class="p3">0</p>
+      </td>
+      <td valign="middle" class="td19">
+        <p class="p3">1</p>
+      </td>
+      <td valign="middle" class="td21">
+        <p class="p3">1</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td18">
+        <p class="p3">0</p>
+      </td>
+      <td valign="middle" class="td19">
+        <p class="p3">1</p>
+      </td>
+      <td valign="middle" class="td20">
+        <p class="p3">2</p>
+      </td>
+      <td valign="middle" class="td21">
+        <p class="p3">1</p>
+      </td>
+      <td valign="middle" class="td19">
+        <p class="p3">0</p>
+      </td>
+      <td valign="middle" class="td21">
+        <p class="p3">1</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td18">
+        <p class="p3">3</p>
+      </td>
+      <td valign="middle" class="td19">
+        <p class="p3">0</p>
+      </td>
+      <td valign="middle" class="td20">
+        <p class="p3">1</p>
+      </td>
+      <td valign="middle" class="td21">
+        <p class="p3">1</p>
+      </td>
+      <td valign="middle" class="td19">
+        <p class="p3">3</p>
+      </td>
+      <td valign="middle" class="td21">
+        <p class="p3">1</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td18">
+        <p class="p3">2</p>
+      </td>
+      <td valign="middle" class="td19">
+        <p class="p3">3</p>
+      </td>
+      <td valign="middle" class="td20">
+        <p class="p3">0</p>
+      </td>
+      <td valign="middle" class="td21">
+        <p class="p3">1</p>
+      </td>
+      <td valign="middle" class="td19">
+        <p class="p3">2</p>
+      </td>
+      <td valign="middle" class="td21">
+        <p class="p3">2</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td18">
+        <p class="p3">1</p>
+      </td>
+      <td valign="middle" class="td19">
+        <p class="p3">1</p>
+      </td>
+      <td valign="middle" class="td20">
+        <p class="p3">3</p>
+      </td>
+      <td valign="middle" class="td21">
+        <p class="p3">1</p>
+      </td>
+      <td valign="middle" class="td19">
+        <p class="p3">0</p>
+      </td>
+      <td valign="middle" class="td21">
+        <p class="p3">0</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td18">
+        <p class="p3">2</p>
+      </td>
+      <td valign="middle" class="td19">
+        <p class="p3">3</p>
+      </td>
+      <td valign="middle" class="td20">
+        <p class="p3">1</p>
+      </td>
+      <td valign="middle" class="td21">
+        <p class="p3">0</p>
+      </td>
+      <td valign="middle" class="td19">
+        <p class="p3">1</p>
+      </td>
+      <td valign="middle" class="td21">
+        <p class="p3">1</p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<p class="p3">Now we try to choose zeros starting with rows and columns with single zeros,<span class="Apple-converted-space"> </span></p>
+<p class="p3">c7, c6, r7, r4, r3</p>
+<table cellspacing="0" cellpadding="0" class="t1">
+  <tbody>
+    <tr>
+      <td valign="top" class="td18">
+        <p class="p3">1</p>
+      </td>
+      <td valign="middle" class="td19">
+        <p class="p3">0</p>
+      </td>
+      <td valign="middle" class="td20">
+        <p class="p3">2</p>
+      </td>
+      <td valign="middle" class="td13">
+        <p class="p3">0</p>
+      </td>
+      <td valign="middle" class="td12">
+        <p class="p3">1</p>
+      </td>
+      <td valign="middle" class="td10">
+        <p class="p3">1</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td18">
+        <p class="p3">0</p>
+      </td>
+      <td valign="middle" class="td19">
+        <p class="p3">1</p>
+      </td>
+      <td valign="middle" class="td20">
+        <p class="p3">2</p>
+      </td>
+      <td valign="middle" class="td13">
+        <p class="p3">1</p>
+      </td>
+      <td valign="middle" class="td12">
+        <p class="p3">0*</p>
+      </td>
+      <td valign="middle" class="td10">
+        <p class="p3">1</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td18">
+        <p class="p3">3</p>
+      </td>
+      <td valign="middle" class="td19">
+        <p class="p3">0*</p>
+      </td>
+      <td valign="middle" class="td20">
+        <p class="p3">1</p>
+      </td>
+      <td valign="middle" class="td13">
+        <p class="p3">1</p>
+      </td>
+      <td valign="middle" class="td12">
+        <p class="p3">3</p>
+      </td>
+      <td valign="middle" class="td10">
+        <p class="p3">1</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td18">
+        <p class="p3">2</p>
+      </td>
+      <td valign="middle" class="td19">
+        <p class="p3">3</p>
+      </td>
+      <td valign="middle" class="td20">
+        <p class="p3">0*</p>
+      </td>
+      <td valign="middle" class="td13">
+        <p class="p3">1</p>
+      </td>
+      <td valign="middle" class="td12">
+        <p class="p3">2</p>
+      </td>
+      <td valign="middle" class="td10">
+        <p class="p3">2</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td18">
+        <p class="p3">1</p>
+      </td>
+      <td valign="middle" class="td19">
+        <p class="p3">1</p>
+      </td>
+      <td valign="middle" class="td20">
+        <p class="p3">3</p>
+      </td>
+      <td valign="middle" class="td13">
+        <p class="p3">1</p>
+      </td>
+      <td valign="middle" class="td12">
+        <p class="p3">0</p>
+      </td>
+      <td valign="middle" class="td10">
+        <p class="p3">0*</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td18">
+        <p class="p3">2</p>
+      </td>
+      <td valign="middle" class="td19">
+        <p class="p3">3</p>
+      </td>
+      <td valign="middle" class="td20">
+        <p class="p3">1</p>
+      </td>
+      <td valign="middle" class="td13">
+        <p class="p3">0*</p>
+      </td>
+      <td valign="middle" class="td12">
+        <p class="p3">1</p>
+      </td>
+      <td valign="middle" class="td10">
+        <p class="p3">1</p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<p class="p3">But this cannot be done! <span class="Apple-converted-space">  </span>Instead of looking for a big positive block, we use that min ≥ 1, so completing the job assignment by the entry 1 in r1&amp;c1, we get an optimal solution with total cost 1.<span class="Apple-converted-space">    </span>For the original table, min = 2. <b>(B).</b></p>
+<p class="p6"><br></p>
+<p class="p1">35.<span class="Apple-converted-space">  </span>The optimal value<span class="Apple-converted-space">  </span>for the transportation problem</p>
+<table width="564.0" cellspacing="0" cellpadding="0" class="t2">
+  <tbody>
+    <tr>
+      <td valign="top" class="td22">
+        <p class="p7">2</p>
+      </td>
+      <td valign="top" class="td23">
+        <p class="p7">2</p>
+      </td>
+      <td valign="top" class="td24">
+        <p class="p7">3</p>
+      </td>
+      <td valign="top" class="td25">
+        <p class="p7">2</p>
+      </td>
+      <td valign="top" class="td26">
+        <p class="p7">1</p>
+      </td>
+      <td valign="top" class="td27">
+        <p class="p7">0</p>
+      </td>
+      <td valign="top" class="td28">
+        <p class="p7">2</p>
+      </td>
+      <td valign="top" class="td29">
+        <p class="p7">2</p>
+      </td>
+      <td valign="top" class="td30">
+        <p class="p7">2</p>
+      </td>
+      <td valign="top" class="td31">
+        <p class="p8">8</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td22">
+        <p class="p7">2</p>
+      </td>
+      <td valign="top" class="td23">
+        <p class="p7">2</p>
+      </td>
+      <td valign="top" class="td24">
+        <p class="p7">1</p>
+      </td>
+      <td valign="top" class="td25">
+        <p class="p7">2</p>
+      </td>
+      <td valign="top" class="td26">
+        <p class="p7">0</p>
+      </td>
+      <td valign="top" class="td27">
+        <p class="p7">0</p>
+      </td>
+      <td valign="top" class="td28">
+        <p class="p7">2</p>
+      </td>
+      <td valign="top" class="td29">
+        <p class="p7">2</p>
+      </td>
+      <td valign="top" class="td30">
+        <p class="p7">1</p>
+      </td>
+      <td valign="top" class="td31">
+        <p class="p8">8</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td22">
+        <p class="p7">3</p>
+      </td>
+      <td valign="top" class="td23">
+        <p class="p7">2</p>
+      </td>
+      <td valign="top" class="td24">
+        <p class="p7">1</p>
+      </td>
+      <td valign="top" class="td25">
+        <p class="p7">3</p>
+      </td>
+      <td valign="top" class="td26">
+        <p class="p7">1</p>
+      </td>
+      <td valign="top" class="td27">
+        <p class="p7">1</p>
+      </td>
+      <td valign="top" class="td28">
+        <p class="p7">0</p>
+      </td>
+      <td valign="top" class="td29">
+        <p class="p7">1</p>
+      </td>
+      <td valign="top" class="td30">
+        <p class="p7">2</p>
+      </td>
+      <td valign="top" class="td31">
+        <p class="p8">5</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td22">
+        <p class="p7">2</p>
+      </td>
+      <td valign="top" class="td23">
+        <p class="p7">3</p>
+      </td>
+      <td valign="top" class="td24">
+        <p class="p7">0</p>
+      </td>
+      <td valign="top" class="td25">
+        <p class="p7">1</p>
+      </td>
+      <td valign="top" class="td26">
+        <p class="p7">2</p>
+      </td>
+      <td valign="top" class="td27">
+        <p class="p7">1</p>
+      </td>
+      <td valign="top" class="td28">
+        <p class="p7">2</p>
+      </td>
+      <td valign="top" class="td29">
+        <p class="p7">1</p>
+      </td>
+      <td valign="top" class="td30">
+        <p class="p7">2</p>
+      </td>
+      <td valign="top" class="td31">
+        <p class="p8">0</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td22">
+        <p class="p9">6</p>
+      </td>
+      <td valign="top" class="td23">
+        <p class="p9">1</p>
+      </td>
+      <td valign="top" class="td24">
+        <p class="p9">6</p>
+      </td>
+      <td valign="top" class="td25">
+        <p class="p9">1</p>
+      </td>
+      <td valign="top" class="td26">
+        <p class="p9">6</p>
+      </td>
+      <td valign="top" class="td27">
+        <p class="p9">1</p>
+      </td>
+      <td valign="top" class="td28">
+        <p class="p9">0</p>
+      </td>
+      <td valign="top" class="td29">
+        <p class="p9">0</p>
+      </td>
+      <td valign="top" class="td30">
+        <p class="p9">0</p>
+      </td>
+      <td valign="top" class="td31">
+        <p class="p7">demand\supply</p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<p class="p1"> is (A) ≤22, (B) ≥ 29 , (C) the problem is infeasible, (D) lies in the interval<span class="Apple-converted-space">    </span>23 ≤ min ≤ 28.</p>
+<p class="p2"><br></p>
+<p class="p1"><b>Solution.</b> The balance condition: 21 = 21. The flow in the last 3 columns and the last row is 0, so the cost is 0 in these line, hence we cross out them.<span class="Apple-converted-space"> </span></p>
+<p class="p2"><br></p>
+<table cellspacing="0" cellpadding="0" class="t1">
+  <tbody>
+    <tr>
+      <td valign="middle" class="td32">
+        <p class="p7">2</p>
+      </td>
+      <td valign="middle" class="td33">
+        <p class="p7">2</p>
+      </td>
+      <td valign="middle" class="td34">
+        <p class="p7">3</p>
+      </td>
+      <td valign="middle" class="td35">
+        <p class="p7">2</p>
+      </td>
+      <td valign="middle" class="td36">
+        <p class="p7">1</p>
+      </td>
+      <td valign="middle" class="td37">
+        <p class="p7">0</p>
+      </td>
+      <td valign="middle" class="td38">
+        <p class="p1">8</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td32">
+        <p class="p7">2</p>
+      </td>
+      <td valign="middle" class="td33">
+        <p class="p7">2</p>
+      </td>
+      <td valign="middle" class="td34">
+        <p class="p7">1</p>
+      </td>
+      <td valign="middle" class="td35">
+        <p class="p7">2</p>
+      </td>
+      <td valign="middle" class="td36">
+        <p class="p7">0</p>
+      </td>
+      <td valign="middle" class="td37">
+        <p class="p7">0</p>
+      </td>
+      <td valign="middle" class="td38">
+        <p class="p1">8</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td32">
+        <p class="p7">3</p>
+      </td>
+      <td valign="middle" class="td33">
+        <p class="p7">2</p>
+      </td>
+      <td valign="middle" class="td34">
+        <p class="p7">1</p>
+      </td>
+      <td valign="middle" class="td35">
+        <p class="p7">3</p>
+      </td>
+      <td valign="middle" class="td36">
+        <p class="p7">1</p>
+      </td>
+      <td valign="middle" class="td37">
+        <p class="p7">1</p>
+      </td>
+      <td valign="middle" class="td38">
+        <p class="p1">5</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td32">
+        <p class="p1">6</p>
+      </td>
+      <td valign="middle" class="td33">
+        <p class="p1">1</p>
+      </td>
+      <td valign="middle" class="td34">
+        <p class="p1">6</p>
+      </td>
+      <td valign="middle" class="td35">
+        <p class="p1">1</p>
+      </td>
+      <td valign="middle" class="td36">
+        <p class="p1">6</p>
+      </td>
+      <td valign="middle" class="td37">
+        <p class="p1">1</p>
+      </td>
+      <td valign="middle" class="td38">
+        <p class="p7">demand\supply</p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<p class="p2"><br></p>
+<p class="p1">Now we subtract 2, 2,<span class="Apple-converted-space">  </span>1, 2 from the cost in the first 4 columns (Phase 1 of Hungarian method), the total cost is reduced by<span class="Apple-converted-space">  </span>12 + 2 +<span class="Apple-converted-space">  </span>6 + 2 = 22.</p>
+<p class="p2"><br></p>
+<table cellspacing="0" cellpadding="0" class="t1">
+  <tbody>
+    <tr>
+      <td valign="middle" class="td32">
+        <p class="p7">0</p>
+      </td>
+      <td valign="middle" class="td33">
+        <p class="p7">0</p>
+      </td>
+      <td valign="middle" class="td34">
+        <p class="p7">2</p>
+      </td>
+      <td valign="middle" class="td35">
+        <p class="p7">0</p>
+      </td>
+      <td valign="middle" class="td36">
+        <p class="p7">1</p>
+      </td>
+      <td valign="middle" class="td37">
+        <p class="p7">0</p>
+      </td>
+      <td valign="middle" class="td38">
+        <p class="p1">8</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td32">
+        <p class="p7">0</p>
+      </td>
+      <td valign="middle" class="td33">
+        <p class="p7">0</p>
+      </td>
+      <td valign="middle" class="td34">
+        <p class="p7">0</p>
+      </td>
+      <td valign="middle" class="td35">
+        <p class="p7">0</p>
+      </td>
+      <td valign="middle" class="td36">
+        <p class="p7">0</p>
+      </td>
+      <td valign="middle" class="td37">
+        <p class="p7">0</p>
+      </td>
+      <td valign="middle" class="td38">
+        <p class="p1">8</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td32">
+        <p class="p7">1</p>
+      </td>
+      <td valign="middle" class="td33">
+        <p class="p7">0</p>
+      </td>
+      <td valign="middle" class="td34">
+        <p class="p7">0</p>
+      </td>
+      <td valign="middle" class="td35">
+        <p class="p7">1</p>
+      </td>
+      <td valign="middle" class="td36">
+        <p class="p7">1</p>
+      </td>
+      <td valign="middle" class="td37">
+        <p class="p7">1</p>
+      </td>
+      <td valign="middle" class="td38">
+        <p class="p1">5</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td32">
+        <p class="p1">6</p>
+      </td>
+      <td valign="middle" class="td33">
+        <p class="p1">1</p>
+      </td>
+      <td valign="middle" class="td34">
+        <p class="p1">6</p>
+      </td>
+      <td valign="middle" class="td35">
+        <p class="p1">1</p>
+      </td>
+      <td valign="middle" class="td36">
+        <p class="p1">6</p>
+      </td>
+      <td valign="middle" class="td37">
+        <p class="p1">1</p>
+      </td>
+      <td valign="middle" class="td38">
+        <p class="p7">demand\supply</p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<p class="p2"><br></p>
+<p class="p1">Now we try to place the flow at positions with the zero cost. We start with the columns 5 where there is no choice:</p>
+<table cellspacing="0" cellpadding="0" class="t1">
+  <tbody>
+    <tr>
+      <td valign="middle" class="td32">
+        <p class="p7">0</p>
+      </td>
+      <td valign="middle" class="td33">
+        <p class="p7">0</p>
+      </td>
+      <td valign="middle" class="td34">
+        <p class="p7">2</p>
+      </td>
+      <td valign="middle" class="td35">
+        <p class="p7">0</p>
+      </td>
+      <td valign="middle" class="td36">
+        <p class="p7">1</p>
+      </td>
+      <td valign="middle" class="td37">
+        <p class="p7">0</p>
+      </td>
+      <td valign="middle" class="td38">
+        <p class="p1">8</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td32">
+        <p class="p7">0</p>
+      </td>
+      <td valign="middle" class="td33">
+        <p class="p7">0</p>
+      </td>
+      <td valign="middle" class="td34">
+        <p class="p7"><span class="s3"><sup>0</sup></span><span class="s4"> </span>1</p>
+      </td>
+      <td valign="middle" class="td35">
+        <p class="p10"><sup>0</sup><span class="s5"> </span><span class="s6">1</span></p>
+      </td>
+      <td valign="middle" class="td36">
+        <p class="p11"><span class="s3"><sup>0</sup></span><span class="s4"> </span><span class="Apple-converted-space">  </span><span class="s7">6</span></p>
+      </td>
+      <td valign="middle" class="td37">
+        <p class="p7">0</p>
+      </td>
+      <td valign="middle" class="td38">
+        <p class="p1">8-&gt;2-&gt;1 done</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td32">
+        <p class="p7">1</p>
+      </td>
+      <td valign="middle" class="td33">
+        <p class="p7">0</p>
+      </td>
+      <td valign="middle" class="td34">
+        <p class="p1"><span class="s8"><sup>0</sup></span><span class="s5"> </span>5</p>
+      </td>
+      <td valign="middle" class="td35">
+        <p class="p7">1</p>
+      </td>
+      <td valign="middle" class="td36">
+        <p class="p7">1</p>
+      </td>
+      <td valign="middle" class="td37">
+        <p class="p7">1</p>
+      </td>
+      <td valign="middle" class="td38">
+        <p class="p1">5<span class="Apple-converted-space">  </span>done</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td32">
+        <p class="p1">6</p>
+      </td>
+      <td valign="middle" class="td33">
+        <p class="p1">1</p>
+      </td>
+      <td valign="middle" class="td34">
+        <p class="p1">6<span class="Apple-converted-space">  </span>done</p>
+      </td>
+      <td valign="middle" class="td35">
+        <p class="p1">1 done</p>
+      </td>
+      <td valign="middle" class="td36">
+        <p class="p1">6 done</p>
+      </td>
+      <td valign="middle" class="td37">
+        <p class="p1">1</p>
+      </td>
+      <td valign="middle" class="td38">
+        <p class="p7">demand\supply</p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<p class="p2"><br></p>
+<p class="p1">After this, we have only one row left, so<span class="Apple-converted-space">  </span>we select all remaining position in this row.</p>
+<p class="p2"><br></p>
+<table cellspacing="0" cellpadding="0" class="t1">
+  <tbody>
+    <tr>
+      <td valign="middle" class="td32">
+        <p class="p12"><span class="s8"><sup>0</sup></span><span class="Apple-converted-space">  </span><span class="s7">6</span></p>
+      </td>
+      <td valign="middle" class="td33">
+        <p class="p1"><span class="s3"><sup>0</sup></span><span class="s4"><span class="Apple-converted-space"> </span></span><span class="s5"> </span>1</p>
+      </td>
+      <td valign="middle" class="td35">
+        <p class="p13"><span class="Apple-converted-space"> </span><span class="s6">2</span></p>
+      </td>
+      <td valign="middle" class="td39">
+        <p class="p7">0</p>
+      </td>
+      <td valign="middle" class="td36">
+        <p class="p7">1</p>
+      </td>
+      <td valign="middle" class="td37">
+        <p class="p1"><span class="s3"><sup>0</sup></span><span class="s9"> </span>1</p>
+      </td>
+      <td valign="middle" class="td38">
+        <p class="p1">8 done</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td32">
+        <p class="p7">0</p>
+      </td>
+      <td valign="middle" class="td33">
+        <p class="p7">0</p>
+      </td>
+      <td valign="middle" class="td35">
+        <p class="p7"><span class="s3"><sup>0</sup></span><span class="s4"><span class="Apple-converted-space"> </span></span><span class="s5"> </span>1</p>
+      </td>
+      <td valign="middle" class="td39">
+        <p class="p14"><span class="s3"><sup>0</sup></span><span class="Apple-converted-space">  </span><span class="s6">1</span></p>
+      </td>
+      <td valign="middle" class="td36">
+        <p class="p11"><span class="s3"><sup>0</sup></span><span class="s4"> </span><span class="Apple-converted-space">  </span><span class="s7">6</span></p>
+      </td>
+      <td valign="middle" class="td37">
+        <p class="p7">0</p>
+      </td>
+      <td valign="middle" class="td38">
+        <p class="p1">8-&gt;2 done</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td32">
+        <p class="p7">1</p>
+      </td>
+      <td valign="middle" class="td33">
+        <p class="p7">0</p>
+      </td>
+      <td valign="middle" class="td35">
+        <p class="p14"><span class="s3"><sup>0</sup></span><span class="Apple-converted-space">  </span><span class="s7">5</span></p>
+      </td>
+      <td valign="middle" class="td39">
+        <p class="p7">1</p>
+      </td>
+      <td valign="middle" class="td36">
+        <p class="p7">1</p>
+      </td>
+      <td valign="middle" class="td37">
+        <p class="p7">1</p>
+      </td>
+      <td valign="middle" class="td38">
+        <p class="p1">5<span class="Apple-converted-space">  </span>done</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td32">
+        <p class="p1">6 done</p>
+      </td>
+      <td valign="middle" class="td33">
+        <p class="p1">1 done</p>
+      </td>
+      <td valign="middle" class="td35">
+        <p class="p1">6 done</p>
+      </td>
+      <td valign="middle" class="td39">
+        <p class="p1">1 done</p>
+      </td>
+      <td valign="middle" class="td36">
+        <p class="p1">6 done</p>
+      </td>
+      <td valign="middle" class="td37">
+        <p class="p1">1 done</p>
+      </td>
+      <td valign="middle" class="td38">
+        <p class="p7">demand\supply</p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<p class="p2"><br></p>
+<p class="p1">The total<span class="Apple-converted-space">  </span>cost is 0 = min <span class="Apple-converted-space">  </span>For the original problem, <span class="Apple-converted-space">    </span>min= 22. <span class="Apple-converted-space">  </span><b>(</b>A).</p>
+<p class="p15"><br></p>
+<p class="p15"><br></p>
+<p class="p15"><br></p>
+<p class="p15"><br></p>
+</body>
+</html>

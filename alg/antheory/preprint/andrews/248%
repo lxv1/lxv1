@@ -1,0 +1,855 @@
+\documentclass{amsart}
+
+\usepackage{amssymb}
+%\usepackage[active]{srcltx}
+
+%\numberwithin{equation}{section}
+
+\allowdisplaybreaks[1]
+
+%%% !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! %%%
+%%% We change the \tt font from cmtt to cmtex %%%
+%%% !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! %%%
+\DeclareFontFamily{OT1}{cmtex}{\hyphenchar\font=-1}
+\DeclareFontShape{OT1}{cmtex}{m}{n}
+     {%
+      <5><6><7><8>cmtex8<9>cmtex9%
+      <10><10.95><12><14.4><17.28><20.74><24.88>cmtex10%
+      }{}
+\renewcommand{\ttdefault}{cmtex}
+
+\newcommand{\lam}{\lambda}
+
+\newcommand{\lbr}{\symbol{123}}
+\newcommand{\rbr}{\symbol{125}}
+\newcommand{\ttge}{\,\symbol{29}\,}
+\newcommand{\ttlam}{\symbol{8}}
+\newcommand{\mysub}[1]{\(\sb{\mathtt{#1}}\)}
+\newcommand{\mysuper}[1]{\textsuperscript{#1}}
+
+\newlength{\axellength}
+\newcommand{\In}[1]{\settowidth{\axellength}{\texttt{123456#1}}%
+\makebox[\axellength][r]{\footnotesize\textsf{In[#1]:=}}}
+\newcommand{\Out}[1]{\settowidth{\axellength}{\texttt{123456#1}}%
+\makebox[\axellength][r]{\footnotesize\textsf{Out[#1]=}}}
+
+\newlength{\hiderlength}
+\newcommand{\atrisc}{\settowidth{\hiderlength}{r}@r\hspace{-\hiderlength}risc.uni-linz.ac.at}
+
+\DeclareMathOperator*{\Omegaoper}{\Omega}
+\newcommand{\Omegaop}{\Omegaoper_{\scriptscriptstyle \geqq}}
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}{Corollary}
+\newtheorem{proposition}{Proposition}
+\newtheorem{lemma}{Lemma}
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}
+\newtheorem{problem}{Problem}
+\theoremstyle{remark}
+\newtheorem*{remark}{Remark}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+\title[MacMahon's Partition Analysis X: Plane Partitions with Diagonals]
+      {MacMahon's Partition Analysis X:\\
+       Plane Partitions with Diagonals}
+
+\author{George E.~Andrews}
+\address{[G.E.A.] Department of Mathematics\\
+         The Pennsylvania State University\\
+         University Park, PA~16802, USA}
+\email{andrews@math.psu.edu}
+\thanks{The first author was partially supported by NSF Grant DMS-0200047}
+
+\author{Peter Paule}
+\address{[P.P.] Research Institute for Symbolic Computation\\
+         Johannes Kepler University Linz\\
+         A--4040~Linz, Austria}
+\email{Peter.Paule\atrisc}
+
+\author{Axel Riese}
+\address{[A.R.] Research Institute for Symbolic Computation\\
+         Johannes Kepler University Linz\\
+         A--4040~Linz, Austria}
+\email{Axel.Riese\atrisc}
+\thanks{The third author was supported by SFB Grant F1305 of the Austrian FWF}
+
+\date{January 29, 2004}
+
+\begin{abstract}
+We examine two-rowed plane partitions with a new diagonal constraint between the rows.
+The related generating function is an infinite product;
+surprisingly the numerator factors of the product are not cyclotomic polynomials.
+\end{abstract}
+
+\maketitle
+
+
+\section{Introduction}
+%%%%%%%%%%%%%%%%%%%%%%
+In his pioneering book ``Combinatory Analysis"~%
+\cite[Vol.~II, Sect.~VIII, pp.~91--170]{MacMahon:CA}
+MacMahon introduced Partition
+Analysis as a computational method for solving combinatorial problems in
+connection with systems of linear diophantine inequalities and equations.
+He devotes Chapter II of Section IX to the study of plane partitions
+as a natural application domain for his method.
+MacMahon starts out with the ``most simple case'' \cite[Vol.~II, p.~183]{MacMahon:CA},
+namely where non-negative integers $a_i$ are placed at the corner
+of a square such that the order relations shown in Figure~\ref{fig:0} are satisfied.
+It is understood that an arrow pointing from $a_i$ to $a_j$
+is interpreted as $a_i \ge a_j$.
+
+\begin{figure}[ht]
+\begin{center}
+\setlength{\unitlength}{1cm}
+\begin{picture}(1.5,1.3)(-0.15,-0)
+\put(0,0){\circle{.15}}
+\put(1,0){\circle{.15}}
+\put(0,1){\circle{.15}}
+\put(1,1){\circle{.15}}
+\put(0.075,0){\line(1,0){0.85}}
+\put(0.075,1){\line(1,0){0.85}}
+\put(0,0.075){\line(0,1){0.85}}
+\put(1,0.075){\line(0,1){0.85}}
+\put(-0.15,1.18){\mbox{$a_1$}}
+\put(0.85,1.18){\mbox{$a_2$}}
+\put(-0.15,-0.3){\mbox{$a_3$}}
+\put(0.85,-0.3){\mbox{$a_4$}}
+%\thicklines
+%\renewcommand{\GenericWarning}[2]{}
+\put(0.6,0){\vector(1,0){0}}
+\put(0.6,1){\vector(1,0){0}}
+\put(0,0.4){\vector(0,-1){0}}
+\put(1,0.4){\vector(0,-1){0}}
+\end{picture}
+\end{center}
+\caption{\label{fig:0}}
+\end{figure}
+
+By using Partition Analysis MacMahon then derives that
+\begin{align*}
+D_1&:=\sum x_1^{a_1} x_2^{a_2} x_3^{a_3} x_4^{a_4} \\
+&=\frac{1-x_1^2 x_2 x_3}{(1-x_1)(1-x_1 x_2)(1-x_1 x_3)(1-x_1 x_2 x_3)(1-x_1 x_2 x_3 x_4)},
+\end{align*}
+where the summation ranges
+over all non-negative integers $a_i$ satisfying the relations from Figure~\ref{fig:0}.
+Furthermore, he observes that if all $x_i$ are set to $q$, the resulting
+generating function reduces to
+\[
+\frac{1}{(1-q)(1-q^2)^2(1-q^3)}.
+\]
+
+Subsequently MacMahon turns to a more general situation
+and tries to derive the full generating function
+for plane partitions of $m$ rows, $l$ columns and each
+part not exceeding $n$.
+However, his exploration culminates in the
+conclusion \cite[Vol.~II, p.~187]{MacMahon:CA}:
+``Our knowledge of the $\Omega$ operation is not sufficient
+to enable us to establish the final form of result. This will
+be accomplished by the aid of new ideas which will be brought
+forward in the following chapters.''
+
+Despite this negative statement, it turns out that Partition Analysis
+nevertheless is a powerful tool for investigating new variations of plane
+partitions, as it has been demonstrated for instance by the authors
+in~\cite{APR:Omega8}.
+Our object here is to study yet another variant of plane partitions, namely one
+with additional constraints on the diagonals, for which the
+full generating function may be computed.
+
+Furthermore, we want to point out that MacMahon's method has been turned
+into an algorithm~\cite{APR:Omega3, APR:Omega6}.
+Many of the results shown below have been verified, some even found, with the
+help of the \textsf{Omega} package\footnote{Available at
+\textit{http://www.risc.uni-linz.ac.at/research/combinat/risc/software/Omega/}}.
+
+
+\section{Plane Partitions with Diagonals}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\label{sec:PP}
+
+First of all we need to recall the key ingredient of MacMahon's method, the Omega
+operator $\Omegaop$.
+
+\begin{definition} \label{dfn:Omega def}
+The operator $\Omegaop$ is given by
+\[
+\Omegaop \sum_{s_1=-\infty}^{\infty} \cdots \sum_{s_r=-\infty}^{\infty}
+A_{s_1,\dots,s_r} \lambda_1^{s_1} \cdots \lambda_r^{s_r} :=
+\sum_{s_1=0}^{\infty} \cdots \sum_{s_r=0}^{\infty} A_{s_1,\dots,s_r},
+\]
+where the domain of the $A_{s_1,\dots,s_r}$ is the field of
+rational functions over $\mathbb{C}$ in several complex variables
+and the $\lam_i$ are restricted to a neighborhood of the circle
+$|\lam_i| = 1$. In addition, the $A_{s_1,\dots,s_r}$ are required
+to be such that any of the series involved is absolute convergent
+within the domain of the definition of the $A_{s_1,\dots,s_r}$.
+\end{definition}
+
+We emphasize that it is essential to treat everything analytically rather
+than formally because the method relies on unique Laurent series
+representations of rational functions; see also the discussion
+in~\cite{APR:Omega3}.
+
+\medskip
+We start with the base case where
+\[
+  h_0 = h_0(x_1,x_2)=\sum_{\substack{a_1,a_2 \ge 0 \\ a_1 \ge a_2}}
+  x_1^{a_1} x_2^{a_2}.
+\]
+Then by geometric series summation,
+\begin{equation} \label{h0}
+  h_0(x_1,x_2) = \frac{1}{(1-x_1)(1-x_1 x_2)}.
+\end{equation}
+Note that by using the $\Omegaop$ operator, the $h_0$ series can be
+rewritten as
+\begin{equation}\label{h0Omega}
+  h_0 = \Omegaop \sum_{a_1,a_2 \ge 0} x_1^{a_1} x_2^{a_2} \lam_1^{a_1-a_2} =
+  \Omegaop \frac{1}{(1-x_1 \lam_1)\big( 1-\frac{x_2}{\lam_1}\big)}.
+\end{equation}
+Expressions like the one on the right-hand side of~\eqref{h0Omega}
+are called ``crude generating functions" in~\cite{MacMahon:CA}.
+Using this representation, relation~\eqref{h0} turns into
+\begin{equation} \label{h0closed}
+  \Omegaop \frac{1}{(1-x_1 \lam_1)\big( 1-\frac{x_2}{\lam_1}\big)} =
+  \frac{1}{(1-x_1)(1-x_1 x_2)},
+\end{equation}
+which can be interpreted as a rule to eliminate the variable $\lam_1$
+from the crude generating function.
+Informally, MacMahon's method can be described as follows.
+Let $f(x_1,\dots,x_n)$ be defined by $\sum x_1^{a_1} \cdots x_n^{a_n}$,
+where the summation is over all nonnegative integers $a_i$ satisfying
+a given system of $r$ linear Diophantine inequalities.
+It is a well-known fact that such generating functions have a closed form
+representation as a rational function.
+In order to compute it via Partition Analysis one first transforms $f$
+into its crude generating function, i.e.,
+\[
+  f(x_1,\dots,x_n) = \Omegaop g(x_1,\dots,x_n;\lam_1,\dots,\lam_r).
+\]
+Then in the next step one successively applies elimination rules like
+\eqref{h0closed} until one arrives at a rational function expression
+which is free of all $\lam_i$.
+Elementary examples can be found in~\cite{APR:Omega3}; see also the
+articles \cite{A:Omega1,A:Omega2,AP:Omega4,APR:Omega6,
+APR:Omega7,APR:Omega8,APR:Omega9,APRS:Omega5}.
+
+\medskip
+We generalize the $h_0$ as follows. Let
+\[
+  H_1 := \{(a_1,\dots,a_6) \in \mathbb{N}^6 : \text{the $a_i$ satisfy the
+  order relations in Figure~\ref{fig:2}}\}.
+\]
+
+\begin{figure}[ht]
+\begin{center}
+\setlength{\unitlength}{1cm}
+\begin{picture}(2.5,1.2)(-0.15,-0)
+\put(0,0){\circle{.15}}
+\put(1,0){\circle{.15}}
+\put(2,0){\circle{.15}}
+\put(0,1){\circle{.15}}
+\put(1,1){\circle{.15}}
+\put(2,1){\circle{.15}}
+\put(0.075,0){\line(1,0){0.85}}
+\put(1.075,0){\line(1,0){0.85}}
+\put(0.075,1){\line(1,0){0.85}}
+\put(1.075,1){\line(1,0){0.85}}
+\put(0,0.075){\line(0,1){0.85}}
+\put(1,0.075){\line(0,1){0.85}}
+\put(2,0.075){\line(0,1){0.85}}
+\put(0.065,0.03){\line(2,1){1.86}}
+\put(-0.15,1.18){\mbox{$a_1$}}
+\put(0.85,1.18){\mbox{$a_3$}}
+\put(1.85,1.18){\mbox{$a_5$}}
+\put(-0.15,-0.3){\mbox{$a_2$}}
+\put(0.85,-0.3){\mbox{$a_4$}}
+\put(1.85,-0.3){\mbox{$a_6$}}
+%\thicklines
+%\renewcommand{\GenericWarning}[2]{}
+\put(0.6,0){\vector(1,0){0}}
+\put(1.6,0){\vector(1,0){0}}
+\put(0.6,1){\vector(1,0){0}}
+\put(1.6,1){\vector(1,0){0}}
+\put(0,0.4){\vector(0,-1){0}}
+\put(1,0.6){\vector(0,-1){0}}
+\put(2,0.4){\vector(0,-1){0}}
+\put(1.4,0.7){\vector(2,1){0}}
+\end{picture}
+\end{center}
+\caption{\label{fig:2}}
+\end{figure}
+
+Define
+\[
+  h_1 := h_1(x_1,\dots, x_6) := \sum_{(a_1,\dots,a_6) \in H_1}
+  x_1^{a_1} \cdots x_6^{a_6}.
+\]
+Obviously,
+\begin{equation} \label{h1}
+   \begin{split}
+   h_1 & = \Omegaop \frac{1}{(1-x_1 \lam_1 \lam_2)\big(1-\frac{x_2 \lam_3 \lam_5}{\lam_1}\big)
+   \big(1-\frac{x_3 \lam_4 \lam_6}{\lam_2}\big)} \\
+   & \qquad \cdot \frac{1}{\big(1-\frac{x_4 \lam_7}{\lam_3 \lam_6}\big)
+   \big(1-\frac{x_5 \lam_8}{\lam_4 \lam_5}\big)
+   \big(1-\frac{x_6}{\lam_7 \lam_8}\big)}.
+   \end{split}
+\end{equation}
+
+The following elimination rules are special instances of the base cases
+(2.4) and (2.2) used in~\cite{APR:Omega6}.
+In fact, \eqref{lem12} is explicitly given by MacMahon~\cite[Vol.~II, p.~102]{MacMahon:CA}.
+
+\begin{lemma}
+\begin{equation} \label{lem13}
+    \begin{split}
+    & \Omegaop \frac{1}{(1-a \lam)\big(1-\frac{b_1}{\lam}\big)
+    \big(1-\frac{b_2}{\lam}\big)\big(1-\frac{b_3}{\lam}\big)}\\
+    & \quad = \frac{1}{(1-a)(1-a b_1)(1-a b_2)(1-a b_3)};
+    \end{split}
+\end{equation}
+\begin{equation} \label{lem12}
+    \begin{split}
+    & \Omegaop \frac{1}{\big(1-\frac{a}{\lam}\big)(1-b_1 \lam)(1-b_2 \lam)}\\
+    & \quad = \frac{1-a b_1 b_2}{(1-b_1)(1-b_2)(1-a b_1)(1-a b_2)}.
+    \end{split}
+\end{equation}
+\end{lemma}
+
+In order to keep expressions as simple as possible it will be convenient to
+introduce the following short-hand notation which will be used for the rest
+of the paper.
+
+\begin{definition}
+   For $k \ge 1$, we define
+   \[
+     X_k := x_1 x_2 \cdots x_k.
+   \]
+\end{definition}
+
+\begin{proposition}
+   \begin{equation} \label{proph1}
+   \begin{split}
+      h_1 &= \frac{(1-x_1 X_3)(1-X_5 X_3)}{(1-X_1)(1-X_2)\big(1-\frac{X_3}{x_2}\big)(1-X_3)}\\
+      & \quad \cdot \frac{1}{(1-X_4)\big(1-\frac {X_5}{x_4}\big)(1-X_5)(1-X_6)}.
+   \end{split}
+   \end{equation}
+\end{proposition}
+
+\begin{proof}
+We start with the crude generating function representation of $h_1$ as
+in~\eqref{h1} and
+apply rule~\eqref{lem13} to it with respect to $\lam_8$, $\lam_7$,
+$\lam_6$, $\lam_5$, and $\lam_2$ in exactly this order and arrive at
+\begin{align*}
+   h_1 &= \Omegaop \frac{1}{(1-X_6)(1-x_1 \lam_1)\big(1-\frac{x_2 \lam_3}{\lam_1}\big)} \\
+   & \qquad \cdot \frac{1}{\big(1-\frac{x_2 x_5 \lam_3}{\lam_1 \lam_4}\big)
+   (1-x_1 x_3 \lam_1 \lam_4)\big(1-\frac{x_1 x_3 x_4 \lam_1 \lam_4}{\lam_3}\big)}.
+\end{align*}
+Applying to this expression rule~\eqref{lem12} with respect to $\lam_4$, $\lam_3$, and
+$\lam_1$, in this order gives~\eqref{proph1}.
+\end{proof}
+
+\begin{definition}
+   For $n \ge 1$ define
+   \[
+     H_n := \{(a_1,\dots,a_{4n+2}) \in \mathbb{N}^{4n+2}: \text{the $a_i$
+     satisfy the order relations in Figure~\ref{fig:3}}\}
+   \]
+   and
+   \[
+     h_n := h_n(x_1,\dots,x_{4n+2}) :=\sum_{(a_1,\dots,a_{4n+2}) \in H_n}
+     x_1^{a_1} \cdots x_{4n+2}^{a_{4n+2}}.
+   \]
+\begin{figure}[ht]
+\begin{center}
+\setlength{\unitlength}{1cm}
+\begin{picture}(8.5,1.2)(-0.15,-0)
+\put(0,0){\circle{.15}}
+\put(1,0){\circle{.15}}
+\put(2,0){\circle{.15}}
+\put(3,0){\circle{.15}}
+\put(4,0){\circle{.15}}
+\put(6,0){\circle{.15}}
+\put(7,0){\circle{.15}}
+\put(8,0){\circle{.15}}
+\put(0,1){\circle{.15}}
+\put(1,1){\circle{.15}}
+\put(2,1){\circle{.15}}
+\put(3,1){\circle{.15}}
+\put(4,1){\circle{.15}}
+\put(6,1){\circle{.15}}
+\put(7,1){\circle{.15}}
+\put(8,1){\circle{.15}}
+\put(0.075,0){\line(1,0){0.85}}
+\put(1.075,0){\line(1,0){0.85}}
+\put(2.075,0){\line(1,0){0.85}}
+\put(3.075,0){\line(1,0){0.85}}
+\put(6.075,0){\line(1,0){0.85}}
+\put(7.075,0){\line(1,0){0.85}}
+\put(0.075,1){\line(1,0){0.85}}
+\put(1.075,1){\line(1,0){0.85}}
+\put(2.075,1){\line(1,0){0.85}}
+\put(3.075,1){\line(1,0){0.85}}
+\put(6.075,1){\line(1,0){0.85}}
+\put(7.075,1){\line(1,0){0.85}}
+\put(0,0.075){\line(0,1){0.85}}
+\put(1,0.075){\line(0,1){0.85}}
+\put(2,0.075){\line(0,1){0.85}}
+\put(3,0.075){\line(0,1){0.85}}
+\put(4,0.075){\line(0,1){0.85}}
+\put(6,0.075){\line(0,1){0.85}}
+\put(7,0.075){\line(0,1){0.85}}
+\put(8,0.075){\line(0,1){0.85}}
+\put(0.065,0.03){\line(2,1){1.86}}
+\put(2.065,0.03){\line(2,1){1.86}}
+\put(6.065,0.03){\line(2,1){1.86}}
+\put(-0.15,1.18){\mbox{$a_1$}}
+\put(0.85,1.18){\mbox{$a_3$}}
+\put(1.85,1.18){\mbox{$a_5$}}
+\put(2.85,1.18){\mbox{$a_7$}}
+\put(3.85,1.18){\mbox{$a_9$}}
+\put(5.55,1.18){\mbox{$a_{4n-3}$}}
+\put(6.55,1.18){\mbox{$a_{4n-1}$}}
+\put(7.55,1.18){\mbox{$a_{4n+1}$}}
+\put(-0.15,-0.3){\mbox{$a_2$}}
+\put(0.85,-0.3){\mbox{$a_4$}}
+\put(1.85,-0.3){\mbox{$a_6$}}
+\put(2.85,-0.3){\mbox{$a_8$}}
+\put(3.85,-0.3){\mbox{$a_{10}$}}
+\put(4.8,0.5){\mbox{$\ldots$}}
+\put(5.55,-0.3){\mbox{$a_{4n-2}$}}
+\put(6.7,-0.3){\mbox{$a_{4n}$}}
+\put(7.55,-0.3){\mbox{$a_{4n+2}$}}
+%\thicklines
+%\renewcommand{\GenericWarning}[2]{}
+\put(0.6,0){\vector(1,0){0}}
+\put(1.6,0){\vector(1,0){0}}
+\put(2.6,0){\vector(1,0){0}}
+\put(3.6,0){\vector(1,0){0}}
+\put(6.6,0){\vector(1,0){0}}
+\put(7.6,0){\vector(1,0){0}}
+\put(0.6,1){\vector(1,0){0}}
+\put(1.6,1){\vector(1,0){0}}
+\put(2.6,1){\vector(1,0){0}}
+\put(3.6,1){\vector(1,0){0}}
+\put(6.6,1){\vector(1,0){0}}
+\put(7.6,1){\vector(1,0){0}}
+\put(0,0.4){\vector(0,-1){0}}
+\put(1,0.6){\vector(0,-1){0}}
+\put(2,0.4){\vector(0,-1){0}}
+\put(3,0.6){\vector(0,-1){0}}
+\put(4,0.4){\vector(0,-1){0}}
+\put(6,0.4){\vector(0,-1){0}}
+\put(7,0.6){\vector(0,-1){0}}
+\put(8,0.4){\vector(0,-1){0}}
+\put(1.4,0.7){\vector(2,1){0}}
+\put(3.4,0.7){\vector(2,1){0}}
+\put(7.4,0.7){\vector(2,1){0}}
+\end{picture}
+\end{center}
+\caption{\label{fig:3}}
+\end{figure}
+\end{definition}
+
+The two following crude generating function representations are obvious:
+
+\begin{proposition}
+   \begin{equation} \label {h2}
+   \begin{split}
+      h_2 &= \Omegaop \frac{1}{(1-x_1 \lam_1 \lam_2)
+      \big(1-\frac{x_2 \lam_3 \lam_5}{\lam_1}\big)
+      \big(1-\frac{x_3 \lam_4 \lam_6}{\lam_2}\big)} \\
+      & \qquad \cdot \frac{1}{\big(1-\frac{x_4 \lam_7}{\lam_3 \lam_6}\big)
+      \big(1-\frac{x_5 \lam_8 \lam_9}{\lam_4 \lam_5}\big)
+      \big(1-\frac{x_6 \lam_{10} \lam_{11}}{\lam_7 \lam_8}\big)}\\
+      & \qquad \cdot \frac{1}{\big(1-\frac{x_7 \lam_{12} \lam_{13}}{\lam_9}\big)
+      \big(1-\frac{x_8 \lam_{14}}{\lam_{10} \lam_{13}}\big)
+      \big(1-\frac{x_9 \lam_{15}}{\lam_{11} \lam_{12}}\big)
+      \big(1-\frac{x_{10}}{\lam_{14} \lam_{15}}\big)}.
+   \end{split}
+   \end{equation}
+\end{proposition}
+
+\begin{proposition}
+   For $n \ge 3$,
+   \begin{equation} \label {hn}
+   \begin{split}
+      h_n &= \Omegaop \frac{1}{(1-x_1 \lam_1 \lam_2)
+      \big(1-\frac{x_2 \lam_3 \lam_5}{\lam_1}\big)
+      \big(1-\frac{x_3 \lam_4 \lam_6}{\lam_2}\big)} \\
+      & \qquad \cdot \frac{1}{\big(1-\frac{x_4 \lam_7}{\lam_3 \lam_6}\big)
+      \big(1-\frac{x_5 \lam_8 \lam_9}{\lam_4 \lam_5}\big)
+      \big(1-\frac{x_6 \lam_{10} \lam_{11}}{\lam_7 \lam_8}\big)}\\
+      & \qquad \vdots \\
+      & \qquad \cdot \frac{1}{\big(1-\frac{x_{4n-5} \lam_{7n-9} \lam_{7n-8}}{\lam_{7n-12}}\big)
+      \big(1-\frac{x_{4n-4} \lam_{7n-7}}{\lam_{7n-11} \lam_{7n-8}}\big)
+      \big(1-\frac{x_{4n-3} \lam_{7n-6} \lam_{7n-5}}{\lam_{7n-10} \lam_{7n-9}}\big)}\\
+      & \qquad \cdot \frac{1}
+      {\big(1-\frac{x_{4n-2} \lam_{7n-4} \lam_{7n-3}}{\lam_{7n-7} \lam_{7n-6}}\big)
+      \big(1-\frac{x_{4n-1} \lam_{7n-2} \lam_{7n-1}}{\lam_{7n-5}}\big)
+      \big(1-\frac{x_{4n} \lam_{7n}}{\lam_{7n-4} \lam_{7n-1}}\big)}\\
+      & \qquad \cdot \frac{1}
+      {\big(1-\frac{x_{4n+1} \lam_{7n+1}}{\lam_{7n-3} \lam_{7n-2}}\big)
+      \big(1-\frac{x_{4n+2}}{\lam_{7n} \lam_{7n+1}}\big)}.
+   \end{split}
+   \end{equation}
+\end{proposition}
+
+The next proposition is immediately implied by the previous representations
+\eqref{h2} and~\eqref{hn}.
+
+\begin{proposition} \label{prop:hn1}
+   For $n \ge 1$,
+   \begin{align*}
+      h_{n+1} &= \Omegaop h_n(x_1,\dots,x_{4n},x_{4n+1} \lam_{7n+2},
+      x_{4n+2} \lam_{7n+3} \lam_{7n+4}) \\
+      & \qquad \cdot \frac{1}
+      {\big(1-\frac{x_{4n+3} \lam_{7n+5} \lam_{7n+6}}{\lam_{7n+2}}\big)
+      \big(1-\frac{x_{4n+4} \lam_{7n+7}}{\lam_{7n+3} \lam_{7n+6}}\big)
+      \big(1-\frac{x_{4n+5} \lam_{7n+8}}{\lam_{7n+4} \lam_{7n+5}}\big)
+      \big(1-\frac{x_{4n+6}}{\lam_{7n+7} \lam_{7n+8}}\big)}.
+   \end{align*}   
+\end{proposition}
+
+In the next section we shall use this proposition to prove the following
+theorem.
+
+\begin{theorem} \label{thm:hnquot}
+   For $n \ge 0$, $X_{-1}:=1$, and $x_0:=1$,
+   \begin{equation} \label{hnquot}
+   \begin{split}
+      \frac{h_{n+1}}{h_n} &= \frac{1-X_{4n+5} X_{4n+3}}{1-\frac{X_{4n+5}}{x_{4n+4}}}
+      \; \frac{P_n(x_1,\dots,x_{4n+3})}{\big(1-\frac{X_{4n+3}}{x_{4n} x_{4n+2}}\big)
+      \big(1- \frac{X_{4n+3}}{x_{4n+2}}\big)}\\
+      & \quad \cdot \frac{1}{(1-X_{4n+3})(1-X_{4n+4})(1-X_{4n+5})(1-X_{4n+6})
+      (1-X_{4n+1} X_{4n-1})},
+   \end{split}
+   \end{equation}
+   where
+   \begin{equation} \label{Pn}
+   \begin{split}
+      P_n(x_1,\dots,x_{4n+3}) &= 1-X_{4n-1} X_{4n+1}-\frac{X_{4n-1}X_{4n+3}}{x_{4n+2}}-
+      \frac{X_{4n+1}X_{4n+3}}{x_{4n} x_{4n+2}}\\
+      &- \frac{X_{4n+1} X_{4n+3}}{x_{4n}}-X_{4n+1}X_{4n+3}+
+      \frac{X_{4n-1}X_{4n+1}X_{4n+3}}{x_{4n}x_{4n+2}}\\
+      &+ \frac{X_{4n-1}X_{4n+1}X_{4n+3}}{x_{4n+2}} + X_{4n-1} X_{4n+1} X_{4n+3} +
+      \frac{X_{4n+1}^2 X_{4n+3}}{x_{4n}}\\
+      &+ \frac{X_{4n+1}X_{4n+3}^2}{x_{4n} x_{4n+2}}-\frac{X_{4n-1}X_{4n+1}^2
+      X_{4n+3}^2}{x_{4n} x_{4n+2}}.
+   \end{split}
+   \end{equation}
+\end{theorem}
+
+Setting $x_i=q$ for all $i \ge 1$ and $x_0=1$, $X_{-1}=0$, we observe that
+\begin{equation} \label{Pnq}
+\begin{split}
+   &\frac{1-X_{4n+5}X_{4n+3}}{\big(1-\frac{X_{4n+5}}{x_{4n+4}}\big)
+   (1-X_{4n+1}X_{4n-1})} \; \frac{P_n(x_1,\dots,x_{4n+3})}
+   {\big(1-\frac{X_{4n+3}}{x_{4n}x_{4n+2}}\big)\big(1-\frac{X_{4n+3}}{x_{4n+2}}\big)}\\
+   & \quad = \frac{1+q^{4n+4}}{1-q^{8n}} \; \frac{(1-q^{4n+3})(1-q^{8n})-
+   q(1-q^{4n})(1-q^{8n+1})}{1-q}\\
+   & \quad = \frac{1+q^{4n+4}}{1+q^{4n}} \; \frac{(1-q^{4n+3})(1+q^{4n})-
+   q(1-q^{8n+1})}{1-q}\\
+   & \quad = \frac{1+q^{4n+4}}{1+q^{4n}} \; (1+q^{4n}+q^{4n+1}+q^{4n+2}+q^{8n+2}).
+\end{split}
+\end{equation}
+
+If we define for $n \ge 0$,
+\[
+  Q_n := 1+q^{4n}+q^{4n+1}+q^{4n+2}+q^{8n+2},
+\]
+then due to \eqref{Pnq}, equation~\eqref{hnquot} reduces to
+\[
+   \frac{h_{n+1}(q)}{h_n(q)} = \frac{1+q^{4n+4}}{1+q^{4n}} \;
+   \frac{Q_n}{(1-q^{4n+3})(1-q^{4n+4})(1-q^{4n+5})(1-q^{4n+6})}
+\]
+for all $n \ge 1$, where
+\[
+  h_n(q) = h_n(q,q,\dots,q).
+\]
+
+We summarize in the form of a corollary.
+
+\begin{corollary}
+   For $n \ge 1$,
+   \[
+      h_n(q)=(1+q^2)(1+q^{4n}) \frac{Q_1 Q_2 \cdots Q_{n-1}}
+      {(q;q)_{4n+2}}.
+   \]
+\end{corollary}
+
+For $n \to \infty$ we obtain the following.
+
+\begin{corollary} \label{cor:hinfq}
+   \[
+      h_\infty(q)=(1+q^2) \;
+      \prod_{n=1}^\infty \frac{1+q^{4n}+q^{4n+1}+q^{4n+2}+q^{8n+2}}{1-q^n}.
+   \]
+\end{corollary}
+
+
+\section{Proof of Theorem~\ref{thm:hnquot}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+We shall prove Theorem~\ref{thm:hnquot} in the following equivalent form.
+
+\begin{theorem} \label{thm:v2}
+   Let $g_n=g_n(x_1,\dots,x_{4n+6})$ denote the right-hand side of
+   equality~\eqref{hnquot}.
+   Then for $n \ge 0$,
+   \[
+      h_{n+1} = g_n g_{n-1} \cdots g_0 h_0.
+   \]
+\end{theorem}
+
+\begin{proof}
+We proceed by induction on $n$.
+The case $n=0$ is immediate from \eqref{h0} and~\eqref{proph1}.
+For the step from $n$ to $n+1$ we invoke Proposition~\ref{prop:hn1},
+namely
+\begin{equation} \label{hn1new}
+   h_{n+1} = \Omegaop h_n(x_1,\dots,x_{4n}, x_{4n+1} \lam_{7n+2},
+   x_{4n+2} \lam_{7n+3} \lam_{7n+4}) \, T_n,
+\end{equation}
+where
+\[
+  T_n = \frac{1}{\big(1-\frac{x_{4n+3} \lam_{7n+5} \lam_{7n+6}}{\lam_{7n+2}}\big)
+  \big(1-\frac{x_{4n+4} \lam_{7n+7}}{\lam_{7n+3} \lam_{7n+6}}\big)
+  \big(1-\frac{x_{4n+5} \lam_{7n+8}}{\lam_{7n+4} \lam_{7n+5}}\big)
+  \big(1-\frac{x_{4n+6}}{\lam_{7n+7} \lam_{7n+8}}\big)}.
+\]
+According to the induction hypothesis,
+\begin{equation} \label{hypo}
+\begin{split}
+   h_n(x_1,\dots,x_{4n+2}) &= g_{n-1}(x_1,\dots,x_{4n+2})
+   g_{n-2}(x_1,\dots,x_{4n-2}) \cdots g_0(x_1,\dots,x_6)\\
+   & \quad \cdot  h_0(x_1,x_2).
+\end{split}
+\end{equation}
+Consequently, \eqref{hn1new} and \eqref{hypo} give
+\begin{equation} \label{hypoq}
+\begin{split}
+   h_{n+1} & = \overbrace{g_{n-2} \cdots g_0 h_0}^{h_{n-1}} \\
+   & \quad \cdot \Omegaoper_{\substack{\geqq\\ \mu_1,\dots,\mu_7}}
+   g_{n-1}(x_1,\dots,x_{4n},x_{4n+1} \mu_1, x_{4n+2} \mu_2 \mu_3)\\
+   & \qquad \cdot \underbrace{\frac{1}{\big(1-\frac{x_{4n+3} \mu_4 \mu_5}{\mu_1}\big)
+   \big(1-\frac{x_{4n+4} \mu_6}{\mu_2 \mu_5}\big)
+   \big(1-\frac{x_{4n+5} \mu_7}{\mu_3 \mu_4}\big)
+   \big(1-\frac{x_{4n+6}}{\mu_6 \mu_7}\big)}}_{T(\mu_1,\dots,\mu_7)}.
+\end{split}
+\end{equation}
+So our task is to show that the $\Omegaop$ expression in \eqref{hypoq} is
+indeed $g_n g_{n-1}$, which corresponds to showing that
+\begin{align*}
+   g_n g_{n-1} &= \Omegaop \frac{1-X_{4n+1} X_{4n-1} \mu_1}
+   {1-X_{4n-3} X_{4n-5}} \; \frac{P_{n-1}(x_1,\dots,x_{4n-1})}
+   {\big( 1- \frac{X_{4n-1}}{x_{4n-4} x_{4n-2}}\big)
+   \big( 1- \frac{X_{4n-1}}{x_{4n-2}}\big)}\\
+   & \qquad \cdot \frac{1}{(1-X_{4n-1})(1-X_{4n})(1-X_{4n+1} \mu_1)
+   (1-X_{4n+2} \mu_1 \mu_2 \mu_3)}\\
+   & \qquad \cdot \frac{1}{1-\frac{X_{4n+1} \mu_1}{x_{4n}}} \;
+   T(\mu_1,\dots,\mu_7).
+\end{align*}
+The right-hand side equals
+\begin{align*}
+   & \frac{P_{n-1}(x_1,\dots,x_{4n-1})}
+   {\big( 1- \frac{X_{4n-1}}{x_{4n-4} x_{4n-2}}\big)
+   \big( 1- \frac{X_{4n-1}}{x_{4n-2}}\big)} \;
+   \frac{1}{(1-X_{4n-3} X_{4n-5})(1-X_{4n-1})(1-X_{4n})}\\
+   & \quad \cdot \Omegaop \frac{(1-X_{4n+1} X_{4n-1} \mu_1)
+   T(\mu_1,\dots,\mu_7)}{(1-X_{4n+1} \mu_1)(1-X_{4n+2} \mu_1 \mu_2 \mu_3)
+   \big(1-\frac{X_{4n+1} \mu_1}{x_{4n}}\big)},
+\end{align*}
+so in other words, by $\Omegaop$ elimination we have to derive that
+\begin{equation}\label{Ldef}
+\begin{split}
+   L &:= \Omegaop \frac{(1-X_{4n+1} X_{4n-1} \mu_1) T(\mu_1,\dots,\mu_7)}
+   {(1-X_{4n+1} \mu_1)(1-X_{4n+2} \mu_1 \mu_2 \mu_3)
+   \big(1-\frac{X_{4n+1} \mu_1}{x_{4n}}\big)}\\
+   &= g_n \; \frac{1-X_{4n+1} X_{4n-1}}{(1-X_{4n+1})(1-X_{4n+2})
+   \big(1-\frac{X_{4n+1}}{x_{4n}}\big)}.
+\end{split}
+\end{equation}
+To this end we apply rule~\eqref{lem13} to eliminate from the left-hand
+side of \eqref{Ldef} the variables $\mu_7$, $\mu_6$,
+$\mu_5$, and $\mu_3$, in this order, and arrive at
+\begin{align*}
+   L &= \frac{1}{1-X_{4n+2} x_{4n+3} x_{4n+4} x_{4n+5} x_{4n+6}} \\
+   & \quad \cdot \Omegaop \frac{1-X_{4n-1} X_{4n+1} \mu_1}
+   {(1-X_{4n+1} \mu_1)(1-X_{4n+2} \mu_1 \mu_2)
+   \big(1-\frac{X_{4n+1} \mu_1}{x_{4n}}\big)}\\
+   & \qquad \cdot \frac{1}{\big(1-\frac{x_{4n+3} \mu_4}{\mu_1}\big)
+   \big(1-\frac{x_{4n+3} x_{4n+4} \mu_4}{\mu_1 \mu_2}\big)
+   \big(1-\frac{X_{4n+2} x_{4n+5} \mu_1 \mu_2}{\mu_4}\big)}.
+\end{align*}
+In the next step we apply rule~\eqref{lem12} to eliminate $\mu_2$ and
+$\mu_4$, in this order, which gives
+\begin{equation}\label{LC}
+   L = C \cdot \Omegaop \frac{1-\mu_1 X_{4n-1} X_{4n+1}}
+   {(1-X_{4n+1} \mu_1)(1-X_{4n+2} \mu_1)
+   \big(1-\frac{X_{4n+1} \mu_1}{x_{4n}}\big)
+   \big(1-\frac{x_{4n+3}}{\mu_1}\big)}
+\end{equation}
+with
+\[
+  C = \frac{1-X_{4n+3} X_{4n+5}}{(1-X_{4n+4})
+  \big(1-\frac{X_{4n+5}}{x_{4n+4}}\big)(1-X_{4n+5})(1-X_{4n+6})}.
+\]
+For the final elimination step let us denote the $\Omegaop$ expression in
+\eqref{LC} by $L'$.
+In order to eliminate $\mu_1$ from it, we need to extend rule~\eqref{lem12}
+by one more term and with $1$ or $\lam$ in the numerator.
+
+\begin{lemma}
+We have
+\begin{equation}\label{lem21}
+\begin{split}
+   & \Omegaop \frac{1}{\big(1-\frac{a}{\lam}\big)(1-b_1 \lam)
+   (1-b_2 \lam)(1-b_3 \lam)}\\
+   & \quad = \frac{1+(b_1 b_2 b_3-b_1 b_2-b_1 b_3-b_2 b_3)a
+   + b_1 b_2 b_3 a^2}{(1-b_1)(1-b_2)(1-b_3)(1-a b_1)(1-a b_2)
+   (1-a b_3)}
+\end{split}
+\end{equation}
+and
+\begin{equation}\label{lem22}
+\begin{split}
+   & \Omegaop \frac{\lam}{\big(1-\frac{a}{\lam}\big)(1-b_1 \lam)
+   (1-b_2 \lam)(1-b_3 \lam)}\\
+   & \quad = \frac{1+(1-b_1-b_2-b_3)a + b_1 b_2 b_3 a^2}
+   {(1-b_1)(1-b_2)(1-b_3)(1-a b_1)(1-a b_2)(1-a b_3)}.
+\end{split}
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+Rule~\eqref{lem21} is an entry in MacMahon's
+list~\cite[Vol.~2, Art.~348]{MacMahon:CA}.
+Rule~\eqref{lem22} is proved in~\cite{APR:Omega6}.
+\end{proof}
+
+Applying rules~\eqref{lem21} and \eqref{lem22}, to the
+first, resp.\ second, part of $L'$ results in
+\begin{equation}\begin{split} \label{D1}
+  \Omegaop & \frac{1}{(1-X_{4n+1} \mu_1)(1-X_{4n+2} \mu_1)
+  \big(1-\frac{X_{4n+1} \mu_1}{x_{4n}}\big)
+  \big(1-\frac{x_{4n+3}}{\mu_1}\big)}\\
+  & = D \cdot \Big( 1-X_{4n-1}X_{4n+1}-
+  \frac{X_{4n+1}X_{4n+3}}{x_{4n} x_{4n+2}}-
+  \frac{X_{4n+1}X_{4n+3}}{x_{4n}}+
+  \frac{X_{4n+1}^2 X_{4n+3}}{x_{4n}} \\
+  & \qquad\quad + \frac{X_{4n+1}X_{4n+2}^2}{x_{4n} x_{4n+2}}\Big)
+\end{split}\end{equation}
+and
+\begin{equation}\begin{split} \label{D2}
+  -\Omegaop & \frac{\mu_1 X_{4n-1} X_{4n+1}}{(1-X_{4n+1} \mu_1)(1-X_{4n+2} \mu_1)
+  \big(1-\frac{X_{4n+1} \mu_1}{x_{4n}}\big)
+  \big(1-\frac{x_{4n+3}}{\mu_1}\big)} \\
+  & = D \cdot \Big( {-X_{4n-1}X_{4n+1}}-
+  \frac{X_{4n-1}X_{4n+3}}{x_{4n+2}}+
+  \frac{X_{4n-1}X_{4n+1}X_{4n+3}}{x_{4n+2}}\\
+  & \qquad\quad + X_{4n-1}X_{4n+1}X_{4n+3}+
+  \frac{X_{4n-1} X_{4n+1} X_{4n+3}}{x_{4n+2}x_{4n}}
+  - \frac{X_{4n-1}X_{4n+1}^2 X_{4n+2}^2}{x_{4n} x_{4n+2}}\Big),
+\end{split}\end{equation}
+where
+\begin{align*}
+   D &= \frac{1}{(1-X_{4n+1})(1-X_{4n+2})
+  \big(1-\frac{X_{4n+1}}{x_{4n}}\big)
+  \big(1-\frac{X_{4n+3}}{x_{4n+2}}\big)}\\
+  & \quad \cdot \frac {1}{(1-X_{4n+3})
+  \big(1-\frac{X_{4n+3}}{x_{4n+2}x_{4n}}\big)}.
+\end{align*}
+Finally, combining \eqref{D1} and \eqref{D2} with \eqref{LC},
+and recalling the definition of $P_n$ from~\eqref{Pn}, gives
+\begin{align*}
+   L &= C \cdot D \cdot P_n\\
+   & = g_n \; \frac{1-X_{4n+1} X_{4n-1}}
+   {(1-X_{4n+1})(1-X_{4n+2})
+   \big(1-\frac{X_{4n+1}}{x_{4n}}\big)},
+\end{align*}
+which proves \eqref{Ldef}.
+This completes the proof of Theorem~\ref{thm:v2}, and hence the
+proof of Theorem~\ref{thm:hnquot}.
+\end{proof}
+
+\section{Conclusion}
+Once again we find that MacMahon's Partition Analysis implemented in the
+\textsf{Omega} package is a powerful exploratory tool.
+The generating function in Corollary~\ref{cor:hinfq} is totally
+unexpected from past experience.
+All of the previous infinite product generating functions for
+ordinary and plane partitions consisted of products of cyclotomic
+polynomials.
+Now for plane partitions with diagonals we discover the lovely product
+in Corollary~\ref{cor:hinfq}.
+
+Naturally, we are led to plane partitions with other diagonals and with
+more rows.
+We have found further partitions that are related to those considered here
+and that have striking infinite product generating functions.
+These will be the subject of a subsequent paper.
+
+\renewcommand{\ttdefault}{cmtt}
+
+\begin{thebibliography}{99}
+
+\bibitem{A:Omega1}
+   G.E.~Andrews,
+   \textit{MacMahon's partition analysis I: The lecture hall partition theorem},
+   in ``Mathematical essays in honor of Gian-Carlo Rota",
+   Progr.\ Math., Vol.~ 161, pp.~1--22, Birkh\"auser, Boston, 1998.
+
+\bibitem{A:Omega2}
+   \bysame,
+   \textit{MacMahon's partition analysis II:
+   Fundamental theorems}, Ann.~Comb., {\bf 4} (2000), 327--338.
+
+\bibitem{AP:Omega4}
+   G.E.~Andrews and P.~Paule, \textit{MacMahon's partition analysis~IV:
+   Hypergeometric multisums},
+   S\'em.~Lothar.\ Combin., \textbf{42} (1999), 1--24.
+
+\bibitem{APR:Omega3}
+   G.E.~Andrews, P.~Paule, and A.~Riese, \textit{MacMahon's
+   partition analysis~III: The \texttt{Omega} package},
+   European J.~Combin., \textbf{22} (2001), 887--904.
+
+\bibitem{APR:Omega6}
+   \bysame, \textit{MacMahon's partition analysis~VI: A new reduction algorithm},
+   Ann.~Comb., \textbf{5} (2001), 251--270.
+
+\bibitem{APR:Omega7}
+   \bysame, \textit{MacMahon's
+   partition analysis~VII: Constrained compositions},
+   in ``$q$-Series with applications to combinatorics, number theory, and physics"
+   (B.C.~Berndt and K.~Ono, eds.), Contemp.\ Math., Vol.~291, pp.~11--27,
+   Amer.\ Math.~Soc., Providence, 2001.
+
+\bibitem{APR:Omega8}
+   \bysame, \textit{MacMahon's partition analysis~VIII: Plane partition diamonds},
+   Adv.~in Appl.~Math., \textbf{27} (2001), 231--242.
+
+\bibitem{APR:Omega9}
+   \bysame, \textit{MacMahon's partition analysis~IX: $k$-Gon partitions},
+   Bull.~Austral.\ Math.~Soc., \textbf{64} (2001), 321--329.
+
+\bibitem{APRS:Omega5}
+   G.E.~Andrews, P.~Paule, A.~Riese, and V.~Strehl, \textit{MacMahon's
+   partition analysis~V: Bijections, recursions, and magic squares},
+   in ``Algebraic combinatorics and applications"
+   (A.~Betten et al., eds.), pp.~1--39, Springer, Berlin, 2001.
+
+\bibitem{MacMahon:CA} P.A.~MacMahon, \textit{Combinatory Analysis}, 2~vols.,
+   Cambridge University Press, Cambridge, 1915--1916. (Reprinted: Chelsea,
+   New York, 1960)
+
+\end{thebibliography}
+
+\end{document}

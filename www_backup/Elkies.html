@@ -1,0 +1,204 @@
+<html><head><title>Complete cubic parametrization of w^3+x^3+y^3+z^3=0</title></head>
+<body bgcolor="#ccffff">
+<font size="+1">
+</font><h2>
+<center>
+<font size="+1">Complete cubic parametrization of the Fermat cubic surface
+</font></center>
+<center>
+<font size="+1">w<sup>3</sup> + x<sup>3</sup> + y<sup>3</sup> + z<sup>3</sup> = 0
+</font></center>
+</h2>
+
+<p>
+
+<font size="+1">This is a famous Diophantine problem, to which Dickson's
+<em>History of the Theory of Numbers, Vol. II</em> devotes many pages.
+It is usually phrased as 
+w<sup>3</sup>+x<sup>3</sup>+y<sup>3</sup>=z<sup>3</sup>
+or
+w<sup>3</sup>+x<sup>3</sup>=y<sup>3</sup>+z<sup>3</sup>,
+with the implication that the variables are to be positive,
+as in the integer solutions 
+3<sup>3</sup>+4<sup>3</sup>+5<sup>3</sup>=6<sup>3</sup>
+(an amusing counterpart of the classic identity
+3<sup>2</sup>+4<sup>2</sup>=5<sup>2</sup> --
+but no, it does not generalize further) and
+12<sup>3</sup>+1<sup>3</sup>=10<sup>3</sup>+9<sup>3</sup>=1729
+(which famously occurs in the Ramanujan taxicab story).
+If we allow negative variables, the three forms of the equation
+become equivalent by sign changes, and we choose the form
+w<sup>3</sup>+x<sup>3</sup>+y<sup>3</sup>+z<sup>3</sup>=0
+that displays the greatest symmetry.  The two solutions above
+are then (w,x,y,z)=(3,4,5,-6) and (x,y,z,t)=(12,1,-10,-9).
+These, together with (1,6,8,-9) and variations obtained
+by scaling or permuting the variables, are minimal
+when we exclude trivial solutions of the form
+(x,-x,y,-y) and permutations thereof.
+
+</font></p><p>
+
+<font size="+1"><strong>Theorem.</strong>
+<em>Suppose</em> (w,x,y,z)
+<em>is a rational solution of</em>
+w<sup>3</sup>+x<sup>3</sup>+y<sup>3</sup>+z<sup>3</sup>=0.
+<em>Then there exist</em> r,s,t <em>such that</em>
+(w,x,y,z) <em>are proportional to</em>
+</font></p><center>
+<font size="+1">-(s+r)t<sup>2</sup> + (s<sup>2</sup>+2r<sup>2</sup>) t
+- s<sup>3</sup> + rs<sup>2</sup> - 2r<sup>2</sup>s - r<sup>3</sup>,
+<br>
+ t<sup>3</sup> - (s+r)t<sup>2</sup> + (s<sup>2</sup>+2r<sup>2</sup>) t
++ rs<sup>2</sup> - 2r<sup>2</sup>s + r<sup>3</sup>,
+<br>
+-t<sup>3</sup> + (s+r)t<sup>2</sup> - (s<sup>2</sup>+2r<sup>2</sup>) t
++ 2rs<sup>2</sup> - r<sup>2</sup>s + 2r<sup>3</sup>,
+<br>
+(s-2r)t<sup>2</sup> + (r<sup>2</sup>-s<sup>2</sup>) t
++ s<sup>3</sup> - rs<sup>2</sup> + 2r<sup>2</sup>s - 2r<sup>3</sup>.
+</font></center>
+<font size="+1"><em>Indeed,</em> r,s,t <em>are proportional to</em>
+</font><center>
+<font size="+1"> yz - wx,
+      
+ wy - wx + xz + w<sup>2</sup> - wz + z<sup>2</sup>,
+      
+ y<sup>2</sup> - xy + wy + x<sup>2</sup> - wx + xz,
+</font></center>
+<font size="+1"><em>unless</em> w+y, x+z <em>are both zero, in which case</em>
+r,s,t <em>are proportional to</em> x+y,y,x.
+
+</font><p>
+
+<font size="+1">This map (w:x:y:z) -&gt; (r:s:t) blows down
+six disjoint lines, as follows:
+</font></p><center>
+<table cellspacing="3">
+<tbody><tr><td align="center"><font size="+1"> w+az = x+ay = 0 </font></td>
+<td><font size="+1"> to </font></td>
+<td align="left"><font size="+1"> (-a:1:1); </font></td>
+</tr><tr>
+<td align="center"><font size="+1"> w+a'z = x+a'y = 0 </font></td>
+<td><font size="+1"> to </font></td>
+<td align="left"><font size="+1"> (-a':1:1); </font></td>
+</tr><tr> 
+<td align="center"><font size="+1"> x+az = y+aw = 0 </font></td>
+<td><font size="+1"> to </font></td>
+<td align="left"><font size="+1"> (0:1:-a); </font></td>
+</tr><tr>
+<td align="center"><font size="+1"> x+a'z = y+a'w = 0 </font></td>
+<td><font size="+1"> to </font></td>
+<td align="left"><font size="+1"> (0:1:-a'); </font></td>
+</tr><tr>
+<td align="center"><font size="+1"> y+az = w+ax = 0 </font></td>
+<td><font size="+1"> to </font></td>
+<td align="left"><font size="+1"> (1:-a':-a); </font></td>
+</tr><tr>
+<td align="center"><font size="+1">  y+a'z = w+a'x = 0 </font></td>
+<td><font size="+1"> to </font></td>
+<td align="left"><font size="+1"> (1:-a:-a'); </font></td>
+</tr></tbody></table>
+</center>
+
+<font size="+1">where a,a' are a cube root of unity and its complex conjugate.
+We have thus explicitly represented the Fermat cubic surface
+as <strong>P</strong><sup>2</sup> blown up at six points;
+I do not know if such formulas have been previously exhibited.
+The usual approach to rationally parametrizing that surface,
+using a <strong>Q</strong>(a)-conjugate pair of skew lines,
+amounts to getting that surface as
+(<strong>P</strong><sub>1</sub>)<sup>2</sup> blown up at 5 points.
+
+</font><p>
+
+<font size="+1">Of the fifteen lines connecting six of the blown-up points,
+three are defined over <strong>Q</strong>.  We have already seen
+(s+t:s:t) mapping to (s:-t:-s:t); the other two lines are
+(0:s:t), which maps to (s:-t:t:-s), and
+(r:s:s), which maps to (-x:x:y:-y) with x=-(r+s), y=2r-s.
+
+</font></p><p>
+
+<font size="+1">While we stated the result only for rational solutions,
+it holds equally over any field F not of characteristic 3,
+as long as F does not contain the cube roots of unity a,a'.
+If F does contain them, we must exclude points (w,x,y,z)
+on one of the six blown-down lines, and also give
+separate formulas for r,s,t on two further lines.
+
+</font></p><p>
+
+<font size="+1">The surface w<sup>3</sup>+x<sup>3</sup>+y<sup>3</sup>+z<sup>3</sup>=0
+has 4! obvious symmetries, obtained by permuting the variables.
+It turns out that the even permutations preserve the set of six
+blown-down lines, and thus give rise to linear transformations
+of the (r:s:t) projective plane.  This is not obvious from our formulas;
+the relevant symmetries of <strong>P</strong><sup>2</sup> can be seen
+more clearly after the linear change of variable
+</font></p><p>
+</p><center>
+<font size="+1">(A,B,C) = (r,s-t,-r+s+t);
+   
+(r,s,t) = (2A,A+B+C,A-B+C)/2 .
+</font></center>
+<p>
+<font size="+1">This makes our formulas longer (no coefficients vanish),
+and also ill-behaved in characteristic 2; but has the advantage
+that the symmetries of <strong>P</strong><sup>2</sup> become
+monomial permutation matrices.
+Thus: let F(A,B,C) be the homogeneous cubic
+</font></p><p>
+</p><center>
+<font size="+1">  9A<sup>3</sup>
++ 9A<sup>2</sup>B + 3A<sup>2</sup>C
++ 3AB<sup>2</sup> - 6ABC + 3AC<sup>2</sup>
++ 3B<sup>3</sup> + 3B<sup>2</sup>C + BC<sup>2</sup> + C<sup>3</sup>.
+</font></center>
+<p>
+<font size="+1">Then w,x,y,z are proportional to
+</font></p><p>
+</p><center>
+<font size="+1">F(A,B,C),   
+F(-A,B,-C),   
+F(-A,-B,C),   
+F(A,-B,-C).
+</font></center>
+<p>
+<font size="+1">This displays the four-group symmetry as diagonal 3*3 matrices
+of determinant 1.  Moreover, from the pattern of coefficients of F:
+</font></p><center>
+<font size="+1">  9
+</font></center><font size="+1"> </font><center>
+<font size="+1">  9     3
+</font></center><font size="+1"> </font><center>
+<font size="+1">  3   -6     3
+</font></center><font size="+1"> </font><center>
+<font size="+1">  3     3     1     1
+</font></center>
+<font size="+1">we see that F(A,3<sup>1/3</sup>B,3<sup>2/3</sup>C)
+is invariant under cyclic permutations of the variables.
+In other words, 3F(C,A,B)=F(A,B,3C).  This yields
+cyclic permutations of x,y,z; together with the four-group,
+we obtain the full alternating group on {w,x,y,z}.
+
+</font><p>
+
+<font size="+1">The odd permutations of {w,x,y,z} send the six lines
+to a different set of six disjoint lines on the cubic surface,
+namely the set that forms a
+``<a href="http://enriques.mathematik.uni-mainz.de/csh/mathback/doublesix.html" target="_blank">double six</a>'' with the first set.
+
+<!--
+Action of A4 (but not S4!) permutes the six lines,
+so acts linearly on (r:s:t): V4 "clearly", and
+cycling w,x,y has the effect (r,s,t) -> (s-t,2*r-t,r+s),
+at least up to some proportionality: [0,1,-1;2,0,-1;1,1,0]^3 = -3I.
+I guess r-s-t should be divided by 3...
+At any rate, V4 sign-changes (r,s-t) and fixes -r+s+t,
+while (r,s,t) -> (s-t,2*r-t,r+s)  takes (r,s-t,-r+s+t)
+to (s-t,r-s-t,3*r).  So, at least projectively, we have
+even sign changes and cyclic permutations of
+c^2 r,  c(t-s),  r-s-t,  where c^3=3.
+If we take (r,s-t,-r+s+t)=(A,B,C) then
+(r,s,t)=(2A,A+B+C,A-B+C)/2.
+--></font></p></body></html>

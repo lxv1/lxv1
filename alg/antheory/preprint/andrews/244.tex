@@ -1,0 +1,550 @@
+\documentclass[10pt,reqno]{amsart}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\allowdisplaybreaks[1]
+
+\numberwithin{equation}{section}
+
+\newcommand{\ds}{\displaystyle}
+
+\newcommand{\calF}{\mathcal{F}}
+\newcommand{\calG}{\mathcal{G}}
+
+\renewcommand{\frac}[2]{\genfrac{}{}{}{}{\ds{#1}}{\ds{#2}}}
+
+\newcommand{\abs}[1]{\lvert{#1}\rvert}
+\newcommand{\brackets}[3]{\genfrac{[}{]}{0pt}{}{#1}{#2}_{#3}}
+\newcommand{\pairs}[3]{\left({#1};{#2}\right)_{#3}}
+
+\newtheorem{theorem}{Theorem}
+
+\begin{document}
+
+\title[The partial theta function as an entire function]{Ramanujan's ``Lost'' Notebook IX: The partial theta function as an entire function}
+
+\author[George E. Andrews]{George E. Andrews$^1$}
+
+\footnotetext[1]{Partially supported by National Science Foundation Grant DMS}
+
+\begin{abstract}
+We establish the infinite product expansion for $\sum_{n \geqq 0} a^n q^{n^2}$.  This is a corrected version of the expansion stated in Ramanujan's ``Lost'' Notebook.
+\end{abstract}
+
+\maketitle
+
+\section{Introduction}
+
+In \cite{Andrews3}, Ramanujan's infinite product expansion for
+\begin{equation}
+   1 + \sum_{n=1}^{\infty} \frac{q^{n^2} a^n}{(1-q)(1-q^2) \dotsm (1-q^n)}
+\end{equation}
+is proved.  The proof relies heavily on the fact that this series is in fact a limit of a family of orthogonal polynomials.  Namely
+\begin{equation}
+   \lim_{n \rightarrow \infty} K_n(a) = 1 + \sum_{n=1}^{\infty} \frac{q^{n^2} a^n}{(1-q)(1-q^2) \dotsm (1-q^n)},
+\end{equation}
+where
+\begin{equation}
+   K_n(a) = \sum_{j=0}^{n} \brackets{n}{j}{q} q^{j^2} a^j,
+\end{equation}
+and
+\begin{equation}
+   \brackets{A}{B}{q} = \begin{cases}
+      \frac{(1-q^A) \dotsm (1-q^{A-B+1})}{(1-q^B) \dotsm (1-q)} & \text{if $0 \leqq B \leqq A$} \\
+      0 & \text{otherwise.} \\
+   \end{cases}
+\end{equation}
+
+The $K_n(a)$ are the Stieltjes-Wijert polynomials, and their properties are fully catalogued in \cite{Szego}.
+
+Just below the middle of page 26 in Ramanujan's Lost Notebook \cite[p. 26]{Ramanujan}, Ramanujan asserts
+\begin{equation}
+   \sum_{n=0}^{\infty} a^n q^{n^2} = \prod_{n=1}^{\infty} (1 + aq^{2n-1} \big(1+y_1(n)+y_2(n)+\dotsb)\big),
+\end{equation}
+where
+\begin{equation}
+   y_1(n) = \cfrac[l]{ \sum_{j=n}^{\infty} (-1)^j q ^{j(j+1)} }{ \sum_{j=0}^{\infty} (-1)^j (2j+1) q ^{j(j+1)} }
+\end{equation}
+and
+\begin{equation}
+   y_2(n) = \frac{ \left(\sum_{j=n}^{\infty} (j+1)(-1)^j q ^{j(j+1)} \right) \left(\sum_{j=n}^{\infty} (-1)^j q ^{j(j+1)} \right) }{ \left(\sum_{j=0}^{\infty} (-1)^j (2j+1) q ^{j(j+1)} \right)^2 }.
+\end{equation}
+
+This result greatly resembles the theorem proved in \cite{Andrews3} about (1.1).  However the former result had the great advantage that the $K_n(a)$ were orthogonal polynomials.
+
+In the case of (1.5), I have been able to find an analogous sequence of polynomials, namely
+\begin{equation}
+   p_n(a) = \pairs{q^2}{q^2}{\infty} \pairs{-aq}{q^2}{n} \sum_{j=0}^{n} \brackets{n}{j}{q^2} \frac{ q^{2j} }{ \pairs{-aq}{q^2}{j} }
+\end{equation}
+where
+\begin{equation}
+   \pairs{A}{q}{n} = (1-A)(1-Aq) \dotsm (1-Aq^{n-1}).
+\end{equation}
+
+We shall see in Section 2 that
+\begin{equation}
+   \lim_{n \rightarrow \infty} p_n(a) = \sum_{j=0}^{\infty} q^{j^2} a^j.
+\end{equation}
+
+However, the $p_n(a)$, in glaring contrast to the $K_n(a)$, are not orthogonal on the real line.  Hence the properties of these polynomials must all be developed ex nihilo.
+
+In Section 2, we shall derive basic facts about the $p_n(a)$ including the fact that each has only simple, real, negative zeros.  In Section 3, we shall establish a monotonicity theorem for these zeros which is similar to but more complicated than the classical Interlacing Theorem \cite[p. 28]{Chihara} for real orthogonal polynomials, a result employed effectively for the $K_n(a)$ in \cite{Andrews3}.
+
+The results from Sections 2 and 3 will be adequate to establish some sort of infinite product like that in (1.5).  However, Section 5 will be devoted to obtaining the exact form of (1.5).  In Section 4 we require some results on theta function expansions that we will have to employ subsequently.
+
+
+\section{Basic Properties of $p_n(a)$}
+
+\begin{theorem}
+For $\abs{q}<1$,
+\begin{equation}
+   \lim_{n \rightarrow \infty} p_n(a) = \sum_{j=0}^{\infty} a^j q^{j^2}.
+\end{equation}
+\end{theorem}
+\begin{proof}
+From (1.8) we see that
+\begin{align*}
+   \lim_{n \rightarrow \infty} p_n(a) & = \pairs{-aq}{q^2}{\infty} \sum_{n=0}^{\infty} \frac{q^{2j}}{\pairs{q^2}{q^2}{j}\pairs{-aq}{q^2}{j}}\\
+   & = \pairs{q^2}{q^2}{\infty}\pairs{-aq}{q^2}{\infty} {}_2\phi_1\binom{0,0;q^2,q^2}{-aq} \\
+   & = \pairs{q^2}{q^2}{\infty}\pairs{-aq}{q^2}{\infty} \lim_{b \rightarrow 0} \frac{\pairs{b}{q^2}{\infty}}{\pairs{q^2}{q^2}{\infty}\pairs{-aq}{q^2}{\infty}} {}_2\phi_1\binom{-aq/b,q^2;q^2,b}{0} \\
+   & \hspace{72pt} \text{(by Heine's transformation \cite[p. 19, Cor. 2.3]{Andrews2})} \\
+   & = \sum_{j=0}^{\infty} a^j q^{j^2}
+\end{align*}
+\end{proof}
+
+\begin{theorem}
+$p_n(-q^{-2m-1}) > 0$ for $0 \leqq m < n$, $0<q<1$.
+\end{theorem}
+\begin{proof}
+We know that the coefficients of $\brackets{n}{j}{q}$ are all positive; so assuming $0 \leqq m < n$ and $0<q<1$, we see that
+\begin{align*}
+   \frac{1}{\pairs{q^2}{q^2}{\infty}} p_n(-q^{-2m-1}) & = \sum_{j=0}^{n} \brackets{n}{j}{q^2} q^{2j} \pairs{q^{-2m+2j}}{q^2}{n-j} \\
+   & = \sum_{j=m+1}^{n} \brackets{n}{j}{q^2} q^{2j} (1-q^{2j-2m}) \dotsm (1-q^{2n-2m-2}) \\
+   & > 0
+\end{align*}
+because each term of this sum is clearly positive.
+\end{proof}
+
+\begin{theorem}
+$p_n(-q^{-4m-2}) < 0$ for $0 \leqq m < (1/2)(n-1)$, $0<q<1/4$.
+\end{theorem}
+\begin{proof}
+We start with some auxiliary inequalities.  First we recall that $\brackets{A}{B}{q}$ is the generating function for partitions with at most $B$ parts each not exceeding $A-B$ (see \cite[p. 33]{Andrews2}).  Therefore, if $p(n)$ the number of partitions of $n$,
+\begin{align}
+   0 \leqq \brackets{A}{B}{q^2} & \leqq \sum_{n=0}^{\infty} p(n)q^{2n} \notag\\
+   & = \prod_{n=1}^{\infty} \frac{1}{(1-q^{2n})} \qquad \text{(by \cite[p. 4]{Andrews2})} \notag\\
+   & = \frac{1}{1-q^2-q^4+q^{10}+q^{14}-\dotsb} \qquad \text{(by \cite[p. 11]{Andrews2})} \notag\\
+   & < \frac{1}{1-q^2-q^4} < \frac{1}{1-\frac{1}{16}-\frac{1}{256}} < \frac{1}{1-\frac{2}{16}} = \frac{8}{7}.
+\end{align}
+Also
+\begin{align}
+   \pairs{q}{q^2}{\infty} = \prod_{n=0}^{\infty} (1-q^{2n+1}) & = (1-q)(1-q^3)(1-q^5)(1-q^7) \dotsm \notag\\
+   & > (1-q)(1-q^2)(1-q^4)(1-q^6) \dotsm \notag\\
+   & > (1-q)(1-q^2-q^4) \notag\\
+   & > \frac{3}{4} \left(1 - \frac{1}{16} - \frac{1}{256}\right) = \frac{717}{1024} > \frac{7}{10}.
+\end{align}
+
+And to avoid confusion in our subsequent calculations, we note that for $1 \leqq j \leqq 2m$, $j(4m-j) \geqq 2j$.
+
+Hence for $0 < q < 1/4$, $0 \leqq m \leqq (1/2)(n-1)$,
+\begin{align*}
+   \frac{1}{\pairs{q^2}{q^2}{\infty}} & p_n(-q^{-4m-2}) = \sum_{j=0}^{n} \brackets{n}{j}{q^2} q^{2j} \pairs{q^{-4m-1+2j}}{q^2}{n-j} \\
+   & = \pairs{q^{-4m-1}}{q^2}{n} + \sum_{j=1}^{2m} \brackets{n}{j}{q^2} q^{2j} \pairs{q^{-4m-1+2j}}{q^2}{n-j} \\
+   & \qquad + \sum_{j=2m+1}^{n} \brackets{n}{j}{q^2} q^{2j} \pairs{q^{-4m-1+2j}}{q^2}{n-j} \\
+   & = \pairs{q^{-4m-1}}{q^2}{2m+1} \pairs{q}{q^2}{n-2m-1} \\
+   & \qquad + \sum_{j=1}^{2m} \brackets{n}{j}{q^2} q^{2j} \pairs{q^{-4m-1+2j}}{q^2}{2m+1-j} \pairs{q}{q^2}{n-2m-1} \\
+   & \qquad + \sum_{j=2m+1}^{n} \brackets{n}{j}{q^2} q^{2j} \pairs{q^{-4m-1+2j}}{q^2}{n-j} \\
+   & = -q^{-(2m+1)^2} \pairs{q}{q^2}{2m+1} \pairs{q}{q^2}{n-2m-1} \\
+   & \qquad + \sum_{j=1}^{2m} (-1)^{j-1} \brackets{n}{j}{q^2} q^{2j-(2m-j+1)^2} \pairs{q}{q^2}{2m+1-j} \pairs{q}{q^2}{n-2m-1} \\
+   & \qquad + \sum_{j=2m+1}^{n} \brackets{n}{j}{q^2} q^{2j} \pairs{q^{-4m-1+2j}}{q^2}{n-j} \\
+   & < -q^{-(2m+1)^2} \pairs{q}{q^2}{\infty}^2 \\
+   & \qquad + \sum_{j=1}^{2m} \brackets{n}{j}{q^2} q^{-(2m+1)^2+4mj-j^2+4j} \\
+   & \qquad + \sum_{j=2m+1}^{n} \brackets{n}{j}{q^2} q^{2j} \\
+   & < -q^{-(2m+1)^2} \left( \pairs{q}{q^2}{\infty}^2 - \sum_{j=1}^{n} \brackets{n}{j}{q^2} q^{2j} \right) \\
+   & < -q^{-(2m+1)^2} \left( \left(\frac{7}{10}\right)^2 - \frac{8}{7} \sum_{j=1}^{\infty} \left(\frac{1}{4}\right)^{2j} \right) \\
+   & = -\frac{869}{2100} q^{-(2m+1)^2} < 0.
+\end{align*}
+\end{proof}
+
+The final results in this section concern a related sequence of polynomials $\overline{p_n}(a)$ given by
+\begin{equation*}
+\overline{p_n}(a) = \pairs{q^2}{q^2}{\infty} \sum_{j=0}^{n} \brackets{n}{j}{q^2} \pairs{-aq^{2j+1}}{q^2}{n-j}.
+\end{equation*}
+
+\begin{theorem}
+\begin{equation}
+   p_{n+1}(a) - (1+aq^{2n+1})p_n(a) = q^{2n+2}\overline{p_n}(aq^2).
+\end{equation}
+\end{theorem}
+\begin{proof}
+\begin{align*}
+   \frac{1}{\pairs{q^2}{q^2}{\infty}} & \left( \frac{p_n(a)}{\pairs{-aq}{q^2}{n}} - \frac{p_{n-1}(a)}{\pairs{-aq}{q^2}{n-1}} \right) \\
+   & = \sum_{j=0}^{n} \left( \brackets{n}{j}{q^2} - \brackets{n-1}{j}{q^2} \right) \frac{q^{2j}}{\pairs{-aq}{q^2}{j}} \\
+   & = \sum_{j=0}^{n} q^{2n-2j} \brackets{n-1}{j-1}{q^2} \frac{q^{2j}}{\pairs{-aq}{q^2}{j}} \\
+   & = q^{2n} \sum_{j=0}^{n-1} \brackets{n-1}{j}{q^2} \frac{1}{\pairs{-aq}{q^2}{j+1}} \\
+   & = \frac{ q^{2n} \overline{p_n}(aq^2) }{ \pairs{q^2}{q^2}{\infty} \pairs{-aq}{q^2}{n} }.
+\end{align*}
+
+Multiplying this identity by $\pairs{-aq}{q^2}{n}$ and then replacing $n$ by $n+1$, we obtain Theorem 4.
+\end{proof}
+
+Finally
+\begin{theorem}
+For $0 \leqq i \leqq (1/2)n$, $0 < q < 1/4$, and $-q^{-4i+1} > a > -q^{-4i-1}$, $\overline{p_n}(a) > 0$.
+\end{theorem}
+\begin{proof}
+We first treat $i=0$.  In this case, $-q > a > -q^{-1}$, so $-q^2 > aq > -1$.  Consequently for $h \geqq 0$,
+\begin{equation*}
+   1 + aq^{2h+1} > 1+aq > 1-1 > 0.
+\end{equation*}
+Therefore every term of $\overline{p_n}(a)$ is positive for $a$ in this interval.  So
+\begin{equation*}
+   \overline{p_n}(a) > 0 \quad\text{for } -q > a > -q^{-1}.
+\end{equation*}
+
+Now we assume $0 < i \leqq (1/2)n$ and $0 < q < 1/4$, and also $-q^{-4i+1} > a > -q^{-4i-1}$.  Thus
+\begin{align*}
+   \frac{1}{\pairs{q^2}{q^2}{\infty}} \overline{p_n}(a) & = \pairs{-aq}{q^2}{2i} \pairs{-aq^{4i+1}}{q^2}{n-2i} \\
+   & \qquad + \sum_{j=1}^{2i-1} \brackets{n}{j}{q^2} \pairs{-aq^{2j+1}}{q^2}{2i-j} \pairs{-aq^{4i+1}}{q^2}{n-2i} \\
+   & \qquad + \sum_{j=2i}^{n} \brackets{n}{j}{q^2} \pairs{-aq^{2j+1}}{q^2}{n-j} \\
+   & = (1+aq^{4i-1}) \pairs{-aq^{4i+1}}{q^2}{n-2i} \\
+   & \qquad \cdot \left( \pairs{-aq}{q^2}{2i-1} + \sum_{j=1}^{2i-1} \brackets{n}{j}{q^2} \pairs{-aq^{2j+1}}{q^2}{2i-1-j} \right) \\
+   & \qquad + \sum_{j=2i}^{n} \brackets{n}{j}{q^2} \pairs{-aq^{2j+1}}{q^2}{n-j}.
+\end{align*}
+
+Now every term of the final sum is positive, and every factor of $\pairs{-aq^{4i+1}}{q^2}{n-2i}$ is positive while $(1+aq^{4i+1})$ is negative.  So to prove $\overline{p_n}(a) > 0$, we must prove
+\begin{equation}
+   -\pairs{-aq}{q^2}{2i-1} - \sum_{j=1}^{2i-1} \brackets{n}{j}{q^2} \pairs{-aq^{2j+1}}{q^2}{2i-1-j} > 0.
+\end{equation}
+
+Now
+\begin{align}
+   -\pairs{-aq}{q^2}{2i-1} & = (-a)^{2i-1} q^{(2i-1)^2} (1+\frac{1}{aq})(1+\frac{1}{aq^3}) \dotsm (1+\frac{1}{aq^{4i-3}}) \notag\\
+   & > (-a)^{2i-1} q^{(2i-1)^2} (1-q^2)(1-q^4) \dotsm \notag\\
+   & > (-a)^{2i-1} q^{(2i-1)^2} (1-q^2-q^4) \notag\\
+   & > (-a)^{2i-1} q^{(2i-1)^2} \left(1-\frac{1}{16}-\frac{1}{256}\right) \notag\\
+   & > (-a)^{2i-1} q^{(2i-1)^2} \frac{7}{8}
+\end{align}
+
+Recalling (2.2), we see that
+\begin{align*}
+   -\pairs{-aq}{q^2}{2i-1} & - \sum_{j=1}^{2i-1} \brackets{n}{j}{q^2} \pairs{-aq^{2j+1}}{q^2}{2i-1-j} \\
+   & > \abs{a}^{2i-1} q^{(2i-1)^2} \frac{7}{8} - \sum_{j=1}^{2i-1} \frac{8}{7} \abs{a}^{2i-1-j} q^{(1/2)(2i-1-j)(2j+1+4i-3)} \\
+   & = \abs{a}^{2i-1} q^{(2i-1)^2} \left( \frac{7}{8} - \frac{8}{7} \sum_{j=1}^{2i-1} \abs{a}^{-j} q^{-j^2} \right) \\
+   & > \abs{a}^{2i-1} q^{(2i-1)^2} \left( \frac{7}{8} - \frac{8}{7} \sum_{j=1}^{2i-1} q^{(4i-1)j-j^2} \right) \\
+   & \geqq \abs{a}^{2i-1} q^{(2i-1)^2} \left( \frac{7}{8} - \frac{8}{7} \sum_{j=1}^{\infty} q^{2j} \right) \\
+   & > \abs{a}^{2i-1} q^{(2i-1)^2} \left( \frac{7}{8} - \frac{8}{7} \sum_{j=1}^{\infty} \left(\frac{1}{16}\right)^j \right) \\
+   & = \frac{671}{840} \abs{a}^{2i-1} q^{(2i-1)^2} > 0,
+\end{align*}
+and with the establishment of this inequality the Theorem is proved.
+\end{proof}
+
+
+\bigskip
+
+\section{The Zeros of $p_n(a)$}
+
+\begin{theorem}
+Assuming $0 < q < 1/4$, the zeros of $p_n(a)$ are simple, real, and negative.  If we denote them by $x_{n,i}$ ($1 \leqq i \leqq n$), then
+\begin{equation*}
+   -q^{-1} > x_{n,1} > -q^{-2} > x_{n,2} > -q^{-3} > -q^{-5} > x_{n,3} > -q^{-6} > x_{n,4} > -q^{-7} > \dotsb.
+\end{equation*}
+In general,
+\begin{equation*}
+   -q^{-4j-1} > x_{n,2j+1} > -q^{-4j-2} > x_{n,2j+2} > -q^{-4j-3}.
+\end{equation*}
+\end{theorem}
+\begin{proof}
+The assertion follows immediately once we recall from Theorem 2 that each of
+\begin{equation*}
+   p_n(-q^{-1}), p_n(-q^{-3}), \dotsc, p_n(-q^{-(2n-1)})
+\end{equation*}
+is positive, while each of
+\begin{equation*}
+   p_n(-q^{-2}), p_n(-q^{-6}), \dotsc, p_n(-q^{-(4s+2)})
+\end{equation*}
+is negative where $4s+2$ is the largest number $\leqq 2n$ that is congruent to $2$ modulo $4$.
+
+If $2n-1$ is congruent to $3$ mod $4$ this gives $n$ sign changes in the appropriate intervals.  If $2n-1$ is congruent to $1$ modulo $4$, then up to $-q^{-(2n-1)}$ there are $n-1$ sign changes and there is one more in $(-q^{(2n-1)},-q^{-(2n)})$.  In either case, the $n$ zeros are necessarily simple, real, negative, and in the designated intervals.
+\end{proof}
+
+\begin{theorem}
+In the notation for the zeros of $p_n(a)$ given in Theorem 6, $\{x_{n,i}\}_{n \geqq i}$ is a decreasing sequence in $n$ if $i$ is odd, and an increasing sequence if $i$ is even.
+\end{theorem}
+\begin{proof}
+First consider $\{x_{n,2i-1}\}_{n \geqq 2i-1}$.  By Theorem 6,
+\begin{equation*}
+   -q^{-4i+3} > x_{n,2i-1} > -q^{-4i+2},
+\end{equation*}
+and by Theorem 4,
+\begin{equation*}
+   p_{n+1}(x_{n,2i-1}) = q^{2n+2} \overline{p_n}(q^2 x_{n,2i-1}).
+\end{equation*}
+Note
+\begin{equation*}
+   -q^{-4i+5} > q^2 x_{n,2i-1} > -q^{-4i+4} > -q^{-4i+3},
+\end{equation*}
+and so by Theorem 5, $\overline{p_n}(q^2 x_{n,2i-1}) > 0$.  Therefore
+\begin{equation*}
+   p_{n+1}(x_{n,2i-1}) > 0.
+\end{equation*}
+But
+\begin{equation*}
+   p_{n+1}(-q^{-4i+2}) < 0,
+\end{equation*}
+and so
+\begin{equation*}
+   x_{n,2i-1} > x_{n+1,2i-1} > -q^{-4i+2},
+\end{equation*}
+which establishes that $\{x_{n,2i-1}\}_{n \geqq 2i-1}$ is decreasing.
+
+Now consider $\{x_{n,2i}\}_{n \geqq 2i}$.  By Theorem 6,
+\begin{equation*}
+   -q^{-4i+2} > x_{n,2i} > -q^{-4i+3},
+\end{equation*}
+and by Theorem 4,
+\begin{equation*}
+   p_{n+1}(x_{n,2i}) = q^{2n+2} \overline{p_n}(q^2 x_{n,2i}).
+\end{equation*}
+Note
+\begin{equation*}
+   -q^{-4i+3} > -q^{-4i+4} > q^2 x_{n,2i} > -q^{-4i+5},
+\end{equation*}
+and so by Theorem 5, $\overline{p_n}(q^2 x_{n,2i}) > 0$.  Therefore
+\begin{equation*}
+   p_{n+1}(x_{n,2i}) > 0.
+\end{equation*}
+But
+\begin{equation*}
+   p_{n+1}(-q^{-4i+2}) < 0,
+\end{equation*}
+and so
+\begin{equation*}
+   -q^{-4i+2} > x_{n+1,2i} > x_{n,2i},
+\end{equation*}
+which establishes that $\{x_{n,2i}\}_{n \geqq 2i}$ is increasing.
+\end{proof}
+
+\begin{theorem}
+For $0 < q < 1/4$, the entire function
+\begin{equation*}
+   p_\infty(a) = \sum_{n=0}^{\infty} a^n q^{n^2}
+\end{equation*}
+has simple, negative real zeros $x_i$ which satisfy
+\begin{equation*}
+   -q^{-1} > x_1 > -q^{-2} > x_2 > -q^{-3} > -q^{-5} > x_3 > -q^{-6} > x_4 > -q^{-7} > \dotsb.
+\end{equation*}
+\end{theorem}
+\begin{proof}
+Given that $p_\infty(a)$ is the uniform limit of the sequence $p_n(a)$, that the zeros $x_{n,i}$ are simple and lie in the same interval as indicated for $x_i$, and that the $x_{n,i}$ are monotone in $n$ yields the desired result.
+\end{proof}
+
+
+\bigskip
+
+\section{A Theta Function Expansion}
+
+\begin{theorem}
+Assume $\abs{q}<1$, and $w = 1 + q/a$, then
+\begin{equation*}
+   \pairs{q^2}{q^2}{\infty} \pairs{-aq}{q^2}{\infty} \pairs{-a^{-1}q}{q^2}{\infty} = w \sum_{n=0}^{\infty} (-1)^n (2n+1)q^{n^2+n} + O(w^3).
+\end{equation*}
+\end{theorem}
+\begin{proof}
+We recall an identity of Jacobi (see \cite[p. 21]{Andrews2}):
+\begin{equation}
+   \pairs{q^2}{q^2}{\infty} \pairs{-aq}{q^2}{\infty} \pairs{-a^{-1}q}{q^2}{\infty} = \sum_{n=-\infty}^{\infty} a^n q^{n^2}.
+\end{equation}
+Hence
+\begin{align*}
+   \pairs{q^2}{q^2}{\infty} & \pairs{-aq}{q^2}{\infty} \pairs{-a^{-1}q}{q^2}{\infty} = \sum_{n=-\infty}^{\infty} a^{-n} q^{n^2} \\
+   & = \sum_{n=-\infty}^{\infty} (-1)^n q^{n^2-n} (1-w)^n \\
+   & = \sum_{n=-\infty}^{\infty} (-1)^n q^{n^2-n} \left( 1 - nw + \binom{n}{2}w^2 + O(w^3) \right)
+\end{align*}
+But the index change $n \mapsto 1-n$ reveals that
+\begin{equation*}
+   \sum_{n=-\infty}^{\infty} (-1)^n q^{n^2-n} = - \sum_{n=-\infty}^{\infty} (-1)^n q^{n^2-n}
+\end{equation*}
+and
+\begin{equation*}
+   \sum_{n=-\infty}^{\infty} (-1)^n \binom{n}{2} q^{n^2-n} = - \sum_{n=-\infty}^{\infty} (-1)^n \binom{n}{2} q^{n^2-n}
+\end{equation*}
+and so each series is identically zero.  Therefore
+\begin{align*}
+   \pairs{q^2}{q^2}{\infty} & \pairs{-aq}{q^2}{\infty} \pairs{-a^{-1}q}{q^2}{\infty} = \sum_{n=-\infty}^{\infty} a^{-n} q^{n^2} \\
+   & = w \sum_{n=-\infty}^{\infty} (-1)^{n-1} n q^{n^2-n} + O(w^3) \\
+   & = w \sum_{n=0}^{\infty} (-1)^n (2n+1) q^{n^2+n} + O(w^3) \\
+\end{align*}
+\end{proof}
+
+\begin{theorem}
+If
+\begin{equation*}
+   F(a) = \pairs{q^2}{q^2}{\infty} \pairs{-aq}{q^2}{\infty} \pairs{-a^{-1}q}{q^2}{\infty},
+\end{equation*}
+then for any integer $N$,
+\begin{equation}
+   F(a) = a^N q^{N^2} F(aq^{2N}).
+\end{equation}
+\end{theorem}
+\begin{proof}
+First we note that by (4.1),
+\begin{align}
+   F(a) & = \sum_{n=-\infty}^{\infty} q^{n^2} a^n \notag\\
+   & = \sum_{n=-\infty}^{\infty} q^{(n+1)^2} a^{n+1} \notag\\
+   & = aqF(aq^2).
+\end{align}
+
+Identity (4.2) for $N>0$ follows from (4.3) by iteration of (4.3).  To obtain (4.2) for negative $N$ replace $a$ by $aq^{-2N}$ in (4.2).
+\end{proof}
+
+
+\bigskip
+
+\section{Ramanujan's Product for $p_\infty(a)$}
+
+\begin{theorem}
+The expansion (1.5) holds for $0 < q < 1/4$.
+\end{theorem}
+\begin{proof}
+We define
+\begin{equation}
+   \calF(a) := p_\infty(a) = \sum_{n=0}^{\infty} q^{n^2} a^n,
+\end{equation}
+and
+\begin{equation}
+   \calG(a) := \calF(a^{-1}) - 1 = \sum_{n=1}^{\infty} q^{n^2} a^{-n},
+\end{equation}
+
+Hence
+\begin{align}
+   \pairs{q^2}{q^2}{\infty} & \pairs{-aq}{q^2}{\infty} \pairs{-a^{-1}q}{q^2}{\infty} = \sum_{n=-\infty}^{\infty} a^{-n} q^{n^2} \notag\\
+   & = \sum_{n=-\infty}^{\infty} q^{n^2} a^n \notag\\
+   & = F(a) = \calF(a) + \calG(a).
+\end{align}
+
+By Theorem 8, we see that the zeros, $x_i$, of $\calF(a)$ satisfy
+\begin{equation*}
+   \sum_{i=1}^{\infty} \frac{1}{\abs{x_i}} < \infty
+\end{equation*}
+
+Consequently by the product theorem for entire functions \cite[p. 174]{Copson},
+\begin{equation}
+   \sum_{n=0}^{\infty} q^{n^2} a^n = \calF(a) = \prod_{i=1}^{\infty} \left( 1 - \frac{a}{x_i} \right).
+\end{equation}
+
+Furthermore by Theorem 8, we know that
+\begin{equation}
+   x_N = \frac{-q^{1-2N}}{1 + Y_1(N)},
+\end{equation}
+where
+\begin{equation}
+Y_1(N) = O(q),
+\end{equation}
+and $Y_1(N)$ is analytic in $q$ by the Implicit Function Theorem \cite{Walter}.
+
+Therefore
+\begin{align}
+   \calG(x_N) & = F(x_N) - \calF(x_N) \qquad \big(\text{by (5.3)}\big) \notag\\
+   & = F(x_N) \notag\\
+   & = x_{N}^{N} q^{N^2} F(x_N q^{2N}) \notag\\
+   & = \frac{ (-1)^N q^{N-N^2} }{ \big(1+Y_1(N)\big)^N } F \left( \frac{-q}{1+Y_1(N)} \right).
+\end{align}
+Consequently, rewriting (5.7), we find
+\begin{align*}
+   \sum_{n=1}^{\infty} & (-1)^{n-N} q^{n^2+2Nn-n+N^2-N} \big(1+Y_1(N)\big)^{n+N} = F \left( \frac{-q}{1+Y_1(N)} \right) \\
+   & = -Y_1(N) \sum_{n=0}^{\infty} (-1)^n (2n+1) q^{n^2+n} + O(Y_1(N)^3) \qquad \text{(by Theorem 9),}
+\end{align*}
+so
+\begin{align}
+   \sum_{n=N}^{\infty} & (-1)^n q^{n^2+n} \big(1 + Y_1(N)\big)^{n+1} \notag\\
+   & = Y_1(N) \sum_{n=0}^{\infty} (-1)^n (2n+1) q^{n^2+n} + O\big(Y_1(N)^3\big).
+\end{align}
+
+But by (5.6) and the analyticity of $Y_1(N)$ we see that the lowest power of $q$ appearing in $Y_1(N)$ must be $q^{N^2+N}$.  Hence by (5.8)
+\begin{align}
+   Y_1(N) & = \cfrac[l]{ \sum_{n=N}^{\infty} (-1)^n q^{n^2+n} }{ \sum_{n=0}^{\infty} (-1)^n (2n+1) q ^{n^2+n} } \pmod{q^{3N^2+3N}} \notag\\
+   & = y_1(N) \pmod{q^{3N^2+3N}} \qquad \big(\text{by the definition (1.6)}\big).
+\end{align}
+
+Now let
+\begin{equation}
+   Y_2(N) = Y_1(N) - y_1(N),
+\end{equation}
+and substitute for $Y_1(N)$ in (5.8).  Hence
+\begin{align*}
+   \sum_{n=N}^{\infty} & (-1)^n q^{n^2+n} \big(1 + y_1(N) + Y_2(N)\big)^{n+1} \\
+   & = \big( y_1(N) + Y_2(N) \big) \sum_{n=0}^{\infty} (-1)^n (2n+1) q^{n^2+n} \pmod{q^{3N^2+3N}},
+\end{align*}
+so because we know $Y_2(N) = O(q^{2N^2+2N})$,
+\begin{align*}
+   \sum_{n=N}^{\infty} & (-1)^n q^{n^2+n} \big(1 + (n+1) y_1(N)\big) \\
+   & = \big( y_1(N) + Y_2(N) \big) \sum_{n=0}^{\infty} (-1)^n (2n+1) q^{n^2+n} \pmod{q^{3N^2+3N}}.
+\end{align*}
+Hence
+\begin{align*}
+   y_1(N) & \sum_{n=0}^{\infty} (-1)^n (2n+1) q^{n^2+n} + y_1(N) \sum_{n=N}^{\infty} (-1)^n (2n+1) q^{n^2+n} \\
+   & = y_1(N) \sum_{n=0}^{\infty} (-1)^n (2n+1) q^{n^2+n} + Y_2(N) \sum_{n=N}^{\infty} (-1)^n (2n+1) q^{n^2+n} \\
+   & \qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad \pmod{q^{3N^2+3N}}.
+\end{align*}
+Therefore
+\begin{align*}
+   Y_2(N) & = \cfrac[l]{ y_1(N) \sum_{n=N}^{\infty} (-1)^n q^{n^2+n} }{ \sum_{n=0}^{\infty} (-1)^n (2n+1) q ^{n^2+n} } \pmod{q^{3N^2+3N}} \\
+   & = y_2(N) \pmod{q^{3N^2+3N}}.
+\end{align*}
+
+Summing up, we see that
+\begin{equation*}
+   x_N = \frac{ -q^{1-2N} }{ 1 + y_1(N) + y_2(N) + \dotsb},
+\end{equation*}
+and the denominator of $x_N$ is valid modulo $q^{3N^2+3N}$ which is quantitatively stronger than Ramanujan's ``$\,\dotsb$''.
+\end{proof}
+
+
+\bigskip
+
+\section{Conclusion}
+
+This long journey to prove (1.5) leaves many unanswered questions.  The most obvious is: Whatever made Ramanujan believe that expansions like (1.5) and the one in \cite{Andrews3} might actually exist with such nice expansions for the zeros?
+
+One also wonders what other two variable (i.e. $a$ and $q$) $q$-series have nice expansions like this?  For example, the series from the G\"ollnitz-Gordon identities is the entire function (cf. \cite{Andrews1})
+\begin{equation}
+   \sum_{n=0}^{\infty} \frac{ a^n q^{n^2} \pairs{-q}{q^2}{n} }{ \pairs{q^2}{q^2}{n} }.
+\end{equation}
+What is happening for this function?
+
+After completing \cite{Andrews3} I thought that theorems of this nature would always rely on limits of sequences of orthogonal polynomials.  Now we see that this was too limited a view.  What further can we say about the sequence $p_n(a)$?  It clearly has unusually nice properties.
+
+
+\bigskip
+
+\begin{thebibliography}{9}
+
+\bibitem{Andrews1} G. E. Andrews, A generalization of the G\"ollnitz-Gordon partition theorems, Proc. Amer. Math. Soc., 18 (1967), 945-952.
+
+\bibitem{Andrews2} G. E. Andrews, The Theory of Partitions, Encycl. Math. and Its Appl., Vol. 2, G.-C. Rota Ed., Addison-Wesley, Reading, 1976 (reissued: Cambridge University Press, Cambridge, 1998).
+
+\bibitem{Andrews3} G. E. Andrews, Ramanujan's ``Lost'' Notebook.  VIII The entire Rogers-Ramanujan function, (to appear).
+
+\bibitem{Chihara} T. S. Chihara, An Introduction to Orthogonal Polynomials, Gordon and Breach, New York, 1974.
+
+\bibitem{Copson} E. T. Copson, An Introduction to the Theory of Functions of a Complex Variable, Oxford University Press, Oxford, 1935.
+
+\bibitem{Ramanujan} S. Ramanujan, The Lost Notebook and Other Unpublished Papers, Narosa, New Delhi, 1988.
+
+\bibitem{Szego} G. Szeg\"o, Ein Beitrag zur Theorie der Thetafunktionen, Sitsungasberichte der Preussischen Akad. der Wissenschaften, phys.-math., 1926, 242-252 (Coll. Papers, Vol. 2, pp. 795-805).
+
+\bibitem{Walter} W. Walter, A useful Banach algebra, El. Math., 47 (1992), 27-32.
+
+\end{thebibliography}
+
+
+\bigskip \bigskip
+
+\noindent
+The Pennsylvania State University \\
+University Park, PA 16802 USA \\
+andrews@math.psu.edu
+
+\end{document}

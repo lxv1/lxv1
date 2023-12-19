@@ -1,0 +1,27 @@
+This is TeX, Version 3.1415926 (TeX Live 2012) (format=tex 2012.7.9)  12 OCT 2012 09:50
+**ch2
+(./ch2
+\p@renwd=\dimen16
+ (/usr/local/texlive/2011/../texmf-local/tex/psfig/psfig.tex
+(/usr/local/texlive/2011/../texmf-local/tex/psfig/psfig.sty
+\@unused=\write0
+\fboxrule=\dimen17
+\fboxsep=\dimen18
+\ps@tempdima=\dimen19
+\ps@tempboxa=\box16
+\ps@stream=\read0
+\p@intvaluex=\dimen20
+\p@intvaluey=\dimen21
+
+psfig/tex 1.10-dvips
+))
+Underfull \hbox (badness 10000) has occurred while \output is active
+[]
+
+\hbox(8.5+0.0)x295.6491
+.\vbox(8.5+0.0)x0.0
+
+[34] [35] [36] [37] [38] [39] [40] [41] [42] [43] [44] [45] [46] [47] [48]
+[49] [50] [51] [52] [53] [54] [55] [56] [57] [58] [59] [60] [61] [62] [63]
+[64] [65] [66] )
+Output written on ch2.dvi (33 pages, 100108 bytes).

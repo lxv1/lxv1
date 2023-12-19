@@ -1,0 +1,602 @@
+
+
+%latex2e file
+%
+%\'Etale cohomology and reduction of abelian varieties
+%
+% A. Silverberg and Yu. G. Zarhin
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass{amsart}
+
+\def\Q{{\mathbf Q}}
+\def\Z{{\mathbf Z}}
+\def\C{{\mathbf C}}
+\def\R{{\mathbf R}}
+\def\Gal{\mathrm{Gal}}
+\def\End{\mathrm{End}}
+\def\Aut{\mathrm{Aut}}
+\def\Hom{\mathrm{Hom}}
+\def\I{{\mathcal I}}
+\def\J{{\mathcal J}}
+\def\s{{\mathcal S}}
+\def\fchar{\mathrm{char}}
+\def\rank{\mathrm{rank}}
+\def\GL{\mathrm{GL}}
+\def\SL{\mathrm{SL}}
+\def\Sp{\mathrm{Sp}}
+\def\M{\mathrm{M}}
+\def\dim{\mathrm{dim}}
+\def\O{{\mathcal O}}
+\def\P{{\mathbf P}}
+\def\n{{n}}
+\def\q{{\mathfrak q}}
+\def\a{{\mathfrak a}}
+\def\X{{\mathcal X}}
+\def\Y{{\mathcal Y}}
+\def\T{{T}}
+\def\B{{B}}
+\def\invlim{{\displaystyle{\lim_{\leftarrow}}}}
+\def\bmu{\boldsymbol \mu}
+\newtheorem{thm}{Theorem}[section]
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{cor}[thm]{Corollary}
+\newtheorem{prop}[thm]{Proposition}
+\theoremstyle{definition}
+\newtheorem{defn}[thm]{Definition}
+\newtheorem{ex}[thm]{Example}
+\newtheorem{rem}[thm]{Remark}
+\newtheorem{rems}[thm]{Remarks}
+\hyphenation{semi-stable}
+
+\title[\'Etale cohomology]
+{\'Etale cohomology and reduction of abelian varieties}
+
+\author[A.\ Silverberg]{A.\ Silverberg}
+\address{Department of Mathematics, Ohio State University, 
+231 W.\ 18 Avenue,
+Columbus, Ohio 43210--1174, USA}
+\email{silver\char`\@math.ohio-state.edu}
+
+\author[Yu. G. Zarhin]{Yu. G. Zarhin}
+\address{Department of Mathematics, Pennsylvania State University, 
+University Park, PA 16802, USA}
+\email{zarhin\char`\@math.psu.edu}
+
+\begin{document}
+
+\begin{abstract}
+In this paper we study the \'etale cohomology groups
+associated to abelian varieties. We obtain necessary
+and sufficient conditions for an abelian variety to have
+semistable reduction (or to have purely additive reduction
+which becomes semistable over a quadratic extension) 
+in terms of the action of the
+absolute inertia group on the \'etale 
+cohomology groups with finite coefficients.
+\end{abstract}
+
+\maketitle
+
+\section{Introduction}
+Suppose $X$ is a smooth projective variety over a field $F$,
+$v$ is a discrete valuation on $F$, and $\ell$ is
+a prime number not equal to the residue characteristic of $v$.
+Let $F^s$ denote a separable closure of $F$, let ${\bar v}$
+be an extension of $v$ to $F^s$, let $\I$ denote the
+inertia subgroup at ${\bar v}$ of $\Gal(F^s/F)$, and let
+${\bar X} = X\times_F F^s$. For every
+positive integer $k$, the group $\I$ acts naturally
+on the \'etale cohomology group 
+$H^k_{\text{\'et}}({\bar X},\Q_\ell)$.
+Grothendieck proved the Monodromy Theorem (see the Appendix to
+\cite{SerreTate}, and 1.2 and 1.3 of
+\cite{SGADeligne}), which says that $\I$ acts 
+on $H^k_{\text{\'et}}({\bar X}, \Q_\ell)$ 
+via quasi-unipotent operators, i.e.,
+for every $\sigma\in\I$ we have 
+$$(\sigma^m-1)^{r} H^k_{\text{\'et}}({\bar X},\Q_\ell)
+=0$$
+for some positive integers $m$ and $r$.
+It is known (see 3.7 of \cite{SGADeligne}, and 
+3.5 and 3.6 of \cite{SGA7}) 
+that if $k=1$, then one may take $r=2$. 
+It easily follows (see 
+Theorem \ref{highercoh} below) that if 
+$X$ is an abelian variety, then one may take $r=k+1$.
+It is shown in \cite{SGA7I} (see 3.4 and 3.8 of \cite{SGADeligne},
+and p.~VI of \cite{SGAintro})
+that one may take $r=k+1$ whenever one knows the Purity
+Conjecture (3.1 of \cite{SGADeligne}) and resolution of singularities.
+
+ From now on, suppose $X$ is an abelian variety.
+The N\'eron model $\X$ of $X$ at $v$ is a smooth 
+separated model of $X$ over the valuation ring $R$
+such that for every smooth scheme $\Y$ over $R$ and morphism 
+$f : \Y \otimes_R F \to X$ over $F$ there is a unique morphism
+$f_R : \Y \to \X$ over $R$ which extends $f$. The generic fiber of $\X$
+can be canonically identified with $X$, and $\X$ is a commutative group
+scheme over $R$ whose group structure extends that of $X$.
+Let $X_v^0$ denote the identity component of 
+the special fiber of $\X$ at $v$. 
+Over an algebraic closure of the residue field, there is
+an exact sequence of algebraic groups 
+$$0 \to U \times \T \to X_{v}^{0} \to \B \to 0,$$
+where $\B$ is an abelian variety, $\T$ is the maximal
+algebraic torus in $X_{v}^{0}$, 
+and $U$ is a unipotent group.
+By definition, $X$ has {\it semistable reduction} at $v$ 
+if and only if $U=0$.
+As $\I$-modules,
+$H^1_{\text{\'et}}({\bar X}, \Q_\ell)$
+and the $\ell$-adic Tate module $V_{\ell}(X)$ are isomorphic.
+Grothendieck's Galois Criterion for Semistable Reduction 
+says that $X$ has semistable reduction at $v$ if and only if
+every $\sigma\in\I$ acts on  $V_{\ell}(X)$ 
+as a unipotent operator of echelon $\le 2$, i.e.,
+if and only if
+$$(\sigma-1)^2H^1_{\text{\'et}}({\bar X}, \Q_\ell)=0$$
+for every $\sigma\in\I$.
+
+Suppose $5 \le n \in \Z$. The authors 
+(see \cite{degree} and \cite{banff})  proved that
+$X$ has semistable reduction at $v$ if and only if
+$$(\sigma-1)^{2} H^1_{\text{\'et}}({\bar X}, \Z/n\Z)
+=0$$
+for every $\sigma \in \I$.
+In other words, necessary and sufficient conditions for 
+semistability can be read off not only
+from the $\ell$-adic representation, as shown by
+Grothendieck, but also from the mod $n$ representation
+(for $n \ge 5$).
+The aim of this paper is to generalize this result to the 
+case of higher $k$ (and all $n>1$). 
+Assume that $0<k<2\dim(X)$, that $k+1 \le r\in\Z$, and that 
+$n$ is a positive integer which does not belong
+to a certain finite set  $N(r)$ of prime powers, 
+defined explicitly in terms of $r$ in \S\ref{notation}.
+(For example, $N(2)=\{1,2,3,4\}$.)  We show that if $k$ is odd, 
+then $X$ has semistable reduction at $v$ if and only if
+$$(\sigma-1)^{r} H^{k}_{\text{\'et}}({\bar X}, \Z/n\Z)
+=0$$
+for every $\sigma \in \I$.
+If $k$ is even, we show  
+(under a certain additional assumption on $v$) that
+$$(\sigma-1)^{r} H^{k}_{\text{\'et}}({\bar X}, \Z/n\Z)
+=0$$
+for every $\sigma \in \I$
+if and only if either $X$ has semistable reduction 
+at $v$ or
+$X$ has purely additive reduction at $v$ but acquires 
+semistable reduction
+over a (ramified) quadratic extension of $F$.
+
+We hope that our results and/or methods will be useful in the study of
+semistability for the more general class of motives
+\cite{Motives}.
+
+Silverberg would like to thank the IHES and the Bunting
+Institute for their hospitality, and the NSA and the Science Scholars
+Fellowship Program at the Bunting Institute for financial support.
+Zarhin would like to thank the NSF for financial support. 
+
+\section{Notation and definitions}
+\label{notation}
+
+If $F$ is a field, let $F^s$ denote a separable closure. 
+Throughout this paper, 
+$X$ is a $d$-dimensional abelian variety defined over $F$, and 
+$v$ is a discrete valuation on $F$ of residue characteristic $p \ge 0$.
+Let ${\bar v}$ denote an extension of $v$ to $F^s$, and 
+let $\I$ denote the inertia subgroup at ${\bar v}$ of $\Gal(F^s/F)$.
+If $\ell$ is a prime not equal to the characteristic of $F$,
+let
+$$\rho_{\ell,X} : \Gal(F^s/F) \to \Aut(T_\ell(X)) \cong \M_{2d}(\Z_\ell)$$
+denote the $\ell$-adic representation on the Tate module $T_\ell(X)
+= \invlim X_{\ell^n}$. 
+Let $V_{\ell}(X)=T_\ell(X)\otimes_{\Z_{\ell}}\Q_{\ell}$
+and let ${\bar X} = X \times_F F^s$.
+
+\begin{defn}
+We say $v$ satisfies (*) if at least one of the following two
+conditions is satisfied:
+\begin{enumerate}
+\item[(a)]  $p \ne 2$, 
+\item[(b)] the valuation ring 
+is henselian and the residue field is separably closed.
+\end{enumerate}
+\end{defn}
+
+\begin{defn}
+If $r$ is a positive integer, define a finite set 
+of prime powers $N(r)$ by 
+$$N(r) = \{\text{prime powers $\ell^m : 0 \le m(\ell - 1) \le r $}\}.$$
+If $n$ is a positive integer, let $R(r,n) = 1$ if $n \notin N(r)$, 
+and let
+$$R(r,n) = \ell^{s(r,n)} \quad 
+\mbox{where} \quad 
+s(k,n) = \max\{s \in \Z^+ : m(\ell - 1)\ell^{s-1} \leq r\}$$
+if $1 \neq n = \ell^m \in N(r)$ with $\ell$ a prime.
+\end{defn}
+For example, $$N(1) = \{1, 2\}, \quad N(2) = \{1, 2, 3, 4\},$$
+$$N(3) = \{1, 2, 3, 4, 8\},  \quad  
+N(4) = \{1, 2, 3, 4, 5, 8, 9, 16\};$$
+$$R(1,2) = 2, \quad \mbox{$R(1,n) = 1 $ if $n \ge 3$},$$
+$$R(2,2) = 4, \quad R(2,3) = 3, \quad 
+R(2,4) = 2, \quad \mbox{and} \quad \mbox{$R(2,n) = 1$ if $n \ge 5$}.$$
+
+\section{Lemmas}
+
+\begin{thm}[Galois Criterion for Semistable Reduction]
+\label{galcrit}
+Suppose $\ell$ is a prime and $\ell \ne p$. Then the
+following are equivalent:
+\begin{enumerate}
+\item[(i)] $X$ has semistable reduction at $v$,
+\item[(ii)] $\I$ acts unipotently on $T_\ell(X)$; i.e.,
+all the eigenvalues of $\rho_{\ell,X}(\sigma)$ are $1$, 
+for every $\sigma \in \I$,
+\item[(iii)] for every $\sigma \in \I$, 
+$(\rho_{\ell,X}(\sigma) - 1)^2 = 0$.
+\end{enumerate}
+\end{thm}
+
+\begin{proof}
+See 3.5 and 3.8 of \cite{SGA7}, 
+and Theorem 6 on p.~184 of \cite{BLR}.
+\end{proof}
+
+\begin{thm}[Theorem 6.7 of \cite{serrelem}]
+\label{localglobal}
+Suppose $\O$ is an integral domain of characteristic zero,
+$n$, $r$, and $g$ are positive integers 
+such that no rational prime which divides $n$ is a unit in $\O$,
+$A \in M_g(\O)$ satisfies $(A - 1)^r \in nM_g(\O)$, and $\lambda$ is
+an eigenvalue of $A$ which is a root of unity.
+Then $\lambda^{R(r,n)} = 1$; in particular, $\lambda = 1$ if 
+$n \notin N(r)$.
+\end{thm}
+
+\begin{lem}[Lemma 4.2 of \cite{degree}]
+\label{mevals}
+Suppose $m$ is a positive integer, $\ell$ is a prime,
+$p$ does not divide $m\ell$, and
+$K$ is a degree $m$ extension of $F$
+which is totally ramified above $v$. 
+Suppose that for every $\sigma \in \I$,
+all the eigenvalues of $\rho_{\ell,X}(\sigma)$ 
+are $m$-th roots of unity. Then $X$ has
+semistable reduction at the extension of $v$ to $K$.
+\end{lem}
+
+\begin{rem}
+\label{ramifiedcyclic}
+Suppose $m$ is a positive
+integer not divisible by $p$. If $F(\zeta_m) = F$,
+then $F$ has a cyclic extension of degree $m$ which is totally ramified at
+$v$. In particular, if $p \ne 2$ then 
+$F$ has a quadratic extension which is (totally and tamely) ramified at $v$.
+If the valuation ring is henselian and the residue field is separably closed, 
+then $F= F(\zeta_m)$ and therefore $F$ has a cyclic totally ramified extension 
+of degree $m$. (See Remark 5.3 of \cite{semistab}.)
+Note also that $F$ has no non-trivial unramified extensions if and only if 
+the valuation ring is henselian and the residue field is separably closed.
+\end{rem}
+
+\begin{lem}[Corollary 1.10 of \cite{LenstraOort}]
+\label{padd}
+Let $\J \subset \I$ denote the first ramification group,
+and let $\tau$ be a lift to $\I$ of a topological generator
+of the procyclic group $\I/\J$.
+Then $X$ has purely additive reduction at $v$ if and only if 
+$1$ is not an eigenvalue for the action of $\tau$ on $V_{\ell}(X)^\J$.
+\end{lem}
+
+\section{Some linear algebra}
+\label{linalgsect}
+Suppose $V$ is a finite-dimensional vector space over a field 
+of characteristic zero. 
+Suppose $k$ is an integer and $0 < k < \dim(V)$.
+Let 
+$$f_{k} : \SL(V) \to \GL(\wedge^k V^\ast)$$
+denote the natural representation.
+Suppose $G$ is a finite group and $\rho:G \to \SL(V)$ is a
+representation.
+Let $\rho_{k} = f_{k}\circ\rho$.
+For $g \in G$, let 
+$\rho(g)=s_{g}u_{g} = u_{g}s_{g}$ 
+be the Jordan decomposition,
+where $u_{g}$, $s_{g} \in \SL(V)$, 
+$u_{g}$ is unipotent, and
+$s_{g}$ is semisimple.
+Then $\rho_{k}(g) = f_k(\rho(g)) =
+f_k(s_{g})f_k(u_{g}) = f_k(u_{g})f_k(s_{g})$,
+$f_k(u_{g})$ is unipotent, and $f_k(s_{g})$ is semisimple. 
+
+\begin{lem}
+\label{lin}
+\begin{enumerate}
+\item[{(i)}] The kernel of $f_{k}$
+is $\{1\}$ if $k$ is odd and is $\{1, -1\}$ if $k$ is even. 
+\item[{(ii)}] If $g \in G$ and $(\rho(g)-1)^{2}=0$, then
+$(\rho_{k}(g) - 1)^{k+1} = 0$.
+\item[{(iii)}] If $k$ is even,
+$g \in G$, and $(\rho(g)^{2}-1)^{2}=0$, then
+$(\rho_{k}(g) - 1)^{k+1} = 0$.
+\end{enumerate} 
+\end{lem}
+
+\begin{proof}
+Part (i) is easy. 
+Note that 
+$$(\rho_{k}(g)-1)(v_{1}\wedge v_{2}\ldots \wedge v_{k})
+= (\rho(g)v_{1}\wedge\ldots\wedge \rho(g)v_{k}) - 
+(v_{1}\wedge v_{2}\ldots \wedge v_{k}).$$
+Part (ii) follows by substituting $\rho(g)=1+\eta$.
+If $(\rho(g)^{2}-1)^{2}=0$,
+then the only eigenvalues
+of $\rho(g)$ are $\pm 1$. If $k$ is even, then
+$\rho_{k}(g)$ is unipotent. Therefore,
+$f_{k}(s_{g})=1$. Thus $s_{g} = 1$ or $-1$, and
+there exists $\eta \in \End(V)$ such that
+$\eta^2=0$ and $\rho(g) = {\pm}1+\eta$.
+It again follows easily that
+$(\rho_{k}(g) - 1)^{k+1} = 0$.
+\end{proof}
+
+\section{Main results}
+
+\begin{thm}
+\label{highercoh}
+Suppose $X$ is an abelian variety over a field $F$, and $v$ is a discrete 
+valuation on $F$ of residue characteristic $p \ge 0$.
+Suppose $k$ and $r$ are positive integers, and
+$k < 2\dim(X)$.
+\begin{enumerate}
+\item[{(i)}] Suppose $k<r\in\Z$.
+If either $X$ has semistable reduction at $v$, 
+or $k$ is even and 
+$X$ has purely additive reduction at $v$ which becomes
+semistable over a quadratic extension of $F$,
+then 
+$$(\sigma - 1)^{r}H^k_{\text{\'et}}({\bar X}, \Z_{\ell}) = 0$$ 
+for every $\sigma \in \I$ and every prime $\ell \ne p$,
+and
+$$(\sigma - 1)^{r}H^k_{\text{\'et}}({\bar X}, \Z/n\Z) = 0$$ 
+for every $\sigma \in \I$ and every positive integer $n$ not
+divisible by $p$.
+\item[{(ii)}] Suppose $n$ is a positive integer not divisible by
+$p$, and 
+$$(\sigma - 1)^{r}H^k_{\text{\'et}}({\bar X}, \Z/n\Z) = 0$$ 
+for every $\sigma \in \I$. 
+Suppose $L$ is a degree $R(r,n)$ extension of $F$ which is
+totally ramified above $v$, and let $w$ be the extension of
+$v$ to $L$.
+If $k$ is odd, then $X$ has semistable reduction at $w$.
+If $k$ is even and $v$ satisfies (*), 
+then either $X$ has semistable reduction at $w$, or
+$X$ has purely additive reduction at $w$ which becomes
+semistable over a quadratic extension of $L$.
+\end{enumerate}
+\end{thm}
+
+\begin{proof}
+Let $V = V_\ell(X)$ and let 
+$H^k_\ell = H^k_{\text{\'et}}({\bar X}, \Z_\ell)$.
+Note that $H^k_\ell$ is a free $\Z_\ell$-module, and
+$H^k_\ell \otimes_{\Z_\ell}\Q_\ell = \wedge^kV^\ast$.
+Let
+$$\rho_{\ell,k} : \I \to \Aut(H^k_\ell) \cong \GL_b(\Z_\ell)$$
+be the representation giving the action of $\I$ on $H^k_\ell$,
+where $b=\rank_{\Z_{\ell}}(H^k_\ell)$.
+In the notation of \S\ref{linalgsect},
+$\rho_{\ell,k}=f_{k}\circ\rho_{\ell,X}$.
+By the Galois equivariance of the Weil pairing, and the fact that
+the inertia group acts as the identity on the $\ell$-power roots
+of unity, we see that the image of $\rho_{\ell,X}$ lies in the
+symplectic group $\Sp(V) \subseteq \SL(V)$. 
+Suppose $\sigma \in \I$. 
+
+Suppose $X$ has semistable reduction at $v$.
+By Theorem \ref{galcrit}, $(\rho_{\ell,X}(\sigma) - 1)^{2} = 0$.
+By Lemma \ref{lin}ii, $(\rho_{\ell,k}(\sigma) - 1)^{k+1} = 0$.
+
+Suppose $k$ is even and
+$X$ has purely additive reduction at $v$ which becomes
+semistable over a quadratic extension of $F$. 
+By Theorem \ref{galcrit}, 
+$(\rho_{\ell,X}(\sigma)^2-1)^2=0$. 
+By Lemma \ref{lin}iii, $(\rho_{\ell,k}(\sigma) - 1)^{k+1} = 0$.
+
+Therefore,  $(\rho_{\ell,k}(\sigma) - 1)^{r} = 0$.
+
+The second part of (i) follows from the first part for all
+the prime divisors $\ell$ of $n$.
+
+Conversely, suppose that 
+$(\sigma - 1)^{r}H^k_{\text{\'et}}({\bar X}, \Z/n\Z) = 0$. 
+Let $\ell$ be a prime divisor of $n$. Then
+$$(\sigma - 1)^{r}H^k_\ell \subseteq nH^k_\ell,$$
+so
+$$(\rho_{\ell,k}(\sigma) - 1)^{r} \in n\M_b(\Z_\ell).$$
+Since $X$ has semistable reduction over a finite extension of $F$,
+by Lemma \ref{lin}ii there is a positive integer $m$ such that
+$(\rho_{\ell,k}(\sigma^m) - 1)^{k+1} = 0$.
+Let $\alpha$ be an eigenvalue of 
+$\rho_{\ell,k}(\sigma)$. 
+Then $(\alpha^m - 1)^{k+1} = 0$, so $\alpha^m = 1$.
+Let $R=R(r,n)$.
+By Theorem \ref{localglobal},
+we have $\alpha^{R} = 1$.
+Then $\rho_{\ell,k}(\sigma^{R})$ is unipotent.
+In the notation of \S\ref{linalgsect} 
+with $\rho=\rho_{\ell,X}$, 
+we have
+$f_k(s_{\sigma^{R}}) = 1$.
+By Lemma \ref{lin}i,
+if $k$ is odd then $s_{\sigma^{R}} = 1$, and
+if $k$ is even then $s_{\sigma^{R}} \in \{\pm 1\}$.
+It follows that if $k$ is odd, then $\sigma^{R}$ acts unipotently on
+$V$. By Lemma \ref{mevals}, $X$ has semistable reduction at $w$.
+
+Suppose that $k$ is even, and
+$X$ does not have semistable reduction at $w$.
+Suppose $L$ is a degree $R(r,n)$ extension of $F$ which is
+totally ramified above $v$, and let $w$ be the extension of
+$v$ to $L$.
+We may assume that $L \subset F^{s}$, and that ${\bar v}$ is an
+extension of $w$ to $F^{s}$. 
+Let $\I_{w}$ denote the inertia
+subgroup at ${\bar v}$ of $\Gal(F^{s}/L)$.
+Let $\J$ (resp., $\J_{w}$) denote the first ramification subgroup
+in $\I$ (resp., $\I_{w}$), and let
+$\tau$ denote a lift to $\I$ of a topological generator of the 
+procyclic group $\I/\J$.
+Then $\tau^{R}$ is a lift to $\I_{w}$ of
+a topological generator of $\I_{w}/\J_{w}$.
+
+Suppose the valuation ring is henselian and the residue field is 
+separably closed. Then $\I_{w} \cong \Gal(F^{s}/L)$, 
+and the map $\sigma \mapsto s_{\sigma}$
+defines a quadratic character 
+$$\chi : \Gal(F^s/F) \to \{\pm 1\} \subseteq \Aut(X)$$
+such that $X$ has semistable reduction over the quadratic extension
+of $L$ cut out by $\chi$.
+If $s_{\tau^R}=1$, then $s_\sigma=-1$ for some $\sigma\in\J_w$
+(since $X$ does not have semistable reduction at $w$).
+But then $V^{\J_w}=0$, so $X$ has purely additive 
+reduction at $w$ by Lemma \ref{padd}.
+
+Suppose instead that $p \ne 2$.
+Since all the eigenvalues of $\rho_{\ell,X}(\sigma^{R})$
+are square roots of unity (for all $\sigma \in \I$), 
+$X$ has semistable reduction 
+over a quadratic extension of $L$, by Lemma \ref{mevals} and
+Remark \ref{ramifiedcyclic}.
+We showed above that $s_{\sigma}^{R} = s_{\sigma^{R}} \in \{\pm 1\}$.
+Since $2R$ is not divisible by $p$, and 
+$\J_{w}$ is either trivial or a pro-$p$ group, 
+therefore $\J_{w}$ acts unipotently on $V$.
+Since $X$ does not have semistable reduction at $w$,
+it follows that $s_{\tau^{R}}=-1$.
+Therefore, $1$ is not an eigenvalue for the action of $\tau^{R}$
+on $V$. By Lemma \ref{padd}, 
+$X$ has purely additive reduction at $w$.
+\end{proof}
+
+If we restrict to the case where $n \notin N(r)$, we obtain
+the following result. This result gives necessary and sufficient
+conditions for semistable reduction, and also necessary and
+sufficient conditions for $X$ to have either semistable reduction
+or purely additive reduction which becomes semistable over a
+quadratic extension.
+
+\begin{cor}
+\label{highercohcor}
+Suppose $X$ is an abelian variety over a field $F$, 
+suppose $v$ is a discrete valuation on $F$ of residue 
+characteristic $p \ge 0$, suppose $k$, $n$, and $r$
+are positive integers, and suppose $\ell$ is a prime number.
+Suppose $k < 2\dim(X)$, 
+suppose $k<r$, suppose $n$ and $\ell$ are not divisible by $p$, 
+and suppose $n \notin N(r)$.
+\begin{enumerate}
+\item[{(i)}] Suppose $k$ is odd. Then the following are
+equivalent:
+\begin{enumerate}
+\item[{(a)}]  $X$ has semistable reduction at $v$,
+\item[{(b)}] for every $\sigma \in \I$,
+$$(\sigma - 1)^{r}H^k_{\text{\'et}}({\bar X}, 
+\Z_{\ell}) = 0,$$ 
+\item[{(c)}]  for every $\sigma \in \I$,
+$$(\sigma - 1)^{r}H^k_{\text{\'et}}({\bar X}, \Z/n\Z) = 0.$$ 
+\end{enumerate}
+\item[{(ii)}] Suppose $k$ is even and $v$ satisfies (*).
+Then the following are equivalent:
+\begin{enumerate}
+\item[{(a)}]  either $X$ has semistable reduction at $v$, or
+$X$ has purely additive reduction at $v$ which becomes
+semistable over a quadratic extension of $F$,
+\item[{(b)}] for every $\sigma \in \I$,
+$$(\sigma - 1)^{r}H^k_{\text{\'et}}({\bar X}, \Z_{\ell}) = 
+0,$$
+\item[{(c)}] for every $\sigma \in \I$,
+$$(\sigma - 1)^{r}H^k_{\text{\'et}}({\bar X}, \Z/n\Z) = 0.$$ 
+\end{enumerate}
+\end{enumerate}
+\end{cor}
+
+\begin{proof}
+Apply Theorem \ref{highercoh}. 
+Since $n \notin N(r)$, we have $R(r,n)=1$ and $L=F$.
+\end{proof}
+
+Next we specialize Theorem \ref{highercoh}ii to the case $r=1$.
+Note that when $k=1$ we recover Raynaud's criterion for
+semistable reduction (Proposition 4.7 of \cite{SGA7}).
+
+\begin{cor}
+\label{raynaudgen}
+Suppose $X$ is an abelian variety over a field $F$, 
+$v$ is a discrete valuation on $F$, 
+$k$ and $n$ are positive integers, 
+$k < 2\dim(X)$, $n \ge 3$, %and
+$n$ is not divisible by the residue characteristic, and
+$\I$ acts as the identity on 
+%$$(\sigma - 1)
+$H^k_{\text{\'et}}({\bar X}, \Z/n\Z)$.
+%for every $\sigma \in \I$. 
+If $k$ is odd, then $X$ has semistable reduction at $v$.
+If $k$ is even and $v$ satisfies (*), 
+then either $X$ has semistable reduction at $v$, or
+$X$ has purely additive reduction at $v$ which becomes
+semistable over a quadratic extension of $F$.
+\end{cor}
+
+\begin{thebibliography}{99}
+
+\bibitem{BLR} S.\ Bosch, W.\ L\"utkebohmert, M.\ Raynaud, N\'eron models,
+Springer, Berlin-Heidelberg-New York, 1990.
+\bibitem{SGAintro} P.\ Deligne, 
+Introduction to \cite{SGA7I}, pp.\ V--VII.
+\bibitem{SGADeligne} P.\ Deligne, 
+{\em R\'esum\'e des premiers expos\'es de A.\ Grothendieck},
+in \cite{SGA7I}, pp.\ 1--24.
+\bibitem{SGA7} A.\ Grothendieck, {\em Mod\`eles de N\'eron et monodromie},
+in \cite{SGA7I}, pp.\ 313--523.
+\bibitem{SGA7I} A.\ Grothendieck (ed.), 
+Groupes de monodromie en g\'eometrie alg\'ebrique, SGA7 I,
+Lecture Notes in Math.\ {\bf 288}, Springer,
+Berlin-Heidelberg-New York, 1972.
+\bibitem{LenstraOort} H.\ W.\  Lenstra, Jr., F.\ Oort, {\em Abelian varieties
+having purely additive reduction}, J.\ Pure and Applied Algebra {\bf 36}
+(1985), 281--298.
+\bibitem{Motives} J-P.\ Serre, {\em Propri\'et\'es conjecturales 
+des groupes de Galois motiviques et des repr\'esentations $\ell$-adiques}, 
+in Motives 
+(U.\ Jannsen, S.\ Kleiman, J-P.\ Serre, eds.), Proc.\ Symp.\ Pure 
+Math.\ {\bf 55} (1994), Part 1, pp.~377--400.
+\bibitem{SerreTate} J-P.\ Serre, J.\ Tate, {\em Good reduction of abelian 
+varieties}, Ann.\ of Math.\ {\bf 88} (1968), 492--517. 
+\bibitem{semistab} A.\ Silverberg, Yu.\ G.\ Zarhin, 
+{\em Semistable reduction 
+and torsion subgroups of abelian varieties}, 
+Ann.\ Inst.\ Fourier {\bf 45}, no.~2 (1995), 403--420.
+\bibitem{serrelem} A.\ Silverberg, Yu.\ G.\ Zarhin, 
+{\em Variations on a theme of Minkowski and Serre},
+J.\ Pure and Applied Algebra {\bf 111}  (1996),  285--302.
+\bibitem{degree} A.\ Silverberg, Yu.\ G.\ Zarhin, 
+{\em Semistable reduction of abelian varieties over extensions of 
+small degree},
+J.\ Pure and Applied Algebra, to appear.
+\bibitem{banff} A.\ Silverberg, Yu.\ G.\ Zarhin, 
+{\em Reduction of abelian varieties}, 
+submitted to the Proceedings of the NATO/CRM Conference  
+on the Arithmetic and Geometry of Algebraic Cycles.
+
+
+\end{thebibliography}
+
+\end{document}
+

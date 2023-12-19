@@ -1,0 +1,545 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="GENERATOR" content="Mozilla/4.77 [en] (X11; U; SunOS 5.8 sun4u) [Netscape]">
+</head>
+<body>
+Math 486. September 25, 2002. Midterm 1.
+<br>Solutions
+<br>&nbsp;
+<p>1. Nim. Last move wins. 2,5, or 9 stones in a move. Initial position:
+1 pile, 1000 stones.
+<br>We mark positions by W or L&nbsp; if it is winning&nbsp; or loosing
+positions for the player who starts.
+<br>Fow winning positions we write&nbsp; winning moves (the number of stones
+to take).
+<br>&nbsp;
+<table BORDER COLS=10 WIDTH="100%" NOSAVE >
+<tr>
+<td>0</td>
+
+<td>1</td>
+
+<td>2</td>
+
+<td>3</td>
+
+<td>4</td>
+
+<td>5</td>
+
+<td>6</td>
+
+<td>7</td>
+
+<td>8</td>
+
+<td>9</td>
+</tr>
+
+<tr>
+<td>L</td>
+
+<td>L</td>
+
+<td>W</td>
+
+<td>W</td>
+
+<td>L</td>
+
+<td>W</td>
+
+<td>W</td>
+
+<td>L</td>
+
+<td>L</td>
+
+<td>W</td>
+</tr>
+
+<tr>
+<td></td>
+
+<td></td>
+
+<td>2</td>
+
+<td>2</td>
+
+<td></td>
+
+<td>5</td>
+
+<td>5</td>
+
+<td></td>
+
+<td></td>
+
+<td>2,5,9</td>
+</tr>
+</table>
+
+<table BORDER COLS=10 WIDTH="100%" NOSAVE >
+<tr>
+<td>10</td>
+
+<td>11</td>
+
+<td>12</td>
+
+<td>13</td>
+
+<td>14</td>
+
+<td>15</td>
+
+<td>16</td>
+
+<td>17</td>
+
+<td>18</td>
+
+<td>19</td>
+</tr>
+
+<tr>
+<td>W</td>
+
+<td>L</td>
+
+<td>W</td>
+
+<td>W</td>
+
+<td>L</td>
+
+<td>L</td>
+
+<td>W</td>
+
+<td>W</td>
+
+<td>L</td>
+
+<td>W</td>
+</tr>
+
+<tr>
+<td>2,9</td>
+
+<td></td>
+
+<td>5</td>
+
+<td>2,5,9</td>
+
+<td></td>
+
+<td></td>
+
+<td>2,5,9</td>
+
+<td>2,9</td>
+
+<td></td>
+
+<td>5</td>
+</tr>
+</table>
+
+<p>So the winning positions repeat with period 7.
+<br>The first player wins at initial positions of the form&nbsp; 7n+2,&nbsp;
+7n+3, 7n+5, 7n+6. The second player wins
+<br>if the first player starts&nbsp; at the other positions.&nbsp; In particular,&nbsp;
+1000 is 6 modulo 7, so the first player wins
+<br>by&nbsp; taking 2,5, or 9 stones and following the following
+<br>&nbsp;winning strategy:
+<table BORDER COLS=7 WIDTH="100%" NOSAVE >
+<tr>
+<td>7n</td>
+
+<td>7n+1</td>
+
+<td>7n+2</td>
+
+<td>7n+3</td>
+
+<td>7n+4</td>
+
+<td>7n+5</td>
+
+<td>7n+6</td>
+</tr>
+
+<tr>
+<td>L</td>
+
+<td>L</td>
+
+<td>W</td>
+
+<td>W</td>
+
+<td>L</td>
+
+<td>W</td>
+
+<td>W</td>
+</tr>
+
+<tr>
+<td></td>
+
+<td></td>
+
+<td>2</td>
+
+<td>2</td>
+
+<td></td>
+
+<td>5</td>
+
+<td>5</td>
+</tr>
+</table>
+There are other optimal strategies for the first player.
+<br>Any strategy of the second player is optimal.&nbsp; The value of the
+game is $1 for the first player.
+<br>It is a zero-sum game.
+<br>&nbsp;
+<p>2. Blackjack. Players has 10 and 6. Dealer shows 10.&nbsp; Cards left:
+5, 5, 6, 7.
+<br>Here is an extensive form:
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+P 16
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+P&nbsp;&nbsp;&nbsp; stands&nbsp;&nbsp;&nbsp; with 16&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+P&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; draws
+<br>&nbsp;&nbsp;&nbsp; D draws (chance move)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+chance move
+<br>1/2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+1/4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+1/4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+1/2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+1/2
+<br>D 15&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+D 16&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+D 17. -$1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+P 21, D 10&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+P over.&nbsp; -$1
+<br>chance move&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; chance
+move&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+D draws&nbsp;&nbsp; (chance move}
+<br>1/3&nbsp;&nbsp; 1/3&nbsp; 1/3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+2/3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1/3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+1/3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+1/3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+1/3
+<br>&nbsp;D20&nbsp;&nbsp; D21&nbsp; D22&nbsp;&nbsp;&nbsp;&nbsp; D21&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+D23&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+D 15&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+D 16&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+D 17. $1
+<br>-$1&nbsp;&nbsp;&nbsp; -$1&nbsp;&nbsp; $1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+-$1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+chance move&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+chance move
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+1/2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1/2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+1/2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1/2
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+D 21.$ 0.&nbsp;&nbsp; D 22. $1.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+D 21. $0.&nbsp;&nbsp;&nbsp;&nbsp; D 23. $1.
+<br>Now we lift the payoff for the player from the terminal positions to
+all positions:
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+P 16&nbsp;&nbsp;&nbsp; -$1/6
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+P&nbsp;&nbsp;&nbsp; stands&nbsp;&nbsp;&nbsp; with 16&nbsp;&nbsp;&nbsp;&nbsp;
+-$1/2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+P&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; draws&nbsp; -$1/6
+<br>&nbsp;&nbsp;&nbsp; D draws (chance move)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+chance move
+<br>1/2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+1/4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+1/4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+1/2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+1/2
+<br>D 15.&nbsp;&nbsp; -$1/3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; D 16.&nbsp; -$1/3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+D 17. -$1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+P 21, D 10&nbsp;&nbsp;&nbsp; $2/3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+P over.&nbsp; -$1
+<br>chance move&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; chance
+move&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+chance move
+<br>1/3&nbsp;&nbsp; 1/3&nbsp; 1/3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+2/3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1/3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+1/3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+1/3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+1/3
+<br>&nbsp;D20&nbsp;&nbsp; D21&nbsp; D22&nbsp;&nbsp;&nbsp;&nbsp; D21&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+D23&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+D 15.&nbsp; $1/2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; D 16&nbsp;&nbsp;
+$1/2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+D 17. $1
+<br>-$1&nbsp;&nbsp;&nbsp; -$1&nbsp;&nbsp; $1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+-$1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+chance move&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+chance move
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+1/2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1/2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+1/2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1/2
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+D 21.$ 0.&nbsp;&nbsp; D 22. $1.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+D 21. $0.&nbsp;&nbsp;&nbsp;&nbsp; D 23. $1.
+<br>So the optimal strategy for the player is to draw once. The payoff
+is -$1/6.
+<br>The dealar 's stratefy is fixed (D has only one strategy).
+<p>In Problems 3--5, we mark by * maximal numbers in their columns and
+by ' the minimal numbers in their rows.
+<br>The column player is called She, the row player is called He. His&nbsp;
+pure strategies are called&nbsp; r1,r2,..., and
+<br>her strategies are called c1,c2,....
+<p>3.
+<table BORDER COLS=5 WIDTH="100%" NOSAVE >
+<tr>
+<td>3</td>
+
+<td>4</td>
+
+<td>3</td>
+
+<td>0'</td>
+
+<td>3</td>
+</tr>
+
+<tr>
+<td>5</td>
+
+<td>7*</td>
+
+<td>5*</td>
+
+<td>5</td>
+
+<td>0'</td>
+</tr>
+
+<tr>
+<td>5</td>
+
+<td>4</td>
+
+<td>4</td>
+
+<td>6*</td>
+
+<td>3'</td>
+</tr>
+
+<tr>
+<td>7*</td>
+
+<td>5'</td>
+
+<td>5*'</td>
+
+<td>6*</td>
+
+<td>5*'</td>
+</tr>
+</table>
+So there are two saddle points,&nbsp;&nbsp;&nbsp;&nbsp; (r4, c3) and (r4,c5).
+The value of game is 5.
+<br>He has only one optimal strategy, r4. She has two optimal pure strategies,
+c3 and c5, and her optimal mixed strategies are the mixtures of&nbsp; c3
+and c5.
+<br>&nbsp;
+<p>4. Matrix game.
+<table BORDER COLS=5 WIDTH="100%" NOSAVE >
+<tr>
+<td>3*</td>
+
+<td>-1'</td>
+
+<td>2*</td>
+
+<td>0</td>
+
+<td>2</td>
+</tr>
+
+<tr>
+<td>3*</td>
+
+<td>0'</td>
+
+<td>2*</td>
+
+<td>1*</td>
+
+<td>4*</td>
+</tr>
+
+<tr>
+<td>0</td>
+
+<td>3*</td>
+
+<td>2*</td>
+
+<td>1*</td>
+
+<td>-1'</td>
+</tr>
+</table>
+There are no sadle points.
+<br>His best pure strategy is&nbsp; r2 with the worst-case payoff 0. Her
+best pure strategy is c4&nbsp; where she pays him
+<br>at most 1. The value of the game is between 0 and 1.
+<br>The strategy c1 is dominated by c2, so he drop c1;&nbsp; c3 is dominated
+by c4, so she drops c3. They are left with the matrix game
+<br>&nbsp;
+<table BORDER COLS=5 WIDTH="100%" NOSAVE >
+<tr>
+<td>smaller game</td>
+
+<td>c1</td>
+
+<td>c2</td>
+
+<td>c4</td>
+
+<td>c5</td>
+</tr>
+
+<tr>
+<td>r2</td>
+
+<td>3</td>
+
+<td>0</td>
+
+<td>1</td>
+
+<td>4</td>
+</tr>
+
+<tr>
+<td>r3</td>
+
+<td>0</td>
+
+<td>3</td>
+
+<td>1</td>
+
+<td>-1</td>
+</tr>
+</table>
+He can get&nbsp; 1 by using&nbsp;&nbsp; (r2+r3)/2 =(0,1/2.1/2}<sup>T</sup>&nbsp;&nbsp;
+(there are other optimal stratefies). Her optimal strategy&nbsp; c4 is
+unique.
+<br>The value of the game is 1.
+<br>&nbsp;
+<br>&nbsp;
+<p>5.
+<table BORDER COLS=5 WIDTH="100%" NOSAVE >
+<tr>
+<td>2</td>
+
+<td>1</td>
+
+<td>2*</td>
+
+<td>0'</td>
+
+<td>3*</td>
+</tr>
+
+<tr>
+<td>2</td>
+
+<td>2</td>
+
+<td>0'</td>
+
+<td>2*</td>
+
+<td>2</td>
+</tr>
+
+<tr>
+<td>3</td>
+
+<td>2</td>
+
+<td>1'</td>
+
+<td>1'</td>
+
+<td>1'</td>
+</tr>
+
+<tr>
+<td>4*</td>
+
+<td>5*</td>
+
+<td>1'</td>
+
+<td>1'</td>
+
+<td>1'</td>
+</tr>
+</table>
+There are no saddle points. The value of game is between&nbsp; 1 and 2.
+<br>By domination, she drops&nbsp; c1,c2, and c5, and he can drop r3 or&nbsp;
+r4. they get a smaller game:
+<br>&nbsp;
+<table BORDER COLS=3 WIDTH="100%" NOSAVE >
+<tr>
+<td>&nbsp;smaller game</td>
+
+<td>c3</td>
+
+<td>c4</td>
+</tr>
+
+<tr>
+<td>r1</td>
+
+<td>2</td>
+
+<td>0</td>
+</tr>
+
+<tr>
+<td>r2</td>
+
+<td>0</td>
+
+<td>2</td>
+</tr>
+
+<tr>
+<td>r4</td>
+
+<td>1</td>
+
+<td>1</td>
+</tr>
+</table>
+His optimal strategies are the mixtures of&nbsp; r3 and r4. Her optimal
+strategy&nbsp; (c3+c4)/2= (0,0,1/2,1/2,0)
+<br>is unique. The value of the game is 1.
+<br>&nbsp;
+<p>&nbsp;
+</body>
+</html>

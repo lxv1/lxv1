@@ -1,0 +1,1355 @@
+%
+\magnification=\magstep1
+\input amstex
+\input table
+\documentstyle{amsppt}
+\NoBlackBoxes
+\pageheight{7.5in}
+\pagewidth{5.5in}
+
+\leftheadtext{George E. Andrews}
+\TagsOnRight
+\def\c{\cite}
+\def\fr{\frac}
+\def\D{\Cal{D}}
+\def\R{\frak{R}}
+\def\pf{\hfill $\square$}
+\def\wa{\widetilde{\alpha}}
+\def\wb{\widetilde{\beta}}
+
+\topmatter
+\title
+	Partitions: \ At the Interface of $q$-Series and 
+	Modular Forms
+\endtitle
+\author
+	George E. Andrews\footnote{Partially 
+	supported by National Science Foundation Grant
+	DMS-9206993. \hfill\hfil }
+\endauthor
+\address
+	The Pennsylvania State University  
+	University Park, PA  16802
+\endaddress
+\abstract
+	In this paper we explore five topics from the theory of 
+	partitions: (1) \ the Rademacher conjecture, (2) the
+	Herschel-Cayley-Sylvester formulas, (3) the asymptotic
+	expansions of E. M. Wright, (4) the asymptotics of mock 
+	theta function coefficients, (5) modular transformations
+	of $q$-series
+\endabstract
+\endtopmatter
+
+
+\document
+
+\subhead
+1. \ Introduction
+\endsubhead
+
+The twentieth century found two major currents in the theory of
+partitions.  The first is characterized by the role played by modular
+forms.  Seminal papers in this vein include the Hardy-Ramanujan paper
+on $p(n)$ \c{17}, the proofs of the Ramanujan congruences by Watson
+\c{38} and Atkin \c7, and the many recent contributions by Ken Ono
+\c{25}, \c{26} to name only a few.
+
+The second has been extensive study of the application of basic
+hypergeometric series or $q$-series to partitions.  This has its
+genesis in the work of MacMahon \c{22} and Schur \c{34}.  In the
+1960's a variety of results were discovered; these are described in
+a survey by H. L.  Alder \c1 (cf. \c3).
+
+Surprisingly perhaps, there has not been a large amount of interplay
+between these two themes.  In this paper, I hope to survey topics
+that lie at the interface of modular forms and $q$-series.  Some
+concern important and unjustly neglected conjectures.  Each should
+suggest a number of research possibilities.
+
+Section 2 will be devoted to Rademacher's conjecture \c{29; p. 302}
+which concerns his partial fraction decomposition for the generating 
+function of $p(n)$.  Section 3 considers alternative representations
+of the restricted partition function $p(n,m)$.  Section 4 looks at
+a sequence of papers by E. M. Wright \c{39}, \c{40}, \c{41}.  The
+third of these is quite unlike any other in the history of partition
+asymptotics and foreshadows many possibilities.  In Section 5, we 
+look again at problems posed by Dragonette \c{12} for the asymptotics
+of the coefficients of Ramanujan's mock theta functions.  The sixth
+section considers the efforts by Ehrenpreis \c{13} and others to
+develop a modular type transformation theory for $q$-series.  We
+conclude with brief synthesizing observations.
+
+\subhead
+2. \ The Rademacher Conjecture
+\endsubhead
+
+Near the end of his book, Topics in Analytic Number Theory \c{29;
+p. 300}, Rademacher derives the following partial fraction
+decomposition for the generating function of the partition function
+$p(n)$.
+
+\head
+Rademacher's Partial Fraction Decomposition
+\endhead
+
+We use the following notation for forward differences
+$$
+	\Delta_{\alpha} f(\alpha) = f(\alpha + 1) - f(\alpha)\,,
+$$
+and for nonnegative integers $j$
+$$
+	\Delta_{\alpha}^j f(\alpha) = \sum_{h=0}^j (-1)^h
+	\binom{j}{h} f(\alpha + j - h).
+$$
+Then
+$$
+\align
+	F(x) =  & - 2\pi \left(\fr{\pi}{12}\right)^{3/2}
+	\sum_{k=1}^{\infty} k^{-5/2}  \sum_{\Sb h \mod k \\
+	(h,k) = 1 \endSb} w_{h,k}  \tag2.1    \\
+	& \sum_{j=0}^{\infty} \Delta_{\alpha}^j \left[ L_{3/2}
+	\left( - \fr{\pi^2}{6k^2} (\alpha + 1) \right)\right]
+	\left(x \,e^{-\fr{2\pi ih}{k}} - 1\right)^{-j-1},
+\endalign
+$$
+where $\alpha = 1/24$, $w_{hk}$ is a root of unity \c{29; p. 269} and
+$$
+	F(x) = \cases
+	\displaystyle{\sum_{n=0}^{\infty}} p(n) x^n\,, \qquad & |x| < 1  \\
+	0\,,  \qquad & |x| > 1\,.
+	\endcases
+$$
+
+Immediately after proving the above expansion for $F(x)$, 
+Rademacher \c{29, p. 301} observes that:
+
+If $|x| < 1$,
+$$
+\align
+	\lim_{N\rightarrow\infty} \fr1{(1 - x)(1 - x^2) \cdots
+	(1 - x^N)} & = \fr1{\displaystyle{\prod_{m=1}^{\infty}}
+	(1 - x^m)}  \tag2.3    \\
+	& = \sum_{n=0}^{\infty} p(n) x^n = F(x)\,,
+\endalign
+$$
+and if $|x| > 1$
+$$
+	\lim_{N\rightarrow \infty}  \fr1{(1 - x)(1 - x^2) \cdots
+	(1 - x^N)} = 0 = F(x).
+\tag2.4
+$$
+
+Of course, one can perform the classical partial fractions decomposition
+of this finite product.  Indeed, we may write
+$$
+	\fr1{\displaystyle{\prod_{m=1}^N}(1 - x^m)} = 
+	\sum_{\Sb 0 \leqq h < k \leqq n \\ (h,k) = 1 \endSb}
+	\sum_{j=1}^{\lfloor N/k\rfloor}
+	\fr{C_{hkj}(N)}{(x - e^{\fr{2\pi ih}{k}})^j}\;.
+\tag2.5
+$$
+
+As Rademacher notes, there is a natural identification 
+suggested by these two expansions.
+\vskip .1in
+{\bf Rademacher's Conjecture} \c{29; p. 302}.
+
+$$
+	\lim_{N\rightarrow \infty}  C_{hkj}(N)
+$$
+exists and is given by
+$$
+	C_{hkj}(\infty) = -2\pi \left(\fr{\pi}{12}\right)^{3/2}
+	\fr{w_{hk} e^{\fr{2\pi ihj}{k}}}{k^{5/2}}
+	\Delta_{\alpha}^{j-1} L_{3/2} \left( - 
+	\fr{\pi^2}{6k^2} (\alpha + 1)\right)\,,
+$$
+where $\alpha = 1/24$, and 
+$$
+\aligned
+	L_{3/2}(-y^2) & = - \fr1{2\sqrt{\pi}y} \;\fr{d}{dy}\;
+	\left(\fr{\sin 2y}{y}\right)   \\
+	& = - \fr1{2\sqrt{\pi} y^2} \left( 2 \cos 2y -
+	\fr{\sin 2y}{y} \right)\,.
+\endaligned
+$$
+Rademacher goes on to provide a small table of values (reprinted
+here with one correction):
+\vskip .1in
+\centerline{\begintable
+\begintableformat
+\center " \left " \left " \left
+\endtableformat
+\-
+\br{\:} N " $C_{011}$ " $C_{012}$  " $C_{121}$  \er{}
+\-
+\br{\:} ${}$ " ${}$ " ${}$ " ${}$ \er{}
+\br{\:} $1$ " $-1$ " $0$ " $0$ \er{}
+\br{\:} ${}$ " ${}$ " ${}$ " ${}$ \er{}
+\br{\:} $2$ " $-\fr14 = - 0.25$ " $\fr12 = 0.5$ " $\fr14 = 0.25$ \er{}
+\br{\:} ${}$ " ${}$ " ${}$ " ${}$ \er{}
+\br{\:} $3$ " $-\fr{17}{72} = - 0.23611 \dots$ " $\fr14 = 0.25$ " 
+$\fr18 = 0.125$ \er{}
+\br{\:} ${}$ " ${}$ " ${}$ " ${}$ \er{}
+\br{\:} $4$ " $-\fr{17}{72} = -0.23611 \dots$ " 
+$\fr{59}{288} = 0.204861\dots$\quad " $\fr18 = 0.125$ \er{}
+\br{\:} ${}$ " ${}$ " ${}$ " ${}$ \er{}
+\br{\:} $5$ " $-\fr{20831}{86400} = -0.24101 \dots$\quad " 
+$\fr3{16} = 0.1875$ " $\fr{13}{128} = 0.1015625$ \er{}
+\br{\:} ${}$ " ${}$ " ${}$ " ${}$ \er{}
+\-
+\endtable}
+\vskip .1in
+and he lists explicitly three of the conjectured limits:
+$$
+\aligned
+	C_{011}(\infty) & = - \fr6{25} \left(1 + \fr{2\sqrt{3}}{5\pi}
+	\right) = - 0.273339 \dots,   \\
+	C_{012}(\infty) & = \fr{24}{25\cdot 49} \left( 6 + 
+		\fr{109\sqrt{3}}{35\pi} \right) = 0.15119 \dots,  \\
+	C_{121}(\infty) & = - \fr{\sqrt{6}}{25} \left( \cos 
+	\fr{5\pi}{12} - \fr{12}{5\pi} \sin \fr{5\pi}{12} \right)
+	= 0.046941.
+\endaligned
+$$
+
+Of these coefficients he says \c{29; p. 301}:
+
+``No explicit formula for $C_{hkl}(N)$ is known, not even for the
+simplest case $h = 0$, $k = 1$, $l = 1$, and variable $N$.''
+
+In the hope of stimulating serious consideration of this problem, I
+will present an explicit formula for $C_{011}(N + 1)$ below.  The same
+procedure can obviously be applied to provide a formula for
+$C_{hkj}(N+1)$ in general.  However, owing to the fact that we cannot
+prove Rademacher conjecture from our result, we shall not complicate
+matters by presenting the full formula for $C_{hkj}(N+1)$.  It should
+be pointed out that Rademacher's conjecture lies at the interface of
+the theory of modular forms and the theory of $q$-series.  Thus
+progress on this problem may require contributions from two areas that
+have had less contact in the past than might have been expected or
+hoped for.
+
+\proclaim
+{Theorem 1}  With $\rho_j = e^{2\pi i/j}$, and $H_N(x_1,\dots,x_n)$
+the $N$-th homogeneous symmetric function of $x_1,x_2,\dots,x_n$,
+then
+$$
+\aligned
+	C_{011} & (N + 1)  \ \   \\
+	& = \fr{-1}{(N+1)!} \sum_{h_1 = 1}^1 \sum_{h_2 = 1}^2
+	\sum_{h_N = 1}^N   \\
+	& \qquad \left(\prod_{i=1}^{N} \rho_{i+1}^{-h_i}
+	\right)\;H_N\; \left(\fr{\rho_2^{h_1}}{1 - \rho_2^{h_1}},\dots,
+	\fr{\rho_{N+1}^{h_N}}{1 - \rho_{N+1}^{h_N}}\right)\,.
+\endaligned
+$$
+\endproclaim
+
+\demo
+{Proof}  Noting that (2.5) may be presented as
+$$
+\aligned
+	\fr1{(x;x)_{N+1}} = & \fr{C_{01N+1}(N+1)}{(x - 1)^{N+1}}
+	+ \fr{C_{01N}(N+1)}{(x - 1)^N} + \cdots + \fr{C_{011}(N+1)}
+	{(x - 1)}  \\
+	& + \sum_{\Sb 0 \leqq h < k \leqq N + 1 \\ (h,k) = 1  \\
+	k > 1 \endSb} \sum_{j=1}^{\lfloor n/k\rfloor}
+	\fr{C_{hkj}(N+1)}{(x - e^{2\pi ih/k})^j}\,,
+\endaligned
+$$
+we find by multiplying by $(x - 1)^{N+1}$, differentiating $N$ times
+and then setting $x = 1$ that
+$$
+	N! \;C_{011}(N+1) = \left. \fr{d^N}{dx^N} \;
+	\fr{(x - 1)^{N+1}}{(x;x)_{N+1}} \right|_{x=1} \,,
+$$
+where
+$$
+	(A;q)_N = (1 - A)(1 - Aq) \dots(1 - Aq^{N-1}).
+$$
+
+So we clearly need the $r$-dimensional Leibnitz rule
+$$
+	\fr{d^N}{dx^N} \;f_1 \,f_2 \cdots f_r = \sum_{\Sb
+	n_1,\dots,n_r \geqq 0  \\  n_1 + \cdots + n_r = N\endSb}
+	\binom{N}{n_1,n_2,\dots,n_r}  f_1^{(n_1)} f_2^{(n_2)}
+	\cdots f_r^{(n_r)}\,.
+$$
+
+Now recalling that
+$$
+	\fr1{1 - q^M} = \fr1{M} \sum_{J=0}^{M-1} 
+		\fr1{(1 - \rho_M^j q)}\;,
+$$
+where $\rho_M = e^{2\pi i/M}$, we easily deduce
+$$
+	\fr{1 - q}{1 - q^M} = \fr1{M} \sum_{j=1}^{M-1}
+	\fr{(1 - \rho_M^{-j})}{(1 - \rho_M^j q)}\;.
+$$
+Consequently
+$$
+	\fr{d^k}{dq^k}\; \fr{(1 - q)}{(1 - q^M)} = \fr{k!}{M}
+	\sum_{j=1}^{M-1} \fr{(1 - \rho_M^{-j})\rho_M^{jk}}
+	{(1 - \rho_M^j q)^{k+1}}\;.
+$$
+Next we recall the standard representation of the homogeneous 
+symmetric function in terms of monomials:
+$$
+	H_N(X_1,X_2,\dots,X_N) = \sum_{\Sb n_1,n_2,\dots,n_N \geqq 0\\
+	n_1 + n_2 + \cdots + n_N = N \endSb} X_1^{n_1} X_2^{n_2}
+	\cdots X_N^{n_N}\,.
+$$
+As a result,
+$$
+\aligned
+	& N!\,C_{011}(N + 1)   \\
+	& = (-1)^{N+1} \sum_{\Sb n_1,\dots,n_N \geqq 0 \\
+	n_1 + \cdots + n_N = N \endSb} \binom{N}{n_1,n_2,\dots,n_N}
+	\left(\fr{d^{n_1}}{dx^{n_1}} \;\fr{(1 - x)}{(1 - x^2)}\right)
+	\cdots \left.\left( \fr{d^{n_N}}{dx^{n_N}}\;\fr{(1 - x)}{(1 - x^{N+1})}
+	\right)\right|_{x = 1}
+	\\
+	& = (-1)^{N+1} \sum_{\Sb n_1,\dots,n_N \geqq 0 \\
+	n_1 + \cdots + n_N = N \endSb} \binom{N}{n_1,n_2,\dots,n_N}
+	\left(\fr{n_1!}{2}\; \sum_{j_1 = 1}^{2-1} \fr{(1 - \rho_1^{-j_1})
+	\rho_2^{j_1 n_1}}{(1 - \rho_2^{j_1} q)^{n_1 + 1}}\right)
+	\\
+	& \qquad \cdots \left(\fr{n_N !}{(N+1)} \sum_{j_N = 1}^{(N+1)-1}
+	\left.
+	\fr{(1 - \rho_{N+1}^{-j_N})\rho_{N+1}^{j_N n_N}}{(1 - \rho_{N+1}^{j_N}
+	)^{n_N + 1}}\right) \right|_{x=1}
+	\\
+	& = \fr{(-1)^{N+1}}{(N+1)!} \sum_{j_1=1}^1\sum_{j_2=1}^2 \cdots
+	\sum_{j_N=1}^N \fr{(1 - \rho_2^{-j_1})}{(1 - \rho_2^{j_1})}\;
+	\fr{(1 - \rho_3^{-j_2})}{(1 - \rho_{3}^{j_2})} \cdots
+	\fr{(1 - \rho_{N+1}^{-j_N})}{(1 - \rho_{N+1}^{j_N})}  
+	\\
+	& \qquad \sum_{\Sb n_1,\dots,n_N \geqq 0 \\ n_1 + \cdots + n_N = N 
+	\endSb} \left(\fr{\rho_{N+1}^{j_N}}{1 - \rho_{N+1}^{j_N}}\right)^{n_N}
+	\cdots \left(\fr{\rho_2^{j_1}}{1 - \rho_2^{j_1}}\right)^{n_1}
+	\\
+	& = \fr{-1}{(N+1)!} \sum_{j_1 = 1}^1 \sum_{j_2 = 1}^2 \cdots
+	\sum_{j_N = 1}^N \left(\prod_{i=1}^N \rho_{i+1}^{-j_i}\right)
+	\;H_N\; \left(\fr{\rho_2^{j_1}}{1 - \rho_2 j_1}\,,\cdots ,\,
+	\fr{\rho_{N+1}^{j_N}}{1 - \rho_{N+1}^{j_N}}\right)\,,
+\endaligned
+$$
+as desired.  \pf
+\enddemo
+
+It may be reasonably objected that Theorem 1 provides little hope of
+proving Rademacher's Conjecture.  At the most it may suggest the
+value of finding better formulas for $C_{hkj}(N)$.
+
+L. Ehrenpreis in \c{13; p. 317} mentions that his student, Jane
+Friedman, studied computer algorithms for this problem but he states
+that: ``Unfortunately, the computer study proved inconclusive.''
+While this is still true, we can add a few more values to those
+already computed for $C_{011}(N)$:
+$$
+\alignedat3
+	& N & \qquad & C_{011}  \\
+	& 6 & \qquad & - \fr{85823}{345600} \; = \; -0.24833  \\
+	& 7 & \qquad & - \fr{19554517}{76204800} \; = \; -0.25660 \\
+	& 8 & \qquad & - \fr{80858443}{304819200} \; = \; -0.26527
+\endalignedat
+$$
+
+\subhead
+3. \ Formulae for p(n,m)
+\endsubhead
+
+We denote the number of partitions of $n$ into at most $m$ parts by
+$p(n,m)$.  There is an extensive literature concerning formulae for
+$p(n,m)$, there is a full account of the history up to 1958 given in
+the Royal Society Table of Partitions \c{16} which is mostly devoted
+to extensive tables of $p(n,m)$.  Many authors, among them, Paoli
+\c{27}, DeMorgan \c{11}, Herschel \c{18}, Cayley \c{10}, Sylvester
+\c{35}, Glaisher \c{14} and more recently Arkin \c6,
+have all made major contributions to the study of exact formulae for 
+$p(n,m)$.
+
+When one proceeds to examine the actual formulae, one is struck by a
+substantial difference that arises between $m \leqq 4$ and $m > 4$.
+Namely, we see immediately that
+$$
+	p(n,1) = 1
+\tag3.1
+$$
+$$
+	p(n,2) = \left\lfloor \fr{n+2}{2}\right\rfloor\,.
+\tag3.2
+$$
+DeMorgan \c{11} first proved that
+$$
+	p(n,3) = \left\{ \fr{(n+3)^2}{12} \right\}\,,
+\tag3.3
+$$
+and Gl\"osel proved \c{15; p. 138}:
+$$
+	p(n,4) = \left\{ \left\lfloor \fr{n+4}{2}\right\rfloor^2 \left( 3
+	\left\lfloor \fr{n+9}{2} \right\rfloor - \left\lfloor 
+	\fr{n+10}{2}\right\rfloor \right) \fr1{36}\right\}\,.
+\tag3.4
+$$
+where $\lfloor x \rfloor$ is the greatest integer $\leqq x$, and
+$\{x\}$ is the nearest integer to $x$.
+
+Now there are several immediate observations to make about these
+formulae.  First of all, they are all obviously real numbers indeed,
+positive integers.  Furthermore, they are given in one line and are
+computed with familiar functions.  We do remark that (3.4) could be
+improved if one could eliminate some of the instances of the greatest
+integer function.
+
+For $m > 5$ (Gl\"osel has a lengthy formula for $p(n,5)$ that is of
+the same type as (3.1)--(3.4)), one runs into the stark fact that one
+needs representations of periodic sequences.  As is well-known \c{28,
+p. 76}, such sequences are representable by Finite Fourier series.
+So, for example, an alternative to (3.4) is \c{23; p. 153}
+$$
+\aligned
+	p(n,4) = & \fr1{144} (n + 5)^3 - \fr5{96} (n + 5) + \fr1{32}
+	(-1)^n (n + 5) \\
+	& + \fr1{27} (r_3^n + r_3^{-n} - r_3^{n+1} - r_3^{-n-1})
+	\\
+	& + \fr1{16} i^n (1 + (-1)^n)\,,
+\endaligned
+$$
+where $r_3 = e^{2\pi i/3}$.
+
+Now this formula is rather disturbing.  A little thought reveals that
+it is real because it is equal to its complex conjugate.  However, its
+integrality is far from obvious.
+
+One way to avoid this difficulty is to introduce the circulator
+notation for a periodic sequence of period $m$ \c{16; p. xvii}
+$$
+	(A_0,A_1,\dots,A_{m-1}) crm_n = A_i \text{ if } 
+	n \equiv i \pmod{m}\,.
+\tag3.6
+$$
+Computationally this approach avoids complex numbers, but it merely
+introduces notation for periodic sequences.
+
+In this new notation we find \c{16; p. xxvii, eq. (6.7)}
+$$
+\aligned
+	p(n,4) = & \fr1{24}  \binom{n+6}{3} + \left(\fr1{9} - \fr1{16}
+	(2,3) cr 2_n\right) (n + 5)  \\
+	& + \fr1{9} (1,0,-1) cr 3_n + \fr1{8} (1,0,-1,0) cr 4_n.
+\endaligned
+\tag3.7
+$$
+In this section, we shall make the simple observation
+that periodic sequences may also be represented by the greatest 
+integer function.  From that knowledge it is easy to derive formulas
+such as
+$$
+	p(n,4) = \left\{(n + 5)\left(n^2 + n+ 22 + 18 \left\lfloor
+	\fr{n}{2}\right\rfloor\right)\bigg/144 \right\}\,,
+\tag3.8
+$$
+and
+$$
+	p(n,5) = \left\{(n + 8)\left(n^3 + n+ 22n^2 + 44n + 248 +
+	180 \left\lfloor
+	\fr{n}{2}\right\rfloor\right)\bigg/2880 \right\}\,,
+\tag3.9
+$$
+
+Note that these formulas are much more in the spirit of (3.1)--(3.3)
+than is (3.5).  The formula (3.9) is strikingly simpler than any
+of the several given in \c{16}.  Furthermore such formulas for
+$p(n,m)$ continue for larger $m$.  For example, 
+$$
+\align
+	p(n,6) = & \bigg\{(n + 11) \bigg((6n^4 + 249 n^3 + 2071n^2
+	- 4931n + 40621)\big/518400   \tag3.10   \\
+	& \left.\left. + \left\lfloor \fr{n}{2}\right\rfloor
+	(n + 10)/192 + \left(\left\lfloor \fr{n+1}{3}\right\rfloor
+	+ 2\left\lfloor \fr{n}{3}\right\rfloor \right)\big/54\right)
+	\right\}
+\endalign
+$$
+$$
+\align
+	p(n,7) = & \bigg\{(n + 14) \bigg((n^5 + 70 n^4 + 1785n^3
+	- 15365 n^2 + 9702n + 277032\big/3628800   \tag3.11   \\
+	& \left.\left. + \left\lfloor \fr{n}{2}\right\rfloor
+	(n + 14)/384 + \left\lfloor \fr{n}{3}\right\rfloor
+	\big/54\right)\right\}
+\endalign
+$$
+$$
+\align
+	p(n,8) = & \left\{(n+18)\bigg((n^6 + 108n^5 + 4503n^4 + 79911n^3 
+	\right.   \tag3.12  \\
+	& + 522148n^2 - 202687n + 9441216)/203212800  \\	
+	& + \left\lfloor \fr{n}{2}\right\rfloor (n^2 + 36 + 231)/9216 \\
+	& + \left(\left\lfloor \fr{n +1}{3}\right\rfloor + 2
+	   \left\lfloor \fr{n}{3}\right\rfloor\right)\big/162  \\
+	& + \left.\left.\left\lfloor \fr{n}{4}\right\rfloor \big/64
+	\right)\right\}
+\endalign
+$$
+$$
+\align
+	p(n,9) = & \left\{(n+22)\bigg((n^7 + 158n^6 + 10034n^5 + 327352n^4 
+	\right.   \tag3.13  \\
+	& + 5419144n^3 - 32063602n^2 + 5172096n + 564401888)/14631321600  \\
+	& + \left\lfloor \fr{n}{2}\right\rfloor (2n^2 + 91n + 728)/36864 \\
+	& + \left(\left.\left.(n + 20)\left\lfloor \fr{n+1}{3}\right\rfloor 
+	+ 2(n + 23)\left\lfloor \fr{n}{3}\right\rfloor \right)
+	\bigg/2916 + \left(\left\lfloor \fr{n}{4}\right\rfloor +
+	\left\lfloor \fr{n + 2}{4}\right\rfloor \right)\bigg/256
+	\right)\right\}
+\endalign
+$$
+
+In order to establish such results, we require the following:
+
+\proclaim
+{Theorem 2}  For a fixed positive integer $m$, the periodic sequence 
+in $n$ given by
+$$
+\align
+	(A_0,A_1, & \dots,A_{m-1}) cr\,m_n  \tag3.14  \\
+	& = A_0 \left\lfloor \fr{n+m}{m}\right\rfloor + \sum_{j=1}^{m-1}
+		(A_j - A_{j-1}) \left\lfloor \fr{n + m-j}{m}\right\rfloor 
+		- A_{m-1} \left\lfloor \fr{n}{m}\right\rfloor  \\
+	& = A_0 + \sum_{j=1}^m (A_j - A_{j-1}) \left\lfloor \fr{n+m-j}{m}
+		\right\rfloor \,,
+\endalign
+$$
+where we define $A_m = A_0$.
+\endproclaim
+
+\demo
+{Proof}  Let us define $f(n)$ to be the right-hand side of (3.14).
+$$
+\aligned
+	f(n + m) - f(n) & = \sum_{j=1}^m (A_j - A_{j-1})\left(
+	\left\lfloor \fr{n + 2m-j}{m}\right\rfloor  -
+	\left\lfloor \fr{n + m - j}{m}\right\rfloor \right)
+	\\
+	& = \sum_{j=1}^m (A_j - A_{j-1}) = A_m - A_0 = 0\,.
+\endaligned
+$$
+Hence $f(n)$ has period $m$.  Furthermore for $0 \leqq i < m$,
+$$
+\aligned
+	f(i) & = A_0 + \sum_{j=1}^m (A_j - A_{j-1}) \left\lfloor 
+		\fr{i + m-j}{m}\right\rfloor   \\
+	& = A_0 + \sum_{j=1}^i (A_j - A_{j-1})   \\
+	& = A_i\,.
+\endaligned
+$$
+Therefore $f(n) = (A_0,A_1,\dots,A_{m-1})crm_n$ as desired.  \pf
+\enddemo
+
+\proclaim
+{Corollary}  
+$$
+\align
+	& (A_0,A_1,\dots,A_{n-1}) cr\,m_n  \\
+	& = A_0 + (A_1 - A_0)n + \sum_{j=2}^m (A_j - A_{j-1} - A_1
+		+ A_0)\left\lfloor \fr{n+m-j}{m}\right\rfloor \,.
+\endalign
+$$
+\endproclaim
+
+\demo
+{Proof}  This follows immediately from Theorem 1 once we recall that
+$$
+	\left\lfloor \fr{n+m-1}{m}\right\rfloor  = n -
+	\left\lfloor \fr{n}{m}\right\rfloor  -
+	\left\lfloor \fr{n+1}{m}\right\rfloor  - \cdots -
+	\left\lfloor \fr{n+m-2}{m}\right\rfloor \,.
+$$
+\pf
+\enddemo
+
+
+Formulas (3.8)--(3.13) are now easily derived from the literature, in
+particular, from the formulas \c{16; pp. xxvii--xxviii, eq. (6.7)}.
+Since the process is routine, we illustrate with the cases $m = 4$
+and $5$.
+
+Note that in (3.7) we may drop the $\fr19 (1,0,-1) cr 3_n + \fr18
+(1,0,-1,0) cr 4_n$ because this expression is in absolute value
+$< \fr19 + \fr18 < \fr12$.  Hence immediately
+$$
+\align
+	p(n,4) & = \left\{ \binom{n+6}{3} \fr1{24} + \left( \fr19
+	- \fr1{16} \left(2 + n - 2 \left\lfloor \fr{n}{2}\right\rfloor  
+	\right)\right) (n+5)\right\}  \tag3.16
+	\\
+	& = \left\{(n+5)\left(n^2 + n + 22 + 18 \left\lfloor \fr{n}{2}
+	\right\rfloor  \right)\big/144 \right\}\,,
+\endalign
+$$
+as desired.
+
+Similarly \c{6; p. xxvii, eq. (6.7)}
+$$
+\align
+	p(n,5) & = \fr1{120} \binom{n+9}{4} - \fr5{288}\binom{n+8}{2}
+	+ \fr1{64} (n + 8) (1,-1) cr 2  \tag3.17  \\
+	& + \fr19 (1,0,0) cr 3_n + \fr1{64}(0,1,-8,-7) cr 4_n  \\
+	& + \fr15 (1,0,0,0,0) cr 5_n  \\
+	& =\left\{ \fr1{120} \binom{n+9}{4} - \fr5{288}\binom{n+8}{2}
+	+ \fr1{64} (n+8)\left(1 - 2n + 4 \left\lfloor \fr{n}{2}\right\rfloor  
+	\right) \right\}  \\
+	& = \left\{ (n + 8)\left(n^3 + 22n^2 + 44n + 248 + 180 
+	\left\lfloor \fr{n}{2}\right\rfloor  \right)\bigg/2880\right\}
+\endalign
+$$
+as desired.
+
+Formulas (3.10)--(3.13) are handled in exactly this way.
+
+\subhead
+4. \ Asymptotics of Non-modular Generating Functions
+\endsubhead
+
+The topic of this section has had extensive development since 1941
+when Ingram's seminal paper appeared \c{19}.  Among the authors
+obtaining general theorems on this topic are Bateman and Erdos \c8,
+Nicolas and Sarkozy \c{24} Richmond \c{32}, Roth and Szekeres \c{33},
+\c{36}, McIntosh \c{21}.  This list is undoubtedly incomplete and 
+is actually only tangentical to the real object of this section.
+
+Prior to Ingham's work, E. M. Wright wrote three papers on the
+asymptotics of particular generating functions.  The first of these
+\c{39} was devoted to the asymptotics of the plane partition function.
+Its method was essentially the saddlepoint method that forms the
+foundation of many of the succeeding works mentioned above.  Wright's
+second paper \c{40} in this series was based on a more elementary than
+analytic account but was not a surprising development.
+
+The point I wish to make in the section is that Wright's third paper
+\c{41} on partitions into powers IS UNIQUE in the history of this 
+subject.  Its starting point and fundamental philosophy are different
+from anything that has come before or since.
+
+Wright's focus in \c{41} is
+$$
+	f(x) = \prod_{\ell=1}^{\infty} (1 - x^{\ell^k})^{-1}
+	= 1 + \sum_{n=1}^{\infty} p_k (n) x^n\,,
+\tag4.1
+$$
+where $p_k(n)$ is the number of partitions of $n$ into $k$-th
+powers.
+
+His results are intricate to say the least.  However, after
+stating his central results we shall examine the import of his
+work.
+
+Write
+$$
+	a = \fr1{k}, \quad b = \fr1{k+1},\quad j = j(k) = 0\quad
+	(k \text{ even})
+\tag4.2
+$$
+$$
+	j = j(k) = \fr{(-1)^{(k+1)/2}}{(2\pi)^{k+1}}
+	\Gamma (k + 1) \zeta(k+1) \qquad (k \text{ odd}).
+\tag4.3
+$$
+Define a generalized Bessel function as follows:
+$$
+	\varphi(z) = \sum_{\ell = 0}^{\infty} \fr{z^{\ell}}
+	{\Gamma (\ell + 1) \Gamma (\ell a - \fr12)}
+\tag4.4
+$$
+
+Wright then produces the following asymptotic formula for 
+$p_k(n)$ which is obtained by examining in detail the singularity
+of $f(x)$ at $x = 1$.
+$$
+\align
+	p_k(n_ = (n + j)^{-\fr32} (2\pi)^{-\fr{k}{2}} \varphi
+	(\Gamma(1 + a) \zeta(1 & + a)(n+j)^a) \tag4.5  \\
+	& + 0 (e^{(\Delta - \alpha)n^b}),  
+\endalign
+$$
+where
+$$
+	\Delta = (k + 1)(a \Gamma(1 + a) \zeta(1 + a))^{1-b},
+	\qquad \alpha = \alpha(k) > 0.
+\tag4.6
+$$
+
+Now the important point here is that the error term in (4.5) is
+of \underbar{exponentially} lower order of magnitude than the
+main term.
+
+Wright accomplishes this by proving a complete generalization of 
+the modular transformation formulae for Dedekind's eta function.
+
+Let $p,h,s$ and $\ell$ be integers with $1 \leqq p < q$, $(p,q) = 1$
+except that, when $q = 1$, $p = 0$.
+$$
+	1 \leq h \leq q, \qquad 1 \leq s \leq k, \qquad
+	l \geq 0.
+$$
+If $d_h \neq 0$, we write
+$$
+	\mu_{h,s} = \fr{d_h}{q} (s \text{ odd}),\;\;\mu_{h,s}
+	= \fr{q - d_h}{q} \;(s \text{ even}).
+\tag4.7
+$$
+If $d_h = 0$, we take $\mu_{h,s} = 1$.  Hence always $q,\mu_{h,s}
+\geq 1$. 
+
+In connection with any particular values of $p$ and $q$ we write
+$$
+	X = xe_q(-p) = e^{-y}, \quad Y = q^k y,
+\tag4.8
+$$
+and we take $y$ real and positive when $X$ is real and $0 < X < 1$.
+We write also
+$$
+	t_s = \left(\fr{2\pi}{Y}\right)^a \exp \left\{ a \,\pi\,i
+	\left( s - \fr12\right)\right\}\,,	
+\tag4.9
+$$
+where $Y^a$ is that $k$-th root of $Y$ which is real and positive
+when $Y$ is real and positive,
+$$
+\split
+	g(h,l,s) = \exp \{2\,\pi\,i(l + \mu_{h,s})^a t_s\} e_q
+	(-h)   \\	
+	= \exp \left\{ \fr{(2\pi)^{1+a}(l + \mu_{h,s})^a e^{\fr12
+	\pi a i (2s + k -1)}}{qy^n} - \fr{2h\,\pi\,i}{q} \right\}\,,
+\endsplit
+\tag4.10
+$$
+and
+$$
+	P_{p,q} = \prod_{h=1}^q \prod_{s=1}^k \prod_{l=1}^{\infty}
+	\left\{ 1 - g(h,l,s)\right\}^{-1}\,.
+\tag4.11
+$$
+Then we have:
+
+\proclaim
+{Wright's Transformation Theorem \c{41; p. 149, Th. 4}}
+If $\R(y) > 0$, then $P_{p,q}$ is convergent and 
+$$
+	f(x) = f(e^{-y} e_q(p)) = C_{p,q} y^{\fr12} e^{jy} \exp
+	\left( \fr{\Lambda_{p,q}}{y^a}\right) \;P_{p,q}\,,
+\tag4.12
+$$
+where $C_{p,q}$ and $\Lambda_{p,q}$ are explicitly given constants
+depending on $p$ and $q$.
+\endproclaim
+
+In the case $k = 1$, (4.12) reduces to the modular function
+transformation used by Hardy and Ramanujan \c{17}.
+
+In addition, various instances of $k = 2$ appear in \c{17} and
+have been extended by R. J. Baxter \c9 in his proof of the Doochel Kim
+conjectures \c{20}.
+
+There are a couple of things to say about Wright's theorems.  First,
+how large is the class of partition generating functions for which
+there are analogs of Wright's Transformation Theorem?  Second, how
+good is the full analog of the Hardy-Ramanujan-Rademacher formula for
+$p(n)$ that Wright gives for $p_k(n)$ (Theorem 3 of \c{41} but not
+restated here). Wright suggests that each of his main terms has order
+$$
+	n^{c_1} e^{c_2 n^{\fr1{k+1}}}.
+$$
+He goes on to compare his error term to the famous $O(n^{-\fr14})$
+that appears in the Hardy-Ramanujan formula for $p(n)$ \c{17}.
+``If we attempt to make a similar improvement for $p_k(n)$, we
+find that we can choose $q_0 = q_k(k,n)$ so that the error term
+is $O(e^{n^d})$, where $d < b$.  This is not so good as the result
+for $k = 1$, and, in view of the heavy analysis required for this
+further step, I am content to prove $[O(n^{en^0})]$.
+
+One would hope that the advances on closely related work on modular
+forms would allow a complete analysis of this error term.  Does it
+tend to $0$ as $n \to \infty$?  If not, is it bounded by polynomial
+growth?  If not, what then?
+
+\subhead
+5. \ The Power Series Coefficients of Mock Theta Functions
+\endsubhead
+
+In his last letter to G. H. Hardy \c{31; pp. 127--131}, Ramanujan
+first presents his mock theta functions.  G. H. Hardy \c{30; p. 354}
+summarizes the idea of a mock theta function: It is a function,
+``defined by a $q$-series convergent for $|q| < 1$, for which we 
+can calculate asymptotic formulae, when $q$ tends to a ``rational
+point $e^{2\pi ir/s}$, of the same degree of precision as those
+furnished, for the ordinary $\D$-functions, by the theory of linear
+transformation.''  Subsequently, starting with G. N. Watson's 
+famous L. M. S. Presidential address \c{37}, there have been a
+number of studies of mock theta functions.  Much of this work was
+summarized in a survey article \c5.  Ramanujan focuses upon one mock 
+theta function in particular:
+$$
+	f(q) = 1 + \sum_{n=1}^{\infty} \fr{q^{n^2}}{(1 + q)^2
+	(1 + q^2)^2 \cdots (1 + q^n)^2}\;.
+\tag5.1
+$$
+He asserts that:  ``The coefficient of $q^n$ in $f(q)$ is
+$$
+	\fr{(-1)^{n-1} e^{\pi(\fr{n}{6} - \fr1{144})^{\fr12}}}
+	{2(n - \fr1{24})^{\fr12}}  + O \left(\fr{e^{\fr{\pi}{2}
+	(\fr{n}{6} - \fr1{144})^{\fr12}}}{(n - \fr1{24})^{\fr12}}
+	\right)\;.
+\tag5.2
+$$
+
+In 1964, building on the work of G. N. Watson \c{37} and L. A.
+Dragonette \c{12}, I proved \c{2} a theorem equivalent to the 
+assertion that if
+$$
+	f(q) = \sum_{n=0}^{\infty} \alpha(n) q^n\,,
+\tag5.3
+$$
+then
+$$
+	\alpha(n) = \sum_{k=1}^{\lfloor n^{\fr12}\rfloor}
+	\fr{(-1)^{\lfloor\fr{k+1}{2}\rfloor} A_{2k}(n - k(1 + (-1)^k)/4)
+	\sinh \left(\fr{\pi}{k} \left(\fr{n}{6} - \fr1{144}\right)^{\fr12}
+	\right)}{k^{\fr12} \left(n - \fr1{24}\right)^{\fr12}}
+	+ O(n^\epsilon)
+\tag5.4
+$$
+\c{2; p. 455, Th. 5.1}.  The $A_k(n)$ is the exponential sum that 
+appears in the formula for $p(n)$ \c{4; p. 70}.
+
+However, earlier L. A. Dragonette \c{12; p. 494}, \c{2, p. 456} had
+suggested that in fact the actual error might indeed be smaller 
+than $\fr12$ in absolute value.  If so, then the main sum rounded
+to the nearest integer would give $\alpha(n)$ exactly.  Dragonette
+supported this possibility with calculations at $n = 100$ and 
+$200$.
+
+Indeed it is possible that the main sum \underbar{converges} when
+extended to infinity and, if so, may actually equal $\alpha(n)$
+(\c{2; p. 456}).  The following table provides further evidence:
+
+\vskip .1in
+\centerline{\begintable
+\begintableformat
+\center " \center " \center " \center 
+\endtableformat
+\br{\:} $n$ " $\alpha(n)$ " {the main sum in (5.4)} " {the main sum in (5.4)} \er{}
+\br{\:} {} " {} " {} " {extended to $n$ terms} \er{} 
+\br{\:} {} " {} " {} " {} \er{} 
+\br{\:} {100} " {-18520} " {-18520.18} " {-18520.01} \er{} 
+\br{\:} {} " {} " {} " {} \er{} 
+\br{\:} {200} " {-2660008} " {-2660008.01} " {-2660008.05} \er{} 
+\br{\:} {} " {} " {} " {} \er{} 
+\br{\:} {300} " {-128045286} " {-128045285.83} " {-128045285.99} \er{} 
+\br{\:} {} " {} " {} " {} \er{} 
+\br{\:} {400} " {-3447212602} " {-3447212601.86} " {-34472122602.05} \er{} 
+\br{\:} {} " {} " {} " {} \er{} 
+\br{\:} {500} " {063676485905} " {-63676485905.01} " {-63676485905.06} \er{} 
+\br{\:} {} " {} " {} " {} \er{} 
+\br{\:} {600} " {-897840541970} " {-897840541969.91} " {-897840541969.98} \er{}\br{\:} {} " {} " {} " {} \er{} 
+\br{\:} {700} " {-10302538222405} " {-10302538222405.14} " {-10302538222405.02} \er{} 
+\br{\:} {} " {} " {} " {} \er{} 
+\br{\:} {800} " {-100343014357869} " {-100343014357869.11} " {-100343014357869.01} \er{} 
+\br{\:} {} " {} " {} " {} \er{} 
+\br{\:} {900} " {-854282301584078.03} " {-854282301584078.03} " {-854282301584078.02} \er{} 
+\br{\:} {} " {} " {} " {} \er{} 
+\br{\:} {1000} " {-6495836381771105} " {-649583638177105.004} " {-649583638177105.105} \er{}  
+\endtable}
+\vskip .1in
+
+While three of the errors of $\sqrt{n}$ terms are smaller than the 
+corresponding errors for $n$ terms, it is nonetheless the case that
+the average error in column 2 is $0.0884$ and in column 4 it is
+$0.0355$ which offers some support to our conjecture that the 
+series in (5.4) actually converges to $\alpha(n)$.
+
+Indeed, in order to prove convergence of the series, it would 
+suffice to prove that
+$$
+	\sum_{k=1}^{\infty} \fr{(-1)^{\lfloor\fr{k+1}{2}\rfloor}
+	A_{2k}(n - k(1 + (-1)^k)/4)}{k^{\fr32}}
+$$
+converges.  This in turn asks for an analysis of Dirichlet series
+such as 
+$$
+	A(n,s) = \sum_{k=1}^{\infty} \fr{(-1)^{\lfloor\fr{k+1}{2}\rfloor}
+	A_{2k}(n - k(1 + (-1)^k)/4)}{k^{s}}
+\tag5.6
+$$
+which can easily be shown to converge absolutely for $\text{Re }s
+> \fr32$.
+
+\subhead
+6. \ Modular Transformations and $q$-Hypergeometric Series
+\endsubhead
+
+Let us state an example of the type of problem that concerns us
+here.
+
+{\bf Problem.}  Prove directly that if
+$$
+	P(q) = 1 + \sum_{n=1}^{\infty} \fr{q^{n^2}}{(1 - q)^2
+	(1 - q^2)^2 \cdots (1 - q^n)^2}\;,
+\tag6.1
+$$
+then 
+$$
+	P(e^{2\pi i\tau}) = e^{\fr{-\pi i}{4}} \tau^{\fr12}
+	q^{\fr{\pi i}{12}(\tau + \fr1{\tau})} 
+	P(e^{-\fr{2\pi i}{\tau}})\,.
+\tag6.2
+$$
+
+The catch in this problem is the single word ``directly.''  Otherwise
+the problem is merely a reformulation of the transformation of
+Dedekind's $\eta$-function because \c{4; p. 70}
+$$
+	P(q) = \fr{q^{\fr1{24}}}{\eta(\tau)} = \prod_{n=1}^{\infty}
+	\fr1{1 - q^n}
+\tag6.3
+$$
+where $q = e^{2\pi i \tau}$.
+
+None of the methods which have been used to prove (5.3) seems to
+adapt to a direct treatment of the series in (6.1).
+
+The only work I know of on this topic is by L. Ehrenpreis.  His
+observations are presented in \c{13} see especially Section 3 thereof.
+Of his work, he says: ``This method sheds light on the question of 
+why the generating function for Rogers-Ramanujan is an automorphic
+function and why automorphicity is difficult to prove.''
+
+
+\subhead
+7. \ Conclusion
+\endsubhead
+
+The four topics chosen for this paper are tightly related.  The
+problems presented do not fall naturally into the home turf of either
+modular forms or $q$-series.  Consequently they have received little
+attention.  However, they are calling out for an attack by a joint
+effort of these two areas.
+
+\Refs
+
+\ref
+  \no 1
+  \by H. L. Alder
+  \paper Partition identities \underbar{\ \ \ \ \ \ \ \ } from
+	Euler to the present
+  \jour Amer. Math. Monthly
+  \vol 76
+  \yr 1969
+  \pages 733--746
+\endref
+
+\ref
+  \no 2
+  \by G. E. Andrews
+  \paper On the theorems of Watson and Dragonette for Ramanujan's 
+	mock theta functions
+  \jour Amer. J. Math
+  \vol 88
+  \yr 1966
+  \pages 454--490
+\endref
+
+\ref
+  \no 3
+  \by G. E. Andrews
+  \paper Partition identities
+  \jour Advances in Math.	
+  \vol 9
+  \yr 1972
+  \pages 10--51
+\endref
+
+\ref
+  \no 4
+  \by G. E. Andrews
+  \paper The Theory of Partitions
+  \paperinfo Addison-Wesley, Reading 1976; reprinted, Cambridge
+	University Press, Cambridge, 1984, 1998
+\endref
+
+\ref
+  \no 5
+  \by G. E. Andrews
+  \paper Mock theta functions
+  \jour Proc. Symp. in Pure Math
+  \vol 49
+  \yr 1989
+  \pages 283--298
+\endref
+
+\ref
+  \no 6
+  \by J. Arkin
+  \paper Researches on partitions
+  \jour Duke Math. J.
+  \vol 38
+  \yr 1970
+  \pages 403--409
+\endref
+
+\ref
+  \no 7
+  \by A. O. L. Atkin
+  \paper Proof of a conjecture of Ramanujan
+  \jour Glasgow Math. J.
+  \vol 8
+  \yr 1967
+  \pages 14--32
+\endref
+
+\ref
+  \no 8
+  \by P. Bateman and P. Erd\"os
+  \paper Monotonicity of partition functions
+  \jour Mathematika
+  \vol 3
+  \yr 1956
+  \pages 1--14
+\endref
+
+\ref
+  \no 9
+  \by R. J. Baxter
+  \paper A direct proof of Kim's identities
+  \jour J. Phys. A: Math. Gen.
+  \vol 31
+  \yr 1998
+  \pages 1105--1108
+\endref
+
+\ref
+  \no 10
+  \by A. Cayley
+  \paper Researches on the partition of numbers
+  \jour Phil. Trans. Royal Soc.
+  \vol 146
+  \yr 1856
+  \pages 127--140
+  \finalinfo (Reprinted:  Coll. Math. Papers, 2 (1889), 235--249)
+\endref
+
+\ref
+  \no 11
+  \by A. DeMorgan
+  \paper On a new form of difference equation
+  \jour Cambridge Math. J.
+  \vol 4
+  \yr 1843
+  \pages 87--90
+\endref
+
+\ref
+  \no 12
+  \by L Dragonette
+  \paper Some asymptotic formulae for the  mock theta series of
+	Ramanujan
+  \jour Trans. Amer. Math. Soc.
+  \vol 72
+  \yr 1952
+  \pages 474--500
+\endref
+
+\ref
+  \no 13
+  \by L. Ehrenpreis
+  \paper Function theory for Rogers-Ramanujan-like partition identities
+  \jour Contemporary Math
+  \vol 143
+  \yr 1993
+  \pages 259--320
+\endref
+
+\ref
+  \no 14
+  \by J. W.L. Glaisher
+  \paper On the number of partitions of a number of partitions of a
+	number into a given number of parts
+  \jour Quart. J. Pure and Appl. Math.
+  \vol 40
+  \yr 1908
+  \pages 57--143
+\endref
+
+\ref
+  \no 15
+  \by K. Gl\"osel
+  \paper \"Uber die Zerlegung der ganzen zahlen
+  \jour Monatschefte Math. Phys.
+  \vol 7
+  \yr 1896
+  \pages 133--141
+\endref
+
+\ref
+  \no 16
+  \by H. Gupta, E. E. Gwyther and J. C. P. Miller
+  \paper Tables of Partitions
+  \paperinfo Royal Soc. Math. Tables, Vol. 4, Cambridge University
+	Press, Cambridge, 1958
+\endref
+
+\ref
+  \no 17
+  \by G. H. Hardy and S. Ramanujan
+  \paper Asymptotic formulae in combinatory analysis
+  \jour Proc. London Math. Soc., (2)
+  \vol 17
+  \yr 1918
+  \pages 75--115
+\endref
+
+\ref
+  \no 18 
+  \by J. F. W. Herschel
+  \paper On circulating functions and on the integration of a class
+	of equations of finite differences into which they enter as
+	coefficients
+  \jour Phil. Trans. Royal Soc. London
+  \vol 108
+  \yr 1818
+  \pages 144--168
+\endref
+
+\ref
+  \no 19
+  \by A. E. Ingham
+  \paper A Tauberian theorem for partitions
+  \jour Annals of Math
+  \vol 42
+  \yr 1941
+  \pages 1075--1090
+\endref
+
+\ref
+  \no 20
+  \by D. Kim
+  \paper Asymmetric XXZ chain at the antiferromagnetic transition:
+	spectra and partition functions
+  \jour J. Phys. A: Math. Gen.
+  \vol 30
+  \yr 1996
+  \pages 3817--3836
+\endref
+
+\ref
+  \no 21
+  \by R. McIntosh
+  \paper Some asymptotic formulae for $q$-hypergeometric series
+  \jour J. London Math. Soc. (2)
+  \vol 51
+  \yr 1995
+  \pages 120--136
+\endref
+
+\ref
+  \no 22
+  \by P. A. MacMahon
+  \paper Combinatory Analysis
+  \paperinfo Vol. 2, Cambridge University Press, London, 1916;
+	reprinted Chelsea, New York, 1960
+\endref
+
+\ref
+  \no 23
+  \by E. Netto
+  \paper Lehrbuch der Combinatorik
+  \paperinfo 2nd ed. Teubner, Berlin, 1927; reprinted:  Chelsea,
+	New York, 1958
+\endref
+
+\ref
+  \no 24
+  \by J. L. Nicolas and A. S\'ark\"ozy
+  \paper On the asymptotic behavior of general partition functions
+  \jour Ramanujan Journal
+  \vol 4
+  \yr 2000
+  \pages 29--39
+\endref
+
+\ref
+  \no 25
+  \by K. Ono
+  \paper On the parity of the partition function in arithmetic 
+	progressions
+  \jour J. f\"ur die r. und a. Math.
+  \vol 472
+  \yr 1996
+  \pages 1--16
+\endref
+
+\ref
+  \no 26
+  \by K. Ono
+  \paper Distribution of the partition function modulo $m$
+  \jour Annals of Math.
+  \vol 151 
+  \yr 2000
+  \pages 293--307
+\endref
+
+\ref
+  \no 27
+  \by P. Paoli
+  \paper Opuscula analytica
+  \paperinfo Liburni, 1780, Opusc. II (Meditations Arith.), $\S$1
+\endref
+
+\ref
+  \no 28
+  \by H. Rademacher
+  \paper Lectures on Elementary Number Theory
+  \paperinfo Blaisdell, New York, 1964
+\endref
+
+\ref
+  \no 29
+  \by H. Rademacher
+  \paper Topics in Analytic Number Theory
+  \paperinfo Springer, New York, 1973
+\endref
+
+\ref
+  \no 30
+  \by S Ramanujan
+  \paper Collected Papers
+  \paperinfo Cambridge University Press, London, 1927; reprinted:
+	A. M. S. Chelsea, 2000 with new preface by B. Berndt
+\endref
+
+\ref
+  \no 31
+  \by S. Ramanujan
+  \paper The Lost Notebook and Other Unpublished Papers
+  \paperinfo  Narosa, New Delhi, 1988
+\endref
+
+\ref
+  \no 32
+  \by L. B. Richmond
+  \paper A general asymptotic result for partitions
+  \jour Canadian J. Math.
+  \vol 27
+  \yr 1975
+  \pages 1083--1091
+\endref
+
+\ref
+  \no 33
+  \by K. F. Roth and G. Szekeres
+  \paper Some asymptotic formulae in the theory of partitions
+  \jour Quant. J. Math., Oxford Series (2)
+  \vol 5 
+  \yr 1954
+  \pages 241--259
+\endref
+
+\ref
+  \no 34
+  \by I. Schur
+  \paper Ein Beitrag zur additiven Zahlentheorie und zur Theorie der 
+	Kettenbr\"uche
+  \paperinfo S.-B. Preuss. Akad. Wiss., Phys.-Math. Kl., 1926
+	488--495
+\endref
+
+\ref
+  \no 35
+  \by J. J. Sylvester
+  \paper On subinvariants, i.e. semi-invariants to binary quantics
+	of an unlimited order.  With an excursus on rational 
+	fractions and partitions
+  \jour Amer. J. Math.
+  \vol 5 
+  \yr 1882
+  \pages 79--136
+\endref
+
+\ref
+  \no 36
+  \by G. Szekeres
+  \paper An asymptotic formula in the theory of partitions, II
+  \jour Quart. J. Math. Oxford Series 2
+  \vol 2
+  \yr 1951
+  \pages 85--108
+\endref
+
+\ref
+  \no 37
+  \by G. N. Watson
+  \paper The final problem:  an account of the mock theta functions
+  \jour J. London Math. Soc.
+  \vol 11
+  \yr 1936
+  \pages 55--80
+\endref
+
+\ref
+  \no 38
+  \by G. N. Watson
+  \paper Ramanujans Vermutung \"uber Zerf\"alllungsanzahlen
+  \jour J. reine und angew. Math.
+  \vol 179
+  \yr 1938
+  \pages 97--128
+\endref
+
+\ref
+  \no 39
+  \by E. M. Wright
+  \paper Asymptotic partition formulae, I. plane partitions
+  \jour Quart. J. Math., Oxford Series
+  \vol 2 
+  \yr 1931
+  \pages 177--189
+\endref
+
+\ref
+  \no 40
+  \by E. M. Wright
+  \paper Asymptotic partition formulae, II.  Weighted partitions
+  \jour Proc. London Math. Soc. (2)
+  \vol 36
+  \yr 1932
+  \pages 117--141
+\endref
+
+\ref
+  \no 41
+  \by E. M. Wright
+  \paper Asymptotic partitions formulae, III. Partitions into $k$-th powers
+  \jour Acta Math.
+  \vol 63
+  \yr 1934
+  \pages 143--191
+\endref
+
+\endRefs
+
+\enddocument
+
+
+
+
+
+
+
+
+
+
+

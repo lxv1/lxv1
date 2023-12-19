@@ -1,0 +1,12 @@
+This is TeX, Version 3.14159 (Web2C 7.2) (format=tex 1998.11.21)  31 OCT 2001 19:49
+**1.latex
+(1.latex
+! Undefined control sequence.
+l.4 \documentclass
+                  [reqno]{amsart}
+? 
+! Undefined control sequence.
+l.5 \usepackage
+               {amsmath}
+? x
+No pages of output.

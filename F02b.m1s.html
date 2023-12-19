@@ -1,0 +1,697 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="1265.21">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times}
+    p.p2 {margin: 0.0px 0.0px 12.0px 0.0px; font: 12.0px Times}
+    p.p3 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; min-height: 14.0px}
+    p.p4 {margin: 0.0px 0.0px 12.0px 0.0px; font: 13.0px Times}
+    span.s1 {font: 20.0px Times}
+    span.s2 {font: 11.0px Times}
+    span.s3 {font: 19.0px Times}
+    span.s4 {font: 12.0px Times}
+    table.t1 {width: 782.0px; border-style: solid; border-width: 1.0px 1.0px 1.0px 1.0px; border-color: #808080 #808080 #808080 #808080}
+    td.td1 {width: 56.0px; margin: 0.5px 0.5px 0.5px 0.5px; border-style: solid; border-width: 1.0px 1.0px 1.0px 1.0px; border-color: #808080 #808080 #808080 #808080; padding: 1.0px 1.0px 1.0px 1.0px}
+    td.td2 {width: 76.0px; margin: 0.5px 0.5px 0.5px 0.5px; border-style: solid; border-width: 1.0px 1.0px 1.0px 1.0px; border-color: #808080 #808080 #808080 #808080; padding: 1.0px 1.0px 1.0px 1.0px}
+    td.td3 {width: 136.0px; margin: 0.5px 0.5px 0.5px 0.5px; border-style: solid; border-width: 1.0px 1.0px 1.0px 1.0px; border-color: #808080 #808080 #808080 #808080; padding: 1.0px 1.0px 1.0px 1.0px}
+    td.td4 {width: 72.0px; margin: 0.5px 0.5px 0.5px 0.5px; border-style: solid; border-width: 1.0px 1.0px 1.0px 1.0px; border-color: #808080 #808080 #808080 #808080; padding: 1.0px 1.0px 1.0px 1.0px}
+    td.td5 {width: 60.0px; margin: 0.5px 0.5px 0.5px 0.5px; border-style: solid; border-width: 1.0px 1.0px 1.0px 1.0px; border-color: #808080 #808080 #808080 #808080; padding: 1.0px 1.0px 1.0px 1.0px}
+    td.td6 {width: 108.0px; margin: 0.5px 0.5px 0.5px 0.5px; border-style: solid; border-width: 1.0px 1.0px 1.0px 1.0px; border-color: #808080 #808080 #808080 #808080; padding: 1.0px 1.0px 1.0px 1.0px}
+    td.td7 {width: 113.0px; margin: 0.5px 0.5px 0.5px 0.5px; border-style: solid; border-width: 1.0px 1.0px 1.0px 1.0px; border-color: #808080 #808080 #808080 #808080; padding: 1.0px 1.0px 1.0px 1.0px}
+    td.td8 {width: 139.0px; margin: 0.5px 0.5px 0.5px 0.5px; border-style: solid; border-width: 1.0px 1.0px 1.0px 1.0px; border-color: #808080 #808080 #808080 #808080; padding: 1.0px 1.0px 1.0px 1.0px}
+    td.td9 {width: 166.0px; margin: 0.5px 0.5px 0.5px 0.5px; border-style: solid; border-width: 1.0px 1.0px 1.0px 1.0px; border-color: #808080 #808080 #808080 #808080; padding: 1.0px 1.0px 1.0px 1.0px}
+    td.td10 {width: 167.0px; margin: 0.5px 0.5px 0.5px 0.5px; border-style: solid; border-width: 1.0px 1.0px 1.0px 1.0px; border-color: #808080 #808080 #808080 #808080; padding: 1.0px 1.0px 1.0px 1.0px}
+    td.td11 {width: 104.0px; height: 13.9px; margin: 0.5px 0.5px 0.5px 0.5px; border-style: solid; border-width: 1.0px 1.0px 1.0px 1.0px; border-color: #808080 #808080 #808080 #808080; padding: 1.0px 1.0px 1.0px 1.0px}
+    td.td12 {width: 102.0px; height: 13.9px; margin: 0.5px 0.5px 0.5px 0.5px; border-style: solid; border-width: 1.0px 1.0px 1.0px 1.0px; border-color: #808080 #808080 #808080 #808080; padding: 1.0px 1.0px 1.0px 1.0px}
+    td.td13 {width: 128.0px; height: 13.9px; margin: 0.5px 0.5px 0.5px 0.5px; border-style: solid; border-width: 1.0px 1.0px 1.0px 1.0px; border-color: #808080 #808080 #808080 #808080; padding: 1.0px 1.0px 1.0px 1.0px}
+    td.td14 {width: 96.0px; height: 13.9px; margin: 0.5px 0.5px 0.5px 0.5px; border-style: solid; border-width: 1.0px 1.0px 1.0px 1.0px; border-color: #808080 #808080 #808080 #808080; padding: 1.0px 1.0px 1.0px 1.0px}
+    td.td15 {width: 104.0px; margin: 0.5px 0.5px 0.5px 0.5px; border-style: solid; border-width: 1.0px 1.0px 1.0px 1.0px; border-color: #808080 #808080 #808080 #808080; padding: 1.0px 1.0px 1.0px 1.0px}
+    td.td16 {width: 102.0px; margin: 0.5px 0.5px 0.5px 0.5px; border-style: solid; border-width: 1.0px 1.0px 1.0px 1.0px; border-color: #808080 #808080 #808080 #808080; padding: 1.0px 1.0px 1.0px 1.0px}
+    td.td17 {width: 128.0px; margin: 0.5px 0.5px 0.5px 0.5px; border-style: solid; border-width: 1.0px 1.0px 1.0px 1.0px; border-color: #808080 #808080 #808080 #808080; padding: 1.0px 1.0px 1.0px 1.0px}
+    td.td18 {width: 96.0px; margin: 0.5px 0.5px 0.5px 0.5px; border-style: solid; border-width: 1.0px 1.0px 1.0px 1.0px; border-color: #808080 #808080 #808080 #808080; padding: 1.0px 1.0px 1.0px 1.0px}
+    td.td19 {width: 163.0px; height: 13.9px; margin: 0.5px 0.5px 0.5px 0.5px; border-style: solid; border-width: 1.0px 1.0px 1.0px 1.0px; border-color: #808080 #808080 #808080 #808080; padding: 1.0px 1.0px 1.0px 1.0px}
+    td.td20 {width: 136.0px; height: 13.9px; margin: 0.5px 0.5px 0.5px 0.5px; border-style: solid; border-width: 1.0px 1.0px 1.0px 1.0px; border-color: #808080 #808080 #808080 #808080; padding: 1.0px 1.0px 1.0px 1.0px}
+    td.td21 {width: 125.0px; height: 13.9px; margin: 0.5px 0.5px 0.5px 0.5px; border-style: solid; border-width: 1.0px 1.0px 1.0px 1.0px; border-color: #808080 #808080 #808080 #808080; padding: 1.0px 1.0px 1.0px 1.0px}
+    td.td22 {width: 67.0px; height: 13.9px; margin: 0.5px 0.5px 0.5px 0.5px; border-style: solid; border-width: 1.0px 1.0px 1.0px 1.0px; border-color: #808080 #808080 #808080 #808080; padding: 1.0px 1.0px 1.0px 1.0px}
+    td.td23 {width: 92.0px; height: 13.9px; margin: 0.5px 0.5px 0.5px 0.5px; border-style: solid; border-width: 1.0px 1.0px 1.0px 1.0px; border-color: #808080 #808080 #808080 #808080; padding: 1.0px 1.0px 1.0px 1.0px}
+    td.td24 {width: 163.0px; margin: 0.5px 0.5px 0.5px 0.5px; border-style: solid; border-width: 1.0px 1.0px 1.0px 1.0px; border-color: #808080 #808080 #808080 #808080; padding: 1.0px 1.0px 1.0px 1.0px}
+    td.td25 {width: 125.0px; margin: 0.5px 0.5px 0.5px 0.5px; border-style: solid; border-width: 1.0px 1.0px 1.0px 1.0px; border-color: #808080 #808080 #808080 #808080; padding: 1.0px 1.0px 1.0px 1.0px}
+    td.td26 {width: 67.0px; margin: 0.5px 0.5px 0.5px 0.5px; border-style: solid; border-width: 1.0px 1.0px 1.0px 1.0px; border-color: #808080 #808080 #808080 #808080; padding: 1.0px 1.0px 1.0px 1.0px}
+    td.td27 {width: 92.0px; margin: 0.5px 0.5px 0.5px 0.5px; border-style: solid; border-width: 1.0px 1.0px 1.0px 1.0px; border-color: #808080 #808080 #808080 #808080; padding: 1.0px 1.0px 1.0px 1.0px}
+    td.td28 {width: 150.0px; margin: 0.5px 0.5px 0.5px 0.5px; border-style: solid; border-width: 1.0px 1.0px 1.0px 1.0px; border-color: #808080 #808080 #808080 #808080; padding: 1.0px 1.0px 1.0px 1.0px}
+    td.td29 {width: 531.0px; margin: 0.5px 0.5px 0.5px 0.5px; border-style: solid; border-width: 1.0px 1.0px 1.0px 1.0px; border-color: #808080 #808080 #808080 #808080; padding: 1.0px 1.0px 1.0px 1.0px}
+    td.td30 {width: 115.0px; margin: 0.5px 0.5px 0.5px 0.5px; border-style: solid; border-width: 1.0px 1.0px 1.0px 1.0px; border-color: #808080 #808080 #808080 #808080; padding: 1.0px 1.0px 1.0px 1.0px}
+    td.td31 {width: 116.0px; margin: 0.5px 0.5px 0.5px 0.5px; border-style: solid; border-width: 1.0px 1.0px 1.0px 1.0px; border-color: #808080 #808080 #808080 #808080; padding: 1.0px 1.0px 1.0px 1.0px}
+  </style>
+</head>
+<body>
+<p class="p1">Math 486. September 25, 2002. Midterm 1.<span class="Apple-converted-space"> </span></p>
+<p class="p1">Solutions<span class="Apple-converted-space"> </span></p>
+<p class="p1"> </p>
+<p class="p2">1. Nim. Last move wins. 2,5, or 9 stones in a move. Initial position: 1 pile, 1000 stones. <br>
+We mark positions by W or L  if it is winning  or loosing positions for the player who starts. <br>
+Fow winning positions we write  winning moves (the number of stones to take). <br>
+ </p>
+<table width="782.0" cellspacing="0" cellpadding="0" class="t1">
+  <tbody>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1">0</p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p1">1</p>
+      </td>
+      <td valign="middle" class="td2">
+        <p class="p1">2</p>
+      </td>
+      <td valign="middle" class="td2">
+        <p class="p1">3</p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p1">4</p>
+      </td>
+      <td valign="middle" class="td2">
+        <p class="p1">5</p>
+      </td>
+      <td valign="middle" class="td2">
+        <p class="p1">6</p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p1">7</p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p1">8</p>
+      </td>
+      <td valign="middle" class="td3">
+        <p class="p1">9</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1">L</p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p1">L</p>
+      </td>
+      <td valign="middle" class="td2">
+        <p class="p1">W</p>
+      </td>
+      <td valign="middle" class="td2">
+        <p class="p1">W</p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p1">L</p>
+      </td>
+      <td valign="middle" class="td2">
+        <p class="p1">W</p>
+      </td>
+      <td valign="middle" class="td2">
+        <p class="p1">W</p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p1">L</p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p1">L</p>
+      </td>
+      <td valign="middle" class="td3">
+        <p class="p1">W</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td2">
+        <p class="p1">2</p>
+      </td>
+      <td valign="middle" class="td2">
+        <p class="p1">2</p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td2">
+        <p class="p1">5</p>
+      </td>
+      <td valign="middle" class="td2">
+        <p class="p1">5</p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td3">
+        <p class="p1">2,5,9</p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<table width="782.0" cellspacing="0" cellpadding="0" class="t1">
+  <tbody>
+    <tr>
+      <td valign="middle" class="td4">
+        <p class="p1">10</p>
+      </td>
+      <td valign="middle" class="td5">
+        <p class="p1">11</p>
+      </td>
+      <td valign="middle" class="td5">
+        <p class="p1">12</p>
+      </td>
+      <td valign="middle" class="td6">
+        <p class="p1">13</p>
+      </td>
+      <td valign="middle" class="td5">
+        <p class="p1">14</p>
+      </td>
+      <td valign="middle" class="td5">
+        <p class="p1">15</p>
+      </td>
+      <td valign="middle" class="td6">
+        <p class="p1">16</p>
+      </td>
+      <td valign="middle" class="td4">
+        <p class="p1">17</p>
+      </td>
+      <td valign="middle" class="td5">
+        <p class="p1">18</p>
+      </td>
+      <td valign="middle" class="td5">
+        <p class="p1">19</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td4">
+        <p class="p1">W</p>
+      </td>
+      <td valign="middle" class="td5">
+        <p class="p1">L</p>
+      </td>
+      <td valign="middle" class="td5">
+        <p class="p1">W</p>
+      </td>
+      <td valign="middle" class="td6">
+        <p class="p1">W</p>
+      </td>
+      <td valign="middle" class="td5">
+        <p class="p1">L</p>
+      </td>
+      <td valign="middle" class="td5">
+        <p class="p1">L</p>
+      </td>
+      <td valign="middle" class="td6">
+        <p class="p1">W</p>
+      </td>
+      <td valign="middle" class="td4">
+        <p class="p1">W</p>
+      </td>
+      <td valign="middle" class="td5">
+        <p class="p1">L</p>
+      </td>
+      <td valign="middle" class="td5">
+        <p class="p1">W</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td4">
+        <p class="p1">2,9</p>
+      </td>
+      <td valign="middle" class="td5">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td5">
+        <p class="p1">5</p>
+      </td>
+      <td valign="middle" class="td6">
+        <p class="p1">2,5,9</p>
+      </td>
+      <td valign="middle" class="td5">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td5">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td6">
+        <p class="p1">2,5,9</p>
+      </td>
+      <td valign="middle" class="td4">
+        <p class="p1">2,9</p>
+      </td>
+      <td valign="middle" class="td5">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td5">
+        <p class="p1">5</p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<p class="p2">So the winning positions repeat with period 7. <br>
+The first player wins at initial positions of the form  7n+2,  7n+3, 7n+5, 7n+6. The second player wins <br>
+if the first player starts  at the other positions.  In particular,  1000 is 6 modulo 7, so the first player wins <br>
+by  taking 2,5, or 9 stones and following the following <br>
+ winning strategy:</p>
+<table width="782.0" cellspacing="0" cellpadding="0" class="t1">
+  <tbody>
+    <tr>
+      <td valign="middle" class="td5">
+        <p class="p1">7n</p>
+      </td>
+      <td valign="middle" class="td7">
+        <p class="p1">7n+1</p>
+      </td>
+      <td valign="middle" class="td7">
+        <p class="p1">7n+2</p>
+      </td>
+      <td valign="middle" class="td7">
+        <p class="p1">7n+3</p>
+      </td>
+      <td valign="middle" class="td7">
+        <p class="p1">7n+4</p>
+      </td>
+      <td valign="middle" class="td7">
+        <p class="p1">7n+5</p>
+      </td>
+      <td valign="middle" class="td7">
+        <p class="p1">7n+6</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td5">
+        <p class="p1">L</p>
+      </td>
+      <td valign="middle" class="td7">
+        <p class="p1">L</p>
+      </td>
+      <td valign="middle" class="td7">
+        <p class="p1">W</p>
+      </td>
+      <td valign="middle" class="td7">
+        <p class="p1">W</p>
+      </td>
+      <td valign="middle" class="td7">
+        <p class="p1">L</p>
+      </td>
+      <td valign="middle" class="td7">
+        <p class="p1">W</p>
+      </td>
+      <td valign="middle" class="td7">
+        <p class="p1">W</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td5">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td7">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td7">
+        <p class="p1">2</p>
+      </td>
+      <td valign="middle" class="td7">
+        <p class="p1">2</p>
+      </td>
+      <td valign="middle" class="td7">
+        <p class="p3"><br></p>
+      </td>
+      <td valign="middle" class="td7">
+        <p class="p1">5</p>
+      </td>
+      <td valign="middle" class="td7">
+        <p class="p1">5</p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<p class="p2">There are other optimal strategies for the first player. <br>
+Any strategy of the second player is optimal.  The value of the game is $1 for the first player. <br>
+It is a zero-sum game. <br>
+ </p>
+<p class="p2">2. Blackjack. Players has 10 and 6. Dealer shows 10.  Cards left: 5, 5, 6, 7. <br>
+Here is an extensive form:</p>
+<p class="p2">                                                   P 16 <br>
+            P    stands    with 16                                                           P         draws <br>
+    D draws (chance move)                                                                     chance move <br>
+1/2                        1/4                1/4                                                 1/2                                         1/2 <br>
+D 15                    D 16              D 17. -$1                                P 21, D 10                                P over.  -$1 <br>
+chance move          chance move                                       D draws   (chance move} <br>
+1/3   1/3  1/3             2/3      1/3                                            1/3              1/3                          1/3 <br>
+ D20   D21  D22     D21      D23                                        D 15              D 16                     D 17. $1 <br>
+-$1    -$1   $1        -$1      $1                         chance move                 chance move <br>
+                                                                          1/2        1/2                   1/2            1/2 <br>
+                                                                   D 21.$ 0.   D 22. $1.        D 21. $0.     D 23. $1. <br>
+Now we lift the payoff for the player from the terminal positions to all positions:</p>
+<p class="p2">                                                   P 16    -$1/6 <br>
+            P    stands    with 16     -$1/2                                                      P         draws  -$1/6 <br>
+    D draws (chance move)                                                                     chance move <br>
+1/2                            1/4                1/4                                                 1/2                                         1/2 <br>
+D 15.   -$1/3      D 16.  -$1/3      D 17. -$1                                P 21, D 10    $2/3                       P over.  -$1 <br>
+chance move          chance move                                                          chance move <br>
+1/3   1/3  1/3             2/3      1/3                                            1/3              1/3                          1/3 <br>
+ D20   D21  D22     D21      D23                                   D 15.  $1/2        D 16   $1/2                   D 17. $1 <br>
+-$1    -$1   $1        -$1      $1                         chance move                 chance move <br>
+                                                                          1/2        1/2                   1/2            1/2 <br>
+                                                                   D 21.$ 0.   D 22. $1.        D 21. $0.     D 23. $1. <br>
+<span class="s1">So the optimal strategy for the player is to draw once. The payoff is -$1/6. <br>
+The dealar 's strategy is fixed (D has only one strategy).</span></p>
+<p class="p2">In Problems 3--5, we mark by * maximal numbers in their columns and by ' the minimal numbers in their rows. <br>
+The column player is called She, the row player is called He. His  pure strategies are called  r1,r2,..., and <br>
+her strategies are called c1,c2,....</p>
+<p class="p2">3.</p>
+<table width="782.0" cellspacing="0" cellpadding="0" class="t1">
+  <tbody>
+    <tr>
+      <td valign="middle" class="td8">
+        <p class="p1">3</p>
+      </td>
+      <td valign="middle" class="td8">
+        <p class="p1">4</p>
+      </td>
+      <td valign="middle" class="td9">
+        <p class="p1">3</p>
+      </td>
+      <td valign="middle" class="td8">
+        <p class="p1">0'</p>
+      </td>
+      <td valign="middle" class="td10">
+        <p class="p1">3</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td8">
+        <p class="p1">5</p>
+      </td>
+      <td valign="middle" class="td8">
+        <p class="p1">7*</p>
+      </td>
+      <td valign="middle" class="td9">
+        <p class="p1">5*</p>
+      </td>
+      <td valign="middle" class="td8">
+        <p class="p1">5</p>
+      </td>
+      <td valign="middle" class="td10">
+        <p class="p1">0'</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td8">
+        <p class="p1">5</p>
+      </td>
+      <td valign="middle" class="td8">
+        <p class="p1">4</p>
+      </td>
+      <td valign="middle" class="td9">
+        <p class="p1">4</p>
+      </td>
+      <td valign="middle" class="td8">
+        <p class="p1">6*</p>
+      </td>
+      <td valign="middle" class="td10">
+        <p class="p1">3'</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td8">
+        <p class="p1">7*</p>
+      </td>
+      <td valign="middle" class="td8">
+        <p class="p1">5'</p>
+      </td>
+      <td valign="middle" class="td9">
+        <p class="p1">5*'</p>
+      </td>
+      <td valign="middle" class="td8">
+        <p class="p1">6*</p>
+      </td>
+      <td valign="middle" class="td10">
+        <p class="p1">5*'</p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<p class="p2">So there are two saddle points,     (r4, c3) and (r4,c5). The value of game is 5. <br>
+He has only one optimal strategy, r4. She has two optimal pure strategies, c3 and c5, and her optimal mixed strategies are the mixtures of  c3 and c5. <br>
+ </p>
+<p class="p2">4. Matrix game.</p>
+<table width="782.0" cellspacing="0" cellpadding="0" class="t1">
+  <tbody>
+    <tr>
+      <td valign="middle" class="td11">
+        <p class="p1">3*</p>
+      </td>
+      <td valign="middle" class="td12">
+        <p class="p1">-1'</p>
+      </td>
+      <td valign="middle" class="td13">
+        <p class="p1">2*</p>
+      </td>
+      <td valign="middle" class="td14">
+        <p class="p1">0</p>
+      </td>
+      <td valign="middle" class="td11">
+        <p class="p1">2</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td15">
+        <p class="p1">3*</p>
+      </td>
+      <td valign="middle" class="td16">
+        <p class="p1">0'</p>
+      </td>
+      <td valign="middle" class="td17">
+        <p class="p1">2*</p>
+      </td>
+      <td valign="middle" class="td18">
+        <p class="p1">1*</p>
+      </td>
+      <td valign="middle" class="td15">
+        <p class="p1">4*</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td15">
+        <p class="p1">0</p>
+      </td>
+      <td valign="middle" class="td16">
+        <p class="p1">3*</p>
+      </td>
+      <td valign="middle" class="td17">
+        <p class="p1">2*</p>
+      </td>
+      <td valign="middle" class="td18">
+        <p class="p1">1*</p>
+      </td>
+      <td valign="middle" class="td15">
+        <p class="p1">-1'</p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<p class="p2">There are no saddle points. <br>
+His best pure strategy is  r2 with the worst-case payoff 0. Her best pure strategy is c4  where she pays him <br>
+at most 1. The value of the game is between 0 and 1. <br>
+The strategy c1 is dominated by c2, so he drop c1;  c3 is dominated by c4, so she drops c3. They are left with the matrix game <br>
+ </p>
+<table width="782.0" cellspacing="0" cellpadding="0" class="t1">
+  <tbody>
+    <tr>
+      <td valign="middle" class="td19">
+        <p class="p1">smaller game</p>
+      </td>
+      <td valign="middle" class="td20">
+        <p class="p1">c1</p>
+      </td>
+      <td valign="middle" class="td21">
+        <p class="p1">c2</p>
+      </td>
+      <td valign="middle" class="td22">
+        <p class="p1">c4</p>
+      </td>
+      <td valign="middle" class="td23">
+        <p class="p1">c5</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td24">
+        <p class="p1">r2</p>
+      </td>
+      <td valign="middle" class="td3">
+        <p class="p1">3</p>
+      </td>
+      <td valign="middle" class="td25">
+        <p class="p1">0</p>
+      </td>
+      <td valign="middle" class="td26">
+        <p class="p1">1</p>
+      </td>
+      <td valign="middle" class="td27">
+        <p class="p1">4</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td24">
+        <p class="p1">r3</p>
+      </td>
+      <td valign="middle" class="td3">
+        <p class="p1">0</p>
+      </td>
+      <td valign="middle" class="td25">
+        <p class="p1">3</p>
+      </td>
+      <td valign="middle" class="td26">
+        <p class="p1">1</p>
+      </td>
+      <td valign="middle" class="td27">
+        <p class="p1">-1</p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<p class="p4">He can get  1 by using   (r2+r3)/2 =(0,1/2, 1/2)<span class="s2"><sup>T</sup></span>   (there are other optimal strategies). Her optimal strategy  c4 is unique. <br>
+The value of the game is 1. <span class="s3"><br>
+  </span><span class="s4"><br>
+ </span></p>
+<p class="p2">5.</p>
+<table width="782.0" cellspacing="0" cellpadding="0" class="t1">
+  <tbody>
+    <tr>
+      <td valign="middle" class="td28">
+        <p class="p1">2</p>
+      </td>
+      <td valign="middle" class="td28">
+        <p class="p1">1</p>
+      </td>
+      <td valign="middle" class="td28">
+        <p class="p1">2*</p>
+      </td>
+      <td valign="middle" class="td28">
+        <p class="p1">0'</p>
+      </td>
+      <td valign="middle" class="td28">
+        <p class="p1">3*</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td28">
+        <p class="p1">2</p>
+      </td>
+      <td valign="middle" class="td28">
+        <p class="p1">2</p>
+      </td>
+      <td valign="middle" class="td28">
+        <p class="p1">0'</p>
+      </td>
+      <td valign="middle" class="td28">
+        <p class="p1">2*</p>
+      </td>
+      <td valign="middle" class="td28">
+        <p class="p1">2</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td28">
+        <p class="p1">3</p>
+      </td>
+      <td valign="middle" class="td28">
+        <p class="p1">2</p>
+      </td>
+      <td valign="middle" class="td28">
+        <p class="p1">1'</p>
+      </td>
+      <td valign="middle" class="td28">
+        <p class="p1">1'</p>
+      </td>
+      <td valign="middle" class="td28">
+        <p class="p1">1'</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td28">
+        <p class="p1">4*</p>
+      </td>
+      <td valign="middle" class="td28">
+        <p class="p1">5*</p>
+      </td>
+      <td valign="middle" class="td28">
+        <p class="p1">1'</p>
+      </td>
+      <td valign="middle" class="td28">
+        <p class="p1">1'</p>
+      </td>
+      <td valign="middle" class="td28">
+        <p class="p1">1'</p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<p class="p2">There are no saddle points. The value of game is between  1 and 2. <br>
+By domination, she drops  c1,c2, and c5, and he can drop r3 or  r4. they get a smaller game: <br>
+ </p>
+<table width="782.0" cellspacing="0" cellpadding="0" class="t1">
+  <tbody>
+    <tr>
+      <td valign="middle" class="td29">
+        <p class="p1"> smaller game</p>
+      </td>
+      <td valign="middle" class="td30">
+        <p class="p1">c3</p>
+      </td>
+      <td valign="middle" class="td31">
+        <p class="p1">c4</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td29">
+        <p class="p1">r1</p>
+      </td>
+      <td valign="middle" class="td30">
+        <p class="p1">2</p>
+      </td>
+      <td valign="middle" class="td31">
+        <p class="p1">0</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td29">
+        <p class="p1">r2</p>
+      </td>
+      <td valign="middle" class="td30">
+        <p class="p1">0</p>
+      </td>
+      <td valign="middle" class="td31">
+        <p class="p1">2</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td29">
+        <p class="p1">r4</p>
+      </td>
+      <td valign="middle" class="td30">
+        <p class="p1">1</p>
+      </td>
+      <td valign="middle" class="td31">
+        <p class="p1">1</p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<p class="p2">His optimal strategies are the mixtures of  r3 and r4. Her optimal strategy  (c3+c4)/2= (0,0,1/2,1/2,0) <br>
+is unique. The value of the game is 1. <br>
+ </p>
+<p class="p2"> </p>
+</body>
+</html>

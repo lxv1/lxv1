@@ -1,0 +1,642 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="1138.51">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 19.0px Times; color: #0000ee}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 16.0px Times; color: #0f3bee}
+    p.p3 {margin: 0.0px 0.0px 0.0px 0.0px; font: 19.0px Times}
+    p.p4 {margin: 0.0px 0.0px 0.0px 0.0px; font: 24.0px Times; min-height: 29.0px}
+    p.p5 {margin: 0.0px 0.0px 0.0px 0.0px; font: 16.0px Helvetica}
+    p.p6 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 29.0px Times}
+    p.p7 {margin: 0.0px 0.0px 0.0px 0.0px; font: 16.0px Helvetica; color: #0000ee}
+    p.p8 {margin: 0.0px 0.0px 0.0px 0.0px; font: 16.0px Times}
+    p.p9 {margin: 0.0px 0.0px 0.0px 0.0px; font: 16.0px Times; color: #0000ee}
+    p.p10 {margin: 0.0px 0.0px 0.0px 0.0px; font: 23.0px Times}
+    p.p11 {margin: 0.0px 0.0px 0.0px 0.0px; font: 16.0px Times; min-height: 19.0px}
+    p.p12 {margin: 0.0px 0.0px 0.0px 0.0px; font: 17.0px Times}
+    p.p13 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times}
+    p.p14 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; color: #0000ee}
+    p.p15 {margin: 0.0px 0.0px 0.0px 0.0px; font: 16.0px Helvetica; min-height: 19.0px}
+    p.p16 {margin: 0.0px 0.0px 0.0px 0.0px; font: 20.0px Helvetica}
+    p.p17 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; color: #0f3bee}
+    p.p18 {margin: 0.0px 0.0px 0.0px 0.0px; font: 16.0px Times; color: #0f3bee; min-height: 19.0px}
+    p.p19 {margin: 0.0px 0.0px 18.0px 0.0px; font: 19.0px Times; color: #0000ee}
+    p.p20 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; color: #0000ee}
+    p.p21 {margin: 0.0px 0.0px 0.0px 0.0px; font: 19.0px Times; color: #0000ee; min-height: 23.0px}
+    p.p22 {margin: 0.0px 0.0px 18.0px 0.0px; font: 16.0px Times; color: #0000ee}
+    p.p23 {margin: 0.0px 0.0px 21.0px 0.0px; font: 23.0px Times; color: #0000ee}
+    p.p24 {margin: 0.0px 0.0px 0.0px 0.0px; font: 23.0px Times; color: #0000ee; min-height: 28.0px}
+    p.p25 {margin: 0.0px 0.0px 0.0px 0.0px; font: 10.0px Times; color: #0000ee; min-height: 13.0px}
+    p.p26 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; min-height: 14.0px}
+    p.p27 {margin: 0.0px 0.0px 0.0px 0.0px; font: 15.0px Arial; color: #0000ee}
+    p.p28 {margin: 0.0px 0.0px 0.0px 0.0px; font: 15.0px Arial; min-height: 17.0px}
+    p.p29 {margin: 0.0px 0.0px 0.0px 0.0px; font: 19.0px Times; color: #0f3bee; min-height: 23.0px}
+    p.p30 {margin: 0.0px 0.0px 0.0px 0.0px; font: 23.0px Times; color: #0000ee}
+    p.p31 {margin: 0.0px 0.0px 0.0px 0.0px; font: 20.0px Times; color: #0000ee}
+    p.p32 {margin: 0.0px 0.0px 18.0px 0.0px; font: 23.0px Times; color: #0000ee}
+    p.p33 {margin: 0.0px 0.0px 0.0px 0.0px; font: 17.0px Times; color: #0000ee}
+    p.p34 {margin: 0.0px 0.0px 0.0px 0.0px; font: 47.0px 'Times New Roman'; color: #a2a4f1}
+    p.p35 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px Times; color: #0100ee; min-height: 16.0px}
+    p.p36 {margin: 0.0px 0.0px 0.0px 0.0px; font: 19.0px Times; min-height: 23.0px}
+    p.p38 {margin: 0.0px 0.0px 0.0px 0.0px; font: 32.0px Times}
+    p.p39 {margin: 0.0px 0.0px 0.0px 0.0px; font: 19.0px Times; color: #0000ef}
+    p.p40 {margin: 0.0px 0.0px 0.0px 0.0px; font: 21.0px Helvetica; color: #0000ee}
+    p.p41 {margin: 0.0px 0.0px 0.0px 48.0px; text-indent: -48.0px; font: 17.0px Times; color: #0000ee}
+    p.p42 {margin: 0.0px 0.0px 0.0px 48.0px; text-indent: -48.0px; font: 17.0px Times; color: #0000ee; min-height: 20.0px}
+    p.p43 {margin: 0.0px 0.0px 0.0px 0.0px; font: 16.0px Times; color: #0000ef}
+    p.p44 {margin: 0.0px 0.0px 0.0px 0.0px; font: 16.0px Verdana; color: #0000ee}
+    p.p45 {margin: 0.0px 0.0px 0.0px 0.0px; font: 20.0px Times; color: #0000ef}
+    p.p46 {margin: 0.0px 0.0px 0.0px 0.0px; font: 20.0px Times}
+    p.p47 {margin: 0.0px 0.0px 0.0px 0.0px; font: 16.0px Arial}
+    p.p48 {margin: 0.0px 0.0px 0.0px 0.0px; font: 16.0px Arial; color: #3600ad}
+    p.p49 {margin: 0.0px 0.0px 0.0px 0.0px; font: 15.0px Verdana; color: #0000ee}
+    p.p50 {margin: 0.0px 0.0px 0.0px 0.0px; font: 19.0px Verdana; min-height: 23.0px}
+    p.p51 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Helvetica; color: #0000ee}
+    p.p52 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
+    p.p53 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+    p.p54 {margin: 0.0px 0.0px 0.0px 0.0px; font: 16.0px 'Times New Roman'; min-height: 18.0px}
+    p.p55 {margin: 0.0px 0.0px 0.0px 0.0px; font: 15.0px Arial; color: #1b2dcc}
+    p.p56 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px Arial; color: #232323}
+    p.p57 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px Arial; color: #232323; min-height: 15.0px}
+    p.p58 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Verdana; color: #0000ee}
+    p.p59 {margin: 0.0px 0.0px 0.0px 0.0px; font: 16.0px Arial; color: #0000ee}
+    p.p60 {margin: 0.0px 0.0px 0.0px 0.0px; font: 16.0px Arial; color: #232323; min-height: 18.0px}
+    p.p62 {margin: 0.0px 0.0px 0.0px 0.0px; font: 18.0px Arial; color: #0000ee}
+    p.p64 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; color: #0000ee; min-height: 14.0px}
+    p.p65 {margin: 0.0px 0.0px 0.0px 0.0px; font: 17.0px Arial; color: #0000ee}
+    p.p66 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Arial; color: #cc0000}
+    p.p67 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Arial; color: #cc0000; min-height: 14.0px}
+    p.p69 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Courier}
+    span.s1 {color: #000000}
+    span.s2 {font: 19.0px Times; color: #0000ee}
+    span.s3 {font: 19.0px Times}
+    span.s4 {font: 21.0px Times; color: #0000ee}
+    span.s5 {text-decoration: underline}
+    span.s6 {font: 16.0px Times; text-decoration: underline}
+    span.s7 {text-decoration: underline ; color: #0000ee}
+    span.s8 {color: #0000ef}
+    span.s9 {font: 16.0px 'Lucida Grande'}
+    span.s10 {font: 16.0px Helvetica}
+    span.s11 {font: 16.0px Times; color: #0000ef}
+    span.s12 {color: #0100ee}
+    span.s13 {font: 16.0px Times}
+    span.s14 {font: 12.0px Times}
+    span.s15 {color: #0000ee}
+    span.s16 {color: #0f3bee}
+    span.s17 {font: 12.0px Times; color: #000000; direction: ltr; unicode-bidi: embed}
+    span.s18 {font: 12.0px Times; color: #000000}
+    span.s19 {font: 20.0px Times}
+    span.s20 {color: #0f3bef}
+    span.s21 {font: 12.0px Times; text-decoration: underline}
+    span.s22 {font: 16.0px Times; color: #000000}
+    span.s23 {font: 14.0px Times}
+    span.s24 {font: 14.0px Times; color: #000000}
+    span.s25 {font: 19.0px Times; color: #000000}
+    span.s26 {font: 16.0px Times; color: #0100ee}
+    span.s27 {font: 17.0px Times}
+    span.s28 {font: 15.0px Times}
+    span.s29 {font: 10.0px Times; color: #0000ee}
+    span.s30 {font: 10.0px Times; text-decoration: underline ; color: #0000ee}
+    span.s31 {font: 19.0px Times; color: #0000ef}
+    span.s32 {font: 32.0px Times; color: #000000}
+    span.s33 {font: 16.0px Helvetica; color: #000000}
+    span.s34 {font: 13.0px Arial; color: #000000}
+    span.s35 {font: 13.0px Times; color: #0100ee}
+    span.s36 {font: 14.0px Times; color: #0000ee}
+    span.s37 {font: 20.0px 'Times New Roman'}
+    span.s38 {font: 19.0px 'Lucida Grande'}
+    span.s39 {font: 23.0px 'Lucida Grande'}
+    span.s40 {color: #094ee5}
+    span.s41 {font: 13.0px Helvetica; color: #094ee5}
+    span.s42 {font: 7.0px 'Times New Roman'; color: #0000ef}
+    span.s43 {font: 17.0px Times; color: #0000ee}
+    span.s44 {font: 13.0px Times; color: #0000ef}
+    span.s45 {font: 16.0px Verdana; color: #0000ee}
+    span.s46 {font: 16.0px Verdana}
+    span.s47 {font: 18.0px Times; color: #000000}
+    span.s48 {font: 23.0px Times; color: #0000ee}
+    span.s49 {font: 16.0px 'Times New Roman'; color: #000000}
+    span.s50 {font: 15.0px Arial; color: #1b2dcc}
+    span.s51 {font: 15.0px Arial; text-decoration: underline ; color: #1b2dcc}
+    span.s52 {color: #232323}
+    span.s53 {font: 16.0px Arial; text-decoration: underline}
+    span.s54 {font: 5.0px Arial}
+    span.s55 {font: 17.0px Times; text-decoration: underline}
+    table.t1 {border-collapse: collapse}
+    td.td1 {width: 24.0px; padding: 0.0px 7.0px 0.0px 7.0px}
+    td.td2 {width: 717.0px; padding: 0.0px 7.0px 0.0px 7.0px}
+  </style>
+</head>
+<body>
+<p class="p1"><span class="s1"> <a href="http://www.math.psu.edu/vstein/climate1.html"><b>1. Old History</b></a></span></p>
+<p class="p2"><span class="s2"><a href="http://www.math.psu.edu/vstein/climate2.webarchive"><b>2. Plots</b></a></span><span class="s3"><b> </b></span><b>webarchive; </b><a href="http://www.math.psu.edu/vstein/climate2.pdf"><span class="s4"><b>pdf</b></span></a></p>
+<p class="p1"><a href="http://www.math.psu.edu/vstein/climate3.html"><b>3. 70's: Global cooling -- Ice Age Coming</b></a></p>
+<p class="p1"><a href="http://www.math.psu.edu/vstein/climate4.html"><b>4. Wikipedia on climate</b></a></p>
+<p class="p3"><b> </b></p>
+<p class="p1"><a href="http://www.math.psu.edu/vstein/climate6.html"><b>6. USA government on climate</b></a></p>
+<p class="p1"><a href="http://www.math.psu.edu/vstein/climate7.html"><b>7. Other countries on climate</b></a></p>
+<p class="p1"><a href="http://www.math.psu.edu/vstein/climate8.html"><b>8. Math Reviews on climate</b></a></p>
+<p class="p1"><a href="http://www.math.psu.edu/vstein/climate9.html"><b>9. News 2007-2009</b></a></p>
+<p class="p1"><a href="http://www.math.psu.edu/vstein/climate10.html"><b>10. 2010</b></a></p>
+<p class="p1"><a href="http://www.math.psu.edu/vstein/climate11.html"><b>11. 2011</b></a></p>
+<p class="p1"><a href="http://www.math.psu.edu/vstein/climate12.html"><b>12. 2012</b></a></p>
+<p class="p1"><a href="http://www.math.psu.edu/vstein/climate13.html"><b>13. 2013</b></a></p>
+<p class="p3"><b> </b></p>
+<p class="p1"><a href="http://www.math.psu.edu/vstein/climate.html"><b>back to the main climate page</b></a></p>
+<p class="p4"><br></p>
+<p class="p5"> </p>
+<p class="p6"><b>5. 2000's : Climate Change</b></p>
+<p class="p5"> </p>
+<p class="p7"><span class="s5"><a href="http://www.nobelprize.org/nobel_prizes/peace/laureates/2007/">http://www.nobelprize.org/nobel_prizes/peace/laureates/2007/</a></span></p>
+<p class="p8">The Nobel Peace Prize 2007 was awarded jointly to Intergovernmental Panel on Climate Change (IPCC) and Albert Arnold (Al) Gore Jr. <i>"for their efforts to build up and disseminate greater knowledge about man-made climate change,<span class="Apple-converted-space"> </span></i></p>
+<p class="p8"><i>and to lay the foundations for the measures that are needed to counteract such change"</i></p>
+<p class="p8"> </p>
+<p class="p9"><span class="s5"><a href="http://nobelprize.org/nobel_prizes/peace/laureates/2007/gore-lecture.html">Intergovernmental Panel on Climate Change</a></span><span class="s1"> 2007 lecture at <a href="http://en.wikipedia.org/wiki/NobelPrize.org"><span class="s6">NobelPrize.org</span></a></span></p>
+<p class="p8">             </p>
+<p class="p10"><b>the crisis of global climate change</b></p>
+<p class="p8"><span class="s7"><a href="http://en.wikiquote.org/wiki/Bill_Clinton">Bill Clinton</a></span> on Gore's winning the <a href="http://en.wikipedia.org/wiki/Nobel_Peace_Prize"><span class="s8">Nobel Peace Prize</span></a> (14 October 2007)   I want to congratulate our former Vice President Al Gore for winning the Nobel Peace Prize today. No other person has worked harder or done more to draw much needed</p>
+<p class="p8">attention to the crisis of global climate change, one of the most critical issues facing our planet. Future generations will thank him for his work to save our way of life. But the fight is far from over. His example should motivate each one of us to</p>
+<p class="p8">commit ourselves to doing everything we can in our own lives to save our precious planet.</p>
+<p class="p8"> </p>
+<p class="p8">http://en.wikipedia.org/wiki/Ipcc :<span class="s9"><br>
+</span>Former IPCC chairman Robert Watson has said "The mistakes all appear to have gone in the direction of making it seem like climate change is more serious by overstating the impact. That is worrying.</p>
+<p class="p8">The IPCC needs to look at this trend in the errors and ask why it happened".[81] Martin Parry, a climate expert who had been co-chair of the IPCC working group II, said that "What began with a single</p>
+<p class="p8">unfortunate error over Himalayan glaciers has become a clamour without substance" and the IPCC had investigated the other alleged mistakes, which were "generally unfounded and also marginal to the assessment".[82]</p>
+<p class="p8"> </p>
+<p class="p8"><span class="s10">Al Gore <a href="http://en.wikipedia.org/wiki/An_Inconvenient_Truth"><span class="s11"><i>An Inconvenient Truth</i></span></a></span><span class="s12"><i> </i></span>a 2006 film<span class="s9"><br>
+</span> For example, Gore discusses the possibility of the collapse of a major ice sheet in Greenland or in West Antarctica, either of which could raise global sea levels by approximately 20 feet, flooding coastal areas and producing 100 million refugees. <span class="s9"><br>
+</span>A UK  judge ruled that An Inconvenient Truth contained nine scientific errors and thus must be accompanied by an explanation of those errors before being shown to school children. Some school boards made similar decisions.<span class="s9"><br>
+<a href="http://creation.com/al-gores-inconvenient-errors"><span class="s11">Al Gore's inconvenient errors</span><span class="s13"> </span></a></span>Oct 31, 2007 <span class="s9"><br>
+</span>The film claims that melting snows on Mount Kilimanjaro are evidence of global warming. The Government’s expert defending the film was forced to concede that this is not correct.<span class="s9"><br>
+</span>The film suggests that evidence from ice cores proves that rising CO2 causes temperature increases over a period of 650,000 years.<span class="Apple-converted-space">  </span>The court found that the film was misleading and that the rises in CO2 lagged behind the temperature increases by 800–2,000 years.<span class="s9"><br>
+</span>The film uses emotive images of Hurricane Katrina (above) and suggests that this has been caused by global warming. The Government’s expert had to accept that it was ‘not possible’ to attribute one-off events to global warming.<span class="s9"><br>
+</span>The film shows the drying up of Lake Chad (right) and claims that this was caused by global warming. The Government’s expert had to accept that this was not the case.<span class="s9"><br>
+</span>The film claims that a study showed that polar bears had drowned due to disappearing arctic ice. It turned out that Mr Gore had misread the study: In fact four polar bears drowned, and this was because of a particularly violent storm.<span class="s9"><br>
+</span>The film threatens that global warming could stop the Gulf Stream, throwing Europe into an ice age. The Claimant’s evidence was that this was a scientific impossibility.<span class="s9"><br>
+</span>The film blames global warming for species losses including coral-reef bleaching. The Government could not produce any evidence to support this claim.<span class="s9"><br>
+</span>The film suggests that the Greenland ice covering could melt, causing sea levels to rise dangerously. The evidence is that Greenland will not melt for millennia.<span class="s9"><br>
+</span>The film suggests that the Antarctic ice covering is melting. The evidence is that it is in fact increasing.<span class="s9"><br>
+</span>The film suggests that sea levels could rise by seven metres, causing the displacement of millions of people. In fact, the evidence is that sea levels are expected to rise by about 40 centimetres over the next hundred years and that there is no threat of massive migration.<span class="s9"><br>
+</span>The film claims that rising sea levels have caused the evacuation of residents of certain Pacific islands to New Zealand. The Government was unable to substantiate this and the Court observed that this appears to be a false claim.</p>
+<p class="p11"><br></p>
+<p class="p12"><a href="http://www.nobelprize.org/nobel_prizes/peace/laureates/2007/gore-lecture_en.html"><b>Nobel Lecture, Oslo, </b></a><span class="s14">10 December 2007.<span class="Apple-converted-space"> </span></span></p>
+<p class="p13">by Al Gore.</p>
+<p class="p13">Seven years from now…..</p>
+<p class="p11"><br></p>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; color: #0000ee"><a href="http://en.wikipedia.org/wiki/Not_Evil_Just_Wrong"><b><i>Not Evil Just Wrong</i> - Wikipedia, the free encyclopedia</b></a></h3>
+<p class="p13"><i>Not Evil Just Wrong</i> is a 2009 documentary film by Ann McElhinney and Phelim McAleer that challenges Al Gore's An Inconvenient Truth by suggesting that the <b>...</b></p>
+<p class="p15"><br></p>
+<p class="p8"> ----</p>
+<p class="p16"><b>books:</b></p>
+<p class="p8"> </p>
+<p class="p13">The First Global Revolution (1991) Published by the CLUB OF ROME (A Globalist Think Tank)</p>
+<p class="p13">"In searching for a new enemy to unite us, we came up with the idea that pollution, the threat of global warming, water shortages, famine and the like would fit the bill.﻿ ... All these dangers are caused by human intervention...</p>
+<p class="p13">THE REAL ENEMY THEN IS HUMANITY ITSELF."</p>
+<p class="p11"><br></p>
+<p class="p17"><span class="s15"><a href="http://www.google.com/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=60&amp;ved=0CIQBEBYwCTgy&amp;url=http%3A%2F%2Fbooks.google.com%2Fbooks%2Fabout%2FThe_Carbon_War.html%3Fid%3D9lv8c2LkYm4C&amp;ei=a9XNUN_VCLKQ0QH09oCYCg&amp;usg=AFQjCNHkUCU7hq68jcTWuW7CXlE1znYKYw&amp;sig2=pvPwt3OYS-GqibXRg-VSXg&amp;bvm=bv.1355325884,d.dmQ"><b>The Carbon </b><span class="s16"><b><i>War</i>: <i>Global Warming</i> and the End of the Oil Era ...</b></span></a></span><b> </b><span class="s17">Psychology Press</span><span class="s18">, </span><span class="s17">Apr 1, 2001</span><span class="s18"> - </span><span class="s17">341 pages</span></p>
+<p class="p13">Excessive burning of oil, gas, and coal is raising our planet's thermostat to unacceptable levels-a problem which as already resulted in increased natural <b>...</b></p>
+<p class="p11"><br></p>
+<p class="p8"><span class="s19"><b><i>State of Fear by </i></b></span><b> </b><a href="http://en.wikipedia.org/wiki/Michael_Crichton"><span class="s20">Michael Crichton</span></a><span class="s16"> </span>2004</p>
+<p class="p11"><br></p>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; color: #0000ee"><a href="http://books.google.com/books?id=HtXeR4EHjCYC&amp;printsec=frontcover&amp;dq=climate&amp;hl=en&amp;sa=X&amp;ei=KtfNUOvANqWD0QGZrIHADw&amp;ved=0CFAQ6AEwBDgK"><b>he Long Summer: How <i>Climate</i> Changed Civilization</b></a><span class="s1"><b><span class="Apple-converted-space">  </span></b><a href="https://www.google.com/search?hl=en&amp;sa=N&amp;tbo=d&amp;biw=1591&amp;bih=1020&amp;tbs=cdr:1,cd_min:Jan+1_2+2000,cd_max:Dec+31_2+2012&amp;tbm=bks&amp;tbm=bks&amp;q=inauthor:%22Brian+M.+Fagan%22&amp;ei=KtfNUOvANqWD0QGZrIHADw&amp;ved=0CFIQ9AgwBDgK"><span class="s21">Brian M. Fagan</span></a></span><span class="s18"> - 2004<span class="Apple-converted-space"> </span></span></h3>
+<p class="p13">The anthropologist-author of The Little Ice Age analyzes the seminal impact of climatic change on the evolution of all of human history over the course of the last fifteen thousand years since the last Ice Age.</p>
+<p class="p18"><br></p>
+<p class="p19"><a href="http://books.google.com/books?id=w9QVlNzn_asC&amp;printsec=frontcover&amp;dq=intitle:global+intitle:warming&amp;source=bl&amp;ots=KowPgKLFUv&amp;sig=P0sYB8BkfZqyBuiDr1z7lAnsn9U&amp;hl=en&amp;sa=X&amp;ei=rUFzULLtF8WY0QGJiYAI&amp;ved=0CEYQ6AEwAw"><b>Global warming: myth or reality : the erring ways of climatology</b></a><span class="s1"><b> </b><a href="http://books.google.com/books?isbn=354023909X"><i> </i></a><a href="https://www.google.com/search?hl=en&amp;lr=lang_en&amp;tbs=lr:lang_1en&amp;tbm=bks&amp;tbm=bks&amp;q=inauthor:%22Marcel+Leroux%22&amp;sa=X&amp;ei=rUFzULLtF8WY0QGJiYAI&amp;ved=0CEgQ9AgwAw"><span class="s5">Marcel Leroux</span></a></span><span class="s22"> - 2005</span></p>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; color: #0000ee"><span class="s23"><a href="http://books.google.com/books?id=jYZr59nCMuMC&amp;printsec=frontcover&amp;dq=climate&amp;hl=en&amp;sa=X&amp;ei=KtjNUKyIAoqx0AHszoHQAg&amp;ved=0CFQQ6AEwBDge"><b>Population and </b><b><i>Climate</i> Change</b></a></span><span class="s24"><b><span class="Apple-converted-space">  </span></b><a href="https://www.google.com/search?hl=en&amp;sa=N&amp;tbo=d&amp;biw=1591&amp;bih=1020&amp;tbs=cdr:1,cd_min:Jan+1_2+2000,cd_max:Dec+31_2+2012&amp;tbm=bks&amp;tbm=bks&amp;q=inauthor:%22Brian+C.+O%27Neill%22&amp;ei=KtjNUKyIAoqx0AHszoHQAg&amp;ved=0CFYQ9AgwBDge"><span class="s21">Brian C. O'Neill</span></a></span><span class="s1">, <a href="https://www.google.com/search?hl=en&amp;sa=N&amp;tbo=d&amp;biw=1591&amp;bih=1020&amp;tbs=cdr:1,cd_min:Jan+1_2+2000,cd_max:Dec+31_2+2012&amp;tbm=bks&amp;tbm=bks&amp;q=inauthor:%22F.+Landis+MacKellar%22&amp;ei=KtjNUKyIAoqx0AHszoHQAg&amp;ved=0CFcQ9AgwBDge"><span class="s21">F. Landis MacKellar</span></a>, <a href="https://www.google.com/search?hl=en&amp;sa=N&amp;tbo=d&amp;biw=1591&amp;bih=1020&amp;tbs=cdr:1,cd_min:Jan+1_2+2000,cd_max:Dec+31_2+2012&amp;tbm=bks&amp;tbm=bks&amp;q=inauthor:%22Wolfgang+Lutz%22&amp;ei=KtjNUKyIAoqx0AHszoHQAg&amp;ved=0CFgQ9AgwBDge"><span class="s21">Wolfgang Lutz</span></a> - 2005<span class="Apple-converted-space"> </span></span></h3>
+<p class="p13">The book will be of primary interest to researchers in the fields of climate change, demography, and economics.</p>
+<p class="p21"><br></p>
+<p class="p8"><b><i>An Inconvenient Truth: The Planetary Emergency of Global Warming and What We Can Do About  </i></b>2006 book by <a href="http://en.wikipedia.org/wiki/Al_Gore"><span class="s12">Al Gore</span></a></p>
+<p class="p5"> </p>
+<p class="p22"><span class="s3"><a href="http://books.google.com/books?id=ZWZ_XwAACAAJ&amp;dq=intitle:global+intitle:cooling&amp;source=bl&amp;ots=IxUAHlH9Em&amp;sig=6SWLjKv79HAtG1-_8O7SsnsAs74&amp;hl=en&amp;sa=X&amp;ei=aEBzUPCqMeXp0QGSsYDQDA&amp;ved=0CFMQ6AEwBg"><b>Global Cooling</b></a></span><span class="s25"><b> <span class="Apple-converted-space"> </span></b><a href="http://books.google.com/books?id=ZWZ_XwAACAAJ"><span class="s13"><i> </i></span></a></span><span class="s1"> <a href="https://www.google.com/search?hl=en&amp;lr=lang_en&amp;tbs=lr:lang_1en&amp;tbm=bks&amp;tbm=bks&amp;q=inauthor:%22Mark+Bernstein%22&amp;sa=X&amp;ei=aEBzUPCqMeXp0QGSsYDQDA&amp;ved=0CFQQ9AgwBg"><span class="s26">Mark Bernstein</span></a> - 2006<span class="Apple-converted-space"> </span></span></p>
+<p class="p9"><span class="s19"><a href="http://en.wikipedia.org/wiki/Unstoppable_Global_Warming:_Every_1,500_Years"><b>Unstoppable Global Warming: Every 1,500 Years</b><span class="s5"> </span></a></span><span class="s1">is a book about climate change, written by <a href="http://en.wikipedia.org/wiki/Fred_Singer"><span class="s6">Siegfried Fred Singer</span></a> and <a href="http://en.wikipedia.org/wiki/Dennis_T._Avery"><span class="s6">Dennis T. Avery</span></a>, 2006</span></p>
+<p class="p11"><br></p>
+<p class="p23"><a href="http://www.amazon.com/Mysterious-Receding-Seas-Richard-Guy/dp/1413439926"><b>The Mysterious Receding Seas </b></a><span class="s25"> Richard Guy 2007 book</span></p>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; color: #0000ee"><a href="http://books.google.com/books?id=FbvNhOUVMBkC&amp;printsec=frontcover&amp;dq=global+cooling&amp;hl=en&amp;sa=X&amp;ei=ZdnNUIq_HMbX0QGH4oHACg&amp;ved=0CD0Q6AEwAQ"><b><i>Global</i> Warming and <i>Global Cooling</i>: Evolution of Climate on Earth</b></a><b> </b><a href="https://www.google.com/search?hl=en&amp;tbo=d&amp;biw=1591&amp;bih=1020&amp;tbs=cdr:1,cd_min:Jan+1_2+2000,cd_max:Dec+31_2+2012&amp;tbm=bks&amp;tbm=bks&amp;q=inauthor:%22O.+G.+Sorokhtin%22&amp;sa=X&amp;ei=ZdnNUIq_HMbX0QGH4oHACg&amp;ved=0CD8Q9AgwAQ"><span class="s21">O. G. Sorokhtin</span></a><span class="s18">, <a href="https://www.google.com/search?hl=en&amp;tbo=d&amp;biw=1591&amp;bih=1020&amp;tbs=cdr:1,cd_min:Jan+1_2+2000,cd_max:Dec+31_2+2012&amp;tbm=bks&amp;tbm=bks&amp;q=inauthor:%22George+V.+Chilingar%22&amp;sa=X&amp;ei=ZdnNUIq_HMbX0QGH4oHACg&amp;ved=0CEAQ9AgwAQ"><span class="s5">George V. Chilingar</span></a>, <a href="https://www.google.com/search?hl=en&amp;tbo=d&amp;biw=1591&amp;bih=1020&amp;tbs=cdr:1,cd_min:Jan+1_2+2000,cd_max:Dec+31_2+2012&amp;tbm=bks&amp;tbm=bks&amp;q=inauthor:%22Leonid+F.+Khilyuk%22&amp;sa=X&amp;ei=ZdnNUIq_HMbX0QGH4oHACg&amp;ved=0CEEQ9AgwAQ"><span class="s5">Leonid F. Khilyuk</span></a> - 2007<span class="Apple-converted-space"> </span></span></h3>
+<p class="p13">The theory of the Earth's climate evolution based on universal chemical-physical laws of matter-energy transformation is presented in the book.</p>
+<p class="p24"><br></p>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; color: #0000ee"><a href="http://books.google.com/books?id=8HzBjbAaOVcC&amp;printsec=frontcover&amp;dq=global+cooling&amp;hl=en&amp;sa=X&amp;ei=ZdnNUIq_HMbX0QGH4oHACg&amp;ved=0CFEQ6AEwBA"><b>The Politically Incorrect Guide to <i>Global</i> Warming: And ...</b></a><span class="s1"><b> </b><a href="https://www.google.com/search?hl=en&amp;tbo=d&amp;biw=1591&amp;bih=1020&amp;tbs=cdr:1,cd_min:Jan+1_2+2000,cd_max:Dec+31_2+2012&amp;tbm=bks&amp;tbm=bks&amp;q=inauthor:%22Christopher+C.+Horner%22&amp;sa=X&amp;ei=ZdnNUIq_HMbX0QGH4oHACg&amp;ved=0CFMQ9AgwBA"><span class="s21">Christopher C. Horner</span></a></span><span class="s18"> - 2007</span></h3>
+<p class="p13">A provocative exposé of some of the more controversial agendas behind today's global warming concerns reminds readers about the global cooling scares of the 1970s while arguing that poor-quality science and dishonest politics are ...</p>
+<p class="p24"><br></p>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; color: #0000ee"><a href="http://books.google.com/books?id=OzWv1Vy2YlAC&amp;pg=PT21&amp;dq=global+cooling&amp;hl=en&amp;sa=X&amp;ei=ZdnNUIq_HMbX0QGH4oHACg&amp;ved=0CFYQ6AEwBQ"><b>America Debates <i>Global</i> Warming: Crisis Or Myth?</b></a><span class="s1"><b><span class="Apple-converted-space">  </span></b><a href="https://www.google.com/search?hl=en&amp;tbo=d&amp;biw=1591&amp;bih=1020&amp;tbs=cdr:1,cd_min:Jan+1_2+2000,cd_max:Dec+31_2+2012&amp;tbm=bks&amp;tbm=bks&amp;q=inauthor:%22Matthew+Robinson%22&amp;sa=X&amp;ei=ZdnNUIq_HMbX0QGH4oHACg&amp;ved=0CFgQ9AgwBQ"><span class="s21">Matthew Robinson</span></a></span><span class="s18"> - 2007</span></h3>
+<p class="p13">Aerosol spray cans were thought to be a reason behind the "<i>global cooling</i>" many scientists believed was taking place in the I 970s. who would complain about sunnier beach days, shorter winters, and longer summers? We've Seen It All <b>...</b></p>
+<p class="p24"><br></p>
+<p class="p19"><a href="http://books.google.com/books?id=6geMNON3ngUC&amp;printsec=frontcover&amp;dq=intitle:global+intitle:warming&amp;source=bl&amp;ots=NcJYJRJPKD&amp;sig=Fc_Ue79dxfVeokVFYMTCp3knW8k&amp;hl=en&amp;sa=X&amp;ei=rUFzULLtF8WY0QGJiYAI&amp;ved=0CEwQ6AEwBA"><b>Global Warming For Beginners</b></a><span class="s22">   <a href="https://www.google.com/search?hl=en&amp;lr=lang_en&amp;tbs=lr:lang_1en&amp;tbm=bks&amp;tbm=bks&amp;q=inauthor:%22Dean+Goodwin%22&amp;sa=X&amp;ei=rUFzULLtF8WY0QGJiYAI&amp;ved=0CE4Q9AgwBA"><span class="s12">Dean Goodwin</span></a> - 2008</span></p>
+<p class="p9"><span class="s3"><a href="http://books.google.com/books?id=mQ5GqzCW5JkC&amp;printsec=frontcover&amp;dq=intitle:global+intitle:cooling&amp;source=bl&amp;ots=LQ6jX045AZ&amp;sig=F3uGRx1j6a-FRLNIH1hBodTgba0&amp;hl=en&amp;sa=X&amp;ei=aEBzUPCqMeXp0QGSsYDQDA&amp;ved=0CDwQ6AEwAQ"><b>Global Cooling</b></a></span><span class="s1"> <a href="http://books.google.com/books?isbn=1876819766"><span class="s13"><i>books.google.com/books?isbn=1876819766</i></span></a><i> </i>  <a href="https://www.google.com/search?hl=en&amp;lr=lang_en&amp;tbs=lr:lang_1en&amp;tbm=bks&amp;tbm=bks&amp;q=inauthor:%22David+P+Reiter%22&amp;sa=X&amp;ei=aEBzUPCqMeXp0QGSsYDQDA&amp;ved=0CD4Q9AgwAQ"><span class="s13">David P Reiter</span></a> - 2008</span></p>
+<p class="p21"><br></p>
+<p class="p19"><a href="http://books.google.com/books?id=MRhOPVKfLAAC&amp;printsec=frontcover&amp;dq=intitle:global+intitle:warming&amp;source=bl&amp;ots=1UARYI25j1&amp;sig=z-FbfaE_N9HecPa0fDyGY0t3nUQ&amp;hl=en&amp;sa=X&amp;ei=rUFzULLtF8WY0QGJiYAI&amp;ved=0CGMQ6AEwCA"><b>The complete idiot's guide to global warming</b></a><span class="s1"><b> </b><a href="http://books.google.com/books?isbn=1592577172"><i> </i></a></span><span class="s22"> <a href="https://www.google.com/search?hl=en&amp;lr=lang_en&amp;tbs=lr:lang_1en&amp;tbm=bks&amp;tbm=bks&amp;q=inauthor:%22Michael+Tennesen%22&amp;sa=X&amp;ei=rUFzULLtF8WY0QGJiYAI&amp;ved=0CGUQ9AgwCA"><span class="s5">Michael Tennesen</span></a> - 2008</span></p>
+<p class="p13"><span class="s27"><b>An Appeal to Reason: A Cool Look at Global Warming</b> </span><span class="s28">i</span>s a 2008 book by <a href="http://en.wikipedia.org/wiki/Nigel_Lawson"><span class="s7">Nigel Lawson</span></a>. In it, Lawson argues that <a href="http://en.wikipedia.org/wiki/Global_warming"><span class="s7">global warming</span></a> is happening, but that the science is far from settled.<span class="Apple-converted-space"> </span></p>
+<p class="p13">He opposes the <a href="http://en.wikipedia.org/wiki/Scientific_opinion_on_climate_change"><span class="s7">scientific consensus</span></a> as summarized by the <a href="http://en.wikipedia.org/wiki/Intergovernmental_Panel_on_Climate_Change"><span class="s7">IPCC</span></a>. He also argues that warming will bring both benefits and negative consequences, and that the impact of these changes will be relatively moderate rather than apocalyptic.<span class="Apple-converted-space"> </span></p>
+<p class="p13">He criticizes politicians and scientists who predict catastrophe unless urgent action is taken, and he calls for gradual adaptation instead. The book has been criticized by some climatologists, including <a href="http://en.wikipedia.org/wiki/Intergovernmental_Panel_on_Climate_Change"><span class="s7">IPCC</span></a> authors <a href="http://en.wikipedia.org/w/index.php?title=Jean_Palutikof&amp;action=edit&amp;redlink=1"><span class="s7">Jean Palutikof</span></a> and <a href="http://en.wikipedia.org/wiki/Robert_Watson_%28scientist%29"><span class="s7">Robert Watson</span></a>.<a href="http://en.wikipedia.org/wiki/An_Appeal_to_Reason#cite_note-Telegraph-1"><span class="s29">[</span><span class="s30">1</span><span class="s29">]</span></a></p>
+<p class="p25"><br></p>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; color: #0000ee"><span class="s23"><a href="http://books.google.com/books?id=mQ5GqzCW5JkC&amp;printsec=frontcover&amp;dq=global+cooling&amp;hl=en&amp;sa=X&amp;ei=ZdnNUIq_HMbX0QGH4oHACg&amp;ved=0CDcQ6AEwAA"><b><i>Global Cooling</i></b></a><b><i> </i></b><a href="https://www.google.com/search?hl=en&amp;tbo=d&amp;biw=1591&amp;bih=1020&amp;tbs=cdr:1,cd_min:Jan+1_2+2000,cd_max:Dec+31_2+2012&amp;tbm=bks&amp;tbm=bks&amp;q=inauthor:%22David+P.+Reiter%22&amp;sa=X&amp;ei=ZdnNUIq_HMbX0QGH4oHACg&amp;ved=0CDkQ9AgwAA"><span class="s21">David P. Reiter</span></a></span><span class="s1"> - 2008<span class="Apple-converted-space"> </span></span></h3>
+<p class="p13">Can they really help shift the Earth away from disaster toward Global Cooling? Read on and find out!</p>
+<p class="p26"><br></p>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; color: #0000ee"><a href="http://books.google.com/books?id=mNoW858izZcC&amp;pg=PA172&amp;dq=global+cooling&amp;hl=en&amp;sa=X&amp;ei=ZdnNUIq_HMbX0QGH4oHACg&amp;ved=0CF8Q6AEwBw"><b>Encyclopedia of <i>Global</i> Warming and Climate Change - Volume 1<span class="Apple-converted-space"> </span></b></a><b> </b><span class="s18">S. George Philander - 2008<span class="Apple-converted-space"> </span></span></h3>
+<p class="p13"><i>Global cooling</i> continued through the Pliocene epoch (5.3–.8 million years ago), though global average temperatures in the Pliocene were approximately 5.5 degrees F (3 degrees C) warmer than at present. Peak Pliocene warmth occurred in <b>...</b></p>
+<p class="p25"><br></p>
+<p class="p25"><br></p>
+<p class="p19"><a href="http://books.google.com/books?id=VygtfLv8uQAC&amp;printsec=frontcover&amp;dq=intitle:global+intitle:warming&amp;source=bl&amp;ots=-jniaQRABe&amp;sig=ITs2bAPswKM0Hg3GKVH5vYG5wg8&amp;hl=en&amp;sa=X&amp;ei=rUFzULLtF8WY0QGJiYAI&amp;ved=0CFIQ6AEwBQ"><b>A Kids' Guide to Climate Change &amp; Global Warming: How to Take Action!</b></a><span class="s22"> <a href="http://books.google.com/books?isbn=1575423235"><i> </i></a><i> </i> <a href="https://www.google.com/search?hl=en&amp;lr=lang_en&amp;tbs=lr:lang_1en&amp;tbm=bks&amp;tbm=bks&amp;q=inauthor:%22Cathryn+Berger+Kaye,+M.A.%22&amp;sa=X&amp;ei=rUFzULLtF8WY0QGJiYAI&amp;ved=0CFQQ9AgwBQ"><span class="s5">Cathryn Berger Kaye, M.A.</span></a> - 2009</span></p>
+<p class="p8"><i>Our Choice</i> A <i>Plan to Solve the Climate Crisis</i>.  Al Gore. Release Date:<b> November 3, 2009</b></p>
+<p class="p21"><br></p>
+<p class="p27"><span class="s5"><a href="http://www.bibliotecapleyades.net/archivos_pdf/climatechange_summaryscience.pdf">Climate Change - A Summary of The Science</a></span><span class="s1"> September 2010 <span class="Apple-converted-space">    </span>pdf</span></p>
+<p class="p28"><br></p>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; color: #0000ee"><a href="http://books.google.com/books?id=5D36LtSRvD8C&amp;printsec=frontcover&amp;dq=climate&amp;hl=en&amp;sa=X&amp;ei=2tjNUJfbLcWB0AHctoH4Cw&amp;ved=0CDkQ6AEwADgo"><b>Coming <i>Climate</i> Crisis?: Consider the Past, Beware the Big Fix</b></a><b> </b><a href="https://www.google.com/search?hl=en&amp;sa=N&amp;tbo=d&amp;biw=1591&amp;bih=1020&amp;tbs=cdr:1,cd_min:Jan+1_2+2000,cd_max:Dec+31_2+2012&amp;tbm=bks&amp;tbm=bks&amp;q=inauthor:%22Claire+L.+Parkinson%22&amp;ei=2tjNUJfbLcWB0AHctoH4Cw&amp;ved=0CDsQ9AgwADgo"><span class="s21">Claire L. Parkinson</span></a><span class="s18"> - 2010<span class="Apple-converted-space"> </span></span></h3>
+<p class="p13">Respected NASA climatologist Claire Parkinson brings much-needed balance and perspective to the highly contentious issue of climate change.</p>
+<p class="p26"><br></p>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; color: #0000ee"><a href="http://books.google.com/books?id=fO1qJNrS8OgC&amp;pg=PA19&amp;dq=global+cooling&amp;hl=en&amp;sa=X&amp;ei=ZdnNUIq_HMbX0QGH4oHACg&amp;ved=0CGgQ6AEwCQ"><b>The Real <i>Global</i> Warming Disaster: Is the Obsession With 'Climate ... </b></a><a href="https://www.google.com/search?hl=en&amp;tbo=d&amp;biw=1591&amp;bih=1020&amp;tbs=cdr:1,cd_min:Jan+1_2+2000,cd_max:Dec+31_2+2012&amp;tbm=bks&amp;tbm=bks&amp;q=inauthor:%22Christopher+Booker%22&amp;sa=X&amp;ei=ZdnNUIq_HMbX0QGH4oHACg&amp;ved=0CGoQ9AgwCQ"><span class="s21">Christopher Booker</span></a><span class="s18"> - 2010</span></h3>
+<p class="p13">Their conclusions were based on the calculations of another young PhD with a particular interest in computer models, Dr James Hansen.8 For several years the fear of <i>global cooling</i> continued to inspire a spate of articles and books, such as <b>...</b></p>
+<p class="p29"><br></p>
+<p class="p1"><a href="http://www.amazon.com/exec/obidos/ASIN/1594034761/manhattaninstitu/"><b>Merchants of Despair: Radical Environmentalists, Criminal Pseudo-Scientists, and the Fatal Cult of Antihumanism</b></a><span class="s1"><b>,</b></span><span class="s22"> by Robert Zubrin April 3, 2012</span></p>
+<p class="p8">As Robert Zubrin shows in his valuable survey <i>Merchants of Despair</i>, antihumanism’s reductive view of human nature has underpinned movements like eugenics, population control, and radical<span class="Apple-converted-space"> </span></p>
+<p class="p8">environmentalism, all of which have been eager to sacrifice human life and well-being to achieve their dubious utopias. <a href="http://www.city-journal.org/2012/bc0622bt.html"><span class="s7">Bruce S. Thornton 22 June 2012</span></a></p>
+<p class="p26"><br></p>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; color: #0000ee"><a href="http://books.google.com/books?id=JuyMUNeUkKUC&amp;printsec=frontcover&amp;dq=global+cooling&amp;hl=en&amp;sa=X&amp;ei=ZdnNUIq_HMbX0QGH4oHACg&amp;ved=0CEQQ6AEwAg"><b><i>Global Cooling</i>: Strategies for Climate Change</b></a><b> </b><a href="https://www.google.com/search?hl=en&amp;tbo=d&amp;biw=1591&amp;bih=1020&amp;tbs=cdr:1,cd_min:Jan+1_2+2000,cd_max:Dec+31_2+2012&amp;tbm=bks&amp;tbm=bks&amp;q=inauthor:%22Hans-Josef+Fell%22&amp;sa=X&amp;ei=ZdnNUIq_HMbX0QGH4oHACg&amp;ved=0CEYQ9AgwAg"><span class="s21">Hans-Josef Fell</span></a><span class="s18"> - 2012</span></h3>
+<p class="p13">This book is redefining climate protection measures and resetting climate protection targets in accordance with what is scientifically necessary by introducing new actors (e.g. the financial industry as an investor and political actor), by ...</p>
+<p class="p11"><br></p>
+<p class="p11"><br></p>
+<p class="p10">---------</p>
+<p class="p10"><b>PSU  news:</b></p>
+<p class="p30"><a href="http://www.ed.psu.edu/educ/news/news-items-july-sept-2011/teachers-climate-workshop"><b>K-12 Teachers Participate in Workshop on the Science of Climate Change</b></a><span class="s8"><b> August 2011</b></span></p>
+<p class="p5"> </p>
+<p class="p5"><span class="s2"><a href="http://live.psu.edu/story/45630"><b><i>Probing Question: How fast are the polar ice sheets melting</i></b><b>?</b></a></span>  April 1, 2010<br>
+The massive ice sheets that blanket Greenland and Antarctica are shrinking, according to Penn State geophysicist Sridhar Anandakrishnan,</p>
+<p class="p5">but understanding how quickly will require a better grasp of glacier dynamics. Anandakrishnan has traveled to Antarctica 17 times in the</p>
+<p class="p5">past 25 years to study glacial ice streams, frozen rivers of ice that flow from the center of an ice  sheet and out to sea. These streams can be</p>
+<p class="p5">up to 100 miles in length, a mile deep and 50 miles wide, and most of the melting ice flows through them. <br>
+<br>
+<a href="http://live.psu.edu/story/41133"><span class="s31"><b><i>Computer model documents the history of the West Antarctic ice s</i></b></span></a><span class="s31"><b><i>heet</i></b></span>  August 26, 2009<br>
+One major threat of planetary warming is the melting of the great polar ice sheets. Particularly worrisome to researchers is the fragility</p>
+<p class="p5">of the West Antarctic ice sheet, or WAIS. David Pollard,</p>
+<p class="p5">a senior research scientist at Penn State, and Robert M. DeConto, professor of climatology at</p>
+<p class="p5">the University of Massachusetts, have created a computer model of WAIS's last 5 million years.</p>
+<p class="p5">"One of the next steps is to determine if human activity will make it warm enough to start the collapse," said Pollard.</p>
+<p class="p8"> </p>
+<p class="p1"><a href="http://live.psu.edu/story/40829"><b>Penn State Live - <i>WPSU's</i> '<i>Conversation' turns to climate change</i></b></a><span class="s22">  August 09, 2009</span></p>
+<p class="p8">Experts say regulating Earth's climate is arguably one of the most important issues of modern day. However,</p>
+<p class="p8"> the key to understanding the future of our environment</p>
+<p class="p8">is to examine the past. Researchers are learning important lessons about earth's climate history from an unlikely source: ice cores. Penn State professor Richard Alley</p>
+<p class="p8">is one of the world's leading climate researchers and he'll explain his theories about changing temperatures on</p>
+<p class="p8">the next "Conversations from Penn State."</p>
+<p class="p8"> </p>
+<p class="p19"><a href="http://www.climategate.com/penn-state-climategate-whistleblowers"><b>Attention <i>Penn State</i>: Top fraud attorney seeks <i>climategate</i> </b></a><span class="s22"><i>whistleblowers</i></span></p>
+<p class="p31"><a href="http://www.collegian.psu.edu/archive/2010/01/19/group_calls_for_manns_external.aspx"><b>Group calls for Mann's external investigation</b></a><span class="s32"><b>  </b></span><span class="s22">By Colleen Boyle </span><span class="s25">January 19, 2010 </span></p>
+<p class="p3">Daily Collegian</p>
+<p class="p3"> </p>
+<p class="p32"><a href="http://psu.us2.list-manage.com/track/click?u=31fa37dcd381c431886af5ad6&amp;id=c27b4a0c5c&amp;e=537b2d0922"><b>How does melting Arctic ice affect weather and climate?</b></a></p>
+<p class="p1"><span class="s33"> <a href="http://www.cfs.psu.edu/"><span class="s3"><b><i>Penn State Center</i> for <i>Sustainability</i></b></span></a></span></p>
+<p class="p21"><br></p>
+<p class="p8">------------news 2001-2006</p>
+<p class="p5"> </p>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; color: #0000ee"><a href="http://www.hoover.org/publications/hoover-digest/article/7944"><b>The <i>Pseudoscience</i> of <i>Global Warming</i> | Hoover Institution</b></a><span class="s1"><b> </b></span><span class="s18">Jul 30, 2001</span></h3>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times">Environmentalists have convinced the public that <i>global warming</i> is looming. Yet the evidence is far from conclusive–and the proposed <b>...</b></h3>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; min-height: 14.0px"><br></h3>
+<p class="p33"><span class="s5"><a href="http://news.heartland.org/newspaper-article/2001/12/01/do-people-cause-global-warming">Do people cause global warming? </a></span><span class="s22"> December 1, 2001</span><span class="s20"> </span><span class="s22">Frederick Seitz</span></p>
+<p class="p8">president emeritus of Rockefeller University and past president of the National Academy of Sciences.</p>
+<p class="p26"><br></p>
+<p class="p26"><br></p>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; color: #0000ee"><a href="http://www.google.com/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=10&amp;ved=0CH4QFjAJ&amp;url=http%3A%2F%2Fwww.nationalcenter.org%2FNPA388.html&amp;ei=JfHNUOyZNYf00QGL0YH4Cw&amp;usg=AFQjCNGyrAK5pGU1qfWVjeGvThNrDd3Low&amp;sig2=aCnWyD-_OT5PXtingaUP0A&amp;bvm=bv.1355325884,d.dmQ"><b>National Policy Analysis #388: New Research Indicates the Earth ...</b></a><b> Febr 2002</b></h3>
+<p class="p13">After a decade of warnings that the <i>Earth's</i> temperature may be rapidly warming, <b>...</b> and lethal storms, it now appears that we may be in for <i>global cooling</i> instead. <b>...</b> Gore, ignoring the advice of several key <i>Clinton</i> Administration officials, took a <b>...</b></p>
+<p class="p15"><br></p>
+<p class="p19"><a href="http://www.google.com/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=1&amp;ved=0CCMQFjAA&amp;url=http%3A%2F%2Fwww.commondreams.org%2Fviews04%2F0130-11.htm&amp;ei=3it_UKL0OoHh0QGp_ICoDg&amp;usg=AFQjCNFnHJNWI8U7H9tKw680SLShlGKsYA&amp;sig2=JYyqc-_WvwRFLBpUXrdg6g"><b>How <i>Global Warming</i> May Cause the Next Ice Age...</b></a><span class="s1"><b> </b></span><span class="s22">Jan 30, 2004 </span><span class="s34"><b>by Thom Hartmann</b></span></p>
+<p class="p7"><span class="s5"><a href="http://en.wikipedia.org/wiki/Richard_Lindzen#Views_on_climate_change">http://en.wikipedia.org/wiki/Richard_Lindzen#Views_on_climate_change</a></span></p>
+<p class="p8">In a 2009 editorial in the <a href="http://en.wikipedia.org/wiki/Wall_Street_Journal"><span class="s12">Wall Street Journal</span></a>, Lindzen points out that the earth was just emerging from the</p>
+<p class="p8">"Little Ice Age" in the 19th century and concludes that it is "not surprising" to see warming after that.</p>
+<p class="p8">He goes on to state that the IPCC claims were<a href="http://en.wikipedia.org/wiki/Richard_Lindzen#cite_note-57"><span class="s35">[58]</span></a></p>
+<table cellspacing="0" cellpadding="0" class="t1">
+  <tbody>
+    <tr>
+      <td valign="top" class="td1">
+        <p class="p34"><b>“</b></p>
+      </td>
+      <td valign="top" class="td2">
+        <p class="p8">"based on the weak argument that the current models used by the IPCC couldn't reproduce the warming from about 1978 to 1998 without some forcing, and that the only forcing that they could think of was man. Even this argument assumes that these models adequately deal with natural internal variability—that is, such naturally occurring cycles as El Niño, the Pacific Decadal Oscillation, the Atlantic Multidecadal Oscillation, etc.</p>
+        <p class="p8">Yet articles from major modeling centers acknowledged that the failure of these models to anticipate the absence of warming for the past dozen years was due to the failure of these models to account for this natural internal variability. Thus even the basis for the weak IPCC argument for anthropogenic climate change was shown to be false."</p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<p class="p8">Dr. Lindzen told the <a href="http://en.wikipedia.org/wiki/New_York_Times"><span class="s12"><i>Times</i></span></a>: “You have politicians who are being told if they question this, they are anti-science. We are trying to tell them, no, questioning is never</p>
+<p class="p8">anti-science.” He further explained: “If I’m right,</p>
+<p class="p8">we’ll have saved money. If I’m wrong, we’ll know it in 50 years and can do something.”<a href="http://en.wikipedia.org/wiki/Richard_Lindzen#cite_note-nytgillis-58"><span class="s35">[59]</span></a></p>
+<p class="p8"> </p>
+<p class="p1"><a href="http://www.npr.org/templates/story/story.php?storyId=1893089"><b>Three Views on <i>Global Warming</i> : NPR</b></a><span class="s1"><b>  </b></span><span class="s22">May 14, 2004</span></p>
+<p class="p8"><b>...</b> difference of opinion among scientists about the risk of <i>global warming</i>. <b>...</b> Richard <i>Alley</i> sings Bonaparte's Gull Crossing the Cape,  a song he <b>...</b></p>
+<p class="p8"> </p>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; color: #0000ee"><a href="http://www.google.com/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=616&amp;ved=0CFsQFjAFOOIE&amp;url=http%3A%2F%2Fwww.freerepublic.com%2Ffocus%2Ff-news%2F1258733%2Fposts&amp;ei=fPjVUJfLNLS00AHcyYHgDg&amp;usg=AFQjCNHlTTXBfOk60BrZ7jn-qJcz5llJSw&amp;sig2=E9GWRsPhK5n46h6-692KVg&amp;bvm=bv.1355534169,d.dmQ"><b>Florida Billboards Blame Bush for <i>Hurricanes</i></b></a><span class="s1"><b> </b></span><span class="s18">Oct 27, 2004</span></h3>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times">The billboards show a photo of a <i>hurricane</i> swirling toward Florida. <b>.....</b> The idea that <i>man</i>-made pollution is <i>responsible</i> for global warming is <b>...</b></h3>
+<p class="p11"><br></p>
+<p class="p11"><br></p>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; color: #0000ee"><a href="http://www.enn.com/top_stories/article/2431"><b>Another Blow to the <i>Pseudo-Science</i> of <i>Global Warming</i> Skeptics ...</b></a><span class="s1"><b> </b></span><span class="s18">Aug 25, 2005<span class="Apple-converted-space"> </span></span></h3>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times">In a serious blow to the already discredited arguments made against climate change by <i>global warming</i> skeptics, a new analysis of satellite <b>...</b></h3>
+<p class="p11"><br></p>
+<p class="p1"><a href="http://diablo.incgamers.com/forums/showthread.php?388633-Mars-has-global-warming-Sun-not-available-for-comment"><b><i>Mars has global warming</i>. Sun not available for comment.</b></a><span class="s1"><b> </b></span><span class="s22">Sep 21, 2005</span></p>
+<p class="p8">Mars is experiencing global warming. How is that possible? Could it be? It might.</p>
+<p class="p8">Nah, couldn't possibly be.  Or could it...? Could it be?</p>
+<p class="p35"><br></p>
+<p class="p1"><a href="http://swaminomics.org/?p=463"><b>Global warming or <i>global cooling</i>? « Swaminomics</b></a><span class="s20"><b> </b></span><span class="s22">2005.Feb.27,</span></p>
+<p class="p8">Things were different in 1940-70, when there was <i>global cooling</i>.</p>
+<p class="p8"> </p>
+<p class="p3">Keller, K., M. G. Hall, S.-R. Kim, D. F. Bradford, and M. Oppenheimer:</p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space"> </span><a href="http://www.geosc.psu.edu/%7Ekzk10/Keller_et_al_cc_05.pdf"><span class="s5">Avoiding dangerous anthropogenic interference with the climate system</span></a>. Climatic Change, 73, 227-238 (2005).</span></p>
+<p class="p36"><br></p>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; color: #0000ee"><a href="http://www.aetherometry.com/Electronic_Publications/Politics_of_Science/Global_Warming/gw_index.html"><b>'<i>GLOBAL WARMING</i>': An Official <i>PseudoScience</i></b></a><span class="s1"><b> </b></span><span class="s18">by PN Correa - Nov 1, 2005<span class="Apple-converted-space"> </span></span></h3>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times">Perhaps the most expensive example of these mass-hysterias is the <i>pseudoscientific</i> fad of '<i>global warming</i>'. The present article is an <b>...</b></h3>
+<p class="p36"><br></p>
+<p class="p36"><br></p>
+<p class="p14"><a href="http://cosmicvariance.blogspot.com/2006/02/global-warming-is-pseudo-science.html"><b>Cosmic Variance: <i>Global Warming</i> is <i>Pseudo Science</i>!</b></a><span class="s1"><b> </b></span><span class="s18">Feb 17, 2006<span class="Apple-converted-space"> </span></span></p>
+<p class="p13">The widely accepted <i>Global Warming</i> Theory, is a <i>pseudo science</i> and must be abandoned. Here I explain what it is and why it is totally wrong.</p>
+<p class="p36"><br></p>
+<p class="p1"><span class="s5"><a href="http://wizbangblog.com/content/2006/04/02/before-global-warming-there-wa.php">Before Global Warming There Was Global Cooling</a></span><span class="s20"> </span><span class="s22">April 2, 2006</span></p>
+<p class="p35"><br></p>
+<p class="p14"><span class="s35"><span class="Apple-converted-space"> </span><a href="http://voices.yahoo.com/the-political-pseudoscience-global-warming-34828.html"><span class="s36"><b>The Political <i>Pseudoscience</i> of <i>Global Warming</i> - Yahoo! Voices ...</b></span></a></span><span class="s1"><b> </b></span><span class="s18">Apr 27, 2006<span class="Apple-converted-space"> </span></span></p>
+<p class="p13"><span class="Apple-converted-space"> </span>What's the deal with <i>global warming</i> anyway? Is it real and if it is, what kind is it? Is it occuring now or will it occur later? Has it occuring in the <b>...</b></p>
+<p class="p26"><br></p>
+<p class="p14"><a href="http://www.google.com/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=1&amp;ved=0CDAQFjAA&amp;url=http%3A%2F%2Fcrooksandliars.com%2F2006%2F05%2F14%2Fsnl-if-al-gore-were-president&amp;ei=TXfAUNb2LbK00AHptIGQBg&amp;usg=AFQjCNE9ZKGdY9duJYcJh3Qoud6qqHC1Nw&amp;sig2=oCxFLity421e1M0zkU3qpw"><b>SNL: If <i>Al Gore were</i> President | Crooks and Liars</b></a><span class="s16"><b> </b></span><span class="s18">May 13, 2006<span class="Apple-converted-space"> </span></span></p>
+<p class="p13">"Saturday Night Live," opened their show tonight with <i>Al Gore</i> addressing the nation <b>...</b> <i>Glaciers</i> that <i>once were melting are now on the attack</i>.</p>
+<p class="p11"><br></p>
+<p class="p33"><a href="http://www.google.com/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=2&amp;ved=0CDgQFjAB&amp;url=http%3A%2F%2Fwww.kersplebedeb.com%2Fmystuff%2Ftexts%2Fpeakoil.php&amp;ei=Ct29ULj7BMrL0QGfQw&amp;usg=AFQjCNGSKk35U4D2_fZYpngMrOYAB_ZcVw&amp;sig2=qw2P651QBSBVUzD0f0XBbQ"><b>On peak oil, climate change, <i>overpopulation</i>, and <i>fascism</i></b></a><span class="s16"><b><i><span class="Apple-converted-space"> </span></i></b></span><span class="s1"> </span><span class="s24">August 2006</span></p>
+<p class="p13">On peak oil, climate change, <i>overpopulation</i>, and <i>fascism</i>. by Gerry Bellow. For Goff, our tired first principles supplemented with a dose of apocalyptic fossil fuel <b>...</b></p>
+<p class="p26"><br></p>
+<p class="p14"><span class="s18"><b><span class="Apple-converted-space"> </span></b><a href="http://www.google.com/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=2&amp;ved=0CEMQFjAB&amp;url=http%3A%2F%2Fwww.realclearpolitics.com%2Farticles%2F2006%2F10%2Fhooray_for_ddts_lifesaving_com.html&amp;ei=0-PRUJO1F8y70AHlwoDAAw&amp;usg=AFQjCNECueBVQ4xpNWSyMBhaYlWdnrgvEA&amp;sig2=Gifz2u9j6L8T9PzZbeRIxQ&amp;bvm=bv.1355534169,d.dmQ"><span class="s23"><b>RealClearPolitics - Articles - Hooray for <i>DDT's</i> Life-Saving Comeback</b></span></a></span><span class="s1"><b> </b></span><span class="s18">Oct 4, 2006<span class="Apple-converted-space"> </span></span></p>
+<p class="p13">After more than 30 years and tens of millions dead -- mostly children -- the World Health Organization (WHO) has ended its <i>ban</i> on <i>DDT</i>. <i>DDT</i> is <b>...</b></p>
+<p class="p13">Milloy reminds us that the same people who spread DDT hysteria are now pushing the global-warming scare. "If they and others could be so wrong about DDT, why should we trust them now?"</p>
+<p class="p26"><br></p>
+<p class="p1">news 2001-2006 ---------</p>
+<p class="p21"><br></p>
+<p class="p21"><br></p>
+<p class="p7"><span class="s5"><a href="http://www.meteo.psu.edu/holocene/public_html/Mann/index.php">M. Mann website at PSU</a></span><span class="s1"> </span></p>
+<p class="p5"> </p>
+<h3 style="margin: 0.0px 0.0px 14.0px 0.0px; font: 19.0px Times; color: #0000ee"><a href="http://www.realclimate.org/"><b>RealClimate</b></a></h3>
+<p class="p31"><span class="s37"><a href="http://en.wikipedia.org/wiki/Climatic_Research_Unit_email_controversy"><b>‪</b><span class="s19"><b>Climatic Research Unit email controversy</b></span></a></span><span class="s8"><b>  wiki</b></span></p>
+<p class="p38"> </p>
+<p class="p3"><span class="s7"><a href="http://en.wikipedia.org/wiki/Polar_ice_cap">Polar Ice Cap wiki</a></span><span class="s38"><br>
+</span>According to the National Snow and Ice Data Center, "since 1979, winter Arctic ice extent</p>
+<p class="p3">has decreased about 4.2 percent per decade." Both 2008 and 2009 had a minimum Arctic</p>
+<p class="p3">sea ice extent somewhat above that of 2007.</p>
+<p class="p3">At other times of the year the ice extent is still sometimes near the 1979-2000 average,</p>
+<p class="p3">as in April 2010, by the data from the National Snow and Ice Data Center.[3]<span class="s38"><br>
+</span>The land mass of the Earth's south pole, in Antarctica, is covered by the Antarctic ice sheet.</p>
+<p class="p3">It covers an area of about 14.6million km² and contains 25-30 million km³ of ice.</p>
+<p class="p3">Around 70% of the fresh water on the Earth is held in this ice sheet. See Climate of Antarctica.<span class="s38"><br>
+</span>Data from the National Snow and Ice Data Center shows that the sea ice coverage of</p>
+<p class="p3">Antarctica has a slightly positive trend over the last three decades (1979–2009).[4]</p>
+<p class="p39"> </p>
+<p class="p10"><span class="s7"><a href="file:///Users/anchik2/Desktop/climatescience.blogspot.com">climate science </a></span>   <span class="s39"><br>
+</span>This site is a reference point for those with a cool head for climate science, arguably the most political science ever.</p>
+<p class="p5"> </p>
+<p class="p5"> </p>
+<p class="p7"><a href="http://md1.csa.com/partners/viewrecord.php?requester=gs&amp;collection=TRD&amp;recid=N8929849AH&amp;q=ice+age+coming&amp;uid=792140178&amp;setcookie=yes"><b>Comments on Hamaker's hypothesis of a coming CO2 ice age </b></a><span class="s1"><b> MACCRACKEN, MICHAELC</b></span></p>
+<p class="p5">Over the past several years, John Hamaker and a number of followers have put forth a hypothesis that the imminent demise of the world's forests</p>
+<p class="p5">from lack of vital mineral nutrients will trigger an ice age. Their evidence in support of this hypothesis has recently appeared as a videotape entitled,</p>
+<p class="p5">Stopping the Coming Ice Age. These comments were prepared in response to the arguments presented on that tape, which several people have</p>
+<p class="p5">suggested presents a highly important scientific analysis unfairly receiving too little attention. An analysis is made of the climatic aspects of the</p>
+<p class="p5">Hamaker hypothesis. The videotape attempts to put forth a coherent and appealing story, but does so by taking comments of some scientists out</p>
+<p class="p5">of context, by quoting some scientists out of their field of expertise, by skimming over some serious shortcomings, by facile assumptions not easily</p>
+<p class="p5">spotted by the non-specialist, and by mixing in many true statements (which makes it especially difficult for the lay listener to spot the problems).</p>
+<p class="p5">Overall, these actions combine to make the presentation of the hypothesis very appealing, but also very deceptive. (DOE)   </p>
+<p class="p7"><a href="http://en.wikipedia.org/wiki/John_D._Hamaker"><b>John D. Hamaker </b></a><span class="s1"><b>(1914–1994),</b></span></p>
+<p class="p5"><b>In 1982, he produced with </b><a href="http://en.wikipedia.org/wiki/California"><span class="s40"><b>Californian</b></span></a><b> </b><a href="http://en.wikipedia.org/wiki/Ecologist"><span class="s40"><b>ecologist</b></span></a><b>, Donald A. Weaver, <i>The Survival Of Civilization</i>, subtitled <i>Carbon Dioxide, Investment Money, Population</i></b></p>
+<p class="p5"><b><i>- Three Problems Threatening Our Existence</i>, which was re-published by Remineralize The Earth in 2002</b><a href="http://en.wikipedia.org/wiki/John_D._Hamaker#cite_note-18"><span class="s41"><b>[19]</b></span></a><b> which was republished in 2006 by </b><a href="http://SoilandHealth.org/"><span class="s40"><b>SoilandHealth.org</b></span></a><b> </b><a href="http://en.wikipedia.org/wiki/John_D._Hamaker#cite_note-19"><span class="s41"><b>[20]</b></span></a></p>
+<p class="p5"><b>Annotations and supporting evidence were provided by Weaver. The book which initially sold 14,000 copies, concerned the threat of an imminent ice age,</b></p>
+<p class="p5"><b>remineralizing the world's soils on a local and global scale and </b><a href="http://en.wikipedia.org/wiki/Reforesting"><span class="s40"><b>reforesting</b></span></a><b> the </b><a href="http://en.wikipedia.org/wiki/Planet"><span class="s40"><b>planet</b></span></a><b> to return </b><a href="http://en.wikipedia.org/wiki/Atmospheric"><span class="s40"><b>atmospheric</b></span></a><b> </b><a href="http://en.wikipedia.org/wiki/Carbon_dioxide"><span class="s40"><b>carbon dioxide</b></span></a><b> to a normal </b><a href="http://en.wikipedia.org/wiki/Interglacial"><span class="s40"><b>interglacial</b></span></a><b> level near 280 ppm,</b></p>
+<p class="p5"><b>to help slow the glacial advance.</b><a href="http://en.wikipedia.org/wiki/John_D._Hamaker#cite_note-20"><span class="s41"><b>[21]</b></span></a></p>
+<p class="p5">                                                                                                                                                                                                                                                     </p>
+<p class="p1"><a href="http://curry.eas.gatech.edu/"><b><i>Judith Curry's</i> Home Page</b></a></p>
+<p class="p39"> </p>
+<p class="p19"><a href="http://www.google.com/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=1&amp;ved=0CB4QFjAA&amp;url=http%3A%2F%2Fwww.mit.edu%2F%7Epog%2Fpublications.html&amp;ei=bOmHUMWlFKTq0AHhRQ&amp;usg=AFQjCNH7bxg_dZR9Q4RYp4woc-iJCjCLzA&amp;sig2=y9-X7-x-NA_Bhrv756z10A"><b>Homepage of Paul <i>O'Gorman</i></b></a></p>
+<p class="p40"><a href="http://www.iceagenow.com/"><b>Ice Age now</b></a><span class="s33">  <a href="http://www.iceagenow.com/"><span class="s5"> </span></a></span></p>
+<p class="p39"> </p>
+<p class="p19"><a href="http://www.google.com/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=10&amp;ved=0CHEQtwIwCQ&amp;url=http%3A%2F%2Fwww.liveleak.com%2Fview%3Fi%3Df93_1232372261&amp;ei=Yod8UPKIMKvG0AHUs4GgBg&amp;usg=AFQjCNHHXHbVO-HarfnhsnuP51zIjKQyDw&amp;sig2=wnhF3XeEBIt0JhrlZsibuA"><b>LiveLeak.com - Hal Lindsey on the <i>Global Warming</i> Scam, <i>Socialist</i> ..</b></a></p>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 16.0px Times; color: #0000ee"><a href="http://www.google.com/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=15&amp;ved=0CFkQFjAEOAo&amp;url=http%3A%2F%2Fwww.stopglobalcooling.com%2F&amp;ei=VPjNUM6yBq3y0wHeyoDQDQ&amp;usg=AFQjCNEpZ9kFEz5XhLtKSiSy2xnoP0-KxA&amp;sig2=FW0HQeHjRy8ityEnXyzoBw&amp;bvm=bv.1355325884,d.dmQ"><b>Stop <i>Global Cooling</i></b></a></h3>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times">Stop <i>Global Cooling</i>. <b>...</b> The <i>Bush</i> administration is promoting environmentalism's Big Lie: that the <b>...</b> HOT WORDS ON GLOBAL WARMING JEFF JACOBY <b>...</b></h3>
+<p class="p11"><br></p>
+<p class="p19"><a href="http://www.google.com/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=1&amp;ved=0CCMQFjAA&amp;url=http%3A%2F%2Fwww.globalwarminghoax.com%2F&amp;ei=lEF9UNvOOMft0gHE7YE4&amp;usg=AFQjCNEhQejePXYquDP2B0WBESa5LAgwKg&amp;sig2=7XVmYfwcIXh9A1mzWlt1oQ"><b><i>Global Warming Hoax</i>: News</b></a></p>
+<p class="p41"><span class="s8">1.</span><span class="s42"> <a href="http://www.google.com/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=3&amp;ved=0CD8QFjAC&amp;url=http%3A%2F%2Fwww.wnho.net%2Fglobal_warming.htm&amp;ei=lEF9UNvOOMft0gHE7YE4&amp;usg=AFQjCNEihFDUOv6DBG1e5EngNR72xk7Iaw&amp;sig2=nXfDvUMtFMCmSval18vRuA"><span class="s43"><b>THE <i>GLOBAL WARMING HOAX</i></b></span></a></span></p>
+<p class="p42"><br></p>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; color: #0000ee"><a href="http://www.amazon.com/Exposing-The-Climate-Hoax-Economy/dp/0983923108"><b>Exposing The <i>Climate Hoax</i>: It's ALL About The Economy: John P ...</b></a></h3>
+<p class="p13">Exposing The <i>Climate Hoax</i>: It's ALL About The Economy [John P. Reisman, James Novitzki, Haritomedia GmbH] on Amazon.com. *FREE* super saver shipping <b>...</b></p>
+<p class="p36"><br></p>
+<p class="p1"><a href="http://www.google.com/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=14&amp;ved=0CFMQFjADOAo&amp;url=http%3A%2F%2Fossfoundation.us%2Fprojects%2Fenvironment%2Fglobal-warming%2Fmyths&amp;ei=aER9ULeFA4L40gGl04G4DQ&amp;usg=AFQjCNFVPmuoef8KqErH7ATC0-4Z9GXmwA&amp;sig2=9cO7RTsR0VwVXYJL_xXPWw"><b>Myths vs. Facts: <i>Global Warming</i> — OSS Foundation</b></a></p>
+<p class="p8">Facts in <i>Global Warming</i>: This news and analysis section addresses substance of arguments such as</p>
+<p class="p8">"<i>global warming</i> is a <i>hoax</i>", "<i>global warming</i> is a fiction", <b>...</b></p>
+<p class="p8"> </p>
+<p class="p1"><a href="http://www.google.com/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=2&amp;ved=0CCsQFjAB&amp;url=http%3A%2F%2Fen.wikipedia.org%2Fwiki%2FRichard_A._Muller&amp;ei=0jF-ULG7FeHo0gHHuID4Cw&amp;usg=AFQjCNHLnDVOOTAArgmH2nfySlhk9Jm6Pw&amp;sig2=EVuaINposO3SSgvvaBwPvA"><b><i>Richard</i> A. <i>Muller</i> - Wikipedia, the free encyclopedia</b></a></p>
+<p class="p8">… the hockey stick, the poster-child of the global warming community, turns out to be an artifact</p>
+<p class="p8">of poor mathematics. How could it happen?<a href="http://en.wikipedia.org/wiki/Richard_A._Muller#cite_note-Bombshell-9"><span class="s44">[10]</span></a></p>
+<p class="p8">10.^ <a href="http://en.wikipedia.org/wiki/Richard_A._Muller#cite_ref-Bombshell_9-0"><span class="s44"><b><i>a</i></b></span></a> <a href="http://en.wikipedia.org/wiki/Richard_A._Muller#cite_ref-Bombshell_9-1"><span class="s44"><b><i>b</i></b></span></a> Muller, Richard (October 15, 2004). <a href="http://www.technologyreview.com/energy/13830/"><span class="s8">"Global Warming Bombshell"</span></a>. <a href="http://en.wikipedia.org/wiki/Technology_Review"><span class="s8">Technology Review</span></a>.</p>
+<p class="p43"> </p>
+<p class="p19"><a href="http://www.google.com/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=7&amp;ved=0CFMQFjAG&amp;url=http%3A%2F%2Fwww.global-warming-and-the-climate.com%2F&amp;ei=ebF_ULGhJ6L10gGXoIDwDQ&amp;usg=AFQjCNHEAM4l5agL2kFFryPyVG37CrF41A&amp;sig2=e4LZ5uVcFSGeZUY2DJ78vg"><b><i>Global</i> Warming And The Climate</b></a></p>
+<p class="p1"><a href="http://www.google.com/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=20&amp;ved=0CGoQFjAJOAo&amp;url=http%3A%2F%2Fisthereglobalcooling.com%2F&amp;ei=tiyBUOmHAsa00AGv9oGYCA&amp;usg=AFQjCNFcBDvB3K9No-QSoM7ZiYOkI-ylAw&amp;sig2=tksAAR4X2uEz9BU67LaI3Q"><b>Is there <i>global cooling</i>? The answer might not be what you expected ...</b></a></p>
+<p class="p8">I will try to give you the answer to the question "is there <i>global cooling</i>? <b>...</b> These temperature variations were</p>
+<p class="p8">not <i>caused</i> by man. <b>....</b> is believed by some scientists that lower solar activity increases cloud formation and</p>
+<p class="p8">this has a cooling <i>effect</i>.</p>
+<p class="p8"> </p>
+<p class="p1"><a href="http://www.google.com/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=50&amp;ved=0CGYQFjAJOCg&amp;url=http%3A%2F%2Fwww.politicallyincorrectfacts.com%2Fglobal_warming%2FGlobal_Cooling.htm&amp;ei=c8yBUOKqIciw0QHwsoDADg&amp;usg=AFQjCNEHWCyY3HL2-t-7PtHxVL4yXf0MZg&amp;sig2=EA9JfSUu5Pj7KpSsfkXXfw"><b><i>Global Cooling</i> - Politically Incorrect Facts</b></a><span class="s22">  Temperature Monitors Report Widescale</span></p>
+<p class="p8"><i>Global Cooling</i> by Michael Asher</p>
+<p class="p8"> </p>
+<p class="p44"><a href="http://www.ucsusa.org/"><b>Union of Concerned Scientists of the USA</b></a></p>
+<p class="p3"><span class="s45"><a href="http://www.ucsusa.org/global_warming/"><b>Globa; Warming</b></a></span><span class="s46"><b> </b></span><b>What causes global warming? We do.</b></p>
+<p class="p8"> </p>
+<p class="p1"><a href="http://www.google.com/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=11&amp;ved=0CDAQFjAAOAo&amp;url=http%3A%2F%2Fwww.libertygospeltracts.com%2Ftracts%2FGlobal%20Warming%2Fglobalwarming.htm&amp;ei=kc-HUOqeLeSP0QHn64CQAQ&amp;usg=AFQjCNGreyvq4aQ6vChi3PVuRtKjz83RjQ&amp;sig2=9TaIeVGpM2xmIHl5NEkphQ"><b>Liberty <i>Gospel</i> Tracts - <i>Gospel</i> Tract - <i>Global Warming</i></b></a></p>
+<p class="p8">Liberty <i>Gospel</i> Tracts, This <i>gospel</i> tract contains information about the deceit of <i>global warming</i>.</p>
+<p class="p8"> </p>
+<p class="p31"><a href="http://www.c3headlines.com/2012/03/modern-global-cooling-2012-winter-is-2nd-coldest-in-last-15-years-by-2100-winters-might-be-1-degree-.html"><b>C3 Headlines</b></a></p>
+<p class="p45"> </p>
+<p class="p1"><a href="http://www.google.com/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=6&amp;ved=0CEwQFjAF&amp;url=http%3A%2F%2Fwww.c3headlines.com%2Fglobal-warming-quotes-climate-change-quotes.html&amp;ei=k5eTUK7mF_K50QHYroDADg&amp;usg=AFQjCNGdJNYmnoWo1WXBjahMG5zNfhbhww&amp;sig2=XrQTXkPpoQRHyvDpErOeRg"><b>C3: Global Warming Quotes &amp; <i>Climate</i> Change Quotes:</b></a></p>
+<p class="p3">Human-Caused Global Warming Advocates/Supporters</p>
+<p class="p45"> </p>
+<p class="p1"><a href="http://www.google.com/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=23&amp;ved=0CDAQFjACOBQ&amp;url=http%3A%2F%2Fwww.plantsneedco2.org%2Fdefault.aspx%3Fmenuitemid%3D370&amp;ei=M5OIUPTEL8650QHduYCQDw&amp;usg=AFQjCNHAd6yoW0pLfEnsnA20YerU-g--qg&amp;sig2=OFN8TSt0TesFk3VvJNs4Zw"><b>Pollution Myths - <i>CO2</i> is NOT a <i>Pollutant</i> or Air Pollution - It's the ...</b></a></p>
+<p class="p8">Of all the myths quoted, calling <i>carbon dioxide</i> a <i>pollutant</i> is the worst - it simply is not true!</p>
+<p class="p8">Myth: <i>CO2</i> is a <i>pollutant</i>. Fact: Totally false. We challenge you to <b>...</b></p>
+<p class="p46"> </p>
+<p class="p1"><a href="http://skinnyreporter.com/goreglobalcooling.html"><b>Gore: Now it's <i>global cooling</i> - Obamas: School lunch rations are first ...</b></a></p>
+<p class="p8">Gore Blames <i>Global Cooling</i> on Carbon <b>...</b> in Africa must walk long distances and people in India are</p>
+<p class="p8">forced to burn <i>cow</i> chips to heat their humble homes.</p>
+<p class="p8"> </p>
+<p class="p19"><a href="http://www.globalwarminghysteria.com/ten-myths-of-global-warming/"><b>TEN MYTHS of <i>Global Warming</i> - <i>Global Warming</i> Hysteria</b></a></p>
+<p class="p9"><span class="s47"> <a href="http://www.google.com/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=17&amp;ved=0CGgQFjAGOAo&amp;url=http%3A%2F%2Fwww.globalwarminghysteria.com%2Fhome%2F&amp;ei=qOfRUJj9Ccqt0AHj_YDIBg&amp;usg=AFQjCNHq2dI40xuuVQK4cJU7aDB2nyWlWg&amp;sig2=ZW7nWtilOb8Nwcq6CAqhSQ&amp;bvm=bv.1355534169,d.dmQ"><span class="s13"><b>HOME - <i>Global Warming Hysteria</i></b></span></a></span></p>
+<p class="p13"><i>Global Warming Hysteria</i> (cooled). Log in · RSS news feed · Email. MY NEW E-BOOK JUST PUBLISHED (March 2012). Power Politics reveals that pretty much <b>...</b></p>
+<p class="p11"><br></p>
+<p class="p3"><span class="s48"><a href="http://calvarysc.publishpath.com/academicbreakoutsessions#roe"><b>More No More -</b></a></span><span class="s13"> John Roe   </span>Calvary Baptist Church Gray's Woods</p>
+<p class="p8">The call for “more” lies at the foundation of modern, Western society. Whatever our feelings about individual avarice, there is near universal agreement that society benefits from “growth”</p>
+<p class="p8">– that is from producing more, consuming more, extracting more, wasting more. But unending growth in this sense is not an option on this finite planet, and the time will come when “more”</p>
+<p class="p8">is no more. What will then become of the economic “gods” in which we have put our trust? And how can Western Christians learn to take seriously Paul’s confession that “I know what it is</p>
+<p class="p8">to be in need, and I know what it is to have plenty. I have learned the secret of being content in any and every situation.”?</p>
+<p class="p8"> </p>
+<p class="p8"> </p>
+<p class="p1"><a href="http://www.google.com/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=10&amp;ved=0CGYQFjAJ&amp;url=http%3A%2F%2Fwww.green-agenda.com%2Fglobalrevolution.html&amp;ei=o1qSULf3Hebl0QHD_4D4Ag&amp;usg=AFQjCNGThqv_BJDCHjlEiZypzOkf-Wy7bw&amp;sig2=68ZrKfknH8ZoCJ0qa7nwEg"><b>The Green Agenda - The First Global Revolution</b></a></p>
+<p class="p8">Gore lead the US delegations to the Rio Earth Summit and Kyoto <i>Climate</i> Change conference.</p>
+<p class="p8">He chaired a meeting of the full <i>Club</i> of <i>Rome</i> held in Washington <b>...</b></p>
+<p class="p8"> </p>
+<p class="p8"><span class="s2"><a href="http://www.google.com/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=1&amp;ved=0CCEQFjAA&amp;url=http%3A%2F%2Fwww.green-agenda.com%2F&amp;ei=YSGVUN2zDPON0QHozoCwCA&amp;usg=AFQjCNHcAohymV_3bNnWRB-ooKLUdRzYZA&amp;sig2=Vw1018wBVKL6J639bh9k6A"><b>The </b><b><i>Green Agenda</i></b></a></span> A website charting the rise of the global environmental movement and its future political <i>agenda</i>.</p>
+<p class="p47">Apart from ignoring the giant ball of fire in the sky, Global Warming alarmists also overlook a few other inconvenient truths. They ignore the fact the natural emissions</p>
+<p class="p47">of carbon dioxide into the atmosphere far exceed human contributions. In fact humans contribute a measly 0.035% of the total annual carbon flux. Any system that</p>
+<p class="p47">can be perturbed by such a tiny fluctuation would be very unstable indeed. They also ignore the fact that water vapour is by far the most dominant greenhouse gas.</p>
+<p class="p47">The atmosphere consists of 40,000 ppm of water vapour, whereas carbon dioxide weighs in at a miniscule 380 ppm. Instead they rely on dubious computer models that</p>
+<p class="p47">the IPCC itself admits exclude complex parts of the climate system that they don’t yet understand.</p>
+<p class="p8"> </p>
+<p class="p47">The Global Warming <a href="http://www.petitionproject.org/"><span class="s8">Petition Project</span></a></p>
+<p class="p48"><span class="s1">“</span>There is no convincing scientific evidence that human release of carbon dioxide, methane, or other greenhouse gasses is causing or will, in the foreseeable future, cause</p>
+<p class="p48">catastrophic heating of the Earth's atmosphere and disruption of the Earth's climate. Moreover, there is substantial scientific evidence that increases in atmospheric carbon</p>
+<p class="p48">dioxide produce many beneficial effects upon the natural plant and animal environments of the Earth<span class="s1">.”</span></p>
+<p class="p47"> </p>
+<p class="p1"><a href="http://www.google.com/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=13&amp;ved=0CC0QFjACOAo&amp;url=http%3A%2F%2Fobjectivistindividualist.blogspot.com%2Fp%2Ffalse-catastrophic-man-made-global.html&amp;ei=CtGYUI7VCarh0wH904CgDA&amp;usg=AFQjCNFBMSsHP4fRPKdYHnkfdQjCRhtxWw&amp;sig2=bHEys3ORTfb867DAj0k4xg"><b>An <i>Objectivist</i> Individualist: Evaluating the Catastrophic Man-Made ...</b></a></p>
+<p class="p8">He is a materials physicist, a benevolent and tolerant <i>Objectivist</i>, a husband and a <b>.....</b> Water provides a great balancing effect to the <i>climate</i> and very effectively <b>...</b></p>
+<p class="p8"><b> </b></p>
+<p class="p49"><a href="http://www.greenparty.org/climate.html"><b>Global Climate Change </b></a><span class="s1">Green Party USA</span></p>
+<p class="p50"><br></p>
+<p class="p51"><a href="http://www.peta.org/features/environmental-warning-meats-not-green.aspx"><b>Environmental Warning: Meat's Not Green | <i>PETA</i>.org</b></a></p>
+<p class="p52">A recent United Nations report concluded that a global shift toward a vegan diet is necessary to combat the worst effects of <i>climate</i> change......</p>
+<p class="p53"><br></p>
+<p class="p51"><a href="http://www.peta.org/issues/animals-used-for-food/global-warming.aspx"><b>Fight Global Warming by Going Vegetarian | <i>PETA</i>.org</b></a></p>
+<p class="p52">Joanna Krupa Gets Sort of Naked for <i>PETA</i> <b>...</b> report concluded that a global shift toward a vegan diet is necessary to combat the worst effects of <i>climate</i> change.</p>
+<p class="p53"><br></p>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; color: #0000ee"><a href="http://arctic.atmos.uiuc.edu/cryosphere/"><b><i>Polar</i> Sea Ice <i>Cap</i> and Snow - Cryosphere Today</b></a></h3>
+<p class="p13"><i>Polar</i> Arctic and Antarctic sea ice <i>cap</i> and snow cover current conditions. <b>...</b> N. hemispheric ice <i>area</i>. Northern Hemisphere sea ice <i>area</i> <b>...</b></p>
+<p class="p54"><br></p>
+<p class="p14"><a href="http://www.google.com/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=1&amp;ved=0CDAQFjAA&amp;url=http%3A%2F%2Fwww.bibliotecapleyades.net%2Fsociopolitica%2Fesp_sociopol_depopu22.htm&amp;ei=Ct29ULj7BMrL0QGfQw&amp;usg=AFQjCNHAnIcSKDE2_XK6Y7kFLB9-zAnAcQ&amp;sig2=w5f-EU1lsrflE30ybZHEWA"><b>The Myth of Planetary <i>Overpopulation</i></b></a></p>
+<p class="p13">With the rise of Communism, welfare states, <i>fascism</i> and international <b>...</b> it is quite apparent that the myth of <i>overpopulation</i> is a form of attack on this same free <b>...</b></p>
+<p class="p11"><br></p>
+<p class="p14"><span class="s49"> <a href="http://www.overpopulationawareness.org/kenya/en/videos/overpopulation/ironic-subliminal-in-eco-fascist-propaganda-cartoon-captain-planet_6814.html"><span class="s23"><b>Video's | Ironic Subliminal in Eco <i>Fascist</i> Propaganda Cartoon ...</b></span></a></span></p>
+<p class="p13">Videos Description The implication being that Environmentalism lacks Heart. Back...</p>
+<p class="p26"><br></p>
+<p class="p55"><span class="s7"><a href="http://www.bibliotecapleyades.net/ciencia/ciencia_globalwarmingpseudo.htm">Global Warming - An Official <span class="s50"><b>Pseudoscience</b></span><span class="s51">... - Calentamiento </span><span class="s50"><b>...</b></span></a></span></p>
+<p class="p56"><span class="s1"><b>Climate</b></span> Change - A Summary of The Science. - <span class="s1"><b>Climate</b></span> Change - Concocting The <b>...</b>"Global Warming" - An Official <span class="s1"><b>Pseudoscience</b></span>. - Global Warming Data <b>...</b></p>
+<p class="p57"><br></p>
+<p class="p58"><a href="http://www.middlebury.net/op-ed/global-warming-01.html"><b>The Middlebury Community Network</b></a></p>
+<p class="p57"><br></p>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; color: #0000ee"><a href="http://grist.org/series/skeptics/"><b>How to <i>Talk</i> to a <i>Climate Skeptic</i>: Responses to the most common ...</b></a></h3>
+<p class="p13">Below is a complete listing of the articles in “How to <i>Talk</i> to a <i>Climate Skeptic</i>,” a series by Coby Beck containing responses to the most common skeptical <b>...</b></p>
+<p class="p26"><br></p>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; color: #0000ee"><a href="http://wiki.answers.com/Q/What_is_the_difference_between_science_and_pseudoscience"><b>What is the difference between science and <i>pseudoscience</i></b></a></h3>
+<p class="p13"><i>Pseudoscience</i> is where determinations of what we want or desire is made and we take available <b>...</b> Man induced <i>Global Warming</i> is an example of this.</p>
+<p class="p57"><br></p>
+<p class="p59"><a href="http://www.globalclimate.co.uk/"><b>Global Climate Change</b></a><span class="s52"><b> UK</b></span></p>
+<p class="p60"><br></p>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; color: #0000ee"><a href="http://www.google.com/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=6&amp;ved=0CF4QFjAF&amp;url=http%3A%2F%2Fwww.creationtips.com%2Fglobal_warming.html&amp;ei=JfHNUOyZNYf00QGL0YH4Cw&amp;usg=AFQjCNERuPGJdisJvQ321D8unkAZut1pHg&amp;sig2=l5VrbvRlX7eOZ4ZwUluIPQ&amp;bvm=bv.1355325884,d.dmQ"><b><i>Global</i> warming skeptic links</b></a></h3>
+<p class="p13">Links to articles and videos by <i>global</i> warming skeptics, legitimate doubters, and <b>...</b> FORMER PRESIDENT Bill <i>Clinton</i> noted in his speech to the Gridiron Dinner on <b>...</b><span class="Apple-converted-space"> </span></p>
+<p class="p13">Medieval times than it is now — and world has been <i>cooling</i> for 2,000 years <b>...</b></p>
+<p class="p60"><br></p>
+<p class="p59"><span class="s5"><a href="http://www.youtube.com/user/ClimateScam">http://www.youtube.com/user/ClimateScam<span class="s53"></span></a></span></p>
+<p class="p60"><br></p>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; color: #0000ee"><a href="http://www.google.com/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=18&amp;ved=0CGoQFjAHOAo&amp;url=http%3A%2F%2Fwww.globalclimatescam.com%2Fcategory%2Fjames-hansen%2F&amp;ei=NJnQUOXQJ4m00AGhiIH4Bw&amp;usg=AFQjCNFksUJ9mXAiIl53FkGqbrbqSZo05Q&amp;sig2=5KpR1TdTR1Ji0PdvJZz_xg&amp;bvm=bv.1355534169,d.dmQ"><b>Global <i>Climate Scam</i> » Archive for James Hansen</b></a></h3>
+<p class="p13">By Mike Ciandella. James Hansen's been screaming for years that the sky is falling. For years, the Sky has refused to fall. But that's OK with CNN. CNN ran a <b>...</b></p>
+<p class="p26"><br></p>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; color: #0000ee"><a href="http://www.google.com/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=22&amp;ved=0CDwQFjABOBQ&amp;url=http%3A%2F%2Fwww.globalclimatescam.com%2Fcategory%2Fal-gore%2F&amp;ei=VZrQUK2QPKaT0QGO4oCwCA&amp;usg=AFQjCNEutz4GMbEjMqWP31VdBRDdk8BFpg&amp;sig2=UxDjico50RspGDfNVzLMBQ&amp;bvm=bv.1355534169,d.dmQ"><b>Global <i>Climate Scam</i> » Archive for Al Gore</b></a></h3>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times">Al Gore said Tuesday that Hurricane Sandy is a “disturbing sign of things to come” in a warming world and should prompt action to curb greenhouse gas <b>...</b></h3>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; min-height: 14.0px"><br></h3>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; color: #0000ee"><a href="http://www.globalclimatescam.com/category/ipcc/"><b>Global <i>Climate Scam</i> » Archive for IPCC</b></a></h3>
+<p class="p13">Allegations of a “surge” in “extreme” weather events has been quashed by a surprising source – the Intergovernmental Panel on Climate Change (IPCC).</p>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; min-height: 14.0px"><br></h3>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; color: #0000ee"><a href="http://www.globalclimatescam.com/category/michael-mann/"><b>Global <i>Climate Scam</i> » Archive for Michael Mann</b></a></h3>
+<p class="p13">Dr. Michael Mann was welcomed to Minneapolis today by a group of demonstrators who blame Dr. Mann's research and publications for damage to the US and <b>...</b></p>
+<p class="p26"><br></p>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; color: #0000ee"><a href="http://www.google.com/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=29&amp;ved=0CHEQFjAIOBQ&amp;url=http%3A%2F%2Fwww.globalclimatescam.com%2Fcategory%2Fmisguided-leaders%2F&amp;ei=j9DQUKjNK8bX0QG_0YCYBw&amp;usg=AFQjCNGB8GdfsEjuBL9l8N2RM-Ca-nedQg&amp;sig2=3fITFqc7byNivolCwDjdSQ&amp;bvm=bv.1355534169,d.dmQ"><b>Global <i>Climate Scam</i> » Archive for Misguided Leaders</b></a></h3>
+<p class="p13">Archive for the “Misguided Leaders” Category. « Previous Entries. Jul 23 2012 <b>...</b> Posted by Dan McGrath in Misguided Leaders, Wind Power. By John Murawski <b>...</b></p>
+<p class="p26"><br></p>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; color: #0000ee"><a href="http://www.globalclimatescam.com/category/al-gore/"><b>Global <i>Climate Scam</i> » Archive for Al Gore</b></a></h3>
+<p class="p13">Al Gore said Tuesday that Hurricane Sandy is a “disturbing sign of things to come” in a warming world and should prompt action to curb greenhouse gas <b>...</b></p>
+<p class="p26"><br></p>
+<p class="p9"><a href="http://www.globalclimatescam.com/category/global-cooling/page/2/"><b>Global Climate Scam » Archive for <i>Global Cooling</i></b></a></p>
+<p class="p13">'Expect <i>global cooling</i> for the next 2-3 decades that will be far more damaging <b>.....</b> <i>Bush</i>, it is widely accepted, went into Iraq based on his advisorsâ€™ belief that <b>...</b></p>
+<p class="p57"><br></p>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; color: #0000ee"><a href="http://www.globalclimatescam.com/category/science/"><b>Global <i>Climate Scam</i> » Archive for Science</b></a></h3>
+<p class="p13">The newest revelation, amongst many in the last several years that have muffled the global warming chants of “settled science, settled science, settled science,” <b>...</b></p>
+<p class="p26"><br></p>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; color: #0000ee"><a href="http://www.john-daly.com/history.htm"><b>The History of the <i>Global Warming Scare</i> - Still Waiting For ...</b></a></h3>
+<p class="p13">An analysis of how the <i>global warming scare</i> developed, beginning inthe UK with the support of Margaret Thatcher.</p>
+<p class="p26"><br></p>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; color: #0000ee"><a href="http://www.bibliotecapleyades.net/ciencia/ciencia_globalwarming.htm"><b>The <i>Global Warming Scare</i></b></a></h3>
+<p class="p13">The UK's chief scientist Sir David King has said that <i>global warming</i> is so serious that Antarctica is likely to be the world's only habitable continent by the end of <b>...</b></p>
+<p class="p26"><br></p>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; color: #0000ee"><a href="http://www.google.com/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=15&amp;ved=0CGEQFjAEOAo&amp;url=http%3A%2F%2Fwww.youtube.com%2Fplaylist%3Flist%3DPLF30BA6D12C32F604&amp;ei=pPPSULzUHNO00QHgx4GQBQ&amp;usg=AFQjCNH7Y4BsMCZ73cXM3uCnIryE1iGSnw&amp;sig2=4szjEIey3do2Wv2HZsZfGA&amp;bvm=bv.1355534169,d.dmQ"><b><i>Global Warming Lies</i> - YouTube</b></a></h3>
+<p class="p13">Learn the truth about the <i>Global Warming</i> Movement.</p>
+<p class="p57"><br></p>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; color: #0000ee"><a href="http://www.globalwarminglies.com/MoreFacts.html"><b>Global Warming facts and charts - <i>Global Warming Lies</i></b></a></h3>
+<p class="p13">Global Warming Scientists <b>...</b> <i>Global Warming Lies</i> <b>...</b> Carbon Dioxide · Solar Flare · Global Warming Shirt · Global Warming Facts · Angel · Global Warming <b>...</b></p>
+<p class="p26"><br></p>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; color: #0000ee"><a href="http://www.globalwarminglies.com/"><b><i>Global Warming Lies</i> facts and myths and truths</b></a></h3>
+<p class="p13"><i>global warming lies</i> and why carbon dioxide is good for the environment and for the world. Also why the sun is the main factor for why the earth is warming.</p>
+<p class="p57"><br></p>
+<h3 style="margin: 0.0px 0.0px 14.0px 0.0px; font: 14.0px Times; color: #0000ee"><a href="http://www.google.com/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=12&amp;ved=0CD4QFjABOAo&amp;url=http%3A%2F%2Fwww.skepticalscience.com%2Fskeptic_Bob_Carter.htm&amp;ei=HQPTUP_vCoq70QH7r4GoBw&amp;usg=AFQjCNFXiUDdZvoWO5bqnXeCKwTBHod6DQ&amp;sig2=kSel23xH-F0dxCDMRenQRQ&amp;bvm=bv.1355534169,d.dmQ"><b><i>Global</i> warming skeptic: Bob <i>Carter</i></b></a></h3>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; color: #0000ee"><a href="http://www.google.com/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=5&amp;ved=0CFsQFjAE&amp;url=http%3A%2F%2Fwww.climatecooling.org%2F&amp;ei=VgXTULagKObC0QHU0YGYCA&amp;usg=AFQjCNE0TThZKX8yk0C_dKxt_QoCcCBEww&amp;sig2=ViMxNVkUgItPZigH3rV6Dw&amp;bvm=bv.1355534169,d.dmQ"><b>Climate <i>Cooling</i>, the Other Side of Climate Change Science: <i>Global</i> ...</b></a></h3>
+<p class="p13"><i>Global Cooling</i> Facts- the monster of climate change. An impact assessment scientist tells about global climate cooling facts.</p>
+<p class="p57"><br></p>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; color: #0000ee"><a href="http://www.google.com/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=122&amp;ved=0CD0QFjABOHg&amp;url=http%3A%2F%2Fthenewalexandrialibrary.com%2Fdepopulation.html&amp;ei=k_DVUK-3DIyL0QGJ94GgDA&amp;usg=AFQjCNE3ZxpsdSyqu_oKIFbVXzfJNjsnjQ&amp;sig2=4ULmnonK1n1z2oqZUJOwqw&amp;bvm=bv.1355534169,d.dmQ"><b>DEPOPULATION AGENDA</b></a></h3>
+<p class="p13">John <i>Holdren</i>, (Obama's Science Czar) Eco-science, Population, Resources, <b>.....</b> <i>climate change</i> and a very uncertain future for all of us – <i>humans</i> and all other life <b>....</b><span class="Apple-converted-space"> </span></p>
+<p class="p13">To discuss killing 90% of the world's population via a horrific <i>plague</i> is sick <b>...</b></p>
+<p class="p57"><br></p>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; color: #0000ee"><a href="http://www.google.com/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=494&amp;ved=0CEsQFjADOOoD&amp;url=http%3A%2F%2Fwww.createdebate.com%2Fdebate%2Fshow%2FHumans_are_Responsible_for_Global_Warming&amp;ei=Y_fVUPbBOuuM0QGmoYCYCg&amp;usg=AFQjCNFx7OqzrZ9esOSqCUfkAWRhzLle3A&amp;sig2=SRSEIhFPQGYqOKa-tM16hA&amp;bvm=bv.1355534169,d.dmQ"><b>Humans are <i>Responsible</i> for Global Warming | CreateDebate</b></a></h3>
+<p class="p13">Debate about Humans are <i>Responsible</i> for Global Warming: Yes or No. <b>...</b> He tells us global warming will turn <i>hurricanes</i> into super storms, produce <b>...</b><span class="Apple-converted-space"> </span></p>
+<p class="p13">We are supposed to be in a panic about <i>man</i>-made global warming and the whole thing <b>...</b></p>
+<p class="p57"><br></p>
+<p class="p62"><a href="http://www.aip.org/history/climate/index.htm#contents"><b>The Discovery of Global Warming</b></a></p>
+<p class="p13">This Website created by <a href="http://www.aip.org/history/climate/author.htm"><span class="s7">Spencer Weart</span></a> supplements his much shorter <a href="http://www.aip.org/history/climate/reviews.htm"><span class="s7">book</span></a>,</p>
+<p class="p26"><br></p>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; color: #0000ee"><a href="http://www.google.com/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=15&amp;ved=0CGcQFjAEOAo&amp;url=http%3A%2F%2Fwww.freestaterevolution.com%2F%3Fpage_id%3D546&amp;ei=pyvYUMygG7Oz0QGLnIGwDA&amp;usg=AFQjCNEmcWcfYXdyglwHkI25V8SzmBYgJA&amp;sig2=6hCLZj_q7nEAibUhWWXPAA&amp;bvm=bv.1355534169,d.dmQ"><b>Free State Revolution - The <i>Global Warming</i> Travesty</b></a></h3>
+<p class="p13">The “<i>global warming cult</i>” has taken us to a place where humans are demonized, capitalism is “evil”, and science is put on the back burner while politics and <b>...</b></p>
+<p class="p26"><br></p>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; color: #0000ee"><a href="http://www.google.com/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=17&amp;ved=0CHUQFjAGOAo&amp;url=http%3A%2F%2Fwww.randyrobison.com%2Fcultofglobalwarming.html&amp;ei=pyvYUMygG7Oz0QGLnIGwDA&amp;usg=AFQjCNHuTfLTUUw55eyjOto02C5kd8JdlQ&amp;sig2=_crG7KScOhS6FDStGEv2BA&amp;bvm=bv.1355534169,d.dmQ"><b>The <i>Cult</i> of <i>Global Warming</i></b></a></h3>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times">The <i>Cult</i> of <i>Global Warming</i>. For years, the concept of <i>Global Warming</i> was just a scientific theory based on anecdotal evidence, climate models, extrapolations <b>...</b></h3>
+<p class="p26"><br></p>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; color: #0000ee"><a href="http://www.google.com/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=20&amp;ved=0CI0BEBYwCTgK&amp;url=http%3A%2F%2Fwww.anunews.net%2Fblog%2F%3Fcat%3D47&amp;ei=pyvYUMygG7Oz0QGLnIGwDA&amp;usg=AFQjCNFDu9KzNDLTvKZknhLlV_NcnDx98A&amp;sig2=Cq_uWmO1OWD1QEIhbX3n4Q&amp;bvm=bv.1355534169,d.dmQ"><b>ANU News.net <i>Global Warming Cult</i></b></a></h3>
+<p class="p13"><i>Global Warming Cult</i> Watch: 1923 Shock News — Arctic Melting — 'Radical Change in Climatic Conditions'. Propagandists, liars, alarmists and extremists have <b>...</b></p>
+<p class="p26"><br></p>
+<h3 style="margin: 0.0px 0.0px 14.0px 0.0px; font: 12.0px Times"><span class="s36"><a href="http://www.google.com/aclk?sa=L&amp;ai=Ct9yhCDbYUJSpF8_L6QGRqYGYDdvfpL8Co-3wmzu--oCKAQgDEAFQsM7etPj_____AWDJnq6M0KT8EZABB8gBAaoEIU_QaxjKCo2i5pqUpcl30DPdLVSHysXGC0lPGNi1RJ37C4AHtZryFw&amp;sig=AOD64_0Z7ObC9oBmnL4iE9X20n2Wgk6S1A&amp;ved=0CIQBENEMODw&amp;adurl=http://climatechange.procon.org&amp;rct=j&amp;q=plague+aspects+of+humans+climate"><b>Cause of Climate Change?</b></a></span><span class="s23"><b> </b></span>Are <b>humans</b> causing <b>Climate</b> Change? Facts, quotes, pros and cons.</h3>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; color: #0000ee"><a href="http://www.ronpaul.com/on-the-issues/global-warming/"><b>Global Warming - <i>Ron Paul</i> .com</b></a></h3>
+<p class="p13">After additional consideration and analysis and shortly before the release of the <i>Climategate</i> emails in late 2009, <i>Ron Paul</i> identified the artificial panic around <b>...</b></p>
+<p class="p57"><br></p>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; color: #0000ee"><a href="http://www.jaydax.co.uk/imho/globalwarmingbut.htm"><b><i>Global Warming</i>... but!</b></a></h3>
+<p class="p13">Everyone thinks 'they' should do something about <i>Global Warming</i> but are we being <b>...</b> Last minimum was April 2008 and the next maximum is expected <i>2013</i>.</p>
+<p class="p57"><br></p>
+<p class="p27"><a href="http://climate.rutgers.edu/"><b>Rutgers University Climate Lab</b></a></p>
+<p class="p20"><span class="s5"><a href="file:///Users/anchik2/Library/Mail%20Downloads/index.php">GLOBAL SNOW LAB<span class="s21"></span></a></span></p>
+<p class="p64"><br></p>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 16.0px Times; color: #0000ee"><a href="http://www.google.com/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=1&amp;ved=0CDgQFjAA&amp;url=http%3A%2F%2Fwww.woodfortrees.org%2F&amp;ei=oo34UMyDH6rl0QHG-4H4AQ&amp;usg=AFQjCNFSCRGtM2bMH09-BlL4teQpwFRpIA&amp;sig2=C702JN9sMCb9odCYOuNn9w&amp;bvm=bv.41248874,d.dmQ"><b><i>Wood for Trees</i>: Home</b></a></h3>
+<p class="p13">Welcome to <i>WoodForTrees</i>.<i>org</i>. This site hosts some C++ software tools for analysis and graphing of time series data, and an interactive graph generator where <b>...</b></p>
+<p class="p57"><br></p>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; color: #0000ee"><a href="http://www.google.com/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=1&amp;ved=0CDkQFjAA&amp;url=http%3A%2F%2Fwww.average-temperature.com%2F&amp;ei=fa4AUbCVI4XB0AHrw4CoCw&amp;usg=AFQjCNHDdwI6usL0_LsGknJ72qUAeAoaJw&amp;sig2=-bmM-E10164ZBT1R_4OhdQ&amp;bvm=bv.41248874,d.dmQ"><b>Average Temperature | <i>US Average Temperatures</i> | International ...</b></a></h3>
+<p class="p13">Allows the user to access <i>average temperature</i> data by month for virtually any location in the world.</p>
+<p class="p26"><br></p>
+<p class="p57"><br></p>
+<p class="p59"><a href="http://www.co2isgreen.org/"><b>CO</b><span class="s54"><b><sub>2 </sub></b></span><b>is green</b></a></p>
+<p class="p60"><br></p>
+<p class="p59"><a href="http://www.plantsneedco2.org/"><b>Carbon dioxide is green</b></a></p>
+<p class="p57"><br></p>
+<p class="p57"><br></p>
+<p class="p65"><a href="http://johncarlosbaez.wordpress.com/"><b>Azimuth</b></a></p>
+<p class="p57"><br></p>
+<h1 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 18.0px Arial; color: #0000ee"><a href="http://www.doomsdayguide.org/climate_warming.htm"><b><i>Global Warming Doomsday</i></b></a></h1>
+<p class="p66"><b><i>A Global Warming Disaster is cooking.</i></b></p>
+<p class="p67"><br></p>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; color: #0000ee"><a href="http://www.google.com/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=1&amp;ved=0CD8QFjAA&amp;url=http%3A%2F%2Fwww.globalwarminghysteria.com%2Ften-myths-of-global-warming%2F&amp;ei=Y4pNUefGHbW24AOiw4CwCg&amp;usg=AFQjCNEAzc8H92Tljr_tXBAjYswsv2kArw&amp;sig2=CtDjBKS77oI9LCXa3q6igw"><b>TEN <i>MYTHS of Global Warming</i> - <i>Global Warming</i> Hysteria</b></a></h3>
+<p class="p13"><i>GREAT</i> MATERIALS - to buy! The Dark Side of <b>...</b> TEN <i>MYTHS of Global Warming</i> · A page of <b>...</b> Senator James Inhofe's press blog (<i>Global Warming</i>). Ranking <b>...</b></p>
+<p class="p26"><br></p>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; color: #0000ee"><a href="http://www.google.com/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=3&amp;ved=0CFEQFjAC&amp;url=http%3A%2F%2Fwww.biblebelievers.org.au%2Fgreen.htm&amp;ei=Y4pNUefGHbW24AOiw4CwCg&amp;usg=AFQjCNEndqfF8C_I0XzDfiUogTlS3ugRSw&amp;sig2=Rlrz5Lnji--C3ZVgKSlH7g"><b><i>MYTHS OF GLOBAL WARMING</i></b></a></h3>
+<p class="p13"><i>Myth</i> #2: Humans Are Causing <i>Global Warming</i>. Scientists do not agree that human activity measurably affects global climate. The evidence supporting this <b>...</b></p>
+<p class="p26"><br></p>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; color: #0000ee"><a href="http://topdocumentaryfilms.com/great-global-warming-swindle/"><b>The <i>Great Global Warming</i> Swindle | Watch Free Documentary Online</b></a></h3>
+<p class="p13">From melting glaciers and rising sea levels, The <i>Great Global Warming</i> Swindle debunks the <i>myths</i>, and exposes what may well prove to be the darkest chapter <b>...</b></p>
+<p class="p26"><br></p>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; color: #0000ee"><a href="http://www.globalwarminghoax.com/"><b><i>Global Warming</i> Hoax: News</b></a></h3>
+<p class="p13"><i>Global Warming</i> Hoax - News and Information Source regarding the <i>myth</i> of <i>Global Warming</i>. Concentrating on the insignificance of man in the warming <b>...</b></p>
+<p class="p26"><br></p>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; color: #0000ee"><a href="http://www.modernvedicastrology.com/node/189"><b>The <i>Astrology</i> of <i>Climate Change</i> | Modern Vedic <i>Astrology</i></b></a></h3>
+<p class="p13"><i>Astrology</i> can offer a unique window on this phenomenon both in terms of understanding the recent historical dynamics and the likely outcome of <i>climate change</i> <b>...</b></p>
+<p class="p26"><br></p>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; color: #0000ee"><a href="http://www.thespoof.com/news/science-technology/48555/japenese-use-astrology-to-refute-climate-change"><b>Japenese use <i>Astrology</i> to refute <i>Climate Change</i> - TheSpoof.com</b></a></h3>
+<p class="p13">Japenese use <i>Astrology</i> to refute <i>Climate Change</i> : Japanese Climate Scientis Saki Inbiba has poured scorn on the findings of the International Panel on <b>...</b></p>
+<p class="p26"><br></p>
+<h1 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 21.0px Times; color: #0000ee"><a href="http://www.faqs.org/faqs/sci/climate-change/basics/"><b>Climate change: some basics</b></a></h1>
+<p class="p69">Jan Schloerer jan.schloerer@medizin.uni-ulm.de</p>
+<h1 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 24.0px Times; min-height: 29.0px"><br></h1>
+<p class="p33"><span class="s5"><a href="http://www.wmconnolley.org.uk/sci/mbh/">Hockey stick stuff<span class="s55"></span></a></span></p>
+<p class="p26"><br></p>
+<p class="p20"><a href="http://climatedebatedaily.com/"><b>Climate Debate Daily</b></a></p>
+</body>
+</html>

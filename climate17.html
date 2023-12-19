@@ -1,0 +1,975 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="1265.21">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 23.0px Times; color: #0000ee}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 18.0px Times; color: #0000ee}
+    p.p3 {margin: 0.0px 0.0px 0.0px 0.0px; font: 15.0px Times; color: #0f3bee}
+    p.p4 {margin: 0.0px 0.0px 0.0px 0.0px; font: 17.0px Times; color: #0000ee}
+    p.p5 {margin: 0.0px 0.0px 0.0px 0.0px; font: 17.0px Times; color: #0f3bee; min-height: 20.0px}
+    p.p6 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px Helvetica; color: #0000ee}
+    p.p7 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px Times; color: #042eee; min-height: 16.0px}
+    p.p8 {margin: 0.0px 0.0px 0.0px 0.0px; font: 19.0px Times; color: #0000ee}
+    p.p9 {margin: 0.0px 0.0px 0.0px 0.0px; font: 16.0px Times; color: #0000ee}
+    p.p10 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px Georgia}
+    p.p11 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px Georgia; min-height: 15.0px}
+    p.p12 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px Times}
+    p.p13 {margin: 0.0px 0.0px 0.0px 0.0px; font: 11.0px Times; min-height: 13.0px}
+    p.p14 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px Times; color: #0000ee}
+    p.p15 {margin: 0.0px 0.0px 0.0px 0.0px; font: 11.0px Times}
+    p.p16 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px Times; min-height: 16.0px}
+    p.p17 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; color: #0000ee}
+    p.p18 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times}
+    p.p19 {margin: 0.0px 0.0px 0.0px 0.0px; font: 20.0px Times; color: #0000ee}
+    p.p20 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px Times; color: #0f3bee; min-height: 16.0px}
+    p.p21 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times}
+    p.p22 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; min-height: 18.0px}
+    p.p23 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; color: #0433ff}
+    p.p24 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; color: #0433ff; min-height: 14.0px}
+    p.p25 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; min-height: 14.0px}
+    p.p26 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; color: #0433ff; min-height: 18.0px}
+    p.p27 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; color: #0000ee}
+    p.p28 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Helvetica; color: #0000ee}
+    p.p29 {margin: 0.0px 0.0px 0.0px 0.0px; font: 17.0px Times; color: #042eee; min-height: 20.0px}
+    p.p30 {margin: 0.0px 0.0px 0.0px 0.0px; font: 18.0px Arial; color: #0000ee}
+    p.p31 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Arial; color: #545454}
+    p.p32 {margin: 0.0px 0.0px 0.0px 0.0px; font: 20.0px Times; color: #042eee; min-height: 24.0px}
+    p.p33 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 18.0px Times; color: #042eee}
+    p.p34 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 13.0px Times; color: #042eee; min-height: 16.0px}
+    p.p35 {margin: 0.0px 0.0px 0.0px 0.0px; font: 11.0px Times; color: #0000ee}
+    p.p36 {margin: 0.0px 0.0px 0.0px 0.0px; font: 15.0px Times; color: #0000ee}
+    p.p37 {margin: 0.0px 0.0px 0.0px 0.0px; font: 20.0px Times; color: #042eee}
+    p.p38 {margin: 0.0px 0.0px 0.0px 0.0px; font: 18.0px Times; color: #0f3bee}
+    p.p39 {margin: 0.0px 0.0px 0.0px 0.0px; font: 17.0px Helvetica; color: #134fae}
+    p.p40 {margin: 0.0px 0.0px 0.0px 0.0px; font: 24.0px Times; color: #0000ee}
+    p.p41 {margin: 0.0px 0.0px 14.0px 0.0px; font: 14.0px Times; color: #0000ee}
+    p.p42 {margin: 0.0px 0.0px 0.0px 0.0px; font: 23.0px Times; min-height: 28.0px}
+    p.p43 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 15.0px Helvetica; color: #0000ee}
+    p.p44 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 10.0px Times}
+    p.p45 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 12.0px Times; color: #0000ee}
+    p.p46 {margin: 0.0px 0.0px 0.0px 0.0px; font: 15.0px Helvetica; color: #0000ee}
+    p.p47 {margin: 0.0px 0.0px 0.0px 0.0px; font: 16.0px Times}
+    p.p48 {margin: 0.0px 0.0px 0.0px 0.0px; font: 21.0px Times; color: #042eee; min-height: 25.0px}
+    p.p49 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 18.0px Times; color: #0000ee}
+    p.p50 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 13.0px Times; color: #0000ee}
+    p.p51 {margin: 0.0px 0.0px 16.1px 0.0px; font: 15.0px Times; color: #0000ee}
+    p.p52 {margin: 0.0px 0.0px 14.0px 0.0px; font: 13.0px Times; min-height: 16.0px}
+    p.p53 {margin: 0.0px 0.0px 14.0px 0.0px; text-align: center; font: 18.0px Times; color: #0000ee}
+    p.p54 {margin: 0.0px 0.0px 14.9px 0.0px; font: 17.0px Times; color: #0000ee}
+    p.p55 {margin: 0.0px 0.0px 14.9px 0.0px; font: 16.0px Times; color: #042eee; min-height: 19.0px}
+    p.p56 {margin: 0.0px 0.0px 0.0px 0.0px; font: 16.0px Times; color: #042eee; min-height: 19.0px}
+    p.p57 {margin: 0.0px 0.0px 0.0px 0.0px; font: 16.0px Times; color: #0f3bee; min-height: 19.0px}
+    p.p58 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 20.0px Times; color: #0f3bee}
+    p.p59 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 20.0px Times; color: #0f3bee; min-height: 24.0px}
+    p.p60 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 20.0px Times}
+    p.p61 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 20.0px Times; min-height: 24.0px}
+    p.p62 {margin: 0.0px 0.0px 0.0px 0.0px; font: 20.0px Times; min-height: 24.0px}
+    p.p63 {margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px Times; color: #0000ee}
+    p.p67 {margin: 0.0px 0.0px 0.0px 0.0px; font: 15.0px Times; color: #0000ee; min-height: 18.0px}
+    p.p68 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; color: #0000ee; min-height: 18.0px}
+    p.p69 {margin: 0.0px 0.0px 0.0px 0.0px; font: 18.0px Times; min-height: 23.0px}
+    p.p72 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
+    p.p74 {margin: 0.0px 0.0px 0.0px 0.0px; font: 21.0px Times; color: #0000ee}
+    p.p75 {margin: 0.0px 0.0px 0.0px 0.0px; font: 19.0px Times; color: #0000ee; min-height: 23.0px}
+    p.p77 {margin: 0.0px 0.0px 0.0px 0.0px; font: 21.0px Times; min-height: 25.0px}
+    p.p78 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 21.0px Times; min-height: 25.0px}
+    p.p79 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; color: #0000ee; background-color: #ffffff}
+    p.p80 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; color: #0000ee; background-color: #ffffff; min-height: 14.0px}
+    p.p82 {margin: 0.0px 0.0px 0.0px 0.0px; font: 18.0px Times; color: #0000ee; min-height: 23.0px}
+    p.p83 {margin: 0.0px 0.0px 0.0px 0.0px; font: 24.0px Times; color: #0000ee; min-height: 29.0px}
+    p.p84 {margin: 0.0px 0.0px 0.0px 0.0px; font: 19.0px Times; min-height: 23.0px}
+    p.p85 {margin: 0.0px 0.0px 0.0px 0.0px; font: 15.0px Times; min-height: 18.0px}
+    p.p87 {margin: 0.0px 0.0px 0.0px 0.0px; font: 9.0px Times}
+    p.p91 {margin: 0.0px 0.0px 0.0px 0.0px; font: 24.0px Helvetica; color: #0000ee}
+    p.p96 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px Times; color: #0000ee; min-height: 16.0px}
+    p.p99 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 12.0px Times; min-height: 14.0px}
+    p.p101 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 14.0px Times; color: #0000ee; min-height: 18.0px}
+    li.li14 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px Times; color: #0000ee}
+    span.s1 {font: 18.0px Times; color: #0000ee}
+    span.s2 {color: #0f3bee}
+    span.s3 {font: 20.0px Times; color: #042eee}
+    span.s4 {text-decoration: underline}
+    span.s5 {color: #042eee}
+    span.s6 {font: 11.0px Times; color: #000000}
+    span.s7 {font: 15.0px Times; color: #0000ee}
+    span.s8 {font: 15.0px Times; color: #042eee}
+    span.s9 {font: 20.0px Times; text-decoration: underline}
+    span.s10 {font: 17.0px Times; text-decoration: underline}
+    span.s11 {color: #000000}
+    span.s12 {font: 14.0px Times}
+    span.s13 {font: 14.0px Times; color: #042eee}
+    span.s14 {font: 12.0px Times}
+    span.s15 {color: #0000ee}
+    span.s16 {color: #654400}
+    span.s17 {font: 13.0px Times}
+    span.s18 {font: 18.0px Arial; text-decoration: underline}
+    span.s19 {color: #6a6a6a}
+    span.s20 {font: 19.0px Times}
+    span.s21 {font: 24.0px Times}
+    span.s22 {font: 13.0px Times; color: #042eee}
+    span.s23 {font: 17.0px Times}
+    span.s24 {font: 18.0px Times}
+    span.s25 {font: 17.0px Times; color: #0000ee}
+    span.s26 {font: 11.0px Arial; color: #000000}
+    span.s27 {text-decoration: underline ; color: #042eee}
+    span.s28 {font: 16.0px Times; color: #000000}
+    span.s29 {font: 11.0px Times; text-decoration: underline}
+    span.s30 {font: 11.0px Times; text-decoration: underline ; direction: ltr; unicode-bidi: embed}
+    span.s31 {font: 15.0px Times}
+    span.s32 {font: 14.0px Times; color: #0000ee}
+    span.s33 {font: 14.0px Times; color: #000000}
+    span.s34 {font: 11.0px Georgia; color: #0433ff}
+    span.s35 {font: 9.0px Arial}
+    span.s36 {font: 21.0px Times; color: #042eee}
+    span.s37 {font: 18.0px Times; color: #042eee}
+    span.s38 {font: 12.0px Times; color: #000000}
+    span.s39 {font: 18.0px Times; color: #0f3bee}
+    span.s40 {font: 20.0px Times; text-decoration: underline ; color: #042eee}
+    span.s41 {font: 13.0px Times; color: #0000ee}
+    span.s42 {font: 13.0px Times; color: #000000}
+    span.s43 {font: 16.0px Times}
+    span.s44 {font: 17.0px Times; text-decoration: underline ; color: #0000ee}
+    span.s45 {font: 11.0px Helvetica; color: #000000}
+    span.s46 {font: 17.0px Times; color: #042eee}
+    span.s47 {font: 17.0px Helvetica; color: #134fae}
+    span.s48 {font: 13.0px Helvetica; color: #000000}
+    span.s49 {font: 20.0px Times}
+    span.s50 {font: 22.0px Times; color: #042eee}
+    span.s51 {font: 15.0px Helvetica; color: #0000ee}
+    span.s52 {font: 18.0px Helvetica; color: #042eee}
+    span.s53 {font: 6.0px Helvetica; color: #0000ee}
+    span.s54 {font: 17.0px Times; color: #000000}
+    span.s55 {font: 15.0px Times; color: #000000}
+    span.s56 {font: 18.0px Times; color: #000000}
+    span.s57 {font: 20.0px Times; color: #000000}
+    span.s58 {text-decoration: underline ; color: #0000ee}
+    span.s59 {font: 24.0px Times; color: #000000}
+    span.s60 {font: 12.0px Times; color: #0000ff}
+    span.s61 {font: 14.0px Symbol; text-decoration: underline}
+    span.s62 {font: 14.0px Symbol}
+    span.s63 {font: 12.0px Times; color: #042eee}
+    span.s64 {font: 12.0px Times; text-decoration: underline ; color: #0000ee}
+    span.s65 {font: 19.0px Times; color: #000000}
+    span.s66 {font: 21.0px Times; color: #000000}
+    span.s67 {font: 24.0px Times; color: #0000ee}
+    span.s68 {font: 12.0px Times; text-decoration: underline}
+    span.s69 {font: 23.0px Times; color: #000000}
+    span.s70 {font: 18.0px Times; text-decoration: underline}
+    span.s71 {font: 19.0px Times; color: #042eee}
+    span.s72 {font: 12.0px Helvetica; text-decoration: underline ; color: #4787ff}
+    span.s73 {font: 12.0px Helvetica}
+    span.s74 {color: #000080}
+    span.s75 {font: 12.0px Times; text-decoration: underline ; color: #042eee}
+    span.Apple-tab-span {white-space:pre}
+    ul.ul1 {list-style-type: disc}
+  </style>
+</head>
+<body>
+<p class="p1"><a href="https://lxv1.github.io/climate.html"><b>Climate</b></a></p>
+<p class="p2"><a href="https://lxv1.github.io/climate1.html"><b>1. Old History</b></a></p>
+<p class="p3"><span class="s1"><a href="https://lxv1.github.io/climate2.webarchive"><b>2. Plots</b><span class="s2"><b> </b></span></a></span><b>webarchive; </b><a href="https://lxv1.github.io/climate2.pdf"><span class="s3"><b>pdf</b></span></a></p>
+<p class="p2"><a href="https://lxv1.github.io/climate3.html"><b>3. 70's: Global cooling -- Ice Age Coming</b></a></p>
+<p class="p2"><a href="https://lxv1.github.io/climate4.html"><b>4. Wikipedia on climate</b></a></p>
+<p class="p2"><a href="https://lxv1.github.io/climate5.html"><b>5. 2000's : Climate Change</b></a></p>
+<p class="p2"><a href="https://lxv1.github.io/climate6.html"><b>6. USA government on climate</b></a></p>
+<p class="p2"><a href="https://lxv1.github.io/climate7.html"><b>7. Other countries on climate</b></a></p>
+<p class="p2"><a href="https://lxv1.github.io/climate8.html"><b>8. Math Reviews on climate</b></a></p>
+<p class="p2"><a href="https://lxv1.github.io/climate9.html"><b>9. News 2007-2009</b></a></p>
+<p class="p2"><a href="https://lxv1.github.io/climate10.html"><b>10. 2010</b></a></p>
+<p class="p2"><a href="https://lxv1.github.io/climate11.html"><b>11. 2011</b></a></p>
+<p class="p4"><a href="https://lxv1.github.io/climate12.html"><b>12. 2012</b></a></p>
+<p class="p4"><a href="https://lxv1.github.io/climate13.html"><b>13. 2013</b></a></p>
+<p class="p4"><a href="https://lxv1.github.io/climate14.html"><b>14. 2014</b></a></p>
+<p class="p4"><a href="https://lxv1.github.io/climate15.html"><b>15. 2015</b></a></p>
+<p class="p2"><a href="https://lxv1.github.io/climate16.html"><b>16. 2016</b></a></p>
+<p class="p2"><a href="https://lxv1.github.io/climate17.html"><b>17. 2017</b></a></p>
+<p class="p2"><a href="https://lxv1.github.io/climate18.htm;"><b>18.2018</b></a></p>
+<p class="p5"><br></p>
+<p class="p6"><a href="https://lxv1.github.io/climate20.html"><b>20. Related topics</b></a></p>
+<p class="p7"><br></p>
+<p class="p7"><br></p>
+<p class="p1"><a href="http://www.math.psu.edu/vstein/climate17.html"><b>17. 2017</b></a></p>
+<p class="p7"><br></p>
+<p class="p8"><span class="s4"><a href="http://berkeleyearth.org/data/">Berkley Earth</a></span></p>
+<p class="p7"><br></p>
+<p class="p7"><br></p>
+<p class="p9"><span class="s4"><a href="http://www.plantsneedco2.org/default.aspx?menuitemid=371">Empirical / Tests Myths</a></span><span class="s5"><span class="Apple-converted-space"> </span></span><span class="s6"> Plants need CO2</span></p>
+<p class="p10"><i>The key test of a hypothesis is whether it can stand up to real world observations.<span class="Apple-converted-space"> </span></i></p>
+<p class="p10"><i>Real observations reveal that the "CO2 is a major cause of global climate change" hypothesis is FALSE!</i></p>
+<p class="p11"><br></p>
+<p class="p12"><span class="s7"><a href="http://www.churchofglobalwarming.com/"><b>the </b><b><i>Church of Global Warming</i><span class="Apple-converted-space"> </span></b></a></span><span class="s8"><b> </b></span>There is no God but Gaia and Al Gore is her prophet.</p>
+<p class="p12">A comprehensive look at the largest religion for those who have no religion.</p>
+<p class="p13"><br></p>
+<p class="p14"><a href="http://www.google.com/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=10&amp;ved=0CI0BEBYwCQ&amp;url=http%3A%2F%2Fwww.biblebelievers.org.au%2Fgreen.htm&amp;ei=vZykUbjOHsrs0gG6koDwDw&amp;usg=AFQjCNEndqfF8C_I0XzDfiUogTlS3ugRSw&amp;sig2=DxIhVXx6FfeAvoz8hA6ZWg&amp;bvm=bv.47008514,d.dmQ"><b><i>MYTHS</i> OF <i>GLOBAL WARMING</i> - Bible Believers</b></a></p>
+<p class="p15"><i>Global Warming</i> is a much publicised subject currently concerning many people. A United Nations summit in Kyoto Japan last <b>...</b></p>
+<p class="p13"><br></p>
+<p class="p14"><a href="http://www.google.com/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=15&amp;ved=0CHUQFjAEOAo&amp;url=http%3A%2F%2Fwww.theforbiddenknowledge.com%2Fhardtruth%2Fglobal_warming_myths.htm&amp;ei=2Z6kUca2OaLL0AG8xIG4Bw&amp;usg=AFQjCNEvfiBx6xZ8jZ_bqZAvGle6Dj92Iw&amp;sig2=_0XbJzfykLiKXR3ptE4NAw&amp;bvm=bv.47008514,d.dmQ"><b><i>MYTHS</i> OF <i>GLOBAL WARMING</i> - The Forbidden Knowledge</b></a></p>
+<p class="p12">geocities.<span class="Apple-converted-space">  </span><i>Global Warming</i> is a much publicized subject which concerns <b>...</b></p>
+<p class="p16"><br></p>
+<p class="p17"><a href="http://www.worldclimatereport.com/archive/previous_issues/vol1/v1n5/feature.htm"><b>Top 10 Global Warming Myths - World Climate Report</b></a></p>
+<p class="p18">Top 10 Global Warming Myths. In an article intended to raise pubic consciousness about the threat of global warming, environmental writer Bill McKibben ...</p>
+<p class="p13"><br></p>
+<p class="p14"><a href="http://www.google.com/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=1&amp;ved=0CB4QFjAA&amp;url=http%3A%2F%2Fwww.friendsofscience.org%2Findex.php%3Fid%3D3&amp;ei=X9AnVJvrLcK2yATymoAQ&amp;usg=AFQjCNHhBd0mqn9s3M7OD9vNsI9sDSSptQ&amp;sig2=3OGZV2eeqCSlSxdufy--eQ&amp;bvm=bv.76247554,d.aWw"><b>Friends of Science | The <i>Myths</i> and Facts of <i>Global Warming</i></b></a><span class="s5"><b><i> <span class="Apple-converted-space"> </span></i></b></span></p>
+<p class="p14"><a href="http://www.google.com/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=1&amp;ved=0CB4QFjAA&amp;url=http%3A%2F%2Fen.wikipedia.org%2Fwiki%2FFriends_of_Science&amp;ei=hiZOVOmHJoPt8AHHs4DQBw&amp;usg=AFQjCNFM4KElkqLnx2DuOT82Lntv_IpzuQ&amp;sig2=p4ojAvKgnt9SRU_4mmSQ0w&amp;bvm=bv.77880786,d.b2U"><b>Friends of Science - Wikipedia</b></a></p>
+<p class="p15"><i>MYTH</i> 1: Global temperatures are rising at a rapid, unprecedented rate. .... <i>MYTH</i> 8: <i>Global warming</i> will cause more storms and other weather extremes.</p>
+<p class="p5"><br></p>
+<p class="p19"><span class="s4"><a href="http://www.poodwaddle.com/Stats/Environment/GlobalWarming/">http://www.poodwaddle.com/Stats/Environment/GlobalWarming/<span class="s9"></span></a></span></p>
+<p class="p19"><span class="s4"><a href="http://www.poodwaddle.com/Stats/Environment/">http://www.poodwaddle.com/Stats/Environment/</a></span><span class="s2"><span class="Apple-converted-space"> </span></span></p>
+<p class="p20"><br></p>
+<p class="p4"><a href="http://debatewise.org/debates/1757-man-made-climate-change-is-a-myth/"><b>Man made climate change is a myth. | Debatewise<span class="Apple-converted-space"> </span></b></a></p>
+<p class="p15">The view that <b>climate</b> <b>change</b> was man made had been gaining ground for the last twenty years. Governments were sitting up and taking notice. Policies were being ...</p>
+<p class="p13"><br></p>
+<p class="p4"><a href="http://hidethedecline.eu/pages/temperatures/polar-temperatures.php"><b>Hide the decline</b></a></p>
+<p class="p21">“I’ve just completed Mike’s Nature trick of adding in the real temps to each series for the last 20 years (ie from 1981 onwards)<span class="Apple-converted-space"> </span></p>
+<p class="p21">amd from 1961 for Keith’s to hide the decline.” Phil Jones</p>
+<p class="p22"><br></p>
+<p class="p4"><span class="s4"><a href="http://www.lowerwolfjaw.com/agw/quotes.htm">Global Warming or Cooling?<span class="s10"></span></a></span></p>
+<p class="p18">124 years of Failed Climate and Environmental Predictions</p>
+<p class="p23">"By the year 2000 the United Kingdom will be simply a small group of impoverished islands, inhabited by some 70 million hungry people ...<span class="Apple-converted-space"> </span></p>
+<p class="p23">If I were a gambler, I would take even money that England will not exist in the year 2000." Paul Ehrlich 1971</p>
+<p class="p24"><br></p>
+<p class="p2"><a href="http://www.justfacts.com/globalwarming.asp"><b>Global Warming - Just Facts</b></a></p>
+<p class="p18">Comprehensive and meticulously documented facts about <b>global warming</b>. Topics include greenhouse gases, <b>global</b> temperatures, politics, and more.</p>
+<p class="p25"><br></p>
+<p class="p25"><br></p>
+<p class="p4"><a href="http://www.climatechangedispatch.com/Assassination-Science-Climategate.html"><b>Assassination Science: Climategate</b></a></p>
+<p class="p18">A site dedicated to the storage and retrieval of the Climategate emails, providing excellent summaries and analysis.</p>
+<p class="p25"><br></p>
+<p class="p17"><a href="http://www.conservapedia.com/Global_warming"><b>Global warming - Conservapedia</b></a></p>
+<p class="p18">The <i>global warming</i> theory is the liberal hoax that the world is becoming dangerously warmer due to the emission of greenhouse gases, such as carbon dioxide, ...</p>
+<p class="p25"><br></p>
+<p class="p17"><a href="http://stanford.edu/%7Emoore/Boon_To_Man.html"><b>Global Warming - Stanford University</b></a></p>
+<p class="p18">A Shortened version of this article entitled "Why <i>Global Warming</i> Would be Good for You" appeared in The Public InterestWinter 1995 without footnotes, tables, ...</p>
+<p class="p25"><br></p>
+<p class="p17"><a href="http://www.friendsofscience.org/index.php?id=453"><b>The Earth's atmosphere is not Warming - Friends of Science |</b></a></p>
+<p class="p18">The graph below shows the best fit trend from January 2002. It shows a <i>cooling trend</i>. The graph also shows the average IPCC climate model projection during ...</p>
+<p class="p25"><br></p>
+<p class="p17"><a href="http://www.freecriticalthinking.org/climate-change/123-anthropogenic-global-warming-theory"><b>Anthropogenic Global Warming theory</b></a></p>
+<p class="p18">The UK Met Office describes the <i>Anthropogenic Global Warming</i> (<i>AGW</i>) hypothesis as follows: “It is now clear that man-made greenhouse gases are causing ...</p>
+<p class="p25"><br></p>
+<p class="p17"><a href="http://www.wnho.net/global_warming.htm"><b>THE GLOBAL WARMING HOAX</b></a></p>
+<p class="p18">The official position of the World Natural Health Organization in regards to global warming is that there is NO GLOBAL ...</p>
+<p class="p25"><br></p>
+<p class="p2"><a href="http://renewable.50webs.com/climate.html"><b>Moderating Climate Change Hysteria</b></a></p>
+<p class="p18"><i>Climate</i> Change has become a religion that has sailed away from honest science.</p>
+<p class="p25"><br></p>
+<p class="p2"><a href="http://carbon-sense.com/"><b>The Carbon Sense Coalition</b></a></p>
+<p class="p18">Voluntary group of people concerned about the extent to which <i>carbon</i> is vilified in Western societies. It aims to restore balance to the <i>carbon</i> debate and explain ...</p>
+<p class="p25"><br></p>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; color: #0000ee"><a href="https://www.facebook.com/SystemChangeNotClimateChange/"><b>System Change Not Climate Change; the Ecosocialist Coalition ...</b></a></h3>
+<p class="p18"><i>System Change Not Climate Change</i>; the Ecosocialist Coalition. 5.1K likes. SCnCC is an ecosocialist coalition fighting for a just, democratic and...</p>
+<p class="p26"><br></p>
+<p class="p17"><a href="http://www.bibliotecapleyades.net/ciencia/ciencia_globalwarmingpseudo.htm"><b>Global Warming - An Official Pseudoscience ...</b></a></p>
+<p class="p17"><a href="http://www.look-to-the-skies.com/global_warming.htm"><b>GLOBAL WARMING - Look To The Skies</b></a><span class="s11"><b><span class="Apple-converted-space">  </span>The Myth, Hype, and the Facts</b></span></p>
+<p class="p17"><a href="http://whatreallyhappened.com/WRHARTICLES/climategate.php#axzz3UlcZ8e6G"><b>THE GREAT GLOBAL WARMING SWINDLE<span class="Apple-converted-space"> </span></b></a></p>
+<p class="p27"><span class="s12"><a href="http://www.globalclimatescam.com/"><b>Global Climate Scam</b></a></span><span class="s13"><b> </b></span><span class="s11"><i>operated by </i><a href="http://m4gw.com/"><span class="s14"><i>Minnesotans for Global Warming</i></span></a><i>.</i></span></p>
+<p class="p17"><a href="http://www.bing.com/videos/search?q=evidence+against+global+warming&amp;qpvt=Evidence+Against+Global+Warming&amp;FORM=VDRE"><b>Videos of evidence against global warm</b></a><span class="s5"><b>ing</b></span></p>
+<p class="p17"><a href="http://climatechange.procon.org/"><b>ProCon climate change</b></a></p>
+<p class="p17"><a href="http://www.climatewiki.org/index.php?title=Main_Page"><b>ClimateWIKI</b></a></p>
+<p class="p17"><a href="http://www.climatewiki.org/index.php?title=Category:Skeptical_Climate_Change_Scientists"><b>Skeptical Climate Change Scientists</b></a></p>
+<p class="p17"><a href="http://www.climatewiki.org/index.php?title=List_of_Climate_Change_Websites"><b>Climate Change Websites</b></a></p>
+<p class="p17"><a href="http://www.google.com/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=40&amp;ved=0CHQQFjAJOB4&amp;url=http%3A%2F%2Fclimatism.wordpress.com%2F&amp;ei=DckhU-HeFqeQ0gHp3ICgDg&amp;usg=AFQjCNGd6Unf7CIDu7EQMWkj_P8zJQ-wYQ&amp;sig2=Aq50XNOWKstnEuIa_rzlxA&amp;bvm=bv.62922401,d.dmQ"><b>Climatism | Tracking Anthropogenic Climate Alarmism</b></a></p>
+<p class="p17"><a href="http://www.co2isgreen.org/"><b>CO2 is green</b></a></p>
+<p class="p17"><a href="http://www.democracynow.org/topics/climate_change?utm_campaign=non+brand&amp;utm_medium=ppc&amp;utm_source=bing&amp;utm_term=climate+change+current+events"><b>DemocracyNow Climate Change</b></a></p>
+<p class="p17"><a href="http://icecap.us/"><b>Icecap</b></a></p>
+<p class="p21"><span class="s15"><a href="http://www.nationalreview.com/planet-gore"><b>Planet Gore</b></a></span><span class="s5"><b><span class="Apple-converted-space"> </span></b></span><b> National Review</b></p>
+<p class="p21"><span class="s15"><a href="http://www.globalclimatescam.com/"><b>Global Climate Scam<span class="Apple-converted-space">   </span></b></a></span><span class="s5"><b> </b></span><b>created by Minnesota Majority in 2007 and is now operated by<span class="Apple-converted-space"> </span></b></p>
+<p class="p17"><a href="http://m4gw.com/"><b>Minnesotans for Global Warming</b></a></p>
+<p class="p17"><a href="http://globalcoolingnewiceageuk.blogspot.com/"><b>Global Cooling &amp; New Ice Age UK</b></a></p>
+<p class="p17"><a href="http://www.conservapedia.com/index.php?title=Global_Warming&amp;redirect=no"><b>Global Warming</b></a><span class="s11"><b> conservapedia</b></span></p>
+<p class="p17"><a href="http://www.freedomisknowledge.com/ed/globalwarminghype.html"><b>Global Warming - the other side of the hype!</b></a></p>
+<p class="p17"><a href="http://www.global-warming-forecasts.com/2015-climate-change-global-warming-2015.php"><b>Global Warming Forecasts - 2015</b></a><span class="s16"><b> </b></span></p>
+<p class="p17"><a href="http://www.huffingtonpost.com/news/global-warming-hoax/"><b>Global Warming Hoax - Huffington Post</b></a></p>
+<p class="p14"><a href="http://fabiusmaximus.com/science-nature/science-history/"><b>A history of fears about the climate</b></a><span class="s11"><b> </b><a href="http://fabiusmaximus.com/"><span class="s17"><b>Fabius Maximus website</b></span></a></span></p>
+<p class="p28"><a href="https://fabiusmaximus.com/"><b>Fabius Maximus website</b></a></p>
+<p class="p27"><a href="http://www.spiegel.de/international/topic/climate_change/"><b>Climate Change - SPIEGEL ONLINE</b></a></p>
+<p class="p29"><br></p>
+<p class="p17"><a href="http://www.urbandictionary.com/define.php?term=global%20warmist"><b>Urban Dictionary: global warmist</b></a></p>
+<p class="p18">To be defined as a <i>global warmist</i>, a person must have all of the following traits: 1) An absolute belief that humans are primarily or even completely responsible ...</p>
+<p class="p25"><br></p>
+<p class="p30"><span class="s4"><a href="http://www.ipcc.ch/ipccreports/tar/wg1/501.htm">Executive Summary - IPCC<span class="s18"></span></a></span></p>
+<p class="p31">The <span class="s19"><b>climate</b></span> system is a coupled non-linear chaotic system, and therefore the <span class="s19"><b>long</b></span>-<span class="s19"><b>term prediction</b></span> of future <span class="s19"><b>climate</b></span> states is not possible. Rather the focus must  …</p>
+<p class="p32"><br></p>
+<p class="p33">by last name</p>
+<p class="p34"><br></p>
+<p class="p18"><span class="s17">Beauzamy<span class="Apple-converted-space">  </span><a href="http://www.desmogblog.com/"><span class="s20"><b>DeSmog</b></span></a></span><span class="s20"><b> </b></span><span class="s21"><b><span class="Apple-converted-space">  </span></b></span>Clearing the PR Pollution that Clouds Climate Science</p>
+<p class="p15">Clark<span class="s22"><b><i> </i></b><a href="http://www.woodfortrees.org/"><span class="s15"><b><i>Wood for Trees</i>: Home</b></span></a> </span>This site hosts some C++ software tools for analysis and graphing of time series data, and an interactive graph generator where <b>...<span class="Apple-converted-space"> </span></b></p>
+<p class="p4"><span class="s6">Forbes <a href="http://www.google.com/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=9&amp;ved=0CFQQFjAI&amp;url=http%3A%2F%2Fcarbon-sense.com%2Fcategory%2Fglobal-cooling%2F&amp;ei=xrw7VOBFwp7yAbehgaAB&amp;usg=AFQjCNGkBycUjzEDLc6nIiBt1mLgaDuGuA&amp;sig2=Uq2uYMvbNNPbem8vS6QAog&amp;bvm=bv.77161500,d.b2U"><span class="s23"><b>The Carbon Sense Coalition » <i>Global Cooling</i></b></span></a></span></p>
+<p class="p2"><span class="s6">Gosselin<span class="Apple-converted-space"> </span><a href="http://notrickszone.com/author/admin/"><span class="s24"><b> NoTricksZone</b></span></a></span></p>
+<p class="p4"><span class="s6">Goreham </span><span class="s5"><b><i><span class="Apple-converted-space">  </span></i></b><a href="http://www.climatism.net/"><span class="s25"><b>Welcome to The Mad, Mad, Mad World of Climatism</b></span></a></span></p>
+<p class="p8"><span class="s26">Icke <a href="http://www.google.com/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=34&amp;ved=0CCwQFjADOB4&amp;url=http%3A%2F%2Fwww.davidicke.com%2Fheadlines%2Ftag%2Fglobal-cooling%2F&amp;ei=VtMJVeQExLWxBPGQgIAF&amp;usg=AFQjCNGrvU33Z481GUIG0mnhLFIkp_RhlA&amp;bvm=bv.88198703,d.cWc"><span class="s20"><b>global cooling » David Icke</b></span></a></span></p>
+<p class="p18">All articles tagged with <i>global cooling</i> ... Thursday 5th March <i>2015</i> at 09:15 By David Icke ... Record Cold And Snow Destroy Global Warming Claims. Thursday ...</p>
+<p class="p18">Dennis E. Keizer <a href="http://globalwarminghype.com/religion.html"><span class="s13"><b>globalwarminghype</b></span></a></p>
+<p class="p19"><span class="s26">Laframboise <a href="http://noconsensus.org/"><span class="s9">http://noconsensus.org/</span></a></span></p>
+<p class="p15"><span class="Apple-converted-space">      </span>The idea that global warming is the most important problem facing the world is total nonsense and is doing a lot of harm.<span class="Apple-converted-space"> </span></p>
+<p class="p15"><span class="Apple-converted-space">       </span>It distracts people's attention from much more serious problems. <a href="http://www.salon.com/books/feature/2007/09/29/freeman_dyson/"><span class="s27">[interview with, </span></a><b>Freeman Dyson:</b><a href="http://www.salon.com/books/feature/2007/09/29/freeman_dyson/"><span class="s27"> 2007</span></a></p>
+<p class="p35"><span class="s11">Luongo<b><span class="Apple-converted-space"> </span></b></span><span class="s28"> <a href="http://www.google.com/aclk?sa=l&amp;ai=CZysQwmZRVP29HcPSsQfonICAB_qju9wFqoOn380B3b-lpBIIABADIMKm4RsoB1CFzJGS-f____8BYMn-gozQpPwRoAGeu-bQA8gBAaoEJE_QvCSmGTtbmtCFuCylGAMww5rdZridSyySCXsvbI4tswBACIAHysSZL5AHAagHpr4b&amp;sig=AOD64_1lPYTTYSffEmq67STyphqwUvOI9A&amp;adurl=https://w3.moneynews.com/LP/Finance/CTI/Cold-Truth-MN%3Fdkt_nbr%3Dcvemphph&amp;ba=1"><span class="s4">Global Warming Scandal </span><span class="s29">- moneynews.com </span></a></span><span class="s11"><span class="Apple-converted-space">  </span><a href="http://www.google.com/aclk?sa=l&amp;ai=CZysQwmZRVP29HcPSsQfonICAB_qju9wFqoOn380B3b-lpBIIABADIMKm4RsoB1CFzJGS-f____8BYMn-gozQpPwRoAGeu-bQA8gBAaoEJE_QvCSmGTtbmtCFuCylGAMww5rdZridSyySCXsvbI4tswBACIAHysSZL5AHAagHpr4b&amp;sig=AOD64_1lPYTTYSffEmq67STyphqwUvOI9A&amp;adurl=https://w3.moneynews.com/LP/Finance/CTI/Cold-Truth-MN%3Fdkt_nbr%3Dcvemphph&amp;ba=1"><span class="s30">Obama Linked To $22 Billion Scandal, Scientist Confesses Truth</span></a> <span class="Apple-converted-space">   </span></span></p>
+<p class="p36"><span class="s6">Meyer <a href="http://www.google.com/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=1&amp;ved=0CCsQFjAA&amp;url=http%3A%2F%2Fwww.climate-skeptic.com%2F&amp;ei=Jpi9UoqnObSusASK9YG4DQ&amp;usg=AFQjCNG8dTXSW8abEu7aHpauupYIdrDTSA&amp;bvm=bv.58187178,d.cWc"><span class="s31"><b><i>Climate Skeptic</i></b></span></a></span></p>
+<p class="p15"><span class="Apple-converted-space">      </span>A <i>Skeptics</i> view of the recent <i>climate</i> scene covering these main topics: <i>Climate</i> propaganda; <i>Climate</i> science;<span class="Apple-converted-space">  </span><i>Climate</i> socialists; CO2 abatement; Current <b>...</b></p>
+<p class="p2"><span class="s6"><b>Monckton<i> </i></b><a href="http://sppiblog.org/tag/lord-christopher-monckton"><span class="s24"><b>Science based policy for a better world</b></span></a></span></p>
+<p class="p17"><span class="s6"><b>Morano<span class="Apple-converted-space"> </span></b></span><span class="s5"><b> </b><a href="http://www.climatedepot.com/"><span class="s32"><b>Climate Depot | A project of CFACT</b></span></a><b> <span class="Apple-converted-space">  </span></b><a href="http://en.wikipedia.org/wiki/Committee_for_a_Constructive_Tomorrow"><span class="s32"><b>Committee for a Constructive Tomorrow - Wikipedia</b></span></a></span></p>
+<p class="p4"><span class="s33">Noonan</span><span class="s11"><b> </b><a href="http://blogsforvictory.com/2015/01/05/global-warming-hoax-update-34/"><span class="s23"><b>Global Warming Hoax Update | Blogs For Victory</b></span></a></span></p>
+<p class="p37"><span class="s34">Pangburn<i> </i><a href="http://www.scienceofdoom.com/"><span class="s3"><b>Science of Doom</b></span></a></span></p>
+<p class="p15"><span class="s35"><b>Pohanka<span class="Apple-converted-space">  </span></b><a href="http://isthereglobalcooling.com/global_cooling_articles"><span class="s36"><b>Is There Global Cooling?</b></span></a></span><span class="Apple-converted-space"> </span><span class="s36"> <span class="Apple-converted-space">  </span></span>(the antitheses of global warming)</p>
+<p class="p15">Reisman <a href="http://ossfoundation.us/projects/environment/global-warming/myths"><span class="s22"><b><i>Myths</i> vs. Facts: <i>Global Warming</i> — OSS Foundation</b></span></a><span class="s22"><span class="Apple-converted-space">  </span></span>This news and analysis section addresses substance of arguments such as "<i>global warming</i> is a hoax", "<i>global warming</i> is a ...<span class="Apple-converted-space"> </span></p>
+<p class="p38"><span class="s6">Revkin <span class="Apple-converted-space">  </span><a href="http://dotearth.blogs.nytimes.com/"><span class="s37"><b>Andrew Revkin</b></span></a></span><b> dot earth nytimes</b></p>
+<p class="p17"><span class="s38">Tom Richard <a href="http://www.climatechangedispatch.com/"><span class="s12"><b>Climate Change Dispatch</b></span></a></span></p>
+<p class="p14"><span class="s6">Ross</span><span class="s39"><b> <span class="Apple-converted-space">  </span></b><a href="http://www.andyross.net/global_warming.htm"><span class="s5"><b>Global Warming</b></span></a><span class="Apple-converted-space">      </span><a href="http://www.andyross.net/"><span class="s40">http://www.andyross.net/</span></a></span><span class="s3"><span class="Apple-converted-space">  </span><a href="http://homepages.see.leeds.ac.uk/%7Elecanr/"><span class="s41"><b>Andrew Ross's Homepage - University of Leeds</b></span></a></span></p>
+<p class="p14"><span class="s6">Rothbard <span class="Apple-converted-space">  </span>Rucker<span class="Apple-converted-space"> </span></span><span class="s5"><b> </b><a href="http://www.google.com/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=1&amp;ved=0CB4QFjAA&amp;url=http%3A%2F%2Fwww.cfact.org%2Fissues%2Fclimate-change%2Fclimate-change-truth-file%2F&amp;ei=8rlNVLKzFtT-yQTYkICYAQ&amp;usg=AFQjCNGbVPphecowD1z6tWgRjptpi_adOw&amp;sig2=5Ey--_i2zLU-Z9DcAHYh1Q&amp;bvm=bv.77880786,d.aWw"><span class="s41"><b>Climate Change Truth File - cfact</b></span></a><b> </b><a href="http://www.google.com/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=2&amp;ved=0CCsQFjAB&amp;url=http%3A%2F%2Fen.wikipedia.org%2Fwiki%2FCommittee_for_a_Constructive_Tomorrow&amp;ei=qsRNVOqIL8qhyATSvYH4Cw&amp;usg=AFQjCNGjzG400B9Bq01hNtJ6Tuik0JO7_g&amp;sig2=_8002m0p8M7WaTfKVoqKJA&amp;bvm=bv.77880786,d.aWw"><span class="s41"><b>Committee for a Constructive Tomorrow - Wikipedia</b></span></a></span></p>
+<p class="p9"><span class="s6">Seager</span><span class="s42"><b> </b><a href="http://www.ldeo.columbia.edu/res/div/ocp/gs/index.shtml"><span class="s43"><b>Climate mythology: The Gulf Stream, European climate and Abrupt Change</b></span></a></span></p>
+<p class="p9"><span class="s6">Shaviv</span><span class="s5"><b> </b><a href="http://wattsupwiththat.com/category/hiatus-in-global-warming/"><span class="s15"><b>ScienceBits</b></span></a></span></p>
+<p class="p4"><span class="s6">Spenser<span class="Apple-converted-space">  </span></span><span class="s22"><b><span class="Apple-converted-space">  </span></b><a href="http://www.google.com/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=2&amp;ved=0CC0QFjAB&amp;url=http%3A%2F%2Fwww.drroyspencer.com%2Flatest-global-temperatures%2F&amp;ei=KjbGU7mGMdehyASU0IHgBg&amp;usg=AFQjCNHW39nb0c_3yMzkEc4oqIvdJCoGsQ&amp;sig2=uYmg2DTve1bY21jCE6hGOQ&amp;bvm=bv.71126742,d.aWw"><span class="s25"><b>Latest Global Temps « <i>Roy Spencer</i>, PhD</b></span></a></span></p>
+<p class="p2"><a href="http://www.drroyspencer.com/"><b>Roy Spencer, PhD</b></a></p>
+<p class="p18"><span class="s44"><a href="http://spacecenter.dk/cgi-bin/staff_list.cgi?dok=tlflist.phpxxxidyyy488zzzinitialsyyyHSV">Henrik Svensmark's web site</a></span><span class="s23">, i</span>ncluding various publications on the cosmic-ray/cloud link.</p>
+<p class="p39"><span class="s45">Valentine</span><span class="s46"><b> </b><a href="http://www.google.com/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=35&amp;ved=0CDkQFjAEOB4&amp;url=http://philvalentine.com/SkepticsGuideToGlobalWarming.htm&amp;ei=pOtYVNLSNtHdsATM3IL4Bw&amp;usg=AFQjCNE54oF9sm6xjhqLFM4aw0UkNDL9ZQ&amp;bvm=bv.78677474,d.cWc"><span class="s47"><b>A Skeptic's Guide To Debunking Global Warming Alarmism</b></span></a></span><span class="s11"><b> </b></span><span class="s48"><b>Phil Valentine's Bullet Points</b></span></p>
+<p class="p19"><span class="s48">Wide <a href="http://www.newclimatemodel.com/"><span class="s49"><b>New Climate Model</b></span></a></span></p>
+<p class="p40"><span class="s14"><a href="http://www.sjsu.edu/faculty/watkins/watkins.htm"><i>Watkins</i></a></span><span class="s38"><i> </i><a href="http://www.sjsu.edu/faculty/watkins/GWpolitics.htm"><span class="s21">Global Warming and Politics</span></a></span></p>
+<p class="p41"><a href="http://www.google.com/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=14&amp;ved=0CGcQFjAN&amp;url=http%3A%2F%2Fwww.sjsu.edu%2Ffaculty%2Fwatkins%2Fpolarwarming.htm&amp;ei=yBlXVZ2mH8fjsATBxIDwBA&amp;usg=AFQjCNHn6GhZLxgIVz3gPn92N9O5xONh2A&amp;bvm=bv.93564037,d.cWc"><b>Polar versus Equatorial Warming - San Jose State University</b></a></p>
+<p class="p32"><br></p>
+<p class="p42"><br></p>
+<p class="p42"><br></p>
+<p class="p43"><a href="http://www.google.com/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=10&amp;ved=0CGEQFjAJ&amp;url=http%3A%2F%2Fwww.climatecooling.org%2F&amp;ei=W-ZYVKXgFOySsQTV7YHIBg&amp;usg=AFQjCNE0TThZKX8yk0C_dKxt_QoCcCBEww&amp;bvm=bv.78677474,d.cWc"><b>Global Climate Cooling Facts</b></a></p>
+<ul class="ul1">
+  <li class="li14"><a href="http://www.climatecooling.org/#Fact"><span class="s4">Facts about Global Cooling </span></a><a href="http://www.climatecooling.org/#RealityCheck"><span class="s4">Reality Check</span></a></li>
+  <li class="li14"><a href="http://www.climatecooling.org/#forecast"><span class="s4">The IPCC 2007 Forecast</span></a></li>
+  <li class="li14"><a href="http://www.climatecooling.org/#Needed"><span class="s4">Impact Assessment Needs</span></a></li>
+  <li class="li14"><a href="http://www.climatecooling.org/#biased"><span class="s4">How to Identify Bias</span></a></li>
+  <li class="li14"><a href="http://www.climatecooling.org/#GlobalWarmingIsNotBad"><span class="s4">Is Global Cooling Bad?</span></a></li>
+  <li class="li14"><a href="http://www.climatecooling.org/#PolarBears"><span class="s4">Polar Bears/Polar Ice?</span></a></li>
+  <li class="li14"><a href="http://www.climatecooling.org/#CompositionOfAtmosphere"><span class="s4">CO2 so high we can't breathe?</span></a></li>
+</ul>
+<p class="p42"><br></p>
+<p class="p1"><a href="http://wattsupwiththat.com/"><b>Watts Up With That?</b></a></p>
+<p class="p44">The world's most viewed site on global warming and climate change Watts</p>
+<p class="p45"><span class="s4"><a href="https://en.wikipedia.org/wiki/Anthony_Watts_%28blogger%29">Anthony Watts</a></span><span class="s11">. wiki</span></p>
+<p class="p46"><span class="s50"><span class="Apple-converted-space"> </span><a href="http://wattsupwiththat.com/reference-pages/global-weather-climate/global-temperature/"><span class="s51"><b><i>Global Temperature</i> Page<span class="Apple-converted-space"> </span></b></span></a></span></p>
+<p class="p47"><span class="s52"><b><span class="Apple-converted-space">  </span></b><a href="http://wattsupwiththat.com/climate-fail-files/list-of-excuses-for-the-pause-in-global-warming/"><span class="s53"><b> </b></span><span class="s28"><b>List of excuses for ‘The Pause’ in global warming</b></span></a></span></p>
+<p class="p47"><span class="s20"><b><span class="Apple-converted-space">  </span></b><a href="http://wattsupwiththat.com/category/hiatus-in-global-warming/"><span class="s28"><b>Hiatus in Global Warming</b></span></a></span></p>
+<p class="p9"><span class="s11"><b><span class="Apple-converted-space">   </span></b><a href="http://wattsupwiththat.com/reference-pages/sea-ice-page/"><span class="s43"><b>Sea Ice Page</b></span></a></span></p>
+<p class="p9"><span class="s11"><b><span class="Apple-converted-space">   </span></b><a href="http://wattsupwiththat.com/reference-pages/climatic-phenomena-pages/extreme-weather-page/"><span class="s43"><b>“Extreme Weather” Page</b></span></a></span></p>
+<p class="p9"><span class="s11"><b><span class="Apple-converted-space">  </span></b><a href="http://wattsupwiththat.com/climate-fail-files/the-gore-a-thon-on-wuwt/"><span class="s43"><b> The Gore-a-thon on WUWT</b></span></a></span></p>
+<p class="p9"><span class="s11"><b><span class="Apple-converted-space">   </span></b><a href="http://wattsupwiththat.com/reference-pages/us-weather-climate/us-climate-page/"><span class="s43"><b>US Climate Page</b></span></a></span></p>
+<p class="p48"><br></p>
+<p class="p49"><a href="http://stevengoddard.wordpress.com/"><b>Real Science</b></a></p>
+<p class="p50"><span class="s6">Tony Heller. <a href="http://en.wikipedia.org/wiki/Steven_Goddard"><span class="s17"><b>Steven Goddard - Wikipedia</b></span></a></span></p>
+<p class="p4"><a href="http://stevengoddard.wordpress.com/the-bottom-line/"><b>The Bottom Line</b></a><span class="s5"><b> <span class="Apple-converted-space"> </span></b></span></p>
+<p class="p2"><a href="http://stevengoddard.wordpress.com/data-tampering-at-ushcngiss/"><b>Data Tampering At USHCN/GISS</b></a></p>
+<p class="p2"><a href="http://stevengoddard.wordpress.com/hansen-the-climate-chiropractor/"><b>Hansen – The Climate Chiropractor</b></a></p>
+<p class="p4"><a href="http://stevengoddard.wordpress.com/ice-free-arctic-forecasts/"><b>Ice Free Arctic Forecasts</b></a></p>
+<p class="p4"><a href="http://stevengoddard.wordpress.com/1871-climate-superstition/"><b>1871 Climate Superstition</b></a></p>
+<p class="p4"><a href="http://stevengoddard.wordpress.com/spectacularly-poor-climate-science-at-nasa/"><b>Spectacularly Poor Climate Science At NASA</b></a><span class="s5"><b><span class="Apple-converted-space"> </span></b></span></p>
+<p class="p2"><a href="http://stevengoddard.wordpress.com/tracking-us-temperature-fraud/"><b>Tracking Climate Fraud</b></a><span class="s5"><b> <span class="Apple-converted-space"> </span></b></span></p>
+<p class="p4"><a href="http://stevengoddard.wordpress.com/greenland-meltdown/"><b>Greenland Meltdown</b></a><span class="s5"><b><span class="Apple-converted-space"> </span></b></span></p>
+<p class="p9"><a href="http://stevengoddard.wordpress.com/polar-meltdown/"><b>Polar Meltdown</b></a><span class="s5"><b><span class="Apple-converted-space"> </span></b></span></p>
+<p class="p4"><a href="http://stevengoddard.wordpress.com/northwest-passage/"><b>Northwest Passage</b></a><span class="s5"><b><span class="Apple-converted-space"> </span></b></span></p>
+<p class="p4"><a href="http://stevengoddard.wordpress.com/maps-and-graphs/"><b>Maps and Graphs</b></a><span class="s5"><b> <span class="Apple-converted-space"> </span></b></span></p>
+<p class="p51"><a href="https://stevengoddard.wordpress.com/spectacularly-poor-climate-science-at-nasa/"><b>Spectacularly Poor Climate Science At NASA</b></a></p>
+<p class="p52"><br></p>
+<p class="p52"><br></p>
+<p class="p53"><a href="http://www.c3headlines.com/"><b>C3 Climate Conservative Consumer</b></a></p>
+<p class="p4"><a href="http://www.c3headlines.com/global-cooling-dataevidencetrends/"><b>C3: Global Cooling: Data/Evidence/Trends</b></a></p>
+<p class="p12">If the current modern <b>global</b> <b>cooling</b> continues, ... The top left chart is a plot of CO2 levels versus <b>global</b> temperatures for<span class="Apple-converted-space"> </span></p>
+<p class="p12"><b>December</b>, January and February</p>
+<p class="p13"><br></p>
+<p class="p41"><a href="http://www.c3headlines.com/2015/01/noaa-us-region-temperature-trends-since-2000-cooling-warming-precautionary-principle-those-stubborn-facts.html"><b>Per NOAA: U.S. Regional Temperature Trends Since 2000 - Only 2 of 9 Regions Warming </b></a><span class="s11">Jan 10, 2015</span></p>
+<p class="p13"><br></p>
+<p class="p13"><br></p>
+<p class="p13"><br></p>
+<p class="p17"><a href="http://www.livescience.com/topics/global-warming/"><b>Global Warming: 2016 Articles, Facts, Causes &amp; Effects</b></a></p>
+<p class="p18"><i>Global warming</i> is the term used to describe a gradual increase in the average temperature of the Earth's atmosphere and its oceans, a change that is believed to be permanently changing the Earth's climate.</p>
+<p class="p16"><br></p>
+<p class="p54"><a href="http://www.global-warming-forecasts.com/2015-climate-change-global-warming-2015.php"><b>2015 Global Warming Climate Change 2015 Predictions</b></a></p>
+<p class="p4"><a href="http://www.lowerwolfjaw.com/agw/quotes.htm"><b>124 Year of Failed Climate predictions and Environmental </b></a><span class="s5"><b>Predictions</b></span></p>
+<p class="p15"><span class="Apple-converted-space"> </span>Is our <b>climate</b> changing? The succession of temperate summers and open winters through several years ...</p>
+<p class="p55"><br></p>
+<p class="p56"><br></p>
+<p class="p57"><br></p>
+<p class="p58">--------------- 2017 by month ———</p>
+<p class="p59"><br></p>
+<p class="p60">January</p>
+<p class="p61"><br></p>
+<h2 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 18.0px Times; color: #0000ee"><a href="https://realclimatescience.com/2017/01/global-warming-is-the-biggest-fraud-in-science-history/"><b>Global Warming Is The Biggest Fraud In Science History | The ...</b></a><b><span class="Apple-converted-space"> </span></b><span class="s13"><b> </b></span><span class="s38">Jan 3, 2017<span class="Apple-converted-space"> </span></span></h2>
+<p class="p18">29 Responses to <b>Global Warming</b> Is The Biggest <b>Fraud</b> In Science History. Steve Case says: .. Mark Boslough has another challenge for anyone stating <b>2017</b> will be warmist ...</p>
+<p class="p61"><br></p>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; color: #0000ee"><a href="https://realclimatescience.com/2017/01/differentiating-global-warming-snow-from-global-cooling-snow/"><b>Differentiating Global Warming Snow From Global Cooling Snow | The ...</b></a><b> </b><span class="s38">Jan 4, 2017<span class="Apple-converted-space"> </span></span></h3>
+<p class="p18">Differentiating Global Warming Snow From <i>Global Cooling</i> Snow.<span class="Apple-converted-space">  </span>y tonyheller. Tamino says snow in Florida, Alabama and ...</p>
+<p class="p61"><br></p>
+<h2 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 18.0px Times; color: #0000ee"><a href="http://dailycaller.com/2017/01/04/what-global-warming-chart-shows-damage-from-weather-disaster-is-sharply-declining/"><b>What Global Warming? Chart Shows Damage ... - dailycaller.com</b></a><span class="s38"><span class="Apple-converted-space">  </span>Jan 4, 2017<span class="Apple-converted-space"> </span></span></h2>
+<h2 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times"> · Damage from weather related disasters is in sharp decline, despite concerns about <b>global warming</b>, ... — Roger Pielke Jr. (@RogerPielkeJr)<span class="Apple-converted-space"> </span></h2>
+<p class="p61"><br></p>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; color: #0000ee"><a href="https://realclimatescience.com/2017/01/differentiating-global-warming-snow-from-global-cooling-snow/"><b>Differentiating Global Warming Snow From Global Cooling Snow | The ...</b></a><span class="s38"> Jan 4, 2017<span class="Apple-converted-space"> </span></span></h3>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times">Differentiating Global Warming Snow From <i>Global Cooling</i> Snow ... http://reason.com/blog/<i>2017</i>/01/04/georgia-tech-climatologist-judith-curry.</h3>
+<p class="p61"><br></p>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; color: #0000ee"><a href="http://www.steynonline.com/7661/the-craziness-of-the-climate-science-echo-chamber"><b>"Craziness" of the Climate Science Echo Chamber - Mark Steyn</b></a><span class="s38"> Jan 4, 2017</span></h3>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times"><span class="Apple-converted-space"> </span>- by <i>Mark Steyn</i> Mann vs Free Speech January 4, <i>2017</i> ... For his part, Mann said <i>climate</i> science would be stronger without Curry. He said she ...</h3>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 20.0px Times; min-height: 24.0px"><br></h3>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; color: #0000ee"><a href="http://notrickszone.com/2017/01/05/north-atlantic-cooling-has-plunged-below-1950s-and-1800s-levels-and-scientists-project-more-cooling/"><b>North Atlantic Cooling Has Plunged Below 1950s (And 1800s) Levels ...</b></a><span class="s38"> Jan 5, 2017<span class="Apple-converted-space"> </span></span></h3>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times">- (<i>2017</i>), Serykh's graph of ocean heat content reveals no net warming ... Dramatic <i>Cooling</i> In the North Atlantic (Affecting <i>Global</i> Climate) Linked ...</h3>
+<p class="p62"><br></p>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 19.0px Times; color: #0000ee"><a href="https://www.iceagenow.info/"><b>Ice Age Now - The next ice age could begin any day</b></a><span class="s54"> <span class="Apple-converted-space"> </span></span><span class="s38"> Jan 5, 2017<span class="Apple-converted-space"> </span></span></h3>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times"><span class="Apple-converted-space"> </span>– In the east and south German highlands temperatures have already ... Anyone who says</h3>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; min-height: 14.0px"><br></h3>
+<p class="p4"><a href="http://www.thelocal.at/20170105/storm-axel-descends-polar-freeze-over-austria"><b>Storm 'Axel' drops polar freeze over Austria - The Local</b></a><span class="s11"><b><span class="Apple-converted-space"> </span></b></span><span class="s38"> Jan 5, 2017<span class="Apple-converted-space"> </span></span></p>
+<p class="p18">The winter storm that hit the country on Wednesday has even more in store; from bitter <i>cold</i> temperatures ...</p>
+<p class="p25"><br></p>
+<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px Times; color: #0000ee"><a href="https://realclimatescience.com/2017/01/earth-cooling-at-the-fastest-rate-on-record/"><b>Earth Cooling At The Fastest Rate On Record</b></a><span class="s11"><b> <span class="Apple-converted-space"> </span></b></span><span class="s38"> <a href="https://realclimatescience.com/author/tonyheller/"><span class="s27">tonyheller</span></a></span><span class="s11"><b><span class="Apple-converted-space">  </span></b><a href="https://realclimatescience.com/2017/01/earth-cooling-at-the-fastest-rate-on-record/"><span class="s14">January 5, 2017</span></a></span><span class="s38"> b</span></h1>
+<p class="p25"><br></p>
+<p class="p4"><a href="http://www.climatedepot.com/2017/01/06/record-cold-and-snow-has-descend-upon-the-planet/"><b>Record cold and snow spread globally | Climate Depot</b></a><span class="s11"><b> </b></span><span class="s38"><i>/</i> Jan 6, 2017</span></p>
+<p class="p18"><span class="Apple-converted-space"> </span><b>...</b> See: Death Of Global <b>Temperature</b> 'Pause' Greatly Exaggerated – 2016 ... 5 Jan <b>2017</b> – In the east and south German highlands temperatures have ..... As you get older and wiser, the <b>charlatans</b> become painfully obvious and ...</p>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; min-height: 14.0px"><br></h3>
+<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 21.0px Times; color: #0000ee"><a href="http://www.bbc.com/news/world-europe-38546998"><b>Deadly icy spell grips much of Europe, including Greek islands </b></a><span class="s38">Jan 8, 2017<span class="Apple-converted-space"> </span></span></h1>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; color: #0000ee"><a href="http://www.miamiherald.com/news/state/florida/article125325319.html"><b>President Obama's climate change promises thwarted by Congress ...</b></a><span class="s38"> Jan 8, 2017 -</span></h3>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times">Obama negotiated a major international <i>climate</i> deal and gave the Environmental Protection Agency more teeth, but <i>Congress</i> resisted and his ...</h3>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; min-height: 14.0px"><br></h3>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; color: #0000ee"><a href="http://joannenova.com.au/2017/01/richard-lindzen-axe-climate-science-funding-groupthink-has-destroyed-intellectual-foundations/"><b>Richard Lindzen: Axe climate science funding. Groupthink has ...</b></a><span class="s38"> Jan 8, 2017</span></h3>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times"><span class="Apple-converted-space"> </span>- But not Richard <i>Lindzen</i>, the carefully spoken man, with decades of ... https://jonrappoport.wordpress.com/<i>2017</i>/01/08/this-is-a-coup-the- ...</h3>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 21.0px Times; color: #0000ee; min-height: 25.0px"><br></h3>
+<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px Times; color: #0000ee"><a href="http://www.bbc.com/news/world-europe-38554357"><b>Europe cold weather death toll rises </b></a><span class="s55"><i>BBC</i></span><span class="s11"><b><span class="Apple-converted-space">  </span></b></span><span class="s56">Jan 9, 2017</span></h1>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 22.0px Times; color: #0000ee"><a href="http://www.climatedepot.com/2017/01/10/pravda-scientists-now-warn-of-a-new-ice-age-as-temperature-plummets-to-80f-in-russia/"><b>Pravda: 'Scientists Now Warn Of A New Ice Age' As Temperature ...</b></a><span class="s57"> </span><span class="s38">Jan 10, 2017</span></h3>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times"><span class="Apple-converted-space"> </span>- The global warming climate appears to have been hacked by natural factors. ... See more at: http://notrickszone.com/<i>2017</i>/01/10/pravda-scientists-now- ... Growing number of scientists are predicting <i>global cooling</i>: Russia's ...</h3>
+<h1 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 18.0px Times; color: #0000ee"><a href="http://notrickszone.com/2017/01/10/pravda-scientists-now-warn-of-a-new-ice-age-as-temperature-plummets-to-80f-in-russia/"><b>Pravda: “Scientists Now Warn Of A New Ice Age” As Temperature Plummets to – 80°F In Russia!</b></a></h1>
+<p class="p18">By <a href="http://notrickszone.com/author/admin/"><span class="s58">P Gosselin</span></a> on 10. January 2017</p>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; color: #0000ee"><span class="s11"><b>UPDATE! “</b><a href="http://www.accuweather.com/en/weather-news/arctic-outbreak-kills-dozens-amid-heavy-snow-in-eastern-europe-turkey/70000508"><b>Arctic outbreak kills dozens…</b></a><b> “</b></span></h3>
+<p class="p67"><br></p>
+<h2 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 18.0px Times; color: #0000ee"><a href="https://www.nytimes.com/2017/01/10/science/geoengineering-climate-change-global-warming.html"><b>White House Urges Research on Geoengineering to Combat Global Warming </b></a><span class="s38"><span class="Apple-converted-space">  </span><i>NYT<span class="Apple-converted-space"> </span></i> Jan 10, 2017</span></h2>
+<h2 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times"> · A report recommends modest studies on geoengineering, the controversial concept of intervening in nature to slow or reverse <b>global warming</b>.</h2>
+<h2 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; color: #0000ee; min-height: 18.0px"><br></h2>
+<h1 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 19.0px Times; color: #0000ee"><a href="http://notrickszone.com/2017/01/10/pravda-scientists-now-warn-of-a-new-ice-age-as-temperature-plummets-to-80f-in-russia/"><b>Pravda: “Scientists Now Warn Of A New Ice Age” As Temperature Plummets to – 80°F In Russia!</b></a><span class="s59"><b> </b></span><span class="s38">By <a href="http://notrickszone.com/author/admin/"><span class="s4">P Gosselin</span></a> on Jan 10, 2017</span></h1>
+<p class="p18">- See more at: http://notrickszone.com/2017/01/10/pravda-scientists-now-warn-of-a-new-ice-age-as-temperature-plummets-to-80f-in-russia/#sthash.K1JUryKZ.BgEdpJfB.dpuf</p>
+<p class="p25"><br></p>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; color: #0000ee"><a href="http://www.sactax.org/2017/01/jerry-browns-big-green-budget-is-in-the-red/"><b>Sacramento Taxpayers Association » Jerry Brown's BIG Green Budget ...</b></a><span class="s38"> Jan 11, 2017<span class="Apple-converted-space"> </span></span></h3>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times">- The focus during <i>Brown's 2017</i>-18 Budget press conference was <i>climate change</i> policy and spending, increases in spending on childcare, ...</h3>
+<p class="p25"><br></p>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; color: #0000ee"><a href="https://realclimatescience.com/2017/01/gavin-schmidt-erasing-the-unanimous-global-cooling-consensus/"><b>Gavin Schmidt : Erasing The Unanimous Global Cooling Consensus ...</b></a><b><span class="Apple-converted-space"> </span></b><span class="s38"> Jan 12, 2017<span class="Apple-converted-space"> </span></span></h3>
+<p class="p18">tonyheller ... This <i>cooling</i> wrecked the <i>global</i> warming story, so Gavin Schmidt at NASA has almost completely erased the ...</p>
+<p class="p25"><br></p>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; color: #0000ee"><a href="http://www.frontpagemag.com/fpm/265437/drought-sanity-california-daniel-greenfield"><b>A Drought of Sanity in California | Frontpage Mag</b></a><span class="s38"> <span class="Apple-converted-space">  </span>Jan 12, 2017<span class="Apple-converted-space"> </span></span></h3>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times"><span class="Apple-converted-space"> </span>... If the rain doesn't fall, that's <i>Global Warming</i>. ... <i>Jerry</i> “Moonbeam” <i>Brown</i> believes in <i>Global Warming</i> the way that the followers of his old pal ...</h3>
+<p class="p25"><br></p>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; color: #0000ee"><a href="http://www.climatedepot.com/2017/01/12/2153498/"><b>Gov. Jerry Brown's Holy War Against Climate Change | Climate Depot</b></a><span class="s38"> Jan 12, 2017<span class="Apple-converted-space"> </span></span></h3>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times">- <i>Jerry Brown</i> ordered permanent urban water restrictions, including bans on ... Brown's <i>2017</i>-18 Budget priorities are <i>climate change</i> policy and ...</h3>
+<p class="p69"><br></p>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; color: #0000ee"><a href="http://principia-scientific.org/norwegian-scientist-global-cooling-beginning-due-low-solar-activity/"><b>Norwegian Scientists: Global Cooling Starting, Due to low solar activity ...</b></a><span class="s38"> Jan 13, 2017</span></h3>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times"><span class="Apple-converted-space"> </span>- Norwegian Scientists: <i>Global Cooling</i> Starting, Due to low solar activity ... an anthropogenic explanation — continues to rage on in <i>2017</i>.</h3>
+<p class="p16"><br></p>
+<p class="p2"><a href="https://www.washingtonpost.com/news/energy-environment/wp/2017/01/13/trump-meets-with-princeton-physicist-who-says-global-warming-is-good-for-us/"><b>Trump meets with Princeton physicist who says global warming is good for us</b></a><span class="s42"><b> </b></span><span class="s38"><i>Washington Post </i>Jan 13, 2017</span></p>
+<p class="p25"><br></p>
+<h2 style="margin: 0.0px 0.0px 14.9px 0.0px; font: 18.0px Times; color: #0000ee"><a href="https://socioecohistory.wordpress.com/2017/01/14/rockefeller-dynastys-role-in-climate-scam/"><b>Rockefeller Dynasty’s Role in Climate Scam<span class="Apple-converted-space"> </span></b></a><span class="s11"><b> </b></span><span class="s60"><b>Jan 13, 2017</b></span></h2>
+<p class="p17"><span class="s61"><a href="https://realclimatescience.com/2017/01/new-research-shows-that-climate-scientists-want-funding/">←<span class="s12"><b> New Research Shows That Climate Scientists Want Funding</b></span></a></span><span class="s11"><b><span class="Apple-converted-space">  </span></b><a href="https://realclimatescience.com/2017/01/2016-was-one-of-the-least-hot-years-on-record-in-the-us/"><b>2016 Was One Of The Least Hot Years On Record In The US </b><span class="s62">→</span></a></span></p>
+<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px Times"><b>NOAA Global Temperatures Are Fake Data<span class="Apple-converted-space">  </span></b><span class="s14">by <a href="https://realclimatescience.com/author/tonyheller/"><span class="s27">tonyheller</span></a></span><span class="s63"><span class="Apple-converted-space"> </span></span><b> </b><a href="https://realclimatescience.com/2017/01/noaa-global-temperatures-are-fake-data/"><span class="s63">January 14, 2017</span></a><span class="s14"><span class="Apple-converted-space"> </span></span></h1>
+<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px Times; color: #0000ee"><a href="https://realclimatescience.com/2017/01/climate-fraudsters-continue-their-meltdown-ahead-of-trumps-inauguration/"><b>Climate Fraudsters Continue Their Meltdown Ahead Of Trump’s Inauguration</b></a><span class="s11"><b> <span class="Apple-converted-space"> </span></b></span><span class="s38"> by <a href="https://realclimatescience.com/author/tonyheller/"><span class="s27">tonyheller</span></a></span><span class="s11"><b> </b></span><span class="s38">Posted on <a href="https://realclimatescience.com/2017/01/climate-fraudsters-continue-their-meltdown-ahead-of-trumps-inauguration/"><span class="s4">January 16, 2017</span></a></span></h1>
+<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 21.0px Times; color: #0000ee"><a href="file:///Users/LV/Desktop/climate.f/v"><b>Obama administration gives $500m to UN climate change fund</b></a><span class="s59"><b><span class="Apple-converted-space"> </span></b></span><span class="s38"><i> BBC </i>Jan 17, 2017</span></h1>
+<p class="p2"><a href="http://yournewswire.com/soros-al-gore-global-warming/"><b>Soros Caught Funding Al Gore To Promote Global Warming Lies</b></a><span class="s5"><b><span class="Apple-converted-space"> </span></b><a href="http://yournewswire.com/2017/01/"><span class="s64"> </span></a></span><span class="s63"><span class="Apple-converted-space"> </span></span><span class="s38"> Jan 18, 2017</span></p>
+<p class="p18">George <b>Soros</b> has been exposed giving former Vice President Al Gore millions of dollars in cash to promote lies about <b>global warming</b>.<span class="Apple-converted-space"> </span></p>
+<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 21.0px Times; color: #0000ee"><a href="http://www.bbc.com/news/science-environment-38652746"><b>Climate change: Data shows 2016 likely to be warmest year yet</b><span class="s43"> </span></a><span class="s65"><i>BBC</i><span class="Apple-converted-space">  </span></span><span class="s55">Jan 18, 2017</span></h1>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; color: #0000ee"><a href="http://www.dailywire.com/news/12572/proof-cnn-knows-climate-change-big-fat-hoax-john-nolte"><b>PROOF: CNN Knows Climate Change Is a Big Fat Hoax | Daily Wire</b></a><span class="s38"> Jan 19, 2017</span></h3>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times"><span class="Apple-converted-space"> </span>- report about Global Cooling <i>Global Warming Climate Change</i> ... PROOF: CNN Knows <i>Climate Change</i> Is a <i>Big</i> Fat Hoax ... And it was all <i>lies</i>.</h3>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; min-height: 14.0px"><br></h3>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 19.0px Times; color: #0000ee"><a href="https://www.ff.org/soros-paid-al-gore-millions-to-push-aggressive-us-action-on-global-warming/"><b>Soros Paid Al Gore MILLIONS To Push 'Aggressive US Action' On ...</b></a><b> </b><span class="s12"><b><span class="Apple-converted-space"> </span></b></span><span class="s38"> Jan 29, 2017</span></h3>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times"><span class="Apple-converted-space"> </span>- <i>Soros Paid Al Gore MILLIONS To Push</i> '<i>Aggressive US Action' On Global</i> ... “<i>U.S.</i> Programs <i>Global Warming</i> Grants <i>U.S.</i> Programs became ...</h3>
+<p class="p67"><br></p>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; color: #0000ee"><a href="http://www.huffingtonpost.com/david-doniger/scott-pruitts-climate-den_b_14507320.html"><b>Scott Pruitt's Climate Denial Shines Thru His Senate Answers | </b></a><b>huffingtonpost<span class="Apple-converted-space"> </span></b><span class="s38"> Jan 30, 2017</span></h3>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times"><span class="Apple-converted-space"> </span>- Oklahoma attorney general <i>Scott Pruitt</i>, President Trump's nominee to run ... <i>pseudo-science</i> from the climate denial corners that Pruitt has long ...</h3>
+<p class="p67"><br></p>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; color: #0000ee"><a href="http://www.vanityfair.com/news/2017/01/trump-white-house-deletes-all-mention-of-climate-change"><b>Trump White House Deletes All Mention of Climate Change | Vanity Fair</b></a><span class="s38"> Jan 20, 2017<span class="Apple-converted-space"> </span></span></h3>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times">- Trump White House Deletes All Mention of <i>Climate Change</i> ... January 20, <i>2017</i> 4:01 pm ... who has called <i>climate change</i> “<i>bullshit</i>” and a “hoax” manufactured by the Chinese, and whose record on <i>climate change</i> is not ...</h3>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 15.0px Times; color: #0000ee; min-height: 18.0px"><br></h3>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; color: #0000ee"><a href="https://weather.com/news/news/california-flooding-impacts-el-capitan-campground"><b>Dangerous Flooding Strikes California, Arizona; Several Rescues …</b></a><span class="s38"><span class="Apple-converted-space">    </span>Jan 21, 2017<span class="Apple-converted-space"> </span></span></h3>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times">- In Arizona, crews had to save two men trapped in a car that got caught in a wash. Heavy rainfall brought dangerous <i>flooding</i> to parts of ...</h3>
+<p class="p67"><br></p>
+<h2 style="margin: 0.0px 0.0px 14.9px 0.0px; font: 18.0px Times; color: #0000ee"><a href="https://realclimatescience.com/2017/01/end-of-the-climate-scam/"><b>End Of The Climate Scam - realclimatescience.com</b></a><span class="s11"><b> </b></span><span class="s59"><b><span class="Apple-converted-space">  </span></b></span><span class="s38">by <a href="https://realclimatescience.com/author/tonyheller/"><span class="s27">tonyheller</span></a></span><span class="s63"><span class="Apple-converted-space"> </span></span><span class="s59"><b> </b></span><span class="s38">Posted on<span class="Apple-converted-space"> </span></span><span class="s63"> </span><span class="s38">Jan 21, 2017</span></h2>
+<p class="p36"><a href="https://www.youtube.com/watch?v=-pp-6GNEsLw"><b>President Trump Defunds Phony ‘Climate Change’ Science</b></a><span class="s14"><span class="Apple-converted-space">  </span></span><span class="s38">Jan 21, 2017</span></p>
+<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 15.0px Times; color: #0000ee"><a href="http://www.dispatch.com/news/20170123/think-global-warmings-fraud-these-scientists-want-to-change-your-mind"><b>Think global warming's a fraud? These scientists want to change your mind</b></a><span class="s66"><b><span class="Apple-converted-space"> </span></b></span><span class="s59"><b> </b></span><span class="s38">By <a href="mailto:mrenault@dispatch.com"><span class="s4">Marion Renault</span></a> <span class="Apple-converted-space"> </span><i> The Columbus Dispatc</i>h Jan 23, 2017<span class="Apple-converted-space"> </span></span></h1>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; color: #0000ee"><a href="https://www.washingtonpost.com/news/energy-environment/wp/2017/01/24/in-a-fiery-speech-california-gov-jerry-brown-defends-climate-action-and-attacks-alternative-facts/"><b>In a fiery speech, California Gov. Jerry Brown defends climate action ...</b></a><span class="s38"> Jan 24, 2017<span class="Apple-converted-space"> </span></span></h3>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times">- While <i>Brown</i> has previously made waves with comments about his state's commitment to the issue of <i>climate change</i>, Tuesday's speech may ...</h3>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; min-height: 14.0px"><br></h3>
+<p class="p17"><a href="https://www.thenewamerican.com/tech/environment/item/25224-al-gores-latest-climate-change-lie"><b>Al Gore's Latest Climate-change Lie - The New American</b></a><span class="s38"> Jan 24, 2017</span></p>
+<p class="p18"><span class="Apple-converted-space"> </span>- With his lucrative <i>climate-change</i> agenda and predictions under water, former vice president ... Super-storm Sandy caused <i>Big</i> Apple flooding.</p>
+<p class="p25"><br></p>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; color: #0000ee"><a href="https://www.thenewamerican.com/tech/environment/item/25224-al-gores-latest-climate-change-lie"><b>Al Gore's Latest Climate-change Lie - The New American</b></a><span class="s38"> Jan 24, 2017<span class="Apple-converted-space"> </span></span></h3>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times">- With his lucrative climate-change agenda and predictions under water, former vice president <i>Al Gore</i> (shown) is pulling out all the stops to ...</h3>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; min-height: 14.0px"><br></h3>
+<h1 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times"><span class="s67"><a href="http://www.sctimes.com/story/opinion/2017/01/24/climate-alarmist-twists-statistics/97005994/"><b>Climate alarmist twists statistics</b></a></span><span class="s21"><b> </b></span>TOM MUELLER,<i> ST. CLOUD</i><span class="Apple-converted-space">  </span>Jan 24, 2017<span class="Apple-converted-space"> </span></h1>
+<p class="p72">Gavin Schmidt, director of Goddard,<span class="Apple-converted-space"> </span></p>
+<p class="p67"><br></p>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; color: #0000ee"><a href="http://notrickszone.com/2017/01/25/researcher-more-evidence-extreme-weather-in-japan-global-cooling-linked-to-solar-activity/"><b>Researcher: More Evidence Extreme Weather In Japan, Global ...</b></a><b> </b><span class="s38">Jan 25, 2017<span class="Apple-converted-space"> </span></span></h3>
+<p class="p18">Researcher: More Evidence Extreme Weather In Japan, <i>Global Cooling</i>, Linked To Solar Activity. By P Gosselin<span class="Apple-converted-space"> </span></p>
+<p class="p67"><br></p>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; color: #0000ee"><a href="https://realclimatescience.com/2017/01/climate-alarmists-suddenly-worried-about-free-speech/"><b>Climate Alarmists Suddenly Worried About Free Speech <span class="Apple-converted-space"> </span></b></a><span class="s38"> Jan 25, 2017<span class="Apple-converted-space"> </span></span></h3>
+<p class="p27"><span class="s4"><a href="https://realclimatescience.com/">The Deplorable Climate Science Blog<span class="s68"></span></a></span></p>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times">- Sally Jewell: 'I Hope There Are No <i>Climate</i> Change <i>Deniers</i> In The ... <i>Climate</i> scientists calling for free speech on a subject they've spent the ...</h3>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; min-height: 14.0px"><br></h3>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; color: #0000ee"><a href="http://www.businessinsider.com/everything-trump-has-said-climate-change-2017-1"><b>Everything Trump has said about climate change - Business Insider</b></a><b> </b><span class="s38">Jan. 25, <i>2017</i>,<span class="Apple-converted-space"> </span></span></h3>
+<p class="p18">This is everything Trump has said about <i>climate change</i> in the past. ...<span class="Apple-converted-space">  </span>. facebook · linkedin · twitter; email ... Give me clean, beautiful and healthy air - not the same old <i>climate change</i> (<i>global warming</i>) <i>bullshit</i>!</p>
+<p class="p25"><br></p>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; color: #0000ee"><a href="http://www.theverge.com/2017/1/26/14402784/al-gore-climate-change-health-summit-cdc-donald-trump"><b>l Gore and others will hold climate change summit canceled by CDC ...</b></a><span class="s38"> Jan 26, 2017</span></h3>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times"><span class="Apple-converted-space"> </span>- Former vice president <i>Al Gore</i>, the American Public Health ... Health Meeting will take place on February 16th, <i>2017</i> in Atlanta, Georgia.</h3>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; min-height: 14.0px"><br></h3>
+<h2 style="margin: 0.0px 0.0px 14.9px 0.0px; font: 18.0px Times; color: #0000ee"><a href="http://thefederalist.com/2017/01/27/new-york-times-our-readers-are-too-dumb-to-understand-numbers/"><b><i>New York Times</i>: Our Readers Are Too Dumb To Understand Global Warming Numbers</b></a><b><span class="Apple-converted-space"> </span></b><span class="s38"> Jan 27, 2017<span class="Apple-converted-space"> </span></span></h2>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; color: #0000ee"><a href="http://theblacksphere.net/2017/01/scandalous-soros-paid-al-gore-millions-promote-climate-change-lies/"><b>Soros Paid Al Gore MILLIONS to Promote Climate Change Lies</b></a><span class="s38"> Jan 28, 2017</span></h3>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times"><span class="Apple-converted-space"> </span>- Clintons were getting their cut by "saving" colored people all over the world with their phony foundation. Why shouldn't <i>Gore</i> get in on the ...</h3>
+<p class="p67"><br></p>
+<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 19.0px Times; color: #0000ee"><a href="http://downtrend.com/robertgehl/um-global-warming-dumps-feet-of-snow-in-california-mountains"><b>Um … Global Warming Dumps FEET Of Snow In California Mountains</b></a><span class="s59"><b> </b></span><span class="s38">| by <a href="http://downtrend.com/author/robertgehl"><span class="s27">Robert Gehl</span></a></span><span class="s59"><b> </b></span><span class="s38">January 28, 2017</span></h1>
+<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px Times; color: #0000ee"><a href="http://www.realclearinvestigations.com/articles/2017/01/29/scientists_criticize_hottest_year_on_record_claim_as_hype.html"><b>Scientists Criticize 'Hottest Year on Record' Claim as Hype</b></a><span class="s11"><b> </b></span><span class="s38">Jan 29, 2017<span class="Apple-converted-space"> </span></span></h1>
+<p class="p74"><a href="https://climatism.wordpress.com/category/climate-fraud-2/"><b>Climate Fraud | Climatism</b></a><span class="s5"><b> </b></span><span class="s38">Jan 29, 2017<span class="Apple-converted-space"> </span></span></p>
+<p class="p18">Homogenization of <i>temperature</i> data makes Capetown South Africa have a warmer <i>climate</i> record. P<span class="Apple-converted-space">  </span>Author: Climatism | Filed under: ...</p>
+<p class="p25"><br></p>
+<h1 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 24.0px Times; color: #0000ee"><a href="https://realclimatescience.com/2017/01/featured-climate-fraudster-of-the-day-christopher-flavelle-of-bloomberg/"><b>Featured Climate Fraudster Of The Day – Christopher Flavelle Of Bloomberg</b></a><span class="s11"><b><span class="Apple-converted-space"> </span></b></span><span class="s38"> by <a href="https://realclimatescience.com/author/tonyheller/"><span class="s27">tonyheller</span></a></span><span class="s11"><b><span class="Apple-converted-space"> </span></b></span><span class="s38"> Jan 29, 2017<span class="Apple-converted-space"> </span></span></h1>
+<p class="p18">This is one of the most blatantly dishonest and/or stupid articles by a climate fraudster I have seen recently. Christopher Flavelle is blaming land subsidence along the Louisiana coast on President Trump.</p>
+<p class="p75"><br></p>
+<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 18.0px Times; color: #0000ee"><a href="http://downtrend.com/katrina/al-gore-ripped-apart-for-the-huge-fraud-he-really-is"><b>Al Gore’s Global Warming Legacy Ripped Apart for the HUGE Fraud He Really Is</b></a><span class="s59"><b> <span class="Apple-converted-space"> </span></b></span><span class="s38"> by <a href="http://downtrend.com/author/katrina"><span class="s27">Kim Pines</span></a> Jan 31, 2017</span></h1>
+<p class="p4"><a href="https://phys.org/news/2017-01-renewables-paris-climate-goals.html"><b>Renewables can't deliver Paris climate goals: study - Phys.org</b></a><span class="s11"><b> <span class="Apple-converted-space"> </span></b></span><span class="s38"> Jan 31, 2017</span></p>
+<p class="p18"><span class="Apple-converted-space"> </span><b>...</b> Key indicators to track current progress and future ambition of the Paris Agreement, Nature <b>Climate</b> Change (<b>2017</b>). DOI: 10.1038/nclimate3202.</p>
+<p class="p25"><br></p>
+<p class="p77"><br></p>
+<p class="p60">February</p>
+<p class="p61"><br></p>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; color: #0000ee"><a href="http://notrickszone.com/2017/02/01/germanyaustria-january-2017-mean-temperature-dives-over-2-7c-below-normal/comment-page-1/"><b>Germany/Austria January 2017 Mean Temperature Dives …Over 2.7 ...</b></a><span class="s38"> Feb 1, 2017<span class="Apple-converted-space"> </span></span></h3>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times">- Germany/<i>Austria</i> January <i>2017</i> Mean Temperature Dives … ... Despite rising atmospheric CO2 concentration, January temperature at ... Clive Best has an interesting analysis of what “<i>global temperature</i>” means, or doesn't.</h3>
+<p class="p61"><br></p>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 20.0px Times; color: #0000ee"><a href="https://wattsupwiththat.com/2017/02/01/global-temperature-report-january-2017/"><b>Global Temperature Report: January 2017 | Watts Up With That?</b></a><span class="s11"><b> </b></span><span class="s38">Feb 1, 2017</span></h3>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times"><span class="Apple-converted-space"> </span>- Tropics cool in January; globe doesn't <i>Global climate</i> trend since Nov. ... I can see millions of <i>climate refugees</i> and most of Florida is under 4 ...</h3>
+<p class="p61"><br></p>
+<p class="p2"><a href="https://nworeport.me/2017/02/01/delingpole-trumps-climate-plans-just-made-the-medias-heads-explode/"><b>DELINGPOLE: Trump’s Climate Plans Just Made the Media’s Heads Explode<span class="Apple-converted-space">  </span></b></a><span class="s38">Feb 1, 2017</span></p>
+<p class="p78"><br></p>
+<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 18.0px Times; color: #0000ee"><a href="http://www.zerohedge.com/news/2017-02-03/un-official-admits-global-warming-agenda-really-about-destroying-capitalism"><b>U.N. Official Admits Global Warming Agenda Is Really About Destroying Capitalism </b></a><span class="s33">Feb 3, 2017</span></h1>
+<h1 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 21.0px Times; color: #0000ee"><a href="http://www.dailymail.co.uk/sciencetech/article-4192182/World-leaders-duped-manipulated-global-warming-data.html"><b>Exposed: How world leaders were duped into investing billions over manipulated global warming data </b></a><span class="s59"><b> </b></span><span class="s38">, 4 February Updated: 5 February 2017</span></h1>
+<p class="p79"><span class="s11">Read more: <a href="http://www.dailymail.co.uk/sciencetech/article-4192182/World-leaders-duped-manipulated-global-warming-data.html#ixzz4Y0Jgc9NV"><span class="s68">http://www.dailymail.co.uk/sciencetech/article-4192182/World-leaders-duped-manipulated-global-warming-data.html#ixzz4Y0Jgc9NV</span></a><span class="Apple-converted-space"> </span></span></p>
+<p class="p79"><span class="s11">Follow us: <a href="http://ec.tynt.com/b/rw?id=bBOTTqvd0r3Pooab7jrHcU&amp;u=MailOnline"><span class="s68">@MailOnline on Twitter</span></a> | <a href="http://ec.tynt.com/b/rf?id=bBOTTqvd0r3Pooab7jrHcU&amp;u=DailyMail"><span class="s68">DailyMail on Facebook</span></a></span></p>
+<p class="p80"><br></p>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 20.0px Times; color: #0000ee"><a href="https://realclimatescience.com/2017/02/nasa-noaa-climate-data-is-fake-data/"><b>NASA / NOAA Climate Data Is Fake Data | The Deplorable Climate ...</b></a><span class="s56"> </span><span class="s38">Feb 4, 2017<span class="Apple-converted-space"> </span></span></h3>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times">- NASA / NOAA <i>Climate Data</i> Is <i>Fake Data</i>. ... NOAA has almost no temperature <i>data</i> from Africa, and none from central Africa. They simply made up the record temperatures.</h3>
+<p class="p80"><br></p>
+<h2 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 23.0px Times; color: #0000ee"><a href="http://www.naturalnews.com/2017-02-05-global-warming-world-map-fake-science-noaa-caught-in-blatant-temperature-data-fraud.html"><b>Global warming world map based largely on "fake science ...</b></a><b><span class="Apple-converted-space"> </span></b><span class="s38"> Feb 5, 2017 </span></h2>
+<p class="p18">A new look at world <b>temperature</b> data claimed by the NOAA -- the chief proponent of "<b>climate</b> change" theory -- discovers that <b>global</b> warming <b>temperature</b> data points ...</p>
+<p class="p80"><br></p>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 20.0px Times; color: #0000ee"><a href="https://wattsupwiththat.com/2017/02/05/cambridge-executive-rebels-against-academic-climate-divestment-vote/"><b>Cambridge Executive Rebels Against Academic Climate Divestment ...</b></a><b><span class="Apple-converted-space"> </span></b><span class="s56"> </span><span class="s38">Feb 5, 2017 </span></h3>
+<p class="p18">Cambridge clashes with own academics over <i>climate</i> change University executive refuses to implement governing… ... Eric Worrall /<span class="Apple-converted-space"> </span></p>
+<p class="p82"><br></p>
+<h2 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 18.0px Times; color: #0000ee"><a href="http://dailycaller.com/2017/02/05/noaa-scientists-manipulated-temperature-data-to-make-global-warming-seem-worse/"><b>Manipulated Climate Data To Help Obama - dailycaller.com</b></a><span class="s38"> Feb 5, 2017 </span></h2>
+<h2 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times"><span class="Apple-converted-space"> </span>... a Department of Commerce Gold Medal winner for creating and implementing a standard to produce and preserve <b>climate data</b>, ...</h2>
+<h2 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; min-height: 14.0px"><br></h2>
+<p class="p17"><a href="http://www.dailymail.co.uk/sciencetech/article-4192182/World-leaders-duped-manipulated-global-warming-data.html"><b>World leaders duped by manipulated global warming data | Daily Mail ...</b></a><span class="s11"><b> </b></span><span class="s38">Feb 4, 2017<span class="Apple-converted-space"> </span></span></p>
+<p class="p18">- The article reported on claims made by Dr John Bates, a <i>climate</i> scientist formerly employed at the US <i>National Oceanic and Atmospheric</i> ...</p>
+<h2 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; min-height: 14.0px"><br></h2>
+<h1 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 18.0px Times; color: #0000ee"><a href="http://www.naturalnews.com/2017-02-05-global-warming-world-map-fake-science-noaa-caught-in-blatant-temperature-data-fraud.html"><b>Global warming world map based largely on “fake science” … NOAA caught in blatant temperature data fraud </b></a><span class="s38">Feb 5, 2017 </span></h1>
+<h1 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; color: #0000ee"><span class="s11">by: <a href="http://www.naturalnews.com/author/healthranger"><span class="s68">Mike Adams</span></a></span></h1>
+<h2 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; min-height: 14.0px"><br></h2>
+<h1 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 21.0px Times; color: #0000ee"><a href="https://science.house.gov/news/press-releases/former-noaa-scientist-confirms-colleagues-manipulated-climate-records"><b>Former NOAA Scientist Confirms Colleagues Manipulated Climate Records</b></a><span class="s11"><b> </b></span><span class="s38">Feb 5, 2017 </span></h1>
+<p class="p18">According to Dr. John Bates, the recently retired principal scientist at NOAA’s National Climatic Data Center, the Karl study was used “to discredit the notion of a global warming hiatus and rush to time the publication of the paper to influence national and international deliberations on climate policy.”</p>
+<p class="p25"><br></p>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; color: #0000ee"><a href="http://macedoniaonline.eu/content/view/31195/56/"><b>MINA Breaking News - NOAA and NASA Continue to Fake Climate Data</b></a><b> </b><span class="s38">Feb 5, 2017 </span></h3>
+<p class="p18"><span class="Apple-converted-space"> </span>The map above is <i>fake</i>. NOAA has almost no temperature <i>data</i> from Africa, and none from central Africa. They simply made up the record ...</p>
+<p class="p25"><br></p>
+<p class="p17"><a href="http://www.lse.ac.uk/GranthamInstitute/news/more-fake-news-in-the-mail-on-sunday/"><b>More fake news in 'The Mail on Sunday' | Grantham Research Institute ...</b></a><span class="s38"> Feb 5, 2017 </span></p>
+<p class="p18">- An attack by the 'The Mail on Sunday' on the accuracy and integrity of a recent paper on <i>global warming</i> is based on inaccurate and misleading ...</p>
+<p class="p25"><br></p>
+<p class="p17"><a href="http://www.washingtontimes.com/news/2017/feb/5/climate-change-whistleblower-alleges-noaa-manipula/"><b>Climate change whistleblower alleges NOAA manipulated data to hide ...</b></a><span class="s38"> Feb 5, 2017 </span></p>
+<p class="p18">- The <i>climate change</i> debate went nuclear Sunday over a ... right John. The people upvoting him are not <i>fake</i>." ... Ahhh; it must be <i>FAKE NEWS</i>.</p>
+<p class="p25"><br></p>
+<p class="p2"><a href="https://www.washingtontimes.com/news/2017/feb/5/climate-change-whistleblower-alleges-noaa-manipula/"><b>Climate change whistleblower alleges NOAA manipulated data ...</b></a><span class="s11"><b> </b></span><span class="s38">Feb 05, 2017</span></p>
+<p class="p18"> · Michael E. Mann, the “hockey stick” theory founder and <b>Penn State</b> climatologist, dismissed the Bates charges on Twitter as the “latest denialist smear against #NOAA scientists.” Another prominent climate scientist, the University of Colorado’s Roger A. Pielke Sr., said Mr. Bates‘ experience was “consistent with my experiences” with Mr. Karl on the Climate Change Science …</p>
+<p class="p25"><br></p>
+<p class="p17"><a href="http://www.zerohedge.com/news/2017-02-05/climategate-2-noaa-whistleblower-claims-world-leaders-fooled-fake-global-warming-dat"><b>ClimateGate 2 - NOAA Whistleblower Claims World Leaders Fooled ...</b></a><span class="s38"> Feb 5, 2017</span></p>
+<p class="p18"> - The report claimed that the 'pause' or 'slowdown' in <i>global warming</i> in the period .... are debunking the debunked, and now cries of <i>fake news</i>!</p>
+<p class="p25"><br></p>
+<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 19.0px Times; color: #0000ee"><a href="https://wattsupwiththat.com/2017/02/06/cambridge-professors-worried-uk-government-is-losing-interest-in-climate-change/"><b>Cambridge Professors Worried UK Government is Losing Interest in Climate Chan</b></a><span class="s11"><b>ge<span class="Apple-converted-space"> </span></b></span><span class="s59"><b> </b><a href="https://wattsupwiththat.com/author/eworrall1/"><span class="s68">Eric Worrall</span></a></span><span class="s38"> <span class="Apple-converted-space">  </span>Feb 6, 2017</span></h1>
+<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px Times; color: #0000ee"><a href="https://wattsupwiththat.com/2017/02/06/monday-mirthiness-noaa-vs-reality/"><b>Monday Mirthiness – NOAA vs. reality</b></a><span class="s11"><b> </b><a href="https://wattsupwiththat.com/author/wattsupwiththat/"><span class="s68">Anthony Watts</span></a></span><span class="s38"> / <a href="https://wattsupwiththat.com/2017/02/06/monday-mirthiness-noaa-vs-reality/"><span class="Apple-converted-space">  </span></a></span><span class="s14"><span class="Apple-converted-space"> </span></span><span class="s38"> Feb 6, 2017</span></h1>
+<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 21.0px Times; color: #0000ee"><a href="http://dailycaller.com/2017/02/06/house-committee-to-push-ahead-with-investigation-into-alleged-climate-data-manipulation-at-noaa/#ixzz4Xyh9RfnQ"><b>House Committee To ‘Push Ahead’ With Investigation Into Alleged Climate Data<span class="Apple-converted-space">  </span>Manipulation At NOAA</b></a><span class="s59"><b><span class="Apple-converted-space">  </span></b></span><span class="s38">Michael Bastasch Feb 6, 2017</span></h1>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; color: #0000ee"><a href="http://www.eenews.net/stories/1060049630"><b>'Whistleblower' says protocol was breached but no data fraud</b></a><span class="s38"> Feb 7, 2017</span></h3>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times"><span class="Apple-converted-space"> </span>- The federal <i>climate</i> scientist hailed by conservatives as a whistleblower for allegedly revealing manipulated global warming data said ...</h3>
+<p class="p25"><br></p>
+<p class="p63"><a href="https://www.rt.com/news/376512-whistleblower-noaa-pausebuster-fake/"><b>US govt agency manipulated data to exaggerate climate change – whistleblower</b></a><span class="s11"><b><span class="Apple-converted-space"> </span></b></span><span class="s38"> 6 Feb, 2017 21:44Edited time:<span class="Apple-converted-space">  </span>Feb 7, 2017</span></p>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; color: #0000ee"><a href="http://www.nationalreview.com/article/444668/whistle-blower-scientist-exposes-shoddy-climate-science-noaa"><b>Whistle-Blower Scientist Exposes Shoddy Climate Science NOAA ...</b></a><span class="s38"> Feb 7, 2017</span></h3>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times"><span class="Apple-converted-space"> </span>- A former top scientist with the <i>NOAA</i> reveals a secret behind a key <i>climate</i> report issued before 2015's UN <i>Climate</i> Change Conference ...</h3>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 24.0px Times; color: #0000ee; min-height: 29.0px"><br></h3>
+<h1 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 18.0px Times; color: #0000ee"><a href="http://www.breitbart.com/big-government/2017/02/07/retired-noaa-scientist-for-exposes-fake-science-behind-study-debunking-global-warming-pause/"><b>House Chair Praises Retired NOAA Scientist for Exposing Fake Science Behind Study Debunking Global Warming Pause</b></a><span class="s11"><b><span class="Apple-converted-space"> </span></b></span><span class="s38"> Feb 7, 2017</span></h1>
+<h2 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px Times">The chairman of the Science, Space and Technology Committee praised retired NOAA scientist John L. Bates for coming forward through interviews and a lengthy blog post outling how<span class="Apple-converted-space"> </span></h2>
+<h2 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px Times">his former colleagues massaged data to produce a report debunking the so-called pause in global warming from 1998 forward.</h2>
+<h2 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px Times; min-height: 16.0px"><br></h2>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; color: #0000ee"><a href="http://www.theblaze.com/news/2017/02/07/former-noaa-scientist-colleagues-manipulated-climate-change-data-for-political-reasons/"><b>Former NOAA scientist: Colleagues manipulated climate change data ...</b></a><span class="s38"> Tré Goins-Phillips Feb 7, 2017</span></h3>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times">Former NOAA scientist: ..... 2/3 of the planet's population believes this <i>climate</i> change <i>FRAUD</i>. +++. Maybe its only ...</h3>
+<h2 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px Times; min-height: 16.0px"><br></h2>
+<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px Times; color: #0000ee"><a href="http://www.bbc.com/news/world-us-canada-38901498"><b>Dakota Access Pipeline to win US Army permit for completion<span class="Apple-converted-space"> </span></b></a><span class="s11"><b> </b></span><span class="s66"><i>BBC</i></span><span class="s11"><b> </b></span><span class="s38"><span class="Apple-converted-space">  </span>Feb 7, 2017</span></h1>
+<h4 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 17.0px Times; color: #0000ee"><a href="https://www.bloomberg.com/politics/articles/2017-02-08/prominent-republicans-begin-push-to-tax-carbon-cut-regulations"><b>Prominent Republicans Pitch Carbon-Tax Plan to Top Trump Aides</b></a><span class="s11"><b> </b></span><span class="s38"><i>Bloomberg ·</i> Feb 7, 2017</span></h4>
+<p class="p18">A group of prominent Republicans and business leaders pitched a <b>tax</b> on <b>carbon</b> dioxide to top White House aides Wednesday, selling the plan as an economic win that could drive job growth and …</p>
+<p class="p84"><br></p>
+<h4 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 19.0px Times; color: #0000ee"><a href="https://www.nytimes.com/2017/02/07/science/a-conservative-climate-solution-republican-group-calls-for-carbon-tax.html"><b>A Conservative Climate Solution’: Republican Group Calls for Carbon Tax</b></a><b> </b><span class="s11"><i><span class="Apple-converted-space"> </span></i> </span><span class="s38">Feb 7, 2017</span></h4>
+<p class="p18">A group of Republican elder statesmen is calling for a <b>tax</b> on <b>carbon</b> emissions to fight climate change. The group, led by former Secretary of State James A. Baker III, with …</p>
+<h2 style="margin: 0.0px 0.0px 14.9px 0.0px; font: 17.0px Times; color: #0000ee"><a href="http://www.globalclimatescam.com/news/exposed-how-world-leaders-were-duped-into-investing-billions-over-manipulated-global-warming-data/"><b>Exposed: How world leaders were duped into investing billions over manipulated global warming data</b></a><span class="s69"><b><span class="Apple-converted-space">  </span></b></span><span class="s38">By <a href="http://www.globalclimatescam.com/author/admin/"><span class="s4">ElmerB</span></a> on February 8, 2017 in <a href="http://www.globalclimatescam.com/category/news/"><span class="s4">News</span></a></span></h2>
+<p class="p2"><a href="http://www.newsmax.com/Politics/business-leaders-carbon-tax/2017/02/08/id/772580/"><b>Old-Guard Republicans to Push Carbon Tax at White House ...</b></a><span class="s11"><b><span class="Apple-converted-space">  </span></b></span><span class="s38"><i>News Max</i>1 Feb 08, 2017</span></p>
+<p class="p18"><span class="Apple-converted-space"> </span>A group of prominent Republicans and business leaders backing a <b>tax</b> on <b>carbon</b> dioxide were taking their case Wednesday to top White House aides, including ...</p>
+<p class="p36"><a href="http://www.huffingtonpost.com/entry/noaa-climate-data-lamar-smith_us_589a05b2e4b04061313977b4?9fpcqvz6cengvte29"><b>Rep. Lamar Smith Tried To Make A Big Deal Out Of A Fake Climate Scandal</b></a><span class="s5"><b> </b></span><span class="s63"><b><span class="Apple-converted-space"> </span></b></span><span class="s59"><b> </b></span><span class="s38"><i>The Huffington Post · <span class="Apple-converted-space"> </span></i> 8 Feb, 2017<span class="Apple-converted-space"> </span></span></p>
+<p class="p18">The 2015 study, led by NOAA scientist Thomas Karl and published in the journal Science, found that an apparent slowing trend, or hiatus, in the rate of <b>global warming</b> from 1998 to 2012 was the …</p>
+<p class="p85"><br></p>
+<h2 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 18.0px Times; color: #0000ee"><a href="http://www.newsmax.com/MKTNews/global-warming-hoax-facts/2014/10/17/id/601458/"><b>New Report: There is No Global Warming</b></a><span class="s11"><b> </b></span><span class="s38"><b><i>www.newsmax <span class="Apple-converted-space"> </span></i></b> 8 Feb, 2017<span class="Apple-converted-space"> </span></span></h2>
+<p class="p18">The liberal media machine has spent decades bulldozing anyone who tells you <b>global warming</b> is a sham. They even came up with a clever little title — “deniers.”</p>
+<p class="p25"><br></p>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; color: #0000ee"><a href="http://www.businessinsider.com/noaa-climate-data-not-faked-2017-2"><b>No, the NOAA didn't fake climate data. Here's what happened ...</b></a><span class="s38"> Feb 9, 2017<span class="Apple-converted-space"> </span></span></h3>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times">- The answer, Karl suggests, is that the <i>climate</i> didn't stop warming at all. ... Other scientists, like <i>NASA</i> researcher Gavin Schmidt, have since ...</h3>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; min-height: 14.0px"><br></h3>
+<p class="p2"><span class="s4"><a href="http://thefederalist.com/2017/02/10/congress-investigates-federal-climate-change-study-after-whistleblower-exposes-fake-science/">Congress Investigates <span class="s24"><b>Climate</b></span><span class="s70"> Study After Scientist Exposes Fake ...</span></a></span><span class="s11"> </span><span class="s38">February 10, <b>2017</b></span></p>
+<p class="p18">. Congress is ramping up its investigation into a key <b>climate</b> study, now under further scrutiny after a federal whistleblower raised more ...</p>
+<p class="p25"><br></p>
+<p class="p17"><a href="https://realclimatescience.com/2017/02/catastrophic-global-warming-is-fake-news/"><b>Catastrophic Global Warming Is Fake News | The Deplorable Climate ...</b></a><span class="s38"> Feb 11, 2017 </span></p>
+<p class="p18">- Satellites don't show much <i>warming</i>, but what they do show is <i>fake news</i>. The problem with this graph is that there are two major non-climatic ...</p>
+<p class="p25"><br></p>
+<h2 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 18.0px Times; color: #0000ee"><a href="http://www.naturalnews.com/2017-02-13-fake-science-global-warming-world-map-data-largely-faked-by-noaa-climate-change-fraud-rapidly-unraveling.html"><b>FAKE SCIENCE: “Global warming” world map data largely faked by …</b></a><span class="s38">Feb 13, 2017</span></h2>
+<p class="p18">by: D. Samuelson Tags: Co2 good for plants, EPA, Gina McCarthy, <b>global warming</b> hoax, hockey stick <b>fraud</b>, ... make up data that fit the buzzworthy topic of <b>global warming</b>…</p>
+<p class="p25"><br></p>
+<p class="p17"><a href="http://www.americanthinker.com/articles/2017/02/fake_news_hits_the_global_warming_debate.html"><b>Artles: Fake News: Global Warming Edition - American Thinker</b></a><span class="s38"><i> </i>  Feb 13, 2017</span></p>
+<p class="p18"> - <i>Fake news</i> has become part of the daily lexicon due to efforts of once respected <i>news</i> outlets such as the New York Times, the Washington ...</p>
+<p class="p25"><br></p>
+<h1 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 19.0px Times; color: #0000ee"><a href="https://arstechnica.com/science/2017/02/trumps-science-advisor-candidates-both-question-climate-change/"><b>Leading candidate for Trump’s science advisor calls climate change a cult</b></a><span class="s59"><b><span class="Apple-converted-space"> </span></b></span><span class="s38"> Feb 15, 2017</span></h1>
+<h2 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 18.0px Times"><b>Both picks support science, doubt its conclusions.</b></h2>
+<p class="p27"><span class="s4"><a href="https://arstechnica.com/author/john-timmer/">John Timmer<span class="s68"></span></a></span></p>
+<p class="p25"><br></p>
+<p class="p25"><br></p>
+<h1 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 18.0px Times; color: #0000ee"><a href="http://www.cnbc.com/2017/02/16/possible-trump-science-advisor-global-warming-is-not-worth-investing-in.html"><b>Possible Trump science advisor says global warming is a 'non-problem' not worth investing in</b></a><span class="s11"><b><span class="Apple-converted-space">  </span></b></span><span class="s38">Feb 16, 2017<span class="Apple-converted-space"> </span></span></h1>
+<p class="p18"><span class="s58"><a href="http://www.cnbc.com/robert-ferris/">Robert Ferris</a></span> | <a href="http://twitter.com/RobertoFerris"><span class="s58">@RobertoFerris</span></a><span class="s58"> </span><span class="s15"><span class="Apple-converted-space"> </span></span> CNBC<span class="Apple-converted-space">    </span>Will Harper Princeton U</p>
+<p class="p87">prominent but controversial physicist who recently met with President <a href="http://www.cnbc.com/donald-trump/"><span class="s58">Donald Trump</span></a> says global warming is a "non-problem" not worth investing in, that CO2 is actually good for the atmosphere and the planet, and that the debate over climate change is driven by alarmists and is distracting the public from other more pressing problems.</p>
+<p class="p25"><br></p>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; color: #0000ee"><a href="http://www.theblaze.com/news/2017/02/16/after-bashing-trump-california-gov-jerry-brown-asks-for-federal-aid/"><b>After bashing Trump, California Gov. Jerry Brown asks for federal aid ...</b></a><span class="s38"> Feb 16, 2017<span class="Apple-converted-space"> </span></span></h3>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times">- California Gov <i>Jerry Brown</i>-"Trump is not my President!" ACT OF ... James Ritchie MAGA (@JamesRitch1) February 13, <i>2017</i> ......</h3>
+<p class="p25"><br></p>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; color: #0000ee"><a href="https://conservativedailypost.com/ca-governor-brown-will-not-face-charges-dam-disaster-blamed-instead-global-warming/"><b>CA Governor Brown Will Not Face Charges, Dam Disaster Being ...</b></a><b><span class="Apple-converted-space"> </span></b><span class="s38"> Feb 16, 2017</span></h3>
+<p class="p18">CA <i>Governor Brown</i> Will Not Face Charges, Dam Disaster Being Blamed Instead On '<i>Global Warming</i>'. Posted by Matthew Bernstein | Feb 16, <i>2017</i> | Liberal Corruption ... They claim that <i>global</i></p>
+<p class="p25"><br></p>
+<h2 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 18.0px Times; color: #0000ee"><a href="http://www.americanthinker.com/articles/2017/02/democrats_real_global_warming_fraud_revealed.html"><b>Articles: Democrats’ Real Global Warming Fraud Revealed</b></a><span class="s38"> Feb 18, 2017 </span></h2>
+<h2 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times">Democrats’ Real <b>Global Warming Fraud</b> Revealed. By Dennis T. Avery. ... They will be even more devastated as we learn the details of their massive <b>global warming</b> ...</h2>
+<p class="p25"><br></p>
+<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 20.0px Times; color: #0000ee"><a href="http://insider.foxnews.com/2017/06/02/katie-hopkins-worked-scam-mongering-scientists-absolute-fraud-paris-accord-trump-climate"><b>Katie Hopkins: Paris Accord Is 'Complete Fraud,' US 'Signed Away Billions'</b></a><span class="s59"><b> </b></span><span class="s38">Feb 20, 2017 </span></h1>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; color: #0000ee"><a href="http://ottawacountypatriots.org/events/the-mad-mad-mad-world-of-climatism/"><b>The Mad Mad Mad World of Climatism | Ottawa County Patriots</b></a><b><span class="Apple-converted-space"> </span></b><span class="s38"> Feb 23, 2017<span class="Apple-converted-space"> </span></span></h3>
+<p class="p18">The Mad Mad Mad World of <i>Climatism</i>. Tuesday, February 21, <i>2017</i> 7:00 pm - 9:00 pm (doors open at 6:30 pm). Howard Miller Community Center 14 S. Church St. Zeeland, Mich. 49424. A review of the scientific, legal, political and moral aspects of these issues; Fact based Common sense on climate change, energy and ...</p>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; color: #0000ee"><a href="http://www.washingtontimes.com/news/2017/feb/23/hundreds-scientists-urge-trump-withdraw-un-climate/"><b>Hundreds of scientists urge Donald Trump to withdraw from U.N. ...</b></a><span class="s38"><span class="Apple-converted-space"> </span></span></h3>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times">- 28, <i>2017</i> in Washington. ... Challenging the catastrophic climate change narrative, Mr. <i>Lindzen</i> describes carbon dioxide as “plant food, not ...</h3>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; min-height: 14.0px"><br></h3>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; color: #0000ee"><b>[pdf</b><a href="http://www.eenews.net/assets/2017/02/23/document_gw_07.pdf"><b>1 Lindzen Attachment 21 pages February 23, 2017 PETITION We urge ...</b></a><span class="s38"> Feb 23, 2017<span class="Apple-converted-space"> </span></span></h3>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times">- <i>Lindzen</i> Attachment. 21 pages. February 23, <i>2017</i>. PETITION. We urge the United States government, and others, to withdraw from the United ...</h3>
+<p class="p25"><br></p>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; color: #0000ee"><a href="https://wattsupwiththat.com/2017/02/25/richard-lindzen-petition-to-president-trump-withdraw-from-the-un-convention-on-climate-change/"><b>Richard Lindzen Petition to President Trump: Withdraw from the UN ...</b></a><span class="s38"> Feb 25, 2017</span></h3>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times"><span class="Apple-converted-space"> </span>- Guest essay by Eric Worrall Dr. Richard <i>Lindzen</i> has sent a petition to President Trump, asking the ... February 25, <i>2017</i> in Climate News.</h3>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; min-height: 14.0px"><br></h3>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; color: #0000ee"><a href="https://www.theguardian.com/environment/2017/feb/24/drastic-cooling-north-atlantic-beyond-worst-fears-scientists-warn"><b>Drastic cooling in North Atlantic beyond worst fears, scientists warn ...</b></a><span class="s38"> Feb 24, 2017 -</span></h3>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times"><span class="Apple-converted-space"> </span>Ice covering the ocean surface along lower Baffin Island, in the Hudson Strait and the Labrador Sea. Photograph: Kike Calvo/National ...</h3>
+<p class="p25"><br></p>
+<p class="p19"><a href="https://wattsupwiththat.com/2017/02/27/fake-polar-bear-scare-unmasked-the-saga-of-a-toppled-global-warming-icon/"><b>Fake Polar Bear Scare Unmasked: The Saga of a Toppled Global ...</b></a><span class="s56"> </span><span class="s38">Feb 27, 2017</span></p>
+<p class="p18"> - <i>Fake</i> Polar Bear Scare Unmasked: The Saga of a Toppled Global ... written and narrated by me, produced by the <i>Global Warming</i> Policy Foundation. .... Is it possible to ever recover from <i>fake</i> polar bear <i>news</i> if the official all ...</p>
+<p class="p25"><br></p>
+<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 16.0px Times; color: #0000ee"><a href="http://insider.foxnews.com/2017/02/27/tucker-carlson-and-bill-nye-science-guy-clash-climate-change"><b>'You Don't Know!': Tucker and Bill Nye Clash on Climate Change</b></a><span class="s59"><b><span class="Apple-converted-space">  </span></b></span><span class="s38">Feb 27, 2017<span class="Apple-converted-space"> </span></span></h1>
+<p class="p25"><br></p>
+<p class="p25"><br></p>
+<p class="p60">March</p>
+<p class="p61"><br></p>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; color: #0000ee"><a href="https://www.washingtonpost.com/news/energy-environment/wp/2017/03/01/antarctic-ice-has-set-an-unexpected-record-and-scientists-are-struggling-to-figure-out-why/"><b>Antarctic ice has set an unexpected record, and scientists are ...</b></a><span class="s38"> Mar 1, 2017<span class="Apple-converted-space"> </span></span></h3>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times">- Here's a figure she provided, showing that <i>Antarctic ice extent</i> looked fairly normal throughout much of 2016, but then steeply plummeted at the ...</h3>
+<p class="p25"><br></p>
+<p class="p19"><a href="https://realclimatescience.com/2017/03/study-global-warming-fake-news-is-shrinking-progressive-brains/"><b>Study : Global Warming Fake News Is Shrinking Progressive Brains ...</b></a><span class="s38"> March 2, 2017</span></p>
+<p class="p18">- The NPR station at Northern Arizona University claims that the Colorado River is shrinking due to “<i>global warming</i>.” Study: <i>Global Warming</i> Is ...</p>
+<p class="p25"><br></p>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 20.0px Times; color: #0000ee"><a href="http://www.dw.com/en/us-media-trump-to-cut-climate-programs-at-epa-and-noaa/a-37807240"><b>US media: Trump to cut climate programs at EPA and NOAA | News ...</b></a><span class="s38">March 3, 2017</span></h3>
+<p class="p18">16 hours ago - US media: Trump to cut <i>climate</i> programs at EPA and NOAA .... Date 04.03.<i>2017</i>; Related Subjects Donald Trump; Keywords United States, ...</p>
+<p class="p25"><br></p>
+<h1 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 24.0px Times; color: #0000ee"><a href="http://www.nationofchange.org/2017/03/04/deniers-rally-conservatives-dismiss-climate-science-fake-news-share-breitbart-stories-instead/"><b>Deniers rally conservatives to dismiss climate science as “fake news” and share Breitbart stories instead</b></a><span class="s11"><b> </b></span><span class="s38">March 4, 2017</span></h1>
+<p class="p18">A whole panel was created called “Fake Climate News Camouflaging an Anti-Capitalist Agenda – and What President Trump Plans To Do About it.”</p>
+<p class="p27"><span class="s11">By <a href="http://www.nationofchange.org/author/zach-roberts/"><span class="s68">Zach D. Roberts</span></a></span></p>
+<p class="p25"><br></p>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; color: #0000ee"><a href="https://wattsupwiththat.com/2017/03/04/a-climate-story-that-must-be-told/"><b>A Climate Story That Must be Told | Watts Up With That?</b></a><span class="s38"><span class="Apple-converted-space">  </span>March 4, <i>2017</i><span class="Apple-converted-space"> </span></span></h3>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times">I will stand with my pistol against Michael Mann any day. ...... enemy of the state, a <i>criminal against humanity</i>, will that diminish the argument ? ..... Reblogged this on <i>Climatism</i> and commented:.</h3>
+<p class="p25"><br></p>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px Times; color: #0000ee"><a href="https://royalsociety.org/science-events-and-lectures/2017/03/tim-palmer-talk/?utm_source=feedburner&amp;utm_medium=feed&amp;utm_campaign=Feed%3A+royalsocietyevents+%28The+Royal+Society+-+Upcoming+events%29"><b>Climate change: catastrophe, hoax or just lukewarm? | Royal Society</b></a><span class="s6"><span class="Apple-converted-space">  </span></span><span class="s28">lecturer on </span><span class="s38">March 6, 2017<span class="Apple-converted-space"> </span></span></h3>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times">Add to calendar ... For others it is a massive <i>hoax</i>. ... In the talk Professor Palmer will discuss why uncertainty about future <i>climate</i> need ...</h3>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; min-height: 14.0px"><br></h3>
+<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px Times; color: #0000ee"><a href="https://climatism.wordpress.com/2017/03/09/green-bans-deindustrialising-australia/"><b>Green Bans “Deindustrialising” Australia</b></a><b><span class="Apple-converted-space"> </span></b><span class="s71"><b> </b></span><span class="s38">March 9, 2017<span class="Apple-converted-space"> </span></span></h1>
+<h3 style="margin: 0.0px 0.0px 14.0px 0.0px; font: 19.0px Times; color: #0000ee"><a href="http://motls.blogspot.com/2017/03/the-climate-lynch-mob-at-mit.html"><b>The climate lynch mob at MIT</b></a><b><span class="Apple-converted-space">  </span></b><span class="s38">March 9, 2017<span class="Apple-converted-space"> </span></span></h3>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; color: #0000ee"><a href="https://www.theguardian.com/environment/2017/mar/09/epa-scott-pruitt-carbon-dioxide-global-warming-climate-change"><b>EPA head Scott Pruitt denies that carbon dioxide causes global ...</b></a><span class="s11"><b> </b></span><span class="s38">Mar 9, 2017<span class="Apple-converted-space"> </span></span></h3>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times">- Head of EPA denies carbon dioxide causes <i>global warming</i> ... Thursday 9 March <i>2017</i> 14.12 EST Last modified on Thursday 9 March <i>2017</i> ...</h3>
+<p class="p75"><br></p>
+<h3 style="margin: 0.0px 0.0px 14.0px 0.0px; font: 14.0px Times; color: #0000ee"><a href="http://motls.blogspot.com/2017/03/selection-of-climate-model-survivors.html?m=1"><b>Selection of climate model survivors isn't the scientific method </b></a><span class="s38">March 10, 2017<span class="Apple-converted-space"> </span></span></h3>
+<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 18.0px Times; color: #0000ee"><a href="https://realclimatescience.com/2017/03/spectacular-climate-fraud-from-the-world-bank/"><b>Spectacular Climate Fraud From The World Bank</b></a><span class="s11"><b> </b></span><span class="s38">by <a href="https://realclimatescience.com/author/tonyheller/"><span class="s27">tonyheller</span></a></span><span class="s63"> </span><span class="s38">March 10, 2017<span class="Apple-converted-space"> </span></span></h1>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 15.0px Times; color: #0000ee"><a href="http://genome.fieldofscience.com/2017/03/the-new-epa-chief-is-climate-denier-why.html"><b>Genomics, Medicine, and Pseudoscience: The new EPA Chief is a ...</b></a><span class="s12"><b> </b></span><span class="s38">March 13, 2017<span class="Apple-converted-space"> </span></span></h3>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times">On Thursday, newly appointed EPA chief <i>Scott Pruitt</i> said he doesn't think human-driven carbon dioxide emissions cause global warming.Scott Pruitt’s Opening Salvo<span class="Apple-converted-space"> </span></h3>
+<p class="p25"><br></p>
+<p class="p2"><a href="http://www.nationalreview.com/article/445711/scott-pruitt-challenges-climate-change-orthodoxy"><b>Scott Pruitt’s Opening Salvo</b></a><span class="s11"><b> </b></span><span class="s38"><span class="Apple-converted-space">  </span>March 13, 2017</span></p>
+<p class="p25"><br></p>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; color: #0000ee"><a href="https://www.theguardian.com/education/2017/mar/14/british-scientists-us-climate-change-research-trump"><b>British scientists face a 'huge hit' if the US cuts climate change research</b></a><b> </b><span class="s38">March 13, 2017</span></h3>
+<p class="p18">UK scientists are warning they may be unable to carry out crucial research on <i>climate change</i> if Donald Trump <i>cuts</i> climate science funding in ...</p>
+<p class="p18">UK scientists are warning they may be unable to carry out crucial research on climate change if <a href="https://www.theguardian.com/us-news/donaldtrump"><span class="s58">Donald Trump</span></a> cuts climate science funding in the US.</p>
+<p class="p18">Trump tweeted in 2014 that research on global warming is <a href="https://mobile.twitter.com/realDonaldTrump/status/418542137899491328"><span class="s58">“very expensive bullshit”</span></a> that “has to stop”.</p>
+<p class="p25"><br></p>
+<p class="p91"><a href="https://wattsupwiththat.com/2017/03/16/obamas-77-billion-climate-funds-stash-found-will-be-gutted/"><b>Obama’s $77 Billion climate funds stash found – will be gutted<span class="Apple-converted-space"> </span></b></a><span class="s11"><b> </b><a href="http://thegwpf.us4.list-manage.com/track/click?u=c920274f2a364603849bbb505&amp;id=5cf553edd8&amp;e=c1a146df99"><span class="s72">15 March 2017</span></a></span></p>
+<p class="p72"><span class="s58"><a href="http://thegwpf.us4.list-manage.com/track/click?u=c920274f2a364603849bbb505&amp;id=5cf553edd8&amp;e=c1a146df99">Bloomberg,<span class="s73"><span class="Apple-converted-space"> </span></span></a></span> Christopher Flavelle</p>
+<p class="p25"><br></p>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; color: #0000ee"><a href="https://insideclimatenews.org/news/16032017/donald-trump-budget-proposal-climate-change-global-warming-epa"><b>These Climate Programs Would Be Axed Under Trump's Budget ...</b></a><b> </b><span class="s38">March 18, 2017</span></h3>
+<p class="p18">President Donald Trump's first budget plan treats <i>climate change</i> as the hoax he once called it, slashing funding for federal action, international ...</p>
+<p class="p25"><br></p>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; color: #0000ee"><a href="http://www.pravdareport.com/science/earth/20-03-2017/114905-global_warming-0/"><b>Who gains profit from global warming myth? - PravdaReport</b></a><span class="s38"> Mar 20, 2017</span></h3>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times"><span class="Apple-converted-space"> </span>- Studies by many scientists who promise <i>global warming</i> are not much different from observations of that meteorologist. If you analyze all the ...</h3>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; min-height: 14.0px"><br></h3>
+<h1 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 24.0px Times; color: #0000ee"><a href="http://notrickszone.com/2017/03/23/russian-scientists-dismiss-co2-forcing-predict-decades-of-cooling-connect-cosmic-ray-flux-to-climate/#sthash.0luVsw5A.QHWEbfIw.dpbs"><b>Scientific Papers Predict</b><span class="s11"><b> </b></span><b><i>Cooling</i> In Coming Decades</b></a><span class="s74"><b><span class="Apple-converted-space">  </span></b></span><span class="s38">Mar 23, 2017</span></h1>
+<p class="p18">A new scientific paper authored by seven scientists affiliated with the Russian Academy of Sciences was just published in the scientific journal <a href="https://www.springer.com/physics/particle+and+nuclear+physics/journal/11954"><span class="s15"><b><i>Bulletin of the Russian Academy of Sciences: Physics</i></b></span></a>.</p>
+<p class="p25"><br></p>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; color: #0000ee"><a href="http://www.bbc.com/news/world-us-canada-39415631"><b>Trump signs order undoing Obama climate change policies - BBC News</b></a><b><span class="Apple-converted-space"> </span></b><span class="s5"><b> </b></span><span class="s38">March 28, 2017</span></h3>
+<p class="p18">12 hours ago - President Donald <i>Trump</i> has <i>signed</i> an executive <i>order</i> rolling back <i>Obama</i>-era rules aimed at curbing <i>climate change</i>. The president said this ...</p>
+<p class="p25"><br></p>
+<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px Times; color: #0000ee"><a href="http://principia-scientific.org/russian-scientists-greenhouse-gas-theory-dead-global-cooling-coming/"><b>Russian Scientists: Greenhouse Gas Theory Dead, Global Cooling Coming<span class="Apple-converted-space"> </span></b></a><span class="s13"><b> </b></span><span class="s38">March 28, 2017</span></h1>
+<p class="p2"><a href="https://phys.org/news/2017-03-putin-climate-emissions.html"><b>Putin</b><span class="s4"> says </span><b>climate change</b><span class="s4"> not caused by emissions - Phys.org</span></a><span class="s4"> </span><span class="s38">March 31, 2017</span></p>
+<p class="p18">Russian President Vladimir <b>Putin</b> on Thursday said <b>climate change</b> was unstoppable and not caused by human activity and urged countries to ...</p>
+<p class="p25"><br></p>
+<p class="p2"><a href="http://www.cbc.ca/news/world/putin-says-global-warming-is-beneficial-for-economy-1.4048338"><b>Putin</b><span class="s4"> says </span><b>global warming</b><span class="s4"> is beneficial for economy - World - CBC ...</span></a><span class="Apple-converted-space"> </span><span class="s68"> </span><span class="s38">March 31, 2017</span></p>
+<p class="p18"><span class="Apple-converted-space"> </span>Error 21. <b>Putin</b> says <b>global warming</b> is beneficial for economy0:37. Arctic ice melt good for Russian shipping routes, Russian president says ...</p>
+<p class="p25"><br></p>
+<h3 style="margin: 0.0px 0.0px 14.0px 0.0px; font: 14.0px Times; color: #0000ee; min-height: 18.0px"><br></h3>
+<p class="p60">April</p>
+<p class="p61"><br></p>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; color: #0000ee"><a href="http://www.climatedepot.com/2017/04/04/climate-science-is-pseudo-science-a-point-by-point-proof/"><b>Climate 'Science' is Pseudo-Science; A Point-by-Point Proof | Climate ...</b></a><span class="s38"> Apr 4, 2017</span></h3>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times"><span class="Apple-converted-space"> </span>- <i>Climate</i> 'Science' is <i>Pseudo-Science</i>; A Point-by-Point Proof ... Point 1) <i>Climate</i> Science started with the conclusion that man-made CO2 ...</h3>
+<p class="p61"><br></p>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; color: #0000ee"><a href="http://www.naturalnews.com/2017-04-06-quack-scientists-now-claim-global-warming-causes-diabetes-not-processed-food.html"><b>Quack scientists now claim global warming, not processed food ...</b></a><b> </b><span class="s38">April<span class="Apple-converted-space">  </span>06, <i>2017</i></span></h3>
+<p class="p18"><i>Quack</i> scientists now claim global warming, not processed food, causes diabetes. Thursday, <span class="Apple-converted-space">  </span>by: Ethan Huff Tags: <i>climate</i> change, diabetes, global ...</p>
+<p class="p61"><br></p>
+<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 18.0px Times; color: #0000ee"><a href="http://notrickszone.com/2017/04/10/a-swelling-volume-of-scientific-papers-now-forecasting-global-cooling-in-the-coming-decades/"><b>A Swelling Volume Of Scientific Papers Now Forecasting Global Cooling In The Coming Decades</b></a><span class="s11"><b> </b></span><span class="s38">By <a href="http://notrickszone.com/author/kenneth-richard/"><span class="s4">Kenneth Richard</span></a> on 10. April 2017</span></h1>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 19.0px Times; color: #0000ee"><a href="https://www.louderwithcrowder.com/climate-change-changes-again-from-global-warming-to-global-cooling/"><b>Climate Change' Changes Again: From Global Warming to... Global ...</b></a><b> </b><span class="s38">April 19 <i>2017</i>.</span></h3>
+<p class="p18">... confirms for the first time that the sun plays a major role in global temperatures, and is now causing <i>global cooling</i>. ... Team Crowder</p>
+<p class="p25"><br></p>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; color: #0000ee"><a href="http://www.foxnews.com/opinion/2017/04/19/john-stossel-how-plan-to-celebrate-earth-day-might-not-believe-this.html"><b>John Stossel: How I plan to celebrate Earth Day (you might not believe ...</b></a><span class="s38"> Apr 19, 2017</span></h3>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times"><span class="Apple-converted-space"> </span>- Expect more craziness this weekend. <i>Earth Day</i> is Saturday. This year's theme: Government must “do more” about <i>climate</i> change because “consequences of inaction are too high to risk.” ADVERTISEMENT. They make it sound so simple: 1) Man causes <i>global</i> warming. 2) Warming is obviously harmful.</h3>
+<p class="p25"><br></p>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; color: #0000ee"><a href="http://www.aei.org/publication/18-spectacularly-wrong-predictions-made-around-the-time-of-first-earth-day-in-1970-expect-more-this-year/"><b>18 spectacularly wrong predictions made around the time of first Earth ...</b></a><span class="s38"> Apr 20, 2017<span class="Apple-converted-space"> </span></span></h3>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times">- MP: Let's keep those spectacularly wrong predictions from <i>the first Earth Day</i> 1970 in mind when we're bombarded in the next few days with media hype, and ..... Two predicted less sunlight reaching the Earth, which of course, would mean <i>cooling</i>, and the only one directly addressing <i>climate</i> had the sign ...</h3>
+<p class="p25"><br></p>
+<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px Times; color: #0000ee"><a href="https://www.iceagenow.info/winter-comeback-snow-chaos-austria/"><b>Winter comeback – Snow chaos in Austria</b></a><span class="s11"><b> </b><a href="https://www.iceagenow.info/winter-comeback-snow-chaos-austria/"><span class="s14">April 20, 2017</span></a></span></h1>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; color: #0000ee"><a href="http://www.abc.net.au/news/2017-04-22/john-hewson-pleads-for-politicians-to-go-back-to-evidence/8463782"><b>Fake news, politicians' dishonesty skewing climate debate, John ...</b></a><span class="s38"> Apr 21, 2017<span class="Apple-converted-space"> </span></span></h3>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times">- Politicians are getting away with flagrant <i>dishonesty</i> as a shift from fact to opinion colours the political debate around <i>climate change</i>, former Liberal leader John Hewson says.</h3>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; color: #0000ee; min-height: 18.0px"><br></h3>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; color: #0000ee"><a href="http://www.wnd.com/2017/04/climate-science-dishonest-for-decades/"><b>Climate science: Dishonest for decades - WND.com</b></a><span class="s38"> Apr 26, 2017</span></h3>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times"><span class="Apple-converted-space"> </span>- Former Obama Energy Department Undersecretary Steven Koonin made news on Monday when he told the Wall Street Journal that the administration spun <i>climate</i> data to shape public opinion. “What you saw coming out of the press releases about <i>climate</i> data, <i>climate</i> analysis, was, I'd say, misleading, ...</h3>
+<p class="p83"><br></p>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; color: #0000ee"><a href="https://www.washingtonpost.com/news/energy-environment/wp/2017/04/28/epa-website-removes-climate-science-site-from-public-view-after-two-decades/"><b>EPA website removes climate science site from public view after two ...</b></a><span class="s38"> Apr 29, 2017 -</span></h3>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times"><span class="Apple-converted-space"> </span>... direction the agency is taking, triggering the removal of several agency websites containing detailed <i>climate data</i> and scientific information.</h3>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 24.0px Times; color: #0000ee; min-height: 29.0px"><br></h3>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 19.0px Times; color: #0000ee"><a href="http://www.theblaze.com/news/2017/04/30/new-report-about-antarctica-is-horrible-news-for-global-warming-alarmists/"><b>New report about Antarctica is horrible news for global warming ...</b></a><span class="s54"> </span><span class="s38">Apr 30, 2017</span></h3>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times">Will you blame the <i>cooling</i> on <i>global</i> warming too? 0 0.</h3>
+<p class="p18">the Antarctic Peninsula is cooling and that the previous warming in the second half of the 21st century is “an extreme case.”</p>
+<p class="p61"><br></p>
+<p class="p61"><br></p>
+<p class="p60">May</p>
+<p class="p61"><br></p>
+<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px Times; color: #0000ee"><a href="https://wattsupwiththat.com/2017/05/01/global-temperatures-plunge-in-april-the-pause-returns/"><b>Global temperatures plunge in April – “the pause” returns<span class="Apple-converted-space"> </span></b></a><span class="s11"><b> </b><a href="https://wattsupwiththat.com/author/wattsupwiththat/"><span class="s68">Anthony Watts</span></a></span><span class="s38"> / <a href="https://wattsupwiththat.com/2017/05/01/global-temperatures-plunge-in-april-the-pause-returns/"><span class="s4">May 1, 2017</span></a></span></h1>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; color: #0000ee"><a href="http://www.washingtonexaminer.com/warren-buffett-faces-down-climate-change-in-weekend-votes/article/2622296"><b>Warren Buffett faces down climate change in weekend votes</b></a><span class="s38"> May 5, 2017<span class="Apple-converted-space"> </span></span></h3>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times">- <i>Buffett</i> had said it made little investment sense to start selling insurance based on the risks posed by <i>climate change</i>.</h3>
+<p class="p83"><br></p>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 19.0px Times; color: #0000ee"><a href="http://www.telegraph.co.uk/news/2017/05/06/another-arctic-ice-panic-world-temperatures-plummet/"><b>Another Arctic ice panic over as world temperatures plummet</b></a><span class="s54"> </span><span class="s38">May 6, 2017<span class="Apple-converted-space"> </span></span></h3>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times">- In March we had the BBC trumpeting <i>another</i> study that blamed vanishing <i>Arctic ice</i> as the cause of <i>weather</i> which led to the worst-ever smog ...</h3>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 24.0px Times; color: #0000ee; min-height: 29.0px"><br></h3>
+<h1 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 18.0px Times; color: #0000ee"><a href="http://www.dailystar.co.uk/news/latest-news/611671/ice-age-britain-freeze-climate-change-weather"><b>ICE AGE BRITAIN: River Thames will FREEZE OVER on 'this date' – and could kill millions</b></a><span class="s11"><b> </b></span><span class="s38">May 7, 2017<span class="Apple-converted-space"> </span></span></h1>
+<p class="p18">A GLOBAL cool down will “march in with vengeance” to usher in a 100-year mini-ice age that could freeze over the River Thames, climate scientists told Daily Star Online. By <a href="http://www.dailystar.co.uk/search/Joshua+Nevett"><span class="s58">Joshua Nevett</span></a></p>
+<p class="p61"><br></p>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 19.0px Times; color: #0000ee"><a href="http://www.climatedepot.com/2017/05/08/data-analyses-show-rapid-global-surface-cooling-growing-arctic-ice-thickness/"><b>Data Analyses Show Rapid Global Surface Cooling, Growing Arctic ...</b></a><span class="s54"> </span><span class="s38">May 8, 2017<span class="Apple-converted-space"> </span></span></h3>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times">. Analyses show that <i>global</i> temperatures continue their rapid <i>cooling</i> trend, as Schneefan here writes. What follows are excerpts of ...</h3>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; min-height: 14.0px"><br></h3>
+<h1 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 18.0px Times; color: #0000ee"><a href="http://dailycaller.com/2017/05/08/epa-dismisses-academics-on-advisory-board-criticized-for-rubber-stamping-climate-regs/"><b>EPA Dismisses Academics On Advisory Board Criticized For Rubber-Stamping Climate Regs</b></a><span class="s59"><b><span class="Apple-converted-space"> </span></b></span><span class="s38"> May 8, 2017<span class="Apple-converted-space"> </span></span></h1>
+<p class="p18">The Daily Coller Chris White</p>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; min-height: 14.0px"><br></h3>
+<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px Times; color: #0000ee"><a href="http://dailycaller.com/2017/05/08/scientists-found-a-totally-unexpected-source-of-climate-cooling/"><b>Scientists Found A ‘Totally Unexpected’ Source Of Climate Cooling</b></a><span class="s11"><b><span class="Apple-converted-space"> </span></b></span><span class="s38"> May 8, 2017<span class="Apple-converted-space"> </span></span></h1>
+<p class="p25"><br></p>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; color: #0000ee"><a href="http://www.dailywire.com/news/16154/global-quackery-earth-has-not-warmed-past-19-years-joseph-curl"><b>REPORT: Earth Has Not Warmed For Past 19 Years | Daily Wire</b></a><span class="s11"><b> </b></span><span class="s38">May 8, 2017 -</span></h3>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times">For former president Barack Obama, the ever-changing and often contradictory "facts" about global warming (which liberals now call <i>climate</i> ...</h3>
+<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 12.0px Times; min-height: 14.0px"><br></h1>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 19.0px Times; color: #0000ee"><a href="https://climatefeedback.org/evaluation/global-quackery-earth-not-warmed-past-19-years-new-study-finds-joseph-curl-the-daily-wire/"><b>The Daily Wire makes wild claims about climate change based on no ...</b></a><b> </b><span class="s38">May 9, 2017<span class="Apple-converted-space"> </span></span></h3>
+<p class="p18">Rating: 1 - ‎Review by Climate Feedback</p>
+<p class="p18">The article also rallies emotively against 'Global <i>Quackery</i>' from thousands of qualified <i>climate</i> scientists of all political persuasions, but then ...</p>
+<p class="p83"><br></p>
+<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 22.0px Times; color: #0000ee"><a href="http://dailycaller.com/2017/05/20/potential-apocalypse-nyt-warns-of-global-warming-floods-of-biblical-proportions/"><b>Potential Apocalypse’: NYT Warns Of Global Warming Floods Of Biblical Proportions<span class="Apple-converted-space"> </span></b></a><span class="s11"><b> </b></span><span class="s54">May 20, 2017</span></h1>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 20.0px Times; min-height: 24.0px"><br></h3>
+<p class="p60">June</p>
+<p class="p61"><br></p>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; color: #0000ee"><span class="s4"><a href="http://www.wnd.com/2017/06/climate-expert-praises-trump-for-pulling-out-of-sham-paris-accord/"><b>Climate expert praises Trump for pulling out of 'sham' Paris accord</b></a></span><span class="s38"> Jun 1, 2017<span class="Apple-converted-space"> </span></span></h3>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times">- President Trump officially withdrew the United States from the Paris <i>climate</i> accord, and one of the leading <i>climate</i> experts disputing the purported consensus on <i>climate</i> science is praising Trump for making the right decision for the American economy and for sound science. “I'm glad that Trump had the ...</h3>
+<p class="p18">I’m glad that Trump had the fortitude to stick it out despite all the attempts to waylay him,” said Dr. Tim Ball, a retired climatologist at the University of Winnipeg and author of “The Deliberate Corruption of Climate Science.”</p>
+<p class="p18">Read more at http://www.wnd.com/2017/06/climate-expert-praises-trump-for-pulling-out-of-sham-paris-accord/#4yrZ6ayOX3gLlbG6.99</p>
+<p class="p85"><br></p>
+<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 18.0px Times; color: #0000ee"><a href="http://www.wwl.com/blogs/scoot/scoot-global-cooling-1970s-%E2%80%93-global-warming-2017"><b>Scoot: Global cooling 1970s – global warming 2017 </b></a><span class="s38">June 01, 2017<span class="Apple-converted-space"> </span></span></h1>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; color: #0000ee"><a href="https://www.thenewamerican.com/tech/environment/item/22289-climate-alarmists-have-been-wrong-about-virtually-everything"><b>Climate Alarmists Have Been Wrong About Virtually Everything</b></a><b> </b><span class="s38">Jun 2, 2017</span></h3>
+<p class="p18">Jun 2, 2017 - After their <i>predictions</i> were proven <i>wrong</i>, alarmists claimed global warming was ... Disaster, Says Greenhouse Effect Could Wipe Some <i>Nations</i> Off Map. ... Yet, rather than <i>sinking</i> under the waves, the islands are growing.</p>
+<p class="p25"><br></p>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; color: #0000ee"><a href="https://www.nytimes.com/2017/06/02/us/politics/climate-change-trump-hoax-scott-pruitt.html?mcubz=1"><b>Does Donald Trump Still Think Climate Change Is a Hoax? No One ...</b></a><span class="s38"> Jun 2, 2017</span></h3>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times"><span class="Apple-converted-space"> </span>- By PETER BAKER JUNE 2, <i>2017</i> ... If they affirmed that he still believed <i>climate change</i> to be <i>fake</i>, they would expose him to even more ...</h3>
+<p class="p25"><br></p>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; color: #0000ee"><span class="s4"><a href="https://www.investors.com/politics/editorials/the-paris-climate-deal-was-a-fraud-and-a-sham-until-trump-decided-to-ditch-it/"><b>The Paris Climate Deal Was A 'Fraud' And A 'Sham' ... Until Trump ...</b></a></span><span class="s38"><span class="Apple-tab-span">	</span> Jun 2, 2017</span></h3>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times"><span class="Apple-converted-space"> </span>- Hot Air: Shouldn't environmentalists be celebrating the fact that President Trump decided to withdraw from the Paris <i>climate</i>-change agreement? After all, when it was signed, many of them called it a fraud, or worse. The reaction to Trump's announcement was ferocious. Billionaire environmentalist Tom ...</h3>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; min-height: 14.0px"><br></h3>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; color: #0000ee"><a href="https://www.nytimes.com/2017/06/03/us/politics/republican-leaders-climate-change.html?mcubz=1"><b>How G.O.P. Leaders Came to View Climate Change as Fake Science ...</b></a><span class="s11"><b><span class="Apple-converted-space"> </span></b></span><span class="s38"> Jun 3, 2017</span></h3>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times"><span class="Apple-converted-space"> </span>- It is difficult to reconcile the Republican Party of 2008 with the party of <i>2017</i>, whose leader, President Trump, has called <i>global warming</i> a <i>hoax</i>, ...</h3>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 24.0px Times; color: #0000ee; min-height: 29.0px"><br></h3>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 19.0px Times; color: #0000ee"><a href="http://www.climatecommonsense2.com/2017/"><b>Climate Common Sense: 2017</b></a><b> </b><span class="s38">June 5, 2017<span class="Apple-converted-space"> </span></span></h3>
+<p class="p18">The <i>Global warming</i> scam is built on lies and deception and and Obama, the Liar-in-Chief for the ... <i>Climate change</i> worries halt <i>Vienna airport's</i> third runway</p>
+<p class="p25"><br></p>
+<h1 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; color: #0000ee"><a href="https://www.naturalnews.com/2017-06-06-if-you-believe-in-climate-change-you-are-part-of-an-anti-life-cult-thats-seeking-the-genocide-of-plants-forests-and-ecosystems-across-our-planet.html#"><b>If you believe in “climate change,” you are part of an anti-life CULT that’s seeking the genocide of plants, forests and ecosystems across our planet</b></a><span class="s11"><b> </b>June 06, 2017<span class="Apple-converted-space"> </span></span></h1>
+<h1 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; color: #0000ee"><span class="s11">by: <a href="https://www.naturalnews.com/author/traceyw"><span class="s68">Tracey Watson</span></a><span class="Apple-converted-space">  </span><i>Tags: </i><a href="https://www.naturalnews.com/tag/carbon-dioxide"><span class="s14"><i>carbon dioxide</i></span></a><i>, </i><a href="https://www.naturalnews.com/tag/climate-change"><span class="s14"><i>climate change</i></span></a><i>, </i><a href="https://www.naturalnews.com/tag/co2"><span class="s14"><i>CO2</i></span></a><i>, </i><a href="https://www.naturalnews.com/tag/depopulation"><span class="s14"><i>depopulation</i></span></a><i>, </i><a href="https://www.naturalnews.com/tag/global-warming"><span class="s14"><i>global warming</i></span></a></span></h1>
+<h1 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; color: #0000ee; min-height: 14.0px"><br></h1>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; color: #0000ee"><a href="http://www.breitbart.com/big-government/2017/06/06/delingpole-global-warming-is-myth-58-scientific-papers-2017/"><b>DELINGPOLE: 'Global Warming' Is a Myth, Say 58 Scientific Papers in ...</b></a><span class="s38"> Jun 6, 2017</span></h3>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times"><span class="Apple-converted-space"> </span>- “<i>Global warming</i>” is a myth — so say 80 graphs from 58 peer-reviewed scientific papers published in <i>2017</i>. In other words, the so-called “Consensus” on <i>global warming</i> is a massive <i>lie</i>.<span class="Apple-converted-space"> </span></h3>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times">And Donald Trump was quite right to quit the Paris agreement which pretended that the massive <i>lie</i> was true. By “global ...</h3>
+<p class="p96"><br></p>
+<h2 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 18.0px Times; color: #0000ee"><a href="http://dailycaller.com/2017/06/09/al-gore-god-wants-us-to-fight-global-warming/"><b>Al Gore Says God Wants Us To Fight Global War | The Daily ...</b></a><span class="s38"> Jun 09, 2017 </span></h2>
+<h2 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times">· Former Vice President <b>Al Gore</b> invoked God in a recent interview about his new global warming ... that in <b>2017</b> gay marriage would be legal in all 50 ...</h2>
+<h1 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 15.0px Times; color: #0000ee"><a href="https://www.technocracy.news/index.php/2017/07/09/study-finds-temperature-adjustments-account-nearly-warming-climate-data/"><b>Study Finds Temperature Adjustments Account For ‘Nearly All Of The Warming’ In Climate Data<span class="Apple-converted-space"> </span></b></a><span class="s56"><b> </b></span><span class="s59"><b><span class="Apple-converted-space"> </span></b></span><span class="s38"> July 9, 2017</span></h1>
+<h1 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; color: #0000ee"><span class="s11">Written By: <a href="http://dailycaller.com/2017/07/05/exclusive-study-finds-temperature-adjustments-account-for-nearly-all-of-the-warming-in-climate-data/"><span class="s68">Michael Bastasch</span></a></span></h1>
+<h1 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 17.0px Times; min-height: 20.0px"><br></h1>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; color: #0000ee"><a href="http://www.globalchange.gov/news/fourth-national-climate-assessment-update-june-2017"><b>Fourth National Climate Assessment Update: June 2017 ...</b></a><span class="s38"> Jun 28, 2017</span></h3>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times"><span class="Apple-converted-space"> </span>- Let's start with the big news: As of last week, first drafts of all 28 chapters and five appendices of the Fourth National Climate Assessment ...</h3>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; min-height: 14.0px"><br></h3>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; color: #0000ee"><a href="https://blogs.spectator.co.uk/2017/06/truth-global-warming-pause/"><b>The truth about the global warming pause | Coffee House</b></a><span class="s38"> Jun 29, 2017</span></h3>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times"><span class="Apple-converted-space"> </span>- The truth about the <i>global warming</i> pause on Coffee House | Between ... Right now <i>2017</i> is running close to 2015 and 2016 based on the first 5 ...</h3>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; min-height: 14.0px"><br></h3>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; color: #0000ee"><a href="https://phys.org/news/2017-06-climate-halt-vienna-runway-court.html"><b>Climate change can't halt Vienna third runway: court - Phys.org</b></a><span class="s38"> Jun 29, 2017<span class="Apple-converted-space"> </span></span></h3>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times">- Austria's constitutional court on Thursday overturned a landmark ruling that had blocked <i>Vienna airport's</i> plans to build a <i>third</i> runway because ...</h3>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; min-height: 14.0px"><br></h3>
+<p class="p62"><br></p>
+<p class="p60">July</p>
+<p class="p61"><br></p>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 19.0px Times; color: #0000ee"><span class="s12"><a href="http://www.wwl.com/blogs/scoot/scoot-global-cooling-1970s-%E2%80%93-global-warming-2017"><b>Sc</b><span class="s20"><b>oot: Global cooling 1970s – global warming 2017 | WWL</b></span></a></span><span class="s54"> </span><span class="s38">Jun 1, 2017</span></h3>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times"><span class="Apple-converted-space"> </span>- There is no question that “politics” is an integral part of the threat of global warming, as it was with the threat of <i>global cooling</i> in the 1970s.</h3>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; min-height: 14.0px"><br></h3>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; color: #0000ee"><a href="http://grist.org/article/a-brief-history-of-fake-climate-news-in-the-mainstream-media/"><b>A brief history of fake climate news in the mainstream media | Grist</b></a><span class="s38"> Jul 6, 2017<span class="Apple-converted-space"> </span></span></h3>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times">- A brief history of <i>fake climate</i> news in the mainstream media .... cooling, and this was in the 1970s with all kinds of alarmist <i>data</i> on that subject.</h3>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; min-height: 14.0px"><br></h3>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; color: #0000ee"><a href="http://www.pbs.org/newshour/bb/epa-launches-program-challenge-climate-science/"><b>EPA launching program to challenge climate science | PBS NewsHour</b></a><b> </b><span class="s38">July 2, <i>2017</i><span class="Apple-converted-space"> </span></span></h3>
+<p class="p18">In the latest move to undermine the scientific consensus on <i>climate</i> change, Scott Pruitt, head of the Environmental Protection ...</p>
+<p class="p25"><br></p>
+<p class="p2"><a href="http://www.americanthinker.com/blog/2017/07/the_avalanche_begins_turkey_dumps_paris_accord_following_us.html"><b>Blog: The avalanche begins: Turkey dumps Paris Accord ...</b></a><span class="s38"> Jul 13, 2017 </span></p>
+<p class="p18">· The avalanche <b>begins:</b> Turkey dumps <b>Paris Accord</b> ... President Trump pulled the U.S. out of the <b>Paris</b> Climate <b>Accord</b>, ... We have got the <b>Czech</b> ...</p>
+<p class="p25"><br></p>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; color: #0000ee"><a href="http://www.zerohedge.com/news/2017-07-15/research-team-slams-global-warming-data-new-report-not-reality-totally-inconsistent-"><b>Research Team Slams Global Warming Data In New Report: "Not ...</b></a><span class="s38"> Jul 15, 2017</span></h3>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times"><span class="Apple-converted-space"> </span>- And the establishment, along with their fanatical <i>global warming</i> myrmidons, .... http://preearth.net/images/temp-anomalies-1880-<i>2017</i>.txt.</h3>
+<p class="p61"><br></p>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 20.0px Times; color: #0000ee"><a href="http://www.foxnews.com/opinion/2017/07/16/will-sun-put-brakes-on-global-warming.html"><b>Will the sun put the brakes on global warming?</b></a><b> </b><a href="http://www.michaelguillen.com/"><span class="s75">Michael Guillen</span></a><span class="s38">  <span class="Apple-converted-space"> </span><i> Fox Newa</i></span><span class="s33"><b><i><span class="Apple-converted-space"> </span></i></b></span><span class="s38"> <span class="Apple-converted-space">  </span>July 16, 2017</span></h3>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times"><span class="Apple-converted-space"> </span><i>Global Warming</i> belongs on the trash heap of bad science along with evolution theory ...</h3>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; min-height: 14.0px"><br></h3>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; color: #0000ee"><a href="https://www.lifesitenews.com/blogs/trump-has-saved-entire-world-from-devastations-of-globalist-paris-climate-a"><b>Trump has saved many nations from evils of globalist Paris Climate ...</b></a><span class="s38"> Jul 17, 2017</span></h3>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times"><span class="Apple-converted-space"> </span>- With that action he put the brakes on the globalist <i>climate</i> change .... to impose a secularist, <i>anti-life</i> and anti-family New World Order with world ...</h3>
+<h2 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; min-height: 14.0px"><br></h2>
+<h2 style="margin: 0.0px 0.0px 14.9px 0.0px; font: 18.0px Times; color: #0000ee"><a href="http://michellemalkin.com/2017/07/21/climate-crisis-getting-so-bad-dicaprios-giving-up-private-jets-next-wed-only/"><b>Climate crisis getting so dire DiCaprio’s *giving up private jets (*next Wed. only)</b></a><span class="s11"><b><span class="Apple-converted-space"> </span></b></span><span class="s38"> By Doug Powers  •  July 21, 2017</span></h2>
+<h3 style="margin: 0.0px 0.0px 14.0px 0.0px; font: 12.0px Times; min-height: 14.0px"><br></h3>
+<h3 style="margin: 0.0px 0.0px 14.0px 0.0px; font: 12.0px Times; min-height: 14.0px"><br></h3>
+<p class="p60">August</p>
+<h3 style="margin: 0.0px 0.0px 14.0px 0.0px; font: 12.0px Times; min-height: 14.0px"><br></h3>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 19.0px Times; color: #0000ee"><a href="https://www.heartland.org/topics/climate-change/"><b>Climate Change | Heartland Institute</b></a><span class="s54"> </span><span class="s38"><i>August</i> 2, <i>2017</i><span class="Apple-converted-space"> </span></span></h3>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times">... The debate over <i>global warming</i> is the most consequential public policy debate taking place today in the United States and around the world.</h3>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; min-height: 14.0px"><br></h3>
+<h2 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 18.0px Times; color: #0000ee"><a href="http://www.breitbart.com/big-government/2017/08/02/climate-alarmists-celebrate-earth-overshoot-day-decrying-humans-exploitation-of-planet/"><b>Climate Alarmists Celebrate ‘Earth Overshoot Day’ Decrying Humans’ Exploitation of Planet</b></a><b> </b><span class="s38"><i>August</i> 2, <i>2017</i><span class="Apple-converted-space"> </span></span></h2>
+<p class="p18">On Wednesday the global environmentalist movement commemorated “Earth Overshoot Day,” which marks the moment when the world population has supposedly consumed all the earth’s resources allocated for the year—fruit and vegetables, meat and fish, water and wood—and so began to “overexploit” the planet.</p>
+<p class="p27"><span class="s11">by <a href="http://www.breitbart.com/author/thomas-d-williams/"><span class="s68">Thomas D. Williams, Ph.D.</span></a></span></p>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; min-height: 14.0px"><br></h3>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; color: #0000ee"><a href="https://chrisagnos.com/how-economic-growth-has-become-anti-life/"><b>How Economic Growth Has Become Anti-Life - Chris Agnos</b></a><span class="s38"> Aug 4, 2017</span></h3>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times"><span class="Apple-converted-space"> </span>- This article, How Economic Growth Has Become <i>Anti-Life</i> is free and open source. You have permission to republish this article under a ...</h3>
+<p class="p25"><br></p>
+<h2 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 18.0px Times; color: #0000ee"><a href="http://www.breitbart.com/national-security/2017/08/06/u-s-formally-notifies-u-n-intent-withdraw-paris-climate-agreement/"><b>U.S. Formally Notifies U.N. of Intention to Withdraw from Paris Climate Agreement</b></a><b> </b><span class="s38"><i>August</i> 6, <i>2017</i><span class="Apple-converted-space"> </span></span></h2>
+<p class="p18">NEW YORK CITY – The Trump administration notified the United Nations Friday of its intention to leave the Paris climate accord, the latest in a series of formal steps the administration needs to take to leave the agreement in 2020.</p>
+<p class="p25"><br></p>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; color: #0000ee"><a href="http://theconversation.com/climate-change-has-changed-the-way-i-think-about-science-heres-why-82314"><b>Climate change has changed the way I think about science. Here's why</b></a><span class="s38"> Aug 10, 2017</span></h3>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times"><span class="Apple-converted-space"> </span>- <i>Climate</i> change, and doing <i>climate</i> change research, has changed the ... is critical to distinctions between “true science” and “<i>pseudoscience</i>”.</h3>
+<p class="p25"><br></p>
+<p class="p2"><span class="s4"><a href="https://www.nytimes.com/2017/08/25/us/hurricane-harvey-climate-change-texas.html?mcubz=3">The Relationship Between Hurricanes and Climate Change</a></span><span class="s11"> </span><span class="s38"><i>New York Times <span class="Apple-converted-space"> </span></i></span><span class="s5"><b> </b></span><span class="s38"><i>August</i> 25, <i>2017</i><span class="Apple-converted-space"> </span></span></p>
+<p class="p25"><br></p>
+<p class="p25"><br></p>
+<p class="p60">September</p>
+<p class="p61"><br></p>
+<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 22.0px Times; color: #0000ee"><a href="http://insider.foxnews.com/2017/09/06/al-gore-inconvenient-sequel-climate-change-debunked-scientist-roy-spencer"><b>Climatologist Calls Out 'False Claims' &amp; 'Erroneous Information' in New Al Gore Film</b></a><span class="s11"><b> </b></span><span class="s28">Sep 6, 2017</span></h1>
+<p class="p99"><br></p>
+<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px Times; color: #0000ee"><a href="http://columbia-phd.org/RealClimatologists/Articles/2017/09/08/Bridenstine_Climate_Scientists_Are_Not_Noble_Stop_Paying_Them/index.html"><b>Bridenstine, Climate Scientists Are Not Noble, Stop Paying Them<span class="Apple-converted-space"> </span></b></a><span class="s11"><b> </b></span><span class="s38">September 8, 2017</span></h1>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; color: #0000ee"><a href="http://www.telegraph.co.uk/science/2017/09/18/immediacy-threat-climate-change-exaggerated-faulty-models/"><b>Climate change not as threatening to planet as previously thought ...</b></a><b><span class="Apple-converted-space"> </span></b><span class="s38"> 18 September <i>2017</i></span></h3>
+<p class="p18"><i>Climate change</i> not as threatening to planet as previously thought, new research suggests. 385. The world has warmed less than predicted Credit: AFP. Henry Bodkin. • 7:15pm. Climate change poses less of an immediate threat to the planet than previously thought because scientists got their modelling ...</p>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; color: #0000ee"><a href="https://briankoberlein.com/2017/09/19/nibriru-climate-change-pseudoscience/"><b>Nibiru, Climate Change, and Other Pseudoscience - One Universe at ...</b></a><span class="s38"> Sep 19, 2017</span></h3>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times"><span class="Apple-converted-space"> </span>- In four days, Nibiru will strike the Earth, raining destruction upon us all. September 23, 2017 to be precise. At least according to a YouTube ...</h3>
+<p class="p25"><br></p>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 17.0px Times; color: #0000ee"><a href="http://thehill.com/opinion/energy-environment/353232-trump-and-the-end-of-obamas-bitter-war-on-coal"><b>Trump and the end of Obama's bitter 'war on coal' | TheHill</b></a><span class="s55"><span class="Apple-converted-space">  </span>Sep 30, 2017</span></h3>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times"><span class="Apple-converted-space"> </span>- One day, <i>coal</i> will fade as a dominant American energy source. Until then, three cheers for the industry's recovery!</h3>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; min-height: 14.0px"><br></h3>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; min-height: 14.0px"><br></h3>
+<p class="p60">October</p>
+<h3 style="margin: 0.0px 0.0px 14.0px 0.0px; font: 12.0px Times; min-height: 14.0px"><br></h3>
+<p class="p2"><a href="http://www.foxnews.com/politics/2017/10/09/epas-pruitt-announces-trump-administration-scrapping-obama-era-coal-regs.html"><b>EPA moves to repeal Obama's Clean Power Plan coal regs</b></a><span class="s11"><b> </b></span><span class="s55"><i>Fox News</i> ·Oct 9, 2017</span></p>
+<p class="p85"><br></p>
+<h2 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 18.0px Times; color: #0000ee"><a href="https://www.cbsnews.com/news/2017-second-warmest-year-noaa/"><b>2017 is second-warmest year on record, NOAA says - CBS News</b></a><b> </b><span class="s55">Oct 18, 2017</span></h2>
+<p class="p18">Much of Asia (excluding Russia) had warmer than average temperatures, with Bahrain having the <b>warmest</b> September since 1902. Much of Australia had above-average temperatures, and Australia set a record for the <b>warmest</b> day in September on the 22nd of the month.</p>
+<p class="p85"><br></p>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; color: #0000ee"><a href="https://wattsupwiththat.com/2017/10/24/lies-and-manipulation-the-sorry-state-of-global-climate-alarmism/"><b>Lies and Manipulation: The Sorry State of Global Climate Alarmism ...</b></a><span class="s38"> Oct 24, 2017</span></h3>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times"><i>Lies</i> and Manipulation: The Sorry State of Global Climate Alarmism. Guest Blogger / <i>October</i> 24, <i>2017</i>. Guest opinion by Vijay Jayaraj. As a citizen of a third-world country, I bring a different perspective about <i>climate change</i> from that held by most people in wealthy countries. While they fret about possible tenth-of-a-degree ...</h3>
+<p class="p85"><br></p>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; color: #0000ee"><a href="https://www.naturalnews.com/2017-10-30-all-the-biggest-lies-about-climate-change-and-global-warming-debunked-in-one-astonishing-interview.html"><b>2017-10-30-all-the-biggest-lies-about-climate-change ... - Natural News</b></a><span class="s38"> Oct 30, 2017</span></h3>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times"><span class="Apple-converted-space"> </span>- (Natural News) Everything you've been told about <i>global warming</i>, <i>climate change</i> and carbon dioxide by the mainstream media — and mainstream “science” — is an outright <i>lie</i>. Far from being a dangerous poison, carbon dioxide is a miraculous life-giving nutrient that plants need to thrive. Rising carbon ...</h3>
+<h3 style="margin: 0.0px 0.0px 14.0px 0.0px; font: 24.0px Times; color: #0000ee; min-height: 29.0px"><br></h3>
+<p class="p60">November</p>
+<p class="p61"><br></p>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; color: #0000ee"><span class="s4"><a href="https://www.investors.com/politics/editorials/the-un-admits-that-the-paris-climate-deal-was-a-fraud/"><b>The UN Admits That The Paris Climate Deal Was A Fraud | Investor's ...</b></a></span><span class="s38"> Nov 2, 2017</span></h3>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times"><span class="Apple-converted-space"> </span>- But it turns out that the Paris accord was little more than a <i>sham</i> that will do nothing to "save the planet." According to the latest annual UN report on the "emissions gap," the Paris agreement will provide only a third of the cuts in greenhouse gas that environmentalists claim is needed to prevent catastrophic ...</h3>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 20.0px Times; min-height: 24.0px"><br></h3>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; color: #0000ee"><a href="https://www.thenational.ae/opinion/editorial/responsibility-for-climate-change-lies-with-us-all-1.673013"><b>Responsibility for climate change lies with us all - The National</b></a><span class="s38"> <span class="Apple-converted-space">  </span><i>November</i> 4, <i>2017</i>.</span></h3>
+<p class="p18">A US report cited humans as the primary cause of <i>global warming</i>. ... National Edtiorial.<span class="Apple-converted-space">  </span>Updated: <i>November</i> 4, <i>2017</i> 07:11 PM. 0. shares. Twitter Facebook Google Plus Linkedin ... Protesters at the <i>2017</i> UN <i>Climate Change</i> Conference in Bonn, Germany, yesterday. The report was unequivocal in its ...</p>
+<p class="p25"><br></p>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; color: #0000ee"><span class="s4"><a href="http://www.breitbart.com/big-government/2017/11/08/delingpole-the-federal-climate-science-report-is-bunk-trump-must-fire-all-the-charlatans-responsible/"><b>Delingpole: The Federal Climate Science Report Is Bunk; Trump Must ...</b></a></span><span class="s38"> Nov 8, 2017</span></h3>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times"><span class="Apple-converted-space"> </span>- These <i>charlatans</i>, liars, cheats, incompetents and losers have abused their prestige and traduced their official agencies or distinguished seats of learning by producing an official document which misrepresents the current state of <i>climate</i> science. If this is mere ineptitude every one of them should be sacked ...</h3>
+<p class="p25"><br></p>
+<h2 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 18.0px Times; color: #0000ee"><a href="https://weather.com/forecast/regional/news/2017-11-07-record-cold-temperatures-northeast-winter-chill"><b>Arctic Cold Setting Dozens of Daily Records in the ...</b></a><span class="s38"> Nov 07, 2017</span></h2>
+<h2 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times"> · <b>Record cold</b> daily high temperatures were also set on November 10 for roughly a handful of Great Lakes cities including ... weather.com's Best Photos of <b>2017</b></h2>
+<h2 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; color: #0000ee; min-height: 18.0px"><br></h2>
+<h2 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 18.0px Times; color: #0000ee"><a href="https://wattsupwiththat.com/2017/11/11/144-year-earliest-cold-record-for-new-york-city-to-be-broken/"><b>103 year record cold low for New York City set | Watts Up ...</b></a><span class="s11"><b> </b></span><span class="s38">Nov 11, 2017</span></h2>
+<h2 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times"> · <b>RECORD</b> EVENT REPORT NATIONAL WEATHER SERVICE NEW YORK NY 0245 AM EST SAT NOV 11 <b>2017</b> ...<b>RECORD</b> LOW ... ” to “<b>103 year record cold low for</b> New ...</h2>
+<h2 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; min-height: 14.0px"><br></h2>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; color: #0000ee"><a href="https://weather.com/forecast/regional/news/2017-11-07-record-cold-temperatures-northeast-winter-chill"><b>Arctic Cold Setting Dozens of Daily Records in the Northeast, Midwest ...</b></a></h3>
+<p class="p18">November 11 <i>2017</i> 12:00 PM EDT. weather.com. Frigid Air ... This was the earliest-in-season the "Nation's Icebox" had ever been that <i>cold</i>, beating the previous <i>record</i> from Nov. 12, 1966 ... For information on the numerous daily <i>record cold</i> lows and <i>cold</i> high temperatures that have been set, see the bottom of this article.</p>
+<h2 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 18.0px Times; color: #0000ee; min-height: 23.0px"><br></h2>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; color: #0000ee"><a href="http://www.cnn.com/2017/11/14/health/scientists-warn-humanity/index.html"><b>16,000 scientists sign dire warning to humanity - CNN - CNN.com</b></a><span class="s11"><b> </b></span><span class="s38">Nov 15, 2017</span></h3>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times"><span class="Apple-converted-space"> </span>- 16000 scientists from 184 countries have published a second warning to humanity that we need to change our wicked ways to help the planet.</h3>
+<p class="p25"><br></p>
+<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 12.0px Times; min-height: 14.0px"><br></h1>
+<p class="p60">December</p>
+<p class="p61"><br></p>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; color: #0000ee"><a href="https://www.theguardian.com/environment/climate-consensus-97-per-cent/2017/dec/06/us-government-report-finds-steady-and-persistent-global-warming"><b>US government report finds steady and persistent global warming ...</b></a><span class="s38"> Dec 6, 2017</span></h3>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times"><span class="Apple-converted-space"> </span>- The US <i>Global</i> Change Research Program recently released a Climate Science Special Report. It is clearly written – an authoritative summary of the science, and easy to understand. The first main chapter deals with changes to the climate and focuses much attention on <i>global</i> temperatures. When most ...</h3>
+<p class="p99"><br></p>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; color: #0000ee"><a href="https://www.theguardian.com/environment/2017/dec/11/global-warming-will-weaken-wind-power-study-predicts"><b>Global warming will weaken wind power, study predicts | Environment ...</b></a><span class="s38"> Dec 11, 2017<span class="Apple-converted-space"> </span></span></h3>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times">- Wind farms are key to tackling <i>climate change</i> but warming will significantly cut wind power across US and UK, though Australia will see winds strengthen.</h3>
+<p class="p25"><br></p>
+<h2 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 18.0px Times; color: #0000ee"><a href="http://www.foxnews.com/science/2017/12/13/arbitrary-adjustments-exaggerate-sea-level-rise-study-finds.html"><b>'Arbitrary' adjustments exaggerate sea level rise, study finds</b></a><b> </b><span class="s38">December 13, 2017</span></h2>
+<p class="p27"><span class="s4"><a href="http://www.foxnews.com/science/2017/12/13/arbitrary-adjustments-exaggerate-sea-level-rise-study-finds.html">A new study by Australian researchers finds that international sea level rise data relied upon by the U.N. was adjusted upward in “arbitrary” ways.</a> </span><span class="s11"><span class="Apple-converted-space"> </span></span></p>
+<p class="p69"><br></p>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; color: #0000ee"><a href="https://www.cnbc.com/2017/12/12/why-bill-gates-is-optimistic-about-climate-change.html"><b>Why Bill Gates is optimistic about climate change - CNBC.com</b></a><span class="s38"> Dec 12, 2017<span class="Apple-converted-space"> </span></span></h3>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times">- Even in the face of heart-wrenching videos of starving polar bears in Canada and dramatic wildfires in Southern California, Bill <i>Gates</i> is staying optimistic about our ability to combat <i>climate change</i>. ... We need to adapt to the <i>climate change</i> that is already affecting the planet, and ...</h3>
+<p class="p101"><br></p>
+<h2 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 18.0px Times; color: #0000ee"><a href="http://www.pressherald.com/2017/12/26/record-breaking-cold-close-2017/"><b>Record-breaking cold to close out 2017 - Portland Press Herald</b></a><span class="s38"><span class="Apple-converted-space">  </span>Dec 26, 2017</span></h2>
+<h2 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times"> · After our Christmas snow, the theme of the weather over the next 7-10 days is going to be the <b>cold</b>. While Tuesday’s temperatures will be below average ...</h2>
+<h2 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; min-height: 14.0px"><br></h2>
+<p class="p17"><a href="http://www.breitbart.com/big-government/2017/12/28/reasons-global-warming-green-blob-must-die-2018/"><b>Delingpole: 30 Trillion Reasons Why the Green Blob Must Die in 2018 ...</b></a><span class="s5"><b> </b></span><span class="s38">Dec 28, 2017</span></p>
+<p class="p18">- Over the last year, I've written quite a bit about how the entire <i>global warming</i> industry is basically a junk-science-fuelled scam.</p>
+<p class="p101"><br></p>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; color: #0000ee"><a href="https://www.washingtonpost.com/news/capital-weather-gang/wp/2017/12/29/eastern-u-s-to-endure-most-numbing-new-years-eve-cold-in-memory/"><b>astern U.S. to endure most numbing New Year’s Eve cold in memory</b></a><b> </b><span class="s38">Dec 29, 2017</span></h3>
+<p class="p18"><i>Washington Post ·<span class="Apple-converted-space"> </span></i></p>
+<p class="p18"><b>2017</b> is expected to rank among the top five warmest years on <b>record</b>. So far this year, warm weather <b>records</b> have outpaced <b>cold</b> by a factor of 3 in the United States. …</p>
+<p class="p25"><br></p>
+<h2 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 18.0px Times; color: #0000ee"><a href="http://www.americanthinker.com/blog/2017/12/record_cold_weather_caused_byyou_guessed_itglobal_warming.html"><b>Record cold weather caused by...you guessed it...global<span class="Apple-converted-space">  </span>warming! </b></a><span class="s38">Dec 30, 2017</span></h2>
+<p class="p18"><i>American Thinker</i>6 hours ago</p>
+<p class="p18">This week's <b>cold</b> snap has brought <b>record</b>-low temperatures, freezing rain and heavy snow to much of the United States. But <b>2017</b> is still on track to be the second- or ...<a href="http://www.dailymail.co.uk/sciencetech/article-5202433/La-Nina-looks-reduce-global-temperature-2018.html"><span class="s32"><b>La Nina looks to reduce global<span class="Apple-converted-space"> </span></b></span></a></p>
+<p class="p68"><br></p>
+<p class="p17"><a href="http://www.dailymail.co.uk/sciencetech/article-5202433/La-Nina-looks-reduce-global-temperature-2018.html"><b>temperature in 2018 | Daily Mail Online</b></a><span class="s38"> Dec 21, 2017<span class="Apple-converted-space"> </span></span></p>
+<p class="p18">- The Met Office forecast that the <i>global</i> average temperature for <i>2018</i> would be between 0.88°C and 1.12°C – with a central estimate of 1°C. This is compared to temperatures before 1850-1900 – the industrial revolution. 2016 – the hottest year on record was 1.14°C <i>warmer</i> than pre-industrial</p>
+<p class="p25"><br></p>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; color: #0000ee"><a href="https://www.wunderground.com/news/2017-12-28-arctic-record-cold-outbreak-forecast-midwest-east-south-new-year-2018"><b>Arctic Outbreak to Bring Record Lows and Dangerously Cold Wind ...</b></a><span class="s38"> Dec 31, 2017<span class="Apple-converted-space"> </span></span></h3>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times">- A long-lived Arctic <i>cold</i> outbreak will remain entrenched across the Plains, Midwest, South and East through the first week of <i>2018</i>, shattering more daily <i>records</i> and sending wind chills to dangerously <i>cold</i> levels. The latest batch of Arctic air to arrive in the Lower 48 is gripping parts of the Midwest and East ...</h3>
+<p class="p25"><br></p>
+<p class="p25"><br></p>
+<h3 style="margin: 0.0px 0.0px 14.0px 0.0px; font: 14.0px Times; min-height: 18.0px"><br></h3>
+<h3 style="margin: 0.0px 0.0px 14.0px 0.0px; font: 14.0px Times; min-height: 18.0px"><br></h3>
+<h3 style="margin: 0.0px 0.0px 14.0px 0.0px; font: 14.0px Times; min-height: 18.0px"><br></h3>
+<h3 style="margin: 0.0px 0.0px 14.0px 0.0px; font: 14.0px Times; min-height: 18.0px"><br></h3>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; min-height: 14.0px"><br></h3>
+<p class="p25"><br></p>
+</body>
+</html>

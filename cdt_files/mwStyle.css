@@ -1,0 +1,98 @@
+/* MarketWatch AXP CSS File */
+
+/* General Styles Here */
+
+   /* Arial */
+.mwXSmall { font-size:9px;font-family:arial; }
+.mwSmall { font-size:10px;font-family:arial; }
+.mwNormal, .mwNavLink { font-size:11px;font-family:arial; }
+
+.mwMid, { font-size:12px;font-family:arial; }
+.mwLarge { font-size:13px;font-family:arial; }
+.mwXLarge { font-size:14px;font-family:arial;}
+.mw16Arial { font-size:16px;font-family:arial; }
+
+.mwMidBold { font-size:12px;font-family:arial;font-weight:bold;}
+.mwNormalBold { font-size:11px;font-family:arial;font-weight:bold;}
+.mwLargeBold { font-size:13px;font-family:arial;font-weight:bold;}
+.mwXLargeBold { font-size:14px;font-family:arial;font-weight:bold;}
+
+  /* Verdana */
+  
+.mwvXSmall { font-size:9px;font-family:verdana; }
+.mwvSmall { font-size:10px;font-family:verdana; }
+.mwvNormal, .mwNavLink, { font-size:11px;font-family:verdana; }
+.mwvMid, { font-size:12px;font-family:verdana; }
+.mwvLarge { font-size:13px;font-family:verdana; }
+.mwvXLarge { font-size:14px;font-family:verdana;}
+.mwvXXLarge { font-size:15px;font-family:verdana;}
+
+.mwvXSmallBold { font-size:9px;font-family:verdana;font-weight:bold; }
+.mwvSmallBold { font-size:10px;font-family:verdana;font-weight:bold; }
+.mwvNormalBold { font-size:11px;font-family:verdana;font-weight:bold;}
+.mwvMidBold { font-size:12px;font-family:verdana;font-weight:bold;}
+.mwvLargeBold { font-size:13px;font-family:verdana;font-weight:bold;}
+.mwvXLargeBold { font-size:14px;font-family:verdana;font-weight:bold;}
+.mwvXXLargeBold { font-size:15px;font-family:verdana;font-weight:bold;}
+
+/* context Specific Styles Here */
+.mwSectionHeader { font-size:11px;font-family:arial;color:FFFFFF;background-color:#999999;font-weight:bold; }
+.mwSectionHeaderNormal{ font-size:11px;font-family:arial;color:FFFFFF;font-weight:normal; }
+
+.mwLink { }
+a.mwLinkBlack:link {color:#000000; }
+a.mwLinkBlack:hover { color:#000000;}
+a.mwLinkBlack:visited { color:#000000;}
+
+.mwLinkDivider { color:#000000; }
+.mwclrQuoteUp	{ color:#009900; }
+.mwclrQuoteDown { color:#C80808; }
+.mwclrQuoteUnch { color:#000099; }
+.mwclrDate, .mwclrNotation, .mwLabel { color:#666666; }
+.mwLabel2 { color:#999999; }
+.mwLabel3 { color:#848284; }
+.mwDividerRow { background-color:#C8C8C8; }
+.mwFPBackGround { background-color:#eeeeee; }
+.mwRedError { color:#CC0000; }
+.mwShort { color:#C80808; }
+.mwCompanyColor { color:#4A6594; }
+.mwEntryBox { font-size:11px;font-family:arial; }
+
+.mwNoLink { color:#000000; }
+a.mwNoLink:link {color:#000000;text-decoration:none;}
+a.mwNoLink:visited {color:#000000;text-decoration:none;}
+a.mwNoLink:hover {color:#000000;text-decoration:underline;}
+
+.mwBlue { #color:#0253b7; }
+
+a.mwBlue:link {color:#0253b7;text-decoration:none;}
+a.mwBlue:visited {color:#0253b7;text-decoration:none;}
+a.mwBlue:hover {color:#cc0000;text-decoration:underline;}
+
+/* Local Market Screener styles here */
+
+a.mwLocalScreenLink {color:#0253B7;text-decoration:underline;}
+a.mwLocalScreenLink:link {color:#0253B7;text-decoration:underline;}
+a.mwLocalScreenLink:visited {color:#0253B7;text-decoration:underline;}
+a.mwLocalScreenLink:hover {color:#0253B7;text-decoration:underline;}
+
+.mwLocalScreenHdr {font-family:verdana;font-size:10px;color:#000000;}  /* column header, non linked */
+a.mwLocalScreenHdr:link {font-family:verdana;font-size:10px;color:#0253B7;text-decoration:underline;}
+a.mwLocalScreenHdr:visited {font-family:verdana;font-size:10px;color:#0253B7;text-decoration:underline;}
+a.mwLocalScreenHdr:hover {font-family:verdana;font-size:10px;color:#0253B7;text-decoration:underline;}
+
+.mwLocalScreenText {font-family:verdana;font-size:10px;} /* default font for # column and symb font */
+.mwLocalScreenCmpName {font-family:verdana;font-size:10px;font-weight:bold;}
+.mwLocalScreenQuote {font-family:verdana;font-size:10px;}
+.mwLocalScreenRankLegend {font-family:verdana;font-size:10px;font-weight:bold;}
+
+a.mwLocalScreenNavLink:link {font-family:arial,sans-serif;font-size:11px;font-weight:bold;color:#FFFFFF;text-decoration:underline}
+a.mwLocalScreenNavLink:visited {font-family:arial,sans-serif;font-size:11px;font-weight:bold;color:#FFFFFF;text-decoration:underline}
+a.mwLocalScreenNavLink:hover {font-family:arial,sans-serif;font-size:11px;font-weight:bold;color:#FFFFFF;text-decoration:underline}
+.mwLocalScreenNavLinkInactive {font-family:arial,sans-serif;font-size:11px;font-weight:bold;color:#FFFFFF;}
+
+.mwLocalScreenTitle {font-family:verdana;font-size:18px;font-weight:bold;color:#000000;}
+.mwLocalScreenTop3Symb {font-family:verdana;font-size:11px;font-weight:bold;color:#000000;}
+.mwLocalScreenTop3Quote {font-family:verdana;font-size:11px;font-weight:bold;}
+
+.mwLocalScreenNavBgDark {background-color:#003366;}

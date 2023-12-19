@@ -1,0 +1,1360 @@
+\magnification=1100
+\hsize=4.5 true in
+\vsize=7.5 true in
+
+\def\blackbox{\vrule height 1.2ex width 1.0ex depth -.2ex}
+\def\bmatrix#1{\left[\matrix{#1}\right]} %matrix with brackets []
+
+\font\ch=cmbx10 at 18truept
+\font\chtitle=cmbx10 at 21truept
+\font\fourteenbf=cmbx10 scaled\magstep2
+\font\twelvebf=cmbx10 scaled\magstep1
+ 
+\pageno=199
+
+\headline={\ifnum\pageno=199 \else\ifodd\pageno\rightheadline \else\leftheadline\fi\fi}
+
+\def\rightheadline{\tenrm\hfil{\it \S 19. What Are  Matrix Games?}\quad {\bf\folio}}
+
+\def\leftheadline{\tenrm{\bf\folio}\quad{\it Chapter 7  Matrix Games} \hfil}
+\voffset=2\baselineskip
+
+\input psfig
+
+\catcode`\@=11
+\def\m@th{\mathsurround=0pt }
+
+% tableaux
+\newdimen\p@renwd\setbox0=\hbox{\tenex B}\p@renwd=\wd0 
+\def\rowtab#1{\begingroup \m@th\setbox0=\vbox{\def\cr{\crcr\noalign{\kern2pt\global\let\cr=\endline}}
+\ialign{$##$\hfil\kern2pt\kern\p@renwd&\thinspace\hfil$##$\hfil
+&&\quad\hfil$##$\hfil\crcr
+\omit\strut\hfil\crcr\noalign{\kern-\baselineskip}
+#1\crcr\omit\strut\cr}}
+\setbox2=\vbox{\unvcopy0 \global\setbox1=\lastbox}
+\setbox2=\hbox{\unhbox1 \unskip \global\setbox1=\lastbox}
+\setbox2=\hbox{$\kern\wd1\kern-\p@renwd \left [ \kern-\wd1
+\global\setbox1=\vbox{\box1\kern2pt}
+\vcenter{\kern-\ht1 \unvbox0 \kern-\baselineskip} \,\right]$}
+\;\vbox{\kern\ht1\box2}\endgroup}
+
+  
+\
+\bigskip
+\bigskip
+\bigskip
+\noindent
+\noindent {\ch  Chapter} {\chtitle 7}
+\bigskip
+\noindent
+{\chtitle Matrix Games}
+ \medskip
+\hrule
+\bigskip
+\bigskip
+
+\noindent
+{\twelvebf \S 19. What Are  Matrix Games?}
+\smallskip
+\noindent
+You have probably heard of game theory,  a topic of   interest right now.  We will barely scratch the surface of this topic, but we hope that the glimpse we provide here will whet your appetite for more study. 
+ 
+In Webster's dictionary there are several definitions for the word $game.$  A   common usage of the word is 
+ \smallskip
+ 
+1a (1): activity engaged in for diversion or amusement: PLAY
+
+ \smallskip
+However, when we talk about games, we have in mind something
+more akin to   
+           	
+{\narrower \smallskip \noindent
+3c:   a situation that involves contest, rivalry, or struggle  
+      esp: one in which opposing
+     interests given specific information are allowed a choice of moves
+     with the object of maximizing their wins and minimizing their losses.
+ \smallskip}  
+\smallskip
+Games can be grouped into several categories according to how many players are involved.  In a one-person game, the player's objective is just to maximize his, her, or its  payoff.  However, when there is more than one player involved, they may have different objectives (payoffs) to maximize.  Surprisingly enough, linear programming has something to do with a certain class of games called matrix games. In fact, there is a deep connection between these two topics. In particular, matrix games can be solved by the simplex method, and linear programs
+can be reduced to matrix games.
+ 
+In this chapter we will study matrix games, which are two-person, zero-sum  games.   The term {\it zero-sum}  means that what one player wins the other player loses.  For instance, if you and your opponent place a wager of \$1000   on the outcome of your chess game, then the \$1000 that the victor collects must come  out of the loser's pocket, resulting in a zero-sum payoff.  Not every two-person game is a zero-sum game.  
+
+For example, imagine that a husband and wife are contemplating a move to Buffalo, New York, where he can find a job paying \$60,000 a year but her salary would be only \$20,000 a year.  However, if they moved to Akron, Ohio, she could work for \$60,000 a year but his salary would be  only \$20,000 a year.  By staying put, they both face unemployment.  What should they do?  The answer to that question is beyond the scope of this book, but it is clear that the payoff in this game does not add up to zero! 
+ 
+
+ \smallskip
+\noindent
+{\bf Example 19.1.} This small matrix game is known as Heads and Tails or Matching Pennies. We will call  the players $He$ and $She$. He chooses: heads ($H$) or tails ($T$).
+Independently, she chooses: $H$ or $T$. If they choose the same, he pays her a penny. Otherwise, she pays him a penny. Here is his payoff in cents:
+
+$$  \matrix{   &  She &  \cr
+  H & & T }$$
+$$ \kern -4em \matrix{ & H \cr
+  He &   \cr
+&   T   } \ \left[ \matrix{-1 & && 1 \cr &&& \cr 1 &&& -1} \right].     $$
+               
+ 
+ \smallskip
+\noindent
+{\bf Example 19.2.} Another  game is  Rock, Scissors, Paper. In this game two players simultaneously choose {\it Rock}, {\it Scissors}, or {\it Paper}, usually by a show of hand signals on the count of three, and the payoff function is defined by the rules {\it Rock  breaks Scissors, Scissors cuts Paper, Paper covers Rock}, and every strategy ties against itself.   Valuing a win at $1,$ a tie at 0, and a loss at $-1$, we can represent the game with the following matrix, where, for both players, strategy $1$ is {\it Rock}, strategy $2$ is {\it Scissors}, and strategy $3$ is {\it Paper}:
+
+$$A=\left[ \matrix{ 0 &  1&  -1 \cr  -1 &  0 &  1 \cr  1 &  -1 &  0 \cr} \right]. $$
+The payoff is given for the  player who chooses a row. \hfill \blackbox
+ 
+\nopagenumbers % suppress footlines
+
+In general, a matrix game is given by a matrix ({\it payoff matrix}). One player (the row player) chooses a row, and the other player chooses a column. The corresponding entry in the matrix represents what the column player pays to the row player (the payoff of the row player). The players could be humans, teams, computers, animals.
+ Games like chess, football, and blackjack can be thought as (very large) matrix games. 
+
+ \smallskip
+\noindent
+{\bf Example 19.3.} The following matrix gives a matrix game
+with four choices for the row player and five choices for the column player.
+ 
+$$A=\left[ \matrix{5& 0& 6& 1& -2\cr  2& 1& 2& 1& 2\cr -9& 0& 5& 2&-9\cr -9&-8&0& 4& 2 \cr}\right].$$ 
+\vskip-12pt
+\hfill \blackbox
+\medskip
+ 
+  
+\noindent
+\noindent {\bf Equilibrium }
+
+\noindent
+Let $A=[a_{i,j}]$ be a matrix with  $m$ rows and  $n$ columns. Recall that the corresponding matrix game is defined as follows. Independently, he chooses a row $i,$ and she chooses a column $j.$ As a result, she pays him  $a_{i,j}$ (in US dollars). 
+
+The matrix $A$ is his payoff matrix. Her payoff matrix is $-A.$ The rows of $A$ correspond to his (pure) strategies (or moves). The columns of $A$ correspond to her choices.
+ 
+\smallskip
+\noindent
+{\bf Definition 19.4.} A pair $(i,j)$  of strategies is called an equilibrium or a saddle point if neither player can gain by changing his or her strategy.
+\hfill \blackbox
+ 
+In other words, $a_{i,j}$ is both largest in its column and the smallest in its row.
+ 
+As an example,   consider Example 19.3. We mark the maximal entries in 
+every column by $^*.$ 
+Then we mark  the minimal entries in each row by $'$. 
+The positions marked by both $^*$ and $'$ are exactly the saddle points:
+$$A=\left[ \matrix{5^*& 0& 6^*& 1& -2{'}\cr  2& 1^*{'}& 2& 1{'}& 2^*\cr -9{'}& 0& 5& 2&-9{'}\cr -9{'}&-8&0& 4^*& 2^* \cr}\right].$$
+In this example, the position $(i,j) = (2, 2)$ is the only saddle point. The corresponding payoff is 1.
+\medskip
+When we have a saddle point, it can be declared a solution for the game, because no player can do better by a  unilateral change. 
+It seems reasonable for both players to sit there. ( If it would not be  a zero-sum game, they might  try making  joint decisions and sharing payoffs.)
+We will see later in this section that the payoff at each saddle point is the same. It is called {\it the value of the game.} 
+
+However,
+in Examples 19.1 and 19.2, there are no saddle points.
+To solve matrix games without saddle points we have to extend the notion of strategy by introducing {\it mixed strategies.}
+
+Consider again the general matrix game, given by a matrix $A = [a_{i,j}].$
+	A prudent way to choose a strategy for him is as follows.  He assumes that she is a perfect
+player (she has unlimited intelligence and memory) and   (maybe) can read his mind. So he reasons: If I
+choose the first strategy, then she would pick the smallest payoff for me, namely,  min$_j \ a_{1, j};$ if I
+choose the second strategy, she would pay me  min$_j \ a_{2, j},$ and so on.  So the best choice is a
+strategy that gives me  at least  max$_i $ min$_j a_{i,j}.$ This is his ``gain floor" or the {\it worst-case payoff.}
+
+	Similarly, if she believes that he is omniscient, she would choose a strategy that makes her
+loss at most  min$_j $ max$_i (a_{i,j})$  (her ``loss ceiling").
+
+	Now, a fact of life is that   
+\vskip-5pt
+   $$\max_i  \min_j \ a_{i,j} \le \min_j \max_i \ a_{i,j} \eqno(19.5) $$  
+  $always$ (for any matrix  $A$). This is because his worst-case payoff  cannot be better than his  best-case payoff. We will prove (19.5)   without
+using any game-theoretical interpretation of the matrix $A$.
+
+Furthermore, max$_i $ min$_j \  a_{i,j} = $  min$_j $ max$_i \ a_{i,j}$ if and only if there is a saddle point.  Moreover, the
+payoff at any saddle point is exactly max$_i $ min$_j  a_{i,j} = $  min$_j $ max$_i  a_{i,j}$, the values of game.
+ 
+\smallskip
+\noindent
+  {\bf Proof of the inequality (19.5).} Let $b=\max \min$  and $c =  \min \max. $
+ Let $d$ be in the same row as $b$ and in the same column as  $c.$
+Since  $b$ is minimal in its row, $b \le d.$ Since  $c$ is maximal in its column, $d \le c.$ Thus, $b \le d \le c,$ hence $b \le c.$
+ 
+
+
+\noindent
+{\bf   Proof of the implication}
+\vskip-15pt
+$$  \max \min = \min \max  \Rightarrow {\rm there\ is\ an\ equilibrium.} \eqno(19.6)$$
+\vskip-5pt
+Let $b,c,d$ be as before.  Assume that   $b=c .$ Then $d = b = c.$  So $d$ is  minimal in its row and  maximal in its column. Thus, its position (the corresponding strategies)  is an equilibrium.
+ 
+
+Finally, if  $(i,j)$ and $(i',j')$ are two saddle points,
+then  $(i,j')$ and $(i',j)$ are also saddle points. This justifies the following definition: Strategies involved in   equilibria are called {\it optimal strategies.} Thus, a saddle point is a pair  (his optimal strategy, her optimal strategy).
+
+ 
+\noindent
+	{\bf   Proof of the implication}
+\vskip-15pt
+$$ {\rm  there\ is\ an\ equilibrium}  
+\Rightarrow \max \min = \min \max. \eqno(19.7)$$
+\vskip-5pt
+ Let $d$ be the payoff at a saddle point.
+Since $d$ is maximal in its column,  $d \le $ min max. Since $d$ is 
+is  minimal in its row,  $d \le$  max min.  
+
+	    So  max min $ \ge  d \ge$   min max.  On the other hand, by (19.5),  max min $\le$  min max. So  max min = $d$  = min max. 
+\medskip
+
+
+\noindent
+{\bf Problem 19.8.} Find  max min and min max for
+
+$$A=\left[ \matrix{5& 0& 6& 1& -2\cr  
+                   2& 1& 2& 1& 2\cr 
+                  -9& 2& 5& 2&0\cr 
+                  -9&-8&0& 4& 2  }\right]$$
+and check whether there is a saddle point.
+ 
+
+\smallskip
+\noindent
+{\bf Solution.}  First we compute the maximum in each column: 
+$\max(A)$ $ = [5,2,6,4,2],$ hence $\min \max = \min[5,2,6,4,2] = 2.$ Then we compute
+the minimum in each row: $\min(A) = [-2,1,-9,-9]^T,$ hence  $\max \min =
+\max[-2,1,-9,-9] = 1.$ Since $2 \ne 1,$ there is no saddle point.
+\medskip
+
+  
+\noindent {\bf  Mixed Strategies}
+
+\noindent
+We consider again  a matrix game with matrix $A = [a_{i,j}]$ of size $m \times n.$
+
+ \smallskip
+\noindent
+	{\bf Definition. 19.9.}  A mixed strategy for a player is a probability distribution on the set of his or her
+pure strategies. \hfill  \blackbox
+ \smallskip
+ 
+	We will write a mixed strategy for him as a column 
+$$p = [p_1, \ldots, p_m]^T,$$  
+\noindent where  $p_i  \ge  0$ for all $i $
+and  $p_1+\cdots + p_m  = 1. $ His original strategies, which we will call now his  {\it pure strategies,} can be identified with his mixed strategies whose
+entries are 0 or 1,   then a mixed strategy is the same as a convex combination
+of pure strategies.  So his  pure strategies are the vertices in the set of his mixed strategies, and her  pure strategies are the vertices in the set of her mixed strategies.
+
+	We will write  a mixed strategy for her as a row  $q = [q_1, \ldots, q_n],$  where  $q_j \ge  0$ for all $j$  and 
+$q_1+\cdots + q_n = 1. $
+
+	Once both players have chosen their mixed strategies $p$ and $q$,
+the corresponding payoff for him (mathematical expectation)  is  
+$$p^TA q^T = \sum_{i=1}^m \sum_{j=1}^n p_ia_{i,j}q_j.$$ 
+Her payoff is
+$p^TA q^T$.
+ 
+
+	In Example 19.1, it is natural for him to use the mixed strategy $[1/2, 1/2]^T$. That is, he makes
+his decision by tossing a (fair) coin.  Then his payoff is 0 no matter what (pure or mixed) strategy
+she uses.  Similarly (the game is symmetric), she may use the mixed strategy [1/2, 1/2] to pay 0 no
+matter what he is doing.  Thus,  this pair of mixed strategies is an equilibrium (in mixed strategies).  
+
+	In general, it is natural for him to use a mixed strategy (called an optimal strategy), which gives
+him  at least
+  $$ {\rm  his \ value}     =	\max_{q \in Q} 	\min_{p \in P}  p^TA q^T,$$
+
+\noindent where   $P$  is the set of all his mixed strategies and  $Q$  is the set of all her mixed strategies (in fact, $Q$
+here can be replaced by the set of her pure strategies).
+ 
+	Similarly, a reasonable choice for her would be a mixed strategy (called an optimal strategy)
+which guarantees her at least
+
+$$   {\rm her \ value}       =	\min_{p \in P} 	\max_{q \in Q}   p^TA q^T.$$
+
+
+\bigskip
+\noindent
+{\bf The Minimax Theorem.} For any matrix   $A, $
+$$ \hskip1.3in  {\rm his\ value\ = \ her \ value. } \hskip1.3in  \blackbox$$
+In other words, there is an equilibrium in mixed strategies. 
+
+	To solve a matrix game is to find an optimal strategy for him and her (that is, an equilibrium)
+and the value of the game (that is, his value = her value). In the next section we will relate  solution of
+matrix games with solution of linear programs.  We will see that the minimax theorem in game
+theory is essentially the duality theorem in linear programming.
+ 
+
+
+\bigskip
+\noindent
+	{\bf Example  19.10. }
+ {\it Two-finger morra} (P. Morris).    
+
+\noindent Players  $A$  and  $B$  both  simultaneously hold up one or two
+fingers and shout out a number  that is a guess as to the total number of fingers held up (thus, it
+would be 2, 3, or 4).  If either player gets the total right and the other does not,  that player receives
+\$1  from the other. Otherwise,  no money changes hands.  Player  $A$  has six conceivable strategies for
+playing the game: (1, 2), (1, 3),  (1, 4), (2,2), (2, 3), (2, 4),  where (1, 2) means ``hold up 1 finger and
+shout 2," and so on. Now (1, 4), (2, 2)  are obviously stupid, so we ignore them. Player  $B$  can also choose
+from the same set of six strategies. 
+\filbreak
+
+The situation can be summarized in a payoff matrix:
+
+$$\matrix{A \setminus B  &| \    (1,2) & (1,3) & (2,3) & (2,4)}$$
+\vskip-12pt
+\moveright 0.9in \vbox{\hrule width  2.2in}
+\vskip-5pt
+$$\matrix{(1,2) \cr
+(1,3) \cr
+(2,3) \cr
+(2,4) \cr} \ \ \left[\matrix{0 && 1 && -1 && 0 \cr
+-1 && 0 && 0 && 1 \cr
+1 && 1 && -1 && -1 \cr
+0 && -1 && 1 && 0 \cr}\right] $$
+
+\smallskip
+In this matrix, a positive number indicates a gain for  $A$  and a negative number is a loss for  $A$.   The matrix
+makes it clear that,  if  $A$  and  $B$  are playing a long series of these games,  neither player should
+stick exclusively to one of these strategies.  For example,  if  $A$  is dumb enough to play only (2, 3), 
+then  $B$,  unless he is even dumber,  will play (2, 4). The right way to play is to mix up these (or,
+maybe, some of these) ``pure" strategies in a random way. A mixed strategy  is a way of describing
+how the pure strategies are mixed together.  For example, ``play each of your four strategies at random
+so that each is used 1/4 of the time" is a mixed strategy.
+
+\smallskip
+\noindent
+{\bf Problem 19.11. }  Check that in      $([0, 1/2, 1/2, 0]^T,  [0, 1/2, 1/2, 0])$ is an equilibrium---that is,
+$[0, 1/2, 1/2, 0]^T$ is an  $A$'s optimal strategy and  [0, 1/2, 1/2, 0]  is a $B$'s optimal strategy. Compute
+the value of the game. 
+ 
+\smallskip
+\noindent
+{\bf Solution.}  We augment the payoff matrix $A$ by  
+$$p= [0, 1/2, 1/2, 0]^T {\rm and } \ q= [0, 1/2, 1/2, 0]):$$
+ $$  \matrix{  &  & (1,2) & (1,3) & (2,3) & (2,4)& \  \ q}$$
+$$\matrix{(1,2) \cr
+(1,3) \cr
+(2,3) \cr
+(2,4) \cr
+p} \ \ \ \  \left[\matrix{0 && 1 && -1 && 0 && 0 \cr
+-1 && 0 && 0 && 1 && 0\cr
+1 && 1 && -1 && -1 && 0 \cr
+0 && -1 && 1 && 0 && 0\cr
+0 && 0 && 0 && 0 && 0^{*'} }\right] .$$
+
+Now it is clear that the position $(p,q)$ is a saddle point, so the corresponding payoff 0 is the value of the game. \hfill \blackbox
+ 
+
+ This game is symmetric because its payoff matrix $A = -A^T$
+is skew symmetric. It is clear that the value of any symmetric game is 0
+and that $s$  is an optimal strategy for a player if and only if $s^T$ is optimal for the other player. But it is
+ not always so easy to find an optimal strategy.
+  
+
+The main goal of this chapter is to relate matrix games with linear programming.
+We conclude this section with a few remarks about game theory in general.
+
+   The theory of games invokes mathematics to model decision-making situations.    The beginnings of the theory are usually traced  back to Cournot (1889), who put forth a model of how two firms would choose prices in a duopoly---that is, if they were   the only two firms competing in the market.  
+Another early contribution came from Zermelo (1913), who studied the game of chess and proved that either White can always win, Black can always win, or both players can always guarantee a draw.  Zermelo did not find which of these three possibilities is actually true, let alone exactly how White or Black should play, or the game would not continue to present such a challenge to human and computer players.  Zermelo's result was based on properties of the mathematical structure of the game and therefore applies to tic-tac-toe as well, which also has those properties.  For this game, it is   well known   that both players can guarantee a draw.  
+
+Whether decisions are made for profit, for fun, or for many other reasons, such as winning a war or winning an election, game theory analyzes mathematical models of the decision-making process and the outcomes that result from the different possible combinations of decisions.
+
+	In game theory, the decision makers are called {\it players}, decisions are called {\it moves}, and each opportunity for a player to make a move is called a {\it position}.  Moves are what change the position in the game, either deterministically or with some element of chance.  Positions in which more than one player move simultaneously can be modeled by a set of positions, each of which presents a move to just one player, without affecting the strategic possibilities of the game.  Therefore, we can assume, without loss of generality, that exactly one player moves at each nonterminal position. 
+
+ A {\it terminal position} is one in which no player can move, and at each terminal position an {\it outcome} is specified.  In real life, an outcome could be that one player wins and one player loses, or that each player wins or loses some amount of money, or a less clearly defined circumstance such as some players are happy and some players are sad.  In game theory outcomes are usually modeled as numerical payoffs that represent {\it valuations} or {\it preferences} of the players on the outcomes.  A preference is a relative valuation.  
+\filbreak
+
+For a given player, a set of moves for every position in which that player makes a move is called a {\it pure strategy} for the player.  A rule that specifies probabilities for what moves will be made by a player at every position is called a {\it behavioral strategy}.  A result due to Kuhn (1950) is that if a player can remember, at any position, all the moves he or she made at previous positions, then any behavioral strategy for that player can be represented by a {\it mixed strategy}, which specifies a single probability distribution over a player's pure strategies rather than a separate probability distribution at each position.  The outcome of a game can be computed as a function of the players' pure strategies.  If mixed strategies are considered,  only the expected outcome can be computed, because, in any one play of a game, only pure strategy outcomes can actually result.  In either case, the {\it payoff function} of the game is the rule assigning a numerical {\it payoff} to each player as a function of the strategy followed by each player.  
+
+It is often convenient to represent a game by a set of strategies for each player and a payoff function rather than as a set of positions and moves.  Because players can choose their strategies before the game actually begins, when games are reduced to strategy sets and a payoff function, it is assumed that the players choose simultaneously and thus without any knowledge of each others' choice.  This is called the {\it strategic}, or {\it normal form}, of a game.  
+
+	Games can be grouped into several categories according to how many players are involved, properties of the information available to the players, whether or not chance is involved, and properties of the payoff function.  When there is more than one player involved, the outcomes that are good for one player may not be good for another.  In general, a player cannot know what outcome will result from his or her strategy without knowing what the other players will do.  The problem of how players will predict each others' strategies is a fascinating problem in game theory.  In most game-theoretic analyses the assumption is made that all players try to move so as to maximize their numerical payoffs, which is a realistic assumption for many real life decision-making scenarios, including parlor games like chess and competition games like Cournot's duopoly game.  When and why this assumption is valid is a topic of current research in  game theory (Bolton, 1998; Kurland and Byrne, 2000; Byrne and Kurland, 2000).  Because our focus is on linear programming, and not psychology and behavior, we will stick to this assumption in the present context.  
+
+The games we will analyze with linear programming are called {\it two-person zero-sum} games and include the examples of chess and tic-tac-toe mentioned previously, but not Cournot's duopoly game.  Zero-sum means that the sum of the payoffs to all players always equals zero.  In a zero-sum game, what helps one player always hurts at least one other player.  In a two-person zero-sum game, the players' interests are diametrically opposed, and these games are sometimes called {\it strictly competitive} because there is no opportunity for mutual gain through cooperation.  Any two-player game that ends either by one player winning or by the two players drawing---that is, tying---can be modeled as a zero-sum game, neglecting such concerns as how important winning is to each player.  If the set of pure strategies available to each player is finite, linear programming can be used to find strategies for each player that guarantee the players the best payoffs that can be guaranteed.  We will make this precise shortly. 
+
+ Note that not all games have a finite move space.  For example, in {\it games of timing}, a move is a choice of a time from a continuous interval, such as the classic ``duel with pistols,'' which cost the extraordinary French mathematician Galois his life at age 20 in 1832.  
+
+
+
+\medskip
+\noindent
+\centerline {\twelvebf Exercises   }
+
+\parindent=0pt
+
+{\bf 1--10.} Find  max min and min max and 
+ check whether there is a saddle point for the  matrix games with 
+the following matrices. If there is no saddle point, try to find  as good mixed strategies for both players as you can.
+\medskip
+{\bf 1.}  $$A=\left[ \matrix{0& 0& 6& 1& -2\cr       
+                  -1& 2& 5& 2&0\cr 
+                  -4&-8&0& 4& 2  }\right].$$
+
+
+\medskip
+{\bf 2.}  $$A=\left[ \matrix{0& 0& 6& 1& -2\cr  
+                   2& 1& 2& 1& 2\cr 
+                  -1& 2& 5& 2&0\cr 
+                  -4&-8&0& 4& 2  }\right].$$
+
+\medskip
+{\bf 3.} $$A=\left[ \matrix{4 &5& 0& -1& 1& -2\cr  
+                   0 & 2& 1& 2& 1& -2\cr 
+                  1 & -1& 2& 5& 2&0\cr 
+                  -4 &-9&-8&0& 4& 2  }\right].$$
+
+
+\medskip
+{\bf 4.} $$A=\left[ \matrix{4 & -4 & 5& 0& 0 & -1& 1& -2\cr  
+                  5 & 0 & 2& 1& 2& 1& 0 &-2\cr 
+ -4 & 0 & -2& 1& 5 & 1& 6 & 2\cr 
+                  1 & -1& 2& 5&  3 & 7 &2&0\cr 
+                  -4 &-9&-8&0& 4& 2  & 0 & -3 }\right].$$
+\medskip
+{\bf 5.} $$A=\left[ \matrix{4 & -4 & 3 & 0& 0& 0 & -1& 1& -2\cr  
+                  -1 & 0 & 2& 1& -2 & -2 & 1& 0 &-2\cr 
+ -4 & 0 & -2& -2&  1& -1 & 1& 6 & 2\cr 
+                  1 & 2& 2& 5&  3 & 3 &  7 &2&0\cr 
+                  -4 &-9&-8&0& 4& 2 & 2   & 0 & 3 }\right].$$
+ 
+ 
+\medskip
+{\bf 6.} $$A=\left[ \matrix{4 & -1 & 4 & -1 &  5& 0& 0 & -1& 1& -2\cr  
+                  -1 & 0 & 2& 1&  2& 1&  2& 1& 0 &-2\cr 
+ -4 & 0 & -2& 1& 0 & 1& 6 & 2 & 6 &- 2 \cr 
+                  1 & -1& 2& 5&  3 & 5&  3 &  1 &2&0\cr 
+                  -4 & -9& -8&  0& 4 &  0& 4 & 2  & -6 & -3 }\right].$$
+
+
+\medskip
+{\bf 7.} $$A=\left[ \matrix{7 & -1 & 3 & -1 &  5& 0& 0 & -1& 1& -2\cr  
+                  -1 & 0 & 0 & 1&  2& 1&  2& 1& 0 &-2\cr 
+ -4 & 0 & -2& 1& 0 & 1& 1 & 2 & 6 &- 2 \cr 
+ 0 & 0 & -2& 1& 0 & 1& 1 & 2 & 0 &- 2 \cr 
+                  1 & -1& 2& 0 &  3 & 5&  3 &  1 &2&0\cr 
+                  -4 & -1& -8&  0& 4 &  0& 4 & -2  & -6 & 0 }\right].$$
+
+
+
+\medskip
+{\bf 8.} $$A=\left[ \matrix{8 & -1 & 4 & -1 &  5& 0& 0 & -1& 1& -2\cr  
+                  -1 & 0 & 2& 1&  2& 1&  2& 1& 0 &-2\cr 
+ -4 & 0 & -2& 1& 0 & 1& 6 & 2 & 6 &- 2 \cr 
+-4 & 8 & -2& 1& 0 & 1& 8 & 2 & 6 &- 2 \cr 
+                  1 & -1& 2& 5&  3 & 5&  3 &  1 &2&0\cr 
+                  -4 & -9& -8&  0& 4 &  0& 4 & 0  & -6 & 3 }\right].$$
+
+
+\medskip
+{\bf  9.} $$A=\left[ \matrix{
+ 9 & 0 &  -4 & 0 & 2& 1& 0 & 1&9 & 1 & 2 & 6 &- 2 \cr 
+ -4 & 3 &  -4 & 0 & -2& 1& 9 & 1&9 &1 & 2 & 6 & 0 \cr 
+ 0 & 0 &  2 & 0 & -2& 1& 0 & 1&9 & 6 & 2 & -6 &- 2 \cr 
+ -4 & 0 &  -4 & 0 & -2& 1& 0 & 1&9 & 6 & 2 & 6 &3 \cr 
+ 0 & 0 &  0 & 0 & -2& 1& 5 & -2 &9 & 6 & 2 & 6 &0 \cr 
+ 4 & 0 &  -4 & 0 & -2& 1& 0 & 1&9 & 6 & -2 & 6 &- 2 \cr 
+ -4 & 0 &  9 & 0 & -2& 3 & 0 & 1&9 & 6 & 2 & 0 &- 2 \cr 
+ }\right].$$
+
+
+
+\medskip
+{\bf 10.} $$A=\left[ \matrix{
+   0 & -1 & 0 & 2& 1&  2& 1&  2& 1& 0 &-2\cr 
+  -1 & 1 & 0 & -2& 1& 0 & 1& 6 & 2 & 6 &- 2 \cr 
+ -4 & 0 & 0 & -2& 1& 0 & 1& 6 & 2 & 6 &- 2 \cr 
+ 0 & -4 & 0 & -2& 1& 1 & 1& 6 & 2 & 6 &- 2 \cr 
+ 0 & -4 & 0 & -2& 1& 0 & 1& 6 & 2 & 6 &- 2 \cr 
+ 2 & 0 &  0 &-2& 1& 0 & 1& 1 & 2 & 6 &- 2 \cr 
+ -4 & 0 & -2& 1& 0 & 1& 0 & -1 & 2 & 6 &- 2 \cr 
+   1 & -1& 2& 5&  3 & 1 &  0 & 3 &  1 &2&0\cr 
+     -4 & -5& -8&  0& 4 &  0& 4 & 20 &  0  & -6 & -3 }
+\right].$$
+
+
+{\bf 11.} Prove that if  $(i,j)$ and $(i',j')$ are two saddle points,
+then  $(i,j')$ and $(i',j)$ are also saddle points. 
+ 
+\medskip
+{\bf 12. }
+ {\it Colonel Blotto} (P. Morris). 
+
+ Army  $A$  has three divisions and is attacking a town that is
+defended by the four divisions of army $B$.  There are two roads into the town and the armies must divide
+their forces between the two roads.  If the attacker outnumbers the defender on a particular road, 
+then the attacker wins the defender's divisions and captures the town. The town counts as being
+worth two divisions. If the defender outnumbers the attacker on a particular road, then  the attacking
+army loses its divisions.  The strategies for   $A$  are  (3, 0), (2, 1), (1, 2), and (0, 3),  where, for example (2,
+1) means: two divisions on road \#1 and  one division on road \#2.  Army $B$ has five strategies: (4, 0), (3, 1), (2,
+2), (1, 3), and (0, 4).  The payoff matrix is
+$$\matrix{A \setminus B & (4,0) & (3,1) & (2,2) & (1,3) & (0,4)}$$
+$$\matrix{ (3,0) \cr
+(2,1) \cr
+(1,2) \cr
+(0.3)} \ \ \left[\matrix{-3 && 0 && 4 && 3 && 2\cr
+0 && -2 && -1 && 2 &&1 \cr
+1 && 2 && -1 && -2 && 0 \cr
+2&& 3 && 4 && 0  && -3\cr}\right]. $$
+
+From $A$'s point of view, strategies (2, 1), (1,2) seem the most sound since the potential loss is only two
+divisions.  Choosing these involves giving up the largest potential gain, however.  It is also
+interesting that if $B$ knows  $A$ will choose either (2, 1) or (1, 2),  he will choose (2, 2) and will always
+win.
+
+Check that  the value of the game is 1/4,    $A$'s optimal strategy is               $$[9/68,
+23/68, 28/68, 8/68]^T,$$  
+and $B$'s optimal strategy is $$[5/12, 0, 2/12, 0,5/12].  $$
+\parindent=20pt
+\vfill
+\eject
+
+ \def\rightheadline{\tenrm\hfil{\it \S 20. Matrix Games and Linear Programming }\quad {\bf\folio}}
+
+\noindent
+ {\twelvebf \S 20. Matrix Games and Linear Programming}
+ \smallskip
+
+\noindent {\bf   Solving Matrix Games by Linear Programming}
+ 
+\noindent
+	 Now that you have had practice formulating  and solving linear programs, it is a real challenge to reduce  matrix games to linear programming.   In normal form, a two-person zero-sum game in which he has $m$ pure strategies and she has $n$ pure strategies can be represented by an $m \times n$ matrix $A=[a_{ij}]$, where $a_{ij}$ is his payoff  when he uses strategy $i$ and she uses strategy $j$.  We will often use the words $row$ and $column$ in place of $strategy$  (e.g., he plays row $i$ and she plays column $j$).  In a two-person zero-sum game we do not need to specify her payoff because the condition that the payoffs add up to zero tells us that her payoff is the negative of his payoff.  Thus, for zero-sum games it is customary to simply refer to the payoff, meaning his payoff.  Therefore, we say that he wants to maximize the payoff and she wants to minimize the payoff.  
+
+We will allow mixed strategies  and attempt to find the best mixed strategy for each player.  As probability distributions on pure strategies, we will assume that his strategy is independent from   hers.  We can represent a mixed strategy for him as $p=[p_1,\ldots,p_m]^T$ and a mixed strategy for her as $q=[q_1,\ldots,q_n]$.  If he uses $p$ and she uses $q$, basic probability theory tells us that because the distributions are independent, his expected payoff  is $p^TAq^T$.  The product $p^TA$ is a linear combination of the rows of $A$ in which the  $i^{\ rm th}$ row is, in accordance with the mixed strategy $p$, weighted by the probability $p_i$ that he plays that row. 
+ Thus, the $j^{\ rm th}$ column---that is, an entry, of the product $p^TA$---is the expected payoff if she plays column $j$.  Weighting each column $j$ of $p^TA$ by $q_j$ and summing thus yields the total expected payoff.  Therefore, he wants to maximize $p^TAq^T$ and she wants to minimize $p^TAq^T$.
+
+In Example 19.2, Rock, Scissors, Paper,
+if he uses the mixed strategy $p=[1/2,1/2,0]^T$ ({\it Rock} half the time and {\it Scissors} half the time), then she would expect to win 1/2 from him  by playing $q=[1,0,0]$ ({\it Rock} all the time).  Player 1 would expect to win 1/6 by playing $q=[1/3,2/3,0]$.  This  is readily seen by computing $p^TA=[-1/2,1/2,0]$.  If  she uses the mixed strategy $q=[1/4,1/4,1/2]$ ({\it Rock} one-quarter of the time, {\it Scissors} one-quarter of the time, and {\it Paper} one-half of the time), then he would expect to win 1/4 from her by playing $p=[1,0,0]^T$ ({\it Scissors} all the time).  He would expect to win 1/12 from her by playing $p=[1/3,2/3,0]^T$. This is seen by computing $Aq^T=[-1/4,1/4,0]^T$.       
+\smallskip
+
+	The question at this point is how he can maximize $p^TAq^T$ without controlling $q$.  Similarly, how can she minimize $p^TAq^T$ without controlling $p$?  The problems stated as  linear programs before involved only one decision maker, not two!  This is where the strictly competitive nature of two-person zero-sum games provides a key to the solution by providing grounds for each player to predict the behavior of his or her opponent.  Coupled with the assumption that each player wants to optimize his or her personal payoff, each player in a two-person zero-sum game can conclude that no matter what he or she does, the other player will try to make the opponent's score as bad as possible. 
+
+Thus, the payoff they will expect from a given strategy is the worst payoff they could possibly get using that strategy.  This trick (measuring the quality of each strategy by the payoff in the worst case) takes the other player's choice out of the payoff function! 
+So  he measures the quality  $f(p)$ of his strategy $p$ as min $p^TA,$
+where minimum is taken over all entries of the row  $p^TA.$ It is the same
+as min$_q p^TAq^T,$ where minimum is taken over all her mixed strategies $q.$
+
+So his problem becomes
+\medskip
+\centerline{  maximize   $f(p)$ = min  $p^TA$}
+ \noindent and her problem becomes 
+\medskip
+\centerline{  minimize  $g(q)$ = max  $Aq^T.$}
+\medskip
+We emphasize that not just any vectors $p$ and $q$ are allowed, only strategies (i.e., probability distributions).  Looking back at the Rock, Scissors, Paper game, we see that
+\medskip
+\centerline{$f([1/2,1/2,0]^T)=-1/2$ and $g([1/4,1/4,1/2])=1/4.$}
+\medskip
+
+	In other words, he can guarantee that the payoff will be at least 
+$-1/2$ by using $p=[1/2 ,1/2,0]^T$.  It is this guaranteed minimum, or lower bound, that he wants to maximize. She, by using $q=[1/4,1/4,1/2]$, can guarantee that the payoff is at most 1/4.  It is this guaranteed maximum, or upper bound, that she wants to minimize.  It is clear that any lower bound on the payoff enforced by him is a lower bound on the upper bound to the payoff that she desires.  Likewise, any upper bound on the payoff enforced by her is an upper bound on the lower bound sought by him.  That is, $g(q) \ge f(p)$.  In the Rock, Scissors, Paper example, if he uses the mixed strategy $p^T=[1/3,1/3,1/3]$, then $p^TA=[0,0,0]$ so the expected outcome is a draw, no matter what she does [i.e., $f(p)=0$].  
+
+Likewise, if she uses the strategy $q=[1/3, 1/3,1/3]$, then $Aq^T=[0,0,0]^T$ so the expected outcome is a draw, no matter what he does, i.e., $g(q) =0$. Thus, $f([1/3,1/3,1/3]^T)=0=g([1/3,1/3,1/3])$.  Because he has a strategy that guarantees that the payoff is at least zero, and she has a strategy that guarantees that the payoff is at most zero, it is clear that neither player can do better.  The strategies $p^T=q=[1/3,1/3,1/3]$ are therefore optimal for both players in this game, in the sense that each player's strategy guarantees  the best payoff that can be hoped for by this player because of the opponent's ability to bound the payoff.   
+
+	By this trick, we have resolved one complication---namely, the dependence of each player's objective function on the other player's strategy---but there is still another complication.  The new objective functions for the players are not linear.  Before we discuss this complication, two other points are worth addressing.  First, we can view {\it any} $m \times n$ matrix $A=[a_{ij}]$ as representing a two-person zero-sum game in which he has $m$ pure strategies, she has $n$ pure strategies, and the payoff when he plays the $i^{\rm th}$ row and she plays the $j^{\rm th}$ column is $a_{ij}$.  The question of whether the matrix represents any real-world game or not is a modeling question that is independent of whether the mathematical structure can be solved as a game.  Two-person zero-sum games are often called {\it matrix games} because of this 
+identification---that is, bijection---between all two-person zero-sum games with real-valued payoff functions and finitely many pure strategies with all finite  matrices of real numbers.  
+
+The second point is that in the Rock, Scissors, Paper example, $-1=f(p)<g(q)=1$ for all {\it pure} strategies $p$ and $q$.  This is not always the case  
+(cf.  Example 19.3).
+    
+\smallskip
+\noindent
+{\bf Historical Remarks} 
+ 
+	1. A game in which all players know the  exact position of the game at all times is called a game of {\it perfect information}.  Chess,  tic-tac-toe,
+ and blackjack  are games of perfect information, but 
+ {\it Heads and Tails} and {Rock, Scissors, Paper}
+  are not.
+ The extensive form of a game is a graphical structure called a {\it tree}, in which positions are represented by nodes and moves are represented by directed edges linking each nonterminal node to other nodes.  A game is said to be finite if its extensive form, so defined, is finite.  Zermelo  (1913) proved that {\it any finite game of perfect information has an equilibrium in pure strategies}.  Such an  equilibrium  can be found by pulling payoffs from
+the terminal positions to all positions (dynamical programming).
+\filbreak
+
+A saddle point in a matrix is a pair of optimal pure strategies for the two players in the corresponding game, so Zermelo's theorem implies that the normal form of any finite two-person zero-sum game of perfect information has a saddle point.
+
+	2. Nash (1949) proved the existence of
+ an {\it equilibrium} in mixed strategies for any game with finitely many players and finitely many pure strategies for each player.  An equilibrium, now widely known as the Nash equilibrium, is a set of strategies, one for each   player, such that each player's strategy is a best response, given that other players play their strategies.  In other words, no player can improve his or her payoff by {\it unilaterally} changing strategies.  The class of games Nash discussed could be characterized as having {\it finite normal form}.  (In theory, we could have a game with infinite extensive form but nonetheless finite normal form, by defining payoffs for infinite branches of the extensive form whose terminal nodes might never actually be reached.) Nash proved that every finite normal form game has an equilibrium in mixed strategies, allowing for pure strategies as a special case of mixed strategies.  
+
+Saddle points in matrix games are in fact   equilibria in  pure strategies, and the  optimal mixed strategies  we seek for matrix games without saddle points are also Nash equilibria.  Nash used a rather powerful fixed-point theorem from topology for his proof.  Once we see how to solve for optimal strategies using linear programming, we will be able to deduce his theorem, for the special case of two-person zero-sum games, from the duality theorem on the four alternatives (that is, the four possible final forms of all linear programs).  \hfill \blackbox
+\smallskip
+ 
+	Let us return now to the problem of finding optimal mixed strategies 
+for the matrix game given by an arbitrary $m \times n$ matrix $A.$  We succeeded earlier in expressing each player's objective as a function of only a player's own strategy and not the opponent's strategy.  However, as minimum and maximum functions, $f(p)$ and $g(q)$ are not linear!  To cope with this complication we can use another trick.  Many tricks are often required in practice to express a problem as a linear program, or as a differential equation, or as any other mathematical form.  Those students pursuing careers in   fields where they will be asked to apply mathematical methods to solve problems should strive to internalize the tricks presented in this book and in the long run become adept at thinking up such tricks.  In this case the trick we will use will be to replace the nonlinear objective $f(p)$ with an additional variable $\lambda$ for the row player;    we will replace 
+ $g(q)$ with an additional variable $\mu$ for the column player.  
+
+For our trick to work we must ensure that maximizing $\lambda$ will be equivalent to maximizing $f(p)$ and that minimizing $\mu$ will be equivalent to minimizing $g(q)$.  We shall accomplish this by adding constraints relating $f(p)$ to $\lambda$ and relating $g(q)$ to $\mu$.  Recall that $f(p)= \min \{p^TAq^T | q$   is a strategy for her$\}.$  The condition that ``$q$ is a mixed strategy for her'' can be expressed mathematically by the 
+following $m+1$ linear constraints: 
+\medskip
+
+
+\centerline{  $q_j \ge 0$ for all $j$, where $q=[q_1,\ldots,q_n]$} 
+\medskip
+ 
+\centerline{and $\sum_{j=1}^n\,q_i=1$.}  
+\bigskip
+ 
+	These conditions restrict the vector $q$ to probability distributions on the finite  set of her pure strategies.  We can use these conditions on $q$ to help make $\lambda$ represent $f(p)$.  Multiplication by $q$ is the discrete version of integration against the probability distribution $q$.  The result is a linear combination of the components of $p^TA$, and because of the constraints on $q$, it is a {\it convex combination}.  The result thus lies in the {\it convex hull} of the components of $p^TA$.  In common parlance we are taking a {\it weighted average} of the components of $p^TA$.  Intuitively, the idea is that an average, even a weighted average, of $n$ numbers is bounded above by the maximum of those numbers and bounded below by the minimum. 
+
+  
+	Now we are ready to formulate the problem of finding an optimal strategy for him, or for her, as a linear program. His linear program problem is
+ $$\lambda \to  \max,   \
+ p^TA - [\lambda,\ldots, \lambda] \ge 0,\
+ \sum_{i=1}^m\,p_i=1, p \ge 0$$
+and her linear program is 
+  $$\mu \to \min, \
+  Aq^T  - [\mu ,\ldots, \mu]^T \le 0,\
+ \sum_{j=1}^n\,q_j=1,
+ q \ge 0.$$
+\smallskip
+
+To put these in a standard tableau, we must manipulate the expressions into the desired form, as in Chapter 2. We will write his problem in a column tableau.  The variable we added---namely $\lambda$---cannot always be constrained to nonnegative values.  There are different ways to handle this. 
+The standard trick  is to change  variables and set $\lambda = \lambda' - \lambda''$, where $\lambda'$ and $\lambda''$ can now be constrained to be non-negative (see Chapter 2). Similarly,$\mu = \mu' - \mu''.$
+	Let   $I$  denote the row of  $m$  ones and  let  $J$  denote the column of  $n$  ones. 
+\filbreak
+    
+Now we can write both linear programs in the following standard tableau:
+%\vskip-0.5in
+ $$  \matrix{&q && 	\mu' && \mu''  & 1 &&&&}$$
+$$ \matrix{-p \cr -\lambda' \cr -\lambda'' \cr 1} \ 
+\left[ \matrix{-A  & I^T & -I^T & 0 \cr 
+J^T & 0 & 0 & -1 \cr
+ -J^T  & 0 & 0 & 1      \cr 
+0 & 1 & -1 & 0} \right] \ 
+\matrix{ =* \ge 0 \cr = * \ge 0 \cr = * \ge 0 \cr =\mu \rightarrow  {\rm min} }
+$$
+$$\matrix{\ \ ^\|   && \ ^\| && ^\| && ^\| &\ \cr
+\ \   * && \ * &&  * &&  \lambda  \rightarrow & {\rm max.}}$$
+
+
+
+	Note that her problem is the row problem, and his problem is  the column problem. Their problems are dual to each other. Since both problems have feasible
+solutions (take, for example,   $p =   I^T/m,   q = J^T/n$),  the duality theorem says that   min($f$) = max($g$). 
+That is,   his value = her value.  Thus,  the minimax theorem follows from the duality theorem.
+
+
+	When the value  $v$ =  min($f$) = max($g$)   of the game is $> 0$ (which can be arranged by adding a
+constant  $v_0$  to all entries of the matrix  $A$ to make them positive; do not forget to subtract
+$v_0$ back after the modified problem is solved to obtain the value of the original problem),  we can assume that $\lambda > 0 $ in his problem and set $ x = p/\lambda. $
+Then his problem takes the form
+\medskip
+\centerline{minimize  $1/\lambda =Ix$  subject to $x \ge 0,  x^TA  \ge  J^T. $}
+\medskip
+ Her problem becomes
+
+$$1/\mu = yI \rightarrow {\rm max}, Ay^T \le I, y \ge 0,$$
+
+\noindent where $y = q/\mu.$ We can write both problems in the following standard tableau:
+ $$  \matrix{y & 1 &&&&&}$$
+$$ \matrix{-x\cr  1} \ 
+\left[ \matrix{-A  & I^T \cr 
+-J^T & 0  } \right] \ 
+\matrix{ =* \ge 0 \cr  = -1/\mu \rightarrow  {\rm min} }
+$$
+$$\matrix{^\| & ^\|  & \cr
+  * &  -1/\lambda  \rightarrow & {\rm max.} & }$$
+
+  After this problem is
+solved,  we can recover  the value $v = 1/Ix$   of the   game,  his optimal mixed strategy 
+$p = xv,$ and her optimal strategy  $q= yv.$
+\filbreak
+
+This trick saves two rows and two columns in the tableau, which makes sense if we are going to solve a matrix game by hand. As an additional bonus, the tableau is row feasible so we can bypass Phase 1 of simplex method.
+
+\smallskip
+\noindent
+{\bf Example 20.1.} Solve the matrix game
+$$\left[ \matrix{1 & 3 & 5 \cr
+4 & 0 & 1 \cr
+1 & 2 &  0} \right].$$
+This matrix game can be   solved easily using domination (which allows us to drop the last row and the last column) and the graphical method (see \S 21).
+Here we show how to apply the simplex method. Before this, we find that
+the first row gives at least 1 to the row player, and the second column
+gives at most 3 to the row player. So the value of the game is between 1 and 3. There are no saddle points. To find an equilibrium, we have to use mixed strategies,
+$p = [p_1,p_2,p_3,]^T, q = [q_1,q_2,q_3].$ Since the value of the game is positive, we can save two rows and two columns in our standard tableau:
+$$
+\matrix{-p_1/\lambda \cr -p_2/\lambda \cr-p_3/\lambda \cr 1}
+\left[
+\matrix{\cr\cr\cr\cr}
+\right.
+ \matrix{
+q_1/\mu& q_2/\mu& q_3/\mu&  1 \cr
+-1 & -3 & -5 & 1 \cr
+-4 & 0 & -1 & 1 \cr
+-1 & -2 & 0 & 1 \cr
+-1 & -1 & -1 & 0\cr
+=u_1 &=u_2 &=u_3 & =-1/\lambda \cr
+} 
+\left.
+\matrix{\cr\cr\cr\cr}
+\right]
+\matrix{\cr =v_1 \hfill & \cr =v_2 \hfill & \cr =v_3 \hfill & \cr =-1/\mu & \to \min \hfill \cr
+\to \max.}
+$$
+Pivoting first at the $(v_1,q_1/\mu)$-position and then at the $(v_2,q_2/\mu)$-position,
+we obtain an optimal tableau. The optimal solutions are
+$q_1/\mu= q_2/\mu= 1/4, q_3/\mu = 0, -1/\mu=-1/2 =$ min and
+$p_1/\lambda=1/3,  p_2/\lambda= 1/6, p_3/\lambda = 0, -1/\lambda=-1/2 =$ max.
+So the optimal strategies are $[p_1,p_2,p_3,]=[2/3,1/3,0], q = [q_1,q_2,q_3]=
+[1/2,1/2,0]$ and the value of game is 2.
+
+\smallskip
+\noindent
+{\bf Example 20.2.} Solve the matrix game with the payoff matrix
+$$
+A=
+\bmatrix{
+ 0 & 2 & - 1 & 0 \cr
+ -2 & 0 & 4 & -3 \cr
+ 1 & -4 & 0 & 2 \cr
+ 0 & 3 & -2 & 0 \cr
+}.
+$$
+\filbreak
+
+The matrix $A = -A^T$ is skew symmetric, so the game is symmetric, and its value is 0. Unfortunately, it does not help much in finding an optimal strategy.
+We know that an optimal strategy for a column player is a mixed strategy $q$ such that
+$Aq^T \le 0$ (i.e.,  $qA \ge 0$).
+
+We do not see any saddle points or domination. To save   rows and columns,
+we shift all matrix entries by 1 to make the value of game positive (namely, 1) and write a standard row tableau:
+$$
+\left[
+\matrix{\cr\cr\cr\cr\cr}
+\right.
+ \matrix{
+q_1& q_2& q_3& q_4 & 1 \cr
+-1 & -3 & 0 & -1 & 1 \cr
+1 & -1 & -5 & 2 & 1 \cr
+-2 & 3 & -1 & -3 &1 \cr
+-1 & -4 & 1 & -1 & 1\cr
+-1 & -1 & -1 & -1 &0\cr
+\cr
+} 
+\left.
+\matrix{\cr\cr\cr\cr\cr}
+\right]
+\matrix{\cr =v_1 \hfill & \cr =v_2 \hfill & \cr =v_3 \hfill &
+\cr =v_4 \hfill & \cr   \to \min \hfill \cr
+\ }
+$$
+By three pivot steps we can switch  $q_1,q_2,q_3$ with $v_1,v_2,v_3$ and obtain the optimal tableau:
+$$
+\left[
+\matrix{\cr\cr\cr\cr\cr}
+\right.
+ \matrix{
+v_1& v_2& v_3& q_4 & 1 \cr
+* & * & * & * & 4/7 \cr
+* & * & * & * & 1/7 \cr
+* & * & * & * &2/7 \cr
+* & * & * & * & *\cr
+* & * & * & * &-1\cr
+\cr
+} 
+\left.
+\matrix{\cr\cr\cr\cr\cr}
+\right]
+\matrix{\cr =q_1 \hfill & \cr =q_2 \hfill & \cr =q_3 \hfill &
+\cr =v_4 \hfill & \cr   \to \min. \hfill \cr
+\ }
+$$
+So an optimal strategy for the  column player is [4/7, 1/7, 2/7, 0],
+and an optimal strategy for the row player is $[4/7, 1/7, 2/7, 0]^T.$
+
+ 
+\bigskip
+\noindent {\bf   Reduction of Any Linear Program to a Matrix Game}
+ 
+\noindent
+	Now we want to reduce an arbitrary pair (13.4)  of dual linear programs  
+$$\matrix{  -y \cr \ 1}   
+\left[ \matrix{\ \cr \ } \right.
+\matrix{x  & 1\cr A & b \cr c  & d \cr =v  & = w }
+\left. \matrix{\ \cr \ } \right]
+\matrix{\cr =u \cr =z \cr \to \hfill } 
+\matrix{ \cr \cr \to \min  \cr \max \hfill}  \qquad
+\matrix{ x \ge 0, u \ge 0  \cr   y \ge 0, v \ge 0.}  $$
+   to a matrix game. At   first glance it seems impossible, because the linear programs might not be
+feasible, while every matrix game has optimal strategies.
+
+	However, we go ahead and consider the following matrix: 
+
+$$M= \left[ \matrix{0 & -A  & -b\cr
+         A^T & 0 & -c^T \cr
+    b^T & c & 0} \right] .$$
+
+
+Its size is $(m + n + 1) \times  (m + n + 1),$   where  $m \times  n$   is the size of the matrix $A.$  Since  $M^T = -M,$
+the corresponding matrix game is symmetric. No player has an advantage.  
+So the value of the game is 0.
+Indeed,  suppose that  he
+can win a number  $\varepsilon > 0$ (no matter what she does); i.e., 
+$p^TM \ge \varepsilon > 0$ for a column $p \ge 0$.
+ Then she can use the same strategy $q = p^T$ against him and she wins at
+least the same number   $\varepsilon$  no matter what he does. When both use
+this strategy, his payoff
+    $p^TMq^T$ should be both positive and negative, which leads
+to a contradiction.
+ 
+	Suppose   $x = \bar x, u= \bar u$ is an optimal solution for
+the row problem and  $y= \bar y, v = \bar v$ 
+is an optimal solution for
+the column problem.
+   Set  $e$  to be  1 plus the sum of all entries in  $\bar x$  and $\bar y.  $ 
+
+Then  $\bar p = [\bar y^T,  \bar x,  1]^T/e$   is a mixed
+strategy for him.  It gives the following payoff:   
+
+$$\bar p^TM =  [\bar y^T, \bar x,  1]M/e $$
+$$= [\bar xA^T + b^T, -\bar y^TA + c, -\bar y^Tb - \bar xc^T)/e = [\bar u^T, \bar v, 0]/e  \ge 0 $$
+
+\noindent (we have used that $z = w$  for optimal solutions).  Thus,  $\bar p$  is an optimal mixed strategy for him. 
+Note that its last entry $1/e$ of the column  $\bar p$ is not 0. 
+
+	Conversely, given any optimal strategy $p= \bar p$ for him (that is,  $\bar p$  is an optimal strategy for her) with a
+nonzero last entry, say $1/e,$  we can write  $\bar p^T = [\bar y^T, \bar x, 1]/e$  with nonnegative rows   $\bar y^T,  \bar x$   of appropriate
+sizes.  Since  $\bar p$  is optimal, $\bar p^TM \ge 0.$  So 
+
+
+
+$$\bar xA^T + b^T \ge 0, -\bar y^TA + c \ge 0, -\bar y^Tb - \bar xc^T \ge  0. $$ 
+This shows that  $x=\bar x, u= A\bar x^T + b$ is an optimal solution for the preceding row problem   and
+  $y = \bar y, v= c- \bar y^TA$  is an  optimal solution for the column programs  
+[recall again that  $\min(z) = \max(w)).$]
+
+
+
+	Thus, there is a 1-1 correspondence between the optimal 
+ strategies of the game with nonzero
+last entries and the optimal solutions of the two linear programs.  If there is no optimal strategy with a
+nonzero last entry,  then there are no optimal solutions for the linear programs.
+
+ \bigskip
+\centerline{\twelvebf Exercises} 
+\parindent=0pt
+{\bf 1--4.}
+Solve the matrix games:
+
+{\bf \ 1.}
+$$\left[ \matrix{1 & 3 & 5 \cr
+4 & 0 & -1 \cr
+-1 & 2 & 0 } \right].$$
+
+
+{\bf \ 2.}
+$$\left[ \matrix{1 & -3 & 4 \cr
+1 & 0 & 1 \cr
+2 & 2 &  0} \right].$$
+
+{\bf\ 3.}
+$$\left[ \matrix{1 & -3 & 5 & 1 & -3 & 5 \cr
+1 & 0 & 1 & 1 & 0 & 1 \cr
+1 & 2 &  0 & 1 & 2 &  0} \right].$$
+
+{\bf \ 4.}
+$$\left[ \matrix{1 & -3 & 5 & 1 & -3 & 5 \cr
+1 & 0 & 1 & 1 & 0 & 1 \cr
+1 & 0 & 1 & 1 & 0 & 1 \cr
+1 & 0 & 1 & 1 & 0 & 1 \cr
+1 & 2 &  0 & 1 & 2 &  0} \right].$$
+
+
+
+{\bf 5--10.} Solve the matrix games in Exercises 1--6 of \S 19.
+
+{\bf 11--13.} Given a linear program with all $x_i \ge 0$, write down a  matrix game  equivalent to that program and its dual.
+
+{\bf 11.}
+$$x_1+2x_2+x_3+x_4+x_5+3x_6 \to \min,$$
+$$3x_1+x_2+x_3+2x_4+x_5+x_6  \ge 5,$$
+$$3x_1+x_2+x_3+2x_4+x_5+x_6  \ge 4,$$
+$$3x_1+x_2+x_3+2x_4+x_5-x_6  = 3.$$
+
+{\bf 12.}
+$$x_1+2x_2+4x_3+x_4+x_5+x_6 \to \max,$$
+$$3x_1+x_2+x_3+2x_4+x_5-2x_6 + x_7 \ge 5,$$
+$$3x_1+x_2+x_3+2x_4+x_5+x_6 -x_7 \ge 6,$$
+$$3x_1+x_2+x_3+2x_4+x_5-x_6  \le 7.$$
+
+{\bf 13.}
+$$x_1+2x_2+x_3+x_4+x_5+3x_6 +x_7+x_8  \to \min,$$
+$$3x_1+x_2+x_3+2x_4+x_5+x_6  +x_7-3x_8  \ge 1,$$
+$$3x_1+x_2+x_3+2x_4-x_5+x_6 +x_7+3x_8  \ge 5,$$
+$$3x_1+x_2+x_3+2x_4+x_5-x_6 +x_7+x_8  \ge  1.$$
+
+
+
+
+
+
+
+
+\parindent=20pt
+
+\vfill
+\eject
+ 
+
+ \def\rightheadline{\tenrm\hfil{\it \S 21. Other  Methods}\quad {\bf\folio}}
+
+\noindent
+{\twelvebf \S  21. Other  Methods}
+\smallskip
+\noindent
+A matrix game where a player has only one strategy can be solved very easily: The other player chooses the maximal payoff
+against the only strategy of the opponent. In fact, in this case the matrix game degenerates into a one-person game. An example of this situation is a casino game, 
+the blackjack, since the strategy of the dealer is fixed.
+
+We do not need the  simplex method to solve a matrix game   where  a player
+has only two pure strategies (i.e., the payoff matrix has two rows or two columns).  The graphical method solves such a game easily,  as the next two examples
+show. Sometimes we can reduce the size of the payoff matrix by crossing out redundant strategies, which allows us to solve rather large games easily.
+Another simple idea that works sometimes  is to check for  saddle points.
+Either you find one and the game is solved, or you find an upper and lower bound for the value of game. 
+
+\medskip
+\noindent
+{\bf   Domination and the Graphical Method }
+\smallskip
+\noindent
+{\bf
+Example 21.1.}
+	Consider the matrix game with the following matrix:
+$$A = \left[ \matrix{-1 & 6 & 1 & 6 \cr
+                     9 & 2 & 3 & 1 \cr
+                     8 & -1 & 3 & 0} \right].$$
+
+If we do not have a computer at hand, how could we solve this game?
+	Note that his second strategy $r2$ gives a greater or equal payoff
+than his third strategy $r3$ in all cases. In other
+words, 
+\medskip
+\centerline{the second row $\ge $ the third row.  }
+\medskip
+
+We say that the strategy r2 $dominates$  r3.
+
+
+	Given any mixed strategy  
+\medskip
+\centerline{$p = [p_1,p_2,p_3]^T =p_1$r1$ +p_2$r2$ +p_3$r3 }
+\medskip
+\noindent
+for him, he would not lose if he replaces r3 in 
+$p$  by the second strategy. In particular, there is an optimal strategy for him which does not use r3  (the corresponding entry is 0), and we can drop the third row without changing
+the value of the game.
+	Now we have a smaller game to solve:
+$$A = \left[ \matrix{-1 & 6 & 1 & 6 \cr
+                     9 & 2 & 3 & 1  } \right].$$
+\filbreak
+
+\noindent
+	Note next that her fourth strategy c4 dominates her second one c2:
+\medskip
+\centerline{the  fourth column $\le$ the second column. }
+\medskip
+
+\noindent
+So we drop the second column without changing the value of the game and obtain a smaller matrix
+game:
+
+$$A = \left[ \matrix{-1   & 1 & 6 \cr
+                     9   & 3 & 1  } \right].$$
+	
+
+	Now we do not see any domination between rows or columns. Since he has only two pure
+strategies (r1, r2), we can solve this matrix game graphically. Namely, we plot his mixed strategies  as the
+unit interval on the horizontal axis. Her  strategies c1, c3, c4 are represented by linear functions on the interval. 
+The minimum of these functions is a convex (upward) function. Its maximal value is $v$ = minimax.
+ 
+% $$\psfig{figure=Fig35.eps,height=4.5cm}$$
+% \medskip
+
+\hskip3.3in c1
+\vskip28pt
+\hskip10pt  c4
+\vskip20pt
+\hskip3.3in c3
+\vskip-1pt
+\hskip10pt $v$
+\vskip5pt
+\hskip10pt c3
+\vskip-10pt
+\hskip3.3in c4
+\vskip-10pt
+\hskip2in his optimal
+\vskip-3pt
+\hskip10pt r1  \hskip217pt  r2   
+\vskip-2pt
+\hskip2.1in strategy
+\vskip-4pt
+\hskip10pt c1
+\vskip-146pt
+$$\psfig{figure=Fig35b.eps,height=4.5cm}$$
+\bigskip
+
+
+	So his optimal strategy is  $(1 - p_2)$r1+ $p_2$r2, where  
+$$ 1\cdot (1 - p_2) +3p_2 = 6(1 - p_2) +1\cdot p_2 =v,  $$
+ hence $7p_2 = 5. $
+	Thus, his optimal strategy is  (2/7)r1 +  (5/7)r2,  and the value of the game is $v=17/7.$
+
+	Her optimal strategy  $q_3$c3 +  $(1 - q_3)$c4 is the combination of c3 and c4  that gives the
+constant function 17/7 in our figure:  
+$$ 1\cdot q_3+ 6(1 - q_3) = 17/7 = 3q_3 + 1\cdot (1 - q3),$$
+\noindent hence $q_3 = 5/7. $
+So her  optimal strategy is (5/7)c3+ (2/7)c4.
+
+ We give the final answer in   terms of the original large matrix:
+ \filbreak
+The value of the game is 17/7.
+
+His  optimal strategy    is 
+ $p =$ (2/7)r1 +  (5/7)r2 $ =  [2/7, 5/7, 0]^T .$
+
+Her  optimal strategy    is 
+ $q$  = (5/7)c3+ (2/7)c4 = $[0, 0, 5/7, 2/7].$ 
+
+Remember that he is the row player, she is the column player, and the payoff is given for him.
+\smallskip
+\noindent
+{\bf
+Example 21.2.} Suppose we have to solve the matrix game with the matrix
+$$\left[ \matrix{-1 & 2 & 2 & 0 \cr
+2 & 0 & -1 & 2 \cr
+1 & 1 & 1 & 1 \cr
+0 & 2 & 1.5 & 0 \cr
+0 & 0 & 1 & 2} \right].$$
+First we mark by * maximal entries in every column and by  $'$  minimal entries in each row:
+$$\left[ \matrix{
+-1' & 2^* & 2^* & 0 \cr
+2^* & 0 & -1' & 2^* \cr
+1' & 1' & 1' & 1' \cr
+0' & 2^* & 1.5 & 0' \cr
+0' & 0' & 1 & 2^*} \right].$$
+Since no position is marked twice, there are no saddle points.
+We have  
+  $$\max\min = 1  \le  \hbox{the value of game}   \le \min\max = 2 .$$
+We call the row player ``he,"  his pure strategies  r1--r5, the column player ``she," and
+her pure strategies c1--c4:
+$$  \matrix{\    {\rm r}1 \cr {\rm r}2 \cr {\rm r}3 \cr {\rm r}4  \cr {\rm r}5}
+\left[  \matrix{ \ \cr \ \cr \ \cr\  \cr \  \cr  } \right.
+\matrix{ {\rm c}1 & {\rm c}2 & {\rm c}3 & {\rm c}4 \cr
+-1 & 2 & 2 & 0 \cr
+2 & 0 & -1 & 2 \cr
+1 & 1 & 1 & 1 \cr
+0 & 2 & 1.5 & 0 \cr
+0 & 0 & 1 & 2 \cr
+& & & }  
+\left.  \matrix{ \ \cr \ \cr \ \cr\  \cr \  \cr   } \right] .
+$$
+\vskip-5pt
+By domination we cross out c4 (compare it with c1), then r5 (compare it with c3 after c4 is gone), and c2 (compare it with r3 after r5 is gone). We are left with the following  $4 \times 2$ matrix:
+$$  \matrix{\    {\rm r}1 \cr {\rm r}2 \cr {\rm r}3 \cr {\rm r}4 }
+\left[  \matrix{ \ \cr \ \cr \ \cr\  \cr  } \right.
+\matrix{ {\rm c}1 & {\rm c}3   \cr
+-1 & 2  \cr
+2 & -1 \cr
+1 & 1  \cr
+0 &  1.5  \cr
+&  }  
+\left.  \matrix{ \ \cr \ \cr \ \cr\  \cr   } \right] .$$
+
+Now we make a figure   where her mixed strategies are represented by  the horizontal line segment  connecting  c1 and c2
+and his  strategies are represented by functions on this segment, the corresponding payoffs.
+
+
+ % $$\psfig{figure=Fig36.eps,height=4cm}$$
+% \medskip
+
+ $$\psfig{figure=Fig36b.eps,height=4cm}$$
+\vskip-132pt
+\hskip10pt r2  \hskip217pt  r1  
+\vskip10pt
+\hskip3.3in r4
+\vskip7pt
+\hskip10pt r3  \hskip217pt  r3  
+\vskip18pt
+\hskip1.7in her
+\vskip4pt
+\hskip35pt c1  \hskip62pt    optimal  \hskip65pt  c3  
+\vskip2pt
+\hskip25pt    \hskip81pt    strategies     
+\vskip3pt
+\hskip10pt r1  \hskip217pt  r2 
+ 
+ 
+\smallskip
+
+We take maximum over her choices first because she  computes her worst-case
+payoff. Then we minimize this max, which is a piece-wise  linear function.
+It is clear that the min is 1 and it is achieved at every point
+between  [2/3, 1/3] (the left point at the figure) and [1/3, 2/3] (the
+right end). His optimal strategy is  r3. It is represented by a horizontal line.
+Now we write the final answer in   terms of the original  $5 \times 4$ matrix:
+The value of the  game is 1, his optimal strategy is  r3 (which is
+$[0,0,1,0,0]^T$ as a mixed strategy),  and her optimal strategy is 
+(1/3)c1 +(2/3)c3 = [1/3, 0, 2/3, 0]. All her optimal strategies are
+\smallskip
+\centerline{
+$a$c1+ $(1 -a)$c3 with $ 1/3 \le  a \le 2/3.$}
+\smallskip
+
+To double check the answer, we augment the payoff matrix with her optimal strategies  $q = [1/3, 0, 2/3, 0],\  q'= [2/3, 0, 1/3, 0]$  and verify that we get  equilibria:
+$$  \hskip0.6in \matrix{\    {\rm r}1 \cr {\rm r}2 \cr {\rm r}3 \cr {\rm r}4  \cr {\rm r}5 }
+\left[  \matrix{ \ \cr \ \cr \ \cr\  \cr \  \cr  } \right.
+\matrix{ {\rm c}1 & {\rm c}2 & {\rm c}3 & {\rm c}4 & q & q' \cr
+-1 & 2 & 2 & 0 & 1 & 0 \cr
+2 & 0 & -1 & 2 & 2/3 & 1/3 \cr
+1 & 1 & 1 & 1 & 1^{*} {'} & 1^*{'} \cr
+0 & 2 & 1.5 & 0 &2/3 & 1/3  \cr
+0 & 0 & 1 & 2  &0 & 0 \cr
+& & & & &  }  
+\left.  \matrix{ \ \cr \ \cr \ \cr\  \cr \  \cr   } \right] . \hskip0.6in \blackbox
+$$
+ \vskip-10pt
+	Now we point out some other tricks, scaling, shifts, and symmetry,
+which could be useful.
+  If we multiply every entry of a matrix  $A$
+by
+the same  positive number  $t,$ then the optimal
+strategies stay the same and the new value is the old value times $t.$
+
+If we add the same  number  $t$  to every entry of a matrix  $A,$  then the optimal
+strategies stay the same and the new value is the old value plus $t.$  
+
+	If we permute rows or columns, the value stays the same.
+ 
+	For example, the value of the matrix game with the payoff matrix
+$$\left[ \matrix{3 & 2 & 0 \cr
+2 & 1 & 3 \cr
+1 & 4 & 2} \right]$$
+ is 2. To see this, add $-2$ to all entries and permute the first two columns
+to obtain a skew-symmetric matrix.
+ 
+
+
+\medskip
+\noindent {\bf Fictitious Play (Brown's Method)}
+
+\noindent 
+	The players start with some strategies   $p^{(0)},  q^{(0)}.$ 
+ Then he finds an optimal response $p^{(1)}$  to her
+strategy  $q^{(0)}$,  and she finds an optimal response $q^{(1)}$ to his strategy  $p^{(0)}.$  Then he finds an optimal
+response $p^{(2)}$   to her strategy  $(q^{(0)} + q^{(1)})/2,$ and she finds an optimal response $q^{(1)}$  to his strategy 
+$(p^{(0)} + p^{(1)})/2.$
+
+	At step  $t,$  he finds an optimal response $p^{(t)}$  to her strategy
+$$    \bar q^{(t-1)} = (q^{(0)} + \cdots + q^{(t-1)})/t,$$
+ and she finds
+an optimal response  $q^{(t)}$  to his strategy 
+ $$\bar p^{(t-1)} =(p^{(0)} + \cdots + p^{(t-1)})/t.$$
+
+	Note that  her cumulative strategy  $\bar q^{(t)}$ can be computed
+ using only its previous value $q^{(t-1)},$
+the current optimal response  $q^{(t)},$ and time $t$:
+ $$ 
+\bar q^{(t)} =  \bar q^{(t-1)}(1-1/t) +  q^{(t)}/t.
+$$
+ The same is true for his cumulative strategies. To make the optimal response unique, we can mix all optimal responses with equal weights.
+
+It turns out (proved by J. Robinson)  that for an arbitrary matrix $A$, this method (devised by Brown) works.  Namely, 
+both  average payoffs,
+ min$(\bar p^{(t) T}A)$
+  and  max$(A\bar q^{(t)T})$,   converge to the value of the game as  $t \rightarrow \infty.$  Every limit point
+of  the sequence  $\bar p^{(t)}$  is an optimal strategy for him. Every limit point of  the sequence  $\bar q^{(t)}$   is an
+optimal strategy for her. 
+\filbreak
+
+	Since every linear program can be reduced to a matrix game, Brown's method can be applied to
+any linear program.
+	There are many other iterative methods for solving of matrix games and linear programs.  For example, J. von Neumann, who  was a major contributor to game theory, suggested a continuous time version of  Brown's method for symmetric games. 
+ One
+of the  more  recent methods is Karmarkar's method.
+ It is more complicated than Brown's method but gives faster convergence.
+See the Appendix for more information about  interior methods.
+
+\smallskip
+\noindent
+{\bf Problem 21.3.}  Apply one iteration of the fictitious play method to the matrix
+game with the payoff matrix (in  dollars, for the row player)
+$$A =\left[ \matrix{1  & -1 & 0 & 2 & -3 & 1 \cr
+1  & 1 & -1 & 0 & 1 & 1 \cr
+-1  & 0 & 1 & -2 & 2 & 1 \cr} \right].$$
+\smallskip
+\noindent
+{\bf Solution.}  Since no initial point was given, we are free to choose it. We use the best pure strategies for both players as the initial point.
+We name the column player Ann and list  her  pure  strategies  as  c1, c2, c3, c4,c5, c6. We name the row player Bob and list his pure strategies as
+r1, r2, r3. Now Ann computes the maximal number in each column and mark them 
+all by *:
+max = [1, 1, 1, 2, 2,  1]. So her best pure strategies are
+c1, c2, c3, c6, and if Ann chooses any mixture of them she pays Bob at most 
+$\min \max = \$1.$
+
+Next Bob computes the minimal number in each row  and marks them all by
+$'$: min = $[-3,-1,-2]^T.$ So his best  pure strategy is r2, and if Bob chooses it
+his payoff is  $\max \min = -\$1.$ Since  max min and min max are different, there are no saddle points (no position is marked twice).  We know that the value of the game $v$ is between -\$1 and \$1.
+
+Since Ann is not sure which of her pure strategies to take as the initial strategy, she chooses
+the mixed strategy  
+$$q^{(0)} = [1, 1, 1, 0, 0, 1]/4.$$ 
+Her corresponding 
+worst-case payoff is 
+$$-u_0 = -\hskip-1pt\min(Aq^{(0) T}) =  -\hskip-1pt\min([1/4,1/4,1/4]^T) =-1/4.$$
+
+ So she pays him 1/4 in the worst case. 
+Now we know that $-1 \le v \le 1/4.$
+ He chooses $p^{(0)} = {\rm r2} =[0, 1, 0]^T.$ Now we do one iteration,
+using the dot notation $A.q$  for $Aq^T$ and  $p.A$ for $p^TA$:
+
+\filbreak
+
+ \settabs  
+\+ 
+$\min( p^{(0)}.A)$& \quad \quad  $=[1/4,1/2,1/4]^T$ & $\max(A.q^{(0)})$    &= [1, 1, 1, 0, 0, 1]/4 
+\cr 
+\+ 
+$p^{(0)}$ & $=[0, 1, 0]^T$   &  $q^{(0)} $ &= [1, 1, 1, 0, 0, 1]/4 
+\cr \+
+$A.q^{(0)}$ & $=[1,2,1]^T/4$ & $p^{(0)}.A$ & =[1, 1, $-$1, 0, 1, 1]
+\cr \+
+$\min( p^{(0)}.A)$ & = $-$1 & $\max(A.q^{(0)})$ & = 1/4
+\cr \+
+$p^{(1)}$ & $=[1, 1, 1]^T/3$  &   $q^{(1)} $ & =[0, 0, 1, 0, 0, 0]
+ \cr \+
+$\bar p^{(1)}$ & $=[0, 1, 0]^T$  &   $\bar q^{(1)} $ & =[1, 1, 5, 0, 0, 1]/8
+\cr\+
+$A.\bar q^{(1)}$ & $=[1,-3,5]^T/8$ & $\bar p^{(1)}.A$ & =[0, 1, $-$1, 0, 1, 2]/2
+\cr\+
+ $\min(\bar p^{(1)}.A)$ & = $-$1/2 & $\max(A.\bar q^{(1)} )$ & = 5/8.
+\cr  
+\bigskip
+So now  Bob has a strategy  $\bar p^{(1)}$ where he pays  at most    1/2,
+and Ann has a strategy  $ q^{(0)}$ where she pays at most  1/4.  Still
+there is a gap for the value of game,  $-1/2 \le v \le 1/4, $ and it   
+takes time to continue  iterations by hand.  If you cannot guess
+the  optimal strategies (which is really easy in this case), try to do 
+Exercise  5   by hand. \hfill \blackbox
+
+
+
+\bigskip
+
+ 
+
+  
+
+
+
+\centerline{\twelvebf Exercises}  
+\parindent=0pt
+
+{\bf 1-4.} Solve the matrix games:
+\smallskip
+{\bf 1.} 
+$\left[ \matrix{3 & 2 & 0 \cr
+3 & 1 & 3 \cr
+4 & 4 & 2} \right].$ \hskip 60pt
+{\bf 2.} 
+$\left[ \matrix{3 & 2 & 0 \cr
+3 & 1 & 0 \cr
+0 & 4 & 2} \right] .$
+
+\smallskip
+{\bf 3.} 
+$\left[ \matrix{3 & 2 & 0 \cr
+3 & 1 & 4 \cr
+3 & 2 & 1 \cr
+4 & 4 & 2} \right]$ \hskip 60pt
+{\bf 4.} 
+$\left[ \matrix{3 & 2 & 0 \cr
+3 & 1 & 3 \cr
+0 & 0 & 2 \cr
+3 & 2 & 2 \cr
+3 & 3 & 1 \cr
+5 & 4 & 0} \right] .$
+\medskip
+
+{\bf 5.} 
+Solve the matrix game in Problem 21.3. 
+
+
+
+\bigskip
+
+{\bf 6--14.}
+Find the value of the matrix game. If you cannot find the exact value, find the best lower and upper bounds for the value you can compute.
+
+
+
+	{\bf 6. }  $$\left[ \matrix{0 & 9 \cr 5 & 2} \right].$$  
+
+ 
+
+	{\bf 7.} $$\left[ \matrix{0 & 1 & 2 & 3 \cr -1 & 0 & 4 & 5 \cr
+-2 & -4 & 0 & 6 \cr
+-3 & -5 & -6 & 0} \right].$$  
+
+  
+	{\bf\  8.}  $$\left[ \matrix{
+2 & 1& 1& 1& 1 \cr 
+2 &2 &1 &2 &2 \cr
+1 & 0 & 0 & 2 & 2 \cr
+1 &1 &1 &1 &2 \cr
+1 &2 &1 &2 &1 } \right].$$  
+
+	{\bf\ 9. } $$\left[ \matrix{
+0 & 0 & -1 & 0 \cr 
+0 & 9 & -1 & 8 \cr
+5 & 2 & 3 & -2  } \right].$$  
+
+
+	{\bf 10. } $$\left[ \matrix{
+1 & 2 & 0 & 3 \cr 
+5 & 7 & 5 & 6 \cr
+4 & 5 & 1 & 6 \cr 
+7 & 8 & 3 & 9 \cr
+0 & 1 & 5 & 1  } \right].$$  
+
+
+
+	{\bf 11. }
+ $$\left[ \matrix{
+0 & 1 &1 &1 &1  \cr 
+-1 & 0  &1 &1 &2 \cr
+-1 &-1 & 0 & 1 & 3 \cr 
+-1 & -1 & 0 & 0 & 4  } \right].$$  
+
+	{\bf 12. }
+ $$\left[ \matrix{
+0 & 1 &-1 &1 &1  \cr 
+-1 & 0  &1 &1 &2 \cr
+2 &-1 & 0 & 1 & 3 \cr 
+-1 & 3  &1 &1 &2 \cr
+-1 & -1 & 0 & 0 & 4  } \right].$$  
+
+	{\bf 13. }
+ $$\left[ \matrix{
+0 & 1 &0 & 1 &1 &1 &1  \cr 
+0 & 1 &-1 & 0  &1 &1 &-2 \cr
+-1 &-1 & 0 & 2 &0 & 1 & 3 \cr 
+-1 & 0  &0 & 1 &1 &1 &2 \cr
+0 & 0 & 1 &-1 & 0 & 0 & 4  } \right].$$  
+ 
+	{\bf 14. }
+ $$\left[ \matrix{
+4 & 4 & 1 &0 & 1 &1 &1 &1  \cr 
+0 & 1 &-1 &4 & 2  &1 &1 &-2 \cr
+0 & 1 &4 & -1 & 2  &1 &1 &-2 \cr
+-1 &-1 & -1 & 2 &0 &4 & 1 & 3 \cr 
+-1 & 0  & 3 & 1 &4 &1 &1 &2 \cr
+0 & 0 & 2 &-1 & 0 & 4 & 0 & 4  } \right].$$  
+
+\end
+old (13.4)
+$${{{{{\rowtab{&\omit&x&\hskip .3in&1&\omit\cr
+ -y&\omit&A&\omit&b&\omit&\cr \ 1&\omit&c&\omit&d&\omit&\cr}}
+\atop\matrix{&\omit&\hfill&=v&\hfill&\ \ =w   &\omit&\omit&\omit&}}\atop\matrix{&\omit&\omit&\omit&\qquad\qquad\downarrow}}\atop\matrix{&\omit&\omit&\omit& &   
+ \max,  & &  y \ge 0, v \ge 0. 
+}}
+% \atop\matrix{&\omit&\omit&\omit&\qquad\qquad y\ge 0,\quad v\ge 0}
+}
+\thinspace\matrix{=u\hfill&\omit&\omit\cr=z\rightarrow\hbox{min,}&x \ge 0, &u \ge 0\cr&\omit\hfill&\omit&\omit\cr&\omit\hfill&\omit&\omit\cr&\omit\hfill&\omit&\omit\cr&\omit\hfill&\omit&\omit\cr&\omit\hfill&\omit&\omit\cr&\omit\hfill&\omit&\omit\cr&\omit\hfill&\omit&\omit\cr} $$
+
+tex ch7
+
+dvips -o ch7.ps ch7.dvi
+
+ps2pdf ch7.ps

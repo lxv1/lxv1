@@ -1,0 +1,9 @@
+body.home table.menu,
+body.home table.menu tr th a
+{ background-color:#CECE9C;
+  color:#000000 }
+
+body.home table.header,
+body.home table.header tr td a
+{ background-color:#D0A060;
+  color:#000000 }

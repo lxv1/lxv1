@@ -1,0 +1,57 @@
+This is TeX, Version 3.1415926 (TeX Live 2012) (format=tex 2012.7.9)  13 DEC 2012 09:53
+**ch8
+(./ch8 (/usr/local/texlive/2011/../texmf-local/tex/psfig/psfig.tex
+(/usr/local/texlive/2011/../texmf-local/tex/psfig/psfig.sty
+\@unused=\write0
+\fboxrule=\dimen16
+\fboxsep=\dimen17
+\ps@tempdima=\dimen18
+\ps@tempboxa=\box16
+\ps@stream=\read0
+\p@intvaluex=\dimen19
+\p@intvaluey=\dimen20
+
+psfig/tex 1.10-dvips
+))
+Underfull \hbox (badness 10000) has occurred while \output is active
+[]
+
+\hbox(8.5+0.0)x295.6491
+.\vbox(8.5+0.0)x0.0
+
+[229] [230] [231] [232] [233] [234] [235]
+psfig: searching Fig.22.8.eps for bounding box
+psfig: including Fig.22.8.eps 
+[236] [237] [238] [239] [240] [241] [242] [243]
+psfig: searching Fig.23.6.eps for bounding box
+psfig: including Fig.23.6.eps 
+psfig: searching Fig.23.7.eps for bounding box
+psfig: including Fig.23.7.eps 
+[244] [245] [246] [247] [248] [249] [250]
+psfig: searching Fig.24.2.eps for bounding box
+psfig: including Fig.24.2.eps 
+
+Underfull \vbox (badness 10000) has occurred while \output is active
+\vbox(492.74959+0.0)x295.6491, glue set 5.20657
+.\glue(\topskip) 1.66667
+.\hbox(8.33333+2.33333)x295.6491, glue set 173.0036fil
+..\hbox(6.94444+1.94444)x4.44447
+...\mathon
+...\tensy x
+...\mathoff
+..\twelvebf 2
+..\twelvebf 4
+..\twelvebf .
+..\glue 6.1333 plus 6.89996 minus 0.51111
+..etc.
+.\glue 3.0 plus 1.0 minus 1.0
+.\glue(\parskip) 0.0 plus 1.0
+.\glue(\baselineskip) 2.72223
+.etc.
+
+ [251]
+[252] [253] [254]
+psfig: searching Fig.24.6.eps for bounding box
+psfig: including Fig.24.6.eps 
+[255] [256] )
+Output written on ch8.dvi (28 pages, 82940 bytes).

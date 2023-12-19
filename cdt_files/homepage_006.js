@@ -1,0 +1,1 @@
+document.write('<a target="_new" href="http://ad.doubleclick.net/click;h=v2|2fbc|0|0|%2a|r;5559836;0-0;1;7939206;6-120|60;2848029|2848116|1;;%3fhttp://www.lavalife.com/wp.epl?a=5462"><img src="http://m.doubleclick.net/viewad/847828/120x60-adriana-see-3k.gif" border=0 alt="Click here to find out more!"></a>');

@@ -1,0 +1,74 @@
+This is TeX, Version 3.14159 (Web2C 7.2) (format=tex 1998.11.21)  18 OCT 2000 20:53
+**paismf1002
+(paismf1002.tex (/usr/local/lib/teTeX/texmf/tex/amstex/base/amstex.tex
+
+AmS-TeX- Version 2.1
+COPYRIGHT 1985, 1990, 1991 - AMERICAN MATHEMATICAL SOCIETY
+Use of this macro package is not restricted provided
+each use is acknowledged upon publication.
+
+Loading definitions for misc utility macros, page layout, accents/punctuation,
+line and page breaks, figures, comments, math spacing, fractions,
+smash commands, large operator symbols, integrals, operator names,
+multilevel sub/superscripts, matrices, multiline displays,
+continued fractions, compound symbols, various kinds of dots,
+special superscripts, \text, math font commands, \newsymbol,
+bold Greek and bold symbols, Euler fonts, math accents, roots,
+commutative diagrams, poor man's bold, syntax check, ... finished) (table.tex
+<< Additional Active Characters >>)
+
+(/usr/local/lib/teTeX/texmf/tex/amstex/base/amsppt.sty
+version 2.1h (1997/02/02): Loading utility definitions, more fonts,
+page dimension settings, top matter, section heads,
+theorems/proofs/definitions/remarks, rosters, footnotes, figures and captions,
+miscellaneous, references, end of document, output routine,
+\copyins=\insert252
+
+hyphenation exceptions (U.S. English)
+(/usr/local/lib/teTeX/texmf/tex/amstex/config/amsppt.sti symbol names
+(/usr/local/lib/teTeX/texmf/tex/amstex/base/amssym.tex) ,)
+
+)
+Overfull \hbox (7.5309pt too wide) in paragraph at lines 35--41
+\eightsmc Abstract.\eightrm In this pa-per we ex-plore five top-ics from the th
+e-ory of par-ti-tions: (1)  the Rademacher
+
+\hbox(6.0+2.0)x349.48499, glue set - 1.0
+.\eightsmc A
+.\eightsmc b
+.\eightsmc s
+.\eightsmc t
+.\eightsmc r
+.etc.
+
+[1] [2] [3] [4]
+Underfull \vbox (badness 10000) has occurred while \output is active
+\vbox(523.025+4.0)x397.48499, glue set 5.18365
+.\glue(\topskip) 3.05556
+.\hbox(6.94444+0.0)x397.48499, glue set 371.90163fil
+..\tenrm w
+..\tenrm h
+..\tenrm e
+..\tenrm r
+..\tenrm e
+..etc.
+.\penalty 10000
+.\glue(\abovedisplayshortskip) 0.0 plus 3.0
+.\glue(\baselineskip) 3.08774
+.etc.
+
+ [5]
+Overfull \hbox (4.12682pt too wide) in paragraph at lines 342--345
+[]\tenrm It may be rea-son-ably ob-jected that The-o-rem 1 pro-vides lit-tle ho
+pe of prov-ing Rademacher's
+
+\hbox(6.94444+1.94444)x397.48499, glue set - 1.0
+.\hbox(0.0+0.0)x12.0
+.\tenrm I
+.\tenrm t
+.\glue 3.33333 plus 1.66666 minus 1.11111
+.\tenrm m
+.etc.
+
+[6] [7] [8] [9] [10] [11] [12] [13] [14] [15] [16] [17] )
+Output written on paismf1002.dvi (17 pages, 62324 bytes).

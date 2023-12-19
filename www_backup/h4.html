@@ -1,0 +1,324 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="GENERATOR" content="Mozilla/4.61 [en] (X11; U; SunOS 5.7 sun4u) [Netscape]">
+</head>
+<body>
+
+<h1>
+Homework 4</h1>
+
+<p><br><b>Solve the linear program</b>
+<br>&nbsp;
+<br>&nbsp;
+<table BORDER COLS=6 WIDTH="100%" NOSAVE >
+<tr>
+<td><i>x</i><sub>1</sub></td>
+
+<td><i>x</i><sub>2</sub></td>
+
+<td><i>x</i><sub>3</sub></td>
+
+<td><i>x</i><sub>4</sub></td>
+
+<td><sub>1</sub></td>
+
+<td>Homework 4</td>
+</tr>
+
+<tr>
+<td>1</td>
+
+<td>-1</td>
+
+<td>0</td>
+
+<td>2</td>
+
+<td>0</td>
+
+<td>= <i>x</i><sub>5</sub></td>
+</tr>
+
+<tr>
+<td>-1</td>
+
+<td>2</td>
+
+<td>1</td>
+
+<td>-1</td>
+
+<td>2</td>
+
+<td>= <i>x</i><sub>6</sub></td>
+</tr>
+
+<tr>
+<td>0</td>
+
+<td>-1</td>
+
+<td>-1</td>
+
+<td>1</td>
+
+<td>1</td>
+
+<td>= <i>x</i><sub>7</sub></td>
+</tr>
+
+<tr>
+<td>0</td>
+
+<td>-1</td>
+
+<td>2</td>
+
+<td>0</td>
+
+<td>1</td>
+
+<td>-> min</td>
+</tr>
+</table>
+
+<p><b>Solution.</b>
+<br>Simplex method:&nbsp; Phase 1. Feasible tableau.
+<br>Phase 2. Tableau is not optomal&nbsp; and has no bad columns
+<br>The only minus in the <i>c</i>-part is is&nbsp; in&nbsp; <i>x</i><sub>2</sub>-column
+(the pivot column). The pivot row is&nbsp; <i>x</i><sub>5</sub>-row, the
+maximal
+<br>ratio is 0 :
+<br>&nbsp;
+<table BORDER COLS=6 WIDTH="100%" NOSAVE >
+<tr>
+<td><i>x</i><sub>1</sub></td>
+
+<td><i>x</i><sub>2</sub></td>
+
+<td><i>x</i><sub>3</sub></td>
+
+<td><i>x</i><sub>4</sub></td>
+
+<td><sub>1</sub></td>
+
+<td></td>
+</tr>
+
+<tr>
+<td>1</td>
+
+<td>-1<blink>*</blink></td>
+
+<td>0</td>
+
+<td>2</td>
+
+<td>0</td>
+
+<td>= <i>x</i><sub>5</sub></td>
+</tr>
+
+<tr>
+<td>-1</td>
+
+<td>2</td>
+
+<td>1</td>
+
+<td>-1</td>
+
+<td>2</td>
+
+<td>= <i>x</i><sub>6</sub></td>
+</tr>
+
+<tr>
+<td>0</td>
+
+<td>-1</td>
+
+<td>-1</td>
+
+<td>1</td>
+
+<td>1</td>
+
+<td>= <i>x</i><sub>7</sub></td>
+</tr>
+
+<tr>
+<td>0</td>
+
+<td>-1</td>
+
+<td>2</td>
+
+<td>0</td>
+
+<td>1</td>
+
+<td>-> min</td>
+</tr>
+</table>
+
+<p>The pivot step&nbsp; is degenerate and&nbsp; the new tableau is mot
+optimal. Here it is with the next pivot entry indicated by <blink>*:</blink>
+<br>&nbsp;
+<br>&nbsp;
+<table BORDER COLS=6 WIDTH="100%" NOSAVE >
+<tr>
+<td><i>x</i><sub>1</sub></td>
+
+<td><i>x</i><sub>5</sub></td>
+
+<td><i>x</i><sub>3</sub></td>
+
+<td><i>x</i><sub>4</sub></td>
+
+<td><sub>1</sub></td>
+
+<td></td>
+</tr>
+
+<tr>
+<td>1</td>
+
+<td>-1</td>
+
+<td>0</td>
+
+<td>2</td>
+
+<td>0</td>
+
+<td>= <i>x</i><sub>2&nbsp;</sub></td>
+</tr>
+
+<tr>
+<td>1</td>
+
+<td>-2</td>
+
+<td>1</td>
+
+<td>3</td>
+
+<td>2</td>
+
+<td>= <i>x</i><sub>6</sub></td>
+</tr>
+
+<tr>
+<td>-1</td>
+
+<td>1</td>
+
+<td>-1</td>
+
+<td>-1<blink>*</blink></td>
+
+<td>1</td>
+
+<td>= <i>x</i><sub>7</sub></td>
+</tr>
+
+<tr>
+<td>-1</td>
+
+<td>1</td>
+
+<td>2</td>
+
+<td>-2</td>
+
+<td>1</td>
+
+<td>-> min</td>
+</tr>
+</table>
+
+<p>The pivot step gives
+<br>&nbsp;
+<table BORDER COLS=6 WIDTH="100%" NOSAVE >
+<tr>
+<td><i>x</i><sub>1</sub></td>
+
+<td><i>x</i><sub>5</sub></td>
+
+<td><i>x</i><sub>3</sub></td>
+
+<td><i>x</i><sub>7</sub></td>
+
+<td><sub>1</sub></td>
+
+<td></td>
+</tr>
+
+<tr>
+<td>-1</td>
+
+<td>1</td>
+
+<td>-2</td>
+
+<td>-2</td>
+
+<td>2</td>
+
+<td>= <i>x</i><sub>2&nbsp;</sub></td>
+</tr>
+
+<tr>
+<td>-2</td>
+
+<td>1</td>
+
+<td>-2</td>
+
+<td>-3</td>
+
+<td>5</td>
+
+<td>= <i>x</i><sub>6</sub></td>
+</tr>
+
+<tr>
+<td>-1</td>
+
+<td>1</td>
+
+<td>-1</td>
+
+<td>-1<blink>*</blink></td>
+
+<td>1</td>
+
+<td>= <i>x</i><sub>4</sub></td>
+</tr>
+
+<tr>
+<td>1</td>
+
+<td>-1</td>
+
+<td>4</td>
+
+<td>2</td>
+
+<td>-1</td>
+
+<td>-> min</td>
+</tr>
+</table>
+
+<p>The objective function (on the basic solution) improved from 1 to -1.
+The <i>x</i><sub>5</sub>-column is bad,
+<br>so the problem is unbounded..
+<p><b>Another solution.</b> By one pivot step (with pivot chosen not acording
+the simplex method) we can obtain
+<br>a feasible tableau with a bad column.
+</body>
+</html>

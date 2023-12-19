@@ -1,0 +1,236 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="GENERATOR" content="Mozilla/4.77 [en] (X11; U; SunOS 5.8 sun4u) [Netscape]">
+</head>
+<body>
+
+<center>
+<h1>
+Repeated Prisoner's Dilemma</h1></center>
+submitted strategies:
+<p>1. defect every third time, and cooperate the rest of the time. <font size=-2>I
+assume that you&nbsp; start&nbsp; with c,c. LV.</font>
+<p>2. Step 1. First three moves are always Defect, Conform, Defect.
+<br>The worst case in this situation (refencing the values in our book)
+would yield -20 and best case -4.
+<br>Step 2.&nbsp; Examine other players move in segments of 3 moves. Thus,
+player 1 would have these choices to look for: CCC, DCC, CDC, CCD, DDC,
+DDD, CDD, DCD and hte remaing quesiton is, what to do in each situation?
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; CCC, DCC, CDC, CCD - Choose
+D
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; DDD, CDD, DCD, DDC - Choose
+C
+<p>3. play tit-for-tat, except I will choose to defect on the first turn.
+<p>4.&nbsp; begin cooperating until 9 games have been played.
+<br>Then my strategy is to then always average the last 9 moves, and play
+Tit for Tat according
+<br>what move the opponent played the most in the last 9 moves.
+<p>5. -COOPERATE on first turn.
+<br>-DEFECT on second turn.
+<br>-Subsequent turns look at opponents previous two moves, if opponent
+has played
+<br>&nbsp; *Both C, then COOPERATE.
+<br>&nbsp; *Both D, then DEFECT.
+<br>&nbsp; *One C and other D, then look at ALL of opponent's past moves
+and play
+<br>whichever he has played more often.&nbsp; If he/she has cooperated
+and defected an
+<br>equal number of times, then DEFECT.
+<p>6. Start by cooperating.
+<br>If the opponent defects, then defect, otherwise keep cooperating.
+<br>Then, when you are defecting, and the opponent cooperates, then also
+<br>cooperate, otherwise keep defecting.
+<br>Thus, you mirror the opponent's last move and stay in the same state
+as
+<br>long as he does.
+<br>However, for each iteration, switch your strategy 25% of the time.
+<br><font size=-2>I assume that this means: Start by cooperating.&nbsp;
+Then mirror the opponent's last move&nbsp; with probability 75%. LV.</font>
+<br>&nbsp;
+<br>&nbsp;
+<br>&nbsp;
+<table BORDER COLS=6 WIDTH="100%" NOSAVE >
+<tr>
+<td></td>
+
+<td>1</td>
+
+<td>2</td>
+
+<td>3</td>
+
+<td>4</td>
+
+<td>5</td>
+</tr>
+
+<tr>
+<td>1</td>
+
+<td>(2cc+dd)/3</td>
+
+<td>(2cd+dd)/3</td>
+
+<td>(cc+dc+cd)/3</td>
+
+<td>(2cc+dc)/3</td>
+
+<td>(2cc+dc)/3</td>
+</tr>
+
+<tr>
+<td>2</td>
+
+<td>(2dc+dd)/3</td>
+
+<td>(cc+dd)/2</td>
+
+<td>(2cc+cd+dc+2dd)/6</td>
+
+<td>(2cc+5cd+5dc+2dd)/14</td>
+
+<td>(2cc+2cd+2cd+2dd)/8</td>
+</tr>
+
+<tr>
+<td>3</td>
+
+<td>(cc+dc+cd)/3</td>
+
+<td>(2cc+cd+dc+2dd)/6</td>
+
+<td>dd</td>
+
+<td>cc</td>
+
+<td>dd</td>
+</tr>
+
+<tr>
+<td>4</td>
+
+<td>(2cc+cd)/3</td>
+
+<td>(2cc+5cd+5dc+2dd)/14</td>
+
+<td>cc</td>
+
+<td>cc</td>
+
+<td>cc</td>
+</tr>
+
+<tr>
+<td>5</td>
+
+<td>(2cc+cd)/3</td>
+
+<td>(2cc+2cd+2cd+2dd)/8</td>
+
+<td>dd</td>
+
+<td>cc</td>
+
+<td>dd</td>
+</tr>
+</table>
+
+<table BORDER COLS=3 WIDTH="100%" NOSAVE >
+<tr>
+<td>game from the textbook</td>
+
+<td>c</td>
+
+<td>d</td>
+</tr>
+
+<tr>
+<td>c</td>
+
+<td>-2, -2 ( bonus points: 8,8)</td>
+
+<td>-10, -1 (bonus points: 0, 9)</td>
+</tr>
+
+<tr>
+<td>d</td>
+
+<td>-1, -10 (bonus points 9,0)</td>
+
+<td>-5, -5 (bonus points: 5,5)</td>
+</tr>
+</table>
+
+<p>Bonus points:
+<br>1. (1.4cc+0.6cd+0.6dc+0.4dd)/3=(11.2+5.4+2)/3=18.6/3=6.2 ~ 6.
+<br>2. ((2dc+dd)/3+(cc+dd)/2+(2cc+cd+dc+2dd)/6+(2cc+5cd+5dc+2dd)/14+(2cc+2cd+2cd+2dd)/8)/5
+=793/140~5.66~6.
+<br>3. (10cc+3cd+3dc+14dd)/30=(80+27+70)/30=5.9~6.
+<br>4. ((2cc+cd)/3+(2cc+5cd+5dc+2dd)/14+3cc)/5 ~ 6.88 ~7.
+<br>5.&nbsp; ((2cc+cd)/3+(2cc+2cd+2cd+2dd)/8+2dd+cc)/5=319/60 ~5.32~5.
+<br>6. (6.08+5.5+5.5+5.97+5.68+5.5)/6 ~ 5.7 ~ 6 (pts).
+<br>&nbsp;
+<p><tt>2&nbsp; d c d c&nbsp; c d d d c c&nbsp; c d d</tt>
+<br><tt>3&nbsp; d d c d&nbsp; c c d d d c&nbsp; c c d</tt>
+<br><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+period 6</tt>
+<p><tt>2 &amp; 2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; d c&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+d c</tt>
+<br><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+period 2</tt>
+<p><tt>2&nbsp; d c d d&nbsp;&nbsp; d d d d d d d c c c c c c c&nbsp;&nbsp;
+d d d d d d d c c c c c c c</tt>
+<br><tt>4&nbsp; c c c c&nbsp;&nbsp; c c c c c d d d d d d d c c&nbsp;&nbsp;
+c c c c c d d d d d d d c c</tt>
+<br><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+period 14</tt>
+<p><tt>5 c d&nbsp; d d d c c c c d&nbsp; d d d c c c c d</tt>
+<br><tt>2 d c&nbsp; d c c c c d d d&nbsp; d c c c c d d d</tt>
+<br><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+period 8</tt>
+<p><tt>1 c c d&nbsp; c c d</tt>
+<br><tt>2 d c d&nbsp; d d d</tt>
+<br><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+period 3</tt>
+<p><tt>1&nbsp;&nbsp; c&nbsp; c d c</tt>
+<br><tt>3&nbsp;&nbsp; d&nbsp; c c d</tt>
+<br><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+period 3</tt>
+<p><tt>1&nbsp;&nbsp; c c d&nbsp; c c d&nbsp; c c d c c d</tt>
+<br><tt>4&nbsp;&nbsp; c c c&nbsp; c c c&nbsp; c c c c c c</tt>
+<br><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; period 3</tt>
+<p><tt>1&nbsp;&nbsp; c c d&nbsp; c c d&nbsp; c c d c c d</tt>
+<br><tt>5&nbsp;&nbsp; c d c&nbsp; c c c&nbsp; c c c c c c</tt>
+<br><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+period 3</tt>
+<br>&nbsp;
+<p>6&amp;1. (4cc+3cd+4dc+dd)/12 &amp; (4cc+4cd+3dc+dd)/12 . ~ 6.08 &amp;
+5.33
+<p>6&amp;2.&nbsp; (cc+cd+dc+dd)/4 &amp;&nbsp; (cc+cd+dc+dd)/4.&nbsp; 5.5
+&amp; 5.5.
+<p>6&amp;3.&nbsp; (cc+cd+dc+dd)/4 &amp;&nbsp; (cc+cd+dc+dd)/4.&nbsp; 5.5
+&amp; 5.5.
+<br><font size=-1>(computing invariant probability distribution&nbsp; for
+a Markov chain on 16 states)</font>
+<p>6 &amp; 4.&nbsp; (cc+cd+dc+dd)/4 &amp;&nbsp; (cc+cd+dc+dd)/4. ~5.97,
+5.97
+<br><font size=-1>(computing invariant probability distribution&nbsp; for
+a Markov chain on 1024&nbsp; states)</font>
+<p>6&amp; 5.&nbsp; Eigenvectors[{{6,2,0,0,3,1,0,0},{0,0,0,0,3,1,0,0},{2,6,0,0,1,3,0,0},{0,0,0,0,1,3,0,0},
+<br>{0,0,3,1,0,0,0,0},&nbsp; {0,0,3,1,0,0,6,2},&nbsp; {0,0,1,3,0,0,0,0},&nbsp;
+{0,0,1,3,0,0,2,6}}]
+<br>{10., 2., 7., 3., 3., 7., 2., 10.}/44
+<br><font size=-1>(computing invariant probability distribution&nbsp; for
+a Markov chain on 8 states)</font>
+<br>(13cc+9cd+9dc+13dd)/44 &amp; (13cc+9cd+9dc+13dd)/44 . ~5.68 &amp; 5.68.
+<p>6 &amp; 6:.&nbsp;&nbsp; (cc+cd+dc+dd)/4. 5.5
+<p>&nbsp;
+<p>N[%/.{cc->8,cd->0,dc->9,dd->5}]
+<br>&nbsp;
+<br>&nbsp;
+<br>&nbsp;
+<br>&nbsp;
+</body>
+</html>

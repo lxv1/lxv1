@@ -1,0 +1,1802 @@
+\magnification=1100
+
+\hsize=4.5 true in
+\vsize=7.5 true in
+
+\def\blackbox{\vrule height 1.2ex width 1.0ex depth -.2ex}
+
+ \input psfig 
+% at least 20 problems per chapter
+% $10 per book
+%Illistrator for figures
+% contract in November, this Dec complete
+
+\font\ch=cmbx10 at 18truept
+\font\chtitle=cmbx10 at 21truept
+\font\fourteenbf=cmbx10 scaled\magstep2
+\font\twelvebf=cmbx10 scaled\magstep1
+%\magnification=\magstep1
+\catcode`\@=11
+\def\m@th{\mathsurround=0pt }
+
+%this is the code to write matrices 
+
+\def\matriz#1{\,\vcenter{\normabaselines\m@th
+\ialign{\hfil$##$\hfil&&\quad\hfil$##$\hfil\crcr
+\mathstrut\crcr\noalign{\kern-\baselineskip}
+#1\crcr\mathstrut\crcr\noalign{\kern-\baselineskip}}}\,}
+
+%this is the code to write tableaux with square brackets 
+ 
+\newdimen\p@renwd\setbox0=\hbox{\tenex B}\p@renwd=\wd0 
+\def\rowtab#1{\begingroup \m@th\setbox0=\vbox{\def\cr{\crcr\noalign{\kern2pt\global\let\cr=\endline}}
+\ialign{$##$\hfil\kern2pt\kern\p@renwd&\thinspace\hfil$##$\hfil
+&&\quad\hfil$##$\hfil\crcr
+\omit\strut\hfil\crcr\noalign{\kern-\baselineskip}
+#1\crcr\omit\strut\cr}}
+\setbox2=\vbox{\unvcopy0 \global\setbox1=\lastbox}
+\setbox2=\hbox{\unhbox1 \unskip \global\setbox1=\lastbox}
+\setbox2=\hbox{$\kern\wd1\kern-\p@renwd \left [ \kern-\wd1
+\global\setbox1=\vbox{\box1\kern2pt}
+\vcenter{\kern-\ht1 \unvbox0 \kern-\baselineskip} \,\right]$}
+\;\vbox{\kern\ht1\box2}\endgroup}
+
+\def\bull{\vrule height .9ex width .9ex depth -.05ex }
+
+\pageno=166
+% till page 95, but a lot of empty space in pictures
+% \def\title{\hfil{\fourteenbf Chapter VI:  Transportation Problems}\hfil}
+ 
+\headline={\ifnum\pageno=166 \else\ifodd\pageno\rightheadline\else \leftheadline\fi\fi}
+ 
+\def\rightheadline{\tenrm\hfil{\it\S  16. Phase 1}\quad {\bf\folio}}
+\def\leftheadline{\tenrm{\bf\folio}\quad{\it Chapter 6  Transportation Problems} \hfil}
+\voffset=2\baselineskip
+
+ \bigskip
+ \bigskip
+ \bigskip
+\noindent
+\noindent  {\ch  Chapter} {\chtitle 6}
+\bigskip
+ \bigskip
+\noindent 
+{\chtitle Transportation Problems}
+ \medskip
+\hrule
+ \bigskip
+\bigskip
+
+\noindent
+{\twelvebf   \S  16. Phase 1}
+
+\smallskip
+\noindent 
+Have you ever had the opportunity to read magazines from years gone by?  The advertisements in these magazines are fascinating.  In one old magazine, blue jeans, touted as an essential piece of clothing apparel for agricultural workers, were advertised for \$2.99 a pair.  However, in small print, was   the following phrase:
+\smallskip
+{\it Prices may be higher west of the Rockies.}
+\smallskip
+Why did the East Coast manufacturers of these blue jeans feel compelled to put that disclaimer in their advertisement?  Obviously, they were faced with the daunting task, and equally daunting expense, of transporting their product across the Rocky Mountains to the consumers in the West who wanted blue jeans.  Now, with manufacturing plants located throughout the United States, instead of primarily in the East, and with improved means of shipping, it might not be necessary to put such disclaimers in advertisements.   Nonetheless, transportation costs    continue  to be an important consideration for business and industry.
+ 
+    
+In Example 2.4 of Chapter 1,  we   discussed a particular case of transportation problems and   solved this problem by using a trial-and-error method.    Since transportation problems provide   particularly simple and nice examples of linear programs, we will revisit these examples, setting them up   as linear programs and then solving  them   using the methods we have just learned.   Historically speaking, these problems were   investigated in detail many years before the general linear program was.  Interestingly, the concept of duality, which we   considered in Chapter 5, first appeared in transportation problems.  
+ 
+In this chapter we will see that Phase 1  of solving linear programs ---finding a feasible solution---can be done by hand. Also, Phase 2---finding an optimal solution---is easier in transportation problems than for general linear programs.   
+\filbreak
+
+ To introduce graphs and tables, we
+ consider again Example 15.7  and begin with a graphical representation (Fig. 16.1).
+
+%$$\psfig{figure=ch6fig1.eps,height=4in,width=5in}$$  % too big
+% $$\psfig{figure=ch6fig1.eps,height=3in,width=4in}$$  
+$$\psfig{figure=Fig.16.1.eps,height=2.3in,width=4in}$$ 
+%$$\psfig{figure=ch6fig1.eps,height=4cm}$$   %too small
+\vskip -0.5in
+\centerline{\bf Figure 16.1.}
+\centerline{Graphical representation of Example 15.7} 
+
+
+\bigskip
+Also, the numerical data can be written in a table:
+\medskip
+
+$$\vbox {\offinterlineskip
+\settabs 
+\+ $\vert$    & 11111 & $\vert$ & 22222 & $\vert$ & 33333 & $\vert$ & 220 \cr
+\hrule  
+\+ $\vert$  & 77 \hfill& $\vert$ & 39 \hfill & $\vert$ & 105 \hfill & $\vert$ &   \cr
+\+ $\vert$  &   & $\vert$ &   & $\vert$ &   & $\vert$ & \hfill 220 \hfill \cr
+\+ $\vert$  &   & $\vert$ &   & $\vert$ &  & $\vert$ &   \cr
+ \hrule   
+\+ $\vert$ & 150 \hfill & $\vert$ & 186 \hfill & $\vert$ & 122 \hfill & $\vert$ &   \cr
+\+ $\vert$ &   & $\vert$ &  & $\vert$ &   & $\vert$ & \hfill 280\hfill  \cr
+\+ $\vert$ &   & $\vert$ &  & $\vert$ &   & $\vert$ &   \cr
+\hrule   
+\+ $\vert$ & \hfill 170 \hfill& $\vert$ & \hfill 120 \hfill & $\vert$ & \hfill 210 \hfill &$\vert$ & \cr}$$
+\centerline{{\bf Table 16.2.}  Example 15.7 tabled}
+ 
+
+\bigskip
+\nopagenumbers % suppress footlines%
+	We left room in the table for values of the unknowns $x_{ij}$ which are sometimes   referred to as a $flow.$
+	Any transportation problem  can be treated similarly.  Note that in Example 15.7 the {\it balance condition } holds: The total supply (the sum of the numbers in the right margin) equals the total demand (the sum of the numbers across the bottom).
+
+	Example 2.4 presented an open transportation problem, that is, a problem without the balance condition.  That problem can be written as a closed (balanced) transportation problem,   with the balance condition satisfied, by introducing a fictitious store, {\it dummy demand point,}  where any surplus product goes at no cost.  If we set the demand at the fictitious store to be exactly the total surplus supply, then the balance condition is restored. 
+ 
+
+  A position in the table corresponds to an arrow in the graphical representation, and entering a number in the $i, j$ position in the table corresponds to allocating stock from warehouse $i$ to store $j$.   Here is a way to find a feasible solution.  First check the balance condition, which is satisfied in this problem so we can proceed.  Pick a position in the table and write the maximum possible number, namely the available stock at the corresponding warehouse.  
+
+
+For example, in Example 15.7 we choose the first position in the
+first row and write there 170.
+$$\vbox {\offinterlineskip
+\settabs 
+\+ $\vert$    & 11111 & $\vert$ & 22222 & $\vert$ & 33333 & $\vert$ & 200 \cr
+\hrule  
+\+ $\vert$ &                    & $\vert$ &                  & $\vert$ & & $\vert$ & \cr
+\+ $\vert$ & \hfill 170 \hfill  & $\vert$ &                  & $\vert$ & & $\vert$ & \hfill 220 \kern -2 em ------  50  \hfill \cr
+\+ $\vert$ &                    & $\vert$ &                  & $\vert$ & & $\vert$ & \cr
+ \hrule   
+\+ $\vert$ &                    & $\vert$ &                  & $\vert$ & & $\vert$ & \cr
+\+ $\vert$ &                    & $\vert$ &                  & $\vert$ & & $\vert$ & \hfill 280\hfill \cr
+\+ $\vert$ &                    & $\vert$ &                  & $\vert$ & & $\vert$ & \cr
+\hrule   
+\+ $\vert$ & \hfill 170 \kern -2 em ------ \hfill& $\vert$ & \hfill 120 \hfill & $\vert$ & \hfill 210 \hfill & $\vert$ & \cr}$$
+
+
+
+	We suppressed the objective function  because we do not use it yet.  Note that the first column of the table, corresponding to the store in State College,  is done. We indicate this by crossing out the demand 170.
+The second entry in the first column must now be zero, because the demand is satisfied.  We suppress entering this zero.
+ We keep track of unallocated warehouse stock by entering a new number  50
+instead of 220 at the right margin of the table.  
+
+Thus, we entered one number, crossed out one number, and adjusted another number. The first column  is done (we found the flow in it), and we proceed
+with a smaller,  2-by-2 table.
+% \filbreak
+
+We pick a second position in the table and again write the maximum possible number 50 = min(50, 120):
+$$\vbox {\offinterlineskip
+\settabs 
+\+ $\vert$ & 11111 & $\vert$ & 22222 & $\vert$ & 33333 & $\vert$ & 200 \cr
+\hrule  
+\+ $\vert$ &                   & $\vert$ &                   & $\vert$ &  & $\vert$ & \cr
+\+ $\vert$ & \hfill 170 \hfill & $\vert$ &  \hfill 50 \hfill & $\vert$ &  & $\vert$ & \hfill 220 \kern -2 em ------ 50 \kern -2 em ------  \hfill \cr
+\+ $\vert$ &                   & $\vert$ &                   & $\vert$ &  & $\vert$ & \cr
+ \hrule   
+\+ $\vert$ &                   & $\vert$ &                   & $\vert$ &  & $\vert$ & \cr
+\+ $\vert$ &                   & $\vert$ &                   & $\vert$ &  & $\vert$ & \hfill 280\hfill  \cr
+\+ $\vert$ &                   & $\vert$ &                   & $\vert$ &  & $\vert$ & \cr
+\hrule   
+\+ $\vert$ & \hfill 170 \kern -2 em ------ \hfill& $\vert$ & \hfill 120 \kern -2 em ------ \hfill & $\vert$ & \hfill 210 \hfill & $\vert$ & \cr
+\+ $\vert$ & \hfill                        \hfill& $\vert$ & \hfill 70                    \hfill & $\vert$ &                   & $\vert$ & \cr}$$
+\filbreak
+% \bigskip
+
+	Now both the first row and the first column are done. We repeat this procedure for remaining 1-by-2 matrix, as long as any choice remains:
+ 
+
+$$\vbox {\offinterlineskip
+\settabs 
+\+ $\vert$ & 11111 & $\vert$ & 22222 & $\vert$ & 33333 & $\vert$ & 44444 \cr
+\hrule  
+\+ $\vert$ &                   & $\vert$ &                   & $\vert$ & & $\vert$ & \cr
+\+ $\vert$ & \hfill 170 \hfill & $\vert$ & \hfill  50 \hfill & $\vert$ & & $\vert$ & \hfill 220 \kern -2 em ------ 50 \kern -2 em ------  \hfill \cr
+\+ $\vert$ &                   & $\vert$ &                   & $\vert$ & & $\vert$ & \cr
+ \hrule   
+\+ $\vert$ &                   & $\vert$ &                   & $\vert$ & & $\vert$ & \cr
+\+ $\vert$ &                   & $\vert$ & \hfill 70 \hfill & $\vert$ & & $\vert$ & \hfill 280 \kern -2 em ------ 210 \hfill \cr
+\+ $\vert$ &                   & $\vert$ &                   & $\vert$ & & $\vert$ & \cr
+\hrule   
+\+ $\vert$ & \hfill 170 \kern -2 em ------  \hfill& $\vert$ & \hfill 120 \kern -2 em ------ \hfill & $\vert$ & \hfill 210 \hfill & $\vert$ & \cr
+\+ $\vert$ & \hfill   0                     \hfill& $\vert$ & \hfill 70 \kern -2 em ------ \hfill & $\vert$ &                   & $\vert$ & \cr}$$
+
+ 
+
+	At the last step the allocation will have been determined by the previous choices:
+ 
+
+$$\vbox {\offinterlineskip
+\settabs 
+\+ $\vert$ & 11111 & $\vert$ & 22222 & $\vert$ & 33333 & $\vert$ & 200 \cr
+\hrule  
+\+ $\vert$ &                   & $\vert$ &                   & $\vert$ &                   & $\vert$ & \cr
+\+ $\vert$ & \hfill 170 \hfill & $\vert$ & \hfill  50 \hfill & $\vert$ &                   & $\vert$ & \hfill 220 \kern -2 em ------ 50 \kern -2 em ----- \hfill \cr
+\+ $\vert$ &                   & $\vert$ &                   & $\vert$ &                   & $\vert$ & \cr
+ \hrule   
+\+ $\vert$ &                   & $\vert$ &                   & $\vert$ &                   & $\vert$ & \cr
+\+ $\vert$ &                   & $\vert$ & \hfill 70 \hfill & $\vert$ & \hfill 210 \hfill & $\vert$ & \hfill 280 \kern -2 em ------ 210 \kern -2 em ------ \hfill \cr
+\+ $\vert$ &                   & $\vert$ &                   & $\vert$ &                   & $\vert$ & \cr
+\hrule   
+\+ $\vert$ & \hfill 170 \kern -2 em ------ \hfill& $\vert$ & \hfill 120 \kern -2 em ------\hfill & $\vert$ &\hfill 210 \kern -2 em ------\hfill & $\vert$ & \cr
+\+ $\vert$ & \hfill                        \hfill& $\vert$ & \hfill 70 \kern -2 em ------ \hfill & $\vert$ & \hfill     \hfill & $\vert$ & \cr }$$
+
+ 
+	The corresponding total cost is 
+
+$$77\cdot 170 + 39\cdot 50+186\cdot 70+122\cdot 210.$$
+
+Here is the resulting feasible solution, with two zeros suppressed:
+ 
+$$\vbox {\offinterlineskip
+\settabs 
+\+ $\vert$ & 11111 & $\vert$ & 22222 & $\vert$ & 33333 & $\vert$ & 200 \cr
+\hrule  
+\+ $\vert$ &                   & $\vert$ &                   & $\vert$ &                   & $\vert$ & \cr
+\+ $\vert$ & \hfill 170 \hfill & $\vert$ & \hfill  50 \hfill & $\vert$ & \hfill     \hfill & $\vert$ & \hfill 220  \hfill \cr
+\+ $\vert$ &                   & $\vert$ &                   & $\vert$ &                   & $\vert$ & \cr
+ \hrule   
+\+ $\vert$ &                   & $\vert$ &                   & $\vert$ &                   & $\vert$ & \cr
+\+ $\vert$ & \hfill     \hfill & $\vert$ & \hfill 70 \hfill & $\vert$ & \hfill 210 \hfill & $\vert$ & \hfill 280  \hfill \cr
+\+ $\vert$ &                   & $\vert$ &                   & $\vert$ &                   & $\vert$ & \cr
+\hrule   
+\+ $\vert$ & \hfill 170 \hfill& $\vert$ & \hfill 120 \hfill & $\vert$ &\hfill 210  \hfill & $\vert$ & \cr }$$  
+
+ 
+	This method of finding a feasible solution  works for any transportation problem under the balance condition.  Now it is time to state an arbitrary transportation problem.
+
+ 
+
+\smallskip
+\noindent
+  {\bf The General Transportation Problem.}   
+
+\noindent
+A manufacturer has $m$ warehouses and $n$ retail stores. The warehouse $\#\,i$  has $a_i$ units of product available and the store $\#\,j$ needs $b_j$ units. 
+
+It is assumed that the following {\it balance condition} holds:
+$$\sum_{i=1}^m\, a_i\,=\,\sum_{j=1}^n\, b_j.$$
+For instance, in Example 15.7 the balance condition is satisfied. This is not the case in Example 2.4, as we observed. 
+The cost of shipping one unit from warehouse $\#\,i$ to store $\#\,j$ is denoted by $c_{ij}$ and the number of units shipped from warehouse $\#\,i$ to store $\#\,j$ is denoted by $x_{ij}.$ The linear program can be stated as follows:
+$$\left\{\matrix{\hbox{minimize}&C(x_{11},\ldots,x_{mn}) =\displaystyle{\sum_{i=1}^m\sum_{j=1}^n c_{ij}\,x_{ij}}\cr\hbox{subject to}& \displaystyle{\sum_{i=1}^n\ \,x_{ij} \ge  b_j,}\quad j=1,\ldots,m\cr\hfill&\displaystyle{\sum_{j=1}^m \,x_{ij} \le a_i,}\quad i=1,\ldots,n\cr\hfill& x_{ij}\ge 0,\,\, i=1,\ldots,n,\,\,j=1,\ldots,m,\cr}\right.$$
+ where $C$ is the total cost function to be minimized, the constraints
+$$\displaystyle{\sum_{i=1}^n \,x_{ij}= b_j,}\quad j=1,\ldots,m$$
+\noindent represent the number of units that store $\#\,j$ receives from warehouse $\#\,i,$ and the remaining constraints represent the number of units that warehouse $\#\,i$ can supply to store $\#\,j,$ in addition to the usual non-negativity constraints.    
+ 
+In this chapter we will show how the simplex method solves    this problem.    For now, here are some questions you might want to consider:
+ 
+
+
+(a) We have been looking at ways to minimize shipping costs.  However, does it ever make sense to maximize shipping costs rather than minimize them?  Consider this situation: You are working for an interstate mover and get paid for  shipping. In this situation, would you try to minimize or maximize the shipping cost?
+\filbreak
+
+
+
+(b) Is the general transportation problem   {\it general} enough? Is Example 2.4 a particular case of the general transportation problem? In other words, can the constraints in Example 2.4 be written as equations rather than  inequalities?  Note that the total supply in that example is 130,  which is larger than the total demand of 100.  So if we just replace the inequalities by equations, then we would not have any feasible solutions.
+ 
+\smallskip
+\noindent
+{\bf Remark 16.3.}
+Historically, transportation problems were the first linear programs that were explicitly stated, studied theoretically, solved, and used in industry. \hfill \blackbox
+\smallskip
+
+
+Now we observe that the method of finding a feasible solution  
+works for any  transportation problem.  We select any position and write there
+the maximal possible entry --  namely, the minimum of the number in the right margin and the number in the bottom margin. Then we cross out one of these
+two numbers, which equals   the written entry,  and adjust the other one. At the last step,
+when a $1 \times 1$ table is left,  we cross out  both numbers.
+ Thus, the total number of steps is   $m+n-1$, where $m$ is the number of rows and $n$ is the number of columns. Our method gives a feasible solution with at most $m+n-1$ nonzero values for  $mn$ variables.
+
+	To proceed with finding an optimal solution, it is convenient to make this number of selected positions exactly $m+n-1$ by  crossing out only one
+margin entry (and making the other 0) in the case when both  are the same 
+(unless this is the last step) and 
+allowing the value $0$ to be entered at a selected position if either of the numbers at the margin is 0. 
+By this method, we cross out one row or one column at each step, except the last.  We should not cross out the last remaining row or column unless it
+is the last step, step $m+n-1.$ 
+
+The $m+n-1$ positions we obtain this way correspond to the
+basic variables (those at the right margin) in a feasible standard row tableau.
+We write in the table the values of the basic variables and we do not write the zero values for nonbasic variables to leave room for the values of dual variables.  
+
+Thus,  a feasible solution can be found easily by hand for any
+problem small enough so that  the data can be written down by hand. But in fact, what we are
+doing is Phase 1 of the simplex method. We use smaller tables rather than standard tableaux. Initially, all variables $x_{ij}$ are on the top, with  slack variables at the right margin. The selected positions $(i, j)$ correspond
+to variables  $x_{ij}$ which we pivot to the right margin. The pivot entries are 1 or $-1.$
+
+\smallskip
+
+{\bf Example 16.4.}
+ Find a basic feasible solution for the transportation
+problem
+
+
+$$\vbox {\offinterlineskip
+\settabs 
+\+ $\vert$    & 11 & $\vert$ & 22 & $\vert$ & 33 & $\vert$ & 20 \cr
+\hrule  
+\+ $\vert$ & \hfill    \hfill  & $\vert$ &                  & $\vert$ & & $\vert$ &\hfill 2 \hfill  \cr
+  \hrule   
+\+ $\vert$ & \hfill   \hfill  & $\vert$ &                  & $\vert$ & & $\vert$ & \hfill 3 \hfill  \cr
+\hrule   
+\+ $\vert$ & \hfill 2   \hfill& $\vert$ & \hfill 2 \hfill & $\vert$ & \hfill 1 \hfill & $\vert$ & \cr}$$
+
+We did not give an objective function, because  we do not need it to find a
+feasible solution. We use the $northwest$ method. According to this method, we choose the position in the upper-left corner. Note that we cross out 2 
+under the first column and adjust 2 at the right margin to 0:
+
+$$\vbox {\offinterlineskip
+\settabs 
+\+ $\vert$    & 11 & $\vert$ & 22 & $\vert$ & 33 & $\vert$ & 20 \cr
+\hrule  
+\+ $\vert$ & \hfill  2  \hfill  & $\vert$ &                  & $\vert$ & & $\vert$ &\hfill 2 \kern -1 em --- 0 \hfill  \cr
+  \hrule     
+\+ $\vert$ & \hfill   \hfill  & $\vert$ &                  & $\vert$ & & $\vert$ & \hfill  3 \hfill  \cr
+\hrule   
+\+ $\vert$ & \hfill 2 \kern -1  em --- \hfill& $\vert$ & \hfill 2 \hfill & $\vert$ & \hfill 1 \hfill & $\vert$ & \cr}$$
+
+Now the  first column is done, and the northwest method tells us to choose the second position
+in the first row, and the maximal number we can put there is 0:
+
+
+$$\vbox {\offinterlineskip
+\settabs 
+\+ $\vert$    & 11 & $\vert$ & 22 & $\vert$ & 33 & $\vert$ & 20 \cr
+\hrule  
+\+ $\vert$ & \hfill  2  \hfill  & $\vert$ &   \hfill  0  \hfill   & $\vert$ & & $\vert$ &\hfill 2 \kern -1 em --- 0 \kern -1 em --- \hfill  \cr
+  \hrule   
+\+ $\vert$ & \hfill   \hfill  & $\vert$ &                  & $\vert$ & & $\vert$ & \hfill  3 \hfill  \cr
+\hrule   
+\+ $\vert$ & \hfill 2 \kern -1  em --- \hfill& $\vert$ & \hfill 2 \hfill & $\vert$ & \hfill 1 \hfill & $\vert$ & \cr}$$
+
+Now both the first row and first column are done. The next position we choose is in the second row and the second column:
+
+$$\vbox {\offinterlineskip
+\settabs 
+\+ $\vert$    & 11 & $\vert$ & 22 & $\vert$ & 33 & $\vert$ & 20 \cr
+\hrule  
+\+ $\vert$ & \hfill  2  \hfill  & $\vert$ &   \hfill  0  \hfill   & $\vert$ & & $\vert$ &\hfill 2 \kern -1 em --- 0 \kern -1 em --- \hfill  \cr
+  \hrule   
+\+ $\vert$ &  & $\vert$ &    \hfill  2 \hfill    & $\vert$ & & $\vert$ & \hfill  3 \kern -1 em --- 1 \hfill  \cr
+\hrule   
+\+ $\vert$ & \hfill 2 \kern -1  em --- \hfill& $\vert$ & \hfill 2  \kern -1 em --- \hfill & $\vert$ & \hfill 1 \hfill & $\vert$ & \cr}$$
+
+Now only the last row and column remain. We   write the last entry 1 and cross out
+the last two numbers at the margin:
+
+$$\vbox {\offinterlineskip
+\settabs 
+\+ $\vert$    & 11 & $\vert$ & 22 & $\vert$ & 33 & $\vert$ & 20 \cr
+\hrule  
+\+ $\vert$ & \hfill  2  \hfill  & $\vert$ &   \hfill  0  \hfill   & $\vert$ & & $\vert$ &\hfill 2 \kern -1 em --- 0 \kern -1 em --- \hfill  \cr
+  \hrule   
+\+ $\vert$ &  & $\vert$ &    \hfill  2 \hfill    & $\vert$ &  \hfill  1 \hfill       & $\vert$ & \hfill  3 \kern -1 em --- 1 \kern -1 em --- \hfill  \cr
+\hrule   
+\+ $\vert$ & \hfill 2 \kern -1  em --- \hfill& $\vert$ & \hfill 2  \kern -1 em --- \hfill & $\vert$ & \hfill 1 \kern -1 em --- \hfill & $\vert$ & \cr}$$
+
+In this example, $m = 2, n=3,$ and we wrote $m+n-1 = 4$ numbers in the table,
+one of them being 0. \hfill  \blackbox
+
+\smallskip
+In graphical terms, the chosen positions are $m+n-1$ edges (arcs) that connect all vertices (nodes), forming a graph (network)  called a $tree$. This tree has exactly $m+n-1$
+arrows (or edges), is connected, and has no loops (cycles).
+
+As   mentioned previously,
+	if the problem is expressed as a standard row tableau, the chosen positions correspond to the basic variables at  the right  margin of a row feasible tableau.  The other positions correspond to the nonbasic variables across the top of a row feasible tableau.  The method just described in fact implements Phase 1 of the simplex method.  It is not necessary to work with the entire tableau for transportation problems, because the $A$ block of the tableau always consists of $0$s, $1$s, and $-1$s.  The $b$ block of the tableau consists of the values in the chosen positions of the table.  Construction of the $c$ block will be discussed later.
+ 
+	We always  obtain a feasible solution if the balance condition holds, and if it does not we declare the problem infeasible and stop.  This is why we check the balance condition before beginning to choose entries.  If the supply and demand data consist of integers, then the feasible solution determined by this method is likewise integral.  It is always a vertex of the feasible region.  The proof is left as an exercise.  
+ 
+	There are many ways for choosing the table positions in our 
+ method.  
+The northwest method ignores the objective function.  But other methods for choosing positions may result in a better feasible solution, depending on the objective function. For example,
+in the minimum cost method, we go for a position with minimal cost.
+
+
+	To proceed with the second stage of the simplex method, we must recover the $c$-part of the tableau for the problem from the $b$-part, that is, from the table entries chosen to construct a feasible solution.  The method for doing this is best described in terms of $potentials$.
+We   introduced the potentials in Example 15.7. 
+ 
+In the notation of the general transportation problem,
+the dual problem is written 
+$$ {\rm maximize} -\sum_{i=1}^m\,a_iu_i +\sum_{j=1}^n\,b_jv_j $$
+\centerline{subject to}
+$$w_{ij} = c_{ij} + u_i - v_j \ge 0 \ \forall \ i,j$$
+$$u \ge 0 \c,  v \ge 0.$$ 
+
+In  Example 15.7, 
+$$[a_1,a_2]=[220,280], [b_1,b_2,b_3]= [170,120,210],   $$
+$$[c_{i,j}]=
+\left[ \matrix{77 & 39 & 105 \cr 150 & 186 & 122}  \right].$$
+
+ 
+ While the potentials correspond to the constraints on each retail store and each warehouse (or to the corresponding slack variables), there are other variables $w_{ij}$ in the dual problem that correspond to the decision variable 
+ $x_{ij}$  of the primal problem.  They are the slack variables for the dual problem written in   terms of potentials. We will call the variables $w_{ij}$  $discrepancies.$
+
+At start, all $x_{ij}$ are at the right margin of a standard tableau  (see Example 15.7) and
+all $w_{ij}$ are at the left margin. After a few pivot steps,  the variables $x_{ij}$ corresponding to the selected positions $(i,j)$ are on
+  the top
+of a feasible tableau, and the corresponding  $w_{ij}$ are at the bottom margin. Their current values are in the last row of the tableau, its
+``$c$-part."
+
+
+To proceed with the second stage of the simplex method, we have to recover the $c$-part of a row feasible tableau from the $b$-part.  We know that if $x_{ij}$ is a basic variable for the row problem---that is, it appears in the right margin of the tableau---then the corresponding dual variable $w_{ij}$ appears in the left margin and $w_{ij}$ takes the value $0$ in the basic solution of the column problem (involving the potentials).
+
+	Thus, $w_{ij}=c_{ij}+u_i-v_j=0$ for all chosen positions $(i,j)$.  It turns out that these equations determine potentials uniquely up to an additive constant.  This follows from the fact that the chosen positions determine a tree in the graphical representation (Figure 16.5).
+\vskip -2.5in
+$$\psfig{figure=Fig.16.5b.eps,height=4in,width=4in}$$
+\centerline{{\bf Figure 16.5.}  Tree}
+\centerline{ for the feasible solution of Example 15.7}  
+\filbreak
+
+	We continue now with Example 15.7.  We marked with a * the positions that were chosen as we found a feasible solution (Table 16.6).
+$$\vbox {\offinterlineskip
+\settabs 
+\+ $\vert$    & 11111 & $\vert$ & 22222 & $\vert$ & 33333 & $\vert$ & 220 \cr
+\hrule  
+\+ $\vert$  & 77 \hfill& $\vert$ & 39 \hfill & $\vert$ & 105 \hfill & $\vert$ &   \cr
+\+ $\vert$  &  \hfill * \hfill & $\vert$ & \hfill * \hfill  & $\vert$ &   & $\vert$ & \hfill 220 \hfill \cr
+\+ $\vert$  &   & $\vert$ &   & $\vert$ &  & $\vert$ &   \cr
+ \hrule   
+\+ $\vert$ & 150 \hfill & $\vert$ & 186 \hfill & $\vert$ & 122 \hfill & $\vert$ &   \cr
+\+ $\vert$ &   & $\vert$ &  \hfill * \hfill & $\vert$ &  \hfill * \hfill  & $\vert$ & \hfill 280\hfill  \cr
+\+ $\vert$ &   & $\vert$ &  & $\vert$ &   & $\vert$ &   \cr
+\hrule   
+\+ $\vert$ & \hfill 170 \hfill& $\vert$ & \hfill 120 \hfill & $\vert$ & \hfill 210 \hfill &$\vert$ & \cr}$$
+\centerline{{\bf Table 16.6.} Basic positions}
+\centerline{ for the feasible solution of Example 15.7} 
+\medskip
+ 
+
+
+
+	The edges correspond to the selected positions, and the cost per  unit is written on them. Because we seek a solution up to an additive constant, to solve for the potentials we can start by setting $u_1=0$.  Then the equation $c_{11}=v_1 - u_1$ forces $v_1=77$.  Similarly, the equation $c_{12}=v_2-u_1$ forces $v_2=39$.  Using this value of $v_2$ in the equation for $c_{22}$ forces $u_2=-147$, which, when substituted into the equation for $c_{23}$, forces $v_3=-25$.  Thus, we have found all the potentials based on the choice of $u_1=0$.  All other solutions to the system of equations just solved are clearly obtained by adding the same constant to all potentials. We   represent the potentials in   Figure 16.7 and Table 16.8.
+
+ 
+\vskip -2.5in
+$$\psfig{figure=Fig.16.7b.eps,height=4in}$$
+\centerline{{\bf Figure 16.7.} Tree representation}
+\centerline{of the potentials in Example 15.7} 
+
+
+$$\vbox {\offinterlineskip
+\settabs 
+\+ & 00000             & $\vert$ & 11111             & $\vert$ & 22222             & $\vert$ & 33333             & $\vert$ & 220 \cr
+\+ &                   & $\vert$ &         77  & $\vert$ &        39 & $\vert$ &      $ -25 $& $\vert$ & \cr
+\hrule  
+\+ & \hfill   0        & $\vert$ &         77 & $\vert$ &         39 & $\vert$ &          105& $\vert$ & \cr
+\+ &                   & $\vert$ & \hfill   * \hfill & $\vert$ & \hfill   * \hfill & $\vert$ &                   & $\vert$ & \hfill 220 \hfill \cr
+\+ &                   & $\vert$ &                   & $\vert$ &                   & $\vert$ &                   & $\vert$ & \cr
+ \hrule   
+\+ & \hfill $-147$         & $\vert$ &          150   & $\vert$ &         186  & $\vert$ &         122  & $\vert$ & \cr
+\+ &                   & $\vert$ &                   & $\vert$ & \hfill   * \hfill & $\vert$ & \hfill   * \hfill & $\vert$ & \hfill 280\hfill  \cr
+\+ &                   & $\vert$ &                   & $\vert$ &                   & $\vert$ &                   & $\vert$ &   \cr
+\hrule   
+\+ &                   & $\vert$ & \hfill 170 \hfill & $\vert$ & \hfill 120 \hfill & $\vert$ & \hfill 210 \hfill & $\vert$ & \cr}$$
+\centerline{{\bf Table 16.8.}  Potentials}
+\centerline{for the feasible solution of Example 15.7}
+ \medskip
+
+
+ 
+
+
+ 
+	Now we can compute the values $w_{ij}=c_{ij}+u_i-v_j$ for the other (nonbasic) positions.  We put them in   Table 16.8 in parentheses (Table 16.9).  Because one of   $w_{ij} $ in this example is negative, our tableau is not optimal.  We could show the basic solution for the primal problem by replacing each * representing a chosen position with the value assigned to $x_{ij}$ at the time of that choice. 
+$$\vbox {\offinterlineskip
+\settabs 
+\+ & 00000             & $\vert$ & 11111             & $\vert$ & 22222             & $\vert$ & 33333             & $\vert$ & 220 \cr
+\+ &                   & $\vert$ &         77  & $\vert$ &        39 & $\vert$ &          $-25$ & $\vert$ & \cr
+\hrule  
+\+ & \hfill   0        & $\vert$ &         77 & $\vert$ &         39 & $\vert$ &          105& $\vert$ & \cr
+\+ &                   & $\vert$ & \hfill   * \hfill & $\vert$ & \hfill   * \hfill & $\vert$ &    \hfill   (130) \hfill       & $\vert$ & \hfill 220 \hfill \cr
+\+ &                   & $\vert$ &                   & $\vert$ &                   & $\vert$ &                   & $\vert$ & \cr
+ \hrule   
+\+ & \hfill $-147$         & $\vert$ &          150   & $\vert$ &         186  & $\vert$ &         122  & $\vert$ & \cr
+\+ &                   & $\vert$ &  \hfill   $(-74)$ \hfill   & $\vert$ & \hfill   * \hfill & $\vert$ & \hfill   * \hfill & $\vert$ & \hfill 280\hfill  \cr
+\+ &                   & $\vert$ &                   & $\vert$ &                   & $\vert$ &                   & $\vert$ &   \cr
+\hrule   
+\+ &                   & $\vert$ & \hfill 170 \hfill & $\vert$ & \hfill 120 \hfill & $\vert$ & \hfill 210 \hfill & $\vert$ & \cr}$$
+\centerline{{\bf Table 16.9.}  The basic solution}
+\centerline{for the dual problem to Example 15.7} 
+ \medskip
+
+ 
+
+As mentioned previously, the computed values of $w_{ij}$ correspond to
+the entries of the last row of the tableau which we have in mind without 
+writing it down, except for the last entry in the tableau which is the current value of the objective function. Now we are ready for  a pivot step.
+
+ 
+
+
+
+\smallskip
+\centerline{\twelvebf Exercises}
+\parindent=0pt
+\smallskip
+
+{\bf 1--3. }  Find a feasible solution for each transportation problem.  
+\medskip
+
+{\bf 1.}
+$$\vbox {\offinterlineskip
+\settabs 
+\+ $\vert$ & 11111              & $\vert$ & 22222            & $\vert$ & 33333            & $\vert$ & 44444            & $\vert$ & 555 \cr
+\hrule  
+\+ $\vert$ &                   & $\vert$ &                  & $\vert$ &                  & $\vert$ &                  & $\vert$ & \cr
+\+ $\vert$ &                   & $\vert$ &                  & $\vert$ &                  & $\vert$ &                  & $\vert$ & \hfill 35 \cr
+\+ $\vert$ &                   & $\vert$ &                  & $\vert$ &                  & $\vert$ &                  & $\vert$ & \cr
+ \hrule    
+\+ $\vert$ &                   & $\vert$ &                  & $\vert$ &                  & $\vert$ &                  & $\vert$ & \cr
+\+ $\vert$ &                   & $\vert$ &                  & $\vert$ &                  & $\vert$ &                  & $\vert$ & \hfill 20 \cr
+\+ $\vert$ &                   & $\vert$ &                  & $\vert$ &                  & $\vert$ &                  & $\vert$ & \cr
+\hrule   
+\+ $\vert$ & \hfill 20 \hfill  & $\vert$ & \hfill 10 \hfill & $\vert$ & \hfill 10 \hfill & $\vert$ & \hfill 15 \hfill & $\vert$ & \cr}$$
+
+
+
+{\bf 2.}
+$$\vbox {\offinterlineskip
+\settabs 
+\+ $\vert$ & 11111              & $\vert$ & 22222            & $\vert$ & 33333            & $\vert$ & 44444            & $\vert$ & 555 \cr
+\hrule  
+\+ $\vert$ &                   & $\vert$ &                  & $\vert$ &                  & $\vert$ &                  & $\vert$ & \cr
+\+ $\vert$ &                   & $\vert$ &                  & $\vert$ &                  & $\vert$ &                  & $\vert$ & \hfill 35 \cr
+\+ $\vert$ &                   & $\vert$ &                  & $\vert$ &                  & $\vert$ &                  & $\vert$ & \cr
+ \hrule   
+\+ $\vert$ &                   & $\vert$ &                  & $\vert$ &                  & $\vert$ &                  & $\vert$ & \cr
+\+ $\vert$ &                   & $\vert$ &                  & $\vert$ &                  & $\vert$ &                  & $\vert$ & \hfill  9 \cr
+\+ $\vert$ &                   & $\vert$ &                  & $\vert$ &                  & $\vert$ &                  & $\vert$ & \cr
+\hrule  
+\+ $\vert$ &                   & $\vert$ &                  & $\vert$ &                  & $\vert$ &                  & $\vert$ & \cr
+\+ $\vert$ &                   & $\vert$ &                  & $\vert$ &                  & $\vert$ &                  & $\vert$ & \hfill 11 \cr
+\+ $\vert$ &                   & $\vert$ &                  & $\vert$ &                  & $\vert$ &                  & $\vert$ & \cr
+ \hrule   
+\+ $\vert$ &                   & $\vert$ &                  & $\vert$ &                  & $\vert$ &                  & $\vert$ & \cr
+\+ $\vert$ &                   & $\vert$ &                  & $\vert$ &                  & $\vert$ &                  & $\vert$ & \hfill 20 \cr
+\+ $\vert$ &                   & $\vert$ &                  & $\vert$ &                  & $\vert$ &                  & $\vert$ & \cr
+\hrule   
+\+ $\vert$ & \hfill 40 \hfill  & $\vert$ & \hfill 10 \hfill & $\vert$ & \hfill 10 \hfill & $\vert$ & \hfill 15 \hfill & $\vert$ & \cr}$$
+
+\medskip
+
+
+{\bf 3.}
+$$\vbox {\offinterlineskip
+\settabs 
+\+ $\vert$ & 11111              & $\vert$ & 22222            & $\vert$ & 33333            & $\vert$ & 44444            & $\vert$ & 555 \cr
+\hrule  
+\+ $\vert$ &                    & $\vert$ &                  & $\vert$ &                  & $\vert$ &                  & $\vert$ & \cr
+\+ $\vert$ &                    & $\vert$ &                  & $\vert$ &                  & $\vert$ &                  & $\vert$ & \hfill  35 \cr
+\+ $\vert$ &                    & $\vert$ &                  & $\vert$ &                  & $\vert$ &                  & $\vert$ & \cr
+ \hrule   
+\+ $\vert$ &                    & $\vert$ &                  & $\vert$ &                  & $\vert$ &                  & $\vert$ & \cr
+\+ $\vert$ &                    & $\vert$ &                  & $\vert$ &                  & $\vert$ &                  & $\vert$ & \hfill  90 \cr
+\+ $\vert$ &                    & $\vert$ &                  & $\vert$ &                  & $\vert$ &                  & $\vert$ & \cr
+\hrule  
+\+ $\vert$ &                    & $\vert$ &                  & $\vert$ &                  & $\vert$ &                  & $\vert$ & \cr
+\+ $\vert$ &                    & $\vert$ &                  & $\vert$ &                  & $\vert$ &                  & $\vert$ & \hfill 111 \cr
+\+ $\vert$ &                    & $\vert$ &                  & $\vert$ &                  & $\vert$ &                  & $\vert$ & \cr
+ \hrule   
+\+ $\vert$ &                    & $\vert$ &                  & $\vert$ &                  & $\vert$ &                  & $\vert$ & \cr
+\+ $\vert$ &                    & $\vert$ &                  & $\vert$ &                  & $\vert$ &                  & $\vert$ & \hfill 20 \cr
+\+ $\vert$ &                    & $\vert$ &                  & $\vert$ &                  & $\vert$ &                  & $\vert$ & \cr
+\hrule   
+\+ $\vert$ & \hfill 140  \hfill & $\vert$ & \hfill 91 \hfill & $\vert$ & \hfill 10 \hfill & $\vert$ & \hfill 19 \hfill & $\vert$ & \cr}$$
+
+
+\medskip
+{\bf 4--7.}  Find a feasible solution  and the corresponding total transportation cost.
+\medskip
+
+	{\bf 4.}
+$$\vbox {\offinterlineskip
+\settabs 
+\+ $\vert$   & 1111 & $\vert$ & 2222 & $\vert$ & 3333 & $\vert$ & 4444 & $\vert$ & 5555 & $\vert$ & 6666 & $\vert$ & 7777 & $\vert$ & 8888 & $\vert$ & 9999 & $\vert$ & 0000 \cr
+\hrule  
+\+ $\vert$ &  1 \hfill & $\vert$ &  2 \hfill & $\vert$ &  3 \hfill & $\vert$ &  1 \hfill & $\vert$ &  2 \hfill & $\vert$ &  3 \hfill & $\vert$ &  1 \hfill & $\vert$ &  2 \hfill & $\vert$ & 3 \hfill & $\vert$ &  \cr
+\+ $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & \hfill 10 \hfill \cr
+\+ $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & \cr
+\hrule  
+\+ $\vert$ &  0 \hfill & $\vert$ &  3 \hfill & $\vert$ &  2 \hfill & $\vert$ &  0 \hfill & $\vert$ &  1 \hfill & $\vert$ &  2 \hfill & $\vert$ &  1 \hfill & $\vert$ &  2 \hfill & $\vert$ & 1 \hfill & $\vert$ &  \cr
+\+ $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & \hfill 20 \hfill \cr
+\+ $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & \cr
+ \hrule   
+\+ $\vert$ &  2 \hfill & $\vert$ &  1 \hfill & $\vert$ &  0 \hfill &$\vert$ &  1 \hfill & $\vert$ &  2 \hfill & $\vert$ &   1 \hfill & $\vert$ &  2 \hfill & $\vert$ &  1 \hfill & $\vert$ & 1 \hfill & $\vert$ & \cr
+\+ $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & \hfill 12 \hfill \cr
+\+ $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & \cr
+ \hrule   
+\+ $\vert$ &  1 \hfill & $\vert$ &  1 \hfill & $\vert$ &  1 \hfill &$\vert$ &  2 \hfill & $\vert$ &  2 \hfill & $\vert$ &  2 \hfill & $\vert$ &  2 \hfill & $\vert$ &  2 \hfill & $\vert$ & 1 \hfill & $\vert$ & \cr
+\+ $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & \hfill  8 \hfill \cr
+\+ $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & \cr
+\hrule   
+\+ $\vert$ &  2 \hfill & $\vert$ &  3 \hfill & $\vert$ &  4 \hfill &$\vert$ & \hfill  5 \hfill& $\vert$ & \hfill  1 \hfill & $\vert$ & \hfill  2 \hfill & $\vert$ & \hfill  3 \hfill  & $\vert$ & \hfill 14 \hfill & $\vert$ & \hfill 16 \hfill  & $\vert$ & \cr}$$
+\medskip
+
+	{\bf 5.}
+$$\vbox {\offinterlineskip
+\settabs 
+\+ $\vert$   & 1111 & $\vert$ & 2222 & $\vert$ & 3333 & $\vert$ & 4444 & $\vert$ & 5555 & $\vert$ & 6666 & $\vert$ & 7777 & $\vert$ & 8888 & $\vert$ & 9999 & $\vert$ & 00000 \cr
+\hrule  
+\+ $\vert$ &  1 \hfill & $\vert$ &  2 \hfill & $\vert$ &  3 \hfill & $\vert$ &  1 \hfill & $\vert$ &  2 \hfill & $\vert$ &  3 \hfill & $\vert$ &  1 \hfill & $\vert$ &  2 \hfill & $\vert$ & 3 \hfill & $\vert$ &  \cr
+\+ $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & \hfill 15 \hfill \cr
+\+ $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & \cr
+\hrule  
+\+ $\vert$ &  0 \hfill & $\vert$ &  3 \hfill & $\vert$ &  2 \hfill & $\vert$ &  0 \hfill & $\vert$ &  1 \hfill & $\vert$ &  2 \hfill & $\vert$ &  1 \hfill & $\vert$ &  2 \hfill & $\vert$ & 1 \hfill & $\vert$ &  \cr
+\+ $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & \hfill 15 \hfill \cr
+\+ $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & \cr
+ \hrule   
+\+ $\vert$ &  2 \hfill & $\vert$ &  1 \hfill & $\vert$ &  0 \hfill &$\vert$ &  1 \hfill & $\vert$ &  2 \hfill & $\vert$ &   1 \hfill & $\vert$ &  2 \hfill & $\vert$ &  1 \hfill & $\vert$ & 1 \hfill & $\vert$ & \cr
+\+ $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & \hfill 12 \hfill \cr
+\+ $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & \cr
+ \hrule   
+\+ $\vert$ &  1 \hfill & $\vert$ &  1 \hfill & $\vert$ &  1 \hfill &$\vert$ &  2 \hfill & $\vert$ &  2 \hfill & $\vert$ &  2 \hfill & $\vert$ &  2 \hfill & $\vert$ &  2 \hfill & $\vert$ & 1 \hfill & $\vert$ & \cr
+\+ $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & \hfill  8 \hfill \cr
+\+ $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & \cr
+\hrule   
+\+ $\vert$ &  2 \hfill & $\vert$ &  8 \hfill & $\vert$ &  4 \hfill &$\vert$ & \hfill 15 \hfill& $\vert$ & \hfill 11 \hfill & $\vert$ & \hfill  2 \hfill & $\vert$ & \hfill  3 \hfill  & $\vert$ & \hfill  4 \hfill & $\vert$ & \hfill  1 \hfill  & $\vert$ & \cr}$$
+\medskip
+	{\bf 6.}
+$$\vbox {\offinterlineskip
+\settabs 
+\+ $\vert$   & 1111 & $\vert$ & 2222 & $\vert$ & 3333 & $\vert$ & 4444 & $\vert$ & 5555 & $\vert$ & 6666 & $\vert$ & 7777 & $\vert$ & 8888 & $\vert$ & 9999 & $\vert$ & 00000 \cr
+\hrule  
+\+ $\vert$ &  1 \hfill & $\vert$ &  2 \hfill & $\vert$ &  3 \hfill & $\vert$ &  1 \hfill & $\vert$ &  2 \hfill & $\vert$ &  3 \hfill & $\vert$ &  1 \hfill & $\vert$ &  2 \hfill & $\vert$ & 3 \hfill & $\vert$ &  \cr
+\+ $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & \hfill 15 \hfill \cr
+\+ $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & \cr
+\hrule  
+\+ $\vert$ &  0 \hfill & $\vert$ &  3 \hfill & $\vert$ &  2 \hfill & $\vert$ &  0 \hfill & $\vert$ &  1 \hfill & $\vert$ &  2 \hfill & $\vert$ &  1 \hfill & $\vert$ &  2 \hfill & $\vert$ & 1 \hfill & $\vert$ &  \cr
+\+ $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & \hfill  5 \hfill \cr
+\+ $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & \cr
+ \hrule   
+\+ $\vert$ &  2 \hfill & $\vert$ &  1 \hfill & $\vert$ &  0 \hfill &$\vert$ &  1 \hfill & $\vert$ &  2 \hfill & $\vert$ &   1 \hfill & $\vert$ &  2 \hfill & $\vert$ &  1 \hfill & $\vert$ & 1 \hfill & $\vert$ & \cr
+\+ $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & \hfill 12 \hfill \cr
+\+ $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & \cr
+ \hrule   
+\+ $\vert$ &  1 \hfill & $\vert$ &  1 \hfill & $\vert$ &  1 \hfill &$\vert$ &  2 \hfill & $\vert$ &  2 \hfill & $\vert$ &  2 \hfill & $\vert$ &  2 \hfill & $\vert$ &  2 \hfill & $\vert$ & 1 \hfill & $\vert$ & \cr
+\+ $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & \hfill 18 \hfill \cr
+\+ $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & \cr
+\hrule   
+\+ $\vert$ & 12 \hfill & $\vert$ &  8 \hfill & $\vert$ & 14 \hfill &$\vert$ & \hfill  5 \hfill& $\vert$ & \hfill  1 \hfill & $\vert$ & \hfill  2 \hfill & $\vert$ & \hfill  3 \hfill  & $\vert$ & \hfill  4 \hfill & $\vert$ & \hfill  1 \hfill  & $\vert$ & \cr}$$
+\medskip
+
+
+
+{\bf 7.}  Example 2.4.
+$$\vbox {\offinterlineskip
+\settabs 
+\+ $\vert$   & 11211 & $\vert$ & 22222 & $\vert$ & 33233 & $\vert$ & 
+33233 & $\vert$ & 33323 & $\vert$ & 33323 & $\vert$ & 200 \cr
+\hrule  
+\+ $\vert$ & 55 \hfill & $\vert$ & 30 \hfill & $\vert$ & 40 \hfill & $\vert$ & 50 \hfill & $\vert$ & 40 \hfill & $\vert$ & 0 \hfill & $\vert$ &  \cr
+\+ $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & \hfill 50 \hfill \cr
+\+ $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & \cr
+ \hrule   
+\+ $\vert$ & 35 \hfill & $\vert$ & 30 \hfill & $\vert$ & 100 \hfill & $\vert$ & 45 \hfill & $\vert$ & 60 \hfill & $\vert$ & 0 \hfill & $\vert$ & \cr
+\+ $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & \hfill 30 \hfill \cr
+\+ $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & \cr
+ \hrule   
+\+ $\vert$ & 40 \hfill & $\vert$ & 60 \hfill & $\vert$ & 95 \hfill & $\vert$ & 35 \hfill & $\vert$ & 30 \hfill & $\vert$ & 0 \hfill & $\vert$ & \cr
+\+ $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & \hfill 50 \hfill \cr
+\+ $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & \cr
+\hrule   
+\+ $\vert$ & \hfill 25 \hfill& $\vert$ & \hfill 10 \hfill & $\vert$ & \hfill 20 \hfill & $\vert$ & \hfill 30 \hfill  & $\vert$ & \hfill 15 \hfill & $\vert$ & \hfill 30 \hfill  & $\vert$ & \cr}$$
+
+
+\medskip
+
+
+{\bf 8.} Prove that any feasible solution derived by our method is   a vertex of the feasible region.
+\parindent=20pt
+
+\parindent=20pt
+\vfill
+\eject
+
+
+\def\rightheadline{\tenrm\hfil{\it \S  17. Phase 2}\quad {\bf\folio}}
+\noindent
+{\twelvebf \S  17. Phase 2}
+\smallskip
+\noindent
+	Suppose that after computing potentials,   some $w_{ij}$ is negative.  Then according to the simplex method, Phase 2, we have to exclude $w_{ij}$ from the basis and include another variable instead.  In terms of the row problem, we must include $x_{ij}$ into the basis instead of another variable.  When we do this, the objective function should improve or at least keep the same value.  Graphically, this change of basis corresponds to  adding a new edge to the tree
+and 
+removing one edge from  the resulting loop
+ to form a new tree.  We will use Example 2.4 to illustrate this process.  We begin by using the northwest method to find a basic feasible solution (Table 17.1). 
+$$
+\vbox {\offinterlineskip
+\settabs 
+\+ $\vert$ & 11111             & $\vert$ & 22222             & $\vert$ & 33333             & $\vert$ & 44444             & $\vert$ & 55555             & $\vert$ & 66666             & $\vert$ & 77777 \cr
+\hrule  
+\+ $\vert$ & 55 \hfill & $\vert$ & 30 \hfill & $\vert$ & 40 \hfill & $\vert$ & 50 \hfill & $\vert$ & 40 \hfill & $\vert$ & 0 \hfill & $\vert$ & \cr
+\+ $\vert$ & \hfill  25 \hfill & $\vert$ & \hfill  10 \hfill & $\vert$ & \hfill  15 \hfill & $\vert$ & \hfill     \hfill & $\vert$ & \hfill     \hfill & $\vert$ & \hfill     \hfill & $\vert$ & \hfill  50 \hfill \cr
+\+ $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & \cr
+\hrule  
+\+ $\vert$ & 35 \hfill & $\vert$ & 30 \hfill & $\vert$ & 100 \hfill & $\vert$ & 45 \hfill & $\vert$ & 60 \hfill & $\vert$ & 0 \hfill & $\vert$ & \cr
+\+ $\vert$ & \hfill     \hfill & $\vert$ & \hfill     \hfill & $\vert$ & \hfill   5 \hfill & $\vert$ & \hfill  25 \hfill & $\vert$ & \hfill     \hfill & $\vert$ & \hfill     \hfill & $\vert$ & \hfill  30 \hfill \cr
+\+ $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & \cr
+\hrule  
+\+ $\vert$ & 40 \hfill & $\vert$ & 60 \hfill & $\vert$ & 95 \hfill & $\vert$ & 35 \hfill & $\vert$ & 30 \hfill & $\vert$ & 0 \hfill & $\vert$ & \cr
+\+ $\vert$ & \hfill     \hfill & $\vert$ & \hfill     \hfill & $\vert$ & \hfill     \hfill & $\vert$ & \hfill   5 \hfill & $\vert$ & \hfill  15 \hfill & $\vert$ & \hfill  30 \hfill & $\vert$ & \hfill  50 \hfill \cr
+\+ $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & \cr
+\hrule   
+\+ $\vert$ & \hfill  25 \hfill & $\vert$ & \hfill  10 \hfill & $\vert$ & \hfill  20 \hfill & $\vert$ & \hfill  30 \hfill & $\vert$ & \hfill  15 \hfill & $\vert$ & \hfill  30 \hfill & $\vert$ & \cr}
+$$
+\centerline{{\bf Table 17.1.}
+First feasible solution of Example 2.4} 
+\smallskip
+
+The corresponding transportation cost is $25\cdot 55+10\cdot 30+15\cdot 40+5\cdot 100+25\cdot 45+5\cdot 35+15\cdot 30+30\cdot 0=1375+300+600+500+1125+175+450+0=4525$. We will see that ignoring the objective function will result in this case
+in many pivot steps on the way to an optimal table.  Usually, it pays to spend some time at Phase 1 of solving a transportation problem so we need  to spend less time at Phase 2.
+As before, we proceed to find the potentials (Table 17.2).
+$$
+\vbox {\offinterlineskip
+\settabs 
+\+ & 00000 & $\vert$ & 11111 & $\vert$ & 22222 & $\vert$ & 33333 & $\vert$ & 44444 & $\vert$ & 55555 & $\vert$ & 66666 & $\vert$ & 77777 \cr
+\+ & &$\vert$ & 55 \hfill & $\vert$ & 30 \hfill & $\vert$ & 40 \hfill & $\vert$ & $-15$ \hfill & $\vert$ & $-20$ \hfill & $\vert$ & $-50$\hfill & $\vert$ & \cr
+\hrule  
+\+ & \hfill 0 & $\vert$ & 55 \hfill & $\vert$ & 30 \hfill & $\vert$ & 40 \hfill & $\vert$ & 50 \hfill & $\vert$ & 40 \hfill & $\vert$ & 0 \hfill & $\vert$ & \cr
+\+ & &$\vert$ & \hfill  25 \hfill & $\vert$ & \hfill  10 \hfill & $\vert$ & \hfill  15 \hfill & $\vert$ & \hfill     \hfill & $\vert$ & \hfill     \hfill & $\vert$ & \hfill     \hfill & $\vert$ & \hfill  50 \hfill \cr
+\+ & &$\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & \cr
+\hrule  
+\+ & \hfill $-60$ &$\vert$ & 35 \hfill & $\vert$ & 30 \hfill & $\vert$ & 100 \hfill & $\vert$ & 45 \hfill & $\vert$ & 60 \hfill & $\vert$ & 0 \hfill & $\vert$ & \cr
+\+ &&$\vert$ & \hfill     \hfill & $\vert$ & \hfill     \hfill & $\vert$ & \hfill   5 \hfill & $\vert$ & \hfill  25 \hfill & $\vert$ & \hfill     \hfill & $\vert$ & \hfill     \hfill & $\vert$ & \hfill  30 \hfill \cr
+\+ &&$\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & \cr
+\hrule  
+\+ & \hfill $-50$ &$\vert$ & 40 \hfill & $\vert$ & 60 \hfill & $\vert$ & 95 \hfill & $\vert$ & 35 \hfill & $\vert$ & 30 \hfill & $\vert$ & 0 \hfill & $\vert$ & \cr
+\+ &        &$\vert$ & \hfill     \hfill & $\vert$ & \hfill     \hfill & $\vert$ & \hfill     \hfill & $\vert$ & \hfill   5 \hfill & $\vert$ & \hfill  15 \hfill & $\vert$ & \hfill  30 \hfill & $\vert$ & \hfill  50 \hfill \cr
+\+ &                   &$\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & \cr
+\hrule   
+\+ &  &$\vert$ & \hfill  25 \hfill & $\vert$ & \hfill  10 \hfill & $\vert$ & \hfill  20 \hfill & $\vert$ & \hfill  30 \hfill & $\vert$ & \hfill  15 \hfill & $\vert$ & \hfill  30 \hfill & $\vert$ & \cr}
+$$
+\centerline{{\bf Table 17.2.}
+Potentials for Table 17.1} 
+\medskip
+
+We took the first potential 0 for the first row  arbitrarily.
+The   transportation cost  can be also computed using potentials instead of the flow: $55\cdot 25 +30\cdot 10 + 40\cdot 20 -15\cdot 30 - 20 \cdot 15 -50\cdot 30
+-(0\cdot 50 - 60\cdot 30 -50\cdot 50) = 4525.$
+As in the previous example, the feasible solution determines a tree in the graphical representation (Figure 17.3).
+ 
+
+ \vskip -1.7in
+$$\psfig{figure=Fig.17.3.eps,height=3.4in,width=4in,crop=}$$
+ \vskip -0.1in
+\centerline{{\bf Figure 17.3.}  Tree for Table 17.1} 
+\smallskip
+
+Next we compute the values for the dual slack variables (discrepancies) $w_{ij}$.  In tableau form, each nonbasic $w_{ij}$  appears at the left margin  with a basic 
+$x_{ij}$ at the right margin, and its value  at the basic solution is 0.
+ The basic $w_{ij}$ corresponds to nonbasic $x_{ij}$ and appears at the bottom of the tableau, so their values belong to the last row.
+Discrepancies $w_{ij}$ are determined    by the selected positions in Table 17.1. Recall that the discrepancies are zeros at the selected positions and are not written there but are written in parentheses elsewhere. In other words, the discrepancies, like the flow, are determined by the tree (see Figure 17.3).
+$$
+\vbox {\offinterlineskip
+\settabs 
+\+ & 00000 &$\vert$ & 11111 & $\vert$ & 22222 & $\vert$ & 33333 & $\vert$ & 44444 & $\vert$ & 55555 & $\vert$ & 66666 & $\vert$ & 77777 \cr
+\+ & &$\vert$ & 55 \hfill & $\vert$ & 30 \hfill & $\vert$ & 40 \hfill & $\vert$ & -15 \hfill & $\vert$ & -20 \hfill & $\vert$ & -50\hfill & $\vert$ & \cr
+\hrule  
+\+&\hfill0 & $\vert$ & 55\hfill& $\vert$& 30\hfill& $\vert$ & 40\hfill& $\vert$ & 50\hfill& $\vert$ & 40\hfill& $\vert$ & 0\hfill& $\vert$ & \cr
+\+ &&$\vert$ &\hfill25\hfill&$\vert$&\hfill10\hfill & $\vert$ & \hfill  15 \hfill & $\vert$ &\hfill (65)\hfill & $\vert$ &\hfill(60)\hfill& $\vert$ &\hfill  (50) \hfill & $\vert$ & \cr
+\+ &&$\vert$ & & $\vert$ & & $\vert$ & & $\vert$ && $\vert$ & & $\vert$ & & $\vert$ & \cr
+\hrule  
+\+ &\hfill-60 & $\vert$ & 35\hfill& $\vert$& 30\hfill& $\vert$ & 100\hfill& $\vert$ & 45\hfill& $\vert$ & 60\hfill& $\vert$ & 0\hfill& $\vert$ &\cr
+\+ &&$\vert$&\hfill(-80)\hfill&$\vert$&\hfill(-60)\hfill&$\vert$&\hfill5\hfill&$\vert$&\hfill25\hfill&$\vert$&\hfill(20)\hfill&$\vert$&\hfill(-10)\hfill&$\vert$&\hfill30\hfill\cr
+\+ &&$\vert$&&$\vert$&&$\vert$&&$\vert$&&$\vert$&&$\vert$&&$\vert$&\cr
+\hrule  
+\+ &\hfill-50 &$\vert$& 40\hfill&$\vert$& 60\hfill&$\vert$& 95\hfill&$\vert$& 35\hfill&$\vert$& 30\hfill&$\vert$& 0\hfill&$\vert$&\cr
+\+ &&$\vert$&\hfill(-65)\hfill&$\vert$&\hfill(-20)\hfill&$\vert$&\hfill(5)\hfill&$\vert$&\hfill5\hfill&$\vert$&\hfill15\hfill&$\vert$&\hfill30\hfill&$\vert$&\hfill50\hfill\cr
+\+ &&$\vert$ && $\vert$ && $\vert$ && $\vert$ && $\vert$ && $\vert$ && $\vert$ & \cr
+\hrule   
+\+ &&$\vert$&\hfill25\hfill&$\vert$&\hfill10\hfill&$\vert$&\hfill20\hfill&$\vert$&\hfill30\hfill&$\vert$&\hfill15\hfill&$\vert$&\hfill30\hfill&$\vert$&\cr}$$
+\centerline{{\bf Table 17.4.} Discrepancies $w_{ij}$ for Table 17.2} 
+\medskip
+
+ 
+
+Some of the basic $w_{ij}$ are negative, so the solution is not optimal.  We must pick a negative basic $w_{ij}$ and switch it with a nonbasic $w_{i'j'}$, which is accomplished in the table by switching a nonbasic $x_{ij}$ with a  basic $x_{i'j'}$.  We pick   $w_{21}=-80$ and decide to switch $x_{21}$ with a basic variable.  In graphical terms, we are adding an edge from warehouse $2$ to store $1$, which destroys the tree structure of the graph by creating the loop $(2,1),(2,3),(1,3),(1,1)$ (Figure 17.5).
+ 
+
+ \vskip -1.9in
+$$\psfig{figure=Fig.17.5.eps,height=3.8in}$$
+%$$\psfig{figure=ch6fig5.eps,height=4cm,crop=}$$%too small
+% $$\psfig{figure=ch6fig5.1b.eps,height=4in,crop=}$$ % a cutoff
+\vskip -0.3in
+\centerline{\bf Figure 17.5.}
+\centerline{Cycle arising from adding $x_{21}$ to the basis} 
+
+ \smallskip
+ 
+We start a flow of $\varepsilon \ge 0$ on the new chosen edge, from warehouse $2$ to store $1$; that is, we set $x_{21}=\varepsilon$.  We must   adjust the flow around the loop to satisfy the balance constraint.  Therefore we subtract $\varepsilon$ from $x_{23}$ so as not to exceed the supply at warehouse $2$.  Then we add $\varepsilon$ to $x_{13}$ to meet the demand of store $3$.  On the last edge of the loop we subtract $\varepsilon$ from $x_{11}$, which avoids   exceeding the supply of warehouse $1$ and the demand at store $1$ (Table 17.6).
+$$\vbox {\offinterlineskip
+\settabs 
+\+ &        000000      &$\vert$ & 111111             & $\vert$ & 222222             & $\vert$ & 333333             & $\vert$ & 444444             & $\vert$ & 555555             & $\vert$ & 666666             & $\vert$ & 777777 \cr
+\+ &                   &$\vert$ & 55 \hfill & $\vert$ & 30 \hfill & $\vert$ & 40 \hfill & $\vert$ &  -15   \hfill & $\vert$ &  -20  \hfill & $\vert$ &  -50  \hfill & $\vert$ & \cr
+\hrule  
+\+ &\hfill 0 &$\vert$ & 55 \hfill & $\vert$ & 30  \hfill & $\vert$ & 40 \hfill & $\vert$ & 50 \hfill & $\vert$ & 40 \hfill & $\vert$ & 0 \hfill & $\vert$ & \cr
+\+ &&$\vert$&\hfill$25-  \varepsilon $\hfill&
+$\vert$&\hfill10\hfill&$\vert$&\hfill$15+{\bf \varepsilon}$\hfill&$\vert$&\hfill(65)\hfill&$\vert$&\hfill(60)\hfill&$\vert$&\hfill(50)\hfill&$\vert$&\hfill50\hfill\cr
+\+ & &$\vert$&  \hskip-1pt \blackbox ||| &$\vert$&  \hfill - - - -\hfill &$\vert$& 
+ ||| \hskip-7pt  \blackbox     &$\vert$&&$\vert$&&$\vert$&&$\vert$&\cr
+\hrule  
+\+ &\hfill  -60   &$\vert$ & $\vert$ 35 \hfill & $\vert$ & 30 \hfill & $\vert$ & 100 \hfill $\vert $ & $\vert$ & 45 \hfill & $\vert$ & 60 \hfill & $\vert$ & 0 \hfill & $\vert$ & \cr
+\+ &&$\vert$&
+\hfill$ \vert$ (-80) ${\bf \varepsilon} $  &$\vert$&\hfill( -60)\hfill&
+$\vert$&\hfill$5-\varepsilon \vert$ &
+$\vert$&\hfill 25 \hfill&
+$\vert$&\hfill(20)\hfill&$\vert$&\hfill($$-10$$)\hfill&$\vert$&\hfill30\hfill\cr
+\+ &&$\vert$&  \hskip-1pt \blackbox ||| &$\vert$&  \hfill - - - -\hfill  &$\vert$&
+||| \hskip-7pt  \blackbox    &$\vert$& &$\vert$&&$\vert$&&$\vert$&\cr
+\hrule  
+\+ &\hfill -50 &$\vert$& 40\hfill & $\vert$ & 60 \hfill & $\vert$ & 95 \hfill & $\vert$ & 35 \hfill & $\vert$ & 30 \hfill & $\vert$ & 0 \hfill & $\vert$ & \cr
+\+ &&$\vert$&\hfill(-65)\hfill&$\vert$&\hfill(-20)\hfill&$\vert$&\hfill(5)\hfill&$\vert$&\hfill5\hfill&$\vert$&\hfill15\hfill&$\vert$&\hfill30\hfill&$\vert$&\hfill50\hfill\cr
+\+ &&$\vert$&&$\vert$&&$\vert$&&$\vert$&&$\vert$&&$\vert$&&$\vert$&\cr
+\hrule   
+\+ &&$\vert$&\hfill 25\hfill&$\vert$&\hfill10\hfill&$\vert$&\hfill20\hfill&$\vert$&\hfill30\hfill&$\vert$&\hfill15\hfill&$\vert$&\hfill30\hfill&$\vert$&\cr}$$
+\centerline{\bf Table 17.6.}
+\centerline{Adjusting by $\varepsilon$ the flow around the loop} 
+\medskip
+The change in the transportation cost is $(35-100+40-55)\varepsilon=-80\varepsilon$.  Note that the coefficient $-80$ is exactly the value of $w_{ij}$!  To get the best improvement in the objective function, we give $\varepsilon$ the maximum possible value---namely $5$.  This determines the $x_{ij}$ to deselect, or, equivalently, the edge to remove from the graph to restore it to a tree.  We move $x_{21}$ into the basis and $x_{23}$ out of the basis to arrive at a new basic solution (Table 17.7).  
+
+ 
+
+
+$$\vbox {\offinterlineskip
+\settabs 
+\+ $\vert$ & 11111             & $\vert$ & 22222             & $\vert$ & 33333             & $\vert$ & 44444             & $\vert$ & 55555             & $\vert$ & 66666             & $\vert$ & 77777 \cr
+\hrule  
+\+ $\vert$ & 55 \hfill & $\vert$ & 30 \hfill & $\vert$ & 40 \hfill & $\vert$ & 50 \hfill & $\vert$ & 40 \hfill & $\vert$ & 0 \hfill & $\vert$ & \cr
+\+ $\vert$ & \hfill  20 \hfill & $\vert$ & \hfill  10 \hfill & $\vert$ & \hfill  20 \hfill & $\vert$ & \hfill     \hfill & $\vert$ & \hfill     \hfill & $\vert$ & \hfill     \hfill & $\vert$ & \hfill  50 \hfill \cr
+\+ $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & \cr
+\hrule  
+\+ $\vert$ & 35 \hfill & $\vert$ & 30 \hfill & $\vert$ & 100 \hfill & $\vert$ & 45 \hfill & $\vert$ & 60 \hfill & $\vert$ & 0 \hfill & $\vert$ & \cr
+\+ $\vert$ & \hfill   5 \hfill & $\vert$ & \hfill     \hfill & $\vert$ & \hfill     \hfill & $\vert$ & \hfill  25 \hfill & $\vert$ & \hfill     \hfill & $\vert$ & \hfill     \hfill & $\vert$ & \hfill  30 \hfill \cr
+\+ $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & \cr
+\hrule  
+\+ $\vert$ & 40 \hfill & $\vert$ & 60 \hfill & $\vert$ & 95 \hfill & $\vert$ & 35 \hfill & $\vert$ & 30 \hfill & $\vert$ & 0 \hfill & $\vert$ & \cr
+\+ $\vert$ & \hfill     \hfill & $\vert$ & \hfill     \hfill & $\vert$ & \hfill     \hfill & $\vert$ & \hfill   5 \hfill & $\vert$ & \hfill  15 \hfill & $\vert$ & \hfill  30 \hfill & $\vert$ & \hfill  50 \hfill \cr
+\+ $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & \cr
+\hrule   
+\+ $\vert$ & \hfill  25 \hfill & $\vert$ & \hfill  10 \hfill & $\vert$ & \hfill  20 \hfill & $\vert$ & \hfill  30 \hfill & $\vert$ & \hfill  15 \hfill & $\vert$ & \hfill  30 \hfill & $\vert$ & \cr}$$
+\centerline{\bf Table 17.7.}
+\centerline{Second feasible solution to Example 2.4} 
+\bigskip
+The transportation cost is now $20\cdot 55+10\cdot 30+20\cdot 40+5\cdot 35+25\cdot 45+5\cdot 35+15\cdot 30+30\cdot 0=4125=4525-80\cdot 5$.  We proceed to find the new values for the dual variables (Table 17.8).
+ 
+ 
+$$\vbox {\offinterlineskip
+\settabs 
+\+ &        00000      &$\vert$ & 11111             & $\vert$ & 22222             & $\vert$ & 33333             & $\vert$ & 44444             & $\vert$ & 55555             & $\vert$ & 66666             & $\vert$ & 77777 \cr
+\+ &                   &$\vert$ & 55 \hfill & $\vert$ & 30 \hfill & $\vert$ & 40 \hfill & $\vert$ & 65 \hfill & $\vert$ & 60 \hfill & $\vert$ & 30\hfill & $\vert$ & \cr
+\hrule  
+\+ &\hfill 0 &$\vert$ & 55 \hfill & $\vert$ & 30 \hfill & $\vert$ & 40 \hfill & $\vert$ & 50 \hfill & $\vert$ & 40 \hfill & $\vert$ & 0 \hfill & $\vert$ & \cr
+\+ & &$\vert$ & \hfill  20 \hfill & $\vert$ & \hfill  10 \hfill & $\vert$ & \hfill  20 \hfill & $\vert$ & \hfill(-15)\hfill & $\vert$ & \hfill(-20)\hfill & $\vert$ & \hfill(-30)\hfill & $\vert$ & \hfill  50 \hfill \cr
+\+ &                   &$\vert$ & & $\vert$ & & $\vert$ & & $\vert$ &\hfill     \hfill & $\vert$ &\hfill    \hfill & $\vert$ &\hfill    \hfill & $\vert$ & \cr
+\hrule  
+\+ &\hfill 20 &$\vert$ & 35\hfill & $\vert$ & 30\hfill & $\vert$ & 100\hfill & $\vert$ & 45\hfill & $\vert$ & 60\hfill & $\vert$ & 0\hfill & $\vert$ & \cr
+\+ & &$\vert$ &\hfill5\hfill& $\vert$ &\hfill(20)\hfill& $\vert$ &\hfill(80)\hfill & $\vert$ &\hfill25\hfill& $\vert$ &\hfill(20)\hfill& $\vert$ &\hfill(-10)\hfill& $\vert$ &\hfill30\hfill\cr
+\+ && $\vert$ && $\vert$ && $\vert$ && $\vert$ && $\vert$ && $\vert$ && $\vert$ & \cr
+\hrule  
+\+ &\hfill 30 &$\vert$ & 40\hfill& $\vert$ & 60\hfill& $\vert$ & 95\hfill& $\vert$ & 35\hfill& $\vert$ & 30\hfill& $\vert$ & 0\hfill& $\vert$ &\cr
+\+ && $\vert$ &\hfill(15)\hfill& $\vert$ &\hfill(60)\hfill& $\vert$ &\hfill(85)\hfill& $\vert$ &\hfill5\hfill& $\vert$ &\hfill15\hfill& $\vert$ &\hfill30\hfill& $\vert$ &\hfill50\hfill \cr
+\+ & &$\vert$ && $\vert$ && $\vert$ && $\vert$ && $\vert$ && $\vert$ && $\vert$ & \cr
+\hrule   
+\+ && $\vert$ &\hfill25\hfill& $\vert$ &\hfill10\hfill& $\vert$ &\hfill20\hfill& $\vert$ &\hfill30\hfill& $\vert$ &\hfill15\hfill& $\vert$ &\hfill30\hfill& $\vert$ &\cr}$$
+\centerline{\bf Table 17.8.} 
+\centerline{Potentials and discrepancies $w_{ij}$ for Table 17.7}
+\filbreak
+
+We have executed one pivot step, replacing $x_{23}$ with $x_{21}$ as a basic variable,   resulting in a new tree (Figure 17.9). 
+ 
+
+ \vskip -1.2in
+%$$\psfig{figure=Fig.17.9.eps,height=4in,crop=}$$
+$$\psfig{figure=ch6fig6.eps,height=2.3in,width=4in,crop=}$$
+\vskip -0.2in
+\centerline{{\bf Figure 17.9.}  Tree resulting from
+ removal of $x_{23}$ from the basis} 
+\medskip
+
+Some $w_{ij}$ are still negative, however, so the table is not optimal.  We have three negative entries in the table from which to choose.  Choosing $w_{14}=-15$ corresponds to adding an edge to the graph from warehouse $1$ to store $4$, creating the loop 
+$$(1,4),(1,1),(2,1),(2,4).$$
+
+Choosing $w_{15}=-20$ corresponds to adding an edge to the graph from warehouse $1$ to store $5$, creating the loop 
+$$(1,5),(1,1),(2,1),(2,4),(3,4),(3,5) \ \ {\rm (Figure \ 17.10).}  $$
+ 
+
+  \vskip -1.2in
+$$\psfig{figure=Fig.17.10.eps,height=2.3in,width=4in,crop=}$$
+\centerline{{\bf Figure 17.10.} Loop resulting
+from adding $x_{15}$ to the basis} 
+\bigskip
+To illustrate the process of finding a new basic feasible solution with a longer loop, we proceed with the latter choice.  We start a flow of $\varepsilon$ on the edge from warehouse $1$ to store $5$; that is, we set $x_{ij}=\varepsilon$. Then we subtract $\varepsilon$ from $x_{11}$ because we cannot exceed the supply of warehouse $1$.  Then we add $\varepsilon$ to $x_{21}$ to meet the demand at store $1$.  
+
+We continue in this manner around the loop, subtracting $\varepsilon$ from $x_{24}$, adding $\varepsilon$ to $x_{34}$, and, finally, subtracting $\varepsilon$ from $x_{35}$ (see Table 17.11).
+$$\vbox {\offinterlineskip
+\settabs 
+\+ &        00000      &$\vert$ & 11111             & $\vert$ & 22222             & $\vert$ & 33333             & $\vert$ & 44444             & $\vert$ & 55555             & $\vert$ & 66666             & $\vert$ & 77777 \cr
+\+ &                   &$\vert$ & 55 \hfill & $\vert$ & 30 \hfill & $\vert$ & 40 \hfill & $\vert$ & 65 \hfill & $\vert$ & 60 \hfill & $\vert$ & 30\hfill & $\vert$ & \cr
+\hrule  
+\+ &\hfill 0 &$\vert$ & 55 \hfill & $\vert$ & 30 \hfill & $\vert$ & 40 \hfill & $\vert$ & 50 \hfill & $\vert$ & 40 \hfill & $\vert$ & 0 \hfill & $\vert$ & \cr
+\+ && $\vert$ & \hfill  $20-\varepsilon$ \hfill & $\vert$ & \hfill  10 \hfill & $\vert$ & \hfill  20 \hfill & $\vert$ & \hfill($-1$5)\hfill & $\vert$ & \hfill($-20$)\hfill & $\vert$ & \hfill($-30$)\hfill & $\vert$ & \hfill  50 \hfill \cr
+\+ && $\vert$ && $\vert$ && $\vert$ && $\vert$ && $\vert$ &\hfill$\varepsilon$\hfill & $\vert$ && $\vert$ & \cr
+\hrule  
+\+ &\hfill 20 &$\vert$ & 35\hfill & $\vert$ & 30\hfill & $\vert$ & 100\hfill & $\vert$ & 45\hfill & $\vert$ & 60\hfill & $\vert$ & 0\hfill & $\vert$ & \cr
+\+ & &$\vert$ &\hfill$5+\varepsilon$\hfill& $\vert$ &\hfill(20)\hfill& $\vert$ &\hfill(80)\hfill & $\vert$ &\hfill$25-\varepsilon$\hfill& $\vert$ &\hfill(20)\hfill& $\vert$ &\hfill($-1$0)\hfill& $\vert$ &\hfill30\hfill\cr
+\+ && $\vert$ && $\vert$ && $\vert$ && $\vert$ && $\vert$ && $\vert$ && $\vert$ & \cr
+\hrule  
+\+ &\hfill 30 &$\vert$ & 40\hfill& $\vert$ & 60\hfill& $\vert$ & 95\hfill& $\vert$ & 35\hfill& $\vert$ & 30\hfill& $\vert$ & 0\hfill& $\vert$ &\cr
+\+ && $\vert$ &\hfill(15)\hfill& $\vert$ &\hfill(60)\hfill& $\vert$ &\hfill(85)\hfill& $\vert$ &\hfill$5+\varepsilon$\hfill& $\vert$ &\hfill$15-\varepsilon$\hfill& $\vert$ &\hfill30\hfill& $\vert$ &\hfill50\hfill \cr
+\+ & &$\vert$ && $\vert$ && $\vert$ && $\vert$ && $\vert$ && $\vert$ && $\vert$ & \cr
+\hrule   
+\+ && $\vert$ &\hfill25\hfill& $\vert$ &\hfill10\hfill& $\vert$ &\hfill20\hfill& $\vert$ &\hfill30\hfill& $\vert$ &\hfill15\hfill& $\vert$ &\hfill30\hfill& $\vert$ &\cr}$$
+\centerline{\bf Table 17.11.}
+\centerline{Adjusting by $\varepsilon$ the flow around the new loop} 
+\bigskip
+The change in the value of the objective function is 
+
+$\varepsilon(c_{15}-c_{35}+c_{34}-c_{23}+c_{21}-c_{11}) $
+
+$=\varepsilon(40-30+35-45+35-55)=-20\varepsilon=w_{15}\varepsilon.$
+
+In this case, the maximum value that $\varepsilon$ can take is $15$, limited by the demand at store $5$.  Adjusting the $x_{ij}$ as prescribed by the flow with $\varepsilon=15$ results  in a new feasible solution that decreases the objective function to $4125-20\cdot 15=3825$ (Table 17.12).  In the new solution, $x_{15}$ replaces $x_{35}$, restoring our graphical representation to a tree (Figure 17.13).
+$$\vbox {\offinterlineskip
+\settabs 
+\+ $\vert$ & 11111             & $\vert$ & 22222             & $\vert$ & 33333             & $\vert$ & 44444             & $\vert$ & 55555             & $\vert$ & 66666             & $\vert$ & 77777 \cr
+\hrule  
+\+ $\vert$ & 55 \hfill & $\vert$ & 30 \hfill & $\vert$ & 40 \hfill & $\vert$ & 50 \hfill & $\vert$ & 40 \hfill & $\vert$ & 0 \hfill & $\vert$ & \cr
+\+ $\vert$ & \hfill  5 \hfill & $\vert$ & \hfill  10 \hfill & $\vert$ & \hfill  20 \hfill & $\vert$ & \hfill     \hfill & $\vert$ & \hfill  15 \hfill & $\vert$ & \hfill     \hfill & $\vert$ & \hfill  50 \hfill \cr
+\+ $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & \cr
+\hrule  
+\+ $\vert$ & 35 \hfill & $\vert$ & 30 \hfill & $\vert$ & 100 \hfill & $\vert$ & 45 \hfill & $\vert$ & 60 \hfill & $\vert$ & 0 \hfill & $\vert$ & \cr
+\+ $\vert$ & \hfill  20 \hfill & $\vert$ & \hfill     \hfill & $\vert$ & \hfill     \hfill & $\vert$ & \hfill  10 \hfill & $\vert$ & \hfill     \hfill & $\vert$ & \hfill     \hfill & $\vert$ & \hfill  30 \hfill \cr
+\+ $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & \cr
+\hrule  
+\+ $\vert$ & 40 \hfill & $\vert$ & 60 \hfill & $\vert$ & 95 \hfill & $\vert$ & 35 \hfill & $\vert$ & 30 \hfill & $\vert$ & 0 \hfill & $\vert$ & \cr
+\+ $\vert$ & \hfill     \hfill & $\vert$ & \hfill     \hfill & $\vert$ & \hfill     \hfill & $\vert$ & \hfill  20 \hfill & $\vert$ & \hfill     \hfill & $\vert$ & \hfill  30 \hfill & $\vert$ & \hfill  50 \hfill \cr
+\+ $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & \cr
+\hrule   
+\+ $\vert$ & \hfill  25 \hfill & $\vert$ & \hfill  10 \hfill & $\vert$ & \hfill  20 \hfill & $\vert$ & \hfill  30 \hfill & $\vert$ & \hfill  15 \hfill & $\vert$ & \hfill  30 \hfill & $\vert$ & \cr}$$
+\centerline{{\bf Table 17.12.} Third feasible solution to Example 2.4} 
+ \filbreak
+\
+
+  \vskip -1.3in
+% $$\psfig{figure=Fig.17.13.eps,height=4in,crop=}$$
+$$\psfig{figure=ch6fig8.eps,height=2in,width=4in,crop=}$$
+ 
+\centerline{{\bf Figure 17.13.}  Tree resulting}
+\centerline{from deleting $x_{35}$ from the basis} 
+\medskip
+
+We proceed as before to find the new potentials, the new  $w_{ij}$,
+a negative  $w_{14} = -15,$ creating the loop 
+$(1,4),(1,1),(2,1),(2,4)$, and the  adjusted 
+flow   around the loop (Table 17.14).
+
+$$\vbox {\offinterlineskip
+\settabs 
+\+ &        00000      &$\vert$ & 11111             & $\vert$ & 22222             & $\vert$ & 33333             & $\vert$ & 44444             & $\vert$ & 55555             & $\vert$ & 66666             & $\vert$ & 77777 \cr
+\+ &                   &$\vert$ & 55 \hfill & $\vert$ & 30 \hfill & $\vert$ & 40 \hfill & $\vert$ & 65 \hfill & $\vert$ & 40 \hfill & $\vert$ & 30\hfill & $\vert$ & \cr
+\hrule  
+\+ &\hfill 0 &$\vert$ & 55 \hfill & $\vert$ & 30 \hfill & $\vert$ & 40 \hfill & $\vert$ & 50 \hfill & $\vert$ & 40 \hfill & $\vert$ & 0 \hfill & $\vert$ & \cr
+\+ & &$\vert$ & \hfill$5-\varepsilon$ \hfill   & $\vert$ & \hfill  10 \hfill & $\vert$ & \hfill  20 \hfill & $\vert$ & \hfill($-15$)\hfill & $\vert$ & \hfill15\hfill & $\vert$ & \hfill($-30$)\hfill & $\vert$ & \hfill  50 \hfill \cr
+\+ && $\vert$ & \blackbox & $\vert$ && $\vert$ && $\vert$ & $\varepsilon$ \ \ \blackbox   & $\vert$ && $\vert$ && $\vert$ & \cr
+\hrule  
+\+ &\hfill 20 &$\vert$ & 35\hfill & $\vert$ & 30\hfill & $\vert$ & 100\hfill & $\vert$ & 45\hfill & $\vert$ & 60\hfill & $\vert$ & 0\hfill & $\vert$ & \cr
+\+ & &$\vert$ &\hfill$20+\varepsilon$\hfill& $\vert$ &\hfill(20)\hfill& $\vert$ &\hfill(80)\hfill & $\vert$ &\hfill$10-\varepsilon$\hfill& $\vert$ &\hfill(40)\hfill& $\vert$ &\hfill($-10$)\hfill& $\vert$ &\hfill30\hfill\cr
+\+ && $\vert$ &  \blackbox & $\vert$ && $\vert$ && $\vert$ & \hskip17pt   \blackbox & $\vert$ && $\vert$ && $\vert$ & \cr
+\hrule  
+\+ &\hfill 30 &$\vert$ & 40\hfill& $\vert$ & 60\hfill& $\vert$ & 95\hfill& $\vert$ & 35\hfill& $\vert$ & 30\hfill& $\vert$ & 0\hfill& $\vert$ &\cr
+\+ && $\vert$ &\hfill(15)\hfill& $\vert$ &\hfill(60)\hfill& $\vert$ &\hfill(85)\hfill& $\vert$ &\hfill20\hfill& $\vert$ &\hfill(20)\hfill& $\vert$ &\hfill30\hfill& $\vert$ &\hfill50\hfill \cr
+\+ & &$\vert$ && $\vert$ && $\vert$ && $\vert$ && $\vert$ && $\vert$ && $\vert$ & \cr
+\hrule   
+\+ && $\vert$ &\hfill25\hfill& $\vert$ &\hfill10\hfill& $\vert$ &\hfill20\hfill& $\vert$ &\hfill30\hfill& $\vert$ &\hfill15\hfill& $\vert$ &\hfill30\hfill& $\vert$ &\cr}$$
+\centerline{{\bf Table 17.14.} Dual variables and adjusted flow for Table 17.13} 
+ \smallskip
+ 
+
+
+  We set $\varepsilon=5$, the maximum as constrained by the supply at warehouse $1$, to obtain a new feasible solution which reduces the objective function by 
+$w_{14}\varepsilon =75$ (Table 17.15). 
+
+
+$$\vbox {\offinterlineskip
+\settabs 
+\+ $\vert$ & 11111             & $\vert$ & 22222             & $\vert$ & 33333             & $\vert$ & 44444             & $\vert$ & 55555             & $\vert$ & 66666             & $\vert$ & 77777 \cr
+\hrule  
+\+ $\vert$ & 55 \hfill & $\vert$ & 30 \hfill & $\vert$ & 40 \hfill & $\vert$ & 50 \hfill & $\vert$ & 40 \hfill & $\vert$ & 0 \hfill & $\vert$ & \cr
+\+ $\vert$ & \hfill    \hfill & $\vert$ & \hfill  10 \hfill & $\vert$ & \hfill  20 \hfill & $\vert$ & \hfill  5  \hfill & $\vert$ & \hfill  15 \hfill & $\vert$ & \hfill     \hfill & $\vert$ & \hfill  50 \hfill \cr
+\+ $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & \cr
+\hrule  
+\+ $\vert$ & 35 \hfill & $\vert$ & 30 \hfill & $\vert$ & 100 \hfill & $\vert$ & 45 \hfill & $\vert$ & 60 \hfill & $\vert$ & 0 \hfill & $\vert$ & \cr
+\+ $\vert$ & \hfill  25 \hfill & $\vert$ & \hfill     \hfill & $\vert$ & \hfill     \hfill & $\vert$ & \hfill   5 \hfill & $\vert$ & \hfill     \hfill & $\vert$ & \hfill     \hfill & $\vert$ & \hfill  30 \hfill \cr
+\+ $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & \cr
+\hrule  
+\+ $\vert$ & 40 \hfill & $\vert$ & 60 \hfill & $\vert$ & 95 \hfill & $\vert$ & 35 \hfill & $\vert$ & 30 \hfill & $\vert$ & 0 \hfill & $\vert$ & \cr
+\+ $\vert$ & \hfill     \hfill & $\vert$ & \hfill     \hfill & $\vert$ & \hfill     \hfill & $\vert$ & \hfill  20 \hfill & $\vert$ & \hfill     \hfill & $\vert$ & \hfill  30 \hfill & $\vert$ & \hfill  50 \hfill \cr
+\+ $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & \cr
+\hrule   
+\+ $\vert$ & \hfill  25 \hfill & $\vert$ & \hfill  10 \hfill & $\vert$ & \hfill  20 \hfill & $\vert$ & \hfill  30 \hfill & $\vert$ & \hfill  15 \hfill & $\vert$ & \hfill  30 \hfill & $\vert$ & \cr}$$
+\centerline{{\bf Table 17.15.} Fourth feasible solution to Example 2.4} 
+\medskip
+ We compute the potentials, the  new $w_{ij},$  a new negative 
+   $w_{16}=-15$ and the new flow of $\varepsilon$ around the loop 
+$$(1, 6),(1, 4),(3, 4),
+(3, 6)$$
+    (Table 17.16).
+$$\vbox {\offinterlineskip
+\settabs 
+\+ &        00000      &$\vert$ & 11111             & $\vert$ & 22222             & $\vert$ & 33333             & $\vert$ & 44444             & $\vert$ & 55555             & $\vert$ & 66666             & $\vert$ & 77777 \cr
+\+ &                   &$\vert$ & 40 \hfill & $\vert$ & 30 \hfill & $\vert$ & 40 \hfill & $\vert$ & 50 \hfill & $\vert$ & 40 \hfill & $\vert$ & 15\hfill & $\vert$ & \cr
+\hrule  
+\+ &\hfill 0 &$\vert$ & 55 \hfill & $\vert$ & 30 \hfill & $\vert$ & 40 \hfill & $\vert$ & 50 \hfill & $\vert$ & 40 \hfill & $\vert$ & 0 \hfill & $\vert$ & \cr
+\+ & &$\vert$ & \hfill  (15) \hfill & $\vert$ & \hfill  10 \hfill & $\vert$ & \hfill  20 \hfill & $\vert$ & \hfill$5-\varepsilon$\hfill & $\vert$ & \hfill15\hfill & $\vert$ & \hfill($-15$)\hfill & $\vert$ & \hfill  50 \hfill \cr
+\+ && $\vert$ && $\vert$ && $\vert$ && $\vert$ && $\vert$ && $\vert$ &\hfill$\varepsilon$\hfill & $\vert$ & \cr
+\hrule  
+\+ &\hfill 5 &$\vert$ & 35\hfill & $\vert$ & 30\hfill & $\vert$ & 100\hfill & $\vert$ & 45\hfill & $\vert$ & 60\hfill & $\vert$ & 0\hfill & $\vert$ & \cr
+\+ & &$\vert$ &\hfill25\hfill& $\vert$ &\hfill(5)\hfill& $\vert$ &\hfill(65)\hfill & $\vert$ &\hfill5\hfill& $\vert$ &\hfill(25)\hfill& $\vert$ &\hfill(-10)\hfill& $\vert$ &\hfill30\hfill\cr
+\+ && $\vert$ && $\vert$ && $\vert$ && $\vert$ && $\vert$ && $\vert$ && $\vert$ & \cr
+\hrule  
+\+ &\hfill 15 &$\vert$ & 40\hfill& $\vert$ & 60\hfill& $\vert$ & 95\hfill& $\vert$ & 35\hfill& $\vert$ & 30\hfill& $\vert$ & 0\hfill& $\vert$ &\cr
+\+ && $\vert$ &\hfill(15)\hfill& $\vert$ &\hfill(45)\hfill& $\vert$ &\hfill(70)\hfill& $\vert$ &\hfill$20+\varepsilon$\hfill& $\vert$ &\hfill(5)\hfill& $\vert$ &\hfill$30-\varepsilon$\hfill& $\vert$ &\hfill50\hfill \cr
+\+ & &$\vert$ && $\vert$ && $\vert$ && $\vert$ && $\vert$ && $\vert$ && $\vert$ & \cr
+\hrule   
+\+ && $\vert$ &\hfill25\hfill& $\vert$ &\hfill10\hfill& $\vert$ &\hfill20\hfill& $\vert$ &\hfill30\hfill& $\vert$ &\hfill15\hfill& $\vert$ &\hfill30\hfill& $\vert$ &\cr}$$
+\centerline{{\bf Table 17.16.} Dual variables and adjusted flow for Table 17.15}
+
+\bigskip
+Again $\varepsilon$ is constrained to $5$ by the supply at warehouse $1$, and setting $\varepsilon=5$ gives a new feasible solution that improves the objective function by $75$ (Table 17.17). 
+$$\vbox {\offinterlineskip
+\settabs 
+\+ $\vert$ & 11111             & $\vert$ & 22222             & $\vert$ & 33333             & $\vert$ & 44444             & $\vert$ & 55555             & $\vert$ & 66666             & $\vert$ & 77777 \cr
+\hrule  
+\+ \hskip-1pt $\vert$ & 55 \hfill & $\vert$ & 30 \hfill & $\vert$ & 40 \hfill & $\vert$ & 50 \hfill & $\vert$ & 40 \hfill & $\vert$ & 0 \hfill & $\vert$ & \cr
+\+ \hskip-1pt $\vert$ & \hfill    \hfill & $\vert$ & \hfill  10 \hfill & $\vert$ & \hfill  20 \hfill & $\vert$ & \hfill     \hfill & $\vert$ & \hfill  15 \hfill & $\vert$ & \hfill  5  \hfill & $\vert$ & \hfill  50 \hfill \cr
+\+ \hskip-1pt $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & \cr
+\hrule  
+\+  \hskip-1pt $\vert$ & 35 \hfill & $\vert$ & 30 \hfill & $\vert$ & 100 \hfill & $\vert$ & 45 \hfill & $\vert$ & 60 \hfill & $\vert$ & 0 \hfill & $\vert$ & \cr
+\+  \hskip-1pt $\vert$ & \hfill  25 \hfill & $\vert$ & \hfill     \hfill & $\vert$ & \hfill     \hfill & $\vert$ & \hfill   5 \hfill & $\vert$ & \hfill     \hfill & $\vert$ & \hfill     \hfill & $\vert$ & \hfill  30 \hfill \cr
+\+ \hskip-1pt  $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & \cr
+\hrule  
+\+  \hskip-1pt $\vert$ & 40 \hfill & $\vert$ & 60 \hfill & $\vert$ & 95 \hfill & $\vert$ & 35 \hfill & $\vert$ & 30 \hfill & $\vert$ & 0 \hfill & $\vert$ & \cr
+\+  \hskip-1pt $\vert$ & \hfill     \hfill & $\vert$ & \hfill     \hfill & $\vert$ & \hfill     \hfill & $\vert$ & \hfill  25 \hfill & $\vert$ & \hfill     \hfill & $\vert$ & \hfill  25 \hfill & $\vert$ & \hfill  50 \hfill \cr
+\+  \hskip-1pt $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & \cr
+\hrule   
+\+  \hskip-1pt $\vert$ & \hfill  25 \hfill & $\vert$ & \hfill  10 \hfill & $\vert$ & \hfill  20 \hfill & $\vert$ & \hfill  30 \hfill & $\vert$ & \hfill  15 \hfill & $\vert$ & \hfill  30 \hfill & $\vert$ & \cr}$$
+\centerline{{\bf Table 17.17.}
+Fifth feasible solution to Problem 2.4} 
+
+\filbreak
+
+ We compute again the new potentials and    the new $w_{ij}$,
+find a negative   $w_{35}=-10$, create 
+the loop $(3,5),(3,6),(1,6), (1,5),$ and
+set $x_{35}=\varepsilon$, $x_{36}=25-\varepsilon$, $x_{16}=5+\varepsilon$, and $x_{15}=15-\varepsilon$ (Table 17.18).
+ 
+
+ 
+
+$$\vbox {\offinterlineskip
+\settabs 
+\+ &        00000      &$\vert$ & 11111             & $\vert$ & 22222             & $\vert$ & 33333             & $\vert$ & 44444             & $\vert$ & 55555             & $\vert$ & 66666             & $\vert$ & 77777 \cr
+\+ &                   &$\vert$ & 25 \hfill & $\vert$ & 30 \hfill & $\vert$ & 40 \hfill & $\vert$ & 35 \hfill & $\vert$ & 40 \hfill & $\vert$ & 0\hfill & $\vert$ & \cr
+\hrule  
+\+ &\hfill 0 &$\vert$ & 55 \hfill & $\vert$ & 30 \hfill & $\vert$ & 40 \hfill & $\vert$ & 50 \hfill & $\vert$ & 40 \hfill & $\vert$ & 0 \hfill & $\vert$ & \cr
+\+ & &$\vert$ &\hfill(30)\hfill& $\vert$ &\hfill10\hfill& $\vert$ &\hfill20\hfill& $\vert$ &\hfill(15)\hfill& $\vert$ &\hfill$15-\varepsilon$\hfill& $\vert$ &\hfill$5+\varepsilon$\hfill & $\vert$ &\hfill 50\hfill \cr
+\+ && $\vert$ && $\vert$ && $\vert$ && $\vert$ && $\vert$ && $\vert$ && $\vert$ & \cr
+\hrule  
+\+ &\hfill $-10$ &$\vert$ & 35\hfill & $\vert$ & 30\hfill & $\vert$ & 100\hfill & $\vert$ & 45\hfill & $\vert$ & 60\hfill & $\vert$ & 0\hfill & $\vert$ & \cr
+\+ & &$\vert$ &\hfill25\hfill& $\vert$ &\hfill($-10$)\hfill& $\vert$ &\hfill(50)\hfill & $\vert$ &\hfill5\hfill& $\vert$ &\hfill(10)\hfill& $\vert$ &\hfill($-10$)\hfill& $\vert$ &\hfill30\hfill\cr
+\+ && $\vert$ && $\vert$ && $\vert$ && $\vert$ && $\vert$ && $\vert$ && $\vert$ & \cr
+\hrule  
+\+ &\hfill 0 &$\vert$ & 40\hfill& $\vert$ & 60\hfill& $\vert$ & 95\hfill& $\vert$ & 35\hfill& $\vert$ & 30\hfill& $\vert$ & 0\hfill& $\vert$ &\cr
+\+ && $\vert$ &\hfill(15)\hfill& $\vert$ &\hfill(30)\hfill& $\vert$ &\hfill(55)\hfill& $\vert$ &\hfill25\hfill& $\vert$ &\hfill($-10$)\hfill& $\vert$ &\hfill$25-\varepsilon$\hfill& $\vert$ &\hfill50\hfill \cr
+\+ && $\vert$ && $\vert$ && $\vert$ && $\vert$ && $\vert$ &\hfill$\varepsilon$\hfill& $\vert$ && $\vert$ & \cr
+\hrule   
+\+ && $\vert$ &\hfill25\hfill& $\vert$ &\hfill10\hfill& $\vert$ &\hfill20\hfill& $\vert$ &\hfill30\hfill& $\vert$ &\hfill15\hfill& $\vert$ &\hfill30\hfill& $\vert$ &\cr}$$
+\centerline{{\bf Table 17.18.} Dual variables and adjusted flow for Table 17.17}
+\bigskip
+ 
+
+   Setting $\varepsilon$ to the maximum value of $15$, constrained by the demand at store $5$, yields a new feasible solution that reduces the transportation cost by $150$ (Table 17.19). 
+
+
+$$\vbox {\offinterlineskip
+\settabs 
+\+ $\vert$ & 11111             & $\vert$ & 22222             & $\vert$ & 33333             & $\vert$ & 44444             & $\vert$ & 55555             & $\vert$ & 66666             & $\vert$ & 77777 \cr
+\hrule  
+\+ $\vert$ & 55 \hfill & $\vert$ & 30 \hfill & $\vert$ & 40 \hfill & $\vert$ & 50 \hfill & $\vert$ & 40 \hfill & $\vert$ & 0 \hfill & $\vert$ & \cr
+\+ $\vert$ & \hfill    \hfill & $\vert$ & \hfill  10 \hfill & $\vert$ & \hfill  20 \hfill & $\vert$ & \hfill     \hfill & $\vert$ & \hfill     \hfill & $\vert$ & \hfill 20  \hfill & $\vert$ & \hfill  50 \hfill \cr
+\+ $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & \cr
+\hrule  
+\+ $\vert$ & 35 \hfill & $\vert$ & 30 \hfill & $\vert$ & 100 \hfill & $\vert$ & 45 \hfill & $\vert$ & 60 \hfill & $\vert$ & 0 \hfill & $\vert$ & \cr
+\+ $\vert$ & \hfill  25 \hfill & $\vert$ & \hfill     \hfill & $\vert$ & \hfill     \hfill & $\vert$ & \hfill   5 \hfill & $\vert$ & \hfill     \hfill & $\vert$ & \hfill     \hfill & $\vert$ & \hfill  30 \hfill \cr
+\+ $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & \cr
+\hrule  
+\+ $\vert$ & 40 \hfill & $\vert$ & 60 \hfill & $\vert$ & 95 \hfill & $\vert$ & 35 \hfill & $\vert$ & 30 \hfill & $\vert$ & 0 \hfill & $\vert$ & \cr
+\+ $\vert$ & \hfill     \hfill & $\vert$ & \hfill     \hfill & $\vert$ & \hfill     \hfill & $\vert$ & \hfill  25 \hfill & $\vert$ & \hfill  15 \hfill & $\vert$ & \hfill  10 \hfill & $\vert$ & \hfill  50 \hfill \cr
+\+ $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & \cr
+\hrule   
+\+ $\vert$ & \hfill  25 \hfill & $\vert$ & \hfill  10 \hfill & $\vert$ & \hfill  20 \hfill & $\vert$ & \hfill  30 \hfill & $\vert$ & \hfill  15 \hfill & $\vert$ & \hfill  30 \hfill & $\vert$ & \cr}$$
+\centerline{{\bf Table 17.19.}
+Sixth feasible solution to Example 2.4} 
+
+\bigskip
+ Then we compute the new potentials $u_i$ and $v_j$   and the new dual slack variables $w_{ij}.$  
+This time we choose position $(2,6)$ where $w_{26}=-10$.  We adjust the flow around the loop by setting  $x_{26}=\varepsilon$, $x_{24}=5-\varepsilon$, $x_{34}=25+\varepsilon$, and $x_{36}=10-\varepsilon.$  
+\filbreak
+Here is the new table:
+$$\vbox {\offinterlineskip
+\settabs 
+\+ &        00000      &$\vert$ & 11111             & $\vert$ & 22222             & $\vert$ & 33333             & $\vert$ & 44444             & $\vert$ & 55555             & $\vert$ & 66666             & $\vert$ & 77777 \cr
+\+ &                   &$\vert$ & 25 \hfill & $\vert$ & 30 \hfill & $\vert$ & 40 \hfill & $\vert$ & 35 \hfill & $\vert$ & 30 \hfill & $\vert$ & 0\hfill & $\vert$ & \cr
+\hrule  
+\+ &\hfill 0 &$\vert$ & 55 \hfill & $\vert$ & 30 \hfill & $\vert$ & 40 \hfill & $\vert$ & 50 \hfill & $\vert$ & 40 \hfill & $\vert$ & 0 \hfill & $\vert$ & \cr
+\+ & &$\vert$ &\hfill(30)\hfill& $\vert$ &\hfill10\hfill& $\vert$ &\hfill20\hfill& $\vert$ &\hfill(15)\hfill& $\vert$ &\hfill(10)\hfill& $\vert$ &\hfill20\hfill & $\vert$ &\hfill 50\hfill \cr
+\+ && $\vert$ && $\vert$ && $\vert$ && $\vert$ && $\vert$ && $\vert$ && $\vert$ & \cr
+\hrule  
+\+ &\hfill $-10$ &$\vert$ & 35\hfill & $\vert$ & 30\hfill & $\vert$ & 100\hfill & $\vert$ & 45\hfill & $\vert$ & 60\hfill & $\vert$ & 0\hfill & $\vert$ & \cr
+\+ && $\vert$ &\hfill25\hfill& $\vert$ &\hfill($-10$)\hfill& $\vert$ &\hfill(50)\hfill & $\vert$ &\hfill$5-\varepsilon$\hfill& $\vert$ &\hfill(20)\hfill& $\vert$ &\hfill($-10$)\hfill& $\vert$ &\hfill30\hfill\cr
+\+ && $\vert$ && $\vert$ && $\vert$ && $\vert$ && $\vert$ && $\vert$ &\hfill$\varepsilon$\hfill& $\vert$ & \cr
+\hrule  
+\+ &\hfill 0 &$\vert$ & 40\hfill& $\vert$ & 60\hfill& $\vert$ & 95\hfill& $\vert$ & 35\hfill& $\vert$ & 30\hfill& $\vert$ & 0\hfill& $\vert$ &\cr
+\+ && $\vert$ &\hfill(15)\hfill& $\vert$ &\hfill(30)\hfill& $\vert$ &\hfill(55)\hfill& $\vert$ &\hfill$25+\varepsilon$\hfill& $\vert$ &\hfill15\hfill& $\vert$ &\hfill$10-\varepsilon$\hfill& $\vert$ &\hfill50\hfill \cr
+\+ & &$\vert$ && $\vert$ && $\vert$ && $\vert$ && $\vert$ && $\vert$ && $\vert$ & \cr
+\hrule   
+\+ && $\vert$ &\hfill25\hfill& $\vert$ &\hfill10\hfill& $\vert$ &\hfill20\hfill& $\vert$ &\hfill30\hfill& $\vert$ &\hfill15\hfill& $\vert$ &\hfill30\hfill& $\vert$ &\cr}$$
+\centerline{{\bf Table 17.20.} Dual variables and adjusted flow for Table 17.19}
+
+\smallskip
+  We set $\varepsilon$ to the maximum of $5$, constrained by the supply at store $2$, to get a feasible solution that improves the objective function by $50$ (Table 17.21).
+$$\vbox {\offinterlineskip
+\settabs 
+\+ $\vert$ & 11111             & $\vert$ & 22222             & $\vert$ & 33333             & $\vert$ & 44444             & $\vert$ & 55555             & $\vert$ & 66666             & $\vert$ & 77777 \cr
+\hrule  
+\+ $\vert$ & 55 \hfill & $\vert$ & 30 \hfill & $\vert$ & 40 \hfill & $\vert$ & 50 \hfill & $\vert$ & 40 \hfill & $\vert$ & 0 \hfill & $\vert$ & \cr
+\+ $\vert$ & \hfill    \hfill & $\vert$ & \hfill  10 \hfill & $\vert$ & \hfill  20 \hfill & $\vert$ & \hfill     \hfill & $\vert$ & \hfill     \hfill & $\vert$ & \hfill 20  \hfill & $\vert$ & \hfill  50 \hfill \cr
+\+ $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & \cr
+\hrule  
+\+ $\vert$ & 35 \hfill & $\vert$ & 30 \hfill & $\vert$ & 100 \hfill & $\vert$ & 45 \hfill & $\vert$ & 60 \hfill & $\vert$ & 0 \hfill & $\vert$ & \cr
+\+ $\vert$ & \hfill  25 \hfill & $\vert$ & \hfill     \hfill & $\vert$ & \hfill     \hfill & $\vert$ & \hfill     \hfill & $\vert$ & \hfill     \hfill & $\vert$ & \hfill   5 \hfill & $\vert$ & \hfill  30 \hfill \cr
+\+ $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & \cr
+\hrule  
+\+ $\vert$ & 40 \hfill & $\vert$ & 60 \hfill & $\vert$ & 95 \hfill & $\vert$ & 35 \hfill & $\vert$ & 30 \hfill & $\vert$ & 0 \hfill & $\vert$ & \cr
+\+ $\vert$ & \hfill     \hfill & $\vert$ & \hfill     \hfill & $\vert$ & \hfill     \hfill & $\vert$ & \hfill  30 \hfill & $\vert$ & \hfill  15 \hfill & $\vert$ & \hfill   5 \hfill & $\vert$ & \hfill  50 \hfill \cr
+\+ $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & \cr
+\hrule   
+\+ $\vert$ & \hfill  25 \hfill & $\vert$ & \hfill  10 \hfill & $\vert$ & \hfill  20 \hfill & $\vert$ & \hfill  30 \hfill & $\vert$ & \hfill  15 \hfill & $\vert$ & \hfill  30 \hfill & $\vert$ & \cr}$$
+\centerline{{\bf Table 17.21.}
+Seventh feasible solution to Example 2.4} 
+\smallskip
+ 
+  We compute again  the potentials   and the dual  slack variables---that is, the $c$-part of the corresponding tableau (Table 17.22). 
+$$\vbox {\offinterlineskip
+\settabs 
+\+ &        00000      &$\vert$ & 11111             & $\vert$ & 22222             & $\vert$ & 33333             & $\vert$ & 44444             & $\vert$ & 55555             & $\vert$ & 66666             & $\vert$ & 77777 \cr
+\+ &                   &$\vert$ & 35 \hfill & $\vert$ & 30 \hfill & $\vert$ & 40 \hfill & $\vert$ & 35 \hfill & $\vert$ & 30 \hfill & $\vert$ & 0\hfill & $\vert$ & \cr
+\hrule  
+\+ &\hfill 0 &$\vert$ & 55 \hfill & $\vert$ & 30 \hfill & $\vert$ & 40 \hfill & $\vert$ & 50 \hfill & $\vert$ & 40 \hfill & $\vert$ & 0 \hfill & $\vert$ & \cr
+\+ & &$\vert$ &\hfill(20)\hfill& $\vert$ &\hfill10\hfill& $\vert$ &\hfill20\hfill& $\vert$ &\hfill(15)\hfill& $\vert$ &\hfill(10)\hfill& $\vert$ &\hfill20\hfill & $\vert$ &\hfill 50\hfill \cr
+\+ && $\vert$ && $\vert$ && $\vert$ && $\vert$ && $\vert$ && $\vert$ && $\vert$ & \cr
+\hrule  
+\+ &\hfill 0 &$\vert$ & 35\hfill & $\vert$ & 30\hfill & $\vert$ & 100\hfill & $\vert$ & 45\hfill & $\vert$ & 60\hfill & $\vert$ & 0\hfill & $\vert$ & \cr
+\+ && $\vert$ &\hfill25\hfill& $\vert$ &\hfill(0)\hfill& $\vert$ &\hfill(60)\hfill & $\vert$ &\hfill(10)\hfill& $\vert$ &\hfill(30)\hfill& $\vert$ &\hfill5\hfill& $\vert$ &\hfill30\hfill\cr
+\+ && $\vert$ && $\vert$ && $\vert$ && $\vert$ && $\vert$ && $\vert$ && $\vert$ & \cr
+\hrule  
+\+ &\hfill 0 &$\vert$ & 40\hfill& $\vert$ & 60\hfill& $\vert$ & 95\hfill& $\vert$ & 35\hfill& $\vert$ & 30\hfill& $\vert$ & 0\hfill& $\vert$ &\cr
+\+ && $\vert$ &\hfill(5)\hfill& $\vert$ &\hfill(30)\hfill& $\vert$ &\hfill(55)\hfill& $\vert$ &\hfill30\hfill& $\vert$ &\hfill15\hfill& $\vert$ &\hfill5\hfill& $\vert$ &\hfill50\hfill \cr
+\+ & &$\vert$ && $\vert$ && $\vert$ && $\vert$ && $\vert$ && $\vert$ && $\vert$ & \cr
+\hrule   
+\+ && $\vert$ &\hfill25\hfill& $\vert$ &\hfill10\hfill& $\vert$ &\hfill20\hfill& $\vert$ &\hfill30\hfill& $\vert$ &\hfill15\hfill& $\vert$ &\hfill30\hfill& $\vert$ &\cr}$$
+\centerline{{\bf Table 17.22.} Potentials and $w_{ij}$ for Table 17.21} 
+ \smallskip
+
+Finally all the basic $w_{ij}$, which correspond to the $c$-part of a standard tableau, are nonnegative.  So the seventh feasible solution is optimal.  In fact this is the solution found by an educated guess in Example 2.4, although educated guesses would be difficult in larger problems.  The transportation cost is $10\cdot 30+20\cdot 40+20\cdot 0+25\cdot 35+5\cdot 0+30\cdot 35+15\cdot 30+5\cdot 0=3475$. Figure 17.23 shows a graphical representation of our optimal solution.
+ 
+
+
+ 
+% \vskip -1.5in
+% $$\psfig{figure=ch6fig9.eps,height=3.5in,crop=}$$
+
+ \vskip10pt
+
+\hskip1.82in $c=35, x=25$
+\vskip0pt
+\hskip0.9in $c=30, x=10$
+\vskip8pt
+\hskip2.35in $c=40, x=20$
+\vskip8pt
+\hskip1.45in $c=0, x=20$
+\vskip0pt
+\hskip0.9in $x=5$ \hskip1in $c=35, x=30$
+\vskip0pt
+\hskip0.65in $c=0$
+\vskip-2pt
+\hskip2.62in $c=30$
+\vskip2pt
+\hskip2.8in $ x=15$
+\vskip0pt
+\hskip0.9in $c=0, x=5$
+\vskip-2.14in
+$$\psfig{figure=Fig.17.23.eps,height=2in,width=4in,crop=}$$
+\vskip-0.22in
+\centerline{{\bf Figure 17.23.} Optimal solution corresponding to Table 17.22}
+\vskip-2.1in
+\hskip3.37in 25
+\vskip13pt
+50 \hskip3.2in  10 
+\vskip12pt
+\hskip3.37in 20
+\vskip1pt 
+30
+\vskip0pt 
+\hskip3.36in 30
+\vskip12pt
+50 \hskip3.2in  15
+\vskip13pt
+\hskip3.37in 30
+
+
+
+
+\vskip0.4in
+ 
+ Since $w_{22}=0$,   $x_{22}$ can be increased without hurting the objective function.  Other optimal solutions may arise if this $x_{ij}$ can be increased without violating any constraints.  We can investigate this possibility by considering adding an edge to our graph from warehouse $2$ to store $2$, creating the loop $(2,2),(2,6),(1,6),(1,2)$.  It is evident that the per-unit cost of shipping from warehouse $1$ to store $2$ equals the cost from warehouse $2$ to store $2$, and the cost of leaving units in stock---that is, shipping to store $6$ is free for all warehouses.  Thus we conclude that supplying some of the
+demand for store $2$ from warehouse $2$ instead of warehouse $1$ and leaving fewer units in stock at warehouse $2$ and more in stock at warehouse $1$ would not change the transportation cost.  We can only adjust the allocation in this way up to $5$ units, because warehouse $2$ only has $5$   units to spare.  All optimal solutions are obtained in this way, because all other $w_{ij}$ are strictly positive.  
+
+
+
+By putting some extra numbers in our graph, we can represent the full solution (Figure  17.24).  Each edge in the graph is marked   by the number $x_{ij}$ of units to be shipped from warehouse $i$ to store $j$.  Remember that ``store $6$'' is fictitious.
+
+\filbreak
+
+So for each $i$, $x_{i6}$ is actually the number of units that remain in stock at warehouse $i$.  We can mark each warehouse with total supply and each store with total demand, which at store $6$ equals the total excess supply across all warehouses.  We can include all the optimal solutions by adding the edge from warehouse $2$ to store $2$ and making   $x_{12}$ and $x_{22}$ functions of $\varepsilon$ (Figure 17.24).
+
+
+
+ \bigskip
+
+
+
+\hskip2.5in $25$
+\vskip0pt
+\hskip1in $  10-\varepsilon$
+\vskip4pt
+\hskip3in $\varepsilon$
+\vskip6pt
+\hskip2.5in $20-\varepsilon$
+\vskip0pt
+\hskip1.6in $20+\varepsilon$
+\vskip2pt
+\hskip0.5in $5+\varepsilon$ \hskip1.4in $30$
+\vskip3pt
+\hskip2.62in $15$
+\vskip7pt
+\hskip0.9in $5$
+
+\vskip-2.05in
+$$\psfig{figure=Fig.17.24.eps,height=2in,width=4in,crop=}$$
+\vskip-0.1in
+\centerline{{\bf Figure 17.24.}  All optimal solutions, $0 \le \varepsilon \le 5$ } 
+
+\vskip-2.2in
+\hskip3.37in 25
+\vskip13pt
+50 \hskip3.2in  10 
+\vskip12pt
+\hskip3.37in 20
+ 
+30
+\vskip0pt 
+\hskip3.36in 30
+\vskip12pt
+50 \hskip3.2in  15
+\vskip12pt
+\hskip3.37in 30
+
+
+
+
+\vskip0.4in
+
+
+
+
+
+% \vskip -1.7in
+% $$\psfig{figure=ch6fig10.eps,height=3.5in,crop=}$$
+% \bigskip
+
+  The possibility of cycling in transportation problems is very remote, and Bland's method prevents it.  If the given supply and demand data are integral, then the optimal solution is also integral. Moreover, the size of integers in feasible solutions does not exceed the size of integers in the supply and demand.
+
+It is possible to use old potentials to compute new ones. This decreases the amount of computations but
+increases  the complexity of the method and  creates new opportunities for errors.
+
+
+\smallskip
+\noindent
+{\bf
+Remark 17.25. }
+% http://carbon.cudenver.edu/~hgreenbe/glossary/
+The dual simplex method for transportation problems is known as the Hungarian method. 
+% An algorithm to solve the standard assignment problem (presented by H. Kuhn in 1955). Let C be the n×n cost matrix. 
+It is based on the observation that adding a constant to   a row or a column of
+the cost matrix does not change  the optimality region because it changes the objective function by a constant.  If we manage to obtain  a cost matrix with all   entries  $\ge 0$ and enough zero entries to place the whole flow at
+the positions with zero costs, then we obtain an optimal solution (with zero adjusted total cost). The  dual method is particularly advisable for
+transportation problems that come from
+job assignment problems (see the next section)   where degeneracy  slows down the primal method. In those problems, $m=n$ and $a_i=b_j=1$ for all $i,j.$
+\filbreak
+
+Here we outline the Hungarian method for these problems.
+The method works with nonnegative matrices having a zero in every row and column.
+To get an inital $n \times n$ matrix, we subtract the least element of each row from that row of the cost matrix $[c_{i,j}].$ Then we do likewise for each column. 
+
+ 1. Given any  matrix  $C$ with nonnegative entries, we draw the minimum number 
+$t$ of lines through the rows and columns to cover all zeros in $C.$  If
+   $t =n,$  then it is very easy to find a basic feasible solution
+as in \S 16 selecting positions with zero costs and crossing out these $n$ lines one after another. Otherwise, we proceed to Step 2.
+
+ 2. Now   $t < n.$  We  compute the minimum $m$ of all  uncovered entries. Then we subtract $m$ from each uncovered entry and add it to each
+   twice-covered entry (i.e., covered by both a horizontal and a vertical line). Return to Step 1. 
+
+
+\smallskip
+\centerline{\twelvebf Exercises.}
+\parindent=0pt
+
+{\bf 1--2.}  Compute the feasible solution and the corresponding dual basic solution to the transportation problem,  where the stars (*) mark the basic variables for the row problem. Put both basic solutions into the same
+table. Are those solutions optimal?
+
+{\bf 1.}
+$$\vbox {\offinterlineskip
+\settabs 
+\+ \hskip-1pt $\vert$ & 11111             & $\vert$ & 22222             & $\vert$ & 33333             & $\vert$ & 200 \cr
+\hrule  
+\+ \hskip-1pt $\vert$ &          1 \hfill & $\vert$ &          2 \hfill & $\vert$ &          3 \hfill & $\vert$ & \cr
+\+ \hskip-1pt $\vert$ &     \hfill   * \hfill     & $\vert$ & \hfill   * \hfill & $\vert$ & & $\vert$ & \hfill 200 \hfill \cr
+\+ \hskip-1pt $\vert$ &                   & $\vert$ &                   & $\vert$ &                   & $\vert$ & \cr
+ \hrule   
+\+ \hskip-1pt $\vert$ &          1 \hfill & $\vert$ &          2 \hfill & $\vert$ &          2 \hfill & $\vert$ & \cr
+\+ \hskip-1pt $\vert$ & & $\vert$ & \hfill   * \hfill & $\vert$ &     \hfill   * \hfill    & $\vert$ & \hfill 300\hfill  \cr
+\+ \hskip-1pt $\vert$ &                   & $\vert$ &                   & $\vert$ &                   & $\vert$ &   \cr
+\hrule   
+\+ \hskip-1pt $\vert$ & \hfill 175 \hfill & $\vert$ & \hfill 125 \hfill & $\vert$ & \hfill 200 \hfill & $\vert$ & \cr}$$
+{\bf 2.}
+$$\vbox {\offinterlineskip
+\settabs 
+\+ \hskip-1pt $\vert$ & 11111             & $\vert$ & 22222             & $\vert$ & 33333             & $\vert$ & 200 \cr
+\hrule  
+\+ \hskip-1pt $\vert$ &          1 \hfill & $\vert$ &          2 \hfill & $\vert$ &          3 \hfill & $\vert$ & \cr
+\+ \hskip-1pt $\vert$ &                   & $\vert$ & \hfill   * \hfill & $\vert$ & \hfill   * \hfill & $\vert$ & \hfill 200 \hfill \cr
+\+ \hskip-1pt $\vert$ &                   & $\vert$ &                   & $\vert$ &                   & $\vert$ & \cr
+ \hrule   
+\+ \hskip-1pt $\vert$ &          1 \hfill & $\vert$ &          2 \hfill & $\vert$ &          2 \hfill & $\vert$ & \cr
+\+ \hskip-1pt $\vert$ & \hfill   * \hfill & $\vert$ & \hfill   * \hfill & $\vert$ &                   & $\vert$ & \hfill 300\hfill  \cr
+\+ \hskip-1pt $\vert$ &                   & $\vert$ &                   & $\vert$ &                   & $\vert$ &   \cr
+\hrule   
+\+ \hskip-1pt $\vert$ & \hfill 175 \hfill & $\vert$ & \hfill 125 \hfill & $\vert$ & \hfill 200 \hfill & $\vert$ & \cr}$$
+\bigskip
+
+{\bf 3--5. }  Solve the transportation problems in Exercises  4--6 of \S 16.
+\smallskip
+
+{\bf 6--8.}  Solve the transportation problem in Example 2.4 with
+
+{\bf 6.} The supply 30 replaced by $30+t$  where $t$ is a parameter 
+and $|t| \le 1$
+
+{\bf 7.} The supply 30 replaced by  a parameter $t$
+
+{\bf 8.} The unit cost $c_{23} =100$  is  replaced by  a parameter $t$ 
+
+$Hint$:  Use  Table 17.22 to start.
+ \parindent=20pt
+
+
+
+\vfill
+\eject
+\def\rightheadline{\tenrm\hfil{\it \S  18. Job Assignment Problem}\quad {\bf\folio}}
+
+\noindent
+{\twelvebf \S  18. Job Assignment Problem}
+\smallskip
+\noindent
+We   introduced this class of problems in Chapter 1 (see Example 2.5 and  
+Exercises 6--9 in \S 2.)  In general,  in terms of variables and constraints,
+the problem can be stated as follows. We set 
+ $$x_{ij} = 0 \  {\rm or} \  1 \eqno(18.1)$$
+ depending on whether the person $i$ is assigned to do the job $j.$  The total time is
+$$\sum_i \sum _j c_{ij}x_{ij}  {\rm (to\  be\  minimized) }.\eqno(18.2)$$
+
+The condition that every person $i$ is assigned to exactly one job is
+
+  $$ \sum _j x_{ij} = 1 \ \ {\rm for\  all} \ i.\eqno(18.3)$$
+
+
+The condition that exactly one  person is assigned to every   job $j$ is
+
+$$ \sum _i x_{ij} = 1 \ \ {\rm for\  all} \ j.\eqno(18.4)$$
+
+Thus, the problem is stated as an optimization problem (18.1--18.4).
+The objective function  (18.2) is linear, as are the constraints (18.3) and (18.4).
+However constraints (18.1) are not linear. 
+
+In   view of (18.3) and (18.4),
+constraints (18.1) can be replaced by the following constraints: $x_{ij} \ge 0, x_{ij}$ are integers.
+This is  an example of an integer programming problem.
+
+  If   we drop the condition that  $x_{ij}$ are integers (keeping the
+conditions $x_{ij} \ge 0),$  then mathematically our
+problem looks like a particular case of the transportation  problem
+with all given supplies and demands equal to  1 and the balance condition meaning that
+the number of persons equals   the number of jobs. 
+
+Let us forget about the integrability condition and solve the
+resulting linear problem by the simplex method. So
+  we regard each worker as a ``warehouse'' supplying work and each job as a ``store'' with a demand for work.  We set both the supply of each worker and the demand of each job equal to $1$.  Total time becomes the total transportation cost.
+
+  Because integral data guarantee an integral solution, our optimal solution
+has only integral values for all variables. So we obtain an optimal solution for
+the  job assignment problem.
+
+
+ Thus, we have reduced  any
+ job assignment problem  to a  transportation problem.
+	A variation of the assignment problem involves 
+ maximizing the sum $S$ of ratings  instead of
+minimizing the total cost (instead of  time) of completing a set of jobs.
+Using a standard trick, we can reduce maximization to minimization. The  resulting transportation problem   may have  negative
+coefficients $c_{ij}$ which we did not see in previous examples. However,
+the simplex method   does work the same way no matter whether coefficients are positive, negative, or zeros, or any mixture of those.
+So this version can be also solved as previously.
+
+\smallskip
+\noindent
+{\bf Problem 18.5.} Solve the job assignment problem 
+$$ \left|  \hskip-1.7pt  \underline{\overline{ \hskip5pt \matrix{ 
+   2\ &  2\ & 2\ & 1\   & 2\    \cr
+    2\ &  3\ & 1\ & 2\ & 4\   \cr
+    2\ & 0\ & 1\ & 1\  & 1\  \cr
+    2\ &  3\ & 4\ & 3\  & 3\   \cr 
+ 3\ & 2\ & 1\ & 2\ & 1\   \cr 
+}} }\hskip-1.8pt\right|$$
+where  the table data are interpreted as cost  per person per job and the goal is to minimize total cost.
+\smallskip
+\noindent
+{\bf Solution.} 
+Unless you like pivoting, it pays to spend more time on Phase 1 rather than use the northwest method.
+We observe the minimal cost per person, that is, the minimal cost
+in each row: 1, 1, 0, 2, 1. So the  minimal total cost is at least
+5 (i.e., $\min \ge 5).$ Let us try to get this cost by choosing 
+a position with minimal cost in each row.  This works nicely
+and  uniquely until we come to the last row, where there are two
+positions with cost 1. But one of them  collides with the selected position
+in the second row, so we select the last position in the last row.
+Therefore, we get an optimal solution and it is unique:
+ $$ \left| \hskip-1.9pt \underline{\overline{ \hskip5pt   \matrix{     &   & &   * & \cr
+& & * & & \cr
+& * & & & \cr
+* & & & & \cr
+& & & & * \cr}} }\hskip-1.5pt\right| $$
+Note that there are 5! = 120 feasible solutions, and trying all of them would take more time than our common-sense approach.
+ 
+\smallskip
+\noindent
+{\bf Problem 18.6.}    Solve the job assignment problem 
+with data as in Problem 18.5, but now
+the table data are interpreted as the rating of each worker on each job and the goal is to maximize efficiency.
+
+\smallskip
+\noindent
+{\bf Solution.} Again before indulging in pivoting we try to use common sense. 
+Let us try first to choose the best job for each worker (this  worked so well in the previous problem).
+Here is the pattern of maximal entries in rows:
+ $$ \left| \hskip-1pt \underline{\overline{  \hskip5pt  \matrix{ 
+ *   &  * & * &    & * \cr
+ & &  & & * \cr
+* &  & &  & \cr
+ & & * & & \cr
+* & &  & &  \cr}} }\hskip-1pt\right|$$
+We get the  $\max \le 2+4 +2 + 4 +3 =15,$ but there is no way to do job 4 if we choose  the best number in each row. Let us then try to choose  a maximal 
+entry in each column:
+ $$ \left| \hskip-1.9pt \underline{\overline{ \hskip5pt   \matrix{ 
+    &   &  &    & \cr
+ & * &  & & * \cr
+ &  & &  & \cr
+ & * & * & *&  \cr
+* & &  & &  \cr}} }\hskip-1.5pt\right| $$
+Now the first and third workers have nothing to do, and our upper bound for 
+the maximum is  $\max \le 3+3+4+3+4 =17,$ which is weaker than the previous bound. 
+
+In fact since choosing the maximal number in each row does not work,
+ we conclude that $\max < 15.$  Since the maximum is an integer, we obtain that
+$\max \le 14.$ But now looking again at the data and the pattern of maximal entries in each row, we easily see a feasible solution with total rating 14:
+ $$ \left| \hskip-1.9pt \underline{\overline{  \hskip5pt  \matrix{ 
+    & *  &  &    & \cr
+ &  &  & & * \cr
+ *&  & &  & \cr
+ &  & * & &  \cr
+ & &  & * &  \cr}} }\hskip-1.8pt\right|$$
+ where  the workers 1--4 take the best jobs  for each and the worker 5 takes the second best job 4.
+
+\smallskip
+\noindent
+{\bf Problem 18.7.}    Minimize total grief  in the matching   problem.
+ $$ \left| \hskip-1.9pt \underline{\overline{  \hskip5pt  \matrix{ 
+   1\ &  1\ & 2\ & 1\       \cr
+    2\ &  3\ & 2\ & 3\   \cr
+    4\ &  3\ & 3\ & 4\    \cr
+    4\ &  4\ & 5\ & 6\     \cr }} }\hskip-1.8pt\right|$$
+\smallskip
+\noindent
+{\bf Solution.}  Taking a minimal entry 
+ $$ \left| \hskip-1.9pt \underline{\overline{ \hskip5pt   \matrix{ 
+   *& * & * & *      \cr
+    &    & *&    \cr
+     &    &   &     \cr
+      &    &   &      \cr }} }\hskip-1.8pt\right|$$
+in each column
+does not produce any feasible solutions,  and we get the bound
+$\min  > 5.$
+Taking a minimal entry
+ $$ \left| \hskip-1.9pt \underline{\overline{ \hskip5pt   \matrix{ 
+   *& * &   & *      \cr
+    * &    & * &    \cr
+     & * & * &     \cr
+   * & * &   &      \cr }} }\hskip-1.8pt\right|$$
+in each row
+does produce  two optimal solutions.
+However, for a change, we  ignore  the  optimal solution
+and use the simplex method. The point of this exercise    is that 
+although common sense and special
+tricks give shortcuts  for some problems, the simplex method works
+for every linear program. 
+%\def\boxit#1{\vbox{\hrule\hbox{\vrule\kern3pt
+%      \vbox{\kern3pt#1\kern3pt}\kern3pt\vrule}\hrule}}
+%\hbox{ \boxit{9076} \hfill}
+ 
+So
+we treat this problem as a transportation problem. As an initial basic solution we
+take the one found by a student in   2000:
+\bigskip
+
+\moveright 1.2in \vbox{{
+\hrule width1.15in} 
+\hbox{\vrule height0.7in \hskip1.15in  \vrule height0.7in  } 
+{\hrule width1.15in} }
+\vskip-0.84in
+  $$    \matrix{ 
+  ^11 &  ^1\ & ^20& ^1\       \cr
+  ^2\ &  ^3\ & ^2\ & ^31   \cr
+   ^4\ &  ^31 & ^3\ & ^4\    \cr
+    ^4\ &  ^40 & ^51 & ^60     \cr  } \hskip0.2in 
+\matrix{  1 \kern-9pt - \ 0 \ \kern-1em - \cr 
+1 \kern-6pt - \hfill \cr 1 \kern-6pt - \hfill \cr 1 \kern-8pt - \ 0 \ \kern-1em -  \cr}  $$
+\vskip-5pt
+ $$\hskip-15pt \matrix{  1 \kern-7pt - & 1 \kern-7pt - & 1 \kern-7pt - &  1 \kern-7pt -  & \cr  &\ \ \ 0 \kern-6pt -  & \ \ &\ \  0 \ \kern-1em - &\ \ \ }$$
+ 
+Note that the total cost at this solution is $1+3+3+5 = 12$ which is better than $1+ 3 +  3 +6 = 13$  given by the northwest method.
+\filbreak
+
+Then we find   potentials and $w_{ij}$:
+\bigskip
+\bigskip
+\moveright 1.2in \vbox{{
+\hrule width1.77in} 
+\hbox{\vrule height0.77in \hskip1.77in  \vrule height0.77in  } 
+{\hrule width1.77in} }
+\vskip-1.15in
+$$\matrix{  5 && 5 &&& 6 &&& 7}$$
+\vskip-0.15in
+$$\hskip-10pt\matrix{4 \cr 4 \cr 2 \cr 1} \ \
+   \matrix{ 
+  ^11 &  ^1(0) & ^20& ^1(-2)      \cr
+  ^2(1) &  ^3(2) & ^2(0) & ^31   \cr
+   ^4(1) &  ^31 & ^3(-1) & ^4(-1)   \cr
+    ^4(0) &  ^40 & ^51 & ^60     \cr  }  $$
+\medskip
+The first potential 5 on top was chosen arbitrarily.  Now there are three negative $w_{ij}.$ 
+We select the position (3, 3) with   negative $w_{33} = -1$  (there were two other possible choices).  This leads to a loop of length 4.
+(The choice of $w_{14} = -2$ would lead to a loop of length 4 and a degenerate pivot step.)
+ Here is  an adjustment of the flow along the loop:
+\bigskip
+
+\moveright 1.1in \vbox{{
+\hrule width1.85in} 
+\hbox{\vrule height0.77in \hskip1.85in  \vrule height0.77in  } 
+{\hrule width1.85in} }
+\vskip-0.9in
+$$   \matrix{ 
+  ^11 &  ^1(0) & ^20& ^1(-2)      \cr
+  ^2(1) &  ^3(2) & ^2(0) & ^31   \cr
+   ^4(1) &  ^31-\varepsilon & ^3\varepsilon & ^4(-1)   \cr
+    ^4(0) &  ^40+\varepsilon & ^51- \varepsilon   & ^60     \cr  } 
+ $$
+\medskip
+
+ We take $\varepsilon = 1$ and deselect the position (4, 3) [another possible choice was the position (3, 2)]. The objective function improved by 1.
+ Here are our
+new basic feasible solution, new potentials, and new adjustment
+along a loop of length 6:
+\bigskip
+\bigskip
+\moveright 1.15in \vbox{{
+\hrule width2in} 
+\hbox{\vrule height0.77in \hskip2in  \vrule height0.77in  } 
+{\hrule width2in} }
+\vskip-1.2in
+$$\matrix{  5 &&& 6 &&& 6 &&& 8}$$
+\vskip-0.1in
+$$\matrix{4 \cr 5 \cr 3 \cr 2} \ \ \ \
+     \matrix{ 
+  ^11 &  ^1(-1) & ^20- \varepsilon & ^1(-3)\  \varepsilon    \cr
+  ^2(2) &  ^3(2) & ^2(1)   & ^31    \cr
+   ^4(2) &  ^30-\varepsilon & ^31+\varepsilon & ^4(-1)   \cr
+    ^4(1) &  ^41+\varepsilon & ^5(1) & ^60 -\varepsilon   \cr  }  $$
+\medskip
+
+We have selected  the position (1, 4) as a new basic position (there were two other choices).   We must take $\varepsilon = 0,$ so it is going to be a degenerate pivot step that does not change the feasible solution (but it changes the basis, i.e.,  the set of basic variables). 
+Now we deselect  the position  (4, 4) [the other possible choices were (1, 3) and (3, 2)],    compute again the new potentials and  $w_{ij},$ and  find a negative
+$w_{ij}$ (once we find one we do not need to compute  other $w_{ij}$) and
+the corresponding loop.
+\filbreak
+
+Here is our next table:
+\bigskip
+\bigskip
+\moveright 1.15in \vbox{{
+\hrule width2in} 
+\hbox{\vrule height0.77in \hskip2in  \vrule height0.77in  } 
+{\hrule width2in} }
+\vskip-1.17in
+$$\matrix{ & 5&&& 6 &&& 6 &&& 5}$$ 
+$$\matrix{4 \cr 2 \cr 3 \cr 2} \ \ \ \
+    \matrix{ 
+  ^11 -\varepsilon &  ^1(-1) & ^20 & ^10+\varepsilon      \cr
+  ^2(-1) \varepsilon &  ^3(-1) & ^2(-2)      & ^31-\varepsilon   \cr
+   ^4(2) &  ^30  & ^31  & ^4(2)   \cr
+    ^4(1) &  ^41 & ^5(1) & ^6(3)     \cr  }  $$
+\medskip
+
+We have selected the position  (2, 1), and $\varepsilon=1.$
+We deselect the position  (2, 4).
+Next we compute new potentials and $w_{ij}$:
+\bigskip
+\bigskip
+\moveright 1.35in \vbox{{
+\hrule width1.6in} 
+\hbox{\vrule height0.77in \hskip1.6in  \vrule height0.77in  } 
+{\hrule width1.6in} }
+\vskip-1.17in
+$$\matrix{  5&& 5 &&& 5 &&& 5}$$
+$$\matrix{4 \cr 3 \cr 2 \cr 1} \ \ \ \
+     \matrix{ 
+  ^10 &  ^1(0) & ^2(1)  & ^11      \cr
+  ^21 &  ^3(1) & ^20   & ^3(1)    \cr
+   ^4(1) &  ^30  & ^31  & ^4(1)   \cr
+    ^4(0) &  ^41 & ^5(1) & ^6(2)     \cr  }  $$
+\bigskip
+
+Now all  $w_{ij} \ge 0$, so the table is optimal. The optimal assignment it gives is
+ $$ \left| \hskip-1.5pt \underline{\overline{    \matrix{ 
+   &  &   &   *  \cr
+    *  &    &  &      \cr
+     &  & * &     \cr
+     & * &   &     \cr }} }\hskip-1.5pt\right|$$
+The optimal value is $\min = 10.$ 
+
+\smallskip
+\noindent
+{\bf
+Remark 18.8. } Any job assignment problem with $n$  workers and jobs has
+$n!$  feasible solutions. After 
+  it is written as a transportation problem, these solutions become the
+ vertices  of the feasible region which is a simplex of dimension $n! - 1$
+(in particular, an interval when $n = 2).$ For each vertex,
+there are  $2^{n-1}$ choices for the basis.  There are $(n^2)!$  ways to
+place the basic variables at the left margin of the standard tableau,
+and  $(n^2)!$  ways to
+place the nonbasic variables at the top margin. So we can
+imagine  $(n^2)!^2\cdot2^{n-1}\cdot n!$ standard tableaux for the problem.
+Fortunately, the simplex method does not need to go through all these tableaux.
+In fact, the simplex method for transportation problems proved to be
+very efficient in practice.
+
+
+ 
+\filbreak
+
+\centerline{\twelvebf Exercises}
+\parindent=0pt
+
+\smallskip
+ 
+
+{\bf 1--4.} Solve the job assignment problem 
+where
+  the table data are interpreted as cost per job per person and the goal is to minimize total cost.   
+
+
+
+
+\smallskip
+{\bf  1.}
+ $$ \left| \hskip-1.5pt \underline{\overline{    \matrix{ 
+   1\ &  2\ & 3\ & 1\   & 2\    \cr
+    3\ &  1\ & 2\ & 1\ & 0\   \cr
+    0\ & 1\ & 3\ & 2\  & 1\  \cr
+    2\ &  3\ & 4\ & 3\  & 3\   \cr 
+ 1\ & 3\ & 3\ & 1\ & 2\   \cr 
+}} }\hskip-1.5pt\right|.$$
+
+{\bf  2.}
+ $$ \left| \hskip-1.5pt \underline{\overline{    \matrix{ 
+    4\ &  2\ &  2\ & 2\ & 1\   & 2\    \cr
+    2\ &  3\ & 1\ & 2\   & 4\ & 4\   \cr
+    2\ & 0\ & 1\ & 1\  & 1\  & 4\ \cr
+    2\ &  3\ & 4\ & 3\  & 4\ & 3\   \cr 
+ 3\ & 2\ & 1\ & 2\  & 4\ & 1\   \cr 
+1\ & 2\ & 1\ & 2\  & 0\ & 1\   \cr 
+}} }\hskip-1.5pt\right|.$$
+
+
+
+{\bf  3.}
+ $$ \left| \hskip-1.5pt \underline{\overline{    \matrix{ 
+    2\ &  1\ & 4\ & 3\ & 4\  & 3\  &1 \    \cr 
+    4\ &  2\ & 2\ & 2\ & 1\  &5\   & 2\    \cr
+    2\ &  3\ & 5\ & 1\ & 2\  & 4\  & 4\    \cr
+   5\  &  2\ & 0\ & 1\ & 1\  & 1\  & 4\    \cr
+    2\ &  3\ & 4\ & 3\ & 4\  & 3\  &5 \    \cr 
+    5\ &  3\ & 2\ & 1\ & 2\  & 4\  & 1\    \cr 
+    1\ &  2\ & 1\ & 2\ & 0\  & 1\  &5 \    \cr 
+}} }\hskip-1.5pt\right|.$$
+
+ 
+{\bf  4.}
+ $$ \left| \hskip-1.5pt \underline{\overline{    \matrix{ 
+ 0\  &  2\ & 2\  & 4\ & 0\ & 1\ & 5\  & 1\  & 4\    \cr
+    2\ &  3\ & 1\ & 3\ & 4\  & 3\  & 2\  & 4\  &1 \    \cr 
+    2\ &  1\ & 4\ & 3\ & 4\  & 3\  &1 \ & 2\  & 4\    \cr 
+    4\ &  2\  & 4\ & 2\ & 2\ & 2\ & 1\  &5\   & 2\    \cr
+    2\ &  3\ & 5\ & 1\ & 2\  & 4\ & 2\  & 4\  & 4\    \cr
+   5\  &  2\ & 2\  & 4\ & 0\ & 1\ & 1\  & 1\  & 4\    \cr
+    2\ &  3\ & 4\ & 3\ & 4\  & 3\  & 2\  & 4\  &5 \    \cr 
+    5\ &  2\  & 4\ &  3\ & 2\ & 1\ & 2\  & 4\  & 1\    \cr 
+    1\ &  2\ & 1\ & 2\ & 0\  & 1\ & 2\  & 4\  &5 \    \cr 
+}} }\hskip-1.5pt\right|.$$
+
+
+{\bf 5--8.} Solve the job assignment problem  1--4
+with  the table data   interpreted as the rating of each worker on each job and the goal is to maximize efficiency.
+
+
+ 
+
+ 
+
+\end
+
+$$\vbox {\offinterlineskip
+\settabs 
+\+ $\vert$   & 11111 & $\vert$ & 22222 & $\vert$ & 33333 & $\vert$ & 44444 & $\vert$ & 55555 & $\vert$\cr
+\hrule  
+\+ $\vert$ &  1 \hfill & $\vert$ &  2 \hfill & $\vert$ &   3 \hfill & $\vert$ &  1 \hfill & $\vert$ &  2 \hfill & $\vert$\cr
+\+ $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$\cr
+\+ $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$\cr
+ \hrule   
+\+ $\vert$ &  3 \hfill & $\vert$ &  1 \hfill & $\vert$ &   2 \hfill & $\vert$ &  1 \hfill & $\vert$ &  0 \hfill & $\vert$\cr
+\+ $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$\cr
+\+ $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$\cr
+\hrule  
+\+ $\vert$ &  0 \hfill & $\vert$ &  1 \hfill & $\vert$ &   3 \hfill & $\vert$ &  2 \hfill & $\vert$ &  1 \hfill & $\vert$\cr
+\+ $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$\cr
+\+ $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$\cr
+ \hrule   
+\+ $\vert$ &  2 \hfill & $\vert$ &  2 \hfill & $\vert$ &   2 \hfill & $\vert$ &  1 \hfill & $\vert$ &  1 \hfill & $\vert$\cr
+\+ $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$\cr
+\+ $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$\cr
+ \hrule   
+\+ $\vert$ &  1 \hfill & $\vert$ &  3 \hfill & $\vert$ &   3 \hfill & $\vert$ &  1 \hfill & $\vert$ &  2 \hfill & $\vert$\cr
+\+ $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$\cr
+\+ $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$ & & $\vert$\cr
+\hrule   
+}$$
+
+cd www/publisher
+
+tex ch6
+
+dvips -o ch6.ps ch6.dvi
+
+ps2pdf ch6.ps

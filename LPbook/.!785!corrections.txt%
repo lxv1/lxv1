@@ -1,0 +1,21 @@
+CORRECTIONS
+
+file   page      line          replace            by
+----------------------------------------------------------------
+dedication
+       iv                     my                our
+preface
+       vii         -1          Thus              Thus,
+
+ch1     7           6          2                  3
+ch1    11          12          36-42              36-43
+ch1    11         -10          57                 58
+ch1    11          -5          linear             a linear form
+ch1    11          -6          58                 59
+ch1    11          -4          59                 60
+ch1    14          -1          simplex            dual simplex
+ch1    14          -1          Chapter 4          Chapter 5
+ch1    17     (table)          Aarea              Area
+ch1    17     (table)          .6                 0.8
+ch1    21          14          to worker          for worker
+ch1    22          14          is not obvious     it is not obvious

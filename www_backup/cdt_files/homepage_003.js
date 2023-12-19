@@ -1,0 +1,1 @@
+document.write('<a target="_new" href="http://ad.doubleclick.net/click;h=v2|2fbc|0|0|%2a|m;5536918;0-0;1;7939206;6-120|60;2721495|2720770|1;;%3fhttp://www.adelphia.com/cable_entertainment/availability_signup.cfm"><img src="http://m.doubleclick.net/viewad/846257/10001_adelphia_120x60.gif" border=0 alt="Click here to find out more!"></a>');

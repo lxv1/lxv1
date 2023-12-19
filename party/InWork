@@ -1,0 +1,163 @@
+    Bounded reduction of invertible matrices over polynomial rings by addition operations
+3/21/7  Mail2/pm.d/pm2 
+    email:
+from cornulier 2/20/8   3/1/8  3/24/7 2/22/8 
+to 3/1/8
+Yves maibox at webmail.
+
+
+    MR: Youla-Pickel 1984.  Laubenbacher 2000.Mingsheng 2005. 
+Smale     Mathematical problems... 2000.
+L Blum ..., Complexity and real computations book 1998.
+Mulmuley .... Geometric complexity theory SIAM J Comput. 2001 (electronic).
+    Papers: Vaserstein-Suslin Izv 1976 in Russian.
+Suslin On the structure of the special linear group... Izv 1977.
+Suslin-Kopeiko orth
+Kopeiko Sp Mat Sb 1878
+Suslin Reciprocity.... 1978
+    PSU book: Foundationsof computational mathematics ..... QA297.S63 2000
+Rejection letter from Annals July 30, 2007
+-----------------------
+Bounded generation of arithmetic groups
+Mail2/bound1 3/26/7
+preprint: Bonded generation of SL(n,A) by Dave Witte Morris from Paige. NY J Math.
+Carter-Keller Am J M  Lemma 4 on page 680.
+Vaserstein On SL(2) Mat Sb. #19.
+Costa-Keller Bounded word length for SL_n(O) preprint
+Costa-Keller The congruence subgroup problem for non standard models,preprint
+Carter-Keller, Bounded elementary generation of SL_n(O), preprint.
+Carter-Keller, Bounded elementary expressions in SL(2,O), preprint
+Carter-Keller-Paige, Bounded expressions in SL(2,O), preprint
+Carter-Keller-Paige, Bounded expressions in SL(2,A), preprint
+Carter-Keller, Elementary expressions for unimodular matrices, Comm Alg 1984
+BIG BLUE FILE:
+Morris
+Bass-Milnor-Serre
+MR: Erovenko 2001,Y Shalom 1999, Platonov-Rapinchuk 1992,   Zakiryanov 1985,Erovenko-Rapinchuk,  Tavgen1990,  1992;, 1994;  Kumar 1994, Gupta-MurtyMurrty   Euclidea algorithm 1987,  Harper-Murty 2004,
+Polynomial parametrization ... 
+www/preprints/pp5.pdf   India/pp5
+Send to:...  India/pp0
+
+van der Kallen 1992
+-------------------------------------
+Linear approximation, matrix games, and linear programming
+Mail2/Talk2.14.8  
+Bosovitch 1755  Lagrange 1805  least squares
+
+Linear approximation, matrix games, and linear programming
+Mail2/Talk3.64.8  
+
+
+Matrix games, linear programming, and linear approximation  6/29/6
+Mail2/LPtoLAp.f/LPtoLAp4  
+submitted to arXiv math on 9/9/6, to arXiv computer sci on 9/11/6. toPubl.M Barcelona on 12/15/6.
+On page 2: will work. -> will work. Notice that 0 < alpha < 1.
+                  alpa -> alpha/(1- alpha).
+On page 5: QA275.B56 1983. (the first reference, Bloomfield 1983).
+
+Reduction of linear programming to linear approximation  Dec 2005
+Mail2/LPtoLAp        www/party//LPtoLAp.pdf
+
+Matrix games and linear approximation  
+Mail2/LPtoLAp4
+
+condition number of A = sigma_max(A)/sigma_min(A).
+sigma = singular values of A = eigenvalues of sqroot(A*A).
+
+Wiki:
+Least absolute deviations 
+Regular polytope
+Octahedron
+Chebyshev distance
+
+   Preprints:
+Division-free algorithms for the determinat and.... G Rote. published 2001 see MR
+
+  MR: Strohmer -Vershynin   2006 
+        Nash 1950, 1950  1950  1951
+        McKeanSchrader in book 1987   statistical ...L-1 norm
+  Barr0dale-Phillips 1975 
+   Banks-Taylor   1980.
+
+Karmarkar folder
+Pomansky folder
+---------------------------
+book
+www/book/index.html  Ravi Rao (username password).
+~vstein/India  /bookref  /contents  /sol       /unification
+    papers:
+   Melissa Meehan, Symplectic commutator subgroups, preprint 7/28/4.   Mail2/pdffiles/Meehan.pdf.
+Melissa Meehan Hoover, Symplectic commutator subgroups, preprint 8/18/5. received from Martin Dixon on 8/22/5, report 8/29/5.
+    Karoubi,  Lectures on K-theory, 2003 Z.
+   Kuku, Classical K-theory 2003 Z.
+   Carlson Recent developments in algebraic K-theory,  2001.
+
+---------------------------
+quadratic
+
+Mail2/quadratic0
+Mail2/quadratic 3/3/6
+Sakkalis-Farouki-Vaserstein  Mail2/Takis4.pdf  4/10/8
+
+Polynomial Pythagorean tuples  ppt at home. emailed to vstein on 1/4/9.
+
+papers:
+Matthews 1981.
+Zannier: 1993; 1996; preprint   Mail2/TeX/Zannier2. Parametrizing SL_2(Z) and a question of Scolem
+Grunewald-Mennicke-Vaserstein 1994
+Grunewald-Mennicke-Vaserstein 1991
+Aicardi-Timorin On binary quadratic forms with semigroup property ArXiv math.NT/0412145 Arnold's problem.
+Heath-Brown Artin;s conjecture for primitive roots 1986
+Grunewald-Segal  1979, 1981 Cambridge, 2004 Crele On integer dolutions of quadratic equations solution in           positive integers.   decidable existence also decides finiteness  
+Cooke-W... Comm Alg  1975
+Lagarias-Mallows-Wilks 2002 Monthly Beyond the Descartes circle theorem JStor via CAT  Sody-Gossett  Appolinian packing
+Tirrell and Clifford A. Reiter (1st PH.D of W Lie at PSU reiterc@lafayette.edu PA Eston) 
+Matrix generation of the Diophantine solutions to sums of 3 <= n <= 9 squares that are squares, preprint
+    http://www.nature.com/news/2004/041229/full/news041229-8.html
+    ppllpdpp.pdf  mgss39f_pp.pdf  from   from Reier websie e-mailed to Takis (copy to me)  § and Frish
+Kocik Mail2/Kocik.pdf    2007.
+
+MR:
+Dietmann 2003   2004
+Platonov-Rapinchuk 1993
+Aubry 1996 Weil theorem
+Lang S 1954
+Nisnevich L  1954
+Swan  1973
+Poonen 2004
+Autissier 2001 2002
+Gabber 2001
+Zariski 1941 (Bertini)
+Chalk-Ashton  1994  diag quadr forms
+Lewis-Schinzel  1980
+Graham-Lagarias-Mallows-Wilks-Yan  J Number Th 2003, Discr Comp Geom 2006.
+
+books:
+Cassels   1978  Rational quadratic forms  p. 136, 138, 154.
+Shinzel Selected topics on polynomials 1982
+Schmidt W 1976.
+Mullen 1993
+Lang 1983  Collected papers 2000 5 vol.
+Number Theory in progress Schintzel   1997
+Buell  1989  Binary quadratic forms QA201.B84 1986.
+Tuassky 1982 ternary QA243.T43 1982
+Finite fields conference 1993
+Shimura 2004 QA243.S49 2004.
+Siegel Carl 1972.
+conf 2004 QA1.C8 v.344
+Dickson History QA241.D5  1966 v 1-3.
+Izhbodin 2000 QA3.L28 no 1835
+Integer quadratic forms 1999 QA1.C8 v.249
+Conway  The Sensual quadratic forms 1997  QA243.C6 1977
+Mollin 1996 QA247.M65 1996
+Kitaoka 1993 GA243.K48 1993.
+Nebe Finite rational matrix groups 1995 QA3,A57 no 556
+
+Takis   Panajiotis Sakkalis  stp@aua.gr   Rida Farouki ucdavis
+--------
+Switzerland: Eva (Lausanne), de la Harpe (Geneva), Kutzschebauch (Bern) (see arXive for preprint).
+Geneve coll April 2.
+----------------
+137 Sums and strict sums...  Mail2/Luis4.pdf May 22,2008 after acceptance.
+136  Similarity 3\time 3 ... arXiv  Mail2./MyPapers/uri.d/Uri31.pdf
+135 strict Waring J Number Th  Mail2/MyPapers.d/strict6 June 24, 2006.

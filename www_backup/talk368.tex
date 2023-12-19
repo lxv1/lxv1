@@ -1,0 +1,512 @@
+Mail/Talk3.64.8
+
+\font\ch=cmbx10 at 18truept
+\font\sec=cmbx10 at 12truept
+
+TALK March 6, 2008
+\bigskip
+
+\centerline {\ch  Linear Approximation, Matrix Games, }
+\centerline {\ch  and Linear Programming}
+\bigskip
+
+Number = real (or rational) number
+
+Definition. Linear form in variables  $x_1,\ldots, x_n  :$
+$$ a_1x_1 + \cdots +a_nx_n$$
+where $a_i $ are given numbers.
+
+Example: $2x-3y+z $ is a linear form in $ x,y,z.$
+
+Definition. Affine function:  linear form + given number.
+
+Definition. A linear equation: affine function = affine function.
+In standard form,  linear equation is
+
+linear form = given number.
+
+Example: $2x = 3.$
+
+System of linear equations in standard matrix form: $Ax = b$
+where $A$ is a given $m$ by $n$ matrix (the coefficient matrix) , $x$ is a column of $n$ distinct variables (unknowns), and  $b$ is a given column with $m$ entries.
+\medskip
+
+{\it Notations. } For any number $c,$ let  $c_{m\times n}$ denote the constant $m$ by $n$ matrix (every entry is $c).$  Following the tradition, the size is often dropped for the zero matrices.
+The identity matrix is denoted $1_n.$
+\medskip
+
+
+{\sec 1. Linear Approximation}
+\smallskip
+
+Discrete Linear Approximation  (or linear regression) Problem is: 
+
+find the best approximate solution to a system $Ax=b$  of linear equations. 
+
+How do we measure the quality of approximation?
+For any number    ${\rm p}>0$  and a    column  $y= (y_i), $ set
+$$
+||y|| _{\rm p}= \sum_i |y_i|^{\rm p}.
+$$
+If we want the triangular inequaity  $||y+z||_{\rm p}^{1/{\rm p}}  \le ||y||_{\rm p}^{1/{\rm p}}   + ||z||_{\rm p}^{1/{\rm p}}  ,$ then  
+${\rm p} \ge 1.$ If we want to stay with rational numbers,  then ${\rm p}$ is an integer.
+
+We also can define   $||y||_{\rm p}$ for ${\rm p} = \infty$ and ${\rm p} = 0$ as follows
+$$
+||y||_{\infty} =  \max |y| = \max_i  |y_i| = \lim _{{\rm p} \to \infty}  ||y||_{\rm p}^{1/{\rm p}} 
+$$
+(uniform of Chebyshev norm) and 
+
+$$
+||y||_0 = \sum {\rm sign}|y_i| = \lim _{{\rm p} \to 0}  ||y||_{\rm p}
+$$
+(Hamming or mode norm).
+
+
+Thus, we are trying to find the best  (in the sense $||Ax-b||_{\rm p} \to \min)$ fit  $Ax$ to a given vector $b$  in the column space  of a given matrix $A.$ In other words, we want a point $Ax-b$ in a given affine subspace closest to the origin..
+
+
+In statistics, usually, ${\rm p}=2$ (the least-squares criterion) and  the first column of the coefficient matrix
+$A$ consists of ones.  
+A reason that the choice ${\rm p}=2$ is so popular (in particular after Legandre 1805, Gauss, 1809)  is that the sum of squares has a big
+group of linear automorphisms. Another reason is that  finding the best $l_2$ fit can be reduced to solving  the system $A^TAx=A^Tb$ of linear equations.
+
+
+However, the choice $p=1$ (least-absolute-deviations) was popular  in the 18th century (e.g., 
+Boscovic 1755, Laplace 1789) and more recently.  Fourier (about 1822)  considered both $p = 1$ and ${\rm p}= \infty.$ 
+He also suggested the simplex method for finding the corresponding best fits. Dantzig  rediscover
+simplex method which is now  the most popular way to solve linear programs.
+
+Example: $m =1$ and  the column $A$ consists of ones. So our system is
+$$x=b_i   \ {\rm for} \   i = 1,\ldots, m$$
+($m$ equations for one variable) where $b = (b_i).$     
+
+The least-squares fit (${\rm p}=2)$ is the mean  $(b_1+\cdots+b_m)/m.$ The least uniform fit (${\rm p}=\infty)$ is
+the midrange $(\min(b) + \max(b))/2.$ The least-absolute-deviations fits (${\rm p}=1)$ are the medians.
+In the case ${\rm p}=0,$ the best fits are the modes.
+
+% \filbreak 
+\bigskip 
+
+{\sec 2. Matrix Games}.
+\medskip
+
+A matrix game is given by a (payoff) matrix  $P.$  
+He, the row player chooses a row. She, the column player chooses a column. The corresponding matrix entry is what she pays to him.
+
+Let $P$ be of size $m$ by $n$.
+A mixed strategy for him is a row $p$ (do not mix with the number $p$ above)  with $m$ non-negative entries whose sum is 1. The corresponding worst case payoff is $\min(p^TP).$
+
+A mixed strategy for her is a row $q$ with $n$ non-negative entries whose sum is 1. 
+In the worst case, she pays him $\max(Aq^T).$
+
+His optimal mixed strategy is a maximizer of  $\min(p^TP)$ over his mixed strategies.
+Her optimal mixed strategy
+is  a minimizer for    $\max(Pq^T)$ over her mixed strategies. 
+ The minimax theorem of J. von Neumann asserts that
+$\max\  \min(p^TP) =  \min  \max (Pq^T).  $   In other words, there is an equilibrium  $(p, q)$ in mixed strategies.
+The payoff    $p^TPq^T$ at  an equilibrium is known as the value of the game. At an equilibrium, no player can do better by a unilateral change.
+
+
+Example: The rock-scissors-paper.
+ The payoff function is defined by the rules {\it Rock  breaks Scissors, Scissors cuts Paper, Paper covers Rock}, and every strategy ties against itself.   Valuing a win at $1,$ a tie at 0, and a loss at $-1$, we can represent the game with the following matrix, where, for both players, strategy $1$ is {\it Rock}, strategy $2$ is {\it Scissors}, and strategy $3$ is {\it Paper}:
+
+$$P=\left[ \matrix{ 0 &  1&  -1 \cr  -1 &  0 &  1 \cr  1 &  -1 &  0 \cr} \right]. $$
+
+His optimal strategy is $[1/3, 1/3, 1/3],^T$ Her optimal strategy is  $[1/3, 1/3, 1/3],$  The value of game is 0.
+
+More generally, if $P = -P^T,$ then the game is called symmetric,  the value is 0, and his optimal strategies are the transposes of her optimal strategies.
+
+
+
+If we add the same number $c$ to all entries of $P$ we do not change the optimal strategies, but we add $c$ to the values of game.  Every matrix game, with the payoff matrix $P$  of size $m$ by $n,$ is equivalent to the symmetric game
+with the payoff matrix 
+$$
+M=\left[ \matrix{ 0_{n\times n} &  -P^T- c_{n\times m} &  1_{n\times 1} \cr  P +c_{m\times n}  &  0_{m\times m} &  -1_{m\times 1} \cr  -1_{1\times n} & 1_{1\times m} &  0 \cr} \right] 
+$$
+of size $m+n+1$ by   $m+n+1$ 
+where   the number $c$ is chosen so that  all entries of $ P +c_{m\times n}$ are positive 
+ (ie.g., $c = -\min(P) +1)$   so the value of  the corresponding matrix game  is positive.  
+
+ 
+
+Namely, $(p,q), v$ are an equilibrium and the value for $P$  if and only if
+$(q,p^T,v+c)$ is an optimal strategy for $M.$
+
+As observed by von Neumann, there is another way to reduce any matrix game 
+to a symmetric game:  Let them play, together  with the game $P,$ the game $-P^T,$
+i.e., the game with switched sides.
+For $P$ of size  $m$ by $n,$ this leads to a skew-symmetric matrix of size $mn$ by $mn.$  
+Its entries are the products of the entries of $P.$
+
+The   more compact symmetric game,  with  the payoff matrix $M$  of size $m+n+1$ by   $m+n+1$ 
+was observed by Dantsig a few years later.
+\filbreak
+\bigskip
+
+{\sec 3. Linear Programming}
+\medskip
+First, we give a few definitions
+
+An optimization problem is  maximization or minimization of a real-valued function (called the objective function) on a set (called the feasible region or the set of feasible solutions).
+
+A feasible value is a value of the objective function on the feasible set. An optimal value  (or optimum)  is
+the maximal (resp., minimal) feasible value. An optimal solution (or optimizer ) is a feasible solution where the objective function take its optimal value.
+
+A mathematical program is an optimization problem where the objective function is a function of finitely many real variables.
+
+ A linear constraint is a linear equation or is obtained from a linear equation by replacing  the equl sign with the sign $\le$ or $\ge.$
+
+  A linear program is an optimization problem with objective function being affine and the feasible region given by a finite system of linear constraints.
+
+Example: 
+
+$ 2x+3y \to \max$ subject to $|x|+|y| \le 1$
+
+\noindent
+is a linear program with 2 variables and 4 linear constraints.
+
+Answer: $\max= 3$ at $x=0, y=1.$
+
+In general, there are 3 possible answers to a linear program:
+
+an optimal solution and the optimal value,
+
+the program is infeasible, i.e., the feasible region is empty, i.e., there are no feasible solutions,
+
+the program is unbounded, i.e., there are arbitrary large (resp., small) feasible values.
+
+The duality theorem allows to reduce solving any linear program to finding  feasible solutions 
+for system of linear constraints
+
+Namely, given a linear program
+$$cx+d \to \min, Ax +b \ge 0, x \ge 0 \eqno{(1)}$$
+in canonical form we can consider the dual linear program    
+$$-yb+d \to \max, -yA+c \ge 0, y \ge 0.$$
+For any feasible $x, y,$ we have
+$$-yb+d \le yAx +d \le cx+b,$$
+i.e., every feasible value for the primal problem is less or equal to any feasible value for the dual problem.
+The duality theorem asserts that if both problems are feasible, then the optimal values are the same.
+Therefore the pairs $(x,y)$  of optimal solutions are in one to one correspondence with the feasible solutions for the system
+$$Ax +b \ge 0, x \ge 0,  -yA+c \ge 0, y \ge 0,   cx+yb \le 0. \eqno{(2)}$$
+
+\smallskip
+
+Recent interior-point methods in linear programming work with the Karmarkar form:
+$$cx \to \min, Ax = 0, x \ge 0,  1_{1\times m}x=1 \eqno{(3)}$$
+where the $m$ by $n$ matrix $A$ has the property that  $A1_{n\times 1}  =1_{n\times 1} .$ This linear program is bounded and feasible ($x=1_{n\times 1} /n$ is a feasible solution).
+Since there are unbounded and infeasible linear programs, reduction of any linear program to the 
+Karmarkar form is an issue. The known conversions require  an upper bound on  the size
+of a feasible solution provided that the program is feasible. Such a bound is available 
+in terms of  numerators and denominators of given numbers provided that the given numbers are rational. Here we show how to do reduction without  referring to digits of data or to ``sufficiently large" numbers, so our reduction is independent on the size of data and works when given numbers are real numbers. 
+
+Remark. An arbitrary  linear program with $m$ linear  constraints for $n$ variables can be easily written in canonical form (1) with a matrix $A$ of size at most $2m$ by $2n.$  A
+ smaller canonical form can be computed  (using polynomial in  $m+n$ number of arithmetic operations)
+ with a matrix $A$ of size at most $m$ by $n.$
+
+ 
+\bigskip
+\filbreak
+
+{\sec 4. Reduction of $l_1$ and $l_{\infty}$ approximations to linear programming}
+\medskip
+Given a linear $l_{\infty}$ approximation problem   $||Ax-b||_{\infty} \to \min$ (where $A$ is an $m$ by $n$ matrix) we can reduce it to a linear program
+$u \to \min, u_{m\times 1}  \le Ax-b \le u_{m\times 1}$ with $n+1$ variables and $2m$ linear constraints.
+Here $u$ is a new variable.
+
+This linear program can be converted to a canonical form(1) without any computations:
+$$
+\left[ \matrix{ A &  -A&  1_{m\times 1}    \cr -A  &A  &  1_{m\times 1}    \cr} \right] 
+\left[ \matrix{  x'  \cr   x'' \cr  u    \cr} \right]  +\left[ \matrix{  -b \cr  b   \cr} \right]   \ge 0, \ 
+x' \ge 0, x'' \ge 0, u \ge 0, u \to \min
+$$
+with $x=x'-x''.$  The coefficient matrix is of size $2m$ by $2n+1.$
+By additional computations, a smaller canonical form can be obtained. Namely the size of the
+coefficient matrix in canonical form can be reduced to   $2m$ by $d+1$ where $d$ is the rank of $A$ so
+$d \le \min(m,n).$
+
+Given a linear $l_1$ approximation problem   $||Ax-b||_1\to \min$ (where $A$ is an $m$ by $n$ matrix) we can reduce it to a linear program
+$1_{1\times m} u = \sum_{i=1}^mu_i \to \min, u \le Ax-b \le u$ with $n+m$ variables and $2m$ linear constraints.
+Here $u =  (u_i)$ is a column with $m$ new variables.
+
+This linear program can be converted to a canonical form(1) without any computations:
+$$
+\left[ \matrix{ A &  -A&  1_m  \cr -A  &A  &  1_m \cr} \right] 
+\left[ \matrix{  x'  \cr   x'' \cr  u    \cr} \right]  +\left[ \matrix{  -b \cr  b   \cr} \right]   \ge 0, \ 
+x' \ge 0, x'' \ge 0, u \ge 0, 1_{1\times m} u \to \min
+$$
+with $x=x'-x''.$ The coefficient matrix is of size $2m$ by $2n+m.$
+By additional computations, a smaller canonical form can be obtained. Namely the size of the
+coefficient matrix in canonical form can be reduced to   $2m$ by $d+m$ where $d$ is the rank of $A$ so
+$d \le \min(m,n).$
+
+Remark. It is well-known, that a linear $l_2$ approximation problem 
+  $||Ax-b||_2\to \min$ (where $A$ is an $m$ by $n$ matrix) we can reduce it to a linear system
+  $A^TAx=A^Tb$ of $n$ equations for $n$ unknowns.
+  
+\bigskip
+{\sec 5. Reduction of Matrix Games to Linear Programming}
+\medskip
+Given a payoff matrix $P$  with $m$ rows and $n$ columns, the optimal strategies $p$ for the row player are the optimal solutions for the 
+linear program
+$$ u \to \max, p^TP \ge u,   1_{1\times m}p=\sum_{i=1}^m p_i = 1, p \ge 0$$
+ with  $m+1$  variables and $2m+1$ linear constraints.
+Here $u$ is a new variable.
+
+The optimal strategies $q$ for the column player are the optimal solutions for the linear program
+$$ v \to \min,  Pq^T \le v,    q1_{n\times 1}=  \sum_{j=1}^m q_j = 1, q \ge 0$$
+ with $n+1$  variables and $2n+1$ linear constraints.
+Here $v$ is a new variable.
+
+These two linear programs are dual to each other, so the minimax theorem follows from the duality theorem.
+
+Now we show how to reduce  any matrix game to  the Karmarkar form (3). Without loss of generality, we can assume that the matrix game is symmetric.
+Let $M = -M^T$ be the payoff matrix. We have to find an optimal strategy $q$ for the column player:
+$$Mq \le 0, q \ge 0,  q1_{k\times 1}=1.$$
+We introduce the slack variables  $v = -Mq \ge 0.$ The problem takes the form
+$$[M, 1_k][{q \atop v}] = 0, q \ge 0,  q1_{k\times 1}=1, v \ge0.$$
+where $1_k$ is the identity matrix.
+
+Next we introduce the sum  $C=M1_{k\times 1}+ 1_{k\times 1}$   of column of the matrix   $[M, 1_k]$ an a new variable $u.$   Set $A = [   M, 1_k, 1_{k\times 1}-C] $    
+Notice that  $A1_{2k+1\times 1}= 1_{2k+1\times 1}.$
+Then our problem becomes
+$$A\left[ \matrix{ q \cr   v  \cr  u \cr} \right]  =0,  q \ge 0, q1_{k\times 1}=1, v \ge 0, u \ge 0, u \to \min.$$
+(the optimal value is $u=0).$  Now we set
+$$x = \left[ \matrix{ q \cr   v  \cr  u \cr} \right]   /(1+1_{1\times k}v+u)$$
+  to obtain the Karmarkar standard form. 
+  Note that $q$ can be recovered for an optimal $x = [x',x'',u]^T$  as  $q = x'/1_{1\times k}x'$ because
+the last component  $u = 0$ and $x'=0$ would imply $ x''=0.$
+% \filbreak
+\bigskip
+
+ 
+{\sec 6. Reduction of Linear Programming to Matrix Games}
+\medskip
+
+We saw above that the optimal  solutions of a linear program and its dual linear program are the feasible solutions $(x,y)$ for the system (3)  of linear constraints
+$$Ax +b \ge 0, x \ge 0,  -yA+c \ge 0, y \ge 0,   cx+yb \le 0.$$
+
+This can be written as  
+$$[y,x^T,1) M \ge 0 \ {\rm with} \  M=\left[ \matrix{ 0 &  -A & -b \cr  A^T&  0 &  -c^T \cr  b^T & c &  0 \cr} \right]. $$
+When $A$ is of size $m$ by $n,$  the matrix $M$ is of size  $m+n+1$ by  $m+n+1.$
+
+ When $(x,y)$ is a feasible solution,  $[y,x^T,1)  /(1_{1\times n}x+ y1_{m\times 1} +1)$ is an optimal strategy for the row player in a symmetric game  given by $M.$  The last entry in the strategy, 
+ $ 1  /(1_{1\times n}x+ y1_{m\times 1} +1)$  is nonzero.
+ Conversely, given an optimal strategy    $u = (u_i),$  i.e., $u \ge 0,  u1_{m+n+1\times 1}= 1, uM \ge 0$
+ with $u_{m+n+1} \ne 0,$
+ we  obtain $(x,y)$ by dropping the last entry 1 in $u/u_{m+n+1} .$
+
+Thus, we obtain an 1-1 correspondence between 
+the pairs $(x,y)$ of optimal solutions for a linear program and its dual program on one side
+and the optimal strategies for the row player with the nonzero last entry.
+
+A known way to remove  the the last condition depends on separation from 0 for the nonzero minors of $M$  which can be easily done when the entries of $M$ are rational numbers. Here we give another way which works for real numbers.
+
+We set  $k=m+n+1$ and choose a number $c$ such that     all entries of the matrix $M+c_{k\times k}$ are positive, e.g., $ c = \max(M)+1 \ge 1.$
+
+Consider the linear program  $u \ge 0,  u1_{k\times 1} = 1, u(M  +  c_{k\times k)} \ge  1_{1\times k},      u_k \to \max$
+with $k$ variables $u = (u_i).$  Its optimal solutions are the optimal strategies $u$ for the symmetric game with the payoff matrix$M$ (the number $c$ does not matter) with the maximal values for the last entry of $u.$ If  its optimal values is 0, i.e., there is no optimal strategies with nonzero last entry, then
+the original linear program has no optimal solutions. Otherwise, the optimal solution gives
+an optimal solution for that program.
+
+ It is convinient to replace the constraint $ u1_{k\times 1}= 1$ by  $ u1_{k\times 1}  \le 1$  which does not change the optimal value. This is because in the view of   the other constraints  
+ there are no feasible solutions with  $ u1_{k\times 1}  <  1.$ 
+
+The corresponding symmetric game has the following skew-symmetric payoff matrix of size $2k+2$ by $2k+2:$
+$$
+M' = \left[ \matrix{ 
+0_{k\times k} & 0_{k\times k}  &   M+c_{k\times k}     & -c_{k\times 1} \cr  
+0_{k\times k} & 0_{k\times k}  &         1_{1\times k}                 &  -1\cr 
+M-c_{k\times k}       & -1_{k\times 1}  &        0_{k\times k}                &  {0_{k-1\times 1}   \atop 1}   \cr 
+c_{1\times k} & 1 &         0_{1\times k-1},-1                  &0} \right]. 
+$$
+
+Now we claim that  the last component  $v_{2k+2} \ne 0$ of every optimal strategy  $v = (v_i)
+=[v',v_{k+1}, v'',   v_{2k+2} ] $  where  $v' = (v_i)_{1\le i \le k}$ and    $v'' = (v_i)_{k+2\le i \le 2k+1}.$ 
+Otherwise, the condition $vM' \ge    c_{2k+2\times 1}$ i would include   the condition
+$-v''1_{l\times 1}\ge 0,$ hence  $v'' = 0.$ Then  looking at the last entry of  $vM' $ we conclude that 
+$v', = 0$ and $v_{k+1},= 0.$  But $v=0$ contradicts the condition  $v1_{1\times 2k+2} =1.$
+
+Thus, every optimal strategy $v$ for $M'$ solves the  problem 
+of finding a feasible solution    for
+$$Ax +b \ge 0, x \ge 0,  -yA+c \ge 0, y \ge 0,   cx+yb \le 0$$
+(and hence finding an optimal solution for the linear program $cx+d \to \min, Ax +b \ge 0, x \ge 0.$)
+Namely, if   the entry $v_{k+1}$ is zero, there are no feasible solutions.
+Otherwise, we get an optimal strategy for  $M$ with a nonzero last component   and hence a feasible solution for the system .
+
+
+
+%  \filbreak
+\bigskip
+
+{\sec 7. Reduction of Matrix Games to Linear Approximation}
+\medskip
+As shown above it suffices to show that solving any symmetric game
+can be reduced to finding the best $l_1$ fit as well as the best $l_{\infty}$ fit. Let $P = - P^T$ be a skew symmetric $k$ by $k$ matrix.
+
+
+
+
+We want to find an optimal strategy $p$ for the row player, i.e., a column $p$ such that
+$$Pp \le 0,  p \ge 0, 1_{1\times k}p = \sum _{i=1}^k  p_i= 1.$$
+Let $c=\max(P)$ be the maximal entry of the matrix $P.$
+Consider the following $l_1$ approximation problem:
+$$
+|| \left[ \matrix{Pp \cr  c_{k\times 1}-Pp \cr  p \cr 1_{k\times 1}-p \cr 1_{1\times k}p -1} \right]||_1 =
+||Pp||_1 + ||c_{k\times 1}-Pp||_1  +||p||_1+||1_{k\times 1}-p||_1+| 1_{1\times k}p  -1|   \to \min.
+$$
+Here the first column has $4k+1$ entries.
+
+When $p$ is optimal, the objective function is 
+$k+k+0 =2k.$ When $q$ is a column with $k$ entries which is not a mixed strategy or not optimal, then
+the objective function  is $>2k.$ So the  optimal solutions $p$ for the approximation problem are the same as optimal strategies $p.$ 
+
+Thus,  $m$ by $n$ matrix game can be reduced to an $l_1$ approximation problem of size 
+$4k+1$ by $k,$ where $k = m+n+1.$
+
+\smallskip
+
+Now we consider the following $l_{\infty}$ approximation problem:
+$$
+|| \left[ \matrix{Pp+c_{k\times 1} \cr  c_{k\times 1}-p  \cr    c-1+ 1_{1\times k}p   \cr c+1- 1_{1\times k}p } \right]||_{\infty} =
+\max(||Pp+ c_{k\times 1}||_{\infty} ,  ||c_{k\times 1}-p||_{\infty},      c-1+   1_{1\times k}p   ,   c+1-   1_{1\times k}p  )   \to \min.
+$$
+The first column has $2k+2$ entries.
+
+When $p$ is optimal, the objective function is  $\max(c,c,c,c)=c.$
+ When $q$ is a column with $k$ entries which is not a mixed strategy or not optimal, then
+the objective function  is $>c.$ So the  optimal solutions $p$ for the approximation problem are the same as optimal strategies $p.$ 
+
+
+Thus,  $m$ by $n$ matrix game can be reduced to an $l_1$ approximation problem of size 
+$2k+2$ by $k,$ where $k = m+n+1.$
+
+
+% \bigskip
+ \filbreak
+
+{\sec 8. Reduction of  $l_1$  Approximation to  $l_{\infty}  $ Approximation }
+\medskip
+
+We start with   
+$$
+||Ax-b||_1       \to \min
+$$
+where the matrix $A$ is size $m$ by $n.$
+
+By Section  4, without any computations, we can write a linear program in canonical form with the coefficient matrix 
+of size   $2m$ by $2n+m.$  
+
+By Section 6,     this linear program can be transformed to a symmetric matrix game of size $2l+2$ by $2l+2,$ where  $l=2n+3m+1.$
+
+By Section 7,    this symmetric game can be reduced to a linear    $l_{\infty}  $ approximation
+of size $2(2l+2) +2$ by $2l+2,$
+
+Thus,   $l_1  $ approximation problem of size $m$ by $n$
+can be converted to   $l_{\infty}  $ approximation problem of size 
+$8n+ 12m + 10$    by $4n+6m+3.$
+
+
+
+\bigskip
+% \filbreak
+
+
+{\sec 9. Reduction of  $l_{\infty}  $  Approximation to   $l_1$    Approximation }
+\medskip
+
+We start with   
+$$
+||Ax-b||_{\infty}        \to \min
+$$
+where the matrix $A$ is size $m$ by $n.$
+
+By Section  4, without any computations, we can write a linear program in canonical form with the coefficient matrix 
+of size   $2m$ by $2n+1.$  
+
+By Section 6,     this linear program can be transformed to a symmetric matrix game of size $2l+21$ by $2l+2,$ where  $l=2m+2n+2.$
+
+By Section 7,    this symmetric game can be reduced to a linear    $l_1  $ approximation
+of size $4l(2l+2)+1l$ by $2l+2$
+
+Thus,  $l_{\infty}  $   approximation problem of size $m$ by $n$
+can be converted to   $l_1  $    approximation problem of size 
+$16m+ 16n + 17$    by $4m+4n +6.$
+
+
+\bigskip
+% \filbreak
+
+
+{\sec 10. Reduction of  Linear Programming to Linear   Approximation }
+\medskip
+
+By Section 6,  any linear program (1)  in canonical form with an $m$ by $n$ coefficient matrix $A$ can be reduced to
+a symmetric  $2k+2$  by $2k+2$ matrix game where
+$k=m+n+1.$ By Section 7, this game can be reduced to 
+an     $l_1$ approximation problem of size $4(2k+2)1$   by  $2k+2$ as well  as to
+an $l_{\infty}$ approximation problem of size $2(2k+2)+2$  by $2k+2.$
+
+Thus, the linear program (1) of size  $m$ by $n$ can be reduced to  
+an     $l_1$ approximation problem of size $8(m+n+2)$   by  $2(m+n+2)$ as well  as to
+an $l_{\infty}$ approximation problem of size $4m+4n+10$  by $2(m+n+2.)$
+
+
+This shows the computational complexity of linear programming is the same as that of 
+$l_1$ approximation  as well as that of    $l_{\infty}$ approximation. The complexity here is measured in terms of elementary operations with given numbers (without referring to their digits).
+Presently, it is unknown whether  linear programming problems have less that exponential complexity in terms of $m+n$ where $n$ is the number of variables and $m$ is the number of linear constraints.
+See Problem 9 in [6] about existence of  a strongly polynomial time algorithm for linear programming.
+The known  versions of the simplex method  have  exponential running time in the worst case.
+
+It is known the the running time is polynomial in terms of  $m,n,$ and the number of bits  in data.
+(i.e., there    exist    weakly polynomial time algorithms for
+ linear programming).   
+
+It is shown in [1] that a bounded feasible linear program  (with a given bound) can be reduced to an  
+$l_1$ approximation .
+In spite  of this, on page 169,  
+discussing the existence of exponential examples for known methods for 
+$l_1$ approximation , the authors
+ claimed that ``the truth of the matter is still an open question." 
+ 
+ The present paper  confirms that this question is equivalent to the similar question in linear programming.
+
+ \bigskip
+
+\filbreak
+
+{\sec References.}
+\medskip
+
+
+1.  Bloomfield, Peter and   Steiger, William L. {\it 
+Least absolute deviations.
+Theory, applications, and algorithms.}    Progress in Probability and Statistics, 6.
+Birkhäuser Boston, Inc., Boston, MA, 1983. xiv+349 pp. ISBN 0-8176-3157-7.
+
+2. Dantzig, George B. {\it Linear programming and extensions. } Princeton University Press, Princeton, N.J. 1963 xvi+625 pp. 
+
+3.  
+Ha\v cijan, L. G.,  A polynomial algorithm in linear programming. (Russian)  {\it Dokl. Akad. Nauk SSSR}
+244 (1979), no. 5, 1093--1096. 
+
+4.  
+Karloff, Howard {\it Linear programming. } Progress in Theoretical Computer Science. Birkhäuser Boston, Inc., Boston, MA, 1991. viii+142 pp. ISBN: 0-8176-3561-0  
+
+5. 
+ Karmarkar, N.,  A new polynomial-time algorithm for linear programming. {\it Combinatorica}  4
+(1984), no. 4, 373--395.
+
+
+
+6. Smale, Steve, {\it Mathematical problems for the next century}. Mathematics: frontiers and perspectives, pp. 271–294, American Mathematics Society, Providence, RI (2000).
+
+7. L.N. Vaserstein,  
+Matrix Games, Linear Programming, and Linear Approximation, 5 pp. 
+
+\noindent
+arXiv:cs/0609056 
+
+
+
+\end

@@ -1,0 +1,303 @@
+\documentclass[12pt] {article}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}{Corollary}
+\newcommand{\brackets}[3]{\genfrac {[}{]}{0pt}{}{#1}{#2}_{#3}}
+\numberwithin{equation}{section}
+\numberwithin{theorem}{section}
+\numberwithin{corollary}{section}
+
+\newcommand{\calQ}{\mathcal{Q}}
+\newcommand{\Nm}{\left[ \begin{array}{c} N \\ m \end{array} \right] }
+\newcommand{\nn}{\left[ \begin{array}{c} N \\ n \end{array} \right] }
+\newcommand{\snm}{\sum^N_{n=m} }
+
+%\newcommand{\mathbf Q}{\mathbf{Q}}
+
+\title{Ramanujan and Partial Fractions}
+
+\author{ by \\
+\\
+George E. Andrews}
+
+%\footnote{ }
+%Partially supported by National Science Foundation Grant DMS 0200047}}
+
+\begin{document}
+ \maketitle
+%\vfil\eject
+
+\begin{abstract}  The subject of partial fractions is usually confined to the standard calculus course and is viewed as a useful albeit mundane tool.  This paper looks at partial fractions starting with Euler.  We then consider some of the very surprising and appealing discoveries made by Ramanujan.
+\end{abstract}
+
+%\pagebreak
+
+\section{Introduction} The idea of partial fractions must surely have arisen after calculus and basic analysis had a solid footing.  We can certainly find carefully prepared examples in Euler's Introduction in Analysis Infinitorum, Volume 1 \cite[Chapter 2]{Euler}.  
+
+For example, \cite[pp. 34--35]{Euler} Euler proves that
+\begin{equation}
+\frac1{z^3 (1-z)^2(1+z)} = \frac1{z^3} + \frac1{z^2}+ \frac2{z}+ \frac1{2(1-z)^2} + \frac7{4(1-z)} - \frac1{4(1+z)},
+\end{equation}
+or \cite[pp. 31--32]{Euler}
+\begin{equation}
+\frac{z^2}{(1-z)^3(1+z^2)} = - \frac{z-1}{4(1+z^2)} + \frac1{4(z-1)} - \frac1{2(z-1)^2} - \frac1{2(z-1)^3}.
+\end{equation}
+
+Ramanujan was not the first to observe that there are appealing and sophisticated extensions of partial fractions.  For example, there is the classical partial fraction expansion for the reciprocal of Jacobi's theta product \cite[p.136]{TanMol}
+\begin{eqnarray}
+\sum^{\infty}_{n=-\infty} \frac{(-1)^n q^{n(n+1)/2}}{1-zq^n} &= &\prod^{\infty}_{n=1} \frac{(1-q^n)^2}{(1-zq^{n-1})(1-q^n/z)} \\
+ & = & \frac{\sum^{\infty}_{n=0} (-1)^n (2n+1) q^{n(n+1)/2}}{\sum^{\infty}_{n=-\infty} (-1)^n z^n q^{n(n-1)}},
+\end{eqnarray}
+where $|q|<1$ and $z\ne q^{-N}$ for any integer $N$.  Actually we find (1.3) in Ramanujan's Lost Notebook \cite[p.1]{Ramanujan}.
+
+In the following pages, we shall examine some of Ramanujan's ideas. Our object will be to choose formulas that illustrate how one can proceed from first principles to obtain some quite surprising formulas.
+
+\section{A Partial Fraction}
+
+In the following, we shall use the standard notation \cite[p.3, eq. (1.2.15) and p. 20, Ex. 1.2]{GasRah}.  We shall always assume $|q| < 1$.
+\begin{eqnarray}
+(A)_n &= &(A; q)_n = (1-A)(1-Aq) \cdots (1-Aq^{n-1}), \nonumber \\
+(A)_{\infty} &=& (A; q)_{\infty} = \prod^{\infty}_{n=0} (1-Aq^n), \nonumber \\
+\left[\begin{array}{c}  N \\ M \end{array}\right] & = & \left\{
+\begin{array}{ll} 
+\frac{(q;q)_N}{(q;q)_M (q;q)_{N-M}}\quad , \quad & 0\leqq M \leqq N \nonumber \\
+0 \qquad\qquad,\qquad & M<0 \mbox{ or } M>N.
+\end{array}  \right.
+\end{eqnarray}
+
+Our first result is the following:
+\begin{theorem}
+\begin{eqnarray}
+\lefteqn{\sum^N_{n=0} 
+\left[ \begin{array}{c} N \\ n \end{array} \right] 
+\frac{(q)_n q^{n^2}}{(z)_{n+1} (q/z)_n}} \nonumber \\
+& = \frac1{(1-z)(q)_N} + \sum^N_{n=1} \left[ \begin{array}{c} N \\ n \end{array} \right] \frac{(-1)^n q^{\frac32 n^2 + \frac{n}{2}}(q)_n}{(q)_{N+n}} \left(\frac1{1-z q^n} - \frac1{z-q^n}\right). 
+\end{eqnarray}
+\end{theorem}
+
+\begin{proof}
+Both sides of (2.1) are rational functions of $z$ with $2N+1$ simple poles at $z=q^{-N}, q^{-N+1},\ldots, q^{-1}, 1, q, \ldots, q^N$.  Let us calculate the residues of each side at these simple poles.
+
+If $z=q^m$ for $1 \leqq m \leqq N$, then the residue on the right-hand side is
+\begin{equation*}
+\left[ \begin{array}{c} N \\ m \end{array} \right] \frac{(-1)^{m-1} q^{\frac32 m^2 + \frac{m}{2}}(q)_m}{(q)_{N+m}}.
+\end{equation*}
+
+On the left-hand side
+\begin{eqnarray*}
+& &\lim_{z\to q^m}  (z-q^m) \sum^N_{n=0} \nn \frac{(q)_n q^{n^2}}{(z)_{n+1}(q/z)_n} \\
+& =& \snm \nn \frac{(q)_n q^{n^2+m}}{(q^m; q)_{n+1}(q^{1-m}; q)_{m-1} (q)_{n-m}} \\
+& = &\snm \nn \frac{(q)_n q^{n^2+m (m+1)/2} (-1)^{m-1}}{(q)_{n+m} (q)_{n-m}}  \\
+&  = & (q)_N \snm \frac{(-1)^{m-1} q^{n^2+m (m+1)/2}} {(q)_{n+m}(q)_{N-n} (q)_{n-m}} \\
+& =  & (q)_N \sum^{N-m}_{n=0} \frac{(-1)^{m-1} q^{(n+m)^2 + m (m+1)/2}} {(q)_{n+2m} (q)_{N-n-m} (q)_n} \\
+& = & \frac{(q)_N  (-1)^{m-1}}{(q)_{2m}(q)_{N-m}} \sum^{N-m}_{n=0} 
+\frac{(q^{-N+m})_n (-1)^n  q^{n (n+1)/2+n (N+m)+m(3m+1)/2}} {(q^{2m+1})_n (q)_n}  \\
+& = & \frac{(q)_N  (-1)^{m-1} q^{m(3m+1)/2}}{(q)_{2m}(q)_{N-m}} \lim_{\tau\to 0} _2\phi_1 \left(\begin{array}{c} q^{-N+m}, \tau^{-1}; q, \tau q^{N+m+1} \\ q^{2m+1}\end{array} \right) \\
+& & \qquad\qquad (\mbox{in the notation of \cite[p.3, eq. (1.2.14)]{GasRah}})  \\
+& = & \frac{(q)_N  (-1)^{m-1} q^{m(3m+1)/2}}{(q)_{2m}(q)_{N-m} (q^{2m+1})_{N-m}}   \\
+& &   (\mbox{by the $q$-Chu-Vandermonde summation \cite[p.11, eq. (1.5.2)]{GasRah}}) \\
+& = & \Nm  \frac{(-1)^{m-1} q^{m(3m+1)/2} (q)_m}{(q)_{N+m}} \\
+\end{eqnarray*}
+
+Next we consider $z=q^{-m}$ for $0 \leqq m \leqq N$.  In this case, the residue on the right-hand side is
+\begin{equation*}
+\Nm \frac{(-1)^{m-1} q^{m(3m-1)/2} (q)_m}{(q)_{N+m}}.
+\end{equation*}
+
+On the left-hand side
+\begin{eqnarray*}
+& & \lim_{z\to q^{-m}} (z-q^{-m}) \sum^N_{n=0} \nn \frac{(q)_n q^{n^2}}{(z)_{n+1} (q/z)_n} \\
+& = & - \snm \nn \frac{(q)_n q^{n^2-m}}{(q^{-m})_m (q)_{n-m} (q^{m+1})_n} \\
+&=&  \snm \nn \frac{(q)_n q^{n^2+m(m-1)/2}(-1)^{m-1}}{(q)_m (q)_{n-m} (q^{m+1})_n} \\
+&=&  (q)_N \snm  \frac{(-1)^{m-1} q^{n^2+m(m-1)/2}}{(q)_{n+m} (q)_{N-n} (q)_{n-m}}\\
+&=& (q)_N \sum^{N-m}_{n=0} \frac{(-1)^{m-1} q^{(n+m)^2 + m (m-1)/2}}{(q)_{n+2m} (q)_{N-n-m} (q)_n} \\
+&=& \frac{(q)_N (-1)^{m-1} q^{m(3m-1)/2}}{(q)_{2m} (q)_{N-m}} \sum^{N-m}_{n=0} \frac{(q^{-N+m})_n (-1)^n q^{n(n+1)/2+n (N+m)}}{(q^{2m+1})_n (q)_n} \\
+&=& \Nm \frac{(-1)^{m-1} q^{m(3m-1)/2} (q)_m}{(q)_{N+m}},
+\end{eqnarray*}
+as before.
+
+Hence by the classical theorem for the representation of a proper rational function with simple poles by a partial fraction decomposition \cite[pp.56--57]{Dienes}, we have established Theorem 2.1.
+\end{proof}
+
+Note that the proof of Theorem 2.1 required nothing more sophisticated than the very elementary $q$-Chu-Vandermonde summation.
+
+Theorem 2.1 has some very appealing corollaries. While it does not appear in Ramanujan's Lost Notebook, many instances of it do.  It should be noted that this result was first explicitly stated by G.N. Watson \cite[p.64]{Watson}.
+
+\begin{corollary}
+\begin{equation}
+\sum^{\infty}_{n=0} \frac{q^{n^2}}{(z)_{n+1} (q/z)_n} = \frac1{(q)_{\infty}} \sum^{\infty}_{n=-\infty} \frac{(-1)^n q^{n(3n+1)/2}}{1-zq^n}.
+\end{equation}
+\end{corollary}
+
+\begin{proof}
+Let $N\to \infty$ in Theorem 2.1.  The quadratic exponent on $q$ easily allows one to justify this limiting process, and a little algebra transforms the result into the above expression.
+\end{proof}
+
+From Corollary 2.1, G.N. Watson \cite[p.64]{Watson} and presumably Ramanujan deduced three important formulas for Ramanujan's third order mock-theta functions:
+\begin{eqnarray*}
+f(q) &=& \sum^{\infty}_{n=0} \frac{q^{n^2}}{(-q;q)^2_n}, \\
+\phi(q) &=& \sum^{\infty}_{n=0} \frac{q^{n^2}}{(-q^2; q^2)_n} \\
+\chi (q) &=& \sum^{\infty}_{n=0} \frac{q^{n^2} (-q ; q)_n}{(-q^3; q^3)_n} 
+\end{eqnarray*}
+
+\begin{corollary}
+\cite[p. 64]{Watson}
+\begin{eqnarray}
+f(q) &=& \frac1{(q)}_{\infty} \left(1 + 4 \sum^{\infty}_{n=1} \frac{(-1)^n q^{n(3n+1)/2}}{1+q^n}\right), \\
+\phi (q) &=& \frac1{(q)_{\infty}} \left(1 + 2 \sum^{\infty}_{n=1} 
+\frac{(-1)^n (1 +q^n q^{n(3n+1)/2}}{1+q^{2n}}\right), \\
+\chi (q) &=& \frac1{(q)}_{\infty} \left(1 +  \sum^{\infty}_{n=1} 
+\frac{(-1)^n (1 + q^n) q^{n(3n+1)/2}}{1- q^n +q^{2n}} \right)
+\end{eqnarray}
+\end{corollary}
+
+\begin{proof}
+To obtain (2.3) set $z = -1$ in (2.2) and simplify.  To obtain (2.4) set $z=i$ in (2.2) and simplify.  Finally to obtain (2.5) set $z=e^{\pi i/3}$.
+\end{proof}
+
+\section{Another Partial Fraction}
+
+In this section we present a second result.  This result is closely related to the one in the previous section as Watson has shown \cite[p. 63--66]{Watson} in that each is deducible from the same master formula.  We treat this theorem separately because we want to deduce these results from very elementary identities.
+
+\begin{theorem}
+\begin{eqnarray}
+ & & \sum^N_{n=0} \nn \frac{(q)_n q^{n^2+n}}{(zq^{\frac12})_{n+1} (q^{\frac12}/z)_{n+1}} \nonumber \\  
+& = &  \sum^N_{n=0} \nn \frac{(-1)^n q^{3n(n+1)/2}(q)_n}{(q)_{n+N+1}} \left(\frac1{1-zq^{n+\frac12}} + \frac{q^{n+\frac12}}{z - q^{n+\frac12}} \right). 
+\end{eqnarray}
+\end{theorem}
+
+\begin{proof}
+We proceed exactly as we did with Theorem 2.1.  Both sides of (3.1) are rational functions of $z$ with $2N+2$ simple poles at $z=q^{-N-\frac12}, q^{-N+\frac12},\ldots, q^{-\frac12}$, $q^{\frac12},\ldots, q^{N-\frac12}, q^{N + \frac12}$.  We now calculate the residues of each side at these simple poles.  Furthermore it is easy to check that each side is symmetric in $z$ and $\frac1z$; hence we need only check the residues at the positive power of $q$.
+
+If $z=q^{m+\frac12}$ for $0\leqq m \leqq N$, then the residue on the right-hand side is clearly
+\begin{equation*}
+\Nm \frac{(-1)^m q^{3m(m+1)/2 + m + \frac12} (q)_m}{(q)_{m+N+1}}.
+\end{equation*}
+
+On the left-hand side
+\begin{eqnarray*}
+& & \lim_{z\to q^{m+ \frac12}} (z-q^{m+\frac12}) \sum^N_{n=0} \nn \frac{(q)_n q^{n^2+n}}{(z q^{\frac12})_{n+1} (q^{\frac12}/z)_{n+1}} \\
+&= & \sum^N_{n=m} \nn \frac{(q)_n q^{n^2+n+m+\frac12}}{(q^{m+1})_{n+1} (q^{-m})_m (q)_{n-m}} \\
+&= &  (-1)^m q^{m(m+1)/2 + m+\frac12} (q)_N \sum^N_{n=m} \frac{q^{n^2+n}}{(q)_{n+m+1} (q)_{N-n}(q)_{n-m}} \\
+&= &  (-1)^m q^{m(m+1)/2 + m+\frac12} (q)_N \sum^{N-m}_{n=0} \frac{q^{(n+m)^2+n+m}}{(q)_{n+2m+1} (q)_{N-n-m}(q)_n} \\
+&= &  \frac{(-1)^m q^{m(m+1)/2 + m+\frac12 + m^2 + m} (q)_N}{(q)_{2m+1} (q)_{N-m}} \sum^{N-m}_{n=0} \frac{(q^{-N+m})_n  (-1)^n q^{n(n+1)/2 + n (N+m+1)}}{(q)_n (q^{2m+2})_n} \\
+&= & \frac{(-1)^m q^{\frac32 m^2 +\frac{5m}2 + \frac12} (q)_N}{(q)_{2m+1} (q)_{N-m}} \lim_{\tau \to 0} _2\phi_1  \left(\begin{array}{c} q^{-N+m}, \frac{q}{\tau}; q, \tau q^{N+m+1} \\ (q)^{2m+2} \end{array} \right) \\
+&= &  \frac{(-1)^m q^{\frac32 m^2 +\frac{5m}2 + \frac12} (q)_N}{(q)_{2m+1} (q)_{N-m} (q^{2m+2})_{N-m}} \\
+& & \qquad\qquad \mbox{(by the $q$-Chu-Vandermonde summation \cite[p. 11, eq. (1.5.2)]{GasRah})} \\
+&= & \Nm \frac{(-1)^m q^{3m(m+1)/2 + m+\frac12} (q)_m}{(q)_{m+N+1}}
+\end{eqnarray*}
+
+As with Theorem 2.1, our theorem follows from the standard partial representation of a proper rational function with simple poles \cite[pp. 56--57]{Dienes}.
+\end{proof}
+
+\begin{corollary} \cite[p.66]{Watson}
+\begin{equation}
+\sum_{n=0} \frac{q^{n^2+n}}{(zq^{\frac12})_{n+1} (q^{\frac12}/z)_{n+1}} = \frac1{(q)_{\infty}} \sum^{\infty}_{n=-\infty} \frac{(-1)^n q^{3n(n+1)/2}}{1-zq^{n+\frac12}}. 
+\end{equation}
+\end{corollary}
+
+\begin{proof}
+Let $N\to \infty$ in Theorem 4.1.  As in the proof of Corollary 2.2, the quadratic exponents on $q$ easily allow one to jutify this limit.  Algebraic simplification then yields the assertion in Corollary 3.1.
+\end{proof}
+
+From Corollary 3.1, we can easily deduce (as did Watson \cite[p. 66]{Watson} and probably Ramanujan) three more important formulas for three more of the third order mock-theta functions:
+\begin{eqnarray*}
+\omega(q) &=& \sum^{\infty}_{n=0} \frac{q^{2n(n+1)}}{(q; q^2)^2_{n+1}}, \\
+\upsilon (q) &=& \sum^{\infty}_{n=0} \frac{q^{n(n+1)}}{(-q; q^2)_{n+1}}, \\
+\rho (q) &=& \sum^{\infty}_{n=0} \frac{(q; q^2)_n q^{2n(n+1)}}{(q^3; q^6)_{n+1}}.
+\end{eqnarray*}
+
+\begin{corollary}  \cite[p.66]{Watson}
+\begin{eqnarray}
+\omega(q) &= & \frac1{(q^2; q^2)_{\infty}} \sum^{\infty}_{n=0} (-1)^n q^{3n(n+1)} \frac{1+q^{2n+1}}{1-q^{2n+1}}, \\
+\upsilon (q) &= & \frac1{(q)_{\infty}}  \sum^{\infty}_{n=0} (-1)^n q^{3n(n+1)/2} 
+\frac{(1-q^{2n+1})}{(1+q^{2n+1})}, \\
+\rho (q) &= & \frac1{q^2; q^2)_{\infty}} \sum^{\infty}_{n=0} (-1)^n q^{3n(n+1)} 
+\frac{(1-q^{4n+2})}{1+q^{2n+1} + q^{4n+2}}. 
+\end{eqnarray}
+\end{corollary}
+
+\begin{proof}  To obtain (3.3) replace $q$ by $q^2$ then set $z=1$ in (3.2), and simplify. To obtain (3.4), set $z=i$ in (3.2) and simplify.  To obtain (3.5) replace $q$ by $q^2$, then set $z=e^{2\pi i/3}$ in (3.2) and simplify.
+\end{proof}
+
+\section{The Simplest Partial Fraction}
+
+In the last two sections. we proved two partial fraction decompositions relying only on the $q$-Chu-Vandermonde summation.  In this section we provide a proof of (1.3) that does not even require that much.
+
+\begin{theorem}
+\begin{eqnarray}
+& & \frac{(q)_N}{(z)_{N+1} (q/z)_N} \nonumber  \\
+& = &  \frac1{(1-z)(q)_N} + \sum^N_{n=1} \nn \frac{(q)_n (-1)^n q^{n(n+1)/2}}{(q)_{n+N}}\left(\frac1{1-zq^n} - \frac1{z-q^n}\right) \qquad
+\end{eqnarray}
+\end{theorem}
+
+\begin{proof}
+Both sides of (4.1) are rational functions of $z$ with $2N+1$ simple poles at $z=q^{-N}, q^{-N+1},\ldots, q^{-1}, 1, q, \ldots, q^N$.
+
+First we calculate the residue at $z=q^m, 1 \leqq m \leqq N$.  The residue on the right-hand side is clearly
+\begin{equation*}
+(-1)^{m-1}\Nm \frac{(q)_m q^{m(m+1)/2}}{(q)_{m+N}}.
+\end{equation*}
+
+On the left-hand side, the residue is
+\begin{eqnarray*}
+  \lim_{z\to q^m} \frac{(z-q^m) (q)_N}{(z)_{N+1} (q/z)_N} &= &  \frac{q^m (q)_N}{(q^m)_{N+1} (q^{1-m})_{m-1} (q)_{N-m}} \\
+ =  \frac{(-1)^{m-1} q^{m(m+1)/2} (q)_N}{(q)_{N+m} (q)_{N-m}}& = & (-1)^{m-1} \Nm 
+\frac{(q)_m q^{m(m+1)/2}}{(q)_{m+N}}.
+\end{eqnarray*}
+
+Next we consider $z=q^{-m}$, $0\leqq m \leqq N$. The residue on the right-hand side in this instance is
+\begin{equation*}
+-q^{-m} \Nm \frac{(q)_m (-1)^m q^{m(m+1)/2}}{(q)_{m+n}} = (-1)^{m-1} \Nm \frac{(q)_m q^{m(m-1)/2}}{(q)_{m+N}},
+\end{equation*}
+and on the left-hand side, the residue is
+\begin{eqnarray*}
+  \lim_{z\to q^{-m}} \frac{(z-q^{-m}) (q)_N}{(z)_{N+1} (q/z)_N} & = & \frac{-q^{-m} (q)_N}{(q^{-m})_m (q)_{N-m} (q^{m+1})_N} \\
+ =  \frac{(-1)^{m-1} q^{m(m-1)/2} (q)_N}{(q)_{N+m} (q)_{N-m}} & = & (-1)^{m-1} \Nm 
+\frac{(q)_m q^{m(m-1)/2}}{(q)_{N+m}}.
+\end{eqnarray*}
+
+As before, our result now follows from the standard theorem on partial fraction decompositions \cite[pp.56--57]{Dienes}
+\end{proof}
+
+\begin{corollary}
+Identity (1.3) is valid.
+\end{corollary}
+
+\begin{proof}
+The same argument used for Corollaries 2.1 and 3.1 holds here as well.
+\end{proof}
+
+\section{Conclusion}
+
+There are many more results beyond those considered in this paper that were included in Ramanujan's Lost Notebook.  Bruce Berndt and I \cite{AndBer} are publishing a full treatment of the results from the Lost Notebook, and we present in Chapter 12 of that work a full account of Ramanujan's partial fraction theorems.  The proofs there are more succinct, but rely on more sophisticated background.  The object in this paper was to illustrate the fact that one can deduce some of Ramanujan's most surprising partial fraction formulas using nothing deeper than the $q$-analog of the Chu-Vandermonde summation.
+
+
+\begin{thebibliography}{99}
+
+\bibitem{AndBer} G.E. Andrews and B. Berndt, Ramanujan's Lost Notebook, Part I, Springer, Berlin (to appear).
+
+\bibitem{Dienes} P. Dienes, The Taylor Series, Dover, New York, 1957.
+
+\bibitem{Euler} L. Euler, Introductio in Analysin Infinitorum, Vol. 1, Lausannae, 1748.
+
+\bibitem{GasRah}  G. Gasper and M. Rahman, Basic Hypergeometric Series, Encycl. Math and Its Appl., G.-C. Rota, ed., Vol. 35, Cambridge University Press, Cambridge, 1990.
+
+\bibitem{Ramanujan} S. Ramanujan, The Lost Notebook and Other Unpublished Papers, Intro by G. E. Andrews, Narosa, New Delhi, 1987.
+
+\bibitem{TanMol} J. Tannery and J. Molk, \'El\'ements de la Th\'eorie des fonctions Elliptiques, Vol. III, Gauthier-Villars, Paris, 1896 [reprinted: Chelsea, New York, 1972].
+
+\bibitem{Watson} G.N. Watson, The final problem: an account of the mock theta functions, J. London Math. Soc., 11(1936), 55--80.
+\end{thebibliography}
+
+THE PENNSYLVANIA STATE UNIVERSITY \hfil
+
+ UNIVERSITY PARK, PA 16802  USA \hfil
+
+andrews\@math.psu.edu \hfil
+
+\end{document}

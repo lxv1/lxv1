@@ -1,0 +1,635 @@
+%From Luis.Gallardo@univ-brest.fr Mon Nov 15 15:36 EST 1999 
+%Subject: Latex file
+
+%% This document created by Scientific Word (R) Version 3.0
+
+\documentclass{article}
+%\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+%TCIDATA{OutputFilter=latex2.dll}
+%TCIDATA{CSTFile=LaTeX article (bright).cst}
+%TCIDATA{Created=Thu Nov 11 12:46:45 1999}
+%TCIDATA{LastRevised=Mon Nov 15 18:22:16 1999}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{<META NAME="DocumentShell" CONTENT="General\Blank Document">}
+%TCIDATA{Language=American English}
+\newtheorem{theorem}{Theorem}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{case}[theorem]{Case}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+\newenvironment{proof}[1][Proof]{\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
+
+\begin{document}
+
+
+\title{BERLEKAMP'S DISCRIMINANT AND CUBIC EQUATIONS IN CHARACTERISTIC TWO}
+\author{J\o rgen Cherly, Luis Gallardo, Leonid Vaserstein and Ethel
+\and Wheland}
+\maketitle
+\begin{abstract}
+We give an algorithm that decides in a finite number of steps the value of the
+degree $d$ of the splitting field of a cubic polynomial over $F_{2^{2n}}[t].$
+\end{abstract}
+
+
+
+\section{Introduction}
+
+Let $k$ be a field of characteristic $2,$ $K$ be the splitting field of a
+cubic polynomial $C=x^{3}+px+q\in k[x],$ with $q\neq0,$ on a given algebraic
+closure of $k$ and $d$ its degree over $k$ . It is well known that
+$d\in\left\{  1,2,3,6\right\}  .$ We give an algorithm that computes in
+finitely many steps, the actual value of $d$ for $k=F_{2^{2n}}(t).$
+
+In Section $2$ we give general conditions for the determination of $d$ for a
+field $k$ of characteristic $2$ containing a non trivial $3-$ root of unity.
+
+In Section $3$ we describe the algorithm for $k=F_{2^{2n}}(t), n\ge 1$
+
+\section{Berlekamp's discriminant}
+
+Let $k$ be a field of characteristic $2$ containing a non trivial $3-$ root of
+unity $\delta,$ \ $C=x^{3}+px+q\in k[x],$ $x_{1},x_{2},x_{3}$ its roots in a
+given algebraic closure of $k.$ Berlekamp's discriminant $B(C)$ of $C$ is
+defined by
+\[
+B(C)=x_{1}x_{2}/(x_{1}^{2}+x_{2}^{2})+x_{2}x_{3}/(x_{2}^{2}+x_{3}^{2}%
+)+x_{1}x_{3}/(x_{1}^{2}+x_{3}^{2}).
+\]
+Define also $b(C)=x_{1}/(x_{1}+x_{2})+x_{2}/(x_{2}+x_{3})+x_{1}/(x_{1}%
++x_{3}).$ These two quantities are related by the relation%
+\[
+b(C)^{2}+b(C)+B(C)=0
+\]
+(see \cite{berl}) . We associate to $C$ the following $4$ quadratic polynomials:
+$W_{1}=x^{2}+x+B(C),$ $V_{1}=x^{2}+x+p^{3}/q^{2}\in k(x),$ and $W_{2}%
+=x^{2}+qx+q^{2}B(C),V_{2}=x^{2}+qx+p^{3}\in k[x].$
+
+\begin{lemma}
+If $u$ is a root of $W_{1}$ and $v$ is a root of $V_{1}$ then $u+v\in\left\{
+\delta,\delta^{2}\right\}  .$ In particular $W_{j}$ and $V_{i}$ have the same
+splitting field $K$ over $k.$
+\end{lemma}
+
+\begin{proof}
+Follows from $B(C)=(p^{3}+q^{2})/q^{2}.$
+\end{proof}
+
+\begin{lemma}
+\bigskip The roots in $K$ of $V_{2}$ are $u_{i}=t_{i}^{3},$ where $t_{1}%
+=x_{1}+\delta x_{2}+\delta^{2}x_{3},t_{2}=x_{1}+\delta^{2}x_{2}+\delta x_{3},$
+and the $x_{j}$ are the roots in $K$ of $C.$ Furthermore, if $t_{i}^{3}\in k$
+then $t_{i}\in k(x_{1}).$
+\end{lemma}
+
+\begin{proof}
+Since $t_{1}=x_{2}+\delta x_{1},t_{2}=x_{3}+\delta x_{1}$ we have $t_{1}%
+t_{2}=x_{2}x_{3}+x_{1}^{2}=p,$ \ and from $t_{1}+t_{2}=x_{1}$ it follows that
+$u_{1}+u_{2}=x_{1}(x_{1}^{2}+p)=q.$ Since $t_{i}^{2}=x_{1}t_{i}+p,$ we get
+$t_{i}^{3}=t_{i}(x_{1}^{2}+p)+px_{1}$ so the last affirmation follows.
+\end{proof}
+
+\bigskip
+
+So we give necessary and sufficient conditions for the value of $d$ in terms
+of $V_{2}$ $\ $and $C$ only in the following theorem.
+
+\begin{theorem}
+With the above notations we have:
+\end{theorem}
+
+\begin{itemize}
+\item (a) $d=1$ if and only if $V_{2}$ splits over $k$ and its roots are cubes
+in $k.$
+
+\item (b) $d=2$ if and only if $V_{2}$ has no roots in $k$ and $C$ is
+reducible in $k.$
+
+\item (c) $d=3$ if and only if $V_{2}$ splits over $k$ and its roots are not
+cubes in $k.$
+
+\item (d) $d=6$ if and only if $V_{2}$ has no roots in $k$ and $C$ is
+irreducible in $k.$
+\end{itemize}
+
+\begin{proof}
+ From Lemma $2,$ $d=1$ implies the condition of (a). Suppose this condition
+true, and choose $t_{1},t_{2}$ such that $t_{1}t_{2}=p.$ Set $x_{1}=t_{1}%
++t_{2},x_{2}=t_{1}+\delta x_{1},x_{3}=t_{2}+\delta x_{1}.$ Then $x_{1}%
++x_{2}+x_{3}=0,x_{1}x_{2}+x_{2}x_{3}+x_{3}x_{1}=x_{2}x_{3}+t_{1}^{2}+t_{2}%
+^{2}=t_{1}t_{2}=p,x_{1}x_{2}x_{3}=(t_{1}+t_{2})(t_{1}^{2}+t_{2}^{2}+t_{1}t_{2})=q.$
+
+If $d=2$ then $C$ has only one root, $x_{1}\ $say, in $k.$ If $V_{2}$ has a
+root in $k$ then $t_{1}^{3}\in k,$ so by Lemma $2,$ $t_{1}\in k,$ so
+$x_{2}=t_{1}+\delta x_{1}\in k.$ So the condition of (b) is true. If $C$ has
+two roots in $k$ then by (a) $V_{2}$ splits over $k.$ So the condition in (b)
+implies $d=2.$
+
+Suppose that $d=3.$ By Lemma $2,$ the roots of $V_{2}$ are in $K.$ If the
+roots of $V_{2}$ are in $K\backslash k,$ $d$ is even, so $V_{2}$ splits over
+$k$ and by (a) its roots are not cubes in $k.$ If the condition of (c) holds,
+then by Lemma $2$ we have $t_{i}\in k(x_{1})\backslash k.$ So $x_{2}%
+=t_{1}+\delta x_{1},x_{3}=t_{2}+\delta x_{1}\in k(x_{1}).$ So $d=3.$
+
+Finally, (d) follows from (a), (b) and (c) since $d\in\left\{
+1,2,3,6\right\}  .$
+\end{proof}
+
+\section{The algorithms}
+
+We specify here the field $k=F_{2^{2n}}(t),$ and consider the polynomial ring  $A=F_{2^{2n}}[t].$ For $r\in k,$
+$r^{\prime}$ \ is the derivative of $r$ relative to $t,$ and $r^{\ast}$ is the
+square root of $r$ $\ $if $r^{\prime}=0.$
+
+\begin{lemma}
+The following algorithm decides if the polynomial $P=x^{2}+px+q\in A[x]$
+splits in $k[x].$ Set $\delta(p,q)=((q^{\prime})^{2}+p^{\prime}(pq)^{\prime
+})/p^{2}$ if $p^{\prime}\neq0$ and $\delta(p,q)=t^{2}(q^{\prime}%
+/p)^{2}+(tq)^{\prime}$ if $p^{\prime}=0.$
+\end{lemma}
+
+\begin{enumerate}
+\item  While $p$ and $q$ are not constants take squares roots into $P=0$ until
+$(p^{\prime},q^{\prime})\neq(0,0).$
+
+\item  If $\delta(p,q)\in A$ then go to 3.
+
+\item  If $p^{\prime}\neq0$ then $x\in k$ is a root of $P$ if and only if
+$y=(x^{\prime})^{\ast}\in k$ is a root of $T^{2}+(p^{\prime})^{\ast}%
+T+\delta(p,q)^{\ast}.$ If $p^{\prime}=0$ then $x\in k$ is a root of $P$ if and
+only if $y=((tx)^{\prime})^{\ast}\in k$ is a root of $T^{2}+p^{\ast}%
+T+\delta(p,q)^{\ast}.$ Furthermore, $x=(q^{\prime}+py^{2})/p$ when $p^{\prime
+}\neq0$ and $x=tq^{\prime}/p+y^{2}$ when $p^{\prime}=0.$ Replace $p$ by
+$(p^{\prime})^{\ast}$ if $p^{\prime}\neq0$ and by $p^{\ast}$ if $p^{\prime
+}=0.$ Replace $q$ by $\delta(p,q)^{\ast}.$
+
+\item  Repeat 1 and 2 above until $p$ and $q$ are constants or 2 fails. In the
+latter case $P$ has no roots in $k.$
+
+\item  Solve, if necessary, the equation $x^{2}+px+q=0$ with $p,q\in
+F_{2^{2n}}.$
+\end{enumerate}
+
+\begin{proof}
+See \cite{cgvw}. We replace here Theorem 4 of \cite{cgvw} by the step 3 above,
+since $\deg(q)$ even is a necessary condition for the solution in $A$ of the
+equation $P=0,$ when $p$ is constant. Thus in that case $\deg(\delta
+(p,q))=\deg((tq^{\prime}/p)^{2}+(tq)^{\prime})<\deg(q^{2}).$
+\end{proof}
+
+\begin{lemma}
+The following algorithm decides if the polynomial $P=x^{3}+q\in A[x]$ splits
+in $k[x].$ Set $\lambda(q)=((q^{\prime})^{\ast})^{3}/q.$
+\end{lemma}
+
+\begin{enumerate}
+\item  While $q$ is non constant take squares roots into $P=0$ until
+$q^{\prime}\neq0.$
+
+\item  If $\lambda(q)\in A$ then \ go to 3.
+
+\item $P$ has a root $x\in k$ if and only if $y=(x^{\prime})^{\ast}\in A$ is a
+root of $T^{3}+\lambda(q)=0.$ In this case $x=qy^{2}/q^{\prime}.$ Replace $q$
+by $\lambda(q).$
+
+\item  Repeat 1 and 2 above until $q$ is constant or 2 fails. In this latter
+case $P$ has no roots in $k.$
+
+\item  Solve, if necessary, the equation $x^{3}+q=0$ with $q\in F_{2^{2n}}.$
+\end{enumerate}
+
+\begin{proof}
+If $P$ has a root $x\in k,$ then  $x\in A$ and $q=x^{3},$ so $x^{\prime
+}=q^{\prime}/x^{2}.$ It follows that $(x^{\prime})^{\ast}\in A$ and
+$((x^{\prime})^{\ast})^{3}=\lambda(q).$ If $y\in A$ satisfies $y^{3}%
+=\lambda(q)$ then $x=qy^{2}/q^{\prime}$ satisfies $x^{3}=q.$
+\end{proof}
+
+\begin{lemma}
+The following algorithm decides if the polynomial $P=x^{3}+px+q\in k[x],$ with
+nonzero $p$ has a root in $A.$ Set $\sigma(p,q)=((p^{\prime}p)^{2}%
++p(q^{\prime})^{2}+p^{\prime}qq^{\prime})/q^{2}$ and $\tau(p,q)=((p^{\prime
+})^{3}q+p(p^{\prime})^{2}q^{\prime}+(q^{\prime})^{3})/q^{2}.$
+\end{lemma}
+
+\begin{enumerate}
+\item  While $p$ and $q$ are not constants take squares roots into $P=0$ until
+$(p^{\prime},q^{\prime})\neq(0,0).$
+
+\item  If $p^{\prime}=0$ then $x\in A$ \ is a root of $P$ if and only if
+$y=(x^{\prime})^{\ast}\in A$ is a root of $T^{3}+(p^{\ast}q^{\prime
+})/qT+q^{\prime}(q^{\prime})^{\ast}/q.$ If $p^{\prime}\neq0$ then $x\in A$ is
+a root of $P$ if and only if $y=(x^{\prime})^{\ast}\in A$ $\ $is a root of
+$T^{3}+\sigma(p,q)^{\ast}T+\tau(p,q)^{\ast}$ and $x\in k$  is a root of
+$p^{\prime}T^{2}+q^{\prime}T+qy^{2}.$ Furthermore, $x=qy^{2}/q^{\prime}$ when
+$p^{\prime}=0.$ Replace  $p$ by $(p^{\ast}q^{\prime})/q$ and $q$ by
+$q^{\prime}(q^{\prime})^{\ast}/q$ if $p^{\prime}=0.$ Replace $p$ by
+$\sigma(p,q)^{\ast}$ and $q$ by $\tau(p,q)^{\ast}$ if $p^{\prime}\neq0.$
+
+\item  Repeat 1 and 2 above until $x\in F_{2^{2n}}$ or some of the conditions
+in 2 fail. In the latter case $P$ has no roots in $A.$ Check the condition
+\ $x^{3}+px+q=0$ for all $x\in F_{2^{2n}}.$
+\end{enumerate}
+
+\begin{proof}
+Suppose that $x\in A$ is a root of $P.$ If $p^{\prime}=0$ and $q^{\prime}%
+\neq0$ then from $x^{4}+px^{2}+qx=0$ we get by derivation $x=(qx^{\prime
+})/q^{\prime}.$ Replacing this value into the equation $P=0$ we obtain that
+$(x^{\prime})^{\ast}\in A$ is a root of $T^{3}+(p^{\ast}q^{\prime
+})/qT+q^{\prime}(q^{\prime})^{\ast}/q.$ 
+
+If $p^{\prime}\neq0,$ then similarly we get $x^{\prime}=(p^{\prime}%
+x^{2}+q^{\prime}x)/q,$ so $x\in A$ is a root of $p^{\prime}T^{2}+q^{\prime
+}T+qy^{2}.$ After some computation we see that $x^{\prime}\in A$ $\ $is a root
+of $T^{3}+\sigma(p,q)T+\tau(p,q).$ Since $(p(q^{\prime})^{2}+p^{\prime
+}qq^{\prime})^{\prime}=p^{\prime}(q^{\prime})^{2}+p^{\prime}q^{\prime
+}q^{\prime}=0$ and $(q(p^{\prime})^{3})^{\prime}=q^{\prime}(p^{\prime}%
+)^{3}=(p(p^{\prime})^{2}q^{\prime})^{\prime}$ we have $\sigma(p,q)^{\prime}=0$
+and $\tau(p,q)^{\prime}=0.$ So $(x^{\prime})^{\ast}\in A$ $\ $is a root of
+$T^{3}+\sigma(p,q)^{\ast}T+\tau(p,q)^{\ast}.$ 
+
+Suppose that $p^{\prime}=0$ and that  $y\in A$ is a root of $T^{3}+(p^{\ast
+}q^{\prime})/qT+q^{\prime}(q^{\prime})^{\ast}/q.$ Then $x=qy^{2}/q^{\prime}\in
+k$  is a root of $P.$ Since $x^{\prime}=y^{2}\in A$ we have that $x\in A.$
+Suppose that $p^{\prime}\neq0$ and that $y\in A$ is a root of  $T^{3}%
++\sigma(p,q)^{\ast}T+\tau(p,q)^{\ast}.$ Let $x\in k$ be a root of $p^{\prime
+}T^{2}+q^{\prime}T+qy^{2}.$ Since $y^{2}=(p^{\prime}x^{2}+q^{\prime}x)/q$ is a
+root of $T^{3}+\sigma(p,q)T+\tau(p,q)$ after some computation we get
+$x^{3}+px+q=0.$ From $p^{\prime}x^{2}+q^{\prime}x+qy^{2}=0$ we get by
+derivation $x^{\prime}=y^{2}\in A,$ so $x\in A.$
+\end{proof}
+
+\bigskip
+
+Thus we obtain our main result
+
+\begin{theorem}
+The following algorithm decides in finitely many steps the value of $d.$
+\end{theorem}
+
+\begin{enumerate}
+\item  Apply Lemma $4$ to $V_{2}$ and Lemma $6$ to $C.$
+
+\item  If $V_{2}$ splits over $k$ apply Lemma $5$ to its roots.
+
+\item  Apply Theorem $3.$
+\end{enumerate}
+
+\begin{thebibliography}{9}
+\bibitem{berl}E.R. Berlekamp, An Analog to the Discriminant over Fields of
+Characteristic Two, \emph{Journal of Algebra} \textbf{38} (1976), 315-317.
+
+\bibitem{cgvw}J\o rgen Cherly, Luis Gallardo, Leonid Vaserstein and Ethel
+Wheland, Solving Quadratic Equations over Polynomial Rings of Characteristic
+Two, \emph{Publications Matem\`{a}tiques} \textbf{42 }(1998), 131-142.
+\end{thebibliography}
+\end{document}
+
+http://www.math.clemson.edu/faculty/Gao/papers/roots.pdf
+
+1) 
+Mattman, Thomas; McKay, John
+Computation of Galois groups over function fields. (English)
+[J] Math. Comput. 66, No.218, 823-831 (1997). [ISSN 0025-5718; ISSN 
+1088-6842] http://www.ams.org/mcom/1997-66-218/
+Symmetric function theory provides a basis for computing Galois groups 
+which is largely independent of the coefficient ring. An exact algorithm has
+been
+implemented over $\Bbb Q (t_1,t_2,\ldots ,t_m)$ in Maple for degree up to 
+8. A table of polynomials realizing each transitive permutation group of 
+degree 8 as
+a Galois group over the rationals is included.
+Mots clŽs: Galois groups; polynomials; computation
+
+Classification: 
+       *12F10 Galois theory
+       12Y05 Computational aspects of field theory and polynomials
+
+*******
+2) Anai, H.; Noro, M.; Yokoyama, K.
+Computation of the splitting fields and the Galois groups of polynomials. - 
+Appendix. (English)
+[CA] Gonzalez-Vega, Laureano (ed.) et al., Algorithms in algebraic geometry 
+and applications. Proceedings of the MEGA-94 conference, Santander, Spain,
+April 5-9, 1994. Basel: Birkhaeuser. Prog. Math. 143, 29-50, Appendix: 
+45-48 (1996). [ISBN 3-7643-5274-4/hbk; ISSN 0743-1643]
+The era of electronic Galois group computation began with {\it R. P. 
+Stauduhar}'s Berkeley 1969 thesis [Math. Comput. 27, 981-996 (1973; Zbl 
+282.12004)].
+He approximated the roots and stored polynomial invariants for candidate 
+groups of degree up to 8. He used coset transversals to explore the 
+subgroup lattice,
+seeking linear factors of the resolvent polynomials created for each step 
+of the subgroup chains. This method has disadvantages concerning
+approximation
+errors. Also, one has to store or generate many polynomial invariants and 
+cosets; however, Arnaudieres and Colin are developing symbolic methods which
+are
+exact. \par An alternative technique is the table method, which assumes 
+access to all possible groups in terms of tables. These have been computed 
+in detail for
+all transitive groups of degee up to 15 (and are derivable for degree up to 
+31) in {\it A. Hulpke} [Ph.D. thesis, Aachen (1996)]. The tables contain
+enough to
+isolate the group to within Galois isomorphism (that is, to within 
+labelling of the roots). \par The authors demonstrate a new approach to 
+Galois computation
+with the ability to express the roots in terms of radicals when solvable. 
+Successive extensions are used to generate $\text{split}(f)$, Groebner 
+bases are used to
+implement gcd algorithms over algebraic number fields. An innovation is the 
+use of non square-free norms.\par This is continuing work and comparison
+with
+the table method of Maple V release 3 (1987) is disappointing. The 
+statement that direct computation of Galois groups is more efficient both 
+in theory and
+practice is not borne out by the performance tables, nor is it reliable to 
+extrapolate from the figures (for groups of order $<1000$) to the groups 
+one sees when
+the degree extends to, say, 12. It suggests that a hybrid using this 
+method, new decomposition algorithms (Casperson, McKay, Hulpke, Klueners), 
+tables, and
+exact variants of Stauduhar's method may prove the most successful.
+[ J.McKay (Montreal) ]
+Citations: Zbl 282.12004
+Mots clŽs: splitting fields; Galois group computation
+Classification: 
+       *12Y05 Computational aspects of field theory and polynomials
+       11Y40 Algebraic number theory computations
+       68Q40 Symbolic computation, algebraic computation
+       11R32 Galois theory for global fields
+       12F10 Galois theory
+
+********
+3) Colin, Antoine
+Formal computation of Galois groups with relative resolvents. (English)
+[CA] Cohen, Gerard (ed.) et al., Applied algebra, algebraic algorithms and 
+error-correcting codes. 11th international symposium, AAECC-11, Paris,
+France,
+July 17-22, 1995. Proceedings. Berlin: Springer-Verlag. Lect. Notes Comput. 
+Sci. 948, 169-182 (1995). [ISBN 3-540-60114-7; ISSN 0302-9743]
+Let $k$ be a field and $f\in k[x]$ be a polynomial of degree $n$. The 
+permutation action of $G$ on the roots $\{\alpha\sb i\}\sb{i=1}\sp n$ of $f$
+can be
+determined by an algorithm suggested by {\it R. Stauduhar} [Math. Comput. 
+27, 981-996 (1973; Zbl 282.12004)] that approximates $G$ via successive
+steps
+in a chain of subgroups $S\sb n=H\sb 0>H\sb 1>\cdots>H\sb k=G$. In each 
+step $H\sb{i-1}>H\sb i$ it checks as a test for $G\le H\sb i$ whether a
+relative
+invariant $h\sb i\in k[x\sb 1,\ldots,x\sb n]$ yields a value $\varphi(h)\in 
+k$ under the specialization $\varphi\colon g(x\sb 1,\ldots,x\sb n)\mapsto 
+g(\alpha\sb
+1,\ldots,\alpha\sb n)$. In implementations this evaluation has been done 
+using $p$-adic [{\it H. Darmon} and {\it D. Ford}, Commun. Algebra 17, No.
+12,
+2941-2943 (1989; Zbl 693.12010)] or numerical ({\it R. Stauduhar} [ibid.]; 
+{\it Y. Eichenlaub} and {\it M. Olivier} [preprint]) approximation of the 
+roots. \par
+The paper under review presents a new approach which avoids all 
+approximations: If $G\le H\sb i$ and $H\sb i$ is maximal in $H\sb{i-1}$ the 
+invariant $h\sb
+i$ is a primitive element of the invariant field $k\sb i=k(x\sb 
+1,\ldots,x\sb n)\sp{H\sb{i}}$ as an extension of $k\sb{i-1}=k(x\sb
+1,\ldots,x\sb
+n)\sp{H\sb{i-1}}$. The author develops an algorithm to express the 
+specialized values $\varphi(g)$ of elements $g\in k\sb i$ in terms of 
+$k\sb{i-1}$ and the
+specialization $\varphi(h\sb i)$.\par This algorithm then is applied to the 
+relative resolvent polynomial $s\sb i=\prod\sb a\left(y-a(x\sb 
+1,\ldots,x\sb n)\right)$
+where $a$ runs through the images of $h\sb i$ under $H\sb{i-1}$. It has 
+$y$-coefficients which are in $k\sb{i-1}$. The algorithm then permits to 
+express the
+coefficients of the specialization $r\sb i(y)=\varphi(s\sb i)\in k[y]$ 
+recursively in the (already known) specializations $\varphi(h\sb j)$ for 
+$j\le i-1$, using the
+coefficients of $f$ (as $S\sb n$-invariants in the roots) as a seed. A root 
+of $r\sb i(y)$ in the base field then proves that $G$ is contained in (a 
+conjugate of)
+$H\sb i$, and this value of the root can be used as specialized 
+$\varphi(h\sb{i+1})$ in the next step of the algorithm. Special care is 
+given to the case when
+denominators of elements in $k(x\sb 1,\ldots,x\sb n)$ evaluate to zero 
+after specialization.\par The paper closes with a short discussion of 
+applicability. An
+implementation using AXIOM and GAP is in process but has not yet been
+completed.
+[ A.Hulpke (St.Andrews) ]
+Citations: Zbl 282.12004; Zbl 693.12010
+Mots clŽs: Galois group; algorithms; polynomials; theory of invariants; 
+permutation action; relative resolvent polynomial
+
+Classification: 
+       *12Y05 Computational aspects of field theory and polynomials
+       11Y40 Algebraic number theory computations
+       11R32 Galois theory for global fields
+
+********
+4) Valibouze, Annick
+Computation of the Galois groups of the resolvent factors for the direct 
+and inverse Galois problems. (English)
+[CA] Cohen, Gerard (ed.) et al., Applied algebra, algebraic algorithms and 
+error-correcting codes. 11th international symposium, AAECC-11, Paris,
+France,
+July 17-22, 1995. Proceedings. Berlin: Springer-Verlag. Lect. Notes Comput. 
+Sci. 948, 456-468 (1995). [ISBN 3-540-60114-7; ISSN 0302-9743]
+The Galois group $G$ of a polynomial $f\in k[x]$ acts faithfully on the 
+roots $\{\alpha\sb 1,\ldots,\alpha\sb n\}$ of $f$. If $\Theta\in k[x\sb 
+1,\ldots,x\sb n]$,
+$H=\text{Stab}\sb{S\sb n}(\Theta)$ then the orbits of $G$ on the cosets of 
+$H$ in $S\sb n$ correspond to the $k$-factors of the resolvent
+$$L\sb{\Theta,f}(y)=\prod\sb{\sigma\in G{\setminus}{\setminus}H} 
+\left(y-\Theta\sp \sigma(\alpha\sb 1,\ldots,\alpha\sb n)\right)$$ and $G$ 
+can be identified
+by such factors up to conjugacy in $S\sb n$ [{\it L. Soicher} and {\it J. 
+McKay}, J. Number Theory 20, 273-281 (1985; Zbl 579.12006)]. Excerpting
+longer
+tables published as technical reports, the author lists orbit lengths and 
+types of orbit actions (computed with the system GAP) for several $H$ that 
+permit to
+identify every transitive group of degree 8. She also gives such a set of 
+distinguishing subgroups $H$ for degree 10 and notes that factors of 
+resolvents can be
+used to construct polynomials whose Galois group is a factor of $G$.
+[ A.Hulpke (St.Andrews) ]
+Citations: Zbl 579.12006
+Mots clŽs: Galois group; algorithms; polynomials; resolvent factors; 
+inverse Galois problems; orbit lengths; orbit actions; transitive group of
+degree 8
+
+Classification: 
+       *12Y05 Computational aspects of field theory and polynomials
+       11Y40 Algebraic number theory computations
+       12F10 Galois theory
+       12F12 Inverse Galois theory
+       11R32 Galois theory for global fields
+       20B40 Computational methods (permutation groups)
+
+-----------
+
+Cohen, S. D.(4-GLAS); Movahhedi, A.(F-LIMOS); Salinier, A.(F-LIMOS) 
+Galois groups of trinomials. (English. English summary) 
+J. Algebra 222 (1999), no. 2, 561--573. 
+
+98i:11106 11T06 (12E12) 
+Vishne, Uzi(IL-BILN) 
+Factorization of trinomials over Galois fields of characteristic $2$. (English. English summary) 
+Finite Fields Appl. 3 (1997), no. 4, 370--377. 
+
+Summary: "We study the parity of the number of irreducible factors of trinomials over Galois fields of characteristic 2. As a
+consequence, some sufficient conditions for a trinomial being reducible are obtained. For example, $x\sp n+ax\sp k+b\in{\rm
+GF}(2\sp t)[x]$ is reducible if both $n$ and $t$ are even, except possibly when $n=2k, k$ odd. The case $t=1$ was treated by
+R. G. Swan [Pacific J. Math. 12 (1962), 1099--1106; MR 26 #2432], who showed that $x\sp n+x\sp k+1$ is reducible over
+$\rm GF(2)$ if $8\mid n$."
+
+
+96f:12001 12E12 
+Sun, Zong Ming 
+Roots of binomial and trinomial equations over the field with $p\sp k$ elements. (Chinese. English, Chinese
+summary) 
+Neimenggu Shida Xuebao Ziran Kexue Ban 1991, no. 3, 20--24. 
+
+Let $F$ be a finite field. The paper under review provides a necessary and sufficient condition for the equation $X\sp n=d$,
+where $d\in F$ and $n$ is a positive integer, to have no solution in $F$ [resp. to have separable zeros in $F$, or to have
+multiple roots in $F$]. In case it is solvable in $F$, the number of solutions is given. The same question is also considered for
+the equation $aX\sp {2n}+bX\sp n+c=0$ where $a,b,c\in F$, $a\neq 0$ and $n$ is a positive integer.
+
+----------
+
+95d:11146 11R09 (12E05 12E10) 
+Schinzel, Andrzej(PL-PAN) 
+On reducible trinomials. 
+Dissertationes Math. (Rozprawy Mat.) 329 (1993), 83 pp. 
+
+Let $K$ be a field. It is well known that a binomial $x\sp n+a\in K[x]$ is reducible iff it has the form $x\sp {pk}-b\sp p$ ($p$
+prime) or $x\sp {4k}+4b\sp 4$. In this treatise the reducibility of trinomials $x\sp n+ax\sp m+b$ $(a,b\neq 0)$ is investigated.
+It turns out that the situation is very complicated. A satisfactory answer is obtained if $K$ is a rational function field. For
+algebraic function fields in one variable and for algebraic number fields, less complete results are proved. It is assumed
+throughout that the characteristic of $K$ does not divide $mn(n-m)$. 
+
+It is easy to find trinomials with linear or quadratic factors. Table 1 of this paper provides additional families of reducible
+trinomials if $(n,m)$ belongs to a list of 12 pairs, the largest being $(15,5)$. Perhaps the simplest example is $$x\sp
+6+4(v+1)x\sp 2-v\sp 2=(x\sp 3+2x\sp 2+2x-v)(x\sp 3-2x\sp 2+2x+v).$$ Every reducible trinomial $f(x)=x\sp n+ax\sp m+b$
+gives rise to additional examples by considering $u\sp nf(x\sp l/u)$ (with $u\in K\sp \times$ and $l\geq 1$) or $x\sp
+nf(1/x)/b$. Theorem 1 essentially states that every reducible trinomial arises in this manner from the examples indicated
+before if $K$ is a rational function field. (More precisely, it is assumed that $a\sp {-n}b\sp {n-m}$ is not a constant.) Table 2
+lists $7$ families of reducible trinomials $x\sp n+A(v,w)x\sp m+B(v,w)$ with $(v,w)\in E(K)$, where $A$, $B$ are
+polynomials over $\bold Z$ and $E$ is an elliptic curve defined by an equation $z\sp 2=C(w)$, where $C$ is a monic
+polynomial over $\bold Z$. The polynomials $A,B$ and the corresponding factorizations of the trinomials are too complicated
+to be included in this review. (For the largest pair $(n,m)=(21,7)$ the corresponding $A$ fills 10 lines in the paper.) In
+Theorem 2 it is assumed that $K$ is a finite extension of a rational function field $F(t)$ such that $\overline FK$ has genus
+$g>0$ and $a\sp {-n}b\sp {n-m}\notin \overline{F}$. If $g=1$ then there are no additional examples of reducible trinomials.
+If $g>1$ then essentially new examples with $n<24g$ may exist. Theorem 3 reduces the case where $K$ is a finite separable
+extension of $F(t)$ and $a\sp {-n}b\sp {n-m}\in\overline F$ to studying reducibility over $K\cap\overline F$. If $K$ is an
+algebraic number field then for fixed $n$, $m$ a finite number of essentially new examples of reducible trinomials $x\sp
+n+ax\sp m+b$ may exist (Theorem 6). The author conjectures that for every $K$ there is only a finite number of these
+"sporadic trinomials". If the conjecture holds then there exists a constant $c(K)$ such that every trinomial over $K$ has an
+irreducible factor with at most $c(K)$ nonzero coefficients (Consequence 2). Table 5 contains all 52 sporadic trinomials over
+$\bold Q$ known to the author. Their degrees lie in the range from $8$ to $52$. The rest of the paper is devoted to studying
+the reducibility of $ax\sp n+bx\sp m+c\in\bold Z[x]$. Theorem 9 (refining a result of Nagell) derives necessary conditions,
+which in the case $(m,n)=1$ yield an explicit bound for $b$ in terms of $a,c,m,n$. For every positive integer $d$ there exist
+only finitely many $n,m,b$ with $n/(m,n)>d$ and $\vert b\vert >2$ such that $x\sp n+bx\sp m±1$ has a factor of degree $d$;
+and these can be effectively computed. Theorem 10 derives necessary conditions from the existence of a factor (of $ax\sp
+n+bx\sp m+c)$ of given degree $d$. These imply that there exists $n\sb 0(d)$ such that $x\sp n+bx\sp m+1$ is irreducible if
+$n\geq n\sb 0(d)$, $n\neq 2m$, $\vert b\vert >2$. By Theorem 8, for every $n$ there exist only finitely many reducible
+trinomials $x\sp n+bx\sp m+1$ with $n\neq 2m$. 
+
+The proof of Theorem 10 does not depend on the other results of the paper. The same applies to Theorem 9. All other
+theorems except for Theorem 3 are based on lower estimates for the genus of certain function fields. These estimates show
+that the existence of a factor of degree $k$ of $x\sp n+ax\sp m+b\in K[x]$ imposes severe restrictions on $k,m,n,a,b$
+provided $K$ is a function field. The remaining cases are treated in a long series of lemmas applying to every field $K$ whose
+characteristic does not divide $mn(n-m)$. In several cases the proofs require extensive manipulations (with polynomials in
+several variables) which were performed by means of computer algebra systems. Faltings' theorem (solving Mordell's
+conjecture) is invoked in the proof of Theorem 6 (dealing with number fields). Theorems 7 and 8 (concerning $ax\sp n+bx\sp
+m+c\in\bold Z[x])$ are proved by using the corresponding theorems for rational function fields together with a lemma which
+may be viewed as a refinement of Hilbert's irreducibility theorem. The proof of this lemma is based on Siegel's theorem (on
+integral points of curves of positive genus) and on a result of Maillet (1919) dealing with rational functions over $\bold Q$
+taking infinitely many integral values at rational points. 
+
+\{Reviewer's remarks: In Theorem 2 the term $u\sp {\nu-µ}$ in the expression for $B$ has to be replaced by $u\sp \nu$. The
+proof of Lemma 26 employs Lemma 2(c) although this lemma only applies to separable extensions. In order to prove Lemma
+49 one has to know that every finite separable extension $L$ of $K(t)$ with $L\subseteq \overline K(t)$ is contained in
+$K'(t)$ for some separable extension $K'$ of $K$. (One can in fact prove that $L=K'(t)$ for suitable $K'$. This need not be
+true for inseparable $L$.) The proof of Theorem 6 is apparently based on the incorrect assumption that a divisor $P$ of a
+function field $L=K(t,y)$ has degree $1$ or is ramified with respect to $K(t)$ if $t$ and $y$ are congruent to elements of
+$K\bmod P$. In the proof of Theorem 10 it is erroneously stated that for every $l\geq 1$ there exists $c>1$ such that every
+algebraic number of degree $l$ has Mahler measure $>c$ unless it is a root of unity. It is clear that this holds if one restricts to
+algebraic integers. Unfortunately, the statement is applied to a number which is not an algebraic integer.\}
+
+                                 Reviewed by G. Turnwald 
+
+82b:12020 12C05 
+Liang, Joseph J. 
+On the solutions of trinomial equations over finite fields. 
+Bull. Calcutta Math. Soc. 70 (1978), no. 6, 379--382. 
+
+Let $p$ be a prime and $K=\text{GF}(p\sp k)$ be the finite field of order $p\sp k$. The author determines necessary and
+sufficient conditions in order that the polynomial $x\sp {p\sp n}-x-b$, $b\in K$, have roots in $K$ and moreover determines
+the number of such roots in $K$. Without loss of generality assume that $k>n$. Set $d=(n,k)$, $k=md$, $n=(m-i)d$, where
+$i>0$. Then the number of roots in $K$ of $x\sp {p\sp n}-x-b$, $b\in K$, is either 0 or $p\sp d$. Moreover this polynomial
+has a root in $K$ if and only if $\sum\sb {l=0}\sp {m-1}b\sp {p\sp {ld}}=0$. In particular, if $\sum\sb {l=0}\sp {m-1}b\sp
+{p\sp {ld}}=0$ and $m$ is odd, then $-\sum\sb {l=1}\sp {(m-1)/2}b\sp {p\sp {2ldt}}$ is a root. Several examples of these
+results are given.
+
+80m:12007 12A55 (20B25) 
+Lefton, Phyllis 
+On the Galois groups of cubics and trinomials. 
+Acta Arith. 35 (1979), no. 3, 239--246. 
+
+The author obtains bounds on the number of cubic polynomials, and also more generally on trinomials, whose coefficients
+are bounded in absolute value and whose Galois group, acting on the roots, is a proper subgroup of the symmetric group.
+
+                                Reviewed by D. W. Erbach 
+
+
+54 #10219 12E05 (12F10 10H25) 
+Lefton, Phyllis 
+On the Galois groups of cubics and trinomials. 
+Bull. Amer. Math. Soc. 82 (1976), no. 5, 754--756. 
+
+Consider monic polynomials $f$ of degree $n$, with integer coefficients bounded in absolute value by $N$. Let $E\sb n(N)$
+denote the number of such $f$ with Galois group $G\sb f$ of its splitting field (as a permutation group on the roots of $f(x)$ a
+proper subgroup of the symmetric group on $n$ letters. B. L. van der Waerden has conjectured that $E\sb n(N)\ll N\sp
+{n-1}$, a bound which holds for reducible polynomials if $n\geq 3$ [Van der Waerden, Monatsh. Math. 43 (1936),
+133--147; Jbuch 13, 387]. P. X. Gallagher [Analytic number theory (Proc. Sympos. Pure Math., Vol. XXIV, St. Louis
+Univ., St. Louis, Mo., 1972), pp. 91--101, Amer. Math. Soc., Providence, R.I., 1973; MR 48 #11020] has shown that in
+general $E\sb n(N)\ll N\sp {n-1/2}\log N$. Here the author announces some results of her Ph.D. dissertation, the details of
+proof to appear elsewhere ("On the Galois groups of cubic and trinomials", Acta Arith.): Theorem 1. For each
+$\varepsilon>0$, $E\sb 3(N)\ll{}\sb \varepsilon N\sp {2+\varepsilon}$. Theorem 2. Let $J\sb {k,n}(N)$ denote the number of
+trinomials $f(x)=ax\sp n+bx\sp k+c$, with $a,b,c\in{Z}$ and $\vert a\vert ,\vert b\vert ,\vert c\vert \leq N$, $N\geq 1$, for
+which $G\sb f$ is a subgroup of $A\sb n$; then for each $\varepsilon>0$, $J\sb {k,n}\ll{}\sb {\varepsilon,n}N\sp
+{2+\varepsilon}$. The author reports that in the course of the proof of Theorem 2 a new proof of the formula for the
+discriminant of a trinomial is given.
+
+                                Reviewed by E. A. Bertram 
+
+Cited in: 55 #10433 
+
+
+In CMP Isuue 2000:10
+Section 12
+Field theory and polynomials:
+
+Smith, Gene Ward. Some polynomials over $\bold Q(t)$
+and their Galois groups. (English summary).
+Math. Comp. 69 (2000), no. 230, 775-796.

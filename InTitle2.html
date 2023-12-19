@@ -1,0 +1,676 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="1894.6">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; color: #000000; -webkit-text-stroke: #000000}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 14.0px Times; color: #000000; -webkit-text-stroke: #000000}
+    p.p3 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px 'Courier New'; color: #000000; -webkit-text-stroke: #000000}
+    p.p4 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; color: #000000; -webkit-text-stroke: #000000}
+    p.p5 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Courier; color: #000000; -webkit-text-stroke: #000000; min-height: 14.0px}
+    p.p6 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 12.0px Helvetica; color: #000000; -webkit-text-stroke: #000000}
+    p.p7 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Courier; color: #000000; -webkit-text-stroke: #000000}
+    p.p8 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Courier; color: #0b0b0b; -webkit-text-stroke: #0b0b0b; background-color: #ffffff}
+    p.p9 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Courier; color: #0b0b0b; -webkit-text-stroke: #0b0b0b}
+    p.p10 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Courier; color: #00000b; -webkit-text-stroke: #000000}
+    p.p11 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 12.0px Courier; color: #000000; -webkit-text-stroke: #000000}
+    p.p12 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: justify; font: 12.0px Courier; color: #00000b; -webkit-text-stroke: #000000}
+    p.p13 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Courier; color: #000000; -webkit-text-stroke: #000000; background-color: #ffffff}
+    p.p14 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: justify; font: 12.0px Courier; color: #000000; -webkit-text-stroke: #000000}
+    p.p15 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; color: #000000; -webkit-text-stroke: #000000}
+    p.p16 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Courier; color: #00000b; -webkit-text-stroke: #000000; min-height: 14.0px}
+    p.p17 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 17.0px Courier; color: #00000b; -webkit-text-stroke: #000000}
+    p.p18 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 12.0px Courier; color: #00000b; -webkit-text-stroke: #000000}
+    p.p19 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 19.0px Times; color: #000000; -webkit-text-stroke: #000000}
+    p.p20 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; color: #00000b; -webkit-text-stroke: #000000}
+    p.p21 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: justify; font: 17.0px 'Times New Roman'; color: #00000b; -webkit-text-stroke: #00000b}
+    p.p22 {margin: 0.0px 0.0px 0.0px 0.0px; font: 20.0px Times; color: #000000; -webkit-text-stroke: #000000}
+    p.p23 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: justify; font: 14.0px Times; color: #000000; -webkit-text-stroke: #000000}
+    p.p24 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; color: #00000b; -webkit-text-stroke: #000000}
+    p.p25 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; color: #00000b; -webkit-text-stroke: #00000b}
+    p.p26 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: justify; font: 18.0px Courier; color: #000000; -webkit-text-stroke: #000000; min-height: 22.0px}
+    p.p27 {margin: 0.0px 0.0px 0.0px 0.0px; font: 17.0px 'Times New Roman'; color: #000000; -webkit-text-stroke: #0b0b0b}
+    p.p28 {margin: 0.0px 0.0px 0.0px 0.0px; font: 17.0px 'Times New Roman'; color: #000000; -webkit-text-stroke: #000000}
+    p.p29 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px Times; color: #000000; -webkit-text-stroke: #000000}
+    p.p30 {margin: 0.0px 0.0px 0.0px 0.0px; font: 19.0px Times; color: #000000; -webkit-text-stroke: #000000}
+    p.p31 {margin: 0.0px 0.0px 0.0px 0.0px; font: 17.0px 'Times New Roman'; color: #000000; -webkit-text-stroke: #000000; min-height: 20.0px}
+    p.p32 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 17.0px 'Times New Roman'; color: #000000; -webkit-text-stroke: #000000}
+    p.p33 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: justify; font: 17.0px 'Times New Roman'; color: #000000; -webkit-text-stroke: #000000}
+    p.p34 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: justify; font: 14.0px Helvetica; color: #0b0b0b; -webkit-text-stroke: #0b0b0b}
+    p.p35 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Helvetica; color: #0b0b0b; -webkit-text-stroke: #0b0b0b; background-color: #ffffff}
+    p.p36 {margin: 0.0px 0.0px 7.0px 0.0px; font: 14.0px Helvetica; color: #0b0b0b; -webkit-text-stroke: #0b0b0b; background-color: #ffffff}
+    p.p37 {margin: 0.0px 0.0px 7.0px 0.0px; font: 14.0px Helvetica; color: #0b0b0b; -webkit-text-stroke: #0b0b0b}
+    p.p38 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Helvetica; color: #0b0b0b; -webkit-text-stroke: #0b0b0b}
+    p.p39 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: justify; font: 12.0px Times; color: #00000b; -webkit-text-stroke: #000000}
+    p.p40 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; color: #0000e9; -webkit-text-stroke: #000000}
+    p.p41 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; color: #0000e9; -webkit-text-stroke: #0b000b; background-color: #ffffff}
+    p.p42 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; color: #0000e9; -webkit-text-stroke: #0b0b0b}
+    p.p43 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; color: #0b0b0b; -webkit-text-stroke: #0b0b0b; background-color: #ffffff}
+    p.p44 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; color: #0b000b; -webkit-text-stroke: #0b000b}
+    p.p45 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; color: #0b0b0b; -webkit-text-stroke: #0b0b0b}
+    p.p46 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Arial; color: #0b000b; -webkit-text-stroke: #0b000b}
+    p.p47 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Arial; color: #0000e9; -webkit-text-stroke: #0b000b; background-color: #ffffff}
+    p.p48 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Arial; color: #0b0b0b; -webkit-text-stroke: #0b0b0b}
+    p.p49 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Arial; color: #0b0b0b; -webkit-text-stroke: #0b0b0b; background-color: #ffffff}
+    p.p50 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 12.0px Times; color: #000000; -webkit-text-stroke: #000000}
+    span.s1 {font-kerning: none}
+    span.s2 {font: 12.0px Times; text-decoration: underline ; font-kerning: none; color: #00000b; -webkit-text-stroke: 0px #00000b}
+    span.s3 {font: 12.0px Times; text-decoration: underline ; font-kerning: none; color: #00000b}
+    span.s4 {font: 12.0px Times; font-kerning: none}
+    span.s5 {font: 14.0px Times; font-kerning: none}
+    span.s6 {font: 12.0px 'Courier New'; text-decoration: underline ; font-kerning: none; color: #00000b}
+    span.s7 {text-decoration: underline ; font-kerning: none; color: #00000b}
+    span.s8 {font: 12.0px 'Courier New'; text-decoration: underline ; font-kerning: none; color: #00000b; -webkit-text-stroke: 0px #00000b}
+    span.s9 {font: 12.0px 'Courier New'; text-decoration: underline ; font-kerning: none; color: #0000d3}
+    span.s10 {font: 12.0px Courier; text-decoration: underline ; font-kerning: none; color: #00000b}
+    span.s11 {font-kerning: none; background-color: #ffffff}
+    span.s12 {font-kerning: none; color: #000000}
+    span.s13 {font: 12.0px Courier; text-decoration: underline ; font-kerning: none; color: #0000dc}
+    span.s14 {font: 17.0px 'Times New Roman'; font-kerning: none}
+    span.s15 {font: 12.0px Courier; font-kerning: none}
+    span.s16 {font: 12.0px 'Courier New'; font-kerning: none}
+    span.s17 {font: 12.0px Courier; text-decoration: underline ; font-kerning: none; color: #0b0b0b; -webkit-text-stroke: 0px #0b0b0b}
+    span.s18 {text-decoration: underline ; font-kerning: none; color: #0000e9; -webkit-text-stroke: 0px #00000b}
+    span.s19 {text-decoration: underline ; font-kerning: none}
+    span.s20 {font-kerning: none; -webkit-text-stroke: 0px #00000b}
+    span.s21 {text-decoration: underline ; font-kerning: none; color: #00008d; -webkit-text-stroke: 0px #000000}
+    span.s22 {font-kerning: none; color: #000000; -webkit-text-stroke: 0px #000000}
+    span.s23 {text-decoration: underline ; font-kerning: none; color: #00000b; -webkit-text-stroke: 0px #00000b}
+    span.s24 {font: 17.0px 'Times New Roman'; text-decoration: underline ; font-kerning: none; color: #00000b; -webkit-text-stroke: 0px #0b0b0b}
+    span.s25 {font: 12.0px Helvetica; text-decoration: underline ; font-kerning: none; color: #00000b; -webkit-text-stroke: 0px #0b0b0b}
+    span.s26 {font: 12.0px Helvetica; text-decoration: underline ; font-kerning: none; color: #00000b}
+    span.s27 {font: 13.0px Times; text-decoration: underline ; font-kerning: none; color: #00000b}
+    span.s28 {font: 11.0px Times; font-kerning: none}
+    span.s29 {text-decoration: underline ; font-kerning: none; color: #0000e9}
+    span.s30 {font: 12.0px Helvetica; text-decoration: underline ; font-kerning: none; color: #0000e9; -webkit-text-stroke: 0px #00000b}
+    span.s31 {font: 14.0px Helvetica; text-decoration: underline ; font-kerning: none; color: #09000b; -webkit-text-stroke: 0px #09000b}
+    span.s32 {font: 17.0px 'Times New Roman'; font-kerning: none; color: #000000; -webkit-text-stroke: 0px #000000}
+    span.s33 {font: 12.0px Times; text-decoration: underline ; font-kerning: none; color: #0000e9}
+    span.s34 {font: 12.0px Times; text-decoration: underline ; font-kerning: none; color: #0000e9; -webkit-text-stroke: 0px #0b000b}
+    span.s35 {text-decoration: underline ; font-kerning: none; background-color: #ffffff}
+    span.s36 {text-decoration: underline ; font-kerning: none; color: #0b0b0b}
+    span.s37 {font-kerning: none; color: #0b0b0b; background-color: #ffffff; -webkit-text-stroke: 0px #0b0b0b}
+    span.s38 {text-decoration: underline ; font-kerning: none; color: #0b000b; -webkit-text-stroke: 0px #0b000b}
+    span.s39 {font: 12.0px Arial; text-decoration: underline ; font-kerning: none; color: #0000e9; -webkit-text-stroke: 0px #0b000b}
+    span.s40 {text-decoration: underline ; font-kerning: none; color: #0000e9; background-color: #ffffff}
+    span.s41 {font: 12.0px Helvetica; font-kerning: none}
+    span.Apple-tab-span {white-space:pre}
+    table.t1 {margin: 5.0px 0.0px 5.0px 0.0px; table-layout: fixed}
+    td.td1 {width: 300.0px; margin: 0.5px 0.5px 0.5px 0.5px}
+    td.td2 {width: 285.0px; margin: 0.5px 0.5px 0.5px 0.5px; padding: 0.0px 0.0px 0.0px 15.0px}
+  </style>
+</head>
+<body>
+<p class="p1"><span class="s1">InTitle2.html</span></p>
+<p class="p1"><span class="s1"><br>
+</span></p>
+<p class="p2"><span class="s1"><b>Most popular names in titles at arXiv (&gt; 1,000<span class="Apple-converted-space">  </span>hits)</b></span></p>
+<p class="p2"><span class="s1"><b>Top names in mathematics</b></span></p>
+<p class="p1"><span class="s1">updated Nov 15, 2021<br>
+</span></p>
+<p class="p1"><span class="s1">Started in<span class="Apple-converted-space">  </span>Nov 2020, <span class="Apple-converted-space">  </span>last revised on Nov 12, 2021.</span></p>
+<p class="p1"><span class="s1">To get most recent number,<span class="Apple-converted-space"> </span></span></p>
+<p class="p1"><span class="s1">click on<span class="Apple-converted-space">    </span><a href="https://arxiv.org/search/?query=wasserstein&amp;searchtype=title&amp;abstracts=show&amp;order=-announced_date_first&amp;size=50"><span class="s2">arXiv</span><span class="s3"><span class="Apple-converted-space"> </span></span></a> <span class="Apple-converted-space">  </span>and replace<span class="Apple-converted-space">    </span>wasserstein in <span class="Apple-converted-space">  </span>the search window<span class="Apple-converted-space"> </span></span></p>
+<p class="p1"><span class="s1">by any name you want. Then hit return or entry on your keyboard/</span></p>
+<p class="p1"><span class="s1">Some numbers are also live links leading to updated numbers.<span class="Apple-converted-space"> </span></span></p>
+<p class="p1"><span class="s1">Some years have links to en.wikipedia.</span></p>
+<p class="p1"><span class="s1">Also are given some data from<span class="Apple-converted-space">  </span>Zentralblatt<span class="Apple-converted-space">  </span>Math (Zbl;ti:), </span><span class="s4"><span class="Apple-converted-space">  </span></span><span class="s1">Math Reviews (MR/title),<span class="Apple-converted-space"> </span></span></p>
+<p class="p1"><span class="s1">Google Scholar (sci; allintitle:)and Web of Science (sci;TI=).</span></p>
+<p class="p1"><span class="s1">MR has<span class="Apple-converted-space">  </span>limited access while arXiv<span class="Apple-converted-space">  </span>and Zbl are<span class="Apple-converted-space">  </span>open acmes sites.</span></p>
+<p class="p1"><span class="s1"><br>
+</span></p>
+<p class="p2"><span class="s1">TI<span class="Apple-converted-space">  </span>list,<span class="Apple-converted-space">  </span>At least<span class="Apple-converted-space">  </span>1K in rXiv/title</span></p>
+<p class="p3"><span class="s5"><span class="Apple-converted-space">                                     </span></span><span class="s1"><b>arXiv <span class="Apple-converted-space">    </span>Zbl <span class="Apple-converted-space">    </span>MR<span class="Apple-converted-space">        </span>sch <span class="Apple-converted-space">      </span>sci <span class="Apple-converted-space">  </span>1st in Zbl</b></span></p>
+<p class="p3"><span class="s1">Abel <span class="Apple-converted-space">    </span><a href="https://en.wikipedia.org/wiki/Niels_Henrik_Abel"><span class="s6">1802-29</span></a><span class="Apple-converted-space">  </span><a href="https://arxiv.org/search/?query=abel&amp;searchtype=title&amp;abstracts=show&amp;order=-announced_date_first&amp;size=50"><span class="s6">1,</span></a></span><span class="s7">214</span><span class="s1"> <span class="Apple-converted-space">    </span><a href="https://zbmath.org/?q=ti%3AAbel"><span class="s6">2</span></a></span><span class="s7">199</span><span class="s1"> <span class="Apple-converted-space">  </span>1852 <span class="Apple-converted-space">      </span>15K<span class="Apple-converted-space">      </span>5529 <span class="Apple-converted-space">    </span><a href="https://zbmath.org/?q=an%3A001.0035cj"><span class="s6">Abel</span></a> <span class="Apple-converted-space"> </span></span></p>
+<p class="p3"><span class="s1">abelian<span class="Apple-converted-space">  </span><a href="https://en.wikipedia.org/wiki/Abelian"><span class="s6">wiki</span></a> <span class="Apple-converted-space">    </span><a href="https://arxiv.org/search/?query=abelian&amp;searchtype=title&amp;abstracts=show&amp;order=-announced_date_first&amp;size=50"><span class="s6">6.</span></a></span><span class="s7">588</span><span class="s1"><span class="Apple-converted-space">    </span>13946 <span class="Apple-converted-space">  </span>14502 <span class="Apple-converted-space">      </span>41K <span class="Apple-converted-space">    </span>37304<span class="Apple-converted-space">    </span><a href="https://zbmath.org/?q=an%3A025.0746cj"><span class="s6">Abelshe</span></a> <span class="Apple-converted-space"> </span></span></p>
+<p class="p3"><span class="s1">Banach <span class="Apple-converted-space">  </span>1<a href="https://en.wikipedia.org/wiki/Stefan_Banach"><span class="s6">892-45</span></a><span class="Apple-converted-space">  </span>2,148<span class="Apple-converted-space">    </span>26360 <span class="Apple-converted-space">  </span>27276 <span class="Apple-converted-space">      </span>77K <span class="Apple-converted-space">    </span>39531</span></p>
+<p class="p3"><span class="s1">bayesian<span class="Apple-converted-space">  </span><a href="https://en.wikipedia.org/wiki/List_of_things_named_after_Thomas_Bayes"><span class="s6">wiki</span></a><span class="Apple-converted-space">    </span>7,683<span class="Apple-converted-space">    </span>13203 <span class="Apple-converted-space">  </span>16572<span class="Apple-converted-space">      </span>203K<span class="Apple-converted-space">    </span>167638</span></p>
+<p class="p3"><span class="s1">Bloch <span class="Apple-converted-space">    </span><a href="https://en.wikipedia.org/wiki/Felix_Bloch#:~:text=Along%20with%20Edward%20Purcell%2C%20Bloch%20was%20awarded%20the,Physics%20for%20his%20work%20on%20nuclear%20magnetic%20induction."><span class="s6">1905-83</span></a> 1,135 <span class="Apple-converted-space">    </span>2012<span class="Apple-converted-space">    </span>2077<span class="Apple-converted-space">                </span>25781</span></p>
+<p class="p3"><span class="s1">Boltzmann <a href="https://en.wikipedia.org/wiki/Ludwig_Boltzmann"><span class="s6">1844-06</span></a> 2,438 <span class="Apple-converted-space">    </span>5754</span></p>
+<p class="p3"><span class="s1">Bonnetv <span class="Apple-converted-space">  </span>1<a href="https://en.wikipedia.org/wiki/Pierre_Ossian_Bonnet"><span class="s6">819-92</span></a> 1,043<span class="Apple-converted-space">      </span>708</span></p>
+<p class="p3"><span class="s1">boolean <span class="Apple-converted-space">          </span>1,413 <span class="Apple-converted-space">    </span>8188 <span class="Apple-converted-space">              </span>42K <span class="Apple-converted-space">    </span>48237</span></p>
+<p class="p3"><span class="s1">Born<span class="Apple-converted-space">      </span><a href="https://en.wikiquote.org/wiki/Max_Born"><span class="s6">1882-70</span></a> 1,549 <span class="Apple-converted-space">    </span>1010</span></p>
+<p class="p3"><span class="s1">Bose<span class="Apple-converted-space">      </span>1<a href="https://en.wikipedia.org/wiki/Satyendra_Nath_Bose"><span class="s6">894-74</span></a> 8,762 <span class="Apple-converted-space">    </span>2144 <span class="Apple-converted-space">                      </span>34290</span></p>
+<p class="p3"><span class="s1">boson(bosonic)<span class="Apple-converted-space">    </span>2,278 <span class="Apple-converted-space">    </span>1194 <span class="Apple-converted-space">              </span>66K <span class="Apple-converted-space">    </span>39902</span></p>
+<p class="p3"><span class="s1">Bridges <span class="Apple-converted-space">          </span>1,659<span class="Apple-converted-space">      </span>737</span></p>
+<p class="p3"><span class="s1">brownian<span class="Apple-converted-space">          </span>3,418 <span class="Apple-converted-space">    </span>7063</span></p>
+<p class="p3"><span class="s1">Calabi <a href="https://en.wikipedia.org/wiki/Eugenio_Calabi"><span class="s6">1923-</span></a><span class="Apple-converted-space">      </span>1,572 <span class="Apple-converted-space">    </span>1522</span></p>
+<p class="p3"><span class="s1">Cauchy <a href="https://en.wikipedia.org/wiki/Augustin-Louis_Cauchy"><span class="s6">1789-57</span></a><span class="Apple-converted-space">    </span>1,403<span class="Apple-converted-space">    </span>14878 <span class="Apple-converted-space">  </span>15338 <span class="Apple-converted-space">      </span>35K</span></p>
+<p class="p3"><span class="s1">Chao <span class="Apple-converted-space">  </span>1<a href="https://en.wikipedia.org/wiki/Chung-Yao_Chao"><span class="s6">902-98</span></a><span class="Apple-converted-space">    </span>3,298 <span class="Apple-converted-space">      </span>30</span></p>
+<p class="p3"><span class="s1">Chern<span class="Apple-converted-space">  </span><a href="https://en.wikipedia.org/wiki/Shiing-Shen_Chern"><span class="s6">1911-04</span></a><span class="Apple-converted-space">    </span>3,214 <span class="Apple-converted-space">    </span>2888<span class="Apple-converted-space">    </span>3684<span class="Apple-converted-space"> </span></span></p>
+<p class="p3"><span class="s1">Cooper<span class="Apple-converted-space">  </span><a href="https://en.wikipedia.org/wiki/Leon_Cooper"><span class="s6">1930-</span></a> <span class="Apple-converted-space">    </span>3,914<span class="Apple-converted-space">      </span>138</span></p>
+<p class="p3"><span class="s1">Coulomb <a href="https://en.wikipedia.org/wiki/Charles-Augustin_de_Coulomb"><span class="s6">1736-06</span></a> <span class="Apple-converted-space">  </span>3,907 <span class="Apple-converted-space">    </span>2023</span></p>
+<p class="p3"><span class="s1">Dirac <span class="Apple-converted-space">  </span><a href="https://en.wikipedia.org/wiki/Paul_Dirac"><span class="s6">1902-84</span></a> <span class="Apple-converted-space">  </span>7,304 <span class="Apple-converted-space">    </span>6660 <span class="Apple-converted-space">              </span>41K<span class="Apple-converted-space"> </span></span></p>
+<p class="p3"><span class="s1">Dirichlet <span class="Apple-converted-space">        </span>2,267<span class="Apple-converted-space">    </span>14242 <span class="Apple-converted-space">              </span>37K</span></p>
+<p class="p3"><span class="s1">Einstein <span class="Apple-converted-space">        </span>10,577 <span class="Apple-converted-space">    </span><a href="https://zbmath.org/?q=ti%3A+einstein+"><span class="s8">8062</span></a><span class="Apple-converted-space">    </span>9782</span></p>
+<p class="p3"><span class="s1">euclidean <span class="Apple-converted-space">        </span>2,175 <span class="Apple-converted-space">    </span>8228<span class="Apple-converted-space">    </span>9014 <span class="Apple-converted-space">      </span>89K</span></p>
+<p class="p3"><span class="s1">Euler <span class="Apple-converted-space">  </span><a href="https://en.wikipedia.org/wiki/Leonhard_Euler"><span class="s6">1707-83</span></a> <span class="Apple-converted-space">  </span>2,937<span class="Apple-converted-space">    </span>12615 <span class="Apple-converted-space">    </span>418 <span class="Apple-converted-space">      </span>63K</span></p>
+<p class="p3"><span class="s1">Feynman <a href="https://en.wikipedia.org/wiki/Richard_Feynman"><span class="s6">1918-88</span></a> <span class="Apple-converted-space">  </span>1,279 <span class="Apple-converted-space">    </span>1790<span class="Apple-converted-space">                </span>9K <span class="Apple-converted-space">    </span>3355</span></p>
+<p class="p3"><span class="s1">Fermi <span class="Apple-converted-space">  </span><a href="https://en.wikipedia.org/wiki/Enrico_Fermi"><span class="s6">1901-54</span></a><span class="Apple-converted-space">  </span>8,105<span class="Apple-converted-space">      </span>1684<span class="Apple-converted-space">                      </span>20237</span></p>
+<p class="p3"><span class="s1">fermion <span class="Apple-converted-space">        </span>12,515<span class="Apple-converted-space">      </span>1169</span></p>
+<p class="p3"><span class="s1">Fisher <span class="Apple-converted-space">          </span>1,241<span class="Apple-converted-space">      </span>2378 <span class="Apple-converted-space">              </span>59K</span></p>
+<p class="p3"><span class="s1">Fock <span class="Apple-converted-space">            </span>1,458<span class="Apple-converted-space">      </span>1520</span></p>
+<p class="p3"><span class="s1">Fourier<span class="Apple-converted-space">          </span>3,614 <span class="Apple-converted-space">    </span>19443<span class="Apple-converted-space">              </span>169K</span></p>
+<p class="p3"><span class="s1">Galilei<span class="Apple-converted-space">          </span>1,737 <span class="Apple-converted-space">      </span>541</span></p>
+<p class="p3"><span class="s1">Galois<span class="Apple-converted-space">  </span><a href="https://en.wikipedia.org/wiki/%C3%89variste_Galois"><span class="s6">1811-32</span></a></span><span class="s7"><span class="Apple-converted-space"> </span></span><span class="s1"> 1,722<span class="Apple-converted-space">      </span>5696</span></p>
+<p class="p3"><span class="s1">Gauss<span class="Apple-converted-space">            </span>1,998<span class="Apple-converted-space">      </span>6523</span></p>
+<p class="p3"><span class="s1">gaussian <span class="Apple-converted-space">        </span>9,542 <span class="Apple-converted-space">    </span>14111</span></p>
+<p class="p3"><span class="s1">Ginzburg <a href="https://en.wikipedia.org/wiki/Vitaly_Ginzburg"><span class="s6">1916-9</span></a></span><span class="s7"><span class="Apple-converted-space"> </span></span><span class="s1"> 1,059<span class="Apple-converted-space">      </span>2211</span></p>
+<p class="p3"><span class="s1">Gordon <a href="https://en.wikipedia.org/wiki/Cameron_Gordon_(mathematician)"><span class="s6">1945-</span></a> <span class="Apple-converted-space">    </span>1,613<span class="Apple-converted-space">      </span>3786</span></p>
+<p class="p3"><span class="s1">Grassmann <a href="https://en.wikipedia.org/wiki/Hermann_Grassmann"><span class="s6">1809-77</span></a></span></p>
+<p class="p3"><span class="s1">OR grassmannian<span class="Apple-converted-space">  </span>1330<span class="Apple-converted-space">      </span>2017</span></p>
+<p class="p3"><span class="s1">Green's <span class="Apple-converted-space">        </span>2,662<span class="Apple-converted-space">      </span>3399</span></p>
+<p class="p3"><span class="s1">Greene<span class="Apple-converted-space">          </span>2,622<span class="Apple-converted-space">        </span>51</span></p>
+<p class="p3"><span class="s1">Hall<span class="Apple-converted-space">            </span>7,546<span class="Apple-converted-space">      </span>2509</span></p>
+<p class="p3"><span class="s1">Hall effect <span class="Apple-converted-space">    </span>3,245 <span class="Apple-converted-space">      </span>418</span></p>
+<p class="p3"><span class="s1">Hamilton<span class="Apple-converted-space">        </span>1,311<span class="Apple-converted-space">      </span>4118</span></p>
+<p class="p3"><span class="s1">Hardy <a href="https://en.wikipedia.org/wiki/G._H._Hardy"><span class="s6">1877-47</span></a> <span class="Apple-converted-space">  </span>1.504<span class="Apple-converted-space">      </span>6976<span class="Apple-converted-space">              </span>45K</span></p>
+<p class="p3"><span class="s1">Hawking <span class="Apple-converted-space">        </span>1,323 <span class="Apple-converted-space">      </span>638 <span class="Apple-converted-space">              </span>9K</span></p>
+<p class="p3"><span class="s1">Heisenberg<span class="Apple-converted-space">      </span>4,045<span class="Apple-converted-space">      </span>3684<span class="Apple-converted-space">              </span>17K</span></p>
+<p class="p3"><span class="s1">hermitian <span class="Apple-converted-space">      </span>2,338<span class="Apple-converted-space">      </span>5397</span></p>
+<p class="p3"><span class="s1">Higgs<span class="Apple-converted-space">  </span><a href="https://en.wikipedia.org/wiki/Peter_Higgs"><span class="s6">1929-</span></a> <span class="Apple-converted-space">  </span>11,647<span class="Apple-converted-space">      </span>1721</span></p>
+<p class="p3"><span class="s1">Hilbert <span class="Apple-converted-space">        </span>3,839 <span class="Apple-converted-space">    </span>18068</span></p>
+<p class="p3"><span class="s1">Hodge<span class="Apple-converted-space">  </span><a href="https://en.wikipedia.org/wiki/W._V._D._Hodge"><span class="s6">1903-75</span></a><span class="Apple-converted-space">  </span>1,117<span class="Apple-converted-space">      </span>1685</span></p>
+<p class="p3"><span class="s1">Hopf<span class="Apple-converted-space">    </span><a href="https://en.wikipedia.org/wiki/Heinz_Hopf"><span class="s6">1894-71</span></a> 2,373<span class="Apple-converted-space">      </span>7943</span></p>
+<p class="p3"><span class="s1">Hubbard <a href="https://en.wikipedia.org/wiki/John_Hubbard_(physicist)"><span class="s6">1931-80</span></a> 3,754 <span class="Apple-converted-space">      </span>519</span></p>
+<p class="p3"><span class="s1">Hubble<span class="Apple-converted-space">  </span><a href="https://en.wikipedia.org/wiki/Edwin_Hubble"><span class="s6">1889-53</span></a> 2,067<span class="Apple-converted-space">        </span>76<span class="Apple-converted-space">              </span>8K</span></p>
+<p class="p3"><span class="s1">Ising <span class="Apple-converted-space">  </span><a href="https://en.wikipedia.org/wiki/Ernst_Ising"><span class="s6">1900-98</span></a> 4,476<span class="Apple-converted-space">      </span>2347</span></p>
+<p class="p3"><span class="s1">Jacobi<span class="Apple-converted-space">  </span>1<a href="https://en.wikipedia.org/wiki/Carl_Gustav_Jacob_Jacobi"><span class="s6">804-51</span></a> 2,073<span class="Apple-converted-space">      </span>8145</span></p>
+<p class="p3"><span class="s1">Kepler<span class="Apple-converted-space">  </span><a href="https://en.wikipedia.org/wiki/Johannes_Kepler"><span class="s6">1571-30</span></a> 1,726 <span class="Apple-converted-space">      </span>998</span></p>
+<p class="p3"><span class="s1">Klein <span class="Apple-converted-space">          </span>1,990<span class="Apple-converted-space">      </span>4054</span></p>
+<p class="p3"><span class="s1">Landau<span class="Apple-converted-space">          </span>3,860<span class="Apple-converted-space">      </span>4034</span></p>
+<p class="p3"><span class="s1">Laplace <span class="Apple-converted-space">        </span>1,166<span class="Apple-converted-space">      </span>8828 <span class="Apple-converted-space">            </span>33K</span></p>
+<p class="p3"><span class="s1">laplacian <span class="Apple-converted-space">      </span>2,700<span class="Apple-converted-space">      </span>8988 <span class="Apple-converted-space">            </span>22K<span class="Apple-converted-space">      </span>33493</span></p>
+<p class="p3"><span class="s1">Lee <span class="Apple-converted-space">            </span>2,407<span class="Apple-converted-space">        </span>6K</span></p>
+<p class="p3"><span class="s1">Lévy<span class="Apple-converted-space">            </span>1,328<span class="Apple-converted-space">      </span>4100</span></p>
+<p class="p3"><span class="s1">Lie <span class="Apple-converted-space">            </span>4,094 <span class="Apple-converted-space">    </span>25159</span></p>
+<p class="p3"><span class="s1">Lifshitz<span class="Apple-converted-space">        </span>1,326 <span class="Apple-converted-space">      </span>788</span></p>
+<p class="p3"><span class="s1">Lipschitz <span class="Apple-converted-space">      </span>1,396<span class="Apple-converted-space">      </span>5808</span></p>
+<p class="p3"><span class="s1">Liouville <span class="Apple-converted-space">      </span>1,611<span class="Apple-converted-space">      </span>7106 <span class="Apple-converted-space">            </span>12K</span></p>
+<p class="p3"><span class="s1">Lorentz <span class="Apple-converted-space">        </span>3,202<span class="Apple-converted-space">      </span>3754</span></p>
+<p class="p3"><span class="s1">Lyapunov<span class="Apple-converted-space">        </span>1,346<span class="Apple-converted-space">      </span>6984</span></p>
+<p class="p3"><span class="s1">Markov<span class="Apple-converted-space">          </span>4,883 <span class="Apple-converted-space">    </span>20852 <span class="Apple-converted-space">            </span>59K</span></p>
+<p class="p3"><span class="s1">markovian <span class="Apple-converted-space">      </span>1,737<span class="Apple-converted-space">      </span>4105</span></p>
+<p class="p3"><span class="s1">Maxwell <span class="Apple-converted-space">        </span>2,477<span class="Apple-converted-space">      </span>5356 <span class="Apple-converted-space">            </span>71K</span></p>
+<p class="p3"><span class="s1">Mills <span class="Apple-converted-space">          </span>4,222<span class="Apple-converted-space">      </span>3200</span></p>
+<p class="p3"><span class="s1">Minkowski <span class="Apple-converted-space">      </span>1,511<span class="Apple-converted-space">      </span>3649</span></p>
+<p class="p3"><span class="s1">Navier<span class="Apple-converted-space">          </span>2,370 <span class="Apple-converted-space">    </span>11924</span></p>
+<p class="p3"><span class="s1">Newton<span class="Apple-converted-space">          </span>3,224<span class="Apple-converted-space">      </span>8640<span class="Apple-converted-space">   </span></span></p>
+<p class="p3"><span class="s1">newtonian <span class="Apple-converted-space">      </span>1,679<span class="Apple-converted-space">      </span>3922<span class="Apple-converted-space">        </span>76K</span></p>
+<p class="p3"><span class="s1">Noether OR <span class="Apple-converted-space">   </span></span></p>
+<p class="p3"><span class="s1">noetherian <span class="Apple-converted-space">    </span><a href="https://arxiv.org/search/?query=Noether+OR+noetherian&amp;searchtype=title&amp;abstracts=show&amp;order=-announced_date_first&amp;size=50"><span class="s9">1,031</span></a> <span class="Apple-converted-space">      </span>3271<span class="Apple-converted-space">           </span></span></p>
+<p class="p3"><span class="s1">Planck<span class="Apple-converted-space">          </span>2,501<span class="Apple-converted-space">      </span>2036</span></p>
+<p class="p3"><span class="s1">Poincaré<span class="Apple-converted-space">        </span>1,117<span class="Apple-converted-space">      </span>5531<span class="Apple-converted-space">            </span>22K</span></p>
+<p class="p3"><span class="s1">Poisson <span class="Apple-converted-space">        </span>4,094 <span class="Apple-converted-space">    </span>14368</span></p>
+<p class="p3"><span class="s1">Ricci <span class="Apple-converted-space">  </span><a href="https://en.wikipedia.org/wiki/Giovanni_Ricci_(mathematician)"><span class="s6">1904-73</span></a> 2,121<span class="Apple-converted-space">      </span>3562</span></p>
+<p class="p3"><span class="s1">Riemann <span class="Apple-converted-space">        </span>2,754 <span class="Apple-converted-space">    </span>13273 <span class="Apple-converted-space">          </span>33K</span></p>
+<p class="p3"><span class="s1">riemannian<span class="Apple-converted-space">      </span>2,814 <span class="Apple-converted-space">    </span>10525</span></p>
+<p class="p3"><span class="s1">Schrödinger <span class="Apple-converted-space">    </span>4,051 <span class="Apple-converted-space">    </span>18298 <span class="Apple-converted-space">          </span>21K</span></p>
+<p class="p3"><span class="s1">Simons<span class="Apple-converted-space">          </span>2,347<span class="Apple-converted-space">      </span>1750</span></p>
+<p class="p3"><span class="s1">Sobolev <a href="https://en.wikipedia.org/wiki/Sergei_Sobolev"><span class="s6">1908-89</span></a> 1,876<span class="Apple-converted-space">      </span>8421</span></p>
+<p class="p3"><span class="s1">Spitzer <span class="Apple-converted-space">        </span>1,273<span class="Apple-converted-space">        </span>88</span></p>
+<p class="p3"><span class="s1">Stokes <a href="https://en.wikipedia.org/wiki/Sir_George_Stokes,_1st_Baronet"><span class="s6">1819-03</span></a><span class="Apple-converted-space">  </span>3,433 <span class="Apple-converted-space">    </span>16850</span></p>
+<p class="p3"><span class="s1">van der Waals <span class="Apple-converted-space">  </span>1,192 <span class="Apple-converted-space">      </span>388</span></p>
+<p class="p3"><span class="s1">voltage <span class="Apple-converted-space">        </span>1,507 <span class="Apple-converted-space">      </span>652<span class="Apple-converted-space">          </span>438K</span></p>
+<p class="p3"><span class="s1">Weyl<span class="Apple-converted-space">            </span>3,665<span class="Apple-converted-space">      </span>4914<span class="Apple-converted-space">          </span>5491</span></p>
+<p class="p3"><span class="s1">Wigner<span class="Apple-converted-space">          </span>1,711<span class="Apple-converted-space">      </span>1610</span></p>
+<p class="p3"><span class="s1">Wilson<span class="Apple-converted-space">          </span>2,127<span class="Apple-converted-space">      </span>1430</span></p>
+<p class="p3"><span class="s1">Witten<span class="Apple-converted-space">  </span><a href="https://en.wikipedia.org/wiki/Edward_Witten"><span class="s6">1951-</span></a> <span class="Apple-converted-space">  </span>1,574<span class="Apple-converted-space">      </span>1550<span class="Apple-converted-space">            </span>7K</span></p>
+<p class="p3"><span class="s1">Yang<span class="Apple-converted-space">            </span>4,893<span class="Apple-converted-space">      </span>4332</span></p>
+<p class="p3"><span class="s1">Yau <span class="Apple-converted-space">  </span><a href="https://en.wikipedia.org/wiki/Shing-Tung_Yau"><span class="s6">1949-</span></a> <span class="Apple-converted-space">    </span>1,608<span class="Apple-converted-space">      </span>1562</span></p>
+<p class="p3"><span class="s1">Young <span class="Apple-converted-space">          </span>4,140<span class="Apple-converted-space">      </span>1684<span class="Apple-converted-space">      </span>1584<br>
+</span></p>
+<p class="p4"><span class="s1">end TI<span class="Apple-converted-space">  </span>list <span class="Apple-converted-space">    </span>most popular in titles at arXiv<br>
+</span></p>
+<p class="p4"><span class="s1"><br>
+<b>In some cases, different persons share the same last name.</b></span></p>
+<p class="p4"><span class="s1"><b>Names,which did not make it to the listTI<span class="Apple-converted-space">  </span>above but<span class="Apple-converted-space">  </span>with &gt; 2K in arXiv abstracts are in the next list.</b></span></p>
+<p class="p5"><span class="s1"></span><br></p>
+<p class="p6"><span class="s1"><span class="Apple-converted-space"> </span>AB list. At least 2K in arXiv/abstract but not on TI list</span></p>
+<p class="p7"><span class="s1"><b><span class="Apple-converted-space">                        </span>srXiv/Abstract<span class="Apple-converted-space">        </span>Zbl/ab</b></span></p>
+<p class="p7"><span class="s1">Artin <a href="https://arxiv.org/search/?query=artin&amp;searchtype=abstract&amp;abstracts=show&amp;order=-announced_date_first&amp;size=50"><span class="s10">1839</span></a><span class="Apple-converted-space">  </span>OR artinian<span class="Apple-converted-space">  </span><a href="https://arxiv.org/search/?query=artinian&amp;searchtype=abstract&amp;abstracts=show&amp;order=-announced_date_first&amp;size=50"><span class="s10">513</span></a><span class="Apple-converted-space">        </span><a href="https://arxiv.org/search/?query=artinian+OR+artin&amp;searchtype=abstract&amp;abstracts=show&amp;order=-announced_date_first&amp;size=50"><span class="s10">23</span></a></span><span class="s7">38</span><span class="s1"><span class="Apple-converted-space">        </span><a href="https://zbmath.org/?q=ab%3A+artin+%7C+artinian"><span class="s10">8K</span></a><span class="Apple-converted-space">    </span><a href="https://zbmath.org/?q=ab%3Aartin"><span class="s10">5K</span></a> | <a href="https://zbmath.org/?q=ab%3Aartinian"><span class="s10">3K</span></a></span></p>
+<p class="p7"><span class="s1">Bernoulli<span class="Apple-converted-space">  </span><a href="https://en.wikipedia.org/wiki/Bernoulli_family"><span class="s10">wiki</span></a> <span class="Apple-converted-space">                    </span>3167<span class="Apple-converted-space">        </span>4K</span></p>
+<p class="p7"><span class="s1">Bessel<span class="Apple-converted-space">                              </span>2711<span class="Apple-converted-space">        </span>9K</span></p>
+<p class="p7"><span class="s1">Borel <span class="Apple-converted-space">                              </span>3937 <span class="Apple-converted-space">      </span><a href="https://zbmath.org/?q=ab%3Aborel"><span class="s10">16K</span></a></span></p>
+<p class="p7"><span class="s1">Clifford <span class="Apple-converted-space">      </span>1<a href="https://en.wikipedia.org/wiki/William_Kingdon_Clifford"><span class="s10">845-79</span></a><span class="Apple-converted-space">              </span>2417<span class="Apple-converted-space">        </span>6K</span></p>
+<p class="p7"><span class="s1">Cohen <span class="Apple-converted-space">                              </span>2669<span class="Apple-converted-space">        </span>2K</span></p>
+<p class="p7"><span class="s1">Curie <span class="Apple-converted-space">                              </span>2639<span class="Apple-converted-space">        </span><a href="https://zbmath.org/?q=ab%3ACurie"><span class="s10">1K</span></a></span></p>
+<p class="p7"><span class="s1">Descartes<span class="Apple-converted-space">    </span>1<a href="https://en.wikipedia.org/wiki/Ren%C3%A9_Descartes"><span class="s10">596-50</span></a><span class="Apple-converted-space">                </span>3074<span class="Apple-converted-space">        </span>1K</span></p>
+<p class="p7"><span class="s1">Dyson<span class="Apple-converted-space">        </span>1<a href="https://en.wikipedia.org/wiki/Freeman_Dyson"><span class="s10">923-20</span></a><span class="Apple-converted-space">                </span>3212 <span class="Apple-converted-space">      </span>441</span></p>
+<p class="p7"><span class="s1">Erdos OR Erdős OR Erdös <span class="Apple-converted-space">            </span>2736<span class="Apple-converted-space">        </span>7K</span></p>
+<p class="p7"><span class="s1">Faraday <span class="Apple-converted-space">                            </span>2140 <span class="Apple-converted-space">      </span>266</span></p>
+<p class="p7"><span class="s1">Gibbs <span class="Apple-converted-space">                              </span>4945<span class="Apple-converted-space">        </span>2K</span></p>
+<p class="p7"><span class="s1">Gromov<span class="Apple-converted-space">                              </span><a href="https://arxiv.org/search/?query=Gromov&amp;searchtype=abstract&amp;abstracts=show&amp;order=-announced_date_first&amp;size=50"><span class="s10">3</span></a></span><span class="s7">427</span><span class="s1"><span class="Apple-converted-space">        </span>5K</span></p>
+<p class="p7"><span class="s1">Gross <span class="Apple-converted-space">                              </span>4954<span class="Apple-converted-space">        </span>7K</span></p>
+<p class="p7"><span class="s1">Grothendieck<span class="Apple-converted-space">  </span><a href="https://en.wikipedia.org/wiki/Alexander_Grothendieck"><span class="s10">1928-14</span></a> <span class="Apple-converted-space">              </span>2224<span class="Apple-converted-space">        </span>6K<span class="Apple-converted-space"> </span></span></p>
+<p class="p7"><span class="s1">Hadamard<span class="Apple-converted-space">                            </span>2260<span class="Apple-converted-space">        </span>9K</span></p>
+<p class="p8"><span class="s1">Harder<span class="Apple-converted-space">                              </span>2916<span class="Apple-converted-space">        </span>2K</span></p>
+<p class="p7"><span class="s1">Hausdorff <span class="Apple-converted-space">                          </span>5230 <span class="Apple-converted-space">      </span>23K</span></p>
+<p class="p7"><span class="s1">Helmholtz <span class="Apple-converted-space">                          </span>2578<span class="Apple-converted-space">        </span>8K</span></p>
+<p class="p9"><span class="s11">Hermite<span class="Apple-converted-space">    </span><a href="https://en.wikipedia.org/wiki/Charles_Hermite"><span class="s7">1982-01</span></a><span class="Apple-converted-space">                  </span>2687 <span class="Apple-converted-space">      </span>10K</span></p>
+<p class="p7"><span class="s1">Hertz OR hz OR mhz<span class="Apple-converted-space">                </span>12,892<span class="Apple-converted-space">        </span><a href="https://zbmath.org/?q=ab%3A+Hertz+%7C+hz+%7C+khz+%7C+mhz++"><span class="s10">2K</span></a></span></p>
+<p class="p7"><span class="s1">Hesse OR hessian<span class="Apple-converted-space">                    </span>3025<span class="Apple-converted-space">        </span>5K</span></p>
+<p class="p7"><span class="s1">Hölder<span class="Apple-converted-space">                              </span>2684 <span class="Apple-converted-space">      </span>13K</span></p>
+<p class="p7"><span class="s1">Jordan<span class="Apple-converted-space">                              </span>3119 <span class="Apple-converted-space">      </span>11K</span></p>
+<p class="p7"><span class="s1">Kac <span class="Apple-converted-space">                                </span>2925<span class="Apple-converted-space">        </span>6K <span class="Apple-converted-space">   </span></span></p>
+<p class="p7"><span class="s1">Kolmogorov <span class="Apple-converted-space">  </span><a href="https://en.wikipedia.org/wiki/Andrey_Kolmogorov"><span class="s10">1903-87<span class="Apple-converted-space"> </span></span></a> <span class="Apple-converted-space">              </span>3818<span class="Apple-converted-space">        </span><a href="https://zbmath.org/?q=ab%3AKolmogorov"><span class="s10">9K</span></a></span></p>
+<p class="p7"><span class="s1">Lagrange<span class="Apple-converted-space">                            </span>3945 <span class="Apple-converted-space">      </span>19K</span></p>
+<p class="p7"><span class="s1">Lax <span class="Apple-converted-space">                                </span>2450<span class="Apple-converted-space">        </span>7K</span></p>
+<p class="p10"><span class="s1">Lebesgue<span class="Apple-converted-space">                            </span>3031 <span class="Apple-converted-space">      </span>17K</span><span class="s12"> <span class="Apple-converted-space">                               </span></span></p>
+<p class="p7"><span class="s1">Morse <span class="Apple-converted-space">                              </span>2672<span class="Apple-converted-space">        </span>6K</span></p>
+<p class="p7"><span class="s1">Nash<span class="Apple-converted-space">                                </span>3174<span class="Apple-converted-space">        </span>3K <span class="Apple-converted-space">     </span></span></p>
+<p class="p7"><span class="s1">Oh<span class="Apple-converted-space">        </span>1<a href="https://en.wikipedia.org/wiki/Hee_Oh"><span class="s10">969-</span></a> <span class="Apple-converted-space">                    </span>2693<span class="Apple-converted-space">        </span>5K</span></p>
+<p class="p7"><span class="s1">Pauli <span class="Apple-converted-space">    </span><a href="https://en.wikipedia.org/wiki/Wolfgang_Pauli"><span class="s10">1900-58</span></a> <span class="Apple-converted-space">                  </span>4382<span class="Apple-converted-space">        </span>2K</span></p>
+<p class="p7"><span class="s1">Penrose <span class="Apple-converted-space">                            </span>2006<span class="Apple-converted-space">        </span>8K</span></p>
+<p class="p7"><span class="s1">Picard<span class="Apple-converted-space">    </span><a href="https://en.wikipedia.org/wiki/%C3%89mile_Picard"><span class="s10">1856-41</span></a> <span class="Apple-converted-space">                  </span>2044<span class="Apple-converted-space">        </span>6K</span></p>
+<p class="p7"><span class="s1">Polyakov<span class="Apple-converted-space">  </span>1<a href="https://en.wikipedia.org/wiki/Alexander_Markovich_Polyakov"><span class="s10">945-</span></a> <span class="Apple-converted-space">                    </span>2114 <span class="Apple-converted-space">      </span>127</span></p>
+<p class="p7"><span class="s1">Reynolds <a href="https://en.wikipedia.org/wiki/Osborne_Reynolds"><span class="s10">1842-12</span></a><span class="Apple-converted-space">                    </span>4179 <span class="Apple-converted-space">      </span>129</span></p>
+<p class="p7"><span class="s1">Schmidt<span class="Apple-converted-space">  </span><a href="https://en.wikipedia.org/wiki/Wolfgang_M._Schmidt"><span class="s10">1933-<span class="Apple-converted-space"> </span></span></a> <span class="Apple-converted-space">                    </span>2879<span class="Apple-converted-space">        </span>7K<span class="Apple-converted-space">      </span>TI 503<span class="Apple-converted-space"> </span></span></p>
+<p class="p7"><span class="s1">Schwarz <span class="Apple-converted-space">                            </span>2754<span class="Apple-converted-space">        </span>7K</span></p>
+<p class="p7"><span class="s1">Stark <span class="Apple-converted-space">    </span>1<a href="https://en.wikipedia.org/wiki/Harold_Stark"><span class="s10">939- </span></a><span class="Apple-converted-space">                    </span>2498<span class="Apple-converted-space">        </span>3K</span></p>
+<p class="p7"><span class="s1">Stein <span class="Apple-converted-space">                              </span>2065<span class="Apple-converted-space">        </span><a href="https://zbmath.org/?q=ab%3A+stein"><span class="s10">6K</span></a></span></p>
+<p class="p7"><span class="s1">Thomas<span class="Apple-converted-space">                              </span>2711<span class="Apple-converted-space">        </span>8K</span></p>
+<p class="p7"><span class="s1">Virasoro <span class="Apple-converted-space">  </span>1<a href="https://en.wikipedia.org/wiki/Miguel_%C3%81ngel_Virasoro_(physicist)"><span class="s10">940-<span class="Apple-converted-space"> </span></span></a> <span class="Apple-converted-space">                  </span>2104<span class="Apple-converted-space">        </span>1K</span></p>
+<p class="p7"><span class="s1">von Neumann<span class="Apple-converted-space">    </span><a href="https://en.wikipedia.org/wiki/John_von_Neumann"><span class="s10">1903-57</span></a><span class="Apple-converted-space">              </span>4556 <span class="Apple-converted-space">      </span><a href="https://zbmath.org/?q=ab%3Avon+Neumann"><span class="s10">11K</span></a><span class="Apple-converted-space">    </span>16K MR/rev/txt<span class="Apple-converted-space">                       </span></span></p>
+<p class="p7"><span class="s1">Wasserstein <a href="https://arxiv.org/search/?query=wasserstein&amp;searchtype=abstract&amp;abstracts=show&amp;order=-announced_date_first&amp;size=50"><span class="s10">2</span></a></span><span class="s7">505</span><span class="s1"> OR WGAN<span class="Apple-converted-space">  </span><a href="https://arxiv.org/search/?query=wgan&amp;searchtype=abstract&amp;abstracts=show&amp;order=-announced_date_first&amp;size=50"><span class="s13">132</span></a> <span class="Apple-converted-space">      </span><a href="https://arxiv.org/search/?query=wasserstein+OR+wgan&amp;searchtype=abstract&amp;abstracts=show&amp;order=-announced_date_first&amp;size=50"><span class="s13">2550</span></a> <span class="Apple-converted-space">      </span>1K<span class="Apple-converted-space">     </span></span></p>
+<p class="p7"><span class="s1">Vasershtein <a href="https://arxiv.org/search/?query=Vasershtein&amp;searchtype=abstract&amp;abstracts=show&amp;order=-announced_date_first&amp;size=50"><span class="s10">3</span></a> + Vaserstein <a href="https://arxiv.org/search/?query=Vaserstein&amp;searchtype=abstract&amp;abstracts=show&amp;order=-announced_date_first&amp;size=50"><span class="s10">17</span></a> = <span class="Apple-converted-space">    </span>+ 20 <span class="Apple-converted-space">      </span>135 <span class="Apple-converted-space">     </span></span></p>
+<p class="p7"><span class="s1"><span class="Apple-converted-space"> </span>+ Vaseršteĭn <a href="https://arxiv.org/search/?query=Vaser%C5%A1te%C4%ADn&amp;searchtype=abstract&amp;abstracts=show&amp;order=-announced_date_first&amp;size=50"><span class="s10">1</span></a> OR Vasserstein <span class="Apple-converted-space">      </span>+ 2 <span class="Apple-converted-space">      </span>125</span></p>
+<p class="p7"><span class="s1">Ward<span class="Apple-converted-space">                                </span>2473<span class="Apple-converted-space">        </span>2K</span></p>
+<p class="p7"><span class="s1">Wiener <span class="Apple-converted-space">        </span><a href="https://en.wikipedia.org/wiki/Norbert_Wiener"><span class="s10">1894=64</span></a><span class="Apple-converted-space">              </span>2534 <span class="Apple-converted-space">      </span><a href="https://zbmath.org/?q=ab%3AWiener"><span class="s10">14K</span></a><span class="Apple-converted-space">         </span></span></p>
+<p class="p7"><span class="s1"><br>
+end AB list <span class="Apple-converted-space">  </span>most popular names in abstracts at arXiv</span></p>
+<p class="p7"><span class="s1"><br>
+<span class="Apple-converted-space"> </span></span><span class="s14"><span class="Apple-converted-space"> </span></span></p>
+<p class="p6"><span class="s1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><br>
+</span></p>
+<p class="p6"><span class="s1"><span class="Apple-converted-space"> </span>MA list. At least</span><span class="s15"> </span><span class="s1">2K at Zbl/any <span class="Apple-converted-space">  </span>but not on TI list</span></p>
+<p class="p11"><span class="s1"><b>most popular names in Zbl</b></span></p>
+<p class="p5"><span class="s1"><b></b></span><br></p>
+<p class="p7"><span class="s1"><b><span class="Apple-converted-space">                                      </span>srXiv <span class="Apple-converted-space">    </span>Zbl<span class="Apple-converted-space">  </span>or-&gt;|<span class="Apple-converted-space"> </span></b></span></p>
+<p class="p7"><span class="s1"><b><span class="Apple-converted-space">                                 </span>/allfields<span class="Apple-converted-space">    </span>/any<span class="Apple-converted-space">  </span>or-&gt;|<span class="Apple-converted-space"> </span></b></span></p>
+<p class="p3"><span class="s1">Adams <span class="Apple-converted-space">                                </span>3,100<span class="Apple-converted-space">    </span>5,698</span></p>
+<p class="p7"><span class="s1">Ampére <span class="Apple-converted-space">                                  </span>33<span class="Apple-converted-space">    </span>3,49</span><span class="s16">5</span></p>
+<p class="p7"><span class="s1">Andrews <span class="Apple-converted-space">                              </span><a href="https://arxiv.org/search/?query=Andrews&amp;searchtype=all&amp;abstracts=hide&amp;order=-announced_date_first&amp;size=50"><span class="s10">2,</span></a></span><span class="s7">098</span><span class="s1"><span class="Apple-converted-space">    </span><a href="https://zbmath.org/?q=Andrews"><span class="s10">3,596</span></a></span></p>
+<p class="p7"><span class="s1">Anosov<span class="Apple-converted-space">                                </span><a href="https://arxiv.org/search/?query=anosov&amp;searchtype=all&amp;abstracts=show&amp;order=-announced_date_first&amp;size=50"><span class="s10">1,0</span></a></span><span class="s7">88</span><span class="s1"><span class="Apple-converted-space">    </span><a href="https://zbmath.org/?q=anosov"><span class="s10">3,348</span></a><b> <span class="Apple-converted-space">  </span>MR 2667</b></span></p>
+<p class="p7"><span class="s1">Archimedes OR archimedean <span class="Apple-converted-space">            </span>1,844 <span class="Apple-converted-space">  </span>11,078 <span class="Apple-converted-space">  </span>TI in arXiv 535</span></p>
+<p class="p7"><span class="s1">Arnol'd OR Arnold <span class="Apple-converted-space">                    </span><a href="https://arxiv.org/search/?query=Arnol%27d+OR+Arnold+&amp;searchtype=all&amp;abstracts=show&amp;order=-announced_date_first&amp;size=50"><span class="s10">1,082</span></a> <span class="Apple-converted-space">  </span><a href="https://zbmath.org/?q=Arnol%27d+%7C+Arnold+"><span class="s10">1</span></a>0,182</span></p>
+<p class="p7"><span class="s1">Askey <span class="Apple-converted-space">                                  </span>345 <span class="Apple-converted-space">  </span>11,074</span></p>
+<p class="p7"><span class="s1">Atiyah<span class="Apple-converted-space">                                  </span>660<span class="Apple-converted-space">    </span>3,302</span></p>
+<p class="p7"><span class="s1">Bass<span class="Apple-converted-space">                                    </span>888<span class="Apple-converted-space">    </span>2,078</span></p>
+<p class="p7"><span class="s1">Bergman <span class="Apple-converted-space">                              </span>1,781<span class="Apple-converted-space">    </span>8,498</span></p>
+<p class="p7"><span class="s1">Bernstein <span class="Apple-converted-space">                            </span>2,761 <span class="Apple-converted-space">  </span>14,915</span></p>
+<p class="p7"><span class="s1">Bers <span class="Apple-converted-space">        </span><a href="https://en.wikipedia.org/wiki/Lipman_Bers"><span class="s10">1914-93</span></a><span class="Apple-converted-space">                    </span>947<span class="Apple-converted-space">    </span>2,077</span></p>
+<p class="p7"><span class="s1">Birkhoff<span class="Apple-converted-space">                              </span>1,201<span class="Apple-converted-space">    </span>6,586</span></p>
+<p class="p7"><span class="s1">Bishop<span class="Apple-converted-space">                                </span>1,000<span class="Apple-converted-space">    </span>2,173</span></p>
+<p class="p7"><span class="s1">Bohr<span class="Apple-converted-space">                                  </span>1,788<span class="Apple-converted-space">    </span>2,798</span></p>
+<p class="p7"><span class="s1">Bott<span class="Apple-converted-space">                                    </span>945<span class="Apple-converted-space">    </span>2,547 <span class="Apple-converted-space">                   </span></span></p>
+<p class="p7"><span class="s1">Bourbaki<span class="Apple-converted-space">                                </span>156<span class="Apple-converted-space">    </span>2,402</span></p>
+<p class="p7"><span class="s1">Brauer<span class="Apple-converted-space">                                </span>1,319<span class="Apple-converted-space">    </span>5,701</span></p>
+<p class="p7"><span class="s1">Bruhat<span class="Apple-converted-space">                                  </span>772<span class="Apple-converted-space">    </span>2,155</span></p>
+<p class="p8"><span class="s1">Carlitz <span class="Apple-converted-space">  </span><a href="https://en.wikipedia.org/wiki/Leonard_Carlitz"><span class="s17">1907-99 </span></a><span class="Apple-converted-space">                      </span>279<span class="Apple-converted-space">    </span>2,072</span></p>
+<p class="p8"><span class="s1">Čech<span class="Apple-converted-space">      </span><a href="https://en.wikipedia.org/wiki/Eduard_%C4%8Cech"><span class="s17">1893-60</span></a> <span class="Apple-converted-space">                      </span>236<span class="Apple-converted-space">    </span>3,617</span></p>
+<p class="p7"><span class="s18"><a href="https://en.wikipedia.org/wiki/Ces%C3%A0ro_summation">Cesàro</a></span><span class="s1"><span class="Apple-converted-space">                                  </span>197<span class="Apple-converted-space">    </span>5,936</span></p>
+<p class="p7"><span class="s1">Chebyshev <span class="Apple-converted-space">                            </span>1,489 <span class="Apple-converted-space">  </span>18,089</span></p>
+<p class="p7"><span class="s1">Chevalley <span class="Apple-converted-space">                              </span>637<span class="Apple-converted-space">    </span>3,314<span class="Apple-converted-space"> </span></span></p>
+<p class="p7"><span class="s1">Chow <span class="Apple-converted-space">      </span><a href="https://en.wikipedia.org/wiki/Wei-Liang_Chow"><span class="s10">1911-9</span></a>5<span class="Apple-converted-space">                    </span>1,499<span class="Apple-converted-space">    </span>6,679</span></p>
+<p class="p7"><span class="s1">Church<span class="Apple-converted-space">                                  </span>717<span class="Apple-converted-space">    </span>2,084</span></p>
+<p class="p7"><span class="s1">Connes<span class="Apple-converted-space">                                </span><a href="https://arxiv.org/search/?query=connes&amp;searchtype=all&amp;abstracts=show&amp;order=-announced_date_first&amp;size=50"><span class="s10">1,576</span></a><span class="Apple-converted-space">    </span><a href="https://zbmath.org/?q=connes"><span class="s10">3,822</span></a></span></p>
+<p class="p7"><span class="s1">Conway<span class="Apple-converted-space">                                  </span>927<span class="Apple-converted-space">    </span>2,472</span></p>
+<p class="p7"><span class="s1">Courant <span class="Apple-converted-space">                                </span>554<span class="Apple-converted-space">    </span>2,446</span></p>
+<p class="p7"><span class="s1">Coxeter<span class="Apple-converted-space">    </span><a href="https://en.wikipedia.org/wiki/Harold_Scott_MacDonald_Coxeter"><span class="s10">1907-03<span class="Apple-converted-space"> </span></span></a> <span class="Apple-converted-space">                  </span>1,957<span class="Apple-converted-space">    </span>5,992 <span class="Apple-converted-space">     </span></span></p>
+<p class="p7"><span class="s1">Cremona <span class="Apple-converted-space">                                </span>285<span class="Apple-converted-space">    </span>2,088</span></p>
+<p class="p7"><span class="s1">Darboux <span class="Apple-converted-space">                              </span>1,531<span class="Apple-converted-space">    </span>9,087</span></p>
+<p class="p7"><span class="s1">Dedekind<span class="Apple-converted-space">                                </span>768<span class="Apple-converted-space">    </span>7,868</span></p>
+<p class="p7"><span class="s1">Deligne<span class="Apple-converted-space">      </span>1<a href="https://en.wikipedia.org/wiki/Pierre_Deligne"><span class="s10">944-</span></a><span class="Apple-converted-space">                    </span>1,587<span class="Apple-converted-space">    </span>4,318</span></p>
+<p class="p12"><span class="s1">de Rham <span class="Apple-converted-space">                              </span>1,592<span class="Apple-converted-space">    </span>4,475</span></p>
+<p class="p12"><span class="s1">Dehn<span class="Apple-converted-space">                                    </span>971<span class="Apple-converted-space">    </span>2,688</span></p>
+<p class="p12"><span class="s1">Dickson <span class="Apple-converted-space">                                </span>312<span class="Apple-converted-space">    </span>2,105</span></p>
+<p class="p4"><span class="s1">diophantine <span class="Apple-converted-space">                                                                </span>1,996<span class="Apple-converted-space">        </span>19,107</span></p>
+<p class="p4"><span class="s1">Donaldson<span class="Apple-converted-space">                                                                  </span>1,149<span class="Apple-converted-space">          </span>3,772</span></p>
+<p class="p7"><span class="s1">Dynkin<span class="Apple-converted-space">                                </span>1,080<span class="Apple-converted-space">    </span>2,993</span></p>
+<p class="p7"><span class="s1">Erdos OR Erdős OR Erdös <span class="Apple-converted-space">              </span>3,019 <span class="Apple-converted-space">  </span>10,518</span></p>
+<p class="p7"><span class="s1">Feller<span class="Apple-converted-space">                                  </span>680<span class="Apple-converted-space">    </span>2,429</span></p>
+<p class="p7"><span class="s1">Fermat<span class="Apple-converted-space">                                  </span>866<span class="Apple-converted-space">    </span>6,850</span></p>
+<p class="p7"><span class="s1">Fibonacci <span class="Apple-converted-space">                            </span>1,574 <span class="Apple-converted-space">  </span>11,019</span></p>
+<p class="p13"><span class="s1">Fomin <span class="Apple-converted-space">                                  </span>752 <span class="Apple-converted-space">    </span>2107</span></p>
+<p class="p13"><span class="s1">Fréchet <span class="Apple-converted-space">                                </span>843 <span class="Apple-converted-space">  </span>11.869</span></p>
+<p class="p7"><span class="s1">Friedman<span class="Apple-converted-space">                              </span>1,776<span class="Apple-converted-space">    </span>4,036</span></p>
+<p class="p7"><span class="s1">Fuchs <span class="Apple-converted-space">                                </span>1,844<span class="Apple-converted-space">    </span>4,663</span></p>
+<p class="p7"><span class="s1">Goldstein <span class="Apple-converted-space">                            </span>1,167<span class="Apple-converted-space">    </span>2,788</span></p>
+<p class="p7"><span class="s1">Grahan<span class="Apple-converted-space">                                </span>3,654<span class="Apple-converted-space">    </span>5,778</span></p>
+<p class="p7"><span class="s1">Griffiths <span class="Apple-converted-space">                            </span>1,584<span class="Apple-converted-space">    </span>2,,290</span></p>
+<p class="p7"><span class="s1">Groebner | Gröbner<span class="Apple-converted-space">                    </span>1,107<span class="Apple-converted-space">    </span>5,612</span></p>
+<p class="p7"><span class="s1">Gromov<span class="Apple-converted-space">                                </span>3,563<span class="Apple-converted-space">    </span>7,903<span class="Apple-converted-space">  </span>TI in arXiv<span class="Apple-converted-space">  </span>829</span></p>
+<p class="p7"><span class="s1">Haar<span class="Apple-converted-space">                                  </span>1,378<span class="Apple-converted-space">    </span>7,168</span></p>
+<p class="p7"><span class="s1">Hahn<span class="Apple-converted-space">                                  </span>1,683<span class="Apple-converted-space">    </span>5,955</span></p>
+<p class="p8"><span class="s1">Hasse <span class="Apple-converted-space">                                  </span>988<span class="Apple-converted-space">    </span>3,605</span></p>
+<p class="p8"><span class="s1">Higman<span class="Apple-converted-space">                                  </span>151<span class="Apple-converted-space">    </span>3,408</span></p>
+<p class="p8"><span class="s1">Hochschild<span class="Apple-converted-space">                            </span>1,325<span class="Apple-converted-space">    </span>4,448</span></p>
+<p class="p9"><span class="s11">Hui <span class="Apple-converted-space">                                  </span>4,312 <span class="Apple-converted-space">  </span>10,064</span></p>
+<p class="p7"><span class="s1">Hurwitz <span class="Apple-converted-space">                              </span>1,960<span class="Apple-converted-space">    </span>6,852</span></p>
+<p class="p7"><span class="s1">Ito <span class="Apple-converted-space">                                  </span>2,203 <span class="Apple-converted-space">  </span>10,988</span></p>
+<p class="p7"><span class="s1">Jacobson <span class="Apple-converted-space">  </span>1<a href="file:///Users/LV/Desktop/A-Zpapers.f/V.f/Vaserstein.f/910-99"><span class="s10">910-99</span></a><span class="Apple-converted-space">                      </span><a href="https://arxiv.org/search/?query=jacobson&amp;searchtype=all&amp;abstracts=show&amp;order=-announced_date_first&amp;size=50"><span class="s10">753</span></a><span class="Apple-converted-space">    </span>4,474</span></p>
+<p class="p7"><span class="s1">Jones <span class="Apple-converted-space">                                  </span>410 <span class="Apple-converted-space">  </span>10,789</span></p>
+<p class="p7"><span class="s1">Kato<span class="Apple-converted-space">                                  </span>2,970<span class="Apple-converted-space">    </span>5,547</span></p>
+<p class="p7"><span class="s1">Katz<span class="Apple-converted-space">                                  </span>2,435<span class="Apple-converted-space">    </span>3,543</span></p>
+<p class="p10"><span class="s1">Kirillov<span class="Apple-converted-space">                                </span>882<span class="Apple-converted-space">    </span>2,471</span></p>
+<p class="p10"><span class="s1">Koszul<span class="Apple-converted-space">                                </span>1,105<span class="Apple-converted-space">    </span>2,405</span></p>
+<p class="p10"><span class="s1">Krein<span class="Apple-converted-space">      </span><a href="https://en.wikipedia.org/wiki/Mark_Krein"><span class="s10">1907-89</span></a><span class="Apple-converted-space">                      </span>842<span class="Apple-converted-space">    </span>5,522</span></p>
+<p class="p7"><span class="s1">Kramer<span class="Apple-converted-space">                                </span>3,867<span class="Apple-converted-space">    </span>2,037</span></p>
+<p class="p10"><span class="s1">Kronecker <span class="Apple-converted-space">                            </span>1,053<span class="Apple-converted-space">    </span>6,629</span></p>
+<p class="p7"><span class="s1">Krishna <span class="Apple-converted-space">                              </span>1,953<span class="Apple-converted-space">    </span>2,352<span class="Apple-converted-space">   </span></span></p>
+<p class="p7"><span class="s1">Krull <span class="Apple-converted-space">                                  </span>455<span class="Apple-converted-space">    </span>5,080</span></p>
+<p class="p7"><span class="s1">Krylov<span class="Apple-converted-space">                                </span>1,127 <span class="Apple-converted-space">    </span>5730</span></p>
+<p class="p7"><span class="s1">Kuhn<span class="Apple-converted-space">                                  </span>2,695<span class="Apple-converted-space">    </span>4,346</span></p>
+<p class="p7"><span class="s1">Lam <span class="Apple-converted-space">    </span><a href="https://en.wikipedia.org/wiki/Tsit_Yuen_Lam"><span class="s10">1942- </span></a><span class="Apple-converted-space">                        </span><a href="https://arxiv.org/search/?query=lam&amp;searchtype=all&amp;abstracts=show&amp;order=-announced_date_first&amp;size=50"><span class="s10">1,975</span></a><span class="Apple-converted-space">    </span><a href="https://zbmath.org/?q=lam"><span class="s10">3,</span></a></span><span class="s7">633</span><span class="s1"> <span class="Apple-converted-space"> </span></span></p>
+<p class="p7"><span class="s1">Lang<span class="Apple-converted-space">                                  </span><a href="https://arxiv.org/search/?query=lang&amp;searchtype=all&amp;abstracts=hide&amp;order=-announced_date_first&amp;size=50"><span class="s15">2,909</span></a><span class="Apple-converted-space">    </span><a href="https://zbmath.org/?q=lang"><span class="s15">7,138</span></a></span></p>
+<p class="p7"><span class="s1">Langlands <span class="Apple-converted-space">                            </span>1,155<span class="Apple-converted-space">    </span>4,387</span></p>
+<p class="p8"><span class="s1">Lefschetz <span class="Apple-converted-space">                            </span>1,413<span class="Apple-converted-space">    </span>4,637</span></p>
+<p class="p7"><span class="s1">Laurent <span class="Apple-converted-space">                              </span>6,528 <span class="Apple-converted-space">  </span>12,519</span></p>
+<p class="p7"><span class="s1">Leibniz <span class="Apple-converted-space">                                </span>867<span class="Apple-converted-space">    </span>8,930</span></p>
+<p class="p14"><span class="s1">Lions <span class="Apple-converted-space">                                  </span>558<span class="Apple-converted-space">    </span>3,962</span></p>
+<p class="p7"><span class="s1">Littlewood<span class="Apple-converted-space">                            </span>1.268 <span class="Apple-converted-space">  </span>13,538</span></p>
+<p class="p7"><span class="s1">Mackey<span class="Apple-converted-space">                                  </span>682<span class="Apple-converted-space">    </span>2,229</span></p>
+<p class="p7"><span class="s1">Manin <span class="Apple-converted-space">                                </span>1,021<span class="Apple-converted-space">    </span>2,511</span></p>
+<p class="p7"><span class="s1">Mason <span class="Apple-converted-space">                                </span>1,923<span class="Apple-converted-space">    </span>2,147</span></p>
+<p class="p7"><span class="s1">Maslov<span class="Apple-converted-space">                                  </span>755<span class="Apple-converted-space">    </span>6,733</span></p>
+<p class="p7"><span class="s1">Matsumoto <span class="Apple-converted-space">                            </span>1,900<span class="Apple-converted-space">    </span>3,230</span></p>
+<p class="p7"><span class="s1">Mazur <span class="Apple-converted-space">                                  </span>942<span class="Apple-converted-space">    </span>3,016</span></p>
+<p class="p7"><span class="s1">Milman<span class="Apple-converted-space">                                  </span>317<span class="Apple-converted-space">    </span>2,816</span></p>
+<p class="p7"><span class="s1">Milnor<span class="Apple-converted-space">                                </span>1,241<span class="Apple-converted-space">    </span>4,329</span></p>
+<p class="p8"><span class="s1">Möbius<span class="Apple-converted-space">                                </span>1,128<span class="Apple-converted-space">    </span>6,163</span></p>
+<p class="p7"><span class="s1">Monge <span class="Apple-converted-space">                                </span>1,235<span class="Apple-converted-space">    </span>4,586</span></p>
+<p class="p7"><span class="s1">Montgomery<span class="Apple-converted-space">                              </span>696<span class="Apple-converted-space">    </span>2,676</span></p>
+<p class="p14"><span class="s1">Moody <span class="Apple-converted-space">                                </span>1,833<span class="Apple-converted-space">    </span>8,782</span></p>
+<p class="p3"><span class="s1">Moore <span class="Apple-converted-space">                                </span>4,581 <span class="Apple-converted-space">  </span>10,298</span></p>
+<p class="p7"><span class="s1">Mordell <span class="Apple-converted-space">                                </span>557<span class="Apple-converted-space">    </span>2,257</span></p>
+<p class="p14"><span class="s1">Morgan<span class="Apple-converted-space">                                </span><a href="https://arxiv.org/search/?query=morgan&amp;searchtype=all&amp;abstracts=show&amp;order=-announced_date_first&amp;size=50"><span class="s10">2,133</span></a><span class="Apple-converted-space">    </span><a href="https://www.zbmath.org/?q=morgan"><span class="s10">4,940</span></a></span></p>
+<p class="p14"><span class="s1">Morita<span class="Apple-converted-space">                                </span>1,610<span class="Apple-converted-space">    </span>4,217</span></p>
+<p class="p7"><span class="s1">Morris<span class="Apple-converted-space">                                </span>2,580<span class="Apple-converted-space">    </span>3,471</span></p>
+<p class="p7"><span class="s1">Nash<span class="Apple-converted-space">                                  </span>3,414 <span class="Apple-converted-space">  </span>12,514</span></p>
+<p class="p7"><span class="s1">Newman<span class="Apple-converted-space">                                </span>2,686<span class="Apple-converted-space">    </span>5,709</span></p>
+<p class="p7"><span class="s1">Novikov <span class="Apple-converted-space">                              </span>1,746<span class="Apple-converted-space">    </span>4,186</span></p>
+<p class="p7"><span class="s1">Okounkov<span class="Apple-converted-space">                                </span>466<span class="Apple-converted-space">    </span>3,230</span></p>
+<p class="p7"><span class="s1">Ono <span class="Apple-converted-space">                                  </span>1,492<span class="Apple-converted-space">    </span>2,382</span></p>
+<p class="p7"><span class="s1">Ore <span class="Apple-converted-space">                                    </span>470<span class="Apple-converted-space">    </span>2,361</span></p>
+<p class="p7"><span class="s1">Orlicz<span class="Apple-converted-space">                                  </span>707 <span class="Apple-converted-space">  </span>15,519</span></p>
+<p class="p8"><span class="s1">Ornstein<span class="Apple-converted-space">                              </span>1,488<span class="Apple-converted-space">    </span>4,084</span></p>
+<p class="p8"><span class="s1">Padé<span class="Apple-converted-space">                                    </span>645<span class="Apple-converted-space">    </span>4,830</span></p>
+<p class="p9"><span class="s11">Peano <span class="Apple-converted-space">                                  </span>320<span class="Apple-converted-space">    </span>3,469</span></p>
+<p class="p7"><span class="s1">Penrose <span class="Apple-converted-space">                              </span>1,986<span class="Apple-converted-space">    </span>7,013 TI at arriv 469</span></p>
+<p class="p15"><span class="s1">Perron<span class="Apple-converted-space">                                                                                      </span>836<span class="Apple-converted-space">            </span>6,737</span></p>
+<p class="p7"><span class="s1">Peterson<span class="Apple-converted-space">                              </span>1,640<span class="Apple-converted-space">    </span>2;375</span></p>
+<p class="p7"><span class="s1">Petri <span class="Apple-converted-space">                                </span>1,040<span class="Apple-converted-space">    </span>5,065 <span class="Apple-converted-space"> </span></span></p>
+<p class="p7"><span class="s1">Pfaff OR pfaffian <span class="Apple-converted-space">                    </span>1,023<span class="Apple-converted-space">    </span>2,754</span></p>
+<p class="p7"><span class="s1">Pythagoras OR pythagorean <span class="Apple-converted-space">              </span>296<span class="Apple-converted-space">    </span>3,110<span class="Apple-converted-space">  </span>TI jn arXiv<span class="Apple-converted-space">  </span>131</span></p>
+<p class="p7"><span class="s1">Pólya <span class="Apple-converted-space">                                  </span>451<span class="Apple-converted-space">    </span>6;983</span></p>
+<p class="p7"><span class="s1">Pontryagin<span class="Apple-converted-space">                              </span>831<span class="Apple-converted-space">    </span>5,974</span></p>
+<p class="p7"><span class="s1">Popov <span class="Apple-converted-space">                                </span>2,608<span class="Apple-converted-space">    </span>6,348</span></p>
+<p class="p7"><span class="s1">Rademacher<span class="Apple-converted-space">                              </span><a href="https://arxiv.org/search/?query=Rademacher&amp;searchtype=all&amp;abstracts=show&amp;order=-announced_date_first&amp;size=50"><span class="s10">613</span></a><span class="Apple-converted-space">    </span><a href="https://zbmath.org/?q=rademacher"><span class="s10">2,531</span></a></span></p>
+<p class="p7"><span class="s1">Ramanujan <span class="Apple-converted-space">                            </span>1,749<span class="Apple-converted-space">    </span>8,737</span></p>
+<p class="p7"><span class="s1">Ramsey<span class="Apple-converted-space">                                </span>2,083<span class="Apple-converted-space">    </span>6,284</span></p>
+<p class="p8"><span class="s1">Raphson <span class="Apple-converted-space">                                </span>276<span class="Apple-converted-space">    </span>2,312</span></p>
+<p class="p7"><span class="s1">Rosenberg <span class="Apple-converted-space">                              </span>763<span class="Apple-converted-space">    </span>2,001</span></p>
+<p class="p7"><span class="s1">Roth<span class="Apple-converted-space">                                  </span>1,005<span class="Apple-converted-space">    </span>2,263</span></p>
+<p class="p7"><span class="s1">Rubin <span class="Apple-converted-space">                                </span>1,322<span class="Apple-converted-space">    </span>3,026</span></p>
+<p class="p7"><span class="s1">Runge <span class="Apple-converted-space">                                </span>1,880 <span class="Apple-converted-space">  </span>13,903</span></p>
+<p class="p7"><span class="s1">Russell <span class="Apple-converted-space">                              </span>2,955<span class="Apple-converted-space">    </span>5,000<span class="Apple-converted-space"> </span></span></p>
+<p class="p7"><span class="s1">Saito <span class="Apple-converted-space">                                </span>3,006<span class="Apple-converted-space">    </span>3,534</span></p>
+<p class="p7"><span class="s1">Sato<span class="Apple-converted-space">                                  </span>3,960<span class="Apple-converted-space">    </span>6,208</span></p>
+<p class="p7"><span class="s1">Schubert<span class="Apple-converted-space">                              </span>1,851 <span class="Apple-converted-space">  </span>6,349</span></p>
+<p class="p7"><span class="s1">Segal <span class="Apple-converted-space">                                </span>1,017<span class="Apple-converted-space">    </span>3,088</span></p>
+<p class="p7"><span class="s1">Segre <span class="Apple-converted-space">                                  </span>522<span class="Apple-converted-space">    </span>2,448</span></p>
+<p class="p7"><span class="s1">Seidel<span class="Apple-converted-space">                                </span>1,195<span class="Apple-converted-space">    </span>3,399</span></p>
+<p class="p7"><span class="s1">Selberg <span class="Apple-converted-space">    </span>1<a href="https://en.wikipedia.org/wiki/Atle_Selberg"><span class="s10">917-07</span></a> <span class="Apple-converted-space">                    </span>941<span class="Apple-converted-space">    </span>5,030</span></p>
+<p class="p7"><span class="s1">Serre <span class="Apple-converted-space">      </span><a href="https://en.wikipedia.org/wiki/Jean-Pierre_Serre"><span class="s10">1926-</span></a> <span class="Apple-converted-space">                    </span><a href="https://arxiv.org/search/?query=serre&amp;searchtype=all&amp;abstracts=show&amp;order=-announced_date_first&amp;size=50"><span class="s10">1,413</span></a><span class="Apple-converted-space">    </span>5,248<span class="Apple-converted-space">   </span></span></p>
+<p class="p7"><span class="s1">Shah<span class="Apple-converted-space">                                  </span>2,102<span class="Apple-converted-space">    </span>2,981</span></p>
+<p class="p7"><span class="s1">Shapiro <span class="Apple-converted-space">                              </span><a href="https://arxiv.org/search/?query=shapiro&amp;searchtype=all&amp;abstracts=show&amp;order=-announced_date_first&amp;size=50"><span class="s10">2,441</span></a><span class="Apple-converted-space">    </span>5,158</span></p>
+<p class="p7"><span class="s1">Shapley <span class="Apple-converted-space">    </span><a href="https://en.wikipedia.org/wiki/Lloyd_Shapley"><span class="s10">1923-16</span></a> <span class="Apple-converted-space">                    </span>751<span class="Apple-converted-space">    </span>2,512</span></p>
+<p class="p7"><span class="s1">Shimura <span class="Apple-converted-space">    </span>1<a href="https://en.wikipedia.org/wiki/Goro_Shimura"><span class="s10">930-19</span></a> <span class="Apple-converted-space">                    </span>934<span class="Apple-converted-space">    </span>3,783<span class="Apple-converted-space">   </span></span></p>
+<p class="p7"><span class="s1">Shnirelman<span class="Apple-converted-space">  </span>1<a href="https://en.wikipedia.org/wiki/Lev_Schnirelmann"><span class="s10">905-38</span></a> <span class="Apple-converted-space">                    </span>317<span class="Apple-converted-space">    </span>5,141</span></p>
+<p class="p7"><span class="s1">Smale <span class="Apple-converted-space">      </span>1<a href="https://en.wikipedia.org/wiki/Stephen_Smale"><span class="s10">930- </span></a><span class="Apple-converted-space">                      </span>730<span class="Apple-converted-space">    </span>4,730<span class="Apple-converted-space"> </span></span></p>
+<p class="p7"><span class="s1">Stanley <span class="Apple-converted-space">    </span>1<a href="https://en.wikipedia.org/wiki/Richard_P._Stanley"><span class="s10">944- </span></a><span class="Apple-converted-space">                    </span>2,646<span class="Apple-converted-space">    </span>4,982</span></p>
+<p class="p7"><span class="s1">Steenrod<span class="Apple-converted-space">    </span><a href="https://en.wikipedia.org/wiki/Norman_Steenrod"><span class="s10">1910-71</span></a> <span class="Apple-converted-space">                    </span>324<span class="Apple-converted-space">    </span>2,079</span></p>
+<p class="p7"><span class="s1">Stirling<span class="Apple-converted-space">    </span><a href="https://en.wikipedia.org/wiki/James_Stirling_(mathematician)"><span class="s10">1692-70</span></a> <span class="Apple-converted-space">                    </span>631<span class="Apple-converted-space">    </span>2,664</span></p>
+<p class="p7"><span class="s1">Stuart<span class="Apple-converted-space">                                </span>2,660<span class="Apple-converted-space">    </span>2,741</span></p>
+<p class="p7"><span class="s1">Sturm <span class="Apple-converted-space">                                </span>1,653 <span class="Apple-converted-space">  </span>10,141</span></p>
+<p class="p7"><span class="s1">Sullivan<span class="Apple-converted-space">                              </span>1,766<span class="Apple-converted-space">    </span>2,921</span></p>
+<p class="p7"><span class="s1">Suslin<span class="Apple-converted-space">                                  </span>194<span class="Apple-converted-space">    </span>3,501</span></p>
+<p class="p7"><span class="s1">Tanaka<span class="Apple-converted-space">                                </span>4,355<span class="Apple-converted-space">    </span>5,355</span></p>
+<p class="p7"><span class="s1">Tao <span class="Apple-converted-space">                                  </span>7,624 <span class="Apple-converted-space">  </span>10,147<span class="Apple-converted-space">                                           </span></span></p>
+<p class="p7"><span class="s1">Tarski<span class="Apple-converted-space">                                  </span>250<span class="Apple-converted-space">    </span>2,629</span></p>
+<p class="p7"><span class="s1">Tauber | tauberian<span class="Apple-converted-space">                      </span>214<span class="Apple-converted-space">    </span>2,793</span></p>
+<p class="p7"><span class="s1">Thom <span class="Apple-converted-space">        </span><a href="https://en.wikipedia.org/wiki/Ren%C3%A9_Thom"><span class="s10">1923-02<span class="Apple-converted-space"> </span></span></a> <span class="Apple-converted-space">                  </span>849<span class="Apple-converted-space">    </span>2,189</span></p>
+<p class="p7"><span class="s1">Thompson<span class="Apple-converted-space">                              </span>4,423<span class="Apple-converted-space">    </span>5,764</span></p>
+<p class="p7"><span class="s1">Thurston<span class="Apple-converted-space">    </span><a href="https://en.wikipedia.org/wiki/William_Thurston"><span class="s10">1946-12</span></a> <span class="Apple-converted-space">                  </span>1,228<span class="Apple-converted-space">    </span>2,816</span></p>
+<p class="p7"><span class="s1">Tate<span class="Apple-converted-space">        </span>1<a href="https://en.wikipedia.org/wiki/John_Tate"><span class="s10">925-19</span></a> <span class="Apple-converted-space">                  </span>1,800<span class="Apple-converted-space">    </span>4,879</span></p>
+<p class="p7"><span class="s1">Tits<span class="Apple-converted-space">        </span>1<a href="https://en.wikipedia.org/wiki/Jacques_Tits"><span class="s10">930-</span></a> <span class="Apple-converted-space">                      </span>863<span class="Apple-converted-space">    </span>2,752</span></p>
+<p class="p7"><span class="s1">Todd<span class="Apple-converted-space">        </span>1<a href="https://en.wikipedia.org/wiki/J._A._Todd"><span class="s10">908-94</span></a> <span class="Apple-converted-space">                  </span>2,062<span class="Apple-converted-space">    </span>2,913</span></p>
+<p class="p7"><span class="s1">Tucker<span class="Apple-converted-space">      </span>1<a href="https://en.wikipedia.org/wiki/Albert_W._Tucker"><span class="s10">905-95</span></a> <span class="Apple-converted-space">                  </span>1,787<span class="Apple-converted-space">    </span>4,307</span></p>
+<p class="p7"><span class="s1">Uhlenbeck <span class="Apple-converted-space">  </span>1<a href="https://en.wikipedia.org/wiki/Karen_Uhlenbeck"><span class="s10">942-</span></a> <span class="Apple-converted-space">                    </span>1,710<span class="Apple-converted-space">    </span>4,235</span></p>
+<p class="p7"><span class="s1">Ulam<span class="Apple-converted-space">        </span><a href="https://en.wikipedia.org/wiki/J._A._Todd"><span class="s10">1909-84</span></a> <span class="Apple-converted-space">                    </span>717<span class="Apple-converted-space">    </span>4,890</span></p>
+<p class="p7"><span class="s1">Vaserstein | Wasserstein<span class="Apple-converted-space">  </span>| WGAN<span class="Apple-converted-space">      </span><a href="https://arxiv.org/search/?query=Vaserstein+OR++Wasserstein+OR+WGAN+&amp;searchtype=all&amp;abstracts=show&amp;order=-announced_date_first&amp;size=50"><span class="s10">2,148</span></a><span class="Apple-converted-space">    </span><a href="https://www.zbmath.org/?q=Vaserstein+%7C+Wasserstein++%7C+WGAN"><span class="s10">2,</span></a></span><span class="s7">694</span><span class="s1"> <span class="Apple-converted-space">  </span>TI in arXiv 923</span></p>
+<p class="p7"><span class="s1">Verma <span class="Apple-converted-space">      </span><a href="https://en.wikipedia.org/wiki/Daya-Nand_Verma"><span class="s10">1933-12</span></a> <span class="Apple-converted-space">                  </span>1,749<span class="Apple-converted-space">    </span>4,069</span></p>
+<p class="p7"><span class="s1">von Neumann <span class="Apple-converted-space">                          </span>4,676 <span class="Apple-converted-space">  </span>22,020 <a href="https://arxiv.org/search/?query=wgan&amp;searchtype=abstract&amp;abstracts=show&amp;order=-announced_date_first&amp;size=50"><span class="s10"><span class="Apple-converted-space"> </span></span></a></span></p>
+<p class="p7"><span class="s1">Waring<span class="Apple-converted-space">                                  </span>290<span class="Apple-converted-space">    </span>2,359</span></p>
+<p class="p7"><span class="s1">Weil<span class="Apple-converted-space">                                  </span>2,162 <span class="Apple-converted-space">  </span>14,026</span></p>
+<p class="p7"><span class="s1">Weiss <span class="Apple-converted-space">                                </span>3,857<span class="Apple-converted-space">    </span>6,402</span></p>
+<p class="p3"><span class="s1">Whitney <span class="Apple-converted-space">                              </span>1,136<span class="Apple-converted-space">    </span>4,487</span></p>
+<p class="p7"><span class="s1">Williams<span class="Apple-converted-space">                              </span>1,567<span class="Apple-converted-space">    </span>8,583</span></p>
+<p class="p7"><span class="s1">Witt<span class="Apple-converted-space">        </span>1<a href="https://en.wikipedia.org/wiki/Ernst_Witt"><span class="s10">911-91</span></a> <span class="Apple-converted-space">                  </span>1,681<span class="Apple-converted-space">    </span>5,043<span class="Apple-converted-space">     </span></span></p>
+<p class="p7"><span class="s1">Wright<span class="Apple-converted-space">                                </span>3,170<span class="Apple-converted-space">    </span>5,006</span></p>
+<p class="p7"><span class="s1">Wu <span class="Apple-converted-space">                                  </span><a href="https://arxiv.org/search/?query=wu&amp;searchtype=all&amp;abstracts=show&amp;order=-announced_date_first&amp;size=50"><span class="s10">22,562</span></a> <span class="Apple-converted-space">  </span><a href="https://zbmath.org/?q=wu"><span class="s10">40,156</span></a></span></p>
+<p class="p7"><span class="s1">Zariski <span class="Apple-converted-space">                              </span>1,385<span class="Apple-converted-space">    </span>4,163<br>
+</span></p>
+<p class="p7"><span class="s1">end MA list<span class="Apple-converted-space">        </span>most popular names anywhere in ZblMath</span></p>
+<p class="p7"><span class="s1"><br>
+</span></p>
+<p class="p7"><span class="s1"><br>
+</span></p>
+<p class="p7"><span class="s1"><span class="Apple-converted-space">  </span><br>
+<span class="Apple-converted-space"> </span></span></p>
+<p class="p16"><span class="s19"><span class="Apple-converted-space"> <span class="Apple-tab-span">	</span></span></span></p>
+<p class="p10"><span class="s1"><br>
+</span></p>
+<p class="p17"><span class="s1">TB list.<span class="Apple-converted-space"> </span></span></p>
+<p class="p17"><span class="s1">Name in title of book at Zbl<span class="Apple-converted-space">  </span>ti:__ t:b</span></p>
+<p class="p10"><span class="s1">Some data from Math Reviews in book titles and Math Genealogy in Thesis keywords<span class="Apple-converted-space"> </span></span></p>
+<p class="p10"><span class="s1">are given<br>
+</span></p>
+<p class="p10"><span class="s1">Abel OR abelian <span class="Apple-converted-space">          </span><a href="https://zbmath.org/?q=ti%3A++Abel+%7C+abelian+%26+dt%3Ab"><span class="s10">34</span></a></span><span class="s19">8</span></p>
+<p class="p10"><span class="s1">Banach<span class="Apple-converted-space">                    </span>523<span class="Apple-converted-space">  </span>MR/b 344 <span class="Apple-converted-space">   </span></span></p>
+<p class="p10"><span class="s1">Bass <span class="Apple-converted-space">                      </span>14</span></p>
+<p class="p10"><span class="s1">Bonnet<span class="Apple-converted-space">                      </span>4</span></p>
+<p class="p10"><span class="s1">Borel <span class="Apple-converted-space">                      </span>3</span></p>
+<p class="p3"><span class="s1">Cauchy<span class="Apple-converted-space">                    </span>201</span></p>
+<p class="p3"><span class="s1">Dantzig <span class="Apple-converted-space">                    </span>5 <span class="Apple-converted-space">        </span>2 NG</span></p>
+<p class="p3"><span class="s1">Dynkin <span class="Apple-converted-space">                    </span>11</span></p>
+<p class="p10"><span class="s1">Einstein<span class="Apple-converted-space">                  </span>508 <span class="Apple-converted-space">    </span>MR/b 226 <span class="Apple-converted-space">   </span></span></p>
+<p class="p10"><span class="s1">Fermi<span class="Apple-converted-space">                      </span>59</span></p>
+<p class="p10"><span class="s1">Galois<span class="Apple-converted-space">                    </span>314</span></p>
+<p class="p10"><span class="s1">Gauss OR gaussian <span class="Apple-converted-space">        </span>315</span></p>
+<p class="p10"><span class="s1">Gromov <span class="Apple-converted-space">                    </span>32</span></p>
+<p class="p10"><span class="s1">Hardy <span class="Apple-converted-space">                    </span>116</span></p>
+<p class="p10"><span class="s1">Hermite OR hermitian<span class="Apple-converted-space">      </span><a href="https://zbmath.org/?q=ti%3A++hermite+%7C+hermitian+%26+dt%3Ab"><span class="s10">108</span></a></span></p>
+<p class="p10"><span class="s1">Markov | Markoff<span class="Apple-converted-space">          </span><a href="https://zbmath.org/?q=ti%3A++markov+%7C+markoff++%26+dt%3Ab"><span class="s10">550</span></a></span></p>
+<p class="p10"><span class="s1">Nash <span class="Apple-converted-space">                      </span>39</span></p>
+<p class="p10"><span class="s1">Penrose<span class="Apple-converted-space">                    </span>27</span></p>
+<p class="p10"><span class="s1">Perelman<span class="Apple-converted-space">                    </span>3 <span class="Apple-converted-space">    </span>2 MG</span></p>
+<p class="p10"><span class="s1">Polyakov<span class="Apple-converted-space">                    </span>2 <span class="Apple-converted-space">    </span>2 MG</span></p>
+<p class="p7"><span class="s1">Pythagoras OR pythagorean<span class="Apple-converted-space">  </span>65</span></p>
+<p class="p7"><span class="s1">Selberg<span class="Apple-converted-space">                    </span>30</span></p>
+<p class="p7"><span class="s1">Smale <span class="Apple-converted-space">                      </span>2</span></p>
+<p class="p7"><span class="s1">Tucker<span class="Apple-converted-space">                      </span>5 <span class="Apple-converted-space">      </span><a href="https://www.genealogy.math.ndsu.nodak.edu/results.php?"><span class="s10">15</span></a><span class="Apple-converted-space">    </span>MG</span></p>
+<p class="p7"><span class="s1">Tao <span class="Apple-converted-space">                        </span>2<span class="Apple-converted-space">        </span>8<span class="Apple-converted-space">    </span>MG</span></p>
+<p class="p7"><span class="s1">Wasserstein OR Vaserstein <span class="Apple-converted-space">  </span></span><span class="s7">8</span><span class="s1"> <span class="Apple-converted-space">      </span>2<a href="https://www.genealogy.math.ndsu.nodak.edu/results.php?"><span class="s10">1</span></a> + 1 <span class="Apple-converted-space">  </span>MG</span></p>
+<p class="p10"><span class="s1"><br>
+</span></p>
+<p class="p10"><span class="s1"><br>
+</span></p>
+<p class="p18"><span class="s1">Spaces popular in titles</span></p>
+<p class="p10"><span class="s1"><br>
+</span></p>
+<p class="p10"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s19"> arXiv<span class="Apple-converted-space">          </span>Zbl<span class="Apple-converted-space">    </span>scholar</span></p>
+<p class="p10"><span class="s1">"Archimedean space" <span class="Apple-converted-space">        </span>13<span class="Apple-converted-space">          </span>12<span class="Apple-converted-space">        </span>37</span></p>
+<p class="p10"><span class="s1">"Baire space" <span class="Apple-converted-space">              </span>29<span class="Apple-converted-space">          </span>40<span class="Apple-converted-space">        </span>109</span></p>
+<p class="p10"><span class="s1">"Banach space"<span class="Apple-converted-space">            </span>1397<span class="Apple-converted-space">        </span>4437 <span class="Apple-converted-space">      </span>7350</span></p>
+<p class="p10"><span class="s1">"Bergman space"<span class="Apple-converted-space">            </span>225 <span class="Apple-converted-space">        </span>499<span class="Apple-converted-space">        </span>797</span></p>
+<p class="p10"><span class="s1">"Berkovich space" <span class="Apple-converted-space">          </span>22 <span class="Apple-converted-space">          </span>0<span class="Apple-converted-space">          </span>5</span></p>
+<p class="p10"><span class="s1">"Besov space"<span class="Apple-converted-space">              </span>248 <span class="Apple-converted-space">        </span>139</span></p>
+<p class="p10"><span class="s1">"Borel space" <span class="Apple-converted-space">              </span>12<span class="Apple-converted-space">          </span>80</span></p>
+<p class="p10"><span class="s1">"Cantor space"<span class="Apple-converted-space">              </span>15<span class="Apple-converted-space">          </span>37</span></p>
+<p class="p10"><span class="s1">"Euclidean space"<span class="Apple-converted-space">          </span>629<span class="Apple-converted-space">        </span>2203</span></p>
+<p class="p10"><span class="s1">"Finsler space"<span class="Apple-converted-space">            </span>106 <span class="Apple-converted-space">        </span>672</span></p>
+<p class="p10"><span class="s1">"Fock space" <span class="Apple-converted-space">              </span>369 <span class="Apple-converted-space">        </span>498</span></p>
+<p class="p10"><span class="s1">"Fréchet space" <span class="Apple-converted-space">            </span>42 <span class="Apple-converted-space">        </span>128</span></p>
+<p class="p10"><span class="s1">"Hardy space"<span class="Apple-converted-space">              </span>453 <span class="Apple-converted-space">        </span>510</span></p>
+<p class="p10"><span class="s1">"Hausdorff space" <span class="Apple-converted-space">          </span>47 <span class="Apple-converted-space">        </span>108</span></p>
+<p class="p10"><span class="s1">"Hilbert space" <span class="Apple-converted-space">          </span>1366<span class="Apple-converted-space">        </span>4781</span></p>
+<p class="p10"><span class="s1">"Minkowski space"<span class="Apple-converted-space">          </span>495 <span class="Apple-converted-space">        </span>932 <span class="Apple-converted-space">             </span></span></p>
+<p class="p10"><span class="s1">"Sobolev space"<span class="Apple-converted-space">            </span>633 <span class="Apple-converted-space">        </span>494 <span class="Apple-converted-space">      </span>952</span></p>
+<p class="p10"><span class="s1">"Wasserstein space" <span class="Apple-converted-space">        </span>82<span class="Apple-converted-space">          </span>49 <span class="Apple-converted-space">      </span>158</span></p>
+<p class="p16"><span class="s1"><span class="Apple-converted-space"> </span></span></p>
+<p class="p10"><span class="s1"><span class="Apple-converted-space"> </span><br>
+<span class="Apple-converted-space"> </span></span></p>
+<p class="p10"><span class="s1"><br>
+</span></p>
+<p class="p16"><span class="s1"><span class="Apple-converted-space">    </span></span></p>
+<p class="p19"><span class="s1">Web links</span><span class="s4"><br>
+</span></p>
+<p class="p20"><span class="s12"><br>
+<a href="http://www.personal.psu.edu/lxv1/InTitle2.html"><span class="s3">This page</span></a></span></p>
+<p class="p21"><span class="s1"><br>
+</span></p>
+<p class="p22"><span class="s1"><b>My name in title.</b></span></p>
+<p class="p1"><span class="s1">There are<span class="Apple-converted-space"> </span></span></p>
+<p class="p23"><span class="s1">13,719 titles of<span class="Apple-converted-space">  </span>books, papers, preprints, prints,<span class="Apple-converted-space">  </span>and patents with my name<span class="Apple-converted-space"> </span></span></p>
+<p class="p1"><span class="s1">in two html files at my website.<span class="Apple-converted-space">  </span>12MB</span><span class="s7">and 13MB:</span></p>
+<p class="p24"><span class="s12">6 ,501 </span><span class="s20">titles appeared <a href="https://lxv1.github.io/VinTitle2b.html"><span class="s21">t</span></a><a href="https://lxv1.github.io/VinTitle2a.html"><span class="s21">ill 2018</span></a></span><span class="s12"> <span class="Apple-converted-space"> </span></span></p>
+<p class="p25"><span class="s22">7,218<span class="Apple-converted-space">  </span></span><span class="s1">titles appeared <a href="https://lxv1.github.io/VinTitle2b.html"><span class="s23">since 2019.</span></a></span><span class="s22"><span class="Apple-converted-space">   </span></span></p>
+<p class="p26"><span class="s1"><span class="Apple-converted-space"> </span></span></p>
+<p class="p27"><span class="s1">There are 56<span class="Apple-converted-space">  </span><a href="https://lxv1.github.io/VinTitleBook.html"><span class="s24">books</span></a>,<span class="Apple-converted-space">  </span>156 <a href="https://lxv1.github.io/VinThesisTitle.html"><span class="s24">dissertations</span></a>, 123<span class="Apple-converted-space">  </span><a href="https://lxv1.github.io/VinPatentTitle.html"><span class="s24">patents</span></a> snd 159<span class="Apple-converted-space"> </span><a href="https://lxv1.github.io/VinVideos.html"><span class="s25"> videos </span></a></span><span class="s26"><span class="Apple-converted-space"> </span></span></p>
+<p class="p27"><span class="s1">with<span class="Apple-converted-space">  </span>my name in title<span class="Apple-converted-space"> </span></span></p>
+<p class="p28"><span class="s1"><br>
+</span></p>
+<p class="p29"><span class="s1">Most of titles<span class="Apple-converted-space">  </span>and more can be found at Google Scholar. They include <span class="Apple-converted-space">   </span></span></p>
+<p class="p29"><span class="s1">500 <span class="Apple-converted-space">  </span><a href="https://lxv1.github.io/VinTitle.html"><span class="s27">titles from </span></a>Math Reviews <span class="Apple-converted-space">  </span>(with my name spelled as Vaserstein, Wasserstein.</span></p>
+<p class="p29"><span class="s1"><span class="Apple-converted-space"> </span>Vasershtein, Vasserstein , or </span><span class="s28">Vasseršteĭn),</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span></span><span class="s7">470<span class="Apple-converted-space"> </span></span><span class="s1"> titles from zbMath (with my name spelled as<span class="Apple-converted-space">  </span>Vaserstein | Wasserstein),</span></p>
+<p class="p1"><span class="s29"><a href="https://arxiv.org/search/?query=wasserstein+OR+vaserstein+OR+wgan+OR+wgan-gp&amp;searchtype=title&amp;abstracts=show&amp;order=-announced_date_first&amp;size=50">875</a></span><span class="s1"><span class="Apple-converted-space">  </span>titles from arXiv (with my name spelled as Vaserstein, Wasserstein, or WGAN.</span></p>
+<p class="p30"><span class="s30"><a href="https://lxv1.github.io/VinVideos.html"><span class="Apple-converted-space"> </span></a></span><span class="s14"><br>
+</span><span class="s1"><br>
+</span></p>
+<p class="p31"><span class="s1"><span class="Apple-converted-space"> </span></span></p>
+<p class="p15"><span class="s18"><a href="http://apps.webofknowledge.com.ezaccess.libraries.psu.edu/UA_AdvancedSearch_input.do?product=UA&amp;SID=6EMCL4TMQG34NNC3hs1&amp;search_mode=AdvancedSearch">Web of Science </a></span><span class="s1"><br>
+requires login</span></p>
+<p class="p15"><span class="s18"><a href="http://apps.webofknowledge.com.ezaccess.libraries.psu.edu/UA_AdvancedSearch_input.do?product=UA&amp;search_mode=AdvancedSearch&amp;replaceSetId=&amp;goToPageLoc=SearchHistoryTableBanner&amp;SID=6CICfEr5ZvBLxPb1LjA&amp;errorQid=2#SearchHistoryTableBanner">8</a></span><span class="s1"><span class="Apple-converted-space">      </span>vaserstein in title</span></p>
+<p class="p15"><span class="s18"><a href="http://apps.webofknowledge.com.ezaccess.libraries.psu.edu/UA_AdvancedSearch_input.do?product=UA&amp;search_mode=AdvancedSearch&amp;replaceSetId=&amp;goToPageLoc=SearchHistoryTableBanner&amp;SID=6CICfEr5ZvBLxPb1LjA&amp;errorQid=8#SearchHistoryTableBanner">866</a></span><span class="s1"> <span class="Apple-converted-space">    </span>wasserstein in title</span></p>
+<p class="p15"><span class="s1"><br>
+</span></p>
+<p class="p15"><span class="s1"><br>
+</span></p>
+<p class="p15"><span class="s1">zbMATH</span></p>
+<p class="p15"><span class="s18"><a href="https://zbmath.org/?q=ti%3A+vaserstein">13</a></span><span class="s1"> vaserstein in title</span></p>
+<p class="p15"><span class="s18"><a href="https://zbmath.org/?q=ti%3A+wasserstein">385</a></span><span class="s1"> wasserstein in title</span></p>
+<p class="p32"><span class="s1"><br>
+<br>
+History</span></p>
+<p class="p33"><span class="s1"><br>
+</span></p>
+<p class="p33"><span class="s1">Zbl</span></p>
+<p class="p34"><span class="s11"><b>zbMATH</b>, formerly <b>Zentralblatt MATH</b></span></p>
+<p class="p35"><span class="s1">started [n 1931,as <span class="Apple-converted-space">  </span> <i>Zentralblatt für Mathematik und ihre Grenzgebiete</i>.</span></p>
+<p class="p36"><span class="s1">The Zentralblatt database also incorporates the 200,000 entries of the earlier similar publication <i>Jahrbuch über die Fortschritte der Mathematik</i> (JFM) from 1868 to 1942, added in 2003.</span></p>
+<p class="p37"><span class="s11">As of January 2021, the complete database is accessible for free</span></p>
+<p class="p28"><span class="s1"><br>
+</span></p>
+<p class="p33"><span class="s1"><span class="Apple-converted-space"> </span>MR</span></p>
+<p class="p38"><span class="s11">Mathematical Reviews was founded by <a href="https://en.wikipedia.org/wiki/Otto_E._Neugebauer"><span class="s31">Otto E. Neugebauer</span></a> in 1940</span><span class="s32"><br>
+online since 1980/</span></p>
+<p class="p39"><span class="s1"><br>
+</span></p>
+<p class="p40"><span class="s19"><a href="https://en.wikipedia.org/wiki/ArXiv">arXiv<span class="s33"></span></a></span></p>
+<p class="p39"><span class="s1">free access</span></p>
+<p class="p41"><span class="s19"><a href="https://en.wikipedia.org/wiki/ArXiv">arXiv - Wikipedia<span class="s34"></span></a></span></p>
+<p class="p42"><span class="s35"><a href="https://en.wikipedia.org/wiki/ArXiv">en.wikipedia.org<span class="s36"> › wiki › ArXiv</span></a></span></p>
+<p class="p43"><span class="s1">arXiv is an open-access repository of electronic preprints (known as e-prints) approved for posting after moderation, but not peer review. It consists of scientific ...</span></p>
+<table cellspacing="0" cellpadding="0" class="t1">
+  <tbody>
+    <tr>
+      <td valign="bottom" class="td1">
+        <p class="p44"><span class="s37">Created by: <a href="https://en.wikipedia.org/wiki/Paul_Ginsparg"><span class="s38">Paul Ginsparg</span></a></span></p>
+      </td>
+      <td valign="bottom" class="td2">
+        <p class="p44"><span class="s37">Owner: <a href="https://en.wikipedia.org/wiki/Cornell_University"><span class="s38">Cornell University</span></a></span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="bottom" class="td1">
+        <p class="p45"><span class="s11">Launched: August 14, 1991; 29 years ago</span></p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<p class="p44"><span class="s37">‎<a href="https://en.wikipedia.org/wiki/ArXiv#History"><span class="s38">History</span></a> · ‎<a href="https://en.wikipedia.org/wiki/ArXiv#Moderation_process_and_endorsement"><span class="s38">Moderation process and...</span></a> · ‎<a href="https://en.wikipedia.org/wiki/ArXiv#Access"><span class="s38">Access</span></a> · ‎<a href="https://en.wikipedia.org/wiki/ArXiv#Copyright_status_of_files"><span class="s38">Copyright status of files</span></a></span></p>
+<p class="p20"><span class="s1"><br>
+</span></p>
+<p class="p15"><span class="s1"><br>
+</span></p>
+<p class="p15"><span class="s1"><span class="Apple-converted-space"> </span>Web of Science</span></p>
+<p class="p46"><span class="s1">login required</span></p>
+<p class="p47"><span class="s19"><a href="https://en.wikipedia.org/wiki/Web_of_Science">Web of Science - Wikipedia<span class="s39"></span></a></span></p>
+<p class="p48"><span class="s40"><a href="https://en.wikipedia.org/wiki/Web_of_Science">en.wikipedia.org<span class="s36"> › wiki › Web_of_Science</span></a></span></p>
+<p class="p49"><span class="s1"><b>Web of Science</b> is a website that provides subscription-based access to multiple databases that provide comprehensive citation data for many different academic ...</span></p>
+<table cellspacing="0" cellpadding="0" class="t1">
+  <tbody>
+    <tr>
+      <td valign="bottom" class="td1">
+        <p class="p48"><span class="s11"><b>Temporal coverage: </b>1900 to present</span></p>
+      </td>
+      <td valign="bottom" class="td2">
+        <p class="p48"><span class="s11"><b>Producer: </b>Clarivate Analytics (United States)</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="bottom" class="td1">
+        <p class="p48"><span class="s11"><b>No. of records: </b>90 million +</span></p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<p class="p15"><span class="s1"><br>
+</span></p>
+<p class="p50"><span class="s1">GROUPING</span></p>
+<p class="p15"><span class="s1"><br>
+</span></p>
+<p class="p15"><span class="s1">arXiv</span></p>
+<p class="p15"><span class="s1">Brown = brown =Browns = browns = Brpwn's = brown's<span class="Apple-converted-space">  </span>1,460 titles</span></p>
+<p class="p15"><span class="s1"><br>
+Grouping is done by the corresponding author. The versions can have different titles and coauthors.</span></p>
+<p class="p15"><span class="s1">Search by title finds only the latest title.</span></p>
+<p class="p15"><span class="s1"><br>
+</span></p>
+<p class="p15"><span class="s1">Zbl zbMATH</span></p>
+<p class="p15"><span class="s1">Brown=brown</span></p>
+<p class="p7"><span class="s1">Erdos = Erdős = Erdös = erdos<span class="Apple-converted-space"> </span></span></p>
+<p class="p15"><span class="s1"><br>
+</span></p>
+<p class="p15"><span class="s1"><br>
+</span></p>
+<p class="p15"><span class="s1"><br>
+</span></p>
+<p class="p28"><span class="s41"><span class="Apple-converted-space"> </span></span><span class="s1">_______________________________________</span></p>
+<p class="p4"><span class="s1"><br>
+</span></p>
+<p class="p3"><span class="s1"><br>
+</span></p>
+<p class="p3"><span class="s1"><br>
+</span></p>
+<p class="p4"><span class="s1"><br>
+</span></p>
+</body>
+</html>

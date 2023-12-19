@@ -1,0 +1,352 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <title>F4.m31</title>
+  <meta http-equiv="content-type"
+ content="text/html; charset=ISO-8859-1">
+</head>
+<body>
+<font color="#009900"><small>Math 484.1.&nbsp; April 19, 2006 .&nbsp;
+&nbsp;Midterm 3. &nbsp;<br>
+5 problems, 10 pts each. Name______________ </small></font><br>
+<br>
+&nbsp;Solve matrix games:
+<br>
+1.<br>
+<table border="1" cellpadding="2" cellspacing="2" width="20%">
+  <tbody>
+    <tr>
+      <td valign="top"><small>1<br>
+      </small></td>
+      <td valign="top"><small>2<br>
+      </small></td>
+      <td valign="top"><small>3<br>
+      </small></td>
+      <td valign="top"><small>4<br>
+      </small></td>
+      <td valign="top"><small>5<br>
+      </small></td>
+    </tr>
+    <tr>
+      <td valign="top"><small>3<br>
+      </small></td>
+      <td valign="top"><small>3<br>
+      </small></td>
+      <td valign="top"><small>4<br>
+      </small></td>
+      <td valign="top"><small>5<br>
+      </small></td>
+      <td valign="top"><small>4<br>
+      </small></td>
+    </tr>
+    <tr>
+      <td valign="top"><small>5<br>
+      </small></td>
+      <td valign="top"><small>4*'<br>
+      </small></td>
+      <td valign="top"><small>6<br>
+      </small></td>
+      <td valign="top"><small>4<br>
+      </small></td>
+      <td valign="top"><small>5<br>
+      </small></td>
+    </tr>
+    <tr>
+      <td valign="top"><small>5<br>
+      </small></td>
+      <td valign="top"><small>1<br>
+      </small></td>
+      <td valign="top"><small>4<br>
+      </small></td>
+      <td valign="top"><small>3<br>
+      </small></td>
+      <td valign="top"><small>2<br>
+      </small></td>
+    </tr>
+    <tr>
+      <td valign="top"><small>4<br>
+      </small></td>
+      <td valign="top"><small>1<br>
+      </small></td>
+      <td valign="top"><small>2<br>
+      </small></td>
+      <td valign="top"><small>1<br>
+      </small></td>
+      <td valign="top"><small>3<br>
+      </small></td>
+    </tr>
+  </tbody>
+</table>
+*' saddle point.<br>
+<br>
+2.<br>
+<table border="1" cellpadding="2" cellspacing="2" width="20%">
+  <tbody>
+    <tr>
+      <td valign="top"><small>1<br>
+      </small></td>
+      <td valign="top"><small>2<br>
+      </small></td>
+      <td valign="top"><small>3<br>
+      </small></td>
+      <td valign="top"><small>4<br>
+      </small></td>
+      <td valign="top"><small>5<br>
+      </small></td>
+    </tr>
+    <tr>
+      <td valign="top"><small>3<br>
+      </small></td>
+      <td valign="top"><small>1<br>
+      </small></td>
+      <td valign="top"><small>4<br>
+      </small></td>
+      <td valign="top"><small>5<br>
+      </small></td>
+      <td valign="top"><small>4<br>
+      </small></td>
+    </tr>
+    <tr>
+      <td valign="top"><small>3<br>
+      </small></td>
+      <td valign="top"><small>1<br>
+      </small></td>
+      <td valign="top"><small>2<br>
+      </small></td>
+      <td valign="top"><small>3<br>
+      </small></td>
+      <td valign="top"><small>1<br>
+      </small></td>
+    </tr>
+    <tr>
+      <td valign="top"><small>5<br>
+      </small></td>
+      <td valign="top"><small>1<br>
+      </small></td>
+      <td valign="top"><small>4<br>
+      </small></td>
+      <td valign="top"><small>3<br>
+      </small></td>
+      <td valign="top"><small>2<br>
+      </small></td>
+    </tr>
+    <tr>
+      <td valign="top"><small>4<br>
+      </small></td>
+      <td valign="top"><small>1<br>
+      </small></td>
+      <td valign="top"><small>2<br>
+      </small></td>
+      <td valign="top"><small>1<br>
+      </small></td>
+      <td valign="top"><small>3<br>
+      </small></td>
+    </tr>
+  </tbody>
+</table>
+By domination, we get<br>
+<table style="width: 20%; text-align: left;" border="1" cellpadding="2"
+ cellspacing="2">
+  <tbody>
+    <tr>
+      <td style="vertical-align: top;"><br>
+      </td>
+      <td style="vertical-align: top;">c1<br>
+      </td>
+      <td style="vertical-align: top;">c2<br>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">r1<br>
+      </td>
+      <td style="vertical-align: top;">1<br>
+      </td>
+      <td style="vertical-align: top;">2<br>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">r4<br>
+      </td>
+      <td style="vertical-align: top;">5<br>
+      </td>
+      <td style="vertical-align: top;">1<br>
+      </td>
+    </tr>
+  </tbody>
+</table>
+Row player's optimal strategy is (4r1+r4)/5 = [0.8,&nbsp; 0,&nbsp;
+0,&nbsp; 0.2, 0]<sup>T</sup>. Column player's optimal strategy is
+(c1+4c2)/5 =[0.2, 0.8, 0, 0, 0].<br>
+The value of game is 9/5 = 1.8.<br>
+<br>
+3.<br>
+<table border="1" cellpadding="2" cellspacing="2" width="20%">
+  <tbody>
+    <tr>
+      <td valign="top"><small>2<br>
+      </small></td>
+      <td valign="top"><small>0<br>
+      </small></td>
+      <td valign="top"><small>2<br>
+      </small></td>
+      <td valign="top"><small>-2<br>
+      </small></td>
+    </tr>
+    <tr>
+      <td valign="top"><small>2<br>
+      </small></td>
+      <td valign="top"><small>-2<br>
+      </small></td>
+      <td valign="top"><small>0<br>
+      </small></td>
+      <td valign="top"><small>5<br>
+      </small></td>
+    </tr>
+    <tr>
+      <td valign="top"><small>4<br>
+      </small></td>
+      <td valign="top"><small>2<br>
+      </small></td>
+      <td valign="top"><small>-5<br>
+      </small></td>
+      <td valign="top"><small>0<br>
+      </small></td>
+    </tr>
+  </tbody>
+</table>
+The first column goes by domination. Then we get a symmetric game, so
+its value&nbsp; is 0.<br>
+An optimal strategy for the column player is [0, 5, 2, 2]/9,. Its
+transpose without the first entry is an optimal strategy for &nbsp; the
+row player .<br>
+<br>
+4. <br>
+<table border="1" cellpadding="2" cellspacing="2" width="20%">
+  <tbody>
+    <tr>
+      <td valign="top"><small>3<br>
+      </small></td>
+      <td valign="top"><small>3<br>
+      </small></td>
+      <td valign="top"><small>0<br>
+      </small></td>
+      <td valign="top"><small>1<br>
+      </small></td>
+      <td valign="top"><small>4<br>
+      </small></td>
+      <td valign="top"><small>1<br>
+      </small></td>
+      <td valign="top"><small>0*'<br>
+      </small></td>
+      <td valign="top"><small>1<br>
+      </small></td>
+    </tr>
+    <tr>
+      <td valign="top"><small>0<br>
+      </small></td>
+      <td valign="top"><small>2<br>
+      </small></td>
+      <td valign="top"><small>3<br>
+      </small></td>
+      <td valign="top"><small>3<br>
+      </small></td>
+      <td valign="top"><small>2<br>
+      </small></td>
+      <td valign="top"><small>2<br>
+      </small></td>
+      <td valign="top"><small>0<br>
+      </small></td>
+      <td valign="top"><small>1<br>
+      </small></td>
+    </tr>
+    <tr>
+      <td valign="top"><small>2<br>
+      </small></td>
+      <td valign="top"><small>2<br>
+      </small></td>
+      <td valign="top"><small>0<br>
+      </small></td>
+      <td valign="top"><small>1<br>
+      </small></td>
+      <td valign="top"><small>2<br>
+      </small></td>
+      <td valign="top"><small>0<br>
+      </small></td>
+      <td valign="top"><small>0<br>
+      </small></td>
+      <td valign="top"><small>1<br>
+      </small></td>
+    </tr>
+  </tbody>
+</table>
+*' saddle point.<br>
+<br>
+5. <br>
+<table border="1" cellpadding="2" cellspacing="2" width="20%">
+  <tbody>
+    <tr>
+      <td valign="top"><small>1<br>
+      </small></td>
+      <td valign="top"><small>4<br>
+      </small></td>
+      <td valign="top"><small>3<br>
+      </small></td>
+      <td valign="top"><small>2<br>
+      </small></td>
+      <td valign="top"><small>5<br>
+      </small></td>
+      <td valign="top"><small>4<br>
+      </small></td>
+      <td valign="top"><small>3<br>
+      </small></td>
+      <td valign="top"><small>5<br>
+      </small></td>
+    </tr>
+    <tr>
+      <td valign="top"><small>4<br>
+      </small></td>
+      <td valign="top"><small>3<br>
+      </small></td>
+      <td valign="top"><small>1<br>
+      </small></td>
+      <td valign="top"><small>4<br>
+      </small></td>
+      <td valign="top"><small>3<br>
+      </small></td>
+      <td valign="top"><small>1<br>
+      </small></td>
+      <td valign="top"><small>5<br>
+      </small></td>
+      <td valign="top"><small>4<br>
+      </small></td>
+    </tr>
+    <tr>
+      <td valign="top"><small>5<br>
+      </small></td>
+      <td valign="top"><small>2<br>
+      </small></td>
+      <td valign="top"><small>5<br>
+      </small></td>
+      <td valign="top"><small>6<br>
+      </small></td>
+      <td valign="top"><small>3<br>
+      </small></td>
+      <td valign="top"><small>5<br>
+      </small></td>
+      <td valign="top"><small>6<br>
+      </small></td>
+      <td valign="top"><small>4<br>
+      </small></td>
+    </tr>
+  </tbody>
+</table>
+<br>
+The columns 4-8 go by domination. Optimal strategies: [9, 6, 7]/22<sup>T</sup>
+and&nbsp; [[3, 7, 1, 0, 0, 0 , 0,0]/11.<br>
+The values of game is 34/11.<br>
+<br>
+<br>
+<br>
+<br>
+</body>
+</html>

@@ -1,0 +1,897 @@
+\documentclass[12pt]{amsart}
+\usepackage{amssymb}
+\usepackage{amsmath}
+
+
+\renewcommand{\theequation}{\thesection.\arabic{equation}}
+\renewcommand{\thesection}{\arabic{section}}
+\numberwithin{equation}{section}
+%\renewcommand{equation}{\arabic{subsection}}
+\def\pf{\hfill{$\square$}}
+\newcommand{\call}{\ensuremath{\mathcal{L}}}
+\newcommand{\cals}{\ensuremath{\mathcal{S}}}
+\newcommand{\calt}{\ensuremath{\mathcal{T}}}
+\newcommand{\C}{\ensuremath{\mathbb{C}}}
+\newcommand{\Q}{\ensuremath{\mathbb{Q}}}
+\newcommand{\Z}{\ensuremath{\mathbb{Z}}}
+\newcommand{\N}{\ensuremath{\mathbb{N}}}
+\newcommand{\Zp}{\ensuremath{\Z_{p}}}
+\newcommand{\Zpu}{\ensuremath{\Zp^{\times}}}
+\newcommand{\Zpl}{\ensuremath{\Z_{(p)}}}
+\newcommand{\Zplu}{\ensuremath{\Zpl^{\times}}}
+\newcommand{\Zt}{\ensuremath{\Z_{2}}}
+\newcommand{\Ztu}{\ensuremath{\Zt^{\times}}}
+\newcommand{\Ztl}{\ensuremath{\Z_{(2)}}}
+\newcommand{\Ztlu}{\ensuremath{\Ztl^{\times}}}
+\newcommand{\padic}{$p$\nobreakdash-adic}
+\newcommand{\Ktheory}{$K$\nobreakdash-theory}
+\newcommand{\floor}[1]{\left\lfloor#1\right\rfloor}
+\newcommand{\ceiling}[1]{\left\lceil#1\right\rceil}
+\newcommand{\nup}{\nu_{p}}
+\newcommand{\divides}{\mid}
+\newcommand{\gp}[2]{\genfrac{[}{]}{0pt}{}{#1}{#2}}
+\newcommand{\gpv}[3]{\gp{#1}{#2}_{#3}}
+\newcommand{\ph}[5]{{}_{2}\phi_{1}\left[\genfrac{}{}{0pt}{}{#1,#2}{#3};#4;#5\right]}
+\newcommand{\KsK}{\ensuremath{K_{*}(K)}}
+\newcommand{\KzK}{\ensuremath{K_{0}(K)}}
+\newcommand{\KtK}{\ensuremath{K_{2}(K)}}
+\newcommand{\Kzk}{\ensuremath{K_{0}(k)}}
+\newcommand{\intersection}{\cap}
+\newcommand{\tensor}{\otimes}
+\newcommand{\set}[1]{\ensuremath{\{\,#1\,\}}}
+\newcommand{\Ft}{\tilde{F}}
+\newcommand{\Gt}{\tilde{G}}
+\newcommand{\crt}{Chinese remainder theorem}
+\newcommand{\fr}{\frac}
+\theoremstyle{plain}
+\newtheorem{thm}{Theorem}
+\newtheorem*{rem}{Remark}
+\newtheorem{prop}[equation]{Proposition}
+\newtheorem{cor}{Corollary}
+\newtheorem{lemma}{Lemma}
+\theoremstyle{definition}
+\newtheorem{defn}[equation]{Definition}
+\def\sf{\footnotesize}
+
+\begin{document}
+
+\title{Fibonacci Numbers and the Rogers-Ramanujan Identities} 
+
+\author[George E. Andrews]{George E. Andrews$^{(1)}$}
+
+\begin{abstract}
+In my research on the theory of partitions and related questions, I
+have often used recurrent integer sequences such as the Fibonacci
+numbers to obtain hints about the behavior of certain partition
+generating functions.  In this article, I will illustrate this process
+by studying the relationship between the Fibonacci numbers and a
+sequence of polynomials used by Schur in his second proof of the
+Rogers-Ramanujan identities.  I will try to make clear how generating
+function proofs of Fibonacci identities lead to analogous results for
+Schur's polynomials.  We shall find that this approach helps explain
+why the generalization of Fibonacci formulas to Schur's polynomial is
+sometimes rather intricate.
+\end{abstract}
+
+%\keywords{$K$-theory cooperations, numerical polynomials, Gaussian 
+%polynomials}
+
+%\subjclass[2000]{%
+%Primary:   55S25; % K-theory operations and generalized cohomology operations
+%Secondary: 19L64, % Computations, geometric applications
+%	   11B65. % Binomial coefficients; factorials; q-identities
+%}
+
+%\date{December 2001}
+
+\maketitle
+
+\footnotetext[1]{Partially supported by National Science Foundation Grant DMS9206993.}
+
+\section{Introduction}
+%\setcounter{equation}{1}
+
+Everyone reading these words knows the Fibonacci sequence:
+\begin{equation}
+	F_n = \left\{
+	\begin{array}{lc}
+	0 & \mbox{ if } n=0  \\
+	1 & \mbox{ if } n=1  \\
+	F_{n-1} + F_{n-2} & \mbox{ if } n>1.
+	\end{array} \right.
+\end{equation}
+
+Less well-known is a sequence of polynomials first considered 
+by I. Schur [12]:
+\begin{equation}
+	S_n(q) = S_n = \left\{
+	\begin{array}{lc}
+	0 & \mbox{ if } n=0  \\
+	1 & \mbox{ if } n=1  \\
+	S_{n-1} + q^{n-2} S_{n-2} & \mbox{ if } n>1.
+
+	\end{array} \right.
+\end{equation}
+
+Of course, it is immediately obvious that
+\begin{equation}
+	S_n(1) = F_n.
+\end{equation}
+
+It is, however, less than obvious that
+\begin{eqnarray}
+	S_{n+1}(q) & = & \sum_{0 \leqq 2j \leqq n} q^{j^2} 
+	\left[ \begin{array}{c} n - j \\ j \end{array}\right]
+	\\
+	& = & \sum_{j=-\infty}^{\infty} (-1)^j q^{j(5j+1)/2}
+	\left[ \begin{array}{c} n \\ \lfloor \frac{n-5j}{2}\rfloor 
+	\end{array}\right]  \nonumber
+\end{eqnarray}
+where
+\begin{equation}
+	\left[ \begin{array}{c} A \\ B \end{array}\right]
+	= \begin{cases} \qquad\qquad\qquad\qquad 0 \qquad & \mbox{ if } B < 0
+	\mbox{ or } B > A  \\ 
+	\displaystyle{\frac{(1-q^A)(1 - q^{A-1}) \cdots (1 - q^{A-B+1})}
+	{(1-q^B)(1-q^{B-1})\cdots(1-q)}} & \mbox{ otherwise} \end{cases}
+\end{equation}
+and $\lfloor x \rfloor$ denotes the greatest integer not
+exceeding $x$.  Consult [2] for a full proof of (1.4).
+
+The rational functions of $q$ given in (1.5) are in fact
+polynomials.  They are sometimes called Gaussian polynomials
+and sometimes $q$-binomial coefficients.
+
+If we allow $n \to \infty$ in formula (1.4) then it is easily
+shown that what results is
+\begin{eqnarray}
+	1 & + & \sum_{j=1}^{\infty} \frac{q^{j^2}}{(1-q)(1-q^2)
+	\cdots (1-q^j)}   \\
+	& = & \frac{\displaystyle{\sum_{j=-\infty}^{\infty}}
+	(-1)^j q^{j(5j+1)/2}}{\displaystyle{\prod_{n=1}^{\infty}}
+	(1 - q^n)}   \nonumber    
+	\\
+	& = & \prod_{n=0}^{\infty} \frac{1}{(1 - q^{5n+1})(1-q^{5n+4})}\;,
+	\nonumber
+	\\
+	& & \qquad\qquad\qquad\qquad\qquad\mbox{ (by [4; p. 113])}   \nonumber
+\end{eqnarray}
+the first of the celebrated Rogers-Ramanujan identities.
+
+Schur also considered a sequence slightly different from (1.2):
+\begin{equation}
+	\calt_n(q) = \calt_n = \left\{
+	\begin{array}{cl}
+	0 & \mbox{ if } n = 0  \\
+	1 & \mbox{ if } n = 1  \\
+	\calt_{n-1} + q^{n-1} \calt_{n-2} & \mbox{ if } n > 1.
+	\end{array}  
+	\right.
+\end{equation}
+
+As before in (1.3), now
+\begin{equation}
+	\calt_n (1) = F_n.
+\end{equation}
+
+In analogy with (1.5)
+\begin{eqnarray}
+	\calt_{n+1}(q) & = & \sum_{0\leqq 2j \leqq n} q^{j^2+j}
+	\left[ \begin{array}{c} n - j \\ j \end{array}\right]
+	\\
+	& = & \sum_{j=-\infty}^{\infty} (-1)^j q^{j(5j-3)/2}
+	\left[ \begin{array}{c} n + j \\ \left\lfloor \frac{n+1-5j}{2}
+	\right\rfloor + 1 \end{array}\right]   \nonumber
+\end{eqnarray}
+
+Allowing $n \to \infty$ in (1.9), we obtain the second 
+Rogers-Ramanujan identity
+\begin{eqnarray}
+	1 & + & \sum_{j=1}^{\infty} \frac{q^{j^2+j}}{(1-q)
+	(1-q^2)\cdots (1 - q^j)}
+	\\
+	& = &  \frac{\displaystyle{\sum_{j=-\infty}^{\infty}}
+	(-1)^j q^{j(5j-3)/2}}{\displaystyle{\prod_{n=1}^{\infty}}
+	(1 - q^n)}  \nonumber
+	\\
+	& = &  \prod_{n=0}^{\infty}  \frac{1}{(1-q^{5n+2})(1-q^{5n+3})}
+	\;,   \nonumber
+	\\
+	& & \qquad\qquad\qquad\qquad\qquad \mbox{ (by [4; p. 113])}
+	\nonumber
+\end{eqnarray}
+
+Now it is already obvious in light of (1.3) and (1.8) that
+Schur's polynomial sequences are polynomial- or $q$-analogs
+of the Fibonacci numbers.  Indeed, we see immediately from
+(1.4) and (1.9) that
+\begin{eqnarray}
+	F_{n+1} & = & \sum_{0\leqq 2j \leqq n} 
+	\left( \begin{array}{c} n - j \\ j \end{array}\right)
+	\\
+	& = & \sum_{j=-\infty}^{\infty} (-1)^j
+	\left( \begin{array}{c} n \\ \left\lfloor \frac{n-5j}{2}
+	\right\rfloor + 1 \end{array}\right)  \nonumber
+	\\
+	& = & \sum_{j=-\infty}^{\infty} (-1)^j
+	\left( \begin{array}{c} n + 1 \\ \left\lfloor \frac{n+1-5j}{2}
+	\right\rfloor + 1 \end{array}\right)\,.  \nonumber
+\end{eqnarray}
+
+The first line of (1.11) is quite familiar [14; p. 155]; however
+the next two lines are much less well known.  In fact, they form
+the basis of the extensive study of generalized Fibonacci numbers 
+in [1] (cf. [10], [13]).
+
+Equation (1.11) suggests that interesting information about
+$F_n$ may be obtained from studying $\cals_n$ and $\calt_n$.
+Our object here is the reverse.  Can we systematize a study
+of the generating function for $F_n$ so that we can deduce
+formulas for $\cals_n$ and $\calt_n$ from generating function
+proofs of identities for $F_n$?
+\vskip .25in
+\section{Generating Function Proofs for Fibonacci Identities}
+\vskip .15in
+As is well-known, [14; p. 221]
+\begin{equation}
+	\sum_{n=0}^{\infty} F_n x^n = \frac{x}{1 - x - x^2}\;.
+\end{equation}
+
+Perhaps less widely appreciated is the fact that the vast majority of
+Fibonacci number identities are easily verified using (2.1).  To make
+this point briefly, we have chosen a few results that are usually
+proved by other means (cf. [12; Sec. 10.14], [14; Chs. 5, 8 and 12]).
+However, we should note that the generating function method is
+effectively explored by Koshy ([14; Chs. 18 and 19]).
+
+\begin{equation}
+	F_0 + F_1 + \cdots + F_n = F_{n+2} - 1
+	\qquad \quad \mbox{ [14; Ch.  pp. 228-229];}
+\end{equation}
+
+\begin{equation}
+	F_{n+m} = F_{m-1} F_n + F_m F_{n+1} 
+	\qquad 
+	\mbox{ [14; p. 88, \#6; p. 363, eq. (32.3)];}
+\end{equation}
+
+\begin{equation}
+	F_n = 2^{1-n} \sum_{0\leqq 2j + 1 \leqq n} 
+	\left( \begin{array}{c} n \\ 2j+1 \end{array} \right)
+	5^j	
+	\qquad 
+	\mbox{ [12; eq. (10.14.11), p. 150].}
+\end{equation}
+\vskip .15in
+Proving these results via generating functions will not be as
+illuminating as some other proofs nor as elegant.  However, the ideas
+arising from an awareness of the power of this method will serve us
+well in Section 5.
+
+To treat each identity we consider the generating functions
+for the sequences defined by each side.  If these generating
+functions are identical the identities are proved.
+
+\newpage
+
+Proof of (2.2) following [14; pp. 228--229]:
+\begin{eqnarray}
+	& & \sum_{n=0}^{\infty} (F_0 + F_1 + \cdots + F_n)x^n
+	\\
+	& = & \frac1{1 - x} \sum_{n=0}^{\infty} F_n x^n
+	\nonumber
+	\\
+	& = & \frac{x}{(1-x)(1-x-x^2)}   \nonumber
+	\\
+	& = & \frac{1+x}{1-x-x^2} - \frac1{1-x}  \nonumber
+	\\
+	& = & x^{-2} \left( \frac{x}{1-x-x^2} - x \right)
+	- \frac1{1-x}   \nonumber
+	\\	
+	& = & x^{-2} \sum_{n=2}^{\infty} F_n x^n - \frac1{1-x}
+	\nonumber    
+	\\
+	& = & \sum_{n=0}^{\infty} (F_{n+2} - 1) x^n\,,
+	\nonumber
+\end{eqnarray}
+and (2.2) is proved by comparing the coefficients of $x^n$    
+in the extremes of (2.5).
+
+Proof of (2.3).  Here we follow the treatment due to R. T. Hansen
+[11] (cf. [12; p. 231]).  We fix $m$, then
+
+\begin{eqnarray}
+	& & (1 - x - x^2) \sum_{n=0}^{\infty} F_{n+m} x^n 
+	\\
+	& = & F_m + F_{m+1} x + \sum_{n=2}^{\infty} F_{n+m} x^n
+	\nonumber  \\
+	& & \qquad - F_m x - \sum_{n=1}^{\infty} F_{n+m} x^{n+1}
+	\nonumber  \\
+	& & \qquad\qquad - \sum_{n=0}^{\infty} F_{n+m} x^{n+2}
+	\nonumber  \\
+	& + & F_m + x F_{m-1} + \sum_{n=0}^{\infty} (F_{n+m+2}
+	- F_{n+m+1} - F_{n+m})x^{n+2}
+	\nonumber \\
+	& = & F_m + x F_{m-1}.  \nonumber
+\end{eqnarray}
+Hence
+\begin{eqnarray}
+	\sum_{n=0}^{\infty} F_{n+m} x^n & = & \frac{F_m + xF_{m-1}}
+	{(1 - x - x^2)}   \\
+	& = & \sum_{n=0}^{\infty} F_m F_{n+1} x^n +
+	\sum_{n=0}^{\infty} F_{m-1} F_n x^n.  \nonumber
+\end{eqnarray}
+Consequently, (2.3) follows by comparing coefficients of $x^n$
+on each side of (2.7).
+
+Finally we consider (2.4):
+\begin{eqnarray}
+	& & \sum_{n=0}^{\infty} 2^{1-n} \sum_{0\leqq 2j + 1 \leqq n}
+	\left( \begin{array}{c} n \\ 2j+1 \end{array}\right) 5^j
+	x^n   \\
+	& = & \sum_{n,j\geqq 0} 2^{1-n-2j-1} \left( \begin{array}{c} 
+	n + 2j + 1 \\ 2j+1 \end{array}\right) 5^j x^{n+2j+1}
+	\nonumber   \\
+	& = & \sum_{j \geqq 0} \frac{5^j x^{2j+1}}{4^j} \left(
+	1 - \frac{x}{2}\right)^{-2j-2}   \nonumber
+	\\
+	& = & \frac1{\left(1 - \frac{x}{2}\right)^2} \;
+	\frac{x}{1 - \frac{5x^2}{4(1 - \frac{x}{2})^2}}
+	\nonumber    \\
+	& = & \frac{x}{(1 - \frac{x}{2})^2 - \frac{5x^2}{4}}
+	\nonumber    \\
+	& = & \frac{x}{1 - x - x^2} = \sum_{n=0}^{\infty}
+	F_n x^n   \nonumber
+\end{eqnarray}
+and (2.4) is proved.
+
+As we stated at the beginning of this section, the object of 
+this section was {\it not} to provide the most elegant
+or illuminating proofs of identities (2.2)--(2.4) (indeed, not
+even novel).  Rather we have taken a uniform generating function
+approach in the hope that in Sections 3--5 we can use the work
+in this section as guidance to point us to correct analogs of
+(2.2)--(2.4) for Schur's polynomials.
+
+\section{Schur's Polynomials, a Beginning}
+
+In order to find analogs of (2.1) for $\cals_n$ and $\calt_n$, 
+we need the $q$-analog of the binomial series:
+\begin{equation}
+	\sum_{j=0}^{\infty} \left[ \begin{array}{c}
+	n + j \\ j \end{array}\right] x^j = \frac1{(x;q)_{n+1}}\,,
+	\qquad\quad  \mbox{[4; p. 36, eq. (3.3.7)]}
+\end{equation}
+where
+\begin{equation}
+	(A;q)_n = (1 - A)(1 - Aq) \cdots (1 - Aq^{n-1}\,.
+\end{equation}
+
+Throughout this section $|x| < 1$, $|q| < 1$.
+
+We may now obtain an analog of (2.1) for $\cals_n (q)$.
+
+\begin{thm}
+$\displaystyle{\sum_{n=0}^{\infty} \cals_n (q) x^n = \frac1{1-x-x^2\eta}x}$,
+where $\eta$ is an operator on functions of $x$ defined by
+\[
+	\eta f(x) = f(xq)
+\]
+\end{thm}
+
+\begin{rem}
+For those concerned about the rigor of arguments utilizing the
+algebra of operators, I recommend [6].
+\end{rem}
+
+\begin{proof}
+Let us denote by $\sigma(x)$ the expression on the left side
+of the equation in Theorem 1.  Hence equivalently, we are to
+prove 
+\[
+	(1 - x - x^2 \eta) \sigma(x) = x\,,
+\]
+Now,
+\begin{eqnarray}
+	& & x + \sum_{n=2}^{\infty} \cals_n (q) x^n -
+	\sum_{n=0}^{\infty} \cals_n (q) x^{n+1} -
+	\sum_{n=0}^{\infty} \cals_n (q) x^{n+2} q^n  \nonumber
+	\\
+	& & = x + \sum_{n=2}^{\infty} (\cals_n (q) -\cals_{n-1}(q)
+	- q^{n-2} \cals_{n-2}(q)) x^n
+	\nonumber   \\
+	& & =  x\,,  \nonumber
+\end{eqnarray}
+by (1.2).
+\end{proof}
+
+\begin{lemma}
+$(x + x^2 \eta)^n x = x^{n+1} \displaystyle{\sum_{j=0}^{n}}
+x^j q^{j^2} \left[ \begin{array}{c} n \\ j \end{array}
+\right]$.
+\end{lemma}
+
+\begin{proof}
+For $n=0$, this asserts $x = x$.  Now assume the result for a
+particular $n$; then
+\begin{eqnarray}
+	& & (x + x^2 \eta)^{n+1} x   \nonumber \\
+	& & = (x + x^2 \eta) x^{n+1} \sum_{j=0}^{n} x^j q^{j^2}
+		\left[ \begin{array}{c} n \\ j \end{array}\right]
+		\nonumber    \\
+	& & = x^{n+2} \sum_{j=0}^{n} x^j q^{j^2}
+		\left[ \begin{array}{c} n \\ j \end{array}\right]
+		+ x^{n+3} \sum_{j=0}^{n} x^j q^{j^2 + n + 1 + j}
+		\left[ \begin{array}{c} n \\ j \end{array}\right]
+		\nonumber \\
+	& & = x^{n+2} \left(\sum_{j\geq 0} x^j q^{j^2} \left(
+	\left[\begin{array}{c} n \\ j \end{array} \right] +
+	q^{n+1-j} \left[\begin{array}{c} n \\ j-1 \end{array} \right]
+	\right)\right)  \nonumber 
+	\\
+	& & = x^{n+2} \sum_{j\geqq 0} x^j q^{j^2} 
+	\left[\begin{array}{c} n + 1 \\ j \end{array} \right]\qquad
+	\qquad \mbox{ (by [4; eq. (3.3.3), p. 35]),}  \nonumber
+\end{eqnarray}
+and the result follows by mathematical induction.
+\end{proof}
+
+\begin{cor}
+$\displaystyle{\sum_{n\geqq 0}} \cals_n (q) x^n = 
+\displaystyle{\sum_{j\geqq 0}} \frac{x^{2j+1} q^{j^2}}{(x;q)_{j+1}}$.
+\end{cor}
+
+\begin{proof}
+\begin{eqnarray}
+	& & \sum_{n\geqq 0} \cals_n(q) x^n = \sum_{j=0}^{\infty}
+	\frac{1}{1 - x - x^2 \eta} \; x  \nonumber
+	\\
+	& = & \sum_{n=0}^{\infty} (x + x^2 \eta)^n x  \nonumber
+	\\
+	& = & \sum_{n=0}^{\infty} x^{n+1} \sum_{j=0}^n x^j q^{j^2}
+		\left[\begin{array}{c} n \\ j \end{array} \right]
+		\nonumber
+	\\
+	& = & \sum_{n,j \geqq 0} x^{n+2j+1} q^{j^2}
+		\left[\begin{array}{c} n + j \\ j \end{array} \right]
+		\nonumber
+	\\
+	& = & \sum_{j \geqq 0} \frac{x^{2j+1} q^{j^2}}{(x;q)_{j+1}}
+		\nonumber
+\end{eqnarray}
+(by (3.1)).
+\end{proof}
+
+\begin{cor}
+$\cals_n(q) = \displaystyle{\sum_{j\geqq 0}} q^{j^2} \left[
+\begin{array}{c} n-j-1 \\ j \end{array}\right]$.
+\end{cor}
+
+\begin{proof}
+Extract the coefficient of $x^n$ in the penultimate line in the
+proof of Corollary 1.1.
+\end{proof}
+
+Using precisely this technique, we can prove the following 
+analog of (2.2).
+
+\begin{thm}
+$\cals_{n+2}(q) - 1 = \displaystyle{\sum_{j=0}^{n}} q^j \cals_j(q)$.
+\end{thm}
+
+\begin{proof}
+\begin{eqnarray}
+	& & \sum_{n\geqq 0} (\cals_{n+2}(q) - 1) x^n  \\
+	& & = x^{-2}\left(\sum_{n=0}^{\infty} \cals_n(q)x^n - x\right)
+	- \frac1{1 - x}   \nonumber
+	\\
+	& & = x^{-2} \frac1{1 - x - x^2\eta} \;x - \frac{x^{-1}}{1-x}
+	\nonumber
+	\\	
+	& & = \frac1{1-x} (-x^{-2} (1 - x - x^2 \eta) + x^{-2}
+	- x^{-1}) \frac1{1 - x - x^2 \eta} \;x  \nonumber
+	\\
+	& & = \frac1{1 - x} \;\eta\; \frac1{1 - x - x^2 \eta}\; x
+	\nonumber
+	\\
+	& & = \frac1{1 - x} \sum_{j \geqq 0} \cals_j(q) (xq)^j
+	\nonumber
+	\\
+	& & = \sum_{n=0}^{\infty} \left( \sum_{j=0}^n q^j \cals_j
+	(q)\right) x^n\,,  \nonumber
+\end{eqnarray}
+and extracting the coefficients of $x^n$ in the above extremes
+we obtain Theorem 3.
+\end{proof}
+
+\section{Extending (2.3) is harder}
+
+If we try to follow the proof of (2.3) directly, we find troublesome powers of $q$ (which vanish when $q = 1$) making a direct generalization of (2.3) impossible.  In order for us to overcome this difficulty we must, in fact, generalize $\cals_n(q)$:
+\begin{equation}
+	\cals_n (t,q) = \begin{cases}
+	0 & \mbox{ if } n = 0 \\
+	1 & \mbox{ if } n = 1 \\
+	\cals_{n-1}(t,q) + tq^{n-2} \cals_{n-2}(t,q) & \mbox{ for }
+	n > 1.
+	\end{cases}
+\end{equation}
+
+Now for $m \geqq 0$
+\begin{eqnarray}
+	& & (1 - x - tx^2 q^m \eta) \sum_{n=0}^{\infty} 
+		\cals_{n+m} (t,q) x^n \\
+	& & = \cals_m(t,q) + x \cals_{m+1}(t,q) + \sum_{n=2}^{\infty}
+		\cals_{n+m}(t,q)x^n  \nonumber   \\
+	& & \qquad\quad - x\,\cals_m(t,q) - \sum_{n=1}^{\infty}
+		\cals_{n+m} (t,q) x^{n+1}   \nonumber    \\
+	& & \qquad\qquad\qquad - \sum_{n=0}^{\infty} \cals_{n+m}
+		(t,q) tq^{m+n} x^{n+2}     \nonumber     \\
+	& & = \cals_m(t,q) + x (\cals_{m+1}(t,q) - \cals_m(t,q))
+		\nonumber     \\
+	& & \qquad\quad + \sum_{n=2}^{\infty} (\cals_{n+m}(t,q) -
+		\cals_{n+m-1}(t,q) - tq^{m+n-2} \cals_{n+m-2}(t,q))x^n
+		\nonumber     \\
+	& & = \begin{cases}  x & \mbox{ if } m = 0   \\
+		\cals_m(t,q) + xtq^{m-1} \cals_{m-1}(t,q) & 
+			\mbox{ if } m > 0.
+	\end{cases}	    \nonumber
+\end{eqnarray}
+
+Thus
+\begin{equation}
+	\sum_{n=0}^{\infty} \cals_n (t,q)x^n = 
+			\frac1{1-x-tx^2\eta} x\,,
+\end{equation}
+and
+\begin{equation}
+	\sum_{n=0}^{\infty} \cals_{n+1} (t/q,q)x^n = 
+			\frac1{1-x-tx^2\eta} \,.
+\end{equation}
+
+So by (4.2) with $t$ replaced by $t/q^m$, and $m > 0$,
+\begin{eqnarray}
+	& & \sum_{n=0}^{\infty} \cals_{n+m} (tq^{-m}) x^n  \\
+	& & =  \frac1{1 - x - tx^2 \eta} (\cals_m(tq^{-m},q) +
+		xtq^{-1} \cals_{m-1}(tq^{-m},q))     \nonumber
+	\\
+	& & = \cals_m(tq^{-m},q) \sum_{n=0}^{\infty} \cals_{n+1}
+		(t/q,q)x^n   \nonumber
+	\\	
+	& & \qquad\quad + tq^{-1} \cals_{m-1}(tq^{-m},q)
+		\sum_{n=0}^{\infty} \cals_n(t,q)x^n.  \nonumber
+\end{eqnarray}
+We now replace $t$ by $tq^m$ on both sides of (4.5) and compare
+coefficients of $x^n$ to obtain:
+\begin{thm}
+For $n \geqq 0$, $m > 0$,
+\begin{eqnarray}
+	\cals_{n+m}(t,q) & = & \cals_m(t,q)\cals_{n+1}(tq^{m-1},q)
+	\\
+	& + & tq^{m-1}\cals_{m-1}(t,q) \cals_n (tq^m,q)
+	\nonumber
+\end{eqnarray}
+\end{thm}
+
+Consequently (4.6) is the desired generalization of (2.3).
+Note that the new variable $t$ was an essential addition.
+If it had not been included, it would not have been possible
+to transform the factor
+\[
+	(1 - x - t\, x^2 \,q^m \,\eta)
+\]
+into
+\[
+	(1 - x - t\, x^2 \,\eta),
+\]
+which formed the essential step in obtaining (4.6).
+
+Results essentially equivalent to Theorem 3 we first proved by
+MacMahon [15; pp. 43--46].  Related investigations were given by
+Andrews, Knopfmacher and Paule [5], Berkovich and Paule [7], and
+Garrett [9].
+
+\section{Extending (2.4) is bizarre}
+
+We have chosen to obtain a $q$-analog of (2.4) precisely because there
+is currently no $q$-analog of (2.4) in the literature.  By using the
+operator generating function technique we will see precisely how
+complications arise as we uncover the $q$-analog.
+
+To this end we require some definitions and another lemma.
+
+\begin{defn}
+By $C_+(n)$ we denote the set of the conjugates of all
+the partitions with distinct parts each $\leqq n$.
+\end{defn}
+
+So $C_+(3) = \{3+2+1,2+2+1,2+1+1,2+1,1+1+1,1+1,1,\phi\}$ because
+these are the conjugates of $3+2+1,3+2,3+1,2+1,3,2,1,\phi$, the
+partitions with distinct parts each $\leqq 3$.
+
+\begin{defn}
+By $C_0(n)$ we denote the set of partitions in $C_+(n)$ to
+which have been added $0$'s so that there are exactly $n + 1$
+parts in each partition.
+\end{defn}
+
+Thus $C_0(3) = \{3+2+1+0,2+2+1+0,2+1+1+0,2+1+0+0,1+1+1+0,1+1+0+0,
+1+0+0+0,0+0+0+0\}$.
+
+\begin{lemma}
+$\eta^r(f(x)(A+\eta))^m g(x)$
+\[
+	= \sum_{\sf{\begin{array}{c}
+	\pi \in C_0(m)  \\  \pi = \{\pi_1,\pi_2,\dots,\pi_{m+1}\}
+	\\ \pi_1 \geqq \pi_2 \geqq \cdots \geqq \pi_{m+1} = 0
+	\end{array}}}
+	A^{m-\pi_1} g(xq^{\pi_1 +r})f(xq^{\pi_2 + r}) \cdots
+	f(xq^{\pi_{m+1}+r})
+\]
+\end{lemma}
+
+\begin{proof}
+When $m=0$, the Lemma asserts $g(xq^r) = g(xq^r)$.  Now assume
+that the result is true for a particular $m$.  Then
+\begin{eqnarray}
+	& & \eta^r (f(x) (A + \eta))^{m+1} g(x)  \nonumber  \\
+	& & = \eta^r f(x) (A + \eta)(f(x)(A+\eta))^m g(x)  \nonumber
+	\\
+	& & = f(xq^r)(A\eta^r + \eta^{r+1})(f(x)(A+\eta))^m g(x)
+	\nonumber 
+	\\
+	& & = f(xq^r) \hbox{\hskip-.35in}\sum_{\sf\begin{array}{c}
+	\pi \in C_0(m )  \\  \pi = \{\pi_1,\pi_2,\dots,\pi_{m+1}\}
+	\\ \pi_1 \geqq \cdots \geqq \pi_{m+1} = 0
+	\end{array}} \hbox{\hskip-.35in}
+	A^{m+1-\pi_1} g(xq^{\pi_1 + r})f(xq^{\pi_2+ r})
+	\cdots f(xq^{\pi_{m+1}+r})   \nonumber
+	\\
+	& & + f(xq^r) \hbox{\hskip-.55in}\sum_{\sf\begin{array}{c}
+	\pi \in C_0(m)  \\  \pi = \{\pi_1,\pi_2,\dots,\pi_{m+1}\}
+	\\ \pi_1 \geqq \pi_2 \geqq \cdots \geqq \pi_{m+1} = 0
+	\end{array}} {\hbox{\hskip-.6in}}A^{(m+1)-(\pi_1+1)} g(xq^{\pi_1+1+r})
+	f(xq^{\pi_2+1+r}) \cdots f(xq^{\pi_{m+1}+1+r})
+	\nonumber
+	\\
+	& & = \hbox{\hskip-.35in}\sum_{\sf\begin{array}{c}
+	\pi \in C_0(m+1)  \\  \pi = \{\pi_1,\pi_2,\dots,\pi_{m+2}\}
+	\\ \pi_1 \geqq \pi_2 \geqq \cdots \geqq \pi_{m+2} = 0
+	\end{array}} \hbox{\hskip-.35in}A^{m+1-\pi_1} g(xq^{\pi_1+r})
+	f(xq^{\pi_2+r})
+	\cdots f(xq^{\pi_{m+2}+r})\,,  \nonumber
+\end{eqnarray}
+where the first sum in the penultimate line covers those elements
+of $C_0(m+1)$ where $\pi_{m+1} = 0$ and the second sum treats
+those elements where $\pi_{m+1} > 0$ (in which case $\pi_{m+1}=1$).
+
+The Lemma follows by mathematical induction.
+\end{proof}
+
+We are now prepared to establish the very unlikely $q$-analog of
+(2.4).
+
+\begin{thm}
+For $n > 0$
+\begin{eqnarray}
+	\cals_n(q) & = & \frac{n}{2^{n-1}} + \frac1{2^{n-1}} 
+	\sum_{1\leqq 2m \leqq n} \sum_{\sf\begin{array}{c}
+	r_1,\dots,r_m \geqq 0 \\ r_1 + \dots + r_m = n-2m \end{array}}
+	\nonumber   \\
+	& & \times (r_1 + 1)(r_2 + 1) \dots (r_m + 1)(n - 2m - r_1 - \dots -
+	r_m)  \nonumber
+	\\
+	& \times & \hbox{\hskip-.35in}\sum_{\sf\begin{array}{c} 
+	\pi \in C_0(m) \\
+	\pi = \{\pi_1,\dots,\pi_{m+1}\} \\ \pi_1 \geqq \dots \geqq
+	\pi_{m+1} = 0 \end{array}} \hbox{\hskip-.35in}
+	4^{\pi_1} q^{(r_1+1)\pi_1+(r_2+2)\pi_2 + (r_3+2)\pi_3 +
+	\dots + (r_m + 2)\pi_r}\;.  \nonumber
+\end{eqnarray}
+\end{thm}
+
+\begin{proof}
+Returning to the proof of Theorem 1, we recall
+\[
+	(1 - x - x^2 \eta) \sigma(x) = x \,.
+\]
+Hence 
+\[
+	\left(\left(1 - \frac{x}{2}\right)^2 - x^2 \left(\fr{1}{4} 
+	+ \eta\right)\right) \sigma(x) = x.
+\]
+or 
+\[
+	\left(1 - \left(\frac{x}{1 - \frac{x}{2}}\right)^2 \left(
+	\frac{1}{4} + \eta\right)\right) \sigma(x)
+	= \frac{x}{\left(1 - \frac{x}{2}\right)^2}.
+\]
+Consequently
+\[
+	\sum_{n \geqq 0}  \cals_n(q) x^n = 
+	\frac{1}{\left(1 - \left(\frac{x}{1-\frac{x}{2}}\right)^2
+	\left(\frac{1}{4} +\eta\right)\right)} \quad
+	\frac{x}{\left(1 - \frac{x}{2}\right)^2}\;,
+\]
+which is precisely the $q$-analog of what was dealt with in
+the proof of (2.4).
+
+Hence
+\begin{eqnarray}
+	& & \sum_{n\geqq 0} \cals_n(q) x^n  \nonumber   \\
+	& & = \sum_{m=0}^{\infty} \left(\frac{x^2}{\left(1 - \frac{x}{2}
+	\right)^2} \left( \frac14 + \eta\right)\right)^m \frac{x}{\left(
+	1 - \frac{x}{2}\right)^2}  \nonumber
+	\\
+	& & = \frac{x}{\left(1 - \frac{x}{2}\right)^2} +
+	\sum_{m=1}^{\infty} {\hbox{\hskip-.35in}}
+	\sum_{\sf\begin{array}{c} \pi \in C_0(m) \\
+	\pi = \{\pi_1,\dots,\pi_{m+1}\}  \\ \pi_1 \geqq \cdots \geqq
+	\pi_{m+1} = 0 \end{array}} {\hbox{\hskip-.5in}}
+	\left(\frac14\right)^{m-\pi_1}
+	\frac{xq^{\pi_1}}{\left(1 - \frac{xq^{\pi_1}}{2}\right)^2}
+	\frac{x^{2m} q^{2(\pi_2+\cdots + \pi_{m+1})}}{\left(1 -
+	\frac{xq^{\pi_1}}{2}\right)^2 \cdots \left(1 - \frac{xq^{\pi_{m+1}}}
+	{2}\right)^2}  \nonumber
+	\\
+	& & = \sum_{n=0}^{\infty} \frac{nx^n}{2^{n-1}} + 
+	\sum_{m=1}^{\infty}
+	{\hbox{\hskip-.35in}}\sum_{\sf\begin{array}{c} \pi \in C_0(m) \\
+	\pi = \{\pi_1,\dots,\pi_{m+1}\}  \\ \pi_1 \geqq \cdots \geqq
+	\pi_{m+1} = 0 \end{array}} {\hbox{\hskip-.5in}}
+	\left(\frac14\right)^{m-\pi_1}
+	x^{2m+1}q^{\pi_1+2(\pi_2+\cdots+\pi_{m+1})}
+	\nonumber
+	\\
+	& & \quad \times \sum_{r_1,r_2,\dots,r_{m+1}\geqq 0}
+	(r_1 + 1)\cdots (r_{m+1}+1)\left(\frac{x}{2}\right)^{r_1
+	+ r_2 + \cdots + r_{m+1}}q^{r_1\pi_1+\cdots + r_{m+1}\pi_{m+1}}
+	\nonumber
+\end{eqnarray} 
+Therefore
+\begin{eqnarray}
+	& & \cals_n(q) = \frac{n}{2^{n-1}} + \sum_{m=1}^{\left\lfloor
+	\frac{n-1}{2}\right\rfloor} \hbox{\hskip-.5in}
+	\sum_{\sf\begin{array}{c} 	r_1,\dots,r_{m+1}\geqq 0  \\
+	r_1+r_2+\dots + r_{m+1}=n-2m-1 \end{array}}\hbox{\hskip-.8in}
+	2^{1-n} (r_1+1)(r_2+1) \cdots (r_{m+1}+1)  \nonumber 
+	\\
+	& &  \sum_{\sf\begin{array}{c} \pi \in C_0(m) 
+	\pi = \{\pi_1,\dots,\pi_{m+1}\}  \\ \pi_1 \geqq \cdots \geqq
+	\pi_{m+1} = 0 \end{array}} 4^{\pi_1} q^{(r_1+1)\pi_1+(r_2+2)
+	\pi_2 + \cdots + (r_{m+1}+2)\pi_{r+1}}   \nonumber
+\end{eqnarray}
+\begin{eqnarray}
+	& & = \frac{n}{2^{n-1}} + \sum_{m=1}^{\left\lfloor
+	\frac{n-1}{2}\right\rfloor} \hbox{\hskip-.3in}\sum_{\sf\begin{array}{c}
+	r_1,\dots,r_m \geqq 0 \\ r_1 + \cdots + r_m \leqq n -2m
+	\end{array}} \hbox{\hskip-.5in}2^{1-n} (r_1 + 1)(r_2+1)
+	\cdots(r_m+1) \nonumber 
+	\\
+	& & \qquad \times (n-2m-r_1 -\cdots-r_m)  \nonumber
+	\\
+	& & \quad \times \hbox{\hskip-.5in}\sum_{\sf\begin{array}{c} 
+	\pi \in C_0(m) \\
+	\pi = \{\pi_1,\dots,\pi_{m+1}\}  \\ \pi_1 \geqq \cdots \geqq
+	\pi_{m+1} = 0
+	\end{array}}\hbox{\hskip-.5in}
+	4^{\pi_1} q^{(r_1 + 1) \pi_1 + (r_2 + 2)\pi_2 +
+	(r_3+2)\pi_3 + \cdots + (r_m+1)\pi_m}  \nonumber
+\end{eqnarray}
+which proves Theorem 5.
+\end{proof}
+
+\section{Conclusion}
+
+I hope that Theorem 1 (the extension of (2.1)), Corollary 1 
+(the extension of the first line of (1.11)), Theorem 2 (the
+extension of (2.2)), Theorem 3 (the extension of (2.3)), and 
+Theorem 4 (the very unlikely extension of (2.4)) have shown the
+richness and the power of using operator methods to study
+Schur's polynomials as extensions (or $q$-analogs) of Fibonacci
+numbers.
+
+There are other identities which do not seem to lend themselves
+to our operator methods.  For example, it is not too difficult
+to generalize
+\begin{equation}
+	\sum_{j=0}^n \left( \begin{array}{c}  n \\ j \end{array}
+	\right) F_{n-j} = F_{2n}
+\end{equation}
+to
+\begin{equation}
+	\sum_{j=0}^n \left[ \begin{array}{c}  n \\ j \end{array}
+	\right] t^j q^{j(n-1)} \cals_{n-j}(t,q) = \cals_{2n}(t,q).
+\end{equation}
+
+Indeed the combinatorics of (5.2) were discussed (at least when $t =
+1$) in [3; p. 144].  However, it would be of interest to prove (5.2)
+using the operator methods presented here.  The method of Church and
+Bicknell [8] (cf. [14; pp. 232--234]) would seem to suggest a natural
+method to emulate, but, so far, this path has failed for me.
+
+In furtherance of such a project, I would note that one may
+prove in the same way Corollary 2 is proved that
+\begin{equation}
+	\cals_n(t,q) = \sum_{0\leqq 2j\leqq n-1} q^{j^2} t^j
+	\left[ \begin{array}{c} n - 1 - j \\ j \end{array}
+	\right]\,.
+\end{equation}
+From (6.3) one may prove (6.2) by comparing coefficients of $t^j$
+on both sides and invoking the $q$-analog of the Chu-Vandermonde
+summation [4; eq. (3.3.10), p. 37].
+
+
+\begin{thebibliography}{99}
+
+\item G. E. Andrews, Some formulae for the Fibonacci sequence 
+	with generalizations, Fibonacci Quart., 7 (1969), 113--130.
+	
+\item G. E. Andrews, A polynomial identity which implies the 
+	Rogers-Ramanujan identities, Scripta Math., 28 (1970),
+	297--305.
+
+\item G. E. Andrews, Combinatorial analysis and Fibonacci
+	numbers, Fibonacci Quart., 12 (1974), 141--146.
+
+\item G. E. Andrews, The Theory of Partitions, Encycl. Math.
+	and Its Appl., vol. 2, G.-C. Rota ed., Addison-Wesley,
+	Reading, 1976 (Reissued:  Cambridge University Press,
+	Cambridge 1998).
+
+\item G. E. Andrews, A. Knopfmacher and P. Paule, An infinite
+	family of Engel expansions of Rogers-Ramanujan type, Adv. 
+	in Appl. Math., 25 (2000), 273--280.
+
+\item L. Berg, Introduction to the Operational Calculus, North
+	Holland, Amsterdam, 1967.
+
+\item A. Berkovich and P. Paule, Variants of the Andrews-Gordon
+	identities, to appear.
+	
+\item C. A. Church and M. Bicknell, Exponential generating functions
+	for Fibonacci identities, Fibonacci Quarterly, 11 (1973),
+	275--281.
+
+\item K. C. Garrett, Lattice Paths and Generalized Rogers-Ramanujan
+	type identities, Ph.D. thesis, University of Minnesota, 2001.
+	
+\item H. Gupta, The Andrews formula for Fibonacci numbers, Fibonacci
+	Quart., 16 (1978), 552--555.
+	
+\item R. T. Hansen, Generating identities for Fibonacci and Lucas
+	triples, Fibonacci Quart., 10 (1972), 571--578.
+	
+\item G. H. Hardy and E. M. Wright, An Introduction to the Theory
+	of Numbers, 5th ed., Oxford University Press, Oxford, 1995.
+	
+\item M. D. Hirschhorn, The Andrews formula for Fibonacci numbers,
+	Fibonacci Quart., 19 (1981), 1--2.
+
+\item T. Koshy, Fibonacci and Lucas Numbers With Applications,
+	John Wiley, New York, 2001.
+
+\item P. A. MacMahon, Combinatory Analysis, Vol. II, Cambridge
+	University Press, Cambridge, 1918 (Reissued:  Chelsea
+	(AMS), New York, 1984.
+	
+\item I. Schur, Ein Beitrag zur additiven Zahlentheorie, Sitzungsber., 
+	Akad. Wissensch. Berlin, Phys.-Math. Klasse, (1917), 
+	pp. 302--321.
+\end{thebibliography}
+
+\vskip .3in
+
+\noindent The Pennsylvania State University  \newline
+University Park, PA  16802  \newline
+andrews@math.psu.edu
+
+\end{document}
+
+
+
+
+
+
+
+
+

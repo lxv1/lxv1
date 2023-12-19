@@ -1,0 +1,382 @@
+BODY  {
+	BACKGROUND-COLOR : #FFFFFF;
+	COLOR : #000000;
+	FONT-WEIGHT : normal;
+}
+
+A:link  {
+	TEXT-DECORATION : underline;
+	color : #000099;
+}
+
+A:visited  {
+	COLOR : #0000ff;
+	TEXT-DECORATION : underline;
+}
+
+A:active  {
+	COLOR : #9999ff;
+}
+
+A:hover  {
+	COLOR : Gray;
+	text-decoration : none;
+}
+
+#sublink  {
+	FONT-FAMILY : Arial, Helvetica, Sans-serif;
+	FONT-SIZE : x-small;
+}
+
+#toplink  {
+	FONT-FAMILY : Arial, Helvetica, Sans-serif;
+	FONT-SIZE : medium;
+}
+
+#leftnavbarplus  {
+	color : #FFFFFF;
+	hover : #808080;
+	font-weight : bold;
+	text-decoration : none;
+}
+
+.desc  {
+	text-align : center;
+	font-family : arial;
+	font-size : 12px;
+	color : #FFFFFF;
+	position : absolute;
+	top : 220px;
+	left : 40px;
+	width : 400px;
+	visibility : hidden;
+	z-index : 0;
+}
+
+.letterbody  {
+	color : #000000;
+	font-style : normal;
+	font-family : Times New Roman;
+	font-size : 16px;
+}
+
+.letterwritername  {
+	font-weight : bold;
+	font-family : Times New Roman;
+	font-size : 16px;
+	color : #000000;
+	font-style : normal;
+	padding-left : 16px;
+}
+
+.letterwritertitle  {
+	font-size : 16px;
+	font-family : Times New Roman;
+	font-weight : bold;
+	font-style : normal;
+	color : #000000;
+	padding-left : 16px;
+}
+
+.letterheadline  {
+	color : #003399;
+	font-family : Times New Roman;
+	font-weight : bold;
+	font-size : 16px;
+	font-style : normal;
+}
+
+.headline  {
+	font-style : normal;
+	font-weight : normal;
+	font-family : Times New Roman;
+	font-size : 34px;
+	color : #000000;
+}
+
+.publicationdate  {
+	font-family : Verdana, Arial, Sans-serif;
+	color : #666666;
+	font-weight : bold;
+	font-style : normal;
+	font-size : 13px;
+}
+
+.publicationdatebracket  {
+	color : #CCCCCC;
+	font-family : Verdana, Arial, Sans-serif;
+	font-weight : bold;
+	font-style : normal;
+	font-size : 15px;
+}
+
+.cops  {
+	color : #000000;
+	list-style-type : square;
+	list-style-position : outside;
+	list-style : square;
+	font-style : normal;
+	font-family : Times New Roman;
+	font-size : 16px;
+}
+
+.copsfooter  {
+	font-weight : normal;
+	font-style : normal;
+	color : #000000;
+	font-family : Times New Roman;
+	font-size : 16px;
+}
+
+.dropdeck  {
+	color : #003399;
+	font-family : Times New Roman;
+	font-size : 24px;
+}
+
+.story  {
+	font-size : 16px;
+	font-family : Times New Roman, Times;
+	color : Black;
+}
+
+.columntagline  {
+	font-family : Verdana,Arial,Sans-serif;
+	color : #000000;
+	font-size : 13px;
+}
+
+.myopinion  {
+	color : #003399;
+	font-size : 18px;
+	font-weight : bold;
+	font-style : normal;
+	font-family : Times New Roman;
+}
+
+.byline  {
+	color : #000000;
+	font-family : Times New Roman;
+	font-style : normal;
+	font-weight : bold;
+	font-size : 16px;
+}
+
+.collegianwriter  {
+	font-family : Verdana,Arial,Sans-Serif;
+	color : #000000;
+	font-weight : normal;
+	font-style : normal;
+	font-size : 13px;
+}
+
+.tagline  {
+	text-align : right;
+	color : #000000;
+	font-size : 16px;
+}
+
+.clarification  {
+	font-size : 12px;
+	font-family : Verdana,Arial,Serif;
+	font-style : normal;
+	color : #808080;
+	margin-left : 20px;
+	margin-right : 20px;
+}
+
+.indexheadline  {
+	font-family : Verdana,Arial,Sans-Serif;
+	font-size : 22px;
+}
+
+.firstindexheadline  {
+	font-size : 28px;
+	font-family : Verdana, Arial,Sans-Serif;
+}
+
+.listnoindent  {
+	list-style-type : square;
+	list-style-position : inside;
+	list-style : inside;
+}
+
+.editorsnote  {
+	font-style : italic;
+	color : #000000;
+	font-family : Times New Roman, Times;
+	font-size : 16px;
+}
+
+.small  {
+	font-family : Verdana,Arial,Sans-Serif;
+	color : #000000;
+	font-size : 15px;
+}
+
+.leftlink  {
+	font-size : 13px;
+	color : #FFFFFF;
+	font-family : Verdana,Arial,Sans-Serif;
+	font-weight : bold;
+}
+
+.leftlinkhere  {
+	color : #999999;
+	font-size : 13px;
+	font-family : Verdana,Arial,Sans-Serif;
+	text-decoration : none;
+	font-weight : bold;
+}
+
+.medium  {
+	font-family : Verdana,Arial,Sans-Serif;
+	font-size : 17px;
+	color : #000000;
+}
+
+.large  {
+	font-family : Verdana,Arial,Sans-Serif;
+	color : #000000;
+	font-size : 19px;
+}
+
+.text  {
+	font-family : Times New Roman,Times;
+	color : Black;
+	font-size : 16px;
+}
+
+.featurephotocutline  {
+	font-size : 15px;
+	color : #0000FF;
+	font-family : Times New Roman,Times;
+}
+
+.featurephotocutline1st  {
+	font-size : 18px;
+	font-family : Times New Roman,Times;
+	font-weight : bold;
+	color : #0000FF;
+}
+
+.cutline  {
+	font-size : 16px;
+	font-family : Times New Roman,Times;
+	color : #003399;
+}
+
+.webeditorsnote  {
+	color : #000000;
+	font-family : Verdana,Arial;
+	font-size : 10px;
+	font-style : normal;
+	margin-left : 20px;
+	margin-right : 20px;
+}
+
+.smaller  {
+	font-size : 13px;
+	font-family : Verdana,Arial,Sans-Serif;
+	color : #000000;
+}
+
+.sponsorLink  {
+	font-size : 10px;
+	font-family : Verdana,Arial,Sans-Serif;
+	color : #000000;
+}
+
+.smallest  {
+	font-size : 11px;
+	font-family : Verdana,Arial,Sans-Serif;
+	color : #000000;
+}
+
+.xsmalltext  {
+	font-size : 6pt;
+	font-family : Verdana,Arial,Serif;
+	color : #000000;
+}
+
+.larger  {
+	font-size : 21px;
+	font-family : Verdana,Arial,Sans-Serif;
+	color : #000000;
+}
+
+.largest  {
+	font-size : 23px;
+	font-family : Verdana,Arial,Sans-Serif;
+	color : #000000;
+}
+
+.jumbo  {
+	font-size : 25px;
+	font-family : Verdana,Arial,Sans-Serif;
+	color : #000000;
+}
+
+.subdeck  {
+	color : #003399;
+	font-family : Times New Roman;
+	font-size : 18px;
+}
+
+.year  {
+	font-family : Verdana,Arial,Sans-Serif;
+	font-size : 16px;
+	font-weight : bold;
+}
+
+.Advert403	{
+	background-color: #E6E6E6;
+  	width: 403px;
+  	clear: both;
+   	font-size: 8pt;
+   	font-family: sans-serif;
+   	font-weight: lighter;
+   	font-style: normal;
+	text-align: center;
+   	border: 1px groove ;   
+	float: none;
+}
+
+.Advert230	{
+	background-color: #E6E6E6;
+  	width: 230px;
+  	clear: both;
+   	font-size: 8pt;
+   	font-family: sans-serif;
+   	font-weight: lighter;
+   	font-style: normal;
+	text-align: center;
+   	border: 1px groove ;   
+	float: none;
+}
+
+.Advert468	{
+	background-color: #E6E6E6;
+  	width: 468px;
+  	clear: both;
+   	font-size: 8pt;
+   	font-family: sans-serif;
+   	font-weight: lighter;
+   	font-style: normal;
+   	border: 1px groove ; 
+	text-align: center;  
+	float: none;
+}
+
+.AdvertWrapper	{
+   background-color: #E6E6E6;
+   clear: both;
+   font-size: 9pt;
+   font-family: sans-serif;
+   font-weight: bold;
+   font-style: normal;
+   border: 1px none;   
+   float: none;
+   color: #333300;
+}
+

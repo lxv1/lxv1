@@ -1,0 +1,618 @@
+<html><head>
+<meta name="generator" content="HTML Tidy, see www.w3.org"><title>CentreDaily.com - Your State College Everything Guide</title>
+<link rel="stylesheet" type="text/css" href="cdt_files/global.css"><script type="text/javascript" language="javascript">
+
+_krdDartOrd = new Date().getTime();
+
+_krdDartInc = 0;
+var navReady = false;
+var toolsReady = false;var onLoadScript="";function Browser() {var b=navigator.appName;
+if (b=="Netscape") this.b="ns";
+else if ((b=="Opera") || (navigator.userAgent.indexOf("Opera")>0)) this.b = "opera";
+else if (b=="Microsoft Internet Explorer") this.b="ie";
+// I have disabled the following line, but something similar might be useful later,
+// but launching a popup window is more polite than this alert.
+//if (!b) alert(''Unidentified browser./nThis browser is not supported,'');
+this.version=navigator.appVersion;
+this.v=parseInt(this.version);
+this.ns=(this.b=="ns" && this.v>=4);
+this.ns4=(this.b=="ns" && this.v==4);
+this.ns6=(this.b=="ns" && this.v==5);
+this.ie=(this.b=="ie" && this.v>=4);
+this.ie4=(this.version.indexOf('MSIE 4')>0);
+this.ie4up = (this.ie && this.v>= 4);
+this.ns5up = (this.ns && this.v>= 5);
+this.ie5=(this.version.indexOf('MSIE 5')>0);
+this.ie5up = (this.ie5);
+this.ie55=(this.version.indexOf('MSIE 5.5')>0);
+this.opera=(this.b=="opera");
+this.def=(this.ie||this.dom);var ua=navigator.userAgent.toLowerCase();
+this.mac = (ua.indexOf("mac")!=-1);if (ua.indexOf("win")>-1) this.platform="win32";
+else if (ua.indexOf("mac")>-1) this.platform="mac";
+else this.platform="other";
+}
+var is = new Browser();
+// tiny extra css. these are ONLY used by old browsers.
+// VAST majority of users will NEVER request these files.
+// Even NS4 is around 7% of market and falling
+if (is.ns4 && is.mac==false) {
+var css = "<LINK rel='stylesheet' type='text/css' href='/css/palette/blue_dark_standard_cool/en/browser/ns4.css'>\n";
+document.write(css);
+}
+if (((is.ns4)||(is.ie4))&&( is.mac)) {
+var css = "<LINK rel='stylesheet' type='text/css' href='/css/palette/blue_dark_standard_cool/en/browser/ns4mac.css'>\n";
+document.write(css);
+}
+if (is.ie4 && is.mac==false) {
+var css = "<LINK rel='stylesheet' type='text/css' href='/css/palette/blue_dark_standard_cool/en/browser/ie4.css'>\n";
+document.write(css);
+}
+
+function LayerObject(divId) {
+this.name = divId;
+if (is.ns4) this.ob = eval("document." +divId);
+else if (is.ie4) this.ob = document.all(divId);
+else this.ob = document.getElementById(divId);
+this.x = 0;
+this.y = 0;
+this.width = this.getWidth();
+this.height = this.getHeight();
+}
+LayerObject.prototype.px = (is.version>=5)?"px":"";
+LayerObject.prototype.hideSyntax = (is.ns4)? "hide":"hidden";
+LayerObject.prototype.showSyntax = "visible";// NS4::  Unbelievable, but document.layername.document.imgname works for img-in-layer-in document
+// and it works for img in layer in table in document.
+// but it doesnt work for img in layer in table in table in document.
+// Maybe a workaround exists, but it seems unlikely at this point.
+// The images MUST therefore be nested only one deep....
+LayerObject.prototype.getInlineLeft = function() {
+if (is.ns4) return this.ob.pageX;
+else if ((is.ie) || (is.opera)) {
+var elem = this.ob;
+var xPos = 0;
+var yPos = 0;
+while (elem.offsetParent != null) {
+xPos += elem.offsetLeft;
+yPos += elem.offsetTop;
+elem = elem.offsetParent;
+}
+if (is.mac) xPos += 2;
+return xPos;
+}
+else return (this.ob.offsetLeft + document.body.offsetLeft);
+}
+
+LayerObject.prototype.getInlineTop = function() {
+if (is.ns4) return this.ob.pageY;
+else if ((is.ie) || (is.opera)) {
+var elem = this.ob;
+var yPos=0;
+while (elem.offsetParent != null) {
+yPos += elem.offsetTop;
+elem = elem.offsetParent;
+}
+if (is.mac) yPos += 2;
+return yPos;
+}
+else return (this.ob.offsetTop+ document.body.offsetTop);
+}
+
+//getWidth and getHeight works for both inline and positioned divs.
+LayerObject.prototype.getWidth = function () {
+if (is.ns4) return this.ob.clip.width;
+else if (is.opera) return this.ob.style.pixelWidth;
+else return this.ob.offsetWidth;
+}
+LayerObject.prototype.getHeight = function () {
+if (is.ns4) return this.ob.clip.height;
+else if (is.opera) return this.ob.style.pixelHeight;
+else return this.ob.offsetHeight;
+}
+LayerObject.prototype.hide = function() {
+if (is.ns4) this.ob.visibility = this.hideSyntax;
+else this.ob.style.visibility = this.hideSyntax;
+}
+LayerObject.prototype.show = function() {
+if (is.ns4) this.ob.visibility = this.showSyntax;
+else this.ob.style.visibility = this.showSyntax;
+}
+LayerObject.prototype.moveLayerTo = function(toX, toY) {
+this.x = toX;
+this.y = toY;
+}
+LayerObject.prototype.updateLayer = function() {
+if (is.ns4) {
+this.ob.left = Math.round(this.x) + this.px;
+this.ob.top = Math.round(this.y)+ this.px ;
+}
+else {
+this.ob.style.left = Math.round(this.x) + this.px;
+this.ob.style.top = Math.round(this.y) + this.px;
+}
+}
+//-----------------
+function roll(divName, imgName, which) {
+var suffix = (which==1)?"on":"off"
+if ((is.ns4)&&(divName!=0)) {
+var imgObject = eval("document." + divName +".document.images['"+imgName +"']");
+imgObject.src = eval(imgName + "_" + suffix + ".src");
+}
+else {
+document.images[imgName].src = eval(imgName + "_" + suffix + ".src");
+}
+}
+
+function init() {
+if (onLoadScript) eval(onLoadScript);
+}
+
+// Workaround for the netscape resize problem --
+// namely, on resize ns looses div positioning and
+// styles from css files.
+// This checks to see if the window''s dimensions have
+// actually changed (because Netscape often fires a
+// false onResize event when it forms scrollbars);
+// if the dimensions have changed, page is reloaded
+function resizefix(){
+if((document.resizeFix.initWidth != window.innerWidth) ||
+(document.resizeFix.initHeight != window.innerHeight))
+{
+document.location = document.location;
+}
+}
+
+// This code creates a new object with properties
+// to hold the current window width & height to be
+// used in the event of a netscape resize
+document.resizeFix = new Object();
+if(is.ns4){
+document.resizeFix.initWidth = window.innerWidth;
+document.resizeFix.initHeight = window.innerHeight;
+window.onresize=resizefix;
+}
+
+
+
+
+
+
+
+function initMenus(){
+}
+
+
+function showResults(siteSurveyKey) {
+var url="/mld/templates/contentModules/poll-results-popup.jsp"+ "?siteSurveyKey=" + siteSurveyKey;
+window.open(url, 'Title');
+}
+
+function openWin(URL) {
+aWindow = window.open(URL,
+'thewindow','width=500,height=400,resizable=yes,scrollbars=yes');
+}
+
+
+
+
+
+</script>
+<link rel="stylesheet" type="text/css" href="cdt_files/mwStyle.css"></head>
+
+
+
+
+
+<body class="body" topmargin="0" leftmargin="0" marginwidth="0" marginheight="0">
+
+<!-- CDS : SDP2.0.0_properties_05232003_214533 : production --><table border="0" cellpadding="0" cellspacing="0" bgcolor="#000000" width="768">
+<tbody><tr><td background="/images/palette/blue_dark_standard_cool/bg1.gif"><a href="http://www.centredaily.com/"><img src="cdt_files/site_logo_280x75.gif" width="280" height="75" alt="centredaily.com - The centredaily home page" border="0"></a></td><td background="/images/palette/blue_dark_standard_cool/bg2.gif" align="left">
+<script language="JavaScript1.1">
+_krdDartInc++;
+document.write('<SCRIPT LANGUAGE="JavaScript1.1" SRC="http://ad.doubleclick.net/adj/centredaily.homepage/homepage;kw=top;dcopt=ist;tile='+_krdDartInc+';sz=468x60;ord='+_krdDartOrd+'?" ><\/SCRIPT>');
+</script><script language="JavaScript1.1" src="cdt_files/homepage.js"></script><a target="_new" href="http://ad.doubleclick.net/click;h=v2%7C2fbc%7C0%7C0%7C%2a%7Cu;5325398;0-0;0;7939206;1-468%7C60;2485625%7C2483857%7C1;;%3fhttp://www.centredaily.com/mld/centredaily/classifieds/employment/"><img src="cdt_files/4-9279_cb_468x60a1_m.gif" border="0" alt="Click Here for the Most Local Jobs - CareerBuilder.com"></a>
+<noscript> <A HREF="http://ad.doubleclick.net/jump/centredaily.homepage/homepage;kw=top;sz=468x60;ord=1055615464968?"
+TARGET="_blank"> <IMG SRC="http://ad.doubleclick.net/ad/centredaily.homepage/homepage;kw=top;sz=468x60;ord=1055615464968?"
+WIDTH="468" HEIGHT="60" BORDER="0" ></a> </noscript>
+</td></tr></tbody></table>
+<table border="0" cellpadding="0" cellspacing="0" bgcolor="#000000" width="768">
+<tbody><tr><td align="left" bgcolor="#000000" background="/images/palette/blue_dark_standard_cool/bg3.gif"><img src="cdt_files/mediabar_nav_label.gif" border="0" alt="Go to your local news source"><a href="http://www.centredaily.com/mld/dailytimes"><img src="cdt_files/media_partner_home_1.gif" border="0" alt="Centre Daily Times"></a></td></tr></tbody></table>
+<table cellspacing="0" cellpadding="0" width="768" bgcolor="#1e4380" background="/images/palette/blue_dark_standard_cool/main_nav_bg.gif" border="0">
+<tbody><tr><td><img height="23" src="cdt_files/main_nav_our_local_c.gif" width="155" border="0"></td><td><div class="menutrigger" id="newstrigger"><a name="3110" href="http://www.centredaily.com/mld/centredaily/news/"><img alt="news" src="cdt_files/main_nav_news.gif" border="0" name="main_nav_news"></a></div></td><td><div class="menutrigger" id="businesstrigger"><a name="10" href="http://www.centredaily.com/mld/centredaily/business/"><img alt="business" src="cdt_files/main_nav_business.gif" border="0" name="main_nav_business"></a></div></td><td><div class="menutrigger" id="sportstrigger"><a name="4270" href="http://www.centredaily.com/mld/centredaily/sports/"><img alt="sports" src="cdt_files/main_nav_sports.gif" border="0" name="main_nav_sports"></a></div></td><td><div class="menutrigger" id="entertainmenttrigger"><a name="655" href="http://www.centredaily.com/mld/centredaily/entertainment/"><img alt="entertainment" src="cdt_files/main_nav_entertainme.gif" border="0" name="main_nav_entertainment"></a></div></td><td><div class="menutrigger" id="livingtrigger"><a name="1025" href="http://www.centredaily.com/mld/centredaily/living/"><img alt="living" src="cdt_files/main_nav_living.gif" border="0" name="main_nav_living"></a></div></td><td><div class="menutrigger" id="classifiedstrigger"><a name="640" href="http://www.centredaily.com/mld/centredaily/classifieds/"><img alt="classifieds" src="cdt_files/main_nav_classifieds.gif" border="0" name="main_nav_classifieds"></a></div></td><td width="100%"> </td></tr></tbody></table>
+<table border="0" cellpadding="0" cellspacing="0" bgcolor="#000000" width="768" background="/images/palette/blue_dark_standard_cool/bg4.gif">
+<tbody><tr><td valign="middle" align="left" class="utilitylinks"><span class="navspace">  </span><a href="http://www.centredaily.com/mld/centredaily/contact_us/help" class="utilitylinks">Help</a><span class="navpipe"> | </span><a href="http://www.centredaily.com/mld/centredaily/contact_us" class="utilitylinks">Contact Us</a><span class="navpipe"> | </span><a href="http://www.centredaily.com/mld/centredaily/archives" class="utilitylinks">Archives</a><span class="navpipe"> | </span><a href="http://www.centredaily.com/mld/centredaily/contact_us/advertise/" class="utilitylinks">Place an Ad</a><span class="navpipe"> | </span><a href="http://www.centredaily.com/mld/centredaily/contact_us/subscriptions_np1" class="utilitylinks">Newspaper Subscriptions</a></td></tr></tbody></table>
+
+
+<table border="0" cellpadding="0" cellspacing="0" width="768">
+<tbody><tr><td class="columndiv" width="155"><img src="cdt_files/spacer.gif" width="155" height="1"></td><td class="columndiv" width="1"><img src="cdt_files/spacer.gif" width="1" height="1"></td><td class="columndiv" width="100%"><img src="cdt_files/spacer.gif" width="450" height="1"></td><td class="columndiv" width="1"><img src="cdt_files/spacer.gif" width="1" height="1"></td><td class="columndiv" width="155"><img src="cdt_files/spacer.gif" width="155" height="1"></td></tr><tr>
+<td class="leftrail" valign="top">
+
+<input type="hidden" name="site" value="centredaily">
+<input value="20" name="num_results" type="hidden">
+<input value="0" name="start" type="hidden">
+<table border="0" cellpadding="0" cellspacing="0" width="155">
+<form name="searchform" action="/mld/centredaily/search_results.htm" method="post"></form>
+<tbody><tr><td bgcolor="#efefef" colspan="3">
+<img src="cdt_files/divider_rail_top.gif" width="155" height="1"></td></tr><tr><td bgcolor="#efefef" width="1">
+<img src="cdt_files/spacer.gif" width="1" height="1"></td><td bgcolor="#cecfce">
+<table border="0" cellpadding="1" cellspacing="0" width="153">
+<tbody><tr><td colspan="2">
+<img src="cdt_files/spacer.gif" width="150" height="2"><br>
+ <b>Search Last 7 Days</b>
+<img src="cdt_files/hr_2px_medium.gif" width="150" height="2" border="0" vspace="2"><br></td></tr><tr><td><input type="text" name="q" size="10" class="fullrailformelement"></td><td><input type="image" src="cdt_files/button_go.gif" border="0"></td></tr><tr><td colspan="2" class="mediumarea">
+<b><img src="cdt_files/panel_arrow_0.gif" width="12" height="9" border="0" vspace="2" align="left"><a href="http://www.centredaily.com/mld/centredaily/archives">Search Archives</a></b><br><img src="cdt_files/spacer.gif" width="150" height="5"><br></td></tr></tbody></table>
+</td><td bgcolor="#aaa9a7" width="1">
+<img src="cdt_files/spacer.gif" width="1" height="1"></td></tr><tr><td bgcolor="#aaa9a7" colspan="3">
+<img src="cdt_files/divider_rail_bottom.gif" width="155" height="2"></td></tr>
+</tbody></table>
+
+<table border="0" cellpadding="0" cellspacing="0" width="155">
+<tbody><tr><td><img src="cdt_files/divider_rail_top.gif" width="155" height="1"></td></tr><tr><td><img src="cdt_files/spacer.gif" width="1" height="10"></td></tr><tr><td align="center">
+<script language="JavaScript1.1">
+_krdDartInc++;
+document.write('<SCRIPT LANGUAGE="JavaScript1.1" SRC="http://ad.doubleclick.net/adj/centredaily.homepage/homepage;kw=left1;tile='+_krdDartInc+';sz=120x60;ord='+_krdDartOrd+'?" ><\/SCRIPT>');
+</script><script language="JavaScript1.1" src="cdt_files/homepage_002.js"></script><a target="_new" href="http://ad.doubleclick.net/click;h=v2%7C2fbc%7C0%7C0%7C%2a%7Cx;5426503;0-0;2;7939206;6-120%7C60;2784101%7C2783780%7C1;;%3fhttp://www.blackwalnutbodyworks.com"><img src="cdt_files/1-9592_walnut_120x60.gif" border="0" alt="Click here to find out more!"></a>
+<noscript> <A HREF="http://ad.doubleclick.net/jump/centredaily.homepage/homepage;kw=left1;sz=120x60;ord=1055615464972?"
+TARGET="_blank"> <IMG SRC="http://ad.doubleclick.net/ad/centredaily.homepage/homepage;kw=left1;sz=120x60;ord=1055615464972?"
+WIDTH="120" HEIGHT="60" BORDER="0" ></a> </noscript>
+
+</td></tr><tr><td><img src="cdt_files/spacer.gif" width="1" height="10"></td></tr><tr><td><img src="cdt_files/divider_rail_bottom.gif" width="155" height="2"></td></tr></tbody></table>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tbody><tr><td class="navborder"><table border="0" cellpadding="0" cellspacing="1" width="100%">
+<tbody><tr><td class="navbg1"> <b><a href="http://www.centredaily.com/mld/centredaily/news/" name="3110"><span class="nav1">News</span></a></b></td></tr>
+<tr><td class="navbg1"> <b><a href="http://www.centredaily.com/mld/centredaily/business/" name="10"><span class="nav1">Business</span></a></b></td></tr>
+<tr><td class="navbg1"> <b><a href="http://www.centredaily.com/mld/centredaily/sports/" name="4270"><span class="nav1">Sports</span></a></b></td></tr>
+<tr><td class="navbg1"> <b><a href="http://www.centredaily.com/mld/centredaily/entertainment/" name="655"><span class="nav1">Entertainment</span></a></b></td></tr>
+<tr><td class="navbg1"> <b><a href="http://www.centredaily.com/mld/centredaily/living/" name="1025"><span class="nav1">Living</span></a></b></td></tr>
+<tr><td class="navbg1"> <b><a href="http://www.centredaily.com/mld/centredaily/classifieds/" name="640"><span class="nav1">Classifieds</span></a></b></td></tr>
+<tr><td class="navbg1"> <b><a href="http://www.centredaily.com/mld/centredaily/archives/" name="5"><span class="nav1">Archives</span></a></b></td></tr>
+<tr><td class="navbg1"> <b><a href="http://www.centredaily.com/mld/centredaily/contact_us/" name="5735"><span class="nav1">Contact Us</span></a></b></td></tr>
+<tr><td class="navbg1"> <b><a href="http://www.centredaily.com/mld/centredaily/shopping/" name="4265"><span class="nav1">Shopping</span></a></b></td></tr>
+
+</tbody></table>
+</td></tr></tbody></table><table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tbody><tr><td class="raildiv"><img src="cdt_files/spacer.gif" width="1" height="1" border="0"></td></tr></tbody></table>
+
+
+
+<table border="0" cellpadding="0" cellspacing="0" width="155">
+<tbody><tr><td bgcolor="#ffffff"><img src="cdt_files/divider_rail_top.gif" width="155" height="1"></td></tr><tr><td bgcolor="#ffffff">
+<table border="0" cellpadding="5" cellspacing="0" width="155">
+<tbody><tr valign="top">
+<td class="whitearea">
+<b>Subscribe to The Centre Daily Times</b><br>Have The Centre Daily Times delivered to your home everyday!<br><table border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr valign="top">
+<td><img src="cdt_files/panel_arrow_0.gif" width="12" height="9"></td><td class="whitearea"><a href="http://www.centredaily.com/mld/centredaily/contact_us/subscriptions_np1/"><b>Subscribe today!!</b></a></td></tr></tbody></table>
+</td></tr></tbody></table>
+</td></tr><tr><td bgcolor="#ffffff"><img src="cdt_files/divider_rail_bottom.gif" width="155" height="2"></td></tr></tbody></table>
+
+
+
+<table border="0" cellpadding="0" cellspacing="0" width="155" bgcolor="#cecfce">
+<tbody><tr><td rowspan="2"><img src="cdt_files/spacer.gif" width="4" height="1"></td><td><img src="cdt_files/spacer.gif" width="1" height="9"></td><td rowspan="2"><img src="cdt_files/spacer.gif" width="4" height="1"></td></tr><tr><td bgcolor="#efefef" width="100%">
+<div align="center"><img src="cdt_files/spacer.gif" width="1" height="5"><br><b>CENTRE DAILY TIMES </b>
+</div><img src="cdt_files/hr_grey_dots_147w.gif" width="147" vspace="1" height="1"><table border="0" cellpadding="1" cellspacing="2" width="95%" align="center">
+
+<tbody><tr valign="top">
+<td class="arrow"> »</td><td class="mediumarea" width="100%"><a href="http://www.centredaily.com/mld/centredaily/classifieds/">Classifieds</a><br><img src="cdt_files/spacer.gif" width="1" height="3"></td></tr>
+<tr valign="top">
+<td class="arrow"> »</td><td class="mediumarea" width="100%"><a href="http://www.centredaily.com/mld/centredaily/news/obituaries/">Obituaries</a><br><img src="cdt_files/spacer.gif" width="1" height="3"></td></tr>
+<tr valign="top">
+<td class="arrow"> »</td><td class="mediumarea" width="100%"><a href="http://www.centredaily.com/mld/centredaily/news/opinion/">Opinion</a><br><img src="cdt_files/spacer.gif" width="1" height="3"></td></tr>
+<tr valign="top">
+<td class="arrow"> »</td><td class="mediumarea" width="100%"><a href="http://www.centredaily.com/mld/dailytimes/sports/outdoors/">Outdoors</a><br><img src="cdt_files/spacer.gif" width="1" height="3"></td></tr>
+<tr valign="top">
+<td class="arrow"> »</td><td class="mediumarea" width="100%"><a href="http://www.centredaily.com/mld/dailytimes/living/announcements/">Celebrations</a><br><img src="cdt_files/spacer.gif" width="1" height="3"></td></tr>
+<tr valign="top">
+<td class="arrow"> »</td><td class="mediumarea" width="100%"><a href="http://www.centredaily.com/mld/dailytimes/classifieds/real_estate/">Real estate transactions</a><br><img src="cdt_files/spacer.gif" width="1" height="3"></td></tr>
+<tr valign="top">
+<td class="arrow"> »</td><td class="mediumarea" width="100%"><a href="http://www.centredaily.com/mld/centredaily/sports/colleges/pennsylvania_state_university/">Penn State sports</a><br><img src="cdt_files/spacer.gif" width="1" height="3"></td></tr>
+<tr valign="top">
+<td class="arrow"> »</td><td class="mediumarea" width="100%"><a href="http://newspaperads.centredaily.com/"><font color="red"><b>NEW!</b></font> Today's Newspaper Ads Online</a><br><img src="cdt_files/spacer.gif" width="1" height="3"></td></tr>
+
+</tbody></table></td></tr> <tr><td><img src="cdt_files/spacer.gif" width="1" height="3"></td></tr><tr><td colspan="3" bgcolor="#000000"><img src="cdt_files/spacer.gif" width="1" height="1"></td></tr></tbody></table>
+
+
+
+
+
+
+
+<table border="0" cellpadding="0" cellspacing="0" width="155" bgcolor="#cecfce">
+<tbody><tr><td rowspan="2"><img src="cdt_files/spacer.gif" width="4" height="1"></td><td><img src="cdt_files/spacer.gif" width="1" height="9"></td><td rowspan="2"><img src="cdt_files/spacer.gif" width="4" height="1"></td></tr><tr><td bgcolor="#efefef" width="100%">
+<div align="center"><img src="cdt_files/spacer.gif" width="1" height="5"><br><b>SPECIAL SECTIONS</b>
+</div><img src="cdt_files/hr_grey_dots_147w.gif" width="147" vspace="1" height="1"><table border="0" cellpadding="1" cellspacing="2" width="95%" align="center">
+
+<tbody><tr valign="top">
+<td class="arrow"> »</td><td class="mediumarea" width="100%"><a href="http://specialsections.centredaily.com/sections.asp?sesid=20186200&amp;refid=&amp;sec=3080">Centre County User's Guide</a><br><img src="cdt_files/spacer.gif" width="1" height="3"></td></tr>
+<tr valign="top">
+<td class="arrow"> »</td><td class="mediumarea" width="100%"><a href="http://specialsections.centredaily.com/sections.asp?sec=1767">Business Matters - Pt. 1</a><br><img src="cdt_files/spacer.gif" width="1" height="3"></td></tr>
+<tr valign="top">
+<td class="arrow"> »</td><td class="mediumarea" width="100%"><a href="http://specialsections.centredaily.com/sections.asp?sesid=870074334&amp;refid=&amp;sec=1819">Business Matters - Pt. 2</a><br><img src="cdt_files/spacer.gif" width="1" height="3"></td></tr>
+<tr valign="top">
+<td class="arrow"> »</td><td class="mediumarea" width="100%"><a href="http://specialsections.centredaily.com/sections.asp?sec=860">This is Penn State</a><br><img src="cdt_files/spacer.gif" width="1" height="3"></td></tr>
+<tr valign="top">
+<td class="arrow"> »</td><td class="mediumarea" width="100%"><a href="http://specialsections.centredaily.com/sections.asp?sesid=538449324&amp;refid=&amp;sec=2007">Blue/White Visitor's Guide</a><br><img src="cdt_files/spacer.gif" width="1" height="3"></td></tr>
+<tr valign="top">
+<td class="arrow"> »</td><td class="mediumarea" width="100%"><a href="http://www.centredaily.com/mld/centredaily/" target="new"> </a><br><img src="cdt_files/spacer.gif" width="1" height="3"></td></tr>
+
+</tbody></table></td></tr> <tr><td><img src="cdt_files/spacer.gif" width="1" height="3"></td></tr><tr><td colspan="3" bgcolor="#000000"><img src="cdt_files/spacer.gif" width="1" height="1"></td></tr></tbody></table>
+
+
+
+
+
+
+
+
+
+<table border="0" cellpadding="0" cellspacing="0" width="155" bgcolor="#1e4380">
+<tbody><tr><td bgcolor="#1e4380" rowspan="4"><img src="cdt_files/spacer.gif" width="5" height="1"></td><td bgcolor="#1e4380" class="mainarea"><img src="cdt_files/spacer.gif" width="1" height="5" border="0"><br><b>Our Site Tools</b><br><img src="cdt_files/spacer.gif" width="1" height="5" border="0"></td><td bgcolor="#1e4380" rowspan="4"><img src="cdt_files/spacer.gif" width="5" height="1"></td></tr><tr><td valign="top" bgcolor="#cecfce" width="142">
+<img src="cdt_files/spacer.gif" width="141" height="5"><br>  <a href="http://www.centredaily.com/mld/centredaily/news/weather/" class="relatedbold">Weather</a>
+</td></tr><tr><td bgcolor="#efefef"><img src="cdt_files/spacer.gif" width="100" height="5"><br>
+<table border="0" cellpadding="1" cellspacing="0" width="135" align="center"><tbody><tr valign="top">
+<td class="mediumarea" width="90%"><b>State College</b></td><td class="mediumarea" nowrap="nowrap" align="right"><img src="cdt_files/weather_temp_up.gif" width="6" height="7">81</td><td class="mediumarea" nowrap="nowrap" align="right"><img src="cdt_files/weather_temp_down.gif" width="6" height="7">59</td></tr><tr valign="top">
+<td class="mediumarea" width="90%"><b>Scranton</b></td><td class="mediumarea" nowrap="nowrap" align="right"><img src="cdt_files/weather_temp_up.gif" width="6" height="7">79</td><td class="mediumarea" nowrap="nowrap" align="right"><img src="cdt_files/weather_temp_down.gif" width="6" height="7">56</td></tr><tr valign="top">
+<td class="mediumarea" width="90%"><b>Philadelphia</b></td><td class="mediumarea" nowrap="nowrap" align="right"><img src="cdt_files/weather_temp_up.gif" width="6" height="7">86</td><td class="mediumarea" nowrap="nowrap" align="right"><img src="cdt_files/weather_temp_down.gif" width="6" height="7">68</td></tr></tbody></table>
+<img src="cdt_files/spacer.gif" width="100" height="5"><br></td></tr><tr><td bgcolor="#cecfce"><img src="cdt_files/hr_2px_medium.gif" width="141" height="2" vspace="2"><br>  <a href="http://www.centredaily.com/mld/centredaily/entertainment/events/" class="relatedbold">Local Events</a><br><img src="cdt_files/hr_2px_medium.gif" width="141" height="2" vspace="2"><br>  <a href="http://yp.centredaily.com/bin/cgidir.dll?MEM=1224" class="relatedbold">Yellow Pages</a><br><img src="cdt_files/hr_2px_medium.gif" width="141" height="2" vspace="2"><br>  <a href="http://forums.realcities.com/dir-app/nav/forumdirectory.aspx?webtag=kr-statecollz&amp;byName=y" class="relatedbold">Discussion Boards</a><br><img src="cdt_files/hr_2px_medium.gif" width="141" height="2" vspace="2"><br>  <a href="http://maps.centredaily.com/jump.cgi/refsrc=KR.1224" class="relatedbold">Maps &amp; Directions</a><br><img src="cdt_files/spacer.gif" width="141" height="5"></td></tr><tr><td colspan="3" bgcolor="#1e4380"><img src="cdt_files/spacer.gif" width="1" height="5"></td></tr></tbody></table>
+
+
+
+<table border="0" cellpadding="0" cellspacing="0" width="155" bgcolor="#cecfce">
+<tbody><tr><td rowspan="2"><img src="cdt_files/spacer.gif" width="4" height="1"></td><td><img src="cdt_files/spacer.gif" width="1" height="9"></td><td rowspan="2"><img src="cdt_files/spacer.gif" width="4" height="1"></td></tr><tr><td bgcolor="#efefef" width="100%">
+<div align="center"><img src="cdt_files/spacer.gif" width="1" height="5"><br><b>CENTRE DAILY TIMES</b>
+</div><img src="cdt_files/hr_grey_dots_147w.gif" width="147" vspace="1" height="1"><table border="0" cellpadding="1" cellspacing="2" width="95%" align="center">
+
+<tbody><tr valign="top">
+<td class="arrow"> »</td><td class="mediumarea" width="100%"><a href="http://www.centredaily.com/mld/centredaily/4481700.htm">Pennsylvania's Newspaper of the Year</a><br><img src="cdt_files/spacer.gif" width="1" height="3"></td></tr>
+
+</tbody></table></td></tr> <tr><td><img src="cdt_files/spacer.gif" width="1" height="3"></td></tr><tr><td colspan="3" bgcolor="#000000"><img src="cdt_files/spacer.gif" width="1" height="1"></td></tr></tbody></table>
+
+
+
+
+
+</td><td class="columndiv" rowspan="2"><img src="cdt_files/spacer.gif" width="1" height="1"></td>
+<td rowspan="2" valign="top" bgcolor="#ffffff"><div align="center">
+<table border="0" cellpadding="0" cellspacing="2" width="97%">
+<tbody><tr><td valign="middle"><a href="http://www.centredaily.com/" class="related">Back to Home</a>  &gt; 
+</td></tr><tr><td colspan="2" align="center" bgcolor="#ffffff">
+<img src="cdt_files/spacer.gif" width="1" height="1"><br></td></tr></tbody></table>
+<table border="0" cellpadding="0" cellspacing="0" width="97%">
+<tbody><tr><td align="center" class="pagetitle" width="100%">Search Results</td></tr></tbody></table>
+<table border="0" cellpadding="0" cellspacing="0" width="97%" align="center">
+<tbody><tr><td align="center"><img src="cdt_files/spacer.gif" width="1" height="2"><br></td></tr><tr><td align="center" bgcolor="#cccccc"><img src="cdt_files/spacer.gif" width="1" height="2"><br></td></tr><tr><td align="center"><img src="cdt_files/spacer.gif" width="1" height="1"><br></td></tr><tr><td align="center" bgcolor="#cccccc"><img src="cdt_files/spacer.gif" width="1" height="1"><br></td></tr></tbody></table><table cellspacing="0" cellpadding="2" width="97%"><tbody><tr><td bgcolor="#eeeeee"><b>Searched for "Vaserstein".</b></td><td align="right" bgcolor="#eeeeee"><b>Results 1 - 2 of 2.</b></td></tr></tbody></table><table cellspacing="0" cellpadding="5" width="97%"><tbody><tr valign="top"><td width="20" align="right"><b>1.</b><br><span class="byline">100.00%</span></td><td><a href="http://www.centredaily.com/mld/centredaily/news/obituaries/6042132.htm" class="headline2">Tamara A. <i><b>Vaserstein</b></i>, 62, of State College</a>
+<br>Tamara A. <i><b>Vaserstein</b></i>, 62, of State College, died on Friday,
+June 6, 2003, at The Fairways at Brookline Village. Born April 21, 1941,
+in Moscow, she was a daughter of the late Abram Sneiden and Rebecca Sekuler.<br> <span class="byline">(Centre Daily.com, 06/08/2003 03:01 am EDT)</span><br><br>
+</td></tr><tr valign="top"><td width="20" align="right"><b>2.</b><br><span class="byline">78.26%</span></td><td><a href="http://www.centredaily.com/mld/centredaily/news/obituaries/6042135.htm" class="headline2">Death Notices</a>
+<br><i><b>Vaserstein</b></i> -- Tamara A. <i><b>Vaserstein</b></i>, 62, died
+on Friday, June 6, 2003, at The Fairways at Brookline Village. Arrangements
+by Koch Funeral Home, 2401 S. Atherton St., State College, PA 16801.<br> <span class="byline">(Centre Daily.com, 06/08/2003 03:01 am EDT)</span><br><br>
+</td></tr></tbody></table><form name="searchform" action="search_results.htm" method="post">
+<input type="hidden" name="num_results" value="20">
+<input type="hidden" name="start" value="0">
+<table cellspacing="0" cellpadding="5" border="0">
+<tbody><tr valign="middle">
+<td><b>Search for</b></td><td><input type="text" name="q" value="Vaserstein" size="20"></td><td><b>on</b></td><td><select name="site"><option value="centredaily" selected="selected">Centre Daily.com</option><option value="dailytimes">Centre Daily Times</option></select></td><td><input type="submit" value="search"></td></tr></tbody></table></form>
+</div>
+
+</td><td class="columndiv" rowspan="2"><img src="cdt_files/spacer.gif" width="1" height="1"></td><td class="rightrail" valign="top">
+
+<table border="0" cellpadding="0" cellspacing="1" width="100%" bgcolor="#eeeeee">
+<tbody><tr>
+<td class="arrow" bgcolor="#cecfce">
+<img src="cdt_files/spacer.gif" width="1" height="3"><br>
+  »  <span class="relateboldrail" style="color: rgb(68,68,68);"><a href="http://www.centredaily.com/mld/centredaily/classifieds/employment/">Employment...</a></span></td>
+</tr>
+</tbody></table>
+
+<table border="0" cellpadding="5" cellspacing="1" width="100%" bgcolor="#bbbbbb">
+<tbody><tr valign="middle"> 
+<td bgcolor="#ffffff" class="v1">
+<a href="http://www.centredaily.com/mld/centredaily/classifieds/employment/"><img src="cdt_files/careerbuilder_107x21.gif" width="107" height="21" alt="Careerbuilder" border="0"></a><br>
+<img src="cdt_files/spacer.gif" width="1" height="2"><br>
+<span style="font-size: 9px; color: rgb(204,0,0);">&#8226;</span><span style="font-size: 4px;"> </span><a href="http://www.centredaily.com/mld/centredaily/classifieds/employment/"><b>Find a Job</b></a><br>
+<span style="font-size: 9px; color: rgb(204,0,0);">&#8226;</span><span style="font-size: 4px;"> </span><a href="http://www.careerbuilder.com/jobseeker/resumes/addresume.asp?lr=cbcb_cd&amp;siteid=ckrre33"><b>Post a Résumé</b></a><br>
+<span style="font-size: 9px; color: rgb(204,0,0);">&#8226;</span><span style="font-size: 4px;"> </span><a href="http://www.careerbuilder.com/jobposter/products/easeepost/smallbiz.htm?lr=cbcb_cd&amp;siteid=ckrre34"><b>Post a Job</b></a><br>	
+</td></tr></tbody></table>
+ 
+<table border="0" cellpadding="0" cellspacing="1" width="100%" bgcolor="#eeeeee">
+<tbody><tr>
+<td class="arrow" bgcolor="#cecfce">
+  »  <span class="relateboldrail" style="color: rgb(68,68,68);"><a href="http://www.centredaily.com/mld/centredaily/classifieds/automotive/">Automotive ...</a></span></td>
+</tr>
+</tbody></table>
+
+
+<table border="0" cellpadding="5" cellspacing="1" width="100%" bgcolor="#bbbbbb">
+<tbody><tr valign="top">
+<td bgcolor="#ffffff" class="v1">
+<a href="http://www.centredaily.com/mld/centredaily/classifieds/automotive/">
+<img src="cdt_files/cars.gif" width="51" height="22" align="right" alt="cars.com" border="0"></a>
+<span style="font-size: 9px; color: rgb(204,0,0);">&#8226;</span><span style="font-size: 4px;"> </span><a href="http://www.centredaily.com/mld/centredaily/classifieds/automotive/"><b>Find a Car</b></a><br>
+<span style="font-size: 9px; color: rgb(204,0,0);">&#8226;</span><span style="font-size: 4px;"> </span><a href="http://siy.cars.com/adentry/index.jhtml?aff=centre&amp;referer=fsbo_hplr2"><b>Sell a Car</b></a><br>
+
+<span style="font-size: 9px; color: rgb(204,0,0);">&#8226;</span><span style="font-size: 4px;"> </span><a href="http://newspaperads.centredaily.com/categories.asp?refid=&amp;sesid=564491610&amp;cid=39"><b>Weekly Specials</b></a><br>	
+</td></tr></tbody></table>
+
+<table border="0" cellpadding="0" cellspacing="1" width="100%" bgcolor="#eeeeee">
+<tbody><tr>
+<td class="arrow" bgcolor="#cecfce">
+  »  <span class="relateboldrail" style="color: rgb(68,68,68);"><a href="http://www.centredaily.com/mld/centredaily/classifieds/real_estate/">Real Estate...</a></span></td>
+</tr>
+</tbody></table>
+
+<table border="0" cellpadding="5" cellspacing="1" width="100%" bgcolor="#bbbbbb">
+<tbody><tr valign="middle"> 
+<td bgcolor="#ffffff" class="v1">
+<span style="font-size: 9px; color: rgb(204,0,0);">&#8226;</span><span style="font-size: 4px;"> </span><a href="http://www.centredaily.com/mld/centredaily/classifieds/real_estate/"><b>Find a Home</b></a><br>
+<span style="font-size: 9px; color: rgb(204,0,0);">&#8226;</span><span style="font-size: 4px;"> </span><a href="http://www.apartments.com/centre"><b>Find an Apartment</b></a><br>	
+</td></tr></tbody></table>
+
+<table border="0" cellpadding="0" cellspacing="1" width="100%" bgcolor="#eeeeee">
+<tbody><tr>
+<td class="arrow" bgcolor="#cecfce">
+  »  <span class="relateboldrail" style="color: rgb(68,68,68);"><a href="http://www.centredaily.com/mld/centredaily/shopping/">Local Shoppers...</a></span></td>
+</tr>
+</tbody></table>
+
+<table border="0" cellpadding="5" cellspacing="1" width="100%" bgcolor="#bbbbbb">
+<tbody><tr valign="middle"> 
+<td bgcolor="#ffffff" class="v1">
+<span style="font-size: 9px; color: rgb(204,0,0);">&#8226;</span><span style="font-size: 4px;"> </span><a href="http://www.centredaily.com/mld/centredaily/classifieds/"><b>Search Classifieds</b></a><br>
+<span style="font-size: 9px; color: rgb(204,0,0);">&#8226;</span><span style="font-size: 4px;"> </span><a href="http://www.centredaily.com/mld/centredaily/shopping/"><b>See This Week's<br><span style="font-size: 9px; color: rgb(255,255,255);"> </span><span style="font-size: 7pt;"> </span>Sales</b></a><br>
+<span style="font-size: 9px; color: rgb(204,0,0);">&#8226;</span><span style="font-size: 4px;"> </span><a href="http://www.centredaily.com/mld/centredaily/shopping/"><b>Online Coupons</b></a><br>
+<span style="font-size: 9px; color: rgb(204,0,0);">&#8226;</span><span style="font-size: 4px;"> </span><a href="http://www.centredaily.com/mld/centredaily/contact_us/advertise/"><b>Place an Ad</b></a><br>		
+</td></tr></tbody></table>
+
+<table border="0" cellpadding="0" cellspacing="1" width="100%" bgcolor="#eeeeee">
+<tbody><tr>
+<td class="v1" bgcolor="#cecfce">
+<b><span style="color: rgb(68,68,68);">  Featured Services:</span></b></td>
+</tr>
+</tbody></table>
+
+<table border="0" cellpadding="5" cellspacing="1" width="100%" bgcolor="#bbbbbb">
+<tbody><tr valign="middle"> 
+<td bgcolor="#ffffff" class="v1">
+<span style="font-size: 9px; color: rgb(204,0,0);">&#8226;</span><span style="font-size: 4px;"> </span><a href="http://www.centredaily.com/mld/centredaily/classifieds/real_estate/loan_center/"><b>Find a Loan</b></a><br>
+<span style="font-size: 9px; color: rgb(204,0,0);">&#8226;</span><span style="font-size: 4px;"> </span><a href="http://www.centredaily.com/mld/centredaily/classifieds/personals/"><b>Meet Someone</b></a><br>
+<span style="font-size: 9px; color: rgb(204,0,0);">&#8226;</span><span style="font-size: 4px;"> </span><a href="http://www.travelnow.com/index.jsp?cid=63976" target="_blank"><b>Find a Hotel</b></a><br>
+</td></tr></tbody></table>
+
+
+<table border="0" cellpadding="0" cellspacing="0" width="155">
+<tbody><tr><td><img src="cdt_files/divider_rail_top.gif" width="155" height="1"></td></tr><tr><td><img src="cdt_files/spacer.gif" width="1" height="10"></td></tr><tr><td align="center">
+<script language="JavaScript1.1">
+_krdDartInc++;
+document.write('<SCRIPT LANGUAGE="JavaScript1.1" SRC="http://ad.doubleclick.net/adj/centredaily.homepage/homepage;kw=right1;tile='+_krdDartInc+';sz=120x60;ord='+_krdDartOrd+'?" ><\/SCRIPT>');
+</script><script language="JavaScript1.1" src="cdt_files/homepage_003.js"></script><a target="_new" href="http://ad.doubleclick.net/click;h=v2%7C2fbc%7C0%7C0%7C%2a%7Cm;5536918;0-0;1;7939206;6-120%7C60;2721495%7C2720770%7C1;;%3fhttp://www.adelphia.com/cable_entertainment/availability_signup.cfm"><img src="cdt_files/10001_adelphia_120x6.gif" border="0" alt="Click here to find out more!"></a>
+<noscript> <A HREF="http://ad.doubleclick.net/jump/centredaily.homepage/homepage;kw=right1;sz=120x60;ord=1055615465255?"
+TARGET="_blank"> <IMG SRC="http://ad.doubleclick.net/ad/centredaily.homepage/homepage;kw=right1;sz=120x60;ord=1055615465255?"
+WIDTH="120" HEIGHT="60" BORDER="0" ></a> </noscript>
+
+</td></tr><tr><td><img src="cdt_files/spacer.gif" width="1" height="10"></td></tr><tr><td><img src="cdt_files/divider_rail_bottom.gif" width="155" height="2"></td></tr></tbody></table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tbody><tr><td width="10"><img src="cdt_files/spacer.gif" width="10" height="1" border="0"></td><td></td></tr></tbody></table>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+
+<tbody><tr><td align="center" bgcolor="#99cc99"><img src="cdt_files/spacer.gif" width="1" height="1"><br></td></tr></tbody></table>
+
+<table border="0" cellpadding="0" cellspacing="2" width="100%" bgcolor="#007b01">
+
+<tbody><tr><td align="center"><font color="#ffffff"><b>Financial Markets</b></font></td></tr>
+
+<tr><td bgcolor="#ffffff" align="center">
+
+<script language="javascript" src="cdt_files/jsinc-frontpage.html">
+
+</script><table width="147" cellpadding="0" cellspacing="0" border="0"><tbody><tr><td><table cellpadding="0" cellspacing="0" border="0"><tbody><tr><td><img src="cdt_files/realcities-fp.gif"></td></tr></tbody></table><table width="100%" cellpadding="0" cellspacing="0" border="0"><tbody><tr><td colspan="4"><img src="cdt_files/1.gif" width="1" height="1"></td></tr><tr class="mwFPBackGround"><td class="mwSmall"><img src="cdt_files/1.gif" height="1" width="4"><a class="mwLink" href="http://custom.marketwatch.com/custom/realcities-com/html-intchart.asp?symb=DJIA&amp;webprop=centredaily">DJIA</a></td><td align="right" class="mwSmall">9,117.12</td><td align="right" class="mwSmall"><img src="cdt_files/1.gif" height="1" width="3"><img src="cdt_files/arrow-fp-down.gif"></td><td align="right" class="mwSmall"><span class="mwclrQuoteDown">-79.43<img src="cdt_files/1.gif" height="1" width="5"></span></td></tr><tr><td colspan="4"><img src="cdt_files/1.gif" width="1" height="1"></td></tr><tr class="mwFPBackGround"><td class="mwSmall"><img src="cdt_files/1.gif" height="1" width="4"><a class="mwLink" href="http://custom.marketwatch.com/custom/realcities-com/html-intchart.asp?symb=NASDAQ&amp;webprop=centredaily">NASDAQ</a></td><td align="right" class="mwSmall">1,626.49</td><td align="right" class="mwSmall"><img src="cdt_files/1.gif" height="1" width="3"><img src="cdt_files/arrow-fp-down.gif"></td><td align="right" class="mwSmall"><span class="mwclrQuoteDown">-27.13<img src="cdt_files/1.gif" height="1" width="5"></span></td></tr><tr><td colspan="4"><img src="cdt_files/1.gif" width="1" height="1"></td></tr><tr class="mwFPBackGround"><td class="mwSmall"><img src="cdt_files/1.gif" height="1" width="4"><a class="mwLink" href="http://custom.marketwatch.com/custom/realcities-com/html-intchart.asp?symb=SPX&amp;webprop=centredaily">S&amp;P 500</a></td><td align="right" class="mwSmall">988.61</td><td align="right" class="mwSmall"><img src="cdt_files/1.gif" height="1" width="3"><img src="cdt_files/arrow-fp-down.gif"></td><td align="right" class="mwSmall"><span class="mwclrQuoteDown">-9.90<img src="cdt_files/1.gif" height="1" width="5"></span></td></tr><tr><td colspan="4"><img src="cdt_files/1.gif" width="1" height="1"></td></tr><tr class="mwFPBackGround"><td class="mwSmall"><img src="cdt_files/1.gif" height="1" width="4"><a class="mwLink" href="http://custom.marketwatch.com/custom/realcities-com/html-intchart.asp?symb=WMT&amp;webprop=centredaily">WMT</a></td><td align="right" class="mwSmall">54.08</td><td align="right" class="mwSmall"><img src="cdt_files/1.gif" height="1" width="3"><img src="cdt_files/arrow-fp-down.gif"></td><td align="right" class="mwSmall"><span class="mwclrQuoteDown">-0.95<img src="cdt_files/1.gif" height="1" width="5"></span></td></tr><tr><td colspan="4"><img src="cdt_files/1.gif" width="1" height="1"></td></tr><tr class="mwFPBackGround"><td class="mwSmall"><img src="cdt_files/1.gif" height="1" width="4"><a class="mwLink" href="http://custom.marketwatch.com/custom/realcities-com/html-intchart.asp?symb=LOW&amp;webprop=centredaily">LOW</a></td><td align="right" class="mwSmall">44.15</td><td align="right" class="mwSmall"><img src="cdt_files/1.gif" height="1" width="3"><img src="cdt_files/arrow-fp-down.gif"></td><td align="right" class="mwSmall"><span class="mwclrQuoteDown">-0.60<img src="cdt_files/1.gif" height="1" width="5"></span></td></tr><tr><td colspan="4"><img src="cdt_files/1.gif" width="1" height="1"></td></tr><tr class="mwFPBackGround"><td class="mwSmall"><img src="cdt_files/1.gif" height="1" width="4"><a class="mwLink" href="http://custom.marketwatch.com/custom/realcities-com/html-intchart.asp?symb=DA&amp;webprop=centredaily">DA</a></td><td align="right" class="mwSmall">28.05</td><td align="right" class="mwSmall"><img src="cdt_files/1.gif" height="1" width="3"><img src="cdt_files/arrow-fp-down.gif"></td><td align="right" class="mwSmall"><span class="mwclrQuoteDown">-0.18<img src="cdt_files/1.gif" height="1" width="5"></span></td></tr></tbody></table><table width="100%" cellpadding="0" cellspacing="0" border="0"><tbody><tr><td colspan="2"><img src="cdt_files/1.gif" width="1" height="1"></td></tr><tr class="mwFPBackGround"><td class="mwSmall"><img src="cdt_files/1.gif" height="1" width="4"><span class="mwclrDate">12:00 AM ET</span></td><td height="15" align="right" class="mwSmall"><a class="mwLink" href="javascript:disclaimerWin(368,50);">disclaimer</a>  </td></tr><tr><td height="30" colspan="2" class="mwSmall" align="center"><a class="mwLink" href="http://custom.marketwatch.com/custom/realcities-com/localmktscreener/html-localmktscreener-full.asp?webprop=centredaily">Market Update: Regional<br>Companies</a></td></tr><tr><td height="20" colspan="2" class="mwSmall" align="center"><a class="mwLink" href="http://custom.marketwatch.com/custom/realcities-com/portfolio/view.asp?webprop=centredaily">View  your portfolio</a></td></tr></tbody></table><input type="hidden" name="webprop" value="centredaily"><table width="100%" cellpadding="0" cellspacing="0" border="0"><form method="get" action="http://custom.marketwatch.com/custom/realcities-com/html-intChart.asp"></form><tbody><tr><td height="25" class="mwNormal">Stock<br>Quote:</td><td><input class="mwEntryBox" type="text" size="4" maxlength="30" name="symb"></td><td><input border="0" type="image" src="cdt_files/go-lower.gif"></td><td class="mwSmall"><a class="mwLink" href="http://custom.marketwatch.com/custom/realcities-com/html-intChart.asp?webprop=centredaily">Symbol<br>Lookup</a></td></tr></tbody></table></td></tr></tbody></table><script language="JavaScript1.2">
+<!--
+function disclaimerWin(w,h){
+var winTop 	= ((screen.height-h)/2);
+var winLeft 	= ((screen.width-w)/2);
+disclaimerWindow=window.open('http://custom.marketwatch.com/custom/realcities-com/inc-copyright.asp','disclaimer','width='+w+',height='+h+',top='+winTop+',left='+winLeft+'');
+disclaimerWindow.focus();
+}
+//-->
+</script>
+
+
+<span class="byline">Sponsored by:<span><br>
+
+<script language="JavaScript">
+_krdDartInc++;
+document.write('<SCRIPT LANGUAGE="JavaScript1.1" SRC="http://ad.doubleclick.net/adj/centredaily.homepage/homepage;kw=stock;sz=120x30;tile = ' + _krdDartInc + ';ord=' + _krdDartOrd + '?" ><\/SCRIPT>');
+</script><script language="JavaScript1.1" src="cdt_files/homepage_004.js"></script><a target="_new" href="http://ad.doubleclick.net/click;h=v2%7C2fbc%7C0%7C0%7C%2a%7Ci;5710848;0-0;0;7939206;47-120%7C30;2929304%7C2933611%7C1;;%3fhttp://quickenloans.quicken.com/Jump/Tools/30sma-hbc.asp?Source=KRD_130x601a"><img src="cdt_files/ref120x30gr1168.gif" border="0" alt="Click here to find out more!"></a>
+<noscript> <A HREF="http://ad.doubleclick.net/jump/centredaily.homepage/homepage;kw=stock;sz=120x30;ord=123456789?"
+TARGET="_blank"> <IMG SRC="http://ad.doubleclick.net/ad/centredaily.homepage/homepage;kw=stock;sz=120x30;ord=123456789?"
+WIDTH="120" HEIGHT="30" BORDER="0" ALT=""></a> </noscript>
+
+<br><img src="cdt_files/spacer.gif" width="1" height="5"><br>
+
+</span></span></td>
+
+</tr>	
+
+<tr><td><img src="cdt_files/spacer.gif" width="1" height="1"><br></td></tr>
+
+</tbody></table>
+
+<table cellpadding="0" cellspacing="0" border="0">
+
+<tbody><tr><td>
+</td><td width="10"><img src="cdt_files/spacer.gif" width="10" height="1" border="0"></td></tr></tbody></table>
+
+
+<table border="0" cellpadding="0" cellspacing="0" width="155">
+<tbody><tr><td bgcolor="#f2efe1" colspan="7"><img src="cdt_files/divider_rail_top.gif" width="155" height="1"></td></tr><tr><td bgcolor="#f2efe1"><img src="cdt_files/spacer.gif" width="1" height="1"></td><td bgcolor="#d2cdb9" colspan="5"> </td><td bgcolor="#aba695" rowspan="6"><img src="cdt_files/spacer.gif" width="1" height="1"></td></tr><tr><td bgcolor="#f2efe1" rowspan="5"><img src="cdt_files/spacer.gif" width="1" height="1"></td><td bgcolor="#d2cdb9" rowspan="5"><img src="cdt_files/spacer.gif" width="2" height="1"></td><td colspan="3" bgcolor="#aba695"><img src="cdt_files/spacer.gif" width="1" height="1"></td><td bgcolor="#d2cdb9" rowspan="5"><img src="cdt_files/spacer.gif" width="2" height="1"></td></tr><tr><td bgcolor="#aba695"><img src="cdt_files/spacer.gif" width="1" height="1"></td><td valign="top" bgcolor="#f2efe1">
+<table border="0" cellpadding="0" cellspacing="0" width="147">
+<tbody><tr><td><table border="0" cellpadding="0" cellspacing="0" width="147" bgcolor="#f2efe1"><tbody><tr><td><img src="cdt_files/digest_rail_hdr_brea.gif" alt="Breaking News" width="147" height="21"></td></tr><tr><td><img src="cdt_files/spacer.gif" width="1" height="4"></td></tr><tr><td><img src="cdt_files/hr_grey_dots_147w.gif" width="147" height="1"></td></tr><tr><td><img src="cdt_files/spacer.gif" width="1" height="6"></td></tr></tbody></table>
+<table border="0" cellpadding="0" cellspacing="0" width="147" bgcolor="#f2efe1">
+<tbody><tr valign="top">
+<td><img src="cdt_files/spacer.gif" width="7" height="1"></td><td class="mediumarea" width="100%"><b>Updated Saturday, Jun 14, 2003</b></td><td><img src="cdt_files/spacer.gif" width="7" height="1"></td></tr></tbody></table>
+<table border="0" cellpadding="0" cellspacing="0" width="147" bgcolor="#f2efe1">
+<tbody><tr><td><img src="cdt_files/spacer.gif" width="1" height="4"></td></tr><tr><td><img src="cdt_files/hr_grey_dots_147w.gif" width="147" height="1"></td></tr><tr><td><img src="cdt_files/spacer.gif" width="1" height="5"></td></tr></tbody></table>
+<table border="0" cellpadding="0" cellspacing="0" width="147" bgcolor="#f2efe1">
+
+
+<tbody><tr valign="top">
+<td><img src="cdt_files/panel_arrow.gif" width="15" height="9" hspace="2"></td><td class="mediumarea" width="100%">
+<a href="http://www.centredaily.com/mld/centredaily/6089909.htm">
+Exception Debated in Abortion Discussion</a> <span class="timestamp">- 02:22 PM EDT</span></td><td><img src="cdt_files/spacer.gif" width="4" height="1"></td></tr><tr><td colspan="3"><img src="cdt_files/spacer.gif" width="1" height="6"></td></tr>
+<tr valign="top">
+<td><img src="cdt_files/panel_arrow.gif" width="15" height="9" hspace="2"></td><td class="mediumarea" width="100%">
+<a href="http://www.centredaily.com/mld/centredaily/6089899.htm">
+Fight Over Abortion Procedure to Continue</a> <span class="timestamp">- 02:16 PM EDT</span></td><td><img src="cdt_files/spacer.gif" width="4" height="1"></td></tr><tr><td colspan="3"><img src="cdt_files/spacer.gif" width="1" height="6"></td></tr>
+<tr valign="top">
+<td><img src="cdt_files/panel_arrow.gif" width="15" height="9" hspace="2"></td><td class="mediumarea" width="100%">
+<a href="http://www.centredaily.com/mld/centredaily/6084327.htm">
+Israel, Palestinians Set to Resume Talks</a> <span class="timestamp">- 02:08 PM EDT</span></td><td><img src="cdt_files/spacer.gif" width="4" height="1"></td></tr><tr><td colspan="3"><img src="cdt_files/spacer.gif" width="1" height="6"></td></tr>
+<tr valign="top">
+<td><img src="cdt_files/panel_arrow.gif" width="15" height="9" hspace="2"></td><td class="mediumarea" width="100%">
+<a href="http://www.centredaily.com/mld/centredaily/6089612.htm">
+9 Die As Fishing Boat Capsizes Off Ore.</a> <span class="timestamp">- 02:06 PM EDT</span></td><td><img src="cdt_files/spacer.gif" width="4" height="1"></td></tr><tr><td colspan="3"><img src="cdt_files/spacer.gif" width="1" height="6"></td></tr>
+<tr valign="top">
+<td><img src="cdt_files/panel_arrow.gif" width="15" height="9" hspace="2"></td><td class="mediumarea" width="100%">
+<a href="http://www.centredaily.com/mld/centredaily/6089854.htm">
+Presidents Bush Spend Dad's Day Together</a> <span class="timestamp">- 01:57 PM EDT</span></td><td><img src="cdt_files/spacer.gif" width="4" height="1"></td></tr><tr><td colspan="3"><img src="cdt_files/spacer.gif" width="1" height="6"></td></tr>
+
+</tbody></table></td></tr></tbody></table>
+</td><td bgcolor="#aba695"><img src="cdt_files/spacer.gif" width="1" height="1"></td></tr><tr><td bgcolor="#aba695" colspan="3"><img src="cdt_files/spacer.gif" width="1" height="1"></td></tr><tr><td bgcolor="#d2cdb9" colspan="3"><img src="cdt_files/spacer.gif" width="1" height="4"></td></tr><tr><td bgcolor="#d2cdb9" colspan="3" align="right">
+<a href="http://www.centredaily.com/mld/centredaily/more_news.htm?pub_id=570&amp;category_id=1003290&amp;days_range=2&amp;start_row=1"><img src="cdt_files/panel_arrow_more.gif" width="39" height="18" border="0" hspace="4"></a>
+</td></tr><tr><td bgcolor="#aba695" colspan="7"><img src="cdt_files/divider_rail_bottom.gif" width="155" height="2"></td></tr></tbody></table>
+
+
+<table border="0" cellpadding="0" cellspacing="0" width="155">
+<tbody><tr><td><img src="cdt_files/divider_rail_top.gif" width="155" height="1"></td></tr><tr><td><img src="cdt_files/spacer.gif" width="1" height="10"></td></tr><tr><td align="center">
+<script language="JavaScript1.1">
+_krdDartInc++;
+document.write('<SCRIPT LANGUAGE="JavaScript1.1" SRC="http://ad.doubleclick.net/adj/centredaily.homepage/homepage;kw=right2;tile='+_krdDartInc+';sz=120x600;ord='+_krdDartOrd+'?" ><\/SCRIPT>');
+</script><script language="JavaScript1.1" src="cdt_files/homepage_005.js"></script><iframe src="cdt_files/6136661.html" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" topmargin="0" leftmargin="0" width="120" height="600">
+&lt;a&gt;&lt;img&gt;&lt;/a&gt;</iframe>
+<noscript> <A HREF="http://ad.doubleclick.net/jump/centredaily.homepage/homepage;kw=right2;sz=120x600;ord=1055615465257?"
+TARGET="_blank"> <IMG SRC="http://ad.doubleclick.net/ad/centredaily.homepage/homepage;kw=right2;sz=120x600;ord=1055615465257?"
+WIDTH="120" HEIGHT="600" BORDER="0" ></a> </noscript>
+
+</td></tr><tr><td><img src="cdt_files/spacer.gif" width="1" height="10"></td></tr><tr><td><img src="cdt_files/divider_rail_bottom.gif" width="155" height="2"></td></tr></tbody></table><table border="0" cellpadding="0" cellspacing="0" width="155">
+<tbody><tr><td><img src="cdt_files/divider_rail_top.gif" width="155" height="1"></td></tr><tr><td><img src="cdt_files/spacer.gif" width="1" height="10"></td></tr><tr><td align="center">
+<script language="JavaScript1.1">
+_krdDartInc++;
+document.write('<SCRIPT LANGUAGE="JavaScript1.1" SRC="http://ad.doubleclick.net/adj/centredaily.homepage/homepage;kw=right3;tile='+_krdDartInc+';sz=120x60;ord='+_krdDartOrd+'?" ><\/SCRIPT>');
+</script><script language="JavaScript1.1" src="cdt_files/homepage_006.js"></script><a target="_new" href="http://ad.doubleclick.net/click;h=v2%7C2fbc%7C0%7C0%7C%2a%7Cr;5559836;0-0;1;7939206;6-120%7C60;2848029%7C2848116%7C1;;%3fhttp://www.lavalife.com/wp.epl?a=5462"><img src="cdt_files/120x60-adriana-see-3.gif" border="0" alt="Click here to find out more!"></a>
+<noscript> <A HREF="http://ad.doubleclick.net/jump/centredaily.homepage/homepage;kw=right3;sz=120x60;ord=1055615465257?"
+TARGET="_blank"> <IMG SRC="http://ad.doubleclick.net/ad/centredaily.homepage/homepage;kw=right3;sz=120x60;ord=1055615465257?"
+WIDTH="120" HEIGHT="60" BORDER="0" ></a> </noscript>
+
+</td></tr><tr><td><img src="cdt_files/spacer.gif" width="1" height="10"></td></tr><tr><td><img src="cdt_files/divider_rail_bottom.gif" width="155" height="2"></td></tr></tbody></table>
+
+</td></tr><tr><td valign="bottom" bgcolor="#e9e9e9"><br><img src="cdt_files/divider_rail_bottom.gif" width="155" height="2"></td><td valign="bottom" bgcolor="#e9e9e9"><img src="cdt_files/divider_rail_bottom.gif" width="155" height="2"></td></tr></tbody></table>
+
+<table border="0" cellpadding="0" cellspacing="0" width="768">
+<tbody><tr><td bgcolor="#1e4380"><img src="cdt_files/spacer.gif" width="1" height="21"></td><td bgcolor="#1e4380" align="center" class="mainarea"><strong><a href="http://www.centredaily.com/mld/centredaily/news/">News</a> | <a href="http://www.centredaily.com/mld/centredaily/business/">Business</a> | <a href="http://www.centredaily.com/mld/centredaily/sports/">Sports</a> | <a href="http://www.centredaily.com/mld/centredaily/entertainment/">Entertainment</a> | <a href="http://www.centredaily.com/mld/centredaily/living/">Living</a> | <a href="http://www.centredaily.com/mld/centredaily/classifieds/">Classifieds</a> </strong> </td><td bgcolor="#1e4380"><img src="cdt_files/spacer.gif" width="1" height="1"></td></tr></tbody></table><table border="0" cellpadding="3" cellspacing="0" width="768"><tbody><tr><td rowspan="2" valign="top" class="footer"><a href="http://www.realcities.com/" target="_blank"><img src="cdt_files/realcities_logo.gif" width="155" height="57" alt="RealCities" border="0"></a>
+</td><td align="left" class="footer">
+<span class="lightgreylinks"><a href="http://www.centredaily.com/mld/centredaily/contact_us/help">Help |</a> <a href="http://www.centredaily.com/mld/centredaily/contact_us">Contact Us |</a> <a href="http://www.centredaily.com/mld/centredaily/archives">Archives |</a> <a href="http://www.centredaily.com/mld/centredaily/contact_us/advertise/">Place an Ad |</a> <a href="http://www.centredaily.com/mld/centredaily/contact_us/subscriptions_np1">Newspaper Subscriptions  </a><br><a href="http://www.centredaily.com/mld/centredaily/contact_us/about">About CentreDaily.com |</a> <a href="http://www.realcities.com/mld/realcities/">About Realcities Network |</a> <a href="http://www.centredaily.com/mld/centredaily/contact_us/terms_of_use">Terms of Use &amp; Privacy Statement |</a> <a href="http://www.knightridder.com/">About Knight Ridder |</a> <a href="http://www.centredaily.com/mld/centredaily/contact_us/copyright">Copyright  </a><br></span>
+</td></tr></tbody></table>
+
+</body></html>

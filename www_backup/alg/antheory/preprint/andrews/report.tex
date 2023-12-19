@@ -1,0 +1,707 @@
+\documentclass[reqno]{amsart}
+
+\usepackage{amssymb}
+\usepackage{alltt}
+
+%\numberwithin{equation}{section}
+
+\allowdisplaybreaks[1]
+
+%%% !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! %%%
+%%% We change the \tt font from cmtt to cmtex %%%
+%%% !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! %%%
+\DeclareFontFamily{OT1}{cmtex}{\hyphenchar\font=-1}
+\DeclareFontShape{OT1}{cmtex}{m}{n}
+     {%
+      <5><6><7><8>cmtex8<9>cmtex9%
+      <10><10.95><12><14.4><17.28><20.74><24.88>cmtex10%
+      }{}
+\renewcommand{\ttdefault}{cmtex}
+
+\newcommand{\lam}{\lambda}
+
+\newcommand{\lbr}{\symbol{123}}
+\newcommand{\rbr}{\symbol{125}}
+\newcommand{\ttge}{\,\symbol{29}\,}
+\newcommand{\ttlam}{\symbol{8}}
+\newcommand{\mysub}[1]{\(\sb{\mathtt{#1}}\)}
+\newcommand{\mysuper}[1]{\textsuperscript{#1}}
+
+\newlength{\axellength}
+\newcommand{\In}[1]{\settowidth{\axellength}{\texttt{123456#1}}%
+\makebox[\axellength][r]{\footnotesize\textsf{In[#1]:=}}}
+\newcommand{\Out}[1]{\settowidth{\axellength}{\texttt{123456#1}}%
+\makebox[\axellength][r]{\footnotesize\textsf{Out[#1]=}}}
+
+\DeclareMathOperator*{\Omegaoper}{\Omega}
+\newcommand{\Omegaop}{\Omegaoper_{\scriptscriptstyle \geqq}}
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}{Corollary}
+\newtheorem{proposition}{Proposition}
+\newtheorem{lemma}{Lemma}
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}
+\newtheorem{problem}{Problem}
+\theoremstyle{remark}
+\newtheorem*{remark}{Remark}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+\title[MacMahon's Partition Analysis IX: $k$-Gon Partitions]
+      {MacMahon's Partition Analysis IX:\\
+       $\boldsymbol{k}$-Gon Partitions}
+
+\author{George E.~Andrews}
+\address{Department of Mathematics\\
+         The Pennsylvania State University\\
+         University Park, PA~16802, USA}
+\email{andrews@math.psu.edu}
+\thanks{The first author was partially supported by NSF Grant DMS-9206993}
+
+\author{Peter Paule}
+\address{Research Institute for Symbolic Computation\\
+         Johannes Kepler University Linz\\
+         A--4040~Linz, Austria}
+\email{Peter.Paule@risc.uni-linz.ac.at}
+
+\author{Axel Riese}
+\address{Research Institute for Symbolic Computation\\
+         Johannes Kepler University Linz\\
+         A--4040~Linz, Austria}
+\email{Axel.Riese@risc.uni-linz.ac.at}
+\thanks{The third author was supported by SFB Grant F1305 of the Austrian FWF}
+
+\date{February 22, 2001}
+\dedicatory{Dedicated to George Szekeres on the occasion of his 90th birthday}
+
+\begin{abstract}
+MacMahon devoted a significant portion of Volume II of
+his famous book ``Combinatory Analysis" to the introduction
+of Partition Analysis as a computational method for solving combinatorial
+problems in connection with systems of linear diophantine inequalities
+and equations. In a series of papers we have shown that MacMahon's
+method turns into an extremely powerful tool when implemented in computer
+algebra. In this note we explain how the use of the package \texttt{Omega}
+developed by the authors has led to a generalization of a classical
+counting problem related to triangles with sides of integer length.
+\end{abstract}
+
+\maketitle
+
+
+\section{Introduction}
+%%%%%%%%%%%%%%%%%%%%%%
+\label{sec:intro}
+
+In his famous book ``Combinatory Analysis"~%
+\cite[Vol.~II, Sect.~VIII, pp.~91--170]{MacMahon:CA}
+MacMahon introduced Partition
+Analysis as a computational method for solving combinatorial problems in
+connection with systems of linear diophantine inequalities and equations.
+
+We will use MacMahon's method and the \texttt{Omega} package
+for a study of a classical combinatorial problem related to
+triangles with sides of integer size. We start out by stating
+the well-known base case which has been discussed
+at various places; see e.g.~\cite{Liu,Jordan et al 1,GEA:77,
+Jordan et al 2,Honsberger},
+and \cite[Ch.~4, Ex.~16]{Stanley:BOOK}.
+
+\begin{problem} \label{prob:triangle}
+Let $t_3(n)$ be the number of non-congruent triangles whose sides
+have integer length and whose perimeter is $n$. For instance,
+$t_3(9)=3$, corresponding to $3+3+3$, $2+3+4$, $1+4+4$. Find
+$\sum_{n\ge 3} t_3(n) q^n$.
+\end{problem}
+
+Obviously the corresponding generating function is
+\begin{equation}
+\label{restricted sum}
+T_3(q):=\sum_{n\ge 3} t_3(n) \, q^n =
+\sum\nolimits^* q^{a_1+a_2+a_3}
+\end{equation}
+where $\sum^*$ is the restricted summation over
+all positive integer triples
+$(a_1,a_2,a_3)$ satisfying $a_1 \leq a_2 \leq a_3$
+and  $a_1+a_2 > a_3$.
+
+\medskip
+In order to see how Partition Analysis can be used
+to compute a closed form representation for
+$\sum_{n\ge 3} t_3(n) q^n$,
+we need to recall
+the key ingredient of MacMahon's method, the Omega
+operator $\Omegaop$.
+
+\begin{definition} \label{dfn:Omega def}
+The operator $\Omegaop$ is given by
+\[
+\Omegaop \sum_{s_1=-\infty}^{\infty} \cdots \sum_{s_r=-\infty}^{\infty}
+A_{s_1,\dots,s_r} \lambda_1^{s_1} \cdots \lambda_r^{s_r} :=
+\sum_{s_1=0}^{\infty} \cdots \sum_{s_r=0}^{\infty} A_{s_1,\dots,s_r},
+\]
+where the domain of the $A_{s_1,\dots,s_r}$ is the field of
+rational functions over $\mathbb{C}$ in several complex variables
+and the $\lam_i$ are restricted to a neighborhood of the circle
+$|\lam_i| = 1$. In addition, the $A_{s_1,\dots,s_r}$ are required
+to be such that any of the series involved is absolute convergent
+within the domain of the definition of $A_{s_1,\dots,s_r}$.
+\end{definition}
+
+We emphasize that it is essential to treat everything analytically rather
+than formally because the method relies on unique Laurent series
+representations of rational functions.
+
+Another fundamental aspect of Partition Analysis is the
+use of elimination rules which describe the action of the Omega
+operator on certain base cases. MacMahon begins the discussion
+of his method by presenting
+a catalog~\cite[Vol.~II, pp.~102--106]{MacMahon:CA} of fundamental
+evaluations. Subsequently he extends this table by new rules whenever
+he is enforced to do so. Once found, most of these fundamental rules
+are easy to prove. This is illustrated by the following examples which
+are taken from MacMahon~\cite[Vol.~II, Art.~354, p.~106]{MacMahon:CA}.
+
+\begin{proposition} \label{prop:1}
+For integer $s\ge 0$ and variables $A, B$ being free of $\lam$,
+\begin{align} \label{ruleI}
+\Omegaop \frac{\lambda^{-s}}{(1-\lambda A) \big(1-\frac{B}{\lambda}\big)} & =
+  \frac{A^{s}}{ (1-A) (1-A B)}; \\
+\label{ruleII}
+\Omegaop \frac{\lambda^s}{ (1-\lambda A) \big(1-\frac{B}{\lambda} \big)} & =
+  \frac{ 1-A B - B^{s+1}+A B^{s+1}}
+  { (1-A)(1-B)(1-A B) }.
+\end{align}
+\end{proposition}
+
+\begin{proof} Rule~\eqref{ruleII}
+is a special case of the more general rule~\eqref{red};
+see Lemma~\ref{lem:2}. Rule~\eqref{ruleI} is proved as follows.
+By geometric series expansion the left-hand side equals
+\[
+\Omegaop \sum_{i,j \ge 0} \lam^{i-j-s} A^i B^j =
+\Omegaop \sum_{j,k \ge 0} \lam^k A^{k+j+s} B^j,
+\]
+where the summation parameter $i$ has then been replaced by $k+j+s$.
+But now $\Omegaop$ sets $\lam$ to $1$, which completes the proof.
+\end{proof}
+
+Now we are ready for deriving the closed form
+expression for $T_3(q)$
+with Partition Analysis.
+
+First, in order to get rid of the
+diophantine constraints, one rewrites the restricted sum
+expression in \eqref{restricted sum} into what MacMahon has
+called the ``crude form'' of the generating function,
+\begin{align*}
+T_3(q) & =  \Omegaop \sum_{a_1 \ge 1,~a_2,a_3 \ge 0}
+\lam_1^{a_2-a_1} \lam_2^{a_3-a_2} \lam_3^{a_1+a_2-a_3-1}
+q^{a_1+a_2+a_3} \\
+& = \Omegaop \frac{q \lambda_1^{-1}}
+{\big(1- q \frac{\lam_3}{\lam_1} \big)
+\big(1-q \frac{\lam_1\lam_3}{\lam_2} \big)
+\big(1-q \frac{\lam_2}{\lam_3} \big)},
+\end{align*}
+where the last line is by geometric series summation.
+
+Next by applying again rule~\eqref{ruleI} we eliminate successively
+$\lam_2$, $\lam_1$, and $\lam_3$,
+\begin{align}
+\label{cf 3}
+T_3(q) & = \Omegaop \frac{q \lam_1^{-1}}
+{\big(1- q \frac{\lam_3}{\lam_1} \big)
+\big(1-\frac{q}{\lam_3} \big)
+(1-q^2 \lam_1 )}\nonumber  \\
+& = \Omegaop \frac{q^3}{(1- q^2)
+(1- q^3 \lam_3) \big(1-\frac{q}{\lam_3} \big)}\nonumber \\
+& = \frac{q^{3}}{(1- q^2) (1- q^3) (1- q^4)}.
+\end{align}
+This completes the generating function computation and
+Problem~\ref{prob:triangle} is solved.
+
+\medskip
+With our package \texttt{Omega}\footnote{available at
+\textit{http://www.risc.uni-linz.ac.at/research/combinat/risc/software/Omega}}
+the whole computation
+can be done automatically and in one stroke. Note that
+setting-up the crude generating function is done also
+by the package:
+\begin{alltt}
+\In{1} <<Omega2.m
+\end{alltt}
+\begin{alltt}
+\Out{1} Axel Riese's Omega implementation version 2.33 loaded
+\end{alltt}
+\begin{alltt}
+\In{2} OSum[q\mysuper{a\mysub{1}+a\mysub{2}+a\mysub{3}}, {\lbr}a\mysub{2}{\ttge}
+a\mysub{1}, a\mysub{3}{\ttge}a\mysub{2}, a\mysub{1}+a\mysub{2}\,>\,a\mysub{3}, a
+\mysub{1}{\ttge}1\rbr, \ttlam]
+\end{alltt}
+\begin{alltt}
+        Assuming a\mysub{2}{\ttge}0
+        Assuming a\mysub{3}{\ttge}0
+\end{alltt}
+\Out{2}
+\[
+  \underset{\lam_1,\lam_2,\lam_3}{\Omegaop}
+  \frac{q}{\lambda_1 \big(1-\frac{q\,\lam_2}{\lam_3} \big) \big(1-\frac{q\,\lam_
+3}{\lam_1} \big)
+  \big(1-\frac{q\,\lam_1\,\lam_3}{\lam_2} \big)}
+\]
+\begin{alltt}
+\In{3} OR[%]
+\end{alltt}
+\begin{alltt}
+        Eliminating \ttlam\mysub{3}...
+        Eliminating \ttlam\mysub{2}...
+        Eliminating \ttlam\mysub{1}...
+\end{alltt}
+\Out{4}
+\[
+  \frac{q^{3}}{(1- q^2) (1- q^3) (1- q^4)}
+\]
+
+\medskip
+As already pointed out in~\cite{Andrews:MMPA2}, with Partition
+Analysis one is able to derive much more information. Namely,
+we can consider the full generating function
+\[
+S_3(x_1,x_2,x_3):=
+\sum\nolimits^*  x_1^{a_1} x_2^{a_2} x_3^{a_3},
+\]
+where $\sum^*$ denotes again the restricted summation over
+all positive integer triples
+$(a_1,a_2,a_3)$ satisfying $a_1 \leq a_2 \leq a_3$
+and  $a_1+a_2 > a_3$. On this expression we can
+carry out essentially the same Partition Analysis
+steps as above for obtaining a closed form expression for it.
+For the crude form one gets
+\begin{align*}
+S_3(x_1,x_2,x_3) & =  \Omegaop \sum_{a_1 \ge 1,~a_2,a_3 \ge 0}
+\lam_1^{a_2-a_1} \lam_2^{a_3-a_2} \lam_3^{a_1+a_2-a_3-1}
+x_1^{a_1} x_2^{a_2} x_3^{a_3} \\
+& = \Omegaop \frac{x_1 \lambda_1^{-1}}
+{\big(1- x_1 \frac{\lam_3}{\lam_1} \big)
+\big(1-x_2 \frac{\lam_1\lam_3}{\lam_2} \big)
+\big(1-x_3 \frac{\lam_2}{\lam_3} \big)}.
+\end{align*}
+
+Next by applying again rule~\eqref{ruleI},
+we eliminate successively $\lam_2$, $\lam_1$, and $\lam_3$
+as above and obtain
+\begin{align}
+\label{parameter form}
+S_3(x_1,x_2,x_3) & = \Omegaop \frac{x_1 \lam_1^{-1}}
+{\big(1- x_1 \frac{\lam_3}{\lam_1} \big)
+\big(1-\frac{x_3}{\lam_3} \big)
+(1-x_2 x_3 \lam_1)} \nonumber \\
+& = \Omegaop \frac{x_1 x_2 x_3}{(1- x_2 x_3)
+(1- x_1 x_2 x_3 \lam_3)
+\big(1-\frac{x_3}{\lam_3} \big)} \nonumber \\
+& =  \frac{x_1 x_2 x_3}{(1- x_2 x_3)
+(1- x_1 x_2 x_3)
+(1- x_1 x_2 x_3^2)}.
+\end{align}
+
+This not only generalizes the generating function $T_3(q)$,
+i.e.\ $T_3(q)=S_3(q,q,q)$, but gives rise also
+to a complete, parameterized solution of the underlying
+diophantine set of equations
+\[
+1 \leq a_1,\, a_1 \leq a_2 ,\, a_2 \leq a_3,
+\text{ and } a_1+a_2 > a_3.
+\]
+This can be seen by geometric series expansion of
+\eqref{parameter form}, namely
+\[
+S_3(x_1,x_2,x_3)=\sum_{n_1,n_2,n_3\ge 0}
+x_1^{n_2+n_3+1} x_2^{n_1+n_2+n_3+1} x_3^{n_1+n_2+2 n_3+1}.
+\]
+In other words, by choosing
+\[
+a_1 = n_2+n_3+1, a_2 = n_1+n_2+n_3+1,
+\text{ and } a_3=n_1+n_2+2 n_3+1,
+\]
+and running through all non-negative integers $n_1,n_2,n_3$,
+one constructs in a one-to-one fashion \textit{all} non-degenerate
+triangles with sides of integer size.
+
+\medskip
+In~\cite{APR:Omega3} we considered the following generalization
+of the triangle problem to $k$-gons where $k \ge 3$.
+
+\begin{definition} As the set of \textit{non-degenerate $k$-gon partitions
+into positive parts} we define
+\[
+\tau_k:=\{(a_1,\dots,a_k)\in \mathbb{Z}^k \mid
+1\leq a_1 \leq a_2 \leq \dots \leq a_k \text{ and }
+a_1+\dots +a_{k-1}> a_k \}.
+\]
+As the set of \textit{non-degenerate $k$-gon partitions of $n$ into positive
+parts} we define
+\[
+\tau_k(n):=\{(a_1,\dots,a_k)\in \tau_k \mid
+a_1+\dots + a_{k}=n \}.
+\]
+The corresponding cardinality is denoted by
+\[
+t_k(n):=| \tau_k(n) |.
+\]
+\end{definition}
+
+The term ``non-degenerate'' refers to the restriction to strict
+inequality, i.e.\ to $a_1+\dots +a_{k-1}> a_k$. In the form
+of~\eqref{cf 3} we computed a rational expression
+for $T_3(q)=\sum_{n\ge 3} t_3(n) q^n$.
+With the \texttt{Omega} package in hand, we are able to compute
+also the next cases in a purely mechanical manner. For instance,
+\begin{align} \label{T4}
+\sum_{n\ge 4} t_4(n) \, q^n & =
+\frac{q^4 (1+q+q^5)}{(1-q^2)(1-q^3)(1-q^4)(1-q^6)},\\
+\label{T5}
+\sum_{n\ge 5} t_5(n) \, q^n & =
+\frac{q^5(1-q^{11})}{(1-q)(1-q^2)(1-q^4)(1-q^5)(1-q^6)(1-q^8)},\\
+\intertext{and}
+\label{T6}
+\sum_{n\ge 6} t_6(n) \, q^n &=
+\frac{q^6(1-q^4+q^5+q^7-q^8-q^{13})}
+{(1-q)(1-q^2)(1-q^3)(1-q^4)(1-q^6)(1-q^8)(1-q^{10})}.
+\end{align}
+
+\medskip
+{}From these results we were able to derive a number
+of partition theoretical consequences.
+However, despite the fact that the particular instances of
+$\sum_{n \ge k} t_k(n) q^n$ can be computed so
+easily, we were not able to find a common underlying
+pattern. So we stated as an open problem:
+
+\begin{problem} \label{open}
+In view of the generating function representations
+\eqref{cf 3}, \eqref{T4}, \eqref{T5}, and \eqref{T6}: Is it
+possible to find a common pattern for all possible
+choices of~$k$?
+\end{problem}
+
+In Section~\ref{sec:genfu} we provide an affirmative answer to this
+problem. More precisely, we give closed form expressions
+for $T_k(q)$ as well as for the
+corresponding general version $S_k(x_1,\dots,x_k)$
+defined as follows:
+
+\begin{definition} For integer $k\ge 3$,
+\[
+T_k(q):= \sum_{n\ge k} t_k(n) \, q^n,
+\]
+and
+\[
+S_k(x_1,\dots,x_k):=
+\sum_{(a_1,\dots,a_k)\in \tau_k} x_1^{a_1}\cdots x_k^{a_k}.
+\]
+\end{definition}
+
+Finally, Section~\ref{sec:conclusion} provides some concluding remarks.
+
+
+\section{Generating Functions for $k$-Gon Partitions} \label{sec:genfu}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+In this section we prove the following main result for $k$-gon
+partitions.
+
+\begin{theorem} \label{thm:1}
+   Let $k \ge 3$ and $X_i = x_i \cdots x_k$ for $1 \le i \le k$.
+   Then
+   \begin{equation} \begin{split} \label{main}
+      & S_k(x_1,\dots,x_k) = \frac{X_1}{(1-X_1)(1-X_2)\cdots(1-X_k)} \\
+      & \quad - \frac{X_1 X_k^{k-2}}{1-X_k} \;
+      \frac{1}{(1-X_{k-1})(1-X_{k-2}X_k)(1-X_{k-3}X_k^2)
+      \cdots (1-X_1 X_k^{k-2})}.
+   \end{split}\end{equation}
+\end{theorem}
+
+Since $T_k(q)=S_k(q,\dots,q)$, Theorem~\ref{thm:1} implies the
+desired generating function representation.
+
+\begin{corollary} \label{cor:1}
+   For $k \ge 3$,
+   \begin{equation} \label{Tkq}
+      T_k(q) = \frac{q^k}{(1-q)(1-q^2)\cdots(1-q^k)}
+      - \frac{q^{2k-2}}{1-q} \;
+      \frac{1}{(1-q^2)(1-q^4) \cdots (1-q^{2k-2})}.
+   \end{equation}
+\end{corollary}
+
+\begin{remark}
+   It is easily verified that \eqref{Tkq} is bringing the
+   representations \eqref{cf 3}, \eqref{T4}, \eqref{T5}, and \eqref{T6}
+   of the special cases $k=3,4,5,6$ under one umbrella.
+\end{remark}
+
+We shall prove Theorem~\ref{thm:1} with Partition Analysis.
+To this end we first need the crude form of $S_k(x_1,\dots,x_k)$.
+
+\begin{proposition} \label{prop:2}
+   For $k \ge 3$,
+   \begin{equation}\begin{split} \label{SkO}
+      & S_k(x_1,\dots,x_k) \\
+      & \quad =
+      \Omegaop \frac{x_1 \lam_1^{-1}}
+      {\big(1-x_1 \frac{\lam_k}{\lam_1}\big)\big(1-x_2 \frac{\lam_1\lam_k}{\lam_
+2}\big)
+      \big(1-x_3 \frac{\lam_2\lam_k}{\lam_3}\big) \cdots
+      \big(1-x_{k-1} \frac{\lam_{k-2}\lam_k}{\lam_{k-1}}\big)
+      \big(1-x_k \frac{\lam_{k-1}}{\lam_k}\big)}.
+   \end{split}\end{equation}
+\end{proposition}
+
+\begin{proof}
+   For fixed integer $k \ge 3$,
+   \[
+     S_k(x_1,\dots,x_k) = \Omegaop \sum_{\substack{a_1 \ge 1 \\ a_2,\dots,a_k \g
+e 0}}
+     x_1^{a_1} \cdots x_k^{a_k} \lam_1^{a_2-a_1} \cdots
+     \lam_{k-1}^{a_k-a_{k-1}} \lam_k^{a_1+\dots+a_{k-1}-a_k-1}
+   \]
+   by the definition of $\Omegaop$. The rest follows by geometric series
+   summation.
+\end{proof}
+
+The next step is the successive elimination of $\lam_1, \lam_2, \dots, \lam_{k-1
+}$
+from the crude form~\eqref{SkO}.
+For this it is convenient to introduce a lemma.
+
+\begin{lemma} \label{lem:1}
+   Let $k \ge 3$ and let $y_1, \dots, y_k$ be free of
+   $\lam_1, \dots, \lam_{k-1}$. Then
+   \begin{align*}
+      & \Omegaop \frac{y_1 \lam_1^{-1}}
+      {\big(1-\frac{y_1}{\lam_1}\big)\big(1-y_2 \frac{\lam_1}{\lam_2}\big)
+      \cdots \big(1-y_{k-1} \frac{\lam_{k-2}}{\lam_{k-1}}\big)
+      (1-y_k \lam_{k-1})} \\
+      & \quad = \frac{y_1 \cdots y_k}{(1-y_k)(1-y_{k-1}y_k)\cdots
+      (1-y_1 \cdots y_k)}.
+   \end{align*}
+\end{lemma}
+
+\begin{proof}
+   We proceed by induction on $k$. For $k=3$,
+   \begin{align*}
+      & \Omegaop \frac{y_1 \lam_1^{-1}}
+      {\big(1-\frac{y_1}{\lam_1}\big)\big(1-y_2 \frac{\lam_1}{\lam_2}\big)
+      (1-y_3 \lam_2)} \\
+      & \quad = \Omegaop \frac{y_1 \lam_1^{-1}}
+      {\big(1-\frac{y_1}{\lam_1}\big) (1-y_3) (1-y_2 y_3 \lam_1)}
+      \tag{by \eqref{ruleI} with $s=0$}\\
+      & \quad = \frac{y_1 y_2 y_3} {(1-y_2 y_3) (1-y_3) (1-y_1 y_2 y_3)}
+      \tag{by \eqref{ruleI} with $s=1$}.
+   \end{align*}
+   For the induction step we apply again rule~\eqref{ruleI} with $s=0$,
+   \begin{align*}
+      & \Omegaop \frac{y_1 \lam_1^{-1}}
+      {\big(1-\frac{y_1}{\lam_1}\big)\big(1-y_2 \frac{\lam_1}{\lam_2}\big)
+      \cdots \big(1-y_{k-1} \frac{\lam_{k-2}}{\lam_{k-1}}\big)
+      \big(1-y_k \frac{\lam_{k-1}}{\lam_k}\big)
+      (1-y_{k+1} \lam_k)} \\
+      & \quad = \frac{1}{1-y_{k+1}} \; \Omegaop \frac{y_1 \lam_1^{-1}}
+      {\big(1-\frac{y_1}{\lam_1}\big)\big(1-y_2 \frac{\lam_1}{\lam_2}\big)
+      \cdots \big(1-y_{k-1} \frac{\lam_{k-2}}{\lam_{k-1}}\big)
+      (1-y_k y_{k+1} \lam_{k-1})} \\
+      & \quad = \frac{1}{1-y_{k+1}} \; \frac{y_1 \cdots y_{k+1}}
+      {(1-y_k y_{k+1}) (1-y_{k-1} y_k y_{k+1}) \cdots (1-y_1 \cdots y_{k+1})};
+   \end{align*}
+   for the last line we used the induction hypothesis.
+\end{proof}
+
+Now we are in the position to state the crude form of $S_k(x_1,\dots,x_k)$.
+
+\begin{proposition} \label{prop:3}
+   Let $k \ge 3$ and $X_i=x_i \cdots x_k$ for $1 \le i \le k$. Then
+   \begin{equation}\begin{split}\label{crude}
+      & S_k(x_1,\dots,x_k) \\
+      & \quad = \frac{X_1}{1-X_{k-1}} \; \Omegaop \frac{\lam_k^{k-3}}
+      {\big(1-\frac{X_k}{\lam_k}\big)(1-X_{k-2} \lam_k)
+      (1-X_{k-3} \lam_k^2)\cdots(1-X_1 \lam_k^{k-2})}.
+   \end{split}\end{equation}
+\end{proposition}
+
+\begin{proof}
+   By Proposition~\ref{prop:2},
+   \[
+     S_k(x_1,\dots,x_k) =
+     \Omegaop \frac{y_1 \lam_1^{-1} \lam_k}
+     {\big(1-\frac{y_1}{\lam_1}\big) \big(1-y_2 \frac{\lam_1}{\lam_2}\big)
+     \cdots \big(1-y_{k-1} \frac{\lam_{k-2}}{\lam_{k-1}}\big)
+     (1-y_k \lam_{k-1})},
+   \]
+   where $y_1=x_1 \lam_k, \dots, y_{k-1} = x_{k-1} \lam_k$ and
+   $y_k=x_k/\lam_k$.
+   By Lemma~\ref{lem:1} this is equal to
+   \[
+     \Omegaop \frac{x_1 \cdots x_k \lam_k^{k-3}}
+     {\big(1-\frac{x_k}{\lam_k}\big) (1-x_{k-1} x_k)
+     (1-x_{k-2} x_{k-1} x_k \lam_k) \cdots (1-x_1 \cdots x_k \lam_k^{k-2})}
+   \]
+   which is the right-hand side of~\eqref{crude}.
+\end{proof}
+
+In order to complete the proof of Theorem~\ref{thm:1} we need another
+elementary lemma;
+namely, the special case $m=1$, $k=1$, and $j_i=i$ of our reduction algorithm
+described in~\cite{APR:Omega6}.
+However, for the sake of better readability we state and prove it
+explicitly.
+
+\begin{lemma} \label{lem:2}
+   Let $k \ge 1$, $a \ge 0$, and let $y, y_1, \dots, y_k$ be
+   free of $\lam$. Then
+   \begin{equation}\begin{split} \label{red}
+      & \Omegaop \frac{\lam^a}{\big(1-\frac{y}{\lam}\big)
+      (1-y_1 \lam)(1-y_2 \lam^2) \cdots (1-y_k \lam^k)} \\
+      & \quad = \frac{1}{(1-y_1)\cdots(1-y_k)(1-y)} -
+      \frac{y^{a+1}}{(1-y_1 y)(1-y_2 y^2) \cdots (1-y_k y^k)(1-y)}.
+   \end{split}\end{equation}
+\end{lemma}
+
+\begin{remark}
+   Formula~\eqref{ruleII} of Proposition~\ref{prop:1} is the special case $k=1$.
+\end{remark}
+
+\begin{proof}
+   The left hand-side of~\eqref{red} equals
+   \begin{align*}
+      & \Omegaop \sum_{s_1,\dots,s_k \ge 0} \sum_{r \ge 0} y_1^{s_1}
+      \cdots y_k^{s_k} y^r \lam^{1 \cdot s_1 + 2 \cdot s_2 + \dots +
+      k \cdot s_k+a-r}\\
+      & \quad = \sum_{s_1,\dots,s_k \ge 0} y_1^{s_1} \cdots y_k^{s_k}
+      \sum_{r=0}^{1 \cdot s_1 + \dots + k \cdot s_k+a} y^r
+   \end{align*}
+   and the lemma follows by applying $\sum_{r=0}^m y^r =
+   (1-y^{m+1})/(1-y)$.
+\end{proof}
+
+Finally we come to the proof of Theorem~\ref{thm:1}.
+
+\begin{proof}[Proof of Theorem~\textup{\ref{thm:1}}]
+   By Proposition~\ref{prop:3},
+   \begin{align*}
+      & S_k(x_1,\dots,x_k) \\
+      & \quad = \frac{X_1}{1-X_{k-1}} \; \Omegaop \frac{\lam_k^{k-3}}
+      {\big(1-\frac{X_k}{\lam_k}\big)(1-X_{k-2} \lam_k)
+      (1-X_{k-3} \lam_k^2)\cdots(1-X_1 \lam_k^{k-2})}\\
+      & \quad = \frac{X_1}{1-X_{k-1}} \; \bigg( \frac{1}{(1-X_1)(1-X_2)
+      \cdots (1-X_{k-2})(1-X_k)}\\
+      & \hspace*{18ex} - \frac{X_k^{k-2}}{(1-X_{k-2}X_k)
+      (1-X_{k-3}X_k^2) \cdots (1-X_1 X_k^{k-2})(1-X_k)} \bigg),
+   \end{align*}
+   where the last equality is by Lemma~\ref{lem:2} with $a=k-3$
+   and $y=X_k, y_1=X_{k-2}, y_2=X_{k-3},\dots,y_{k-2}=X_1$.
+   This completes the proof of Theorem~\ref{thm:1}.
+\end{proof}
+
+
+\section{Conclusion} \label{sec:conclusion}
+%%%%%%%%%%%%%%%%%%%%
+
+As shown in a series of articles~\cite{APR:Omega3,APR:Omega6,APR:Omega7,APR:Omeg
+a8,APR:Omega5},
+Partition Analysis is ideally suited for being supplemented by
+computer algebra methods. In these papers the \textsf{Mathematica} package
+\texttt{Omega} which had been developed by the authors, was used as
+an essential tool.
+
+The \texttt{Omega} package played a crucial role also in
+discovering Theorem~\ref{thm:1} above. However, it is important to
+note that the computations \eqref{cf 3}, \eqref{T4}, \eqref{T5},
+and \eqref{T6} for $T_k(q)$ with $k=3,4,5,6$ have not led us
+to Theorem~\ref{thm:1}. Rather than this, the main point in the study
+of $k$-gon partitions
+was the careful \texttt{Omega} investigation of the full
+generating function $S_k(x_1,\dots,x_k)$; only in this generality
+the underlying pattern was finally revealed.
+
+Another remark concerns the constructive use of Theorem~\ref{thm:1}.
+As a matter of fact, formula~\eqref{main} can be used to
+\textit{construct} $k$-gon partitions in the same way as
+explained in the introduction
+with the special case~\eqref{parameter form}.
+
+In~\cite{Andrews:MMPA2} refinements of the base case $k=3$
+of Theorem~\ref{thm:1} and Corollary~\ref{cor:1} have been considered. We expect
+that experiments
+with the \texttt{Omega} package will lead to more general
+results in this direction.
+
+\renewcommand{\ttdefault}{cmtt}
+
+\begin{thebibliography}{99}
+
+\bibitem{GEA:77} G.E.~Andrews, \textit{A note on partitions
+   and triangles with integer sides}, Amer.\ Math.\ Monthly
+   {\bf 86} (1979), 477--478.
+
+\bibitem{Andrews:MMPA2}
+   \bysame,
+   \textit{MacMahon's partition analysis II:
+   Fundamental theorems}, Ann.~Comb. {\bf 4} (2000).
+
+\bibitem{APR:Omega3}
+   G.E.~Andrews, P.~Paule and A.~Riese, \textit{MacMahon's
+   partition analysis~III: The \texttt{Omega} package},
+   SFB Report \textbf{99-24}, J.~Kepler University, Linz, 1999.
+   (to appear)
+
+\bibitem{APR:Omega6}
+   \bysame, \textit{MacMahon's
+   partition analysis~VI: A new reduction algorithm},
+   SFB Report \textbf{01-4}, J.~Kepler University, Linz, 2001.
+   (to appear)
+
+\bibitem{APR:Omega7}
+   \bysame, \textit{MacMahon's
+   partition analysis~VII: Constrained compositions},
+   SFB Report \textbf{01-5}, J.~Kepler University, Linz, 2001.
+   (to appear)
+
+\bibitem{APR:Omega8}
+   \bysame, \textit{MacMahon's
+   partition analysis~VIII: Plane Partition Diamonds},
+   SFB Report \textbf{01-6}, J.~Kepler University, Linz, 2001.
+   (to appear)
+
+\bibitem{APR:Omega5}
+   G.E.~Andrews, P.~Paule, A.~Riese and V.~Strehl, \textit{MacMahon's
+   partition analysis~V: Bijections, recursions, and magic squares},
+   SFB Report \textbf{00-18}, J.~Kepler University, Linz, 2000.
+   (to appear)
+
+\bibitem{Honsberger} R.~Honsberger, \textit{Mathematical Gems III},
+   Math.~Assoc.\ of America, Washington, 1985.
+
+\bibitem{Jordan et al 1} J.H.~Jordan, R.~Walsh and R.J.~Wisner,
+   \textit{Triangles with integer sides}, Notices Amer.\ Math.\ Soc.\
+   {\bf 24} (1977), A-450.
+
+\bibitem{Jordan et al 2} J.H.~Jordan, R.~Walsh, and R.J.~Wisner,
+   \textit{Triangles with integer sides}, Amer.\ Math.\ Monthly
+   {\bf 86} (1979), 686--689.
+
+\bibitem{Liu} C.I.~Liu, \textit{Introduction to Combinatorial
+   Mathematics}, McGraw-Hill, New York, 1968.
+
+\bibitem{MacMahon:CA} P.A.~MacMahon, \textit{Combinatory Analysis}, 2~vols.,
+   Cambridge University Press, Cambridge, 1915--1916. (Reprinted: Chelsea,
+   New York, 1960)
+
+\bibitem{Stanley:BOOK} R.P.~Stanley, \textit{Enumerative Combinatorics --- Volum
+e~\textup{1}},
+   Wadsworth, Monterey, California, 1986.
+
+\end{thebibliography}
+
+\end{document}

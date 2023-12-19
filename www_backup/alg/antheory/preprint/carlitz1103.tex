@@ -1,0 +1,316 @@
+\documentclass[12pt] {article}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}{Corollary}
+\newcommand{\brackets}[3]{\genfrac {[}{]}{0pt}{}{#1}{#2}_{#3}}
+\numberwithin{equation}{section}
+\numberwithin{theorem}{section}
+\numberwithin{corollary}{section}
+
+\title{ Carlitz and the General $_3\phi_2$}
+
+\author{ by \\
+\\
+George E. Andrews 
+\footnote{Partially supported by National Science Foundation Grant DMS 0200047}
+\\
+Dedicated to my friend, Richard Askey}
+
+\begin{document}
+ \maketitle
+\vfil\eject
+
+\begin{abstract}  In a letter dated March 3, 1971, L. Carlitz defined a sequence of polynomials, $\Phi_n (a,b; x, y; z)$, generalizing the Al-Salam \& Carlitz polynomials, but closely related thereto.  He concluded the letter by stating: ``It would be of interest to find properties of $\Phi_n (a, b; x, y; z)$ when all the parameters are free.''  In this paper, we reproduce the Carlitz letter and show how a study of Carlitz's polynomials leads to a clearer understanding of the general $_3\Phi_2 (a, b, c; d; e; q, z)$.
+\end{abstract}
+
+\pagebreak
+
+\section{Introduction}  We begin with a letter of Carlitz dated March 3, 1971.  It is only slightly edited to add line numbers, relevent references and to standardize notation.  In particular, we write (following the notation of [3] and [4]) 
+\begin{equation}
+(A)_n = (A; q)_n = (1-A) (1-Aq) \cdots (1-Aq^{n-1}); 
+\end{equation}
+
+\begin{equation}
+(A)_{\infty} = \frac1{e(A)} = \prod^{\infty}_{n=0} (1-Aq^n)
+\end{equation}
+
+\begin{equation}
+ \brackets {A}  {B}  {}  = 
+\begin{cases} 0 \quad  \text{if} \ B < 0 \quad \text{or} \quad B > A \\
+\frac{(q)_A}{(q)_B (q)_{A-B}} \ , \quad \text{otherwise};
+\end{cases}
+\end{equation}
+
+\begin{equation}
+H_n (x) = \sum^n_{j=0} \brackets{n} { j}  {} x^j;
+\end{equation}
+
+\begin{equation}
+\Phi^{(a)}_n (x) = \sum^n_{j=0}  \brackets{n} {j} {}  (a)_j x^j,
+\end{equation}
+
+
+\begin{equation}
+_{r+1}\ \Phi_r {} { a_0, a_1, \ldots, a_r; q_z, \choose  b_1, \ldots, b_r} \ = \ 
+\sum^{\infty}_{n=0} \frac{(a_0)_n (a_1)_n \cdots (a_r)_n z^n}{(q)_n (b_1)_n \cdots (b_r)_n}
+\end{equation}
+
+
+The letter now follows:
+
+\begin{flushright} March 3, 1971 
+\end{flushright}
+
+ \medskip
+
+\begin{flushleft}
+Dear Andrews:
+\end{flushleft}
+
+\indent I have recently been wondering about the relationship of your formula \cite[Th. 1]{Andrews1}
+\begin{equation}
+\sum^{\infty}_{m, n=0} \frac{(a)_{m+n} (b)_m (b')_n x^m y^n}{(q)_m (q)_n (c)_{m+n}} \ = \ \frac{e (c) e (x) e (y)}{e(a) e(bx) e(b'y)} \ _3\Phi_2 \brackets{c/a, x, y; a}  {bx, b'y} {}
+\end{equation}
+to a formula proved by Al-Salam and myself in [1].  The formula in question ((1.17) of the paper) is
+\begin{equation}
+\sum^{\infty}_{n=0} \Phi^{(a)}_n (x) \Phi^{(b)}_n (y) 
+\frac{w^n}{(q)_n} = \frac{e (w) e(xw) e (yw)}{e (axw) e (byw)}\ _3\Phi_2 
+\brackets{a, b, w; xyw}  {axw, byw} {}.
+\end{equation}
+Note that the $_3\Phi_2$ in (1.7) has six parameters (not counting $q$) while the $_3 \Phi_2$ in (1.8) has only five.
+
+If we apply (1.7) to (1.8) we get after a little manipulation
+\begin{align}
+\sum^{\infty}_{n=0} & \Phi^{(a)}_n (x) \Phi^{(b)}_n (y) \frac{w^n}{(q)_n}\notag \\
+&= \frac{e (w) e (xw) e (yw) e (xyw)}{e (a) e (b) e (xyw^2)} 
+\sum^{\infty}_{m, n=0} \frac{(xw)_m  (yw)_n  (xyw)_{m+n}}{(q)_m (q)_n (xyw^2)_{m+n}} \ a^m b^n,
+\end{align}
+which is an interesting variant of (1.8).  Moreover the proof of this formula suggests that we put
+\begin{align}
+\frac{e (w) e(xw) e (yw) e (zw)}{e (a) e (b) e (zw^2)} 
+& \sum^{\infty}_{m, n=0} \frac{(xw)_m  (yw)_n  (zw)_{m+n}}{(q)_m (q)_n (zw^2)_{m+n}} a^m b^n \notag \\
+& = \frac{e(w)e (xw) e (yw)}{e(axw)e (byw)}\ _3\Phi_2 \brackets{a, b, w; zw}  
+{axw, byw} {} \\
+& = \sum^{\infty}_{n=0} \frac{w^n}{(q)_n} \Phi_n (a, b; x, y; z),\notag
+\end{align}
+thus defining a polynomial $\Phi_n (a, b; x, y; z)$.  Comparison of (1.10) with (1.8) gives
+\begin{equation}
+\Phi_n (a, b; x, y; xy) = \Phi^{(a)}_n (x) \Phi^{(b)}_n (y).
+\end{equation}
+
+For $a = b= 0$, (1.8) reduces to
+\begin{equation}
+\sum^{\infty}_{n=0} H_n (x) H_n(y) \frac{w^n}{(q)_n} \ = \ 
+\frac{e(w) e (xw) e(yw) e(xyw)}{e(xyw^2)},
+\end{equation}
+a formula that I mentioned when you were in Durham last spring (cf. \cite[p. 50, ex.9]{Andrews2}).  Taking $a=b=0$ in (1.10)) we get
+\begin{equation}
+\sum^{\infty}_{n=0} \frac{w^n}{(q)_n} \Phi_n (0,0; x,y;z)\ = \ 
+\frac{e(w) e (xw) e(yw) e(zw)}{e(zw^2)}.
+\end{equation}
+This does not suggest anything simple unless $z=xy$.
+
+It would be of interest to find properties of
+$$
+\Phi_n (a,b; x,y;z)
+$$
+when all parameters are free.  Incidentally
+\begin{equation}
+\Phi_n (a,b; 0,0;z) \ = \ \sum^n_{k=0} \brackets{n}{k} {} q^{k(n-k)}(a)_k(b)_k z^k.
+\end{equation}
+
+\begin{flushleft}
+With best regards. \\
+\medskip 
+Sincerely yours, \\
+\medskip
+L. Carlitz
+\end{flushleft}
+
+Obviously Carlitz was intrigued by the fact that the $q$-exponential generating function for $\Phi_n (a, b; x, y; z)$ is effectively the completely general $_3\Phi_2$ with six free parameters.  Thus properties of $\Phi_n (a, b; x, y;z)$ are equivalent to properties of the general $_3\Phi_2$.
+
+Now it is quite familiar that the $_3\Phi_2$ restricted to five free parameters has numerous useful transformations.  For example, \cite[p. 241, eq(III.10)]{Gasper},
+\begin{equation}
+_3\Phi_2 {} {a,b,c; \frac{de}{abc} \choose d,e} \ = \ \frac{(b)_{\infty} \left(\frac{de}{ab}\right)_{\infty} \left(\frac{de}{bc}\right)_{\infty}}{(d)_{\infty} (e)_{\infty}\left(\frac{de}{abc}\right)_{\infty}} \ _3\Phi_2 {} {\frac{d}b, \frac{e}b, \frac{de}{abc}; b \choose \frac{de}{ab}, \frac{de}{bc}}.
+\end{equation}
+But none are known for the $_3\Phi_2$ with six free parameters.
+
+In Section 2, we present a triple sum representation for Carlitz's $\Phi_n (a, b; x, y;z)$ as well as one for a very similar polynomial $\Psi_n (a,b; x,y;z)$.  Section 3 provides an explicit connection between these two polynomial sequences and the Al-Salam \& Carlitz polynomials.  Section 4 describes how the relationship between $\Phi_n (a,b; x,y;z)$ and $\Psi_n (a,b; x,y;z)$ is a generalization of (1.15) above.
+
+\section{A Representation of $\Phi_N (a,b; x, y; z)$}
+
+\begin{theorem}
+\begin{equation}
+\Phi_N (a,b; x,y; z) = (q)_N \underset{\underset{n+j+k\leqq N}{n,j,k \geqq 0}}
+\sum \ \frac{(a)_{n+j} (b)_{n+k} x^j y^k z^n q^{n(N-j-k-n)}}{(q)_n (q)_j (q)_k (q)_{N-n-j-k}}.
+\end{equation}
+\end{theorem}
+
+\begin{proof}
+By (1.10),
+\begin{align*}
+\frac{\Phi_N (a,b;x,y;z)}{(q)_N} & = \text{coeff of } w^N \ \text{in} \\
+ & \sum^{\infty}_{n=0} \frac{(a)_n (b)_n (zw)^n}{(q)_n} \ 
+\frac{(axwq^n)_{\infty}}{(xw)_{\infty}} \ \frac{(bywq^n)_{\infty}}{(yw)_{\infty}} \frac1{(wq^n)_{\infty}} \\ 
+& = \text{coeff of }  w^N  \text{in} \\ 
+& \sum^{\infty}_{n=0} \frac{(a)_n (b)_n z^n w^n}{(q)_n}  \sum^{\infty}_{j=0}  
+\frac{(aq^n)_j x^j w^j}{(q)_j} \\ 
+&  \sum^{\infty}_{k=0}  \frac{(bq^n)_k y^k w^k}{(q)_k} \sum^{\infty}_{s=0}  \frac{w^s q^{ns}}{(q)_s} 
+\end{align*}
+by \cite[p. 7, eq. (1.3.2)]{Gasper}.  So to get $w^N$ we need $n+j+k+s = N$.  Eliminating $s$, we find
+\begin{equation*}
+\frac{\Phi_N (a,b;x,y;z)}{(q)_N} = \sum_{n,j,k \geqq 0} 
+\frac{(a)_{n+j} (b)_{n+k} x^j y^k z^n q^{n(N-n-j-k)}}{(q)_n (q)_j (q)_k (q)_{N-n-j-k}}
+\end{equation*}
+\end{proof}
+
+Now there is a very similar polynomial $\Psi_n (a,b;x,y;z)$ which will play an important role in subsequent sections and which we define here.
+\begin{equation}
+\Psi_N (a,b; x,y; z) = (q)_N \underset{\underset{n+j+k\leqq N}{n,j,k \geqq 0}}
+\sum \ \frac{(a)_{n+j} (b)_{n+k} x^j y^k z^n q^{jk}}{(q)_n (q)_j (q)_k (q)_{N-n-j-k}}.
+\end{equation}
+
+$\Psi_N (a,b; x,y;z)$ has a generating function closely related to that of $\Phi_N (a,b;x,y;z)$ as we shall see in Section 4.
+
+\section{$\Phi_N (a,b;x,y;z), \Psi_N (a,b;x,y;z)$ and the Al-Salam-Carlitz Polynomials}
+
+Both $\Phi_N (a,b;x,y;z)$ and $\Psi_N (a,b;x,y;z)$ satisfy (1.11).  This will be an immediate consequence of the following result.
+
+\begin{theorem}
+\begin{align}
+&\sum_{0\leqq 2h \leqq N}  \frac{(a)_h (b)_h (q)_N}{(q)_h (q)_{N-2h}} z^h \left(\frac{xy}z\right)_h \Phi_{N-2h} (aq^h, bq^h; x,y;z) \notag \\
+& = \sum^N_{i=0} (a)_i (b)_i \Phi_{N-i}^{(aq^i)} (x) \Phi^{(bq^i)}_{N-i} (y) 
+\brackets{N}{i}{} z^i \left(\frac{xy}z\right)_i \notag  \\
+&= \Psi_N (a,b; x,y;z). \notag 
+\end{align}
+\end{theorem}
+
+\begin{proof}
+We shall show that each of the first two lines equals $\Psi_N (a,b; x,y;z)$.  By (2.2) we know that the coefficient of $x^j y^k z^n$ in $\Psi_N (a,b; x,y;z)$ is
+\begin{equation}
+\frac{(q)_N (a)_{n+j} (b)_{n+k} q^{jk}}{(q)_n (q)_j (q)_k (q)_{N-n-j-k}}.
+\end{equation}
+
+Let us now determine the same coefficient in the first line of Theorem 3.1.  Invoking the $q$-binomial theorem \cite[p. 9, eq. (1.3.14)]{Gasper}, we see that
+\begin{align}
+\sum_{0\leqq 2h \leqq N} \ 
+& \frac{(a)_h (b)_h (q)_N}{(q)_h (q)_{N-2h}} z^h
+\left(\frac{xy}{z} \right)_h \Phi_{N-2h} (aq^h, bq^h; x,y;z)
+\notag \\
+& = \sum_{0 \leqq 2h \leqq N} \frac{(a)_h (b)_h (q)_N}{(q)_h (q)_{N-2h}} \ z^h \ \sum_{s \geqq 0} \ \brackets{h}{s}{} (-1)^s q^{s \choose 2} x^s y^s z^{-s}  \notag \\
+ & \quad (q)_{N-2h} \underset{\underset{n+j+k \leqq N-2h}{n,j,k \geqq 0}}\sum \ \frac{(aq^h)_{n+j} (bq^h)_{n+k} x^j y^k z^n q^{n(N-2h-j-k-n)}}{(q)_n (q)_j (q)_k (q)_{N-2h-n-j-k}} \\
+& = \underset{\underset{j+k+n \leqq N}{j,k,n \geqq 0}} \sum \ x^j y^k z^n (a)_{n+j} (b)_{n+k} (q)_N \notag \\
+& \quad \sum_{s,h \geqq 0} \ \frac{(-1)^s q^{{s \choose 2} + (i+s-h)(N-h-j-k-i+s)}}{(q)_s (q)_{n-s} (q)_{i+s-h} (q)_{j-s} (q)_{k-s} (q)_{N-h-i-j-k+s}} \notag
+\end{align}
+(where we have replaced $j$ by $j-s$, $k$ by $k-s$ and $n$ by $n+s-h$ and where we let $1/(q)_{-M}=0$ for any positive integer $M$).
+
+We now examine the inner sum on $s$ and $h$.
+
+We note that the sum on $s$ is summable by the second $q$-Chu-Vandermonde summation \cite[p. 236, eq. (II. 7)]{Gasper}.  Hence the inner sum in (3.2) is equal to 
+\begin{equation}
+\frac{q^{jk}}{(q)_k (q)_j} \ \sum_{h\geqq 0} 
+\frac{q^{(i-h)(N-h-j-k-i)}}{(q)_h (q)_{i-h} (q)_{N-h-i-j-k}} \ = \ 
+\frac{q^{jk}}{(q)_i (q)_j (q)_k (q)_{N-i-j-k}}, 
+\end{equation}
+by the other $q$-Chu-Vandermonde summation \cite[p. 236, eq. (II. 6)]{Gasper}.  If we now replace the inner $s,h$ sum in (3.2) by the final expression (3.3) we see that (3.2) reduces to $\Psi_N (a,b; x,y;z)$ as desired.
+
+Finally we consider the second line in Theorem 3.1.  Again we invoke the $q$-binomial theorem \cite[p. 9, eq. (1.3.14)]{Gasper}
+\begin{align*}
+\sum^{N}_{i=0} &(a)_i (b)_i \sum^{N-i}_{j=0} \brackets{N-i}{j} {} (aq^i)_j x^j \sum^{N-i}_{k=0} \brackets{N-i}{k} {} (bq^i)_k y^k \brackets{N}{i} {}  \\ 
+& \qquad z^i \sum^i_{s=0} \brackets{i}{s} {} (-1)^s q^{s \choose 2} x^s y^s z^{-s}\\
+& = \sum_{j,k,s,i \geqq 0} (a)_{i+j} (b)_{i+j} \brackets{N-i}{j}{}\brackets{N-i}{k}{} \brackets{N}{i}{}\brackets{i}{s}{} (-1)^s q^{s \choose 2} x^{j+s} y^{k+s} z^{i-s} \\
+& = \sum_{i,j,k \geqq 0} (a)_{i+j} (b)_{i+k} x^j y^k z^i \sum_{s\geqq 0} 
+\brackets{N-i-s}{j-s}{}\brackets{N-i-s}{k-s}{} \brackets{N}{i+s}{}\brackets{i+s}{s}{} (-1)^s q^{s \choose 2} \\
+& = \sum_{i,j,k \geqq 0} \ \frac{(a)_{i+j} (b)_{i+k} x^j y^k z^i q^{jk} (q)_N}{(q)_i (q)_j (q)_k (q)_{N-i-j-k}}, 
+\end{align*}
+where the inner $s$-sum has been summed by the second $q$-Chu-Vandermonde summation \cite[p. 236, eq. (II. 7)]{Gasper}.  Again we have $\Psi_N (a,b; x,y;z)$, and Theorem 3.1 is proved.
+\end{proof}
+
+\begin{corollary}
+$$
+\Phi_N (a,b;x,y;xy) = \Psi_N (a,b; x,y;xy) = \Phi_N^{(a)} (x) \Phi^{(b)}_N (y).
+$$
+\end{corollary}
+
+\begin{proof}
+Set $z = xy$ in Theorem 3.1 and note that each term in each of the first two lines vanishes except for $h=0$.
+\end{proof}
+
+\section{Generalizing (1.15)}
+
+We now need the generating function for $\Psi_N (a,b; x,y;z)$.
+
+\begin{theorem}
+$$
+\sum_{N\geqq 0} \frac{\Psi_N (a,b;x,y;z)}{(q)_N} w^N = \frac{(a)_{\infty} (bzw)_{\infty} (xyw^2)_{\infty}}{(w)_{\infty} (yw)_{\infty}(zw)_{\infty} (xw)_{\infty}}\  _3\phi_2 {\frac{bwy}a, zw, xw;q,a \choose bzw, xyw^2} .
+$$
+\end{theorem}
+
+\begin{proof}
+$\underset{N\geqq 0}\sum \frac{\Psi_n (a,b; x,y;z) w^N}{(q)_N}$  
+\begin{align*}
+&= \sum_{N,i,j,k \geqq 0} \frac{(a)_{i+j} (b)_{i+k} z^i y^k x^j q^{jk} w^{N+i+j+k}}{(q)_i (q)_j (q)_k (q)_N} \\
+&= \frac1{(w)}_{\infty} \sum_{i,j \geqq 0} \frac{(a)_{i+j} (b)_i z^i x^j w^{i+j}}{(q)_i (q)_j} \,  \frac{(bwyq^{i+j})_{\infty}}{(ywq^j)_{\infty}} \\
+& (\text{by two applications of} \quad  \cite[ p. 7, eq. (1.3.2)]{Gasper}) \\
+& = \frac{(bwy)_{\infty}}{(w)_{\infty} (yw)_{\infty}} \sum_{i,j \geqq 0} \frac{(b)_i (yw)_j (zw)^i (xw)^j (a)_{i+j}}{(q)_i (q)_j (bwy)_{i+j}} \\
+&= \frac{(a)_{\infty} (bzw)_{\infty} (xyw^2)_{\infty}}{(w)_{\infty}(yw)_{\infty} (zw)_{\infty} (xw)_{\infty}} \  _3\phi_2 {\frac{bwy}a, zw, xw; q,a \choose bzw, xyw^2} \\
+&  (\text{by} \quad \cite[p. 618, Th. 1]{Andrews1} \ \ ).
+\end{align*}
+\end{proof}
+
+Now by Corollary 3.2, we know that the generating function for $\Phi_N (a,b;x,y;xy)$ and $\Psi_N (a,b;x,y;xy)$ must be identical.  Hence we have
+\begin{align}
+&\frac{(a)_{\infty} (bxyw)_{\infty} (xyw^2)_{\infty}}{(w)_{\infty}(yw)_{\infty} (xyw)_{\infty} (xw)_{\infty}}\ _3\phi_2 {\frac{bwy}a, xyw, xw; q,a \choose bxyw, xyw^2} \notag \\
+&= \frac{(axw)_{\infty} (byw)_{\infty}}{(w)_{\infty}(xw)_{\infty} (yw)_{\infty}}\  _3\phi_2 {a, b, w; q, xyw \choose axw, byw}
+\end{align}
+
+But (4.1) is merely identity (1.15) in full generality after cancellation of common products and appropriate change of variable.
+
+\section{Conclusion}
+
+The point of this paper is the observation that Theorem 3.1 may be viewed as the true generalization of (1.15) to six free parameters.  With this in mind, it would be interesting to obtain a full six parameter understanding of the classical five parameter transformations of the $_3\phi_2$ series.
+
+Also we should note that $\Psi_N (a,b;x,y;z)$ is a natural polynomial generalization of a special case of the first $q$-Appell function \cite[p. 618]{Andrews1}, 
+$$
+\Phi^{(1)} \left[a;b,b'; c;x,y\right] = \sum_{m,n \geqq 0} \frac{(a)_{m+n} (b)_m (b')_n x^m y^n}{(q)_m (q)_n (c)_{m+n}}.
+$$
+This is easily seen because by (2.2)
+\begin{align*}
+\lim_{N\to\infty} & \Psi_N (a,b; x,y;z) \\
+&= \sum_{n,j,k \geqq 0} \frac{(a)_{n+j} (b)_{n+k} x^j y^k z^n q^{jk}}{(q)_n (q)_j (q)_k} \\
+&= \sum_{n,j \geqq 0} \frac{(a)_{n+j} (b)_n x^j  z^n} {(q)_n (q)_j} 
+\sum_{k \geqq 0} \frac{(bq^n)_k y^k  q^{jk}}{(q)_k} \\
+&= \sum_{n,j \geqq 0} \frac{(a)_{n+j} (b)_n x^j z^n (byq^{n+j})_{\infty}}{(q)_n (q)_j (yq^j)_{\infty}} \\
+&=  \frac{(by)_{\infty}}{(y)_{\infty}} \Phi^{(1)} \left[a;b,y; by;z,x\right],\\
+\text{and this last expression} \\
+& = \frac{(a)_{\infty} (bz)_{\infty}(yx)_{\infty}}{(y)_{\infty}(z)_{\infty}(x)_{\infty}} \ _3\phi_2 {\frac{by}a, x,z; q,a \choose bz, yx} \\
+\text{by \cite[Th. 1]{Andrews1}}.
+\end{align*}
+
+\begin{thebibliography}{99}
+
+\bibitem{Al-Salam} W. Al-Salam and L. Carlitz. Some $q$-orthogonal polynomials, Math. Nach., 30(1965), 47-61
+
+\bibitem{Andrews1} G.E. Andrews. {\it Summations and transformations for basic Appell series}, J. London Math. Soc. (2), 4(1972), 618-622
+
+\bibitem{Andrews2} G.E. Andrews. {\it The Theory of Partitions}, Encyl. of Math. and Its Appl., Vol. 2, Addison-Wesley, Reading, 1976 (reissued: Cambridge University Press, Cambridge 1985, 1998)
+
+\bibitem{Gasper} G. Gasper and M. Rahman, {Basic Hypergeometric Series}, Encyl. of Math. and Its Appl., Vol. 35, Cambridge University Press, Cambridge, 1990
+
+\end{thebibliography}
+
+\begin{flushleft}
+The Pennsylvania State University \\
+University Park, Pennsylvania 16802  \\
+andrews@math.psu.edu
+\end{flushleft}
+
+
+\end{document}
+
+
+

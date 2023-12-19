@@ -1,0 +1,1128 @@
+
+\documentclass{amsart}
+\usepackage{amssymb}
+%\vfuzz2pt 
+
+\newtheorem{thm}{Theorem}[section]
+\newtheorem{cor}[thm]{Corollary}
+\newtheorem{con}[thm]{Conjecture}
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem{defn}[thm]{Definition}
+\newtheorem{qst}{Question}{}
+\newtheorem{idt}{Identity}
+%\renewcommand{\thethm}{}  % not numbered
+\theoremstyle{remark}
+\newtheorem{rem}{Remark}
+\newtheorem{examp}{Example}
+
+%\renewcommand{\therem}{}  % not numbered
+%\numberwithin{equation}{section}
+\DeclareMathOperator{\RE}{Re}
+\DeclareMathOperator{\IM}{Im}
+\DeclareMathOperator{\ess}{ess}
+\newcommand{\eps}{\varepsilon}
+\newcommand{\To}{\longrightarrow}
+\newcommand{\h}{\mathcal{H}}
+\newcommand{\s}{\mathcal{S}}
+\newcommand{\A}{\mathcal{A}}
+\newcommand{\J}{\mathcal{J}}
+\newcommand{\M}{\mathcal{M}}
+\newcommand{\W}{\mathcal{W}}
+\newcommand{\X}{\mathcal{X}}
+\newcommand{\BOP}{\mathbf{B}}
+\newcommand{\BH}{\mathbf{B}(\mathcal{H})}
+\newcommand{\KH}{\mathcal{K}(\mathcal{H})}
+\newcommand{\Real}{\mathbb{R}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Complex}{\mathbb{C}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\Field}{\mathbb{F}}
+\newcommand{\RPlus}{\Real^{+}}
+\newcommand{\Polar}{\mathcal{P}_{\s}}
+\newcommand{\Poly}{\mathcal{P}(E)}
+\newcommand{\EssD}{\mathcal{D}}
+\newcommand{\Lom}{\mathcal{L}}
+\newcommand{\States}{\mathcal{T}}
+\newcommand{\N}{{\mathbb N}}
+\newcommand{\Z}{{\mathbb Z}}
+\newcommand{\abs}[1]{\left\vert#1\right\vert}
+\newcommand{\set}[1]{\left\{#1\right\}}
+\newcommand{\seq}[1]{\left<#1\right>}
+\newcommand{\norm}[1]{\left\Vert#1\right\Vert}
+\newcommand{\qp}[2]{(#1)_{#2}}
+\newcommand{\essnorm}[1]{\norm{#1}_{\ess}}
+
+%\newcommand{\proof}[1]{\noindent{\bf Proof#1:\  }}
+\newcommand{\QED}{\hfill {\bf q.e.d.} \medskip}
+%\renewcommand{\baselinestretch}{1.3}
+
+\def \parag { \hspace{-0,65cm} }
+\def \eqskip { \vspace*{2mm} }
+\def \disps {\displaystyle}
+
+\newcommand{\al}{{\alpha}}
+\newcommand{\Al}{{\Alpha}}
+\newcommand{\be}{{\beta}}
+\newcommand{\Be}{{\Beta}}
+\newcommand{\Sig}{{\Sigma}}
+\newcommand{\Om}{{\Omega}}
+\newcommand{\om}{{\omega}}
+\newcommand{\de}{{\delta}}
+\newcommand{\De}{{\Delta}}
+\newcommand{\ga}{{\gamma}}
+\newcommand{\Ga}{{\Gamma}}
+\newcommand{\ka}{{\kappa}}
+\newcommand{\la}{{\lambda}}
+\newcommand{\si}{{\sigma}}
+\newcommand{\La}{{\Lambda}}
+\newcommand{\Emb}{{\it Emb}}
+\newcommand{\io}{{\iota}}
+\newcommand{\Si}{{\Sigma}}
+
+%%%% Modifiquei fun¡ies. \operatorname! (JPM)
+\newcommand{\atan}{\operatorname{atan}}
+\newcommand{\atanh}{\operatorname{atanh}}
+\newcommand{\poly}{\operatorname{Li}}
+\newcommand{\conjug}{\overline}
+\newcommand{\di}{\operatorname{diag}}
+\newcommand{\dist}{\operatorname{dist}}
+\newcommand{\diam}{\operatorname{diam}}
+\newcommand{\ds}{\displaystyle}
+\newcommand{\dsum}{\ds\sum}
+\newcommand{\dprod}{\ds\prod}
+\newcommand{\ep}{$\Box$}
+\newcommand{\formsk}{\vspace*{1mm}}
+\newcommand{\im}{{\sqrt{-1}}}
+\newcommand{\intom}{\int_{\Omega}}
+\newcommand{\intdo}{\int_{\partial\Omega}}
+\newcommand{\lla}{L(\lambda)}
+\newcommand{\nz}{\normalsize}
+\newcommand{\ov}{\overline}
+\newcommand{\op}{{\overline{\partial}}}
+\newcommand{\p}{{\partial}}
+\newcommand{\pp}{\mathcal{P}_{p}}
+\newcommand{\vdo}{|\partial\Omega|}
+\newcommand{\vo}{|\Omega|}
+\newcommand{\va}{\mathcal{B}}
+\newcommand{\sa}{\mathcal{S}}
+
+\begin{document}
+
+\title{Extension of Abel's Lemma with $q-$series implications}
+
+\author{George E. Andrews and Pedro Freitas}
+
+\address{Department of Mathematics, Penn State University, 
+University Park, Pennsylvania 16802, USA}
+\email{andrews@math.psu.edu}
+\address{Departamento de Matem\'{a}tica, Instituto Superior 
+T\'{e}cnico,
+Av.Rovisco Pais, 1049-001 Lisboa, Portugal}
+\email{pfreitas@math.ist.utl.pt}
+\thanks{The first author was partially supported by NSF grant 
+DMS--$0200047$. The second author was partially supported by FCT, Portugal, 
+through program POCTI}
+
+\subjclass{}
+
+\keywords{}
+
+\date{\today}
+
+\dedicatory{}
+
+%%% ----------------------------------------------------------------------
+
+\begin{abstract}
+In previous work arising from the study of Ramanujan's Lost Notebook, 
+a new Abel type lemma was proved. In this paper, we discuss 
+extensions of this lemma and use it to prove many $q-$series identities.
+\end{abstract}
+
+%%% ----------------------------------------------------------------------
+\maketitle
+%%% ----------------------------------------------------------------------
+
+\section{Introduction}
+
+In the middle of page 14 of the published version of Ramanujan's Lost 
+Notebook~\cite{rama}, there appears the following three assertions 
+(rewritten in compact notation):
+
+``If $S=\dprod_{n=1}^{\infty} (1+q^{n}),$ then
+\[
+\begin{array}{lll}
+\dsum_{n=0}^{\infty}\frac{\ds q^{n(n+1)/2}}{\ds (-q;q)_{n}} & = &
+1+q\dsum_{n=0}^{\infty}(-1)^{n}q^{n}(q;q)_{n}\eqskip\\
+& = & 2\left\{ \frac{\ds 1}{\ds 2} 
+S+\dsum_{n=0}^{\infty}\left[S-(-q;q)_{n}\right]\right\}
+-2S\dsum_{n=1}^{\infty}\frac{\ds q^{n}}{\ds 1-q^{n}}\eqskip\\
+&=& 2\left\{ \frac{\ds 1}{\ds 2} 
+S+\dsum_{n=0}^{\infty}\left[S-\frac{\ds 1}{\ds (q;q^{2})_{n+1}}\right]\right\}-
+2S\dsum_{n=1}^{\infty}\frac{\ds q^{2n}}{\ds 1-q^{2n}}.''
+\end{array}
+\]
+Here we utilize the notation
+\[
+\left(A\right)_{n}= \left(A;q\right)_{n} = 
+(1-A)(1-Aq)\ldots(1-Aq^{n-1}).
+\]
+
+The first published proof of these results occurs in~\cite{andr} and 
+is nearly as odd as the original identities themselves. Subsequently, 
+in~\cite{ajo}, an underlying lemma of Abel type was discovered which 
+yields not only Ramanujan's results but a variety of simila bizarre 
+identities with interesting applications to $L-$function evaluations.
+
+The result in question is the following~(\cite{ajo}; p. 403):
+
+\begin{prop} \label{propajo}
+    Suppose that
+    \[
+    f(z) = \sum_{n=0}^{\infty} \alpha_{n}z^{n}
+    \]
+    is analytic for $|z|<1$. If $\alpha$ is a complex number for which
+    \begin{itemize}
+	\item[(i)] $ \dsum_{n=0}^{\infty}\left(\alpha-\alpha_{n}\right)
+	<+\infty,\eqskip
+	$
+	\item[(ii)] ${\ds \lim_{n\to+\infty}} n(\alpha-\alpha_{n})=0,
+	$
+    \end{itemize}
+    then
+    \[
+    \lim_{z\to 1^{-}}\frac{\ds d}{\ds dz}(1-z)f(z) = 
+    \dsum_{n=0}^{\infty}\left(\alpha-\alpha_{n}\right).
+    \]
+\end{prop}
+
+Following up on the utility of this result, Coogan, Lovejoy and 
+Ono~\cite{coog,coon,loon} have found further applications and 
+extensions.
+
+In this paper, we shall consider a different extension of the above 
+result in which the first derivative is replaced by the $p^{\rm th}$ 
+derivative. Namely
+\begin{prop} \label{pextension}
+    Let
+    \[
+    f(z) = \sum_{n=0}^{\infty} \alpha_{n}z^{n}
+    \]
+    be analytic for $|z|<1$, and assume that for some positive integer 
+    $p$ we have that
+    \begin{itemize}
+	\item[(i)] \label{condi}\[ \sum_{n=0}^{\infty}\left[\prod_{j=1}^{p}(n+j)
+	\right]
+	(\alpha_{n+p}-\alpha_{n+p-1})\] converges;
+	\item[(ii)] \[ \sum_{n=0}^{\infty}\left[\prod_{j=1}^{p-1}(n+j)\right]
+	(\alpha-\alpha_{n+p-1})\] converges, where $\alpha$ is a fixed 
+	complex number such that
+	\item[(iii)] \[ 
+	\lim_{n\to\infty}\left[\prod_{j=1}^{p}(n+j)\right](\alpha_{n+p}-\alpha) = 0.
+	\]
+    \end{itemize}
+    Then
+    \[
+    \frac{\disps 1}{\disps p}\lim_{z\to 1^{-}}\left\{\frac{\disps 
+    d^{p}}{\disps d z^{p}}\left[(1-z)f(z)\right]\right\} = 
+    \sum_{n=0}^{\infty}
+    \left[\prod_{j=1}^{p-1}(n+j)\right](\alpha-\alpha_{n+p-1}).
+    \]
+\end{prop}
+
+In Section~\ref{prel} we shall prove this propostion along with some related 
+results that will prove useful in our application of 
+Proposition~\ref{pextension}. 
+In Section~\ref{heine} we look at applications of Proposition~\ref{pextension} 
+in extending the results in~\cite{ajo}. Section~\ref{gener} looks more broadly 
+at other applications and includes another extension of Theorem 1 
+in~\cite{ajo}, and a different version of Theorem 2 in the same paper.
+Section~\ref{last} concludes with comments and open 
+questions.
+
+\section{\label{prel}Preliminaries: some general results for series}
+
+We begin by presenting the proof of Proposition~\ref{pextension}: 
+
+{\it Proof of Proposition~\ref{pextension}.}
+Multiplying the series development for $f$ by $1-z$ and 
+differentiating $p$ times yields
+\[
+\begin{array}{ccc}
+\frac{\ds d^{p}}{\ds dz^{p}}\left[ (1-z)f(z) \right]& = &
+{\ds \sum_{n=p-1}^{\infty}}(n-p+2)\ldots(n+1) 
+(\alpha_{n+1}-\alpha_{n})z^{n-p+1}\eqskip\\
+ & = & 
+ {\ds \sum_{n=0}^{\infty}\left[\prod_{j=1}^{p}(n+j)\right]}(\alpha_{n+p}-\alpha_{n+p-1})z^{n}.
+\end{array}
+\]
+By Abel's limit theorem (and using~(i)), we have that this 
+converges to
+\[
+\sum_{n=0}^{\infty}\left[\prod_{j=1}^{p}(n+j)\right](\alpha_{n+p}-\alpha_{n+p-1})
+\]
+as $z$ goes to $1^{-}$. This last sum may be written as
+\begin{equation}
+    \label{sepsum}
+{\ds \sum_{n=0}^{N}\left[\prod_{j=1}^{p}(n+j)\right]}(\alpha_{n+p}-
+\alpha_{n+p-1})+
+{\ds \sum_{n=N+1}^{\infty}\left[\prod_{j=1}^{p}(n+j)\right]}(\alpha_{n+p}-
+\alpha_{n+p-1}).
+\end{equation}
+Now the first of these sums is equal to
+\[
+\begin{array}{l}
+1\times \ldots \times p\alpha_{p}+2
+\times\ldots\times(p+1)\alpha_{p+1}+\ldots+(N+1)\times\ldots
+\times(N+p)\alpha_{N+p}\eqskip\\
+\indent -1\times\ldots \times p\alpha_{p-1}+2
+\times\ldots\times(p+1)\alpha_{p}+\ldots+(N+1)\times\ldots
+\times(N+p)\alpha_{N+p-1}\eqskip\\
+=-p\left[ 1\times\ldots\times(p-1)\alpha_{p-1} + 
+2\times\ldots\times p\alpha_{p} + \ldots + 
+(N+1)\times\ldots\times(N+p-1)\alpha_{N+P-1}\right]\eqskip\\
+\indent +(N+1)\ldots(N+p)\alpha_{n+p}\eqskip\\
+=p{\ds \sum_{n=0}^{N}\left[\prod_{j=1}^{p-1}(n+j)\right]}(\alpha_{N+p}-
+\alpha_{j+p-1})\eqskip\\
+=p{\ds \sum_{n=0}^{N}\left[\prod_{j=1}^{p-1}(n+j)\right]}(\alpha-\alpha_{j+p-1})+
+p{\ds \sum_{n=0}^{N}\left[\prod_{j=1}^{p-1}(n+j)\right]}(\alpha_{N+p}-\alpha)
+\eqskip\\
+=p{\ds \sum_{n=0}^{N}\left[\prod_{j=1}^{p-1}(n+j)\right]}(\alpha-\alpha_{j+p-1})+
+(\alpha_{N+p}-\alpha){\ds \prod_{j=1}^{p}}(N+j).
+\end{array}
+\]
+Substituting this back into~(\ref{sepsum}) and letting $N$ go to infinity
+gives the desired reult. \qed
+
+We remark that proceeding as above in the case where $p$ is zero gives the
+following, which is one version of Abel's Lemma.
+
+\begin{prop}
+    Let $f$ be as above, and assume that
+    \[
+    \lim_{n\to\infty}\alpha_{n} = \alpha.
+    \]
+    Then
+    \[
+    \lim_{z\to 1^{-}} (1-z)f(z) = \alpha.
+    \]
+    As a consequence, we have that if
+    \[
+    \lim_{n\to\infty}\alpha_{n}=\alpha\neq0,
+    \]
+    then $f$ has a simple pole at $z=1$ with residue equal to $-\alpha$.
+\end{prop}
+
+The next result is a simple observation which is well known but, since
+we will be making extensive use of it in the 
+paper, we state it as a lemma for ease of reference.
+
+\begin{lem} \label{exchangelem}
+    Let $f$ and $g$ be two functions defined by the series
+    \[
+    \begin{array}{ccc}
+	f(x) = {\ds\sum_{n=0}^{\infty}} f_{n}x^n & \mbox{and} &
+	g(x) = {\ds\sum_{n=0}^{\infty}} g_{n}x^n,
+    \end{array}
+    \]
+    and assume that the first of this series converges absolutely, and
+    that the iterated series
+    \[
+    {\ds \sum_{n=0}^{\infty}\sum_{k=0}^{\infty}} \abs{g_{n}f_{k}q^{kn}x^k}
+    \]
+    converges.
+    Then
+    \[
+    {\ds\sum_{n=0}^{\infty}} f_{n}g(q^{n}) x^{n} =
+    {\ds\sum_{n=0}^{\infty}} g_{n}f(q^{n}x).
+    \]
+\end{lem}
+\begin{proof} Just replace the function $g$ by the corresponding series 
+and exchange the order of summation.
+\end{proof}
+
+\section{\label{heine}Applications to Heine series $_{2}\phi_{1}$}
+
+As noted in the Introduction, this entire study has its genesis in 
+formulas taken from Ramanujan's Lost Notebook~\cite{rama}. In this 
+section, we shall examine the more general situation in which the 
+full $_{2}\phi_{1}$ is considered with the full $p^{\rm th}$ 
+derivative form of Proposition~\ref{pextension}.
+
+We begin with some definitions and lemmas. We define, for integers 
+$n\geq0$, $k>0$,
+\[
+S_{n}(k,z) = \dsum_{m=n}^{\infty}\frac{q^{km}}{\ds (1-zq^m)^{k}}.
+\]
+
+\begin{prop}
+    \[
+    S_{n}(k,z) =  z^{-k}\dsum_{j=1}^{\infty}\frac{\ds 
+    \left(\begin{array}{c}j-1\\ 
+    k-1\end{array}\right)(zq^n)^{j}}{\ds 1-q^{j}}.
+    \]
+\end{prop}
+\begin{rem} {\rm We note that $z^{k}S_{n}(k,z)$ is thus a standard Lambert
+    series
+    \[
+    \dsum_{j\geq1}A_{j}\frac{\ds q^{j}}{\ds (1-q^j)}, \mbox{ where }
+    A_{j}= \left(\begin{array}{c}j-1\\ 
+    k-1\end{array}\right)z^{j}q^{(n-1)j}.
+    \]}
+    \end{rem}
+\begin{proof}
+    \[
+    \begin{array}{lll}
+	S_{n}(k,z) & = & \dsum_{m=n}^{\infty}q^{km}\dsum_{j=0}^{\infty}
+	\left(\begin{array}{c}j+k-1\\ 
+    k-1\end{array}\right)z^{j}q^{mj}\eqskip\\
+    & = & \dsum_{j=0}^{\infty}\left(\begin{array}{c}j+k-1\\ 
+    k-1\end{array}\right)z^{j}\frac{\ds q^{n(k+j)}}{\ds 
+    1-q^{k+j}}\eqskip\\
+    & = & \dsum_{j=k}^{\infty}\left(\begin{array}{c}j-1\\ 
+    k-1\end{array}\right)z^{j-k}\frac{\ds q^{nj}}{\ds 
+    1-q^{j}}\eqskip\\
+    & = & z^{-k}\dsum_{j=1}^{\infty}\frac{\ds \left(\begin{array}{c}j-1\\ 
+    k-1\end{array}\right)z^{j}q^{nj}}{1-q^{j}}.
+    \end{array}
+    \]
+\end{proof}
+
+\begin{prop}
+    If $g(z)$ is $p$ times differentiable at $z=1$, then
+    \begin{equation}\label{gpderiv}
+    \frac{\ds 1}{\ds p}\left[ \frac{\ds 
+    d^{p}}{dz^{p}}(1-z)g(z)\right]_{z=1} = -g^{(p-1)}(1).
+    \end{equation}
+\end{prop}
+\begin{proof}
+    By Leibniz's Rule
+    \[
+    \begin{array}{lll}
+	\frac{\ds 1}{\ds p}\left[ \frac{\ds 
+    d^{p}}{\ds dz^{p}}(1-z)g(z)\right]_{z=1} & = &
+    \frac{\ds 1}{\ds p}\left[ \dsum_{j=0}^{p}
+     \left(\begin{array}{c}p\\ 
+    j\end{array}\right)\frac{\ds 
+    d^{j}}{dz^{j}}(1-z)\frac{\ds d^{p-j}}{\ds 
+    dz^{p-j}}g(z)\right]_{z=1}\eqskip\\
+    & = & 
+    \frac{\ds 1}{\ds p}\left[ (1-z)g^{(p)}(z)-pg^{(p-1)}(z)\right]_{z=1}
+    \eqskip\\
+    &=& -g^{(p-1)}(1).
+    \end{array}
+    \]
+\end{proof}
+
+\begin{prop}\label{psrecurr}
+    \begin{equation}
+	q^{k}S_{n}(k,zq)=S_{n+1}(k,z)
+    \end{equation}
+    and
+    \begin{equation}\label{dsn}
+    \frac{\ds d}{\ds dz} S_{n}(k,z\alpha ) = k\alpha S_{n}(k+1,z 
+    \alpha)
+    \end{equation}
+\end{prop}
+\begin{proof}
+    \[
+    \begin{array}{lll}
+    q^{k}S_{n}(k,z q) & = & \dsum_{m=n}^{\infty}\frac{\ds 
+    q^{(m+1)k}}{\ds (1-zq^{m+1})^{k}}\eqskip\\
+    & = & \dsum_{m=n+1}^{\infty}\frac{\ds 
+    q^{mk}}{\ds (1-zq^{m})^{k}}\eqskip\\
+    & = & S_{n+1}(k,z).\eqskip\\
+    \frac{\ds d}{\ds dz}S_{n}(k,z \alpha) & = &
+    \frac{\ds d}{\ds dz}\dsum_{m=n}^{\infty}\frac{\ds 
+    q^{mk}}{\ds (1-z\alpha q^{m})^{k}}\eqskip\\
+    & = & \dsum_{m=n}^{\infty}q^{mk}(-k)(1-z\alpha q^{m})^{-k-1}
+    (-\alpha q^{m})\eqskip\\
+    & = & k\alpha\dsum_{m=n}^{\infty}\frac{\ds 
+    q^{m(k+1)}}{\ds (1-z\alpha q^{m})^{k+1}}\eqskip\\
+    & = & k\alpha S_{n}(k+1,z\alpha).
+    \end{array}
+    \]
+\end{proof}
+
+\begin{prop}\label{pol2var} For each positive integer $p$ there is a polynomial in $2p$ 
+variables
+\[
+\pp(x_{1},\ldots,x_{p},y_{1},\ldots,y_{p})
+\]
+such that for each integer $n\geq0$
+\begin{equation}
+    \frac{\ds d^{p}}{\ds dz^{p}}\frac{\ds (Axq^{n})_{\infty}}{\ds (B 
+    z q^{n})_{\infty}} = \frac{\ds (Axq^{n})_{\infty}}{\ds (B 
+    z q^{n})_{\infty}}\pp(S_{n}(1,zB),\ldots,S_{n}(p,zB),S_{n}(1,zA),
+    \ldots,S_{n}(p,zA)).
+\end{equation}
+In addition, the coefficients are polynomials in $A$ and $B$:
+\begin{equation}\label{p0}
+    \mathcal{P}_{0}() = 1,
+\end{equation}
+\begin{equation}\label{p1}
+    \mathcal{P}_{1}(x_{1},y_{1}) = Bx_{1}-Ay_{1},
+\end{equation}
+and
+\begin{equation}\label{p2}
+    \mathcal{P}_{2}(x_{1},x_{2},y_{1},y_{2}) = (Bx_{1}-Ay_{1})^{2}+
+    B^{2}x_{2}^{2}-A^{2}y_{2}.
+\end{equation}
+\end{prop}
+\begin{proof} First we treat $p=1$.
+    \[
+    \begin{array}{lll}
+    \frac{\ds d}{\ds dz}\frac{\ds (Azq^{n})_{\infty}}{\ds 
+    (Bzq^{n})_{\infty}} & = & \frac{\ds (Azq^{n})_{\infty}}{\ds 
+    (Bzq^{n})_{\infty}}\left\{\dsum_{m=n}^{\infty}\frac{\ds 
+    Bq^{m}}{1-Bzq^{m}}-\dsum_{m=n}^{\infty}\frac{\ds 
+    Aq^{m}}{1-Azq^{m}}\right\}\eqskip\\
+    & = & \frac{\ds (Azq^{n})_{\infty}}{\ds (Bzq^{n})_{\infty}}
+    \left\{ BS_{n}(1,zB)-AS_{n}(1,zA)\right\},
+    \end{array}
+    \]
+which is the $p=1$ case with $\mathcal{P}_{1}(x_{1},y_{1}) = 
+Bx_{1}-Ay_{1},$ as asserted in~(\ref{p1}).
+
+For $p=2$, and taking into account the $p=1$ case and 
+Proposition~\ref{psrecurr},
+    \[
+    \begin{array}{lll}
+    \frac{\ds d^{2}}{\ds dz^{2}}\frac{\ds (Azq^{n})_{\infty}}{\ds 
+    (Bzq^{n})_{\infty}} & = & \frac{\ds d}{\ds dz}
+    \frac{\ds (Azq^{n})_{\infty}}{\ds (Bzq^{n})_{\infty}}
+    \left\{ BS_{n}(1,zB)-AS_{n}(1,zA)\right\}\eqskip\\
+    & = & \frac{\ds (Azq^{n})_{\infty}}{\ds (Bzq^{n})_{\infty}}
+    \left\{ BS_{n}(1,zB)-AS_{n}(1,zA)\right\}^{2}\eqskip\\
+    & & \hspace*{1cm}+\frac{\ds (Azq^{n})_{\infty}}{\ds 
+    (Bzq^{n})_{\infty}}\left\{ B^{2}S_{n}(2,zB)-A^{2}S_{n}(2,zA)\right\}
+    \eqskip\\
+    & = & \frac{\ds (Azq^{n})_{\infty}}{\ds 
+    (Bzq^{n})_{\infty}}\mathcal{P}_{2}(S_{n}(1,zB),S_{n}(2,zB),
+    S_{n}(1,zA),S_{n}(2,zA)),
+    \end{array}
+    \]
+    where $\mathcal{P}_{2}(x_{1},x_{2},y_{1},y_{2}) = (Bx_{1}-Ay_{1})^{2}+
+    B^{2}x_{2}^{2}-A^{2}y_{2}.$
+    
+    The case for general $p$ now follows easily by mathematical 
+    induction, by noting that
+    \[
+    \frac{\ds d^{p+1}}{\ds z^{p+1}}\frac{\ds (Azq^{n})_{\infty}}{\ds 
+    (Bzq^{n})_{\infty}}=\frac{\ds d}{\ds dz} \left[ \frac{\ds (Azq^{n})_{\infty}}{\ds 
+    (Bzq^{n})_{\infty}}\pp(S_{n}(1,zB),\ldots,S_{n}(p,zB),S_{n}(1,zA),
+    \ldots,S_{n}(p,zA))\right].
+    \]
+    This last expression then yields $\mathcal{P}_{p+1}$ by repeated use 
+    of~(\ref{dsn}).
+\end{proof}
+
+\begin{thm} \label{npthm}For each integer $p\geq1$,
+    \begin{equation}\label{npid}
+    \begin{array}{l}
+    \dsum_{n=0}^{\infty}(n+1,p-1)\left[\frac{\ds \qp{a}{\infty}\qp{b}{\infty}}{\ds 
+    \qp{c}{\infty}\qp{q}{\infty}} - \frac{\ds \qp{a}{n+p-1}\qp{b}{n+p-1}}{\ds 
+    \qp{c}{n+p-1}\qp{q}{n+p-1}}\right] \eqskip\\
+    \hspace*{1cm} = 
+    \frac{\ds 1}{\ds p}\frac{\ds \qp{a}{\infty}\qp{b}{\infty}}{\ds 
+    \qp{c}{\infty}\qp{q}{\infty}}\pp(S_{0}(1,q),\ldots,S_{0}(p,q),
+    S_{0}(1,a),\ldots,S_{0}(p,a))\eqskip\\
+    - \frac{\ds \qp{a}{\infty}\qp{b}{\infty}}{\ds 
+    \qp{c}{\infty}\qp{q}{\infty}}\dsum_{n=1}^{\infty}\frac{\ds 
+    \qp{c/b}{n}b^{n}}{\ds 
+    (1-q^{n})\qp{a}{n}}\mathcal{P}_{n-1}(S_{n}(1,q), \ldots , 
+    S_{n}(p,q),S_{n}(1,a),\ldots,S_{n}(p,a))
+    \end{array}
+    \end{equation}
+\end{thm}
+\begin{proof}
+    By Proposition~\ref{pextension} with
+    \[
+    \alpha_{n}= \frac{\ds \qp{a}{n}\qp{b}{n}}{\ds \qp{q}{n}\qp{c}{n}},
+    \]
+    we see that
+    \[
+    \begin{array}{l}
+	\dsum_{n=0}^{\infty}(n+1,p-1)\left(\frac{\ds \qp{a}{\infty}\qp{b}{\infty}}{\ds 
+    \qp{c}{\infty}\qp{q}{\infty}} - \frac{\ds \qp{a}{n+p-1}\qp{b}{n+p-1}}{\ds 
+    \qp{c}{n+p-1}\qp{q}{n+p-1}}\right) \eqskip\\
+    \hspace*{1cm} = \frac{\ds 1}{\ds p}\frac{\ds d^{p}}{\ds dz^{p}}\left[ 
+    (1-z)\dsum_{n=0}^{\infty}\frac{\ds \qp{a}{n}\qp{b}{n}}{\ds \qp{q}{n}\qp{c}{n}}
+    z^{n}\right]_{z=1}\eqskip\\
+    \hspace*{1cm} = \frac{\ds 1}{\ds p}\frac{\ds d^{p}}{\ds dz^{p}}\left[ 
+    \frac{\ds \qp{b}{\infty}\qp{az}{\infty}}{\ds 
+    \qp{c}{\infty}\qp{qz}{\infty}}+\frac{\ds \qp{b}{\infty}\qp{az}{\infty}}{\ds 
+    \qp{c}{\infty}\qp{qz}{\infty}}\dsum_{n=1}^{\infty}\frac{\ds 
+    \qp{c/b}{n}\qp{z}{n}b^{n}}{\ds 
+    \qp{q}{n}\qp{az}{n}}\right]_{z=1}\eqskip\\
+    \hspace*{1cm}\mbox{(by Heine's transformation~\cite{fine}, page 
+    26, eq. (20.41))}\eqskip\\
+    \hspace*{1cm} = \frac{\ds 1}{\ds p}\frac{\ds d^{p}}{\ds dz^{p}}\left[ 
+    \frac{\ds \qp{b}{\infty}\qp{az}{\infty}}{\ds 
+    \qp{c}{\infty}\qp{qz}{\infty}}+\frac{\ds \qp{b}{\infty}}{\ds \qp{c}{\infty}}
+    (1-z)\dsum_{n=1}^{\infty}\frac{\ds 
+    \qp{c/b}{n}b^{n}\qp{azq^{n}}{\infty}}{\ds 
+    \qp{q}{n}\qp{zq^{n}}{\infty}}\right]_{z=1}.
+    \end{array}
+    \]
+    The right--hand side of the assertion~(\ref{npid}) now follows 
+    immediately from Propositions~\ref{psrecurr} and~\ref{pol2var}.
+\end{proof}
+
+The most elegant instance of Theorem~\ref{npthm} are the case $b=c$ 
+and the case $a=q$ which we exhibit in the following corollaries.
+
+\begin{cor} For each integer $p\geq 1$
+    \begin{equation}\label{cor1}
+	\begin{array}{l}
+	\dsum_{n=0}^{\infty}(n+1,p-1)\left(\frac{\ds \qp{a}{\infty}}{\ds 
+    \qp{q}{\infty}} - \frac{\ds \qp{a}{n+p-1}}{\ds 
+    \qp{q}{n+p-1}}\right) \eqskip\\
+    \hspace*{1cm} = \frac{\ds 1}{\ds p}\frac{\ds \qp{a}{\infty}}{\ds 
+    \qp{q}{\infty}}\pp(S_{0}(1,q),\ldots,S_{0}(p,q),
+    S_{0}(1,a),\ldots,S_{0}(p,a))
+    \end{array}
+    \end{equation}
+\end{cor}
+\begin{proof} Set $b=c$ in Theorem~\ref{npthm} and note the second 
+term on the right--hand side vanishes.
+\end{proof}
+
+\begin{cor} For each integer $p\geq 1$
+    \begin{equation}\label{cor2}
+	\begin{array}{l}
+	\dsum_{n=0}^{\infty}(n+1,p-1)\left(\frac{\ds \qp{b}{\infty}}{\ds 
+    \qp{c}{\infty}} - \frac{\ds \qp{b}{n+p-1}}{\ds 
+    \qp{c}{n+p-1}}\right) \eqskip\\
+    \hspace*{1cm} = -(p-1)!\frac{\ds \qp{b}{\infty}}{\ds 
+    \qp{c}{\infty}}\dsum_{n=1}^{\infty}\frac{\ds 
+    \qp{c/b}{n}(bq^{p-1})^{n}}{\ds (q)_{n}(1-q^n)^p}.
+    \end{array}
+    \end{equation}
+\end{cor}
+\begin{proof}
+    Set $a=q$ in the second line of the proof of Theorem~\ref{npthm}, 
+    and we see that
+    \[
+    \begin{array}{l}
+    \dsum_{n=0}^{\infty}(n+1,p-1)\left(\frac{\ds \qp{b}{\infty}}{\ds 
+    \qp{c}{\infty}} - \frac{\ds \qp{b}{n+p-1}}{\ds 
+    \qp{c}{n+p-1}}\right) \eqskip\\
+    \hspace*{1cm} = \frac{\ds 1}{\ds p}\frac{\ds d^{p}}{\ds dz^{p}}
+    \left[\frac{\ds \qp{b}{\infty}}{\ds 
+    \qp{c}{\infty}}(1-z)\dsum_{n=1}^{\infty}\frac{\ds 
+    \qp{c/b}{n}b^{n}}{\ds (q)_{n}(1-zq^n)}\right]_{z=1}\eqskip\\
+    \hspace*{1cm} = -\frac{\ds \qp{b}{\infty}}{\ds \qp{c}{\infty}}
+    \dsum_{n=1}^{\infty}\frac{\ds 
+    \qp{c/b}{n}b^{n}}{\ds (q)_{n}}\left[\frac{\ds d^{p-1}}{\ds dz^{p-1}}
+    (1-zq^{n})^{-1}\right]_{z=1}\eqskip\\
+    \hspace*{1cm} = -(p-1)!\frac{\ds \qp{b}{\infty}}{\ds 
+    \qp{c}{\infty}}\dsum_{n=1}^{\infty}\frac{\ds 
+    \qp{c/b}{n}(bq^{p-1})^{n}}{\ds (q)_{n}(1-q^n)^p},
+    \end{array}
+    \]
+    as desired.
+\end{proof}
+
+If in~(\ref{cor2}) we divide by $\qp{b}{\infty}$ and
+let $b$ go to zero, the right--hand side of the 
+resulting expression is reminiscent of
+the type of series found in~\cite{acs}. We shall now use
+Proposition~\ref{pextension} to prove an identity for a $q-$series which was
+considered in that paper and which is
+related to random graphs.
+\begin{thm}\label{liouville}
+    \[
+    \sum_{n=1}^{\infty} (-1)^{n+1} \frac{\ds q^{n(n+1)/2}}
+    {\ds \qp{q}{n} (1-q^{n})^{p}} = \frac{\ds \qp{q}{\infty}}{p!}
+    \lim_{x\to1^{-}} \frac{\ds d^{p}}{dx^{p}}\left[ \frac{\ds x^{p-1}}
+    {\ds \qp{qx}{\infty}}\right], \;\; (p\geq 1)
+    \]
+\end{thm}
+\begin{proof}
+    In Lemma~\ref{exchangelem}, let
+    \[
+    f(x) = 1-\qp{qx}{\infty} = \dsum_{n=1}^{\infty}(-1)^{n+1}\frac{\ds
+    q^{n(n+1)/2}}{\qp{q}{n}}x^{n}
+    \]
+    and
+    \[
+    \begin{array}{lll}
+    g(x) & = & \frac{\ds 1}{\ds (1-x)^{p}}\eqskip\\
+    & = & \frac{\ds 1}{\ds (p-1)!}\frac{\ds d^{p-1}}{\ds 
+    dx^{p-1}}\left(\frac{\ds 1}{\ds 1-x}\right)\eqskip\\
+    & = & \frac{\ds 1}{\ds (p-1)!}\dsum_{n=0}^{\infty}(n+1,p-1)x^{n}
+    \end{array}
+    \]
+    to obtain
+    \begin{equation}\label{rand1}
+    \dsum_{n=1}^{\infty}(-1)^{n+1}\frac{\ds
+    q^{n(n+1)/2}}{\qp{q}{n}}\frac{\ds 1}{\ds (1-q^{n})^{p}} =
+    \frac{\ds 1}{\ds (p-1)!}\dsum_{n=0}^{\infty}(n+1,p-1)\left[ 
+    1-\frac{\ds \qp{q}{\infty}}{\ds \qp{q}{n}}\right].
+    \end{equation}
+    By Proposition~\ref{pextension} with
+    \[
+    \alpha_{n} = \frac{\qp{q}{\infty}}{\ds \qp{q}{n-p+1}}
+    \]
+    it follows that the right--hand side of identity~(\ref{rand1}) is 
+    equal to
+    \[
+    \frac{\ds 1}{\ds p!}\lim_{x\to 1^{-}}\left[ \frac{\ds d^{p}}{\ds 
+    dx^{p}}\left[(1-x)h_{p}(x)\right]\right],
+    \]
+    where
+    \[
+    h_{p}(x) = \qp{q}{\infty}\dsum_{n=0}^{\infty}\frac{\ds 
+    x^{n}}{\ds \qp{q}{n-p+1}} = \frac{\ds \qp{q}{\infty}}{\ds 
+    \qp{x}{\infty}}x^{p-1}.
+    \]
+\end{proof}
+    This, together with Lemma 2.5 from~\cite{acs}, gives Theorem~2.1 
+    in that paper.
+
+
+\section{\label{gener}Some variations on Theorems 1 and 2 
+in~\cite{ajo}}
+
+By putting
+\[
+\begin{array}{lll}
+f(x) = \frac{\ds 1}{\ds 1-x} -\frac{\ds \qp{q}{\infty}}{\ds 
+\qp{x}{\infty}} & \mbox{and} & g(x)\equiv 1
+\end{array}
+\]
+in Lemma~\ref{exchangelem}, and then letting $x$ go to $1$ we obtain the
+well--known identity (see, for instance,~\cite{fine})
+\begin{equation}
+    \label{fineid}
+    \sum_{n=0}^{\infty} \left[ 1- \frac{\ds \qp{q}{\infty}}{\ds 
+    \qp{q}{n}}\right] = \sum_{n=1}^{\infty} \frac{\ds q^{n}}{\ds 
+    1-q^{n}}.
+\end{equation}
+We shall now consider some variations on this, beginning with a 
+generalization of Theorem 1 in~\cite{ajo}.
+
+\begin{thm} \label{gthm1ajo} In the notation of 
+Lemma~\ref{exchangelem}:
+    \[
+    \sum_{n=0}^{\infty} g_{n}\left[ \frac{\ds \qp{t}{n}}{\ds 
+    \qp{a}{n}} - \frac{\ds \qp{t}{\infty}}{\ds 
+    \qp{a}{\infty}}\right] = \frac{\ds \qp{t}{\infty}}{\ds 
+    \qp{a}{\infty}}\sum_{n=1}^{\infty}\frac{\ds \qp{a/t}{n}}{\ds 
+    \qp{q}{n}} g(q^{n}) t^{n}.
+    \]
+\end{thm}
+\begin{proof}
+    Take
+    \[
+    \begin{array}{lll}
+    f(x) & = & \frac{\ds \qp{bqx}{\infty}}{\ds 
+    \qp{qx}{\infty}}-1\eqskip\\
+    & = & \dsum_{n=1}^{\infty}\left[\frac{\ds \qp{bq}{n}}{\qp{q}{n}}-
+    \frac{\ds \qp{bq}{n-1}}{\ds \qp{q}{n-1}}\right] x^{n}\eqskip\\
+    & = & \dsum_{n=1}^{\infty}\frac{\ds \qp{b}{n}}{\qp{q}{n}} 
+    q^{n}x^{n}
+    \end{array}
+    \]
+    in Lemma~\ref{exchangelem}. Then
+    \[
+    \dsum_{n=1}^{\infty}\left[\frac{\ds \qp{bq}{n}}{\qp{q}{n}}-
+    \frac{\ds \qp{bq}{n-1}}{\ds \qp{q}{n-1}}\right] x^{n}= \dsum_{n=0}^{\infty}g_{n}
+    \left[\frac{\ds \qp{bqx}{\infty}\qp{qx}{n}}{\ds 
+    \qp{bqx}{n}\qp{qx}{\infty}}-1\right]
+    \]
+    and
+    \[
+    \frac{\ds \qp{bqx}{\infty}}{\ds 
+    \qp{qx}{\infty}}\dsum_{n=0}^{\infty}g_{n}\left[ \frac{\ds 
+    \qp{qx}{n}}{\ds \qp{bqx}{n}}-\frac{\ds 
+    \qp{qx}{\infty}}{\ds \qp{bqx}{\infty}}\right] = 
+    \dsum_{n=1}^{\infty}\frac{\ds \qp{b}{n}}{\qp{q}{n}} 
+    q^{n}g(q^{n})x^{n}.
+    \]
+    Writing $t=qx$ and $a=bqx$ gives
+    \[
+    \sum_{n=0}^{\infty} g_{n}\left[ \frac{\ds \qp{t}{n}}{\ds 
+    \qp{a}{n}} - \frac{\ds \qp{t}{\infty}}{\ds 
+    \qp{a}{\infty}}\right]=\frac{\ds \qp{t}{\infty}}{\ds 
+    \qp{a}{\infty}} \dsum_{n=1}^{\infty}\frac{\ds \qp{a/t}{n}}{\qp{q}{n}} 
+    g(q^{n})t^{n},
+    \]
+    as desired.
+\end{proof}
+    
+>From this we obtain several identities, the first of which is a 
+slightly more {\it compact} version of the corresponding result in~\cite{ajo}.
+\begin{cor}\label{cort1}
+    \[
+    \sum_{n=0}^{\infty} \left[ \frac{\ds \qp{t}{n}}{\ds 
+    \qp{a}{n}}-\frac{\ds \qp{t}{\infty}}{\ds 
+    \qp{a}{\infty}}\right] =
+    \frac{\ds \qp{t}{\infty}}{\ds 
+    \qp{a}{\infty}} \sum_{n=1}^{\infty} \frac{\ds \qp{a/t}{n}}{\ds 
+    \qp{q}{n}}\frac{\ds t^{n}}{\ds 1-q^{n}}.
+    \]
+\end{cor}
+
+We now give some examples of identities that can be obtained by specializing
+$g, a$ and $t$ in Theorem~\ref{gthm1ajo}.
+\begin{cor}
+    \begin{enumerate}
+	\item[(i)]
+    $
+        \dsum_{n=0}^{\infty} \left[ \frac{\ds \qp{t}{n}}{\ds 
+    \qp{t}{\infty}}-1\right] = \dsum_{n=1}^{\infty} \frac{\ds t^{n}}{\ds 
+    \qp{q}{n}(1-q^{n})}\eqskip
+    $
+    
+    \item[(ii)]
+	    $
+    \dsum_{n=0}^{\infty} \left[ \frac{\ds \qp{t}{n}}{\ds 
+    \qp{q}{n}}-\frac{\ds \qp{t}{\infty}}{\ds 
+    \qp{q}{\infty}}\right]^{2} =
+    \left[\frac{\ds \qp{t}{\infty}}{\ds 
+    \qp{q}{\infty}}\right]^{2} \dsum_{n=1}^{\infty} \frac{\ds \qp{q/t}{n}}{\ds 
+    \qp{q}{n}}\left[ \frac{\ds \qp{q}{n}}{\ds \qp{t}{n}}-1\right]
+    \frac{\ds t^{n}}{\ds 1-q^{n}}\eqskip
+    $
+    
+    \item[(iii)] $     \dsum_{n=0}^{\infty} \left[ 1- \frac{\ds \qp{q}{\infty}}{\ds 
+    \qp{q}{n}}\right]^{2} = \dsum_{n=1}^{\infty} (-1)^{n+1}\frac{\ds 
+    q^{n(n+1)/2}}{\ds 
+    \qp{q}{n}}\frac{\ds 1-\qp{q}{n}}{\ds 1-q^{n}}$
+    
+    \item[(iv)] $     \dsum_{n=0}^{\infty} \frac{\ds \qp{q}{\infty}}{\ds \qp{q}{n}}
+    \left[ 1- \frac{\ds \qp{q}{\infty}}{\ds 
+    \qp{q}{n}}\right] =
+    \dsum_{n=1}^{\infty} (-1)^{n+1}\frac{\ds 
+    q^{n(n+1)/2}}{\ds 
+    1-q^{n}}\eqskip $
+    
+    \item[(v)] $\dsum_{n=0}^{\infty}\left[\frac{\ds \qp{q}{n}}{\ds 
+    \qp{q}{\infty}}-\frac{\ds \qp{q}{\infty}}{\ds 
+    \qp{q}{n}}\right] = \dsum_{n=1}^{\infty}\frac{\ds 1+\qp{q}{n}}{\ds 
+    1-q^{n}}\frac{\ds q^{n}}{\ds \qp{q}{n}} \eqskip$
+    
+    \item[(vi)] $  \dsum_{n=0}^{\infty}\left\{ \left[\frac{\ds \qp{t}{n}}
+    {\ds \qp{q}{n}}\right]^{2}-\left[\frac{\ds \qp{t}{\infty}}
+    {\ds \qp{q}{\infty}}\right]^{2}\right\} = 
+    \left[\frac{\ds \qp{t}{\infty}}
+    {\ds \qp{q}{\infty}}\right]^{2}\dsum_{n=1}^{\infty}\frac{\ds 
+    \qp{q/t}{n}}{\ds \qp{q}{n}}\left[\frac{\ds \qp{q}{n}}{\ds 
+    \qp{t}{n}}+1\right]\frac{\ds t^{n}}{\ds 1-q^{n}}\eqskip
+    $
+    
+    \item[(vii)] $\dsum_{n=0}^{\infty}\left[ \frac{\ds 1}
+    {\ds \qp{q}{n}^{2}}-\frac{\ds 1}
+    {\ds \qp{q}{\infty}^{2}}\right] = \frac{\ds 1}{\ds \qp{q}{\infty}^{2}}
+    \dsum_{n=1}^{\infty}(-1)^{n} \frac{\ds q^{n(n+1)/2}}{\ds \qp{q}{n}}
+    \frac{\ds 1+\qp{q}{n}}{\ds 1-q^{n}}\eqskip$
+    
+    \item[(viii)] $ \frac{\ds \qp{a}{\infty}}{\ds 
+    \qp{t}{\infty}\qp{q}{\infty}}\dsum_{n=0}^{\infty}(-1)^{n} \frac{\ds
+    q^{n(n+1)/2}}{\ds \qp{q}{n}}\left[\frac{\ds \qp{t}{n}}{\ds 
+    \qp{a}{n}}-\frac{\ds \qp{t}{\infty}}{\ds 
+    \qp{a}{\infty}}\right] = 
+    \dsum_{n=1}^{\infty}\frac{\qp{a/t}{n}}{\ds \qp{q}{n}^{2}} 
+    t^{n}\eqskip$
+    
+    \item[(ix)] $\frac{\ds 1}{\ds \qp{q}{\infty}^{2}}
+    \dsum_{n=0}^{\infty}(-1)^{n} q^{n(n+1)/2}\left[ 1 - \frac{\ds 
+    \qp{q}{\infty}}{\ds \qp{q}{n}}\right] = \dsum_{n=1}^{\infty}\frac{\ds q^{n}}
+    {\qp{q}{n}^{2}}\eqskip$
+    
+    \end{enumerate}
+\end{cor}
+\begin{proof}
+    \begin{enumerate}
+	\item[(i)] Let $a=0$ in Corollary~\ref{cort1}.
+	\item[(ii)] Let $a=q$ and
+	\[
+	g_{n} = \frac{\ds \qp{t}{n}}{\ds \qp{q}{n}}-
+	\frac{\qp{t}{\infty}}{\ds \qp{q}{\infty}}
+	\]
+	in Theorem~\ref{gthm1ajo}. Then
+	\[
+	g(x) = \frac{\ds \qp{tx}{\infty}}{\ds \qp{x}{\infty}}-
+	\frac{\ds \qp{t}{\infty}}{\ds \qp{q}{\infty}}\frac{\ds 1}{\ds 1-x}
+	\]
+	and
+	\[
+	\begin{array}{lll}
+	    \dsum_{n=0}^{\infty} \left[ \frac{\ds \qp{t}{n}}{\ds 
+    \qp{q}{n}}-\frac{\ds \qp{t}{\infty}}{\ds 
+    \qp{q}{\infty}}\right]^{2} & = &
+    \frac{\ds \qp{t}{\infty}}{\ds 
+    \qp{a}{\infty}}\dsum_{n=1}^{\infty}\frac{\ds \qp{a/t}{n}}{\ds 
+    \qp{q}{n}} \left[
+    \frac{\ds \qp{tq^{n}}{\infty}}{\ds \qp{q^{n}}{\infty}}-
+	\frac{\ds \qp{t}{\infty}}{\ds \qp{q}{\infty}}\frac{\ds 1}{\ds 1-q^{n}}
+	\right]t^{n}\eqskip\\
+	& = & \left[\frac{\ds \qp{t}{\infty}}{\ds 
+    \qp{q}{\infty}}\right]^{2} \dsum_{n=1}^{\infty} \frac{\ds \qp{q/t}{n}}{\ds 
+    \qp{q}{n}}\left[ \frac{\ds \qp{q}{n}}{\ds \qp{t}{n}}-1\right]
+    \frac{\ds t^{n}}{\ds 1-q^{n}}
+    \end{array}
+    \]
+    as desired.
+    \item[(iii)] Let $t\to0$ in (ii).
+    \item[(iv)] Let $a=q$ and $g_{n}=\qp{q}{\infty}/\qp{q}{n}$ in Theorem~\ref{gthm1ajo}.
+    Then $g(x) = \qp{q}{\infty}/\qp{x}{\infty}$ which yields, on 
+    letting $t$ go to zero on both sides,
+    \[
+    \begin{array}{lll}
+	\dsum_{n=0}^{\infty} \frac{\ds \qp{q}{\infty}}{\ds \qp{q}{n}}
+    \left[ \frac{\ds \qp{q}{\infty}}{\ds 
+    \qp{q}{n}}-1\right] & = & \dsum_{n=1}^{\infty}\frac{\ds 1}{\ds 
+    \qp{q}{n}}\frac{\ds \qp{q}{\infty}}{\ds 
+    \qp{q^{n}}{\infty}}\lim_{t\to 
+    0}\left[t^{n}\qp{q/t}{n}\right]\eqskip\\
+    &=&\dsum_{n=1}^{\infty}(-1)^{n}\frac{\ds q^{n(n+1)/2}}{\ds 1-q^{n}} .
+    \end{array}
+    \]
+    \item[(v)] \[
+    \dsum_{n=0}^{\infty}\left[\frac{\ds \qp{q}{n}}{\ds 
+    \qp{q}{\infty}}-\frac{\ds \qp{q}{\infty}}{\ds 
+    \qp{q}{n}}\right] = \dsum_{n=0}^{\infty}\left[\frac{\ds \qp{q}{n}}{\ds 
+    \qp{q}{\infty}}-1\right]+\dsum_{n=0}^{\infty}\left[ 1 -
+    \frac{\ds \qp{q}{\infty}}{\ds 
+    \qp{q}{n}}\right]\eqskip
+    \]
+    and the result follows from~(\ref{fineid}) and (i) with $t=q$.
+    \item[(vi)] Let
+    \[
+    g_{n}=\frac{\ds \qp{t}{n}}{\ds \qp{q}{n}}+
+    \frac{\ds \qp{t}{\infty}}{\ds \qp{q}{\infty}}
+    \]
+    in Theorem~\ref{gthm1ajo}. Then,
+    \[
+    g(x) = \frac{\ds \qp{tx}{\infty}}{\ds \qp{x}{\infty}}+
+    \frac{\ds \qp{t}{\infty}}{\ds 
+    \qp{q}{\infty}}\frac{\ds 1}{\ds 1-x}
+    \]
+    and we have that (with $a=q$)
+    \[
+    \dsum_{n=0}^{\infty}\left\{ \left[\frac{\ds \qp{t}{n}}
+    {\ds \qp{q}{n}}\right]^{2}-\left[\frac{\ds \qp{t}{\infty}}
+    {\ds \qp{q}{\infty}}\right]^{2}\right\} = \frac{\ds \qp{t}{\infty}}
+    {\ds \qp{q}{\infty}} \dsum_{n=1}^{\infty}\frac{\ds \qp{q/t}{n}}
+    {\ds \qp{q}{n}}\left[ \frac{\ds \qp{tq}{\infty}\qp{q}{n-1}}{\ds 
+    \qp{q}{\infty}\qp{tq}{n-1}}+\frac{\ds \qp{t}{\infty}}{\ds 
+    \qp{q}{\infty}}\frac{\ds 1}{\ds 1-q^{n}}\right]t^{n},
+    \]
+    from which the result follows.
+    \item[(vii)] Let $t\to 0$ in (vi).
+    \item[(viii)] Let
+    \[
+    g(x) = \qp{qx}{\infty} = \dsum_{n=0}^{\infty}(-1)^{n}\frac{\ds 
+    q^{n(n+1)/2}}{\ds \qp{q}{n}} x^{n}
+    \]
+    in Theorem~\ref{gthm1ajo}.
+    \item[(ix)] Let $t\to 0$ in (viii).
+    
+    \end{enumerate}
+\end{proof}
+
+In a similar way, it is possible to obtain the following version
+of Theorem~2 in~\cite{ajo}.
+\begin{thm}
+    \[
+    \sum_{n=0}^{\infty} \left[\frac{\ds \qp{a}{n}\qp{b}{n}}{\ds 
+    \qp{c}{n}\qp{q}{n}} - \frac{\ds \qp{a}{\infty}\qp{b}{\infty}}{\ds 
+    \qp{c}{\infty}\qp{q}{\infty}}\right] = \frac{\ds \qp{a}{\infty}\qp{b}{\infty}}{\ds 
+    \qp{c}{\infty}\qp{q}{\infty}}
+    \sum_{n=1}^{\infty}\left[\frac{\ds \qp{q/b}{n}}{\ds 
+    \qp{q}{n}} b^{n} +
+    \frac{\ds \qp{c/a}{n}}{\ds 
+    \qp{b}{n}} a^{n}\right]\frac{\ds 
+    1}{\ds 1-q^{n}}.
+    \]
+\end{thm}
+\begin{proof}
+    Let
+    \[
+    f(x) = \frac{\ds \qp{aqx}{\infty} \qp{bqx}{\infty}}{\ds 
+    \qp{cqx}{\infty} \qp{dqx}{\infty}} -1.
+    \]
+    Since
+    \[
+    \frac{\ds \qp{aqx}{\infty}}{\ds \qp{cqx}{\infty}} = 
+    \dsum_{n=0}^{\infty}\frac{\ds \qp{a/c}{n}}{\ds \qp{q}{n}} 
+    c^{n}q^{n}x^{n},
+    \]
+    we have that
+    \[
+    f(x) = \dsum_{n=0}^{\infty}\frac{\ds 
+    \qp{\alpha}{n}}{\qp{q}{n}}(cqx)^{n}\dsum_{n=0}^{\infty}\frac{\ds 
+    \qp{\beta}{n}}{\qp{q}{n}}(dqx)^{n},
+    \]
+    where $\alpha= a/c$ and $\beta= b/d$, and hence
+    \[
+    f(x) = \dsum_{n=1}^{\infty}\left[\dsum_{k=0}^{n}\frac{\ds
+    \qp{\alpha}{k}\qp{\beta}{n-k}}{\ds 
+    \qp{q}{k}\qp{q}{n-k}}c^{k}d^{n-k}\right]q^{n}x^{n}.
+    \]
+    Using this in Lemma~\ref{exchangelem} with $g(x)=1/(1-x)$ yields
+    \begin{equation}\label{fourp}
+    \dsum_{n=1}^{\infty}\left[\dsum_{k=0}^{n}\frac{\ds
+    \qp{\alpha}{k}\qp{\beta}{n-k}}{\ds 
+    \qp{q}{k}\qp{q}{n-k}}c^{k}d^{n-k}\right]\frac{\ds q^{n}}{\ds 1-q^{n}}
+    x^{n} = \dsum_{n=0}^{\infty}\left[ \frac{\qp{aq^{n+1}x}{\infty} \qp{bq^{n+1}x}
+    {\infty}}{\ds \qp{cq^{n+1}x}{\infty} 
+    \qp{dq^{n+1}x}{\infty}}-1\right].
+    \end{equation}
+    
+    The left--hand side in~(\ref{fourp}) equals
+    \[
+    \dsum_{n=1}^{\infty}\frac{\qp{\beta}{n}}{\ds \qp{q}{n}}\frac{\ds 
+    (dqx)^{n}}{\ds 1-q^{n}} + \dsum_{k=1}^{\infty}\dsum_{n=k}^{\infty}
+    \frac{\ds \qp{\alpha}{k}\qp{\beta}{n-k}}{\ds \qp{q}{k}\qp{q}{n-k}}
+    \frac{\ds c^{k} d^{n-k} (qx)^{n}}{\ds 1-q^{n}},
+    \]
+    and the second term in this expression is in turn equal to
+    \begin{equation}\label{exp1}
+    \dsum_{k=1}^{\infty}
+    \frac{\ds \qp{\alpha}{k}}{\ds \qp{q}{k}}(cqx)^{k}\dsum_{n=0}^{\infty}
+    \frac{\ds \qp{\beta}{n}}{\ds \qp{q}{n}}\frac{\ds  (dqx)^{n}}{\ds 1-q^{n+k}}. 
+    \end{equation}
+    If we now let
+    \[
+    g(x) = \frac{\ds x}{\ds 1-q^{k}x} \mbox{ and }
+    f(x) = \frac{\ds \qp{bx}{\infty}}{\qp{dx}{\infty}}
+    \]
+    in Lemma~\ref{exchangelem}, we obtain that~(\ref{exp1}) equals
+    \[
+    \frac{\ds \qp{bqx}{\infty}}{\ds 
+    \qp{dqx}{\infty}}\dsum_{n=0}^{\infty}\frac{ \ds \qp{dqx}{n}}{\ds 
+    \qp{bqx}{n}}q^{kn}.
+    \]
+    
+    On the other hand, the right--hand side in~(\ref{fourp}) equals
+    \[
+    \frac{\ds \qp{aqx}{\infty}\qp{bqx}{\infty}}{\ds \qp{cqx}{\infty}
+    \qp{dqx}{\infty}}\dsum_{n=0}^{\infty}\left[ \frac{\ds \qp{cqx}{n}
+    \qp{dqx}{n}}{\ds \qp{aqx}{n}\qp{bqx}{n}} - \frac{\ds 
+    \qp{cqx}{\infty}
+    \qp{dqx}{\infty}}{\ds \qp{aqx}{\infty}\qp{bqx}{\infty}}\right].
+    \]
+    
+    If we now let $x=1/b$ throughout, we obtain
+    \[
+    \begin{array}{l}
+    \frac{\ds \qp{aq/b}{\infty}\qp{q}{\infty}}{\ds \qp{cq/b}{\infty}
+    \qp{dq/b}{\infty}}\dsum_{n=0}^{\infty}\left[ \frac{\ds \qp{cq/b}{n}
+    \qp{dq/b}{n}}{\ds \qp{aq/b}{n}\qp{q}{n}} - \frac{\ds 
+    \qp{cq/b}{\infty}
+    \qp{dq/b}{\infty}}{\ds 
+    \qp{aq/b}{\infty}\qp{q}{\infty}}\right] \eqskip\\
+    \hspace*{1cm}= \dsum_{n=1}^{\infty}\frac{\qp{\beta}{n}}{\ds \qp{q}{n}}\frac{\ds 
+    (q/\beta)^{n}}{\ds 1-q^{n}} + \frac{\ds \qp{q}{\infty}}{\ds 
+    \qp{q/\beta}{\infty}} \dsum_{k=1}^{\infty}\frac{\ds \qp{\alpha}{k}}
+    {\ds \qp{q}{k}}\left(\frac{\ds cq}{\ds b}\right)^{k}
+    \dsum_{n=0}^{\infty}\frac{ \ds \qp{q/\beta}{n}}{\ds 
+    \qp{q}{n}}q^{kn}\eqskip\\
+    \hspace*{1cm}= \dsum_{n=1}^{\infty}\frac{\qp{\beta}{n}}{\ds \qp{q}{n}}\frac{\ds 
+    (q/\beta)^{n}}{\ds 1-q^{n}} + \frac{\ds \qp{q}{\infty}}{\ds 
+    \qp{q/\beta}{\infty}} \dsum_{k=1}^{\infty}\frac{\ds \qp{\alpha}{k}}
+    {\ds \qp{q}{k}}\left(\frac{\ds cq}{\ds 
+    b}\right)^{k}\qp{q^{k+1}/\beta}{\infty}\frac{\ds 1}{\ds 
+    \qp{q^{k}}{\infty}}\eqskip\\
+    \hspace*{1cm}= \dsum_{n=1}^{\infty}\frac{\qp{b/d}{n}}{\ds \qp{q}{n}}\frac{\ds 
+    (dq)^{n}}{\ds b^{n}(1-q^{n})} +\dsum_{n=1}^{\infty}\frac{\ds 
+    \qp{a/c}{n}}{\ds \qp{dq/b}{n}}\left(\frac{\ds cq}{\ds 
+    b}\right)^{n}\frac{\ds 1}{\ds 
+    1-q^{n}}
+    \end{array}
+    \]
+    Substituting now
+    \[
+    cq/b \to a, \;\; dq/b \to b \mbox{ and } aq/b \to c,
+    \]
+    gives the desired result.
+\end{proof}
+
+\section{\label{last}Comments and open questions}
+
+The fecundity of Proposition~\ref{propajo} in applications as noted in 
+the Introduction (cf.~\cite{ajo,coog,coon,loon}) suggests that there 
+might also be such application for our main results in Section 2.
+
+We are also drawn to the ``Liouville Mystery'' which is described in 
+detail in~\cite{andr2} and in Section 7 of~\cite{andr3}. The mystery 
+in question concerns the possibility of finding a linear dependency 
+between series $\mathcal{L}_{k}(q)$ defined by
+\[
+\mathcal{L}_{k}(q) = \dsum_{n_{1},\ldots,n_{k+1}\geq1}q^{n_{1}n_{2}+
+n_{2}n_{3}+\ldots+n_{k}n_{k+1}},
+\]
+and the series appearing in our Theorem~\ref{liouville}.
+
+As we have observed in Section~\ref{prel}, our main result is purely 
+and simply the natural generalization of Abel's Lemma. Given the 
+widespread use of Abel's Lemma and its appearance in numerous classic 
+texts on complex variable, one may well wonder why our main results 
+were not proved years ago. It seems to us plausible that this is 
+explained by condition (ii) in Propositions~\ref{propajo} and~\ref{pextension}.
+The natural classical applications would be to convergent Gaussian 
+hypergeometric series with argument $1$. These converge too slowly to 
+allow condition (ii) to hold.
+
+% ------------------------------------------------------------------------
+
+
+
+\subsection*{Acknowledgment} The work of the second author was 
+partially done while visiting Penn State University. He would like to 
+thank the first author for his hospitality.
+%Here go the acknowledgments, if any.
+
+% ------------------------------------------------------------------------
+
+
+\begin{thebibliography}{9999}
+    
+\bibitem[A1]{andr} G. E. Andrews, Ramanujan's ``lost'' notebook, V: 
+Euler's partition identity, Adv. Math. {\bf 61} (1986), 156-164.
+
+\bibitem[A2]{andr2} G. E. Andrews, Stacked lattice boxes, Ann. Comb. 
+{\bf 3} (1999), 115--130.
+
+\bibitem[A3]{andr3} G. E. Andrews, Some debts I owe, from The Andrews 
+Festschrift, D. Foata and G.-N. Han, eds., Springer, Berlin, 2001, 
+1--16.
+
+\bibitem[AJO]{ajo} G. E. Andrews, J. Jim\'{e}nez-Urroz and K. Ono, 
+{\em $q-$series identities and values of certain $L-$functions},  Duke Math. 
+J. {\bf 108} (2001), 395--419.
+
+\bibitem[ACS]{acs} G. E. Andrews, D. Crippa and K. Simon, $q-$series 
+arising from the study of random graphs, SIAM J. Discrete Math. {\bf 
+10} (1997), 41--56.
+
+\bibitem[C]{coog} G. Coogan, More generating functions for $L-$function 
+values, Contemp. Math. {\bf 291} (2001), 109-114.
+
+\bibitem[CO]{coon} G. Coogan and K. Ono, A $q-$series identity and the 
+arithmetic of Hurwitz zeta functions, Proc. Amer. Math. Soc. (to 
+appear).
+
+%\bibitem[D]{dilc} K. Dilcher, Some $q-$series identities related to 
+%divisor functions, Discrete Math. {\bf 145} (1995), 83--93.
+
+\bibitem[F]{fine} N. J. Fine, {\em Basic Hypergeometric Series and 
+Applications}, Math. Surveys Monogr. {\bf 27}, Amer. Math. Soc., 
+Providence, 1988.
+
+\bibitem[LO]{loon} J. Lovejoy and K. Ono, Hypergeometric generating 
+functions for values of Dirichlet and other $L-$functions, Proc. Nat. 
+Acad. Sci. U.S.A. (to appear).
+
+\bibitem[R]{rama} S. Ramanujan, {\em The Lost Notebook and Other 
+Unpublished Papers}, Narosa, New Delhi 1988.
+
+\end{thebibliography}
+
+\end{document}
+

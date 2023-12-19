@@ -1,0 +1,15 @@
+
+Math 486. The outline is in the blue book, except that  prereq. are the same as for Math 484 (the was decided by a math faculty meeting).
+The textbook is by G.Owen. The first 3 chapters as well as two other chapters 
+are covered.
+We have quizes and homework graded every week, about 50 pts a week.
+Four midterms in class are given, about 50 pts each. Extra pts are given for
+work in  class.  To get A, one has to get at least 90% of the maximal score.
+Here are lower limits for other grades:
+A-    86 2/3 %,
+B+    83 1/3 %,
+B         80 %,
+C+    76 2/3 %,
+C-    73 1/3 %,
+D          60%.
+

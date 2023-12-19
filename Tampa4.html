@@ -1,0 +1,1087 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="GENERATOR" content="Mozilla/4.77 [en] (X11; U; SunOS 5.8 sun4u) [Netscape]">
+   <title>Trip Details</title>
+<!--^<EMAILPARSE SUPPRESS-->
+<!-- SABRE PNR GHGHRK 717271728275 -->
+<!-- glblreview.pgd -->
+<!-- BOX: 0017 -->
+<!-- SL: 83F1B9 -->
+<!-- Production -->
+<script language=JavaScript>
+<!--
+submitted = 0;
+function checkDoubleClick () {
+if (!submitted) {
+submitted = 1;
+return true;
+} else {
+submitted = 0;
+return false;
+}
+}
+
+var windowNameArray = null
+var windowPntrArray = null
+var browserType = "Mozilla/4.77 [en] (X11; U; SunOS 5.8 sun4u)"
+
+function launchWindow( url, HT, WD ) {
+var windowOptions
+var myLocation = url
+var WN = "newWindow"
+var AR = "yes"
+var TB = "no"
+var LC = "no"
+var SB = "no"
+var DR = "no"
+var ST = "no"
+var MB = "no"
+var RS = "yes"
+var CH = "yes"
+var PX = ""
+var PY = ""
+switch( arguments.length ) {
+case 16:
+case 15: PY = arguments[14];
+case 14: PX = arguments[13];
+case 13: CH = arguments[12];
+case 12: RS = arguments[11];
+case 11: MB = arguments[10];
+case 10: ST = arguments[9];
+case  9: DR = arguments[8];
+case  8: SB = arguments[7];
+case  7: LC = arguments[6];
+case  6: TB = arguments[5];
+case  5: AR = arguments[4];
+case  4: WN = arguments[3];
+}
+
+windowOptions  = "height="
+windowOptions += HT
+windowOptions += ",width="
+windowOptions += WD
+windowOptions += ",alwaysRaised="
+windowOptions += AR
+windowOptions += ",toolbar="
+windowOptions += TB 
+windowOptions += ",location="
+windowOptions += LC 
+windowOptions += ",scrollbars="
+windowOptions += SB 
+windowOptions += ",directories="
+windowOptions += DR 
+windowOptions += ",status="
+windowOptions += ST
+windowOptions += ",menubar="
+windowOptions += MB 
+windowOptions += ",resizable="
+windowOptions += RS 
+windowOptions += ",copyhistory="
+windowOptions += CH
+windowOptions += ",screenX="
+windowOptions += PX
+windowOptions += ",screenY="
+windowOptions += PY
+windowOptions += ",left="
+windowOptions += PX
+windowOptions += ",top="
+windowOptions += PY
+if( ! windowNameArray ) {
+windowNameArray = new Array()
+windowPntrArray = new Array()
+}
+for( index=0; index < windowNameArray.length; ++index ) {
+if( windowNameArray[index] == WN ) {
+break
+}
+}
+
+var msieBrowser = navigator.appName.indexOf("Microsoft") != -1 
+if( !(windowPntrArray[index]) || (windowPntrArray[index].closed) ) {
+windowNameArray[index] = WN
+windowPntrArray[index] = window.open( myLocation, WN ,windowOptions )
+} else {
+if( msieBrowser ) {
+windowPntrArray[index].close()
+while( ! windowPntrArray[index].closed )
+{}
+windowPntrArray[index] = window.open( myLocation, WN ,windowOptions )
+} else {
+windowPntrArray[index].close()
+windowNameArray[index] = WN
+windowPntrArray[index] = window.open( myLocation, WN ,windowOptions )
+windowPntrArray[index].focus()
+}
+}
+}
+
+function closeLaunchedWindows() {
+var msieBrowser = navigator.appName.indexOf("Microsoft") != -1 
+for( index=0; index < windowNameArray.length; ++index ) {
+windowPntrArray[index].close()
+if( msieBrowser ) {
+while( ! windowPntrArray[index].closed )
+{}
+}
+}
+windowPntrArray.length = 0
+windowNameArray.length = 0
+}
+
+function closeParent() {
+window.callingForm.shutdown();
+}
+function sendMain(nl) {
+callingForm.changeLocation(nl);
+window.close();
+}
+legendWindow = null ;
+function openLegend(il) {
+windowOptions  = 'alwaysRaised=yes,toolbar=no,location=no,directories=no,status=no,menubar=no,resizable=yes,scrollbars=1,copyhistory=yes,width=525,height=275';
+legendWindow = window.open(il,'legendWindow',windowOptions);
+legendWindow.callingForm = top;
+legendWindow.focus();
+this.legendWindow = legendWindow;
+}
+function closeLegend(di) {
+if (legendWindow != null)
+{
+if (!this.legendWindow.closed)
+{
+openLegend(di);
+}
+}
+}
+function changeLocation(newLoc) {
+window.location = newLoc;
+}
+function shutdown() {
+setTimeout('byebye()',500);
+}
+function byebye() {
+top.close(); }
+
+var windowNameArray = null
+var windowPntrArray = null
+var browserType = "Mozilla/4.77 [en] (X11; U; SunOS 5.8 sun4u)"
+
+function launchWindow( url, HT, WD ) {
+var windowOptions
+var myLocation = url
+var WN = "newWindow"
+var AR = "yes"
+var TB = "no"
+var LC = "no"
+var SB = "no"
+var DR = "no"
+var ST = "no"
+var MB = "no"
+var RS = "yes"
+var CH = "yes"
+var PX = ""
+var PY = ""
+switch( arguments.length ) {
+case 16:
+case 15: PY = arguments[14];
+case 14: PX = arguments[13];
+case 13: CH = arguments[12];
+case 12: RS = arguments[11];
+case 11: MB = arguments[10];
+case 10: ST = arguments[9];
+case  9: DR = arguments[8];
+case  8: SB = arguments[7];
+case  7: LC = arguments[6];
+case  6: TB = arguments[5];
+case  5: AR = arguments[4];
+case  4: WN = arguments[3];
+}
+
+windowOptions  = "height="
+windowOptions += HT
+windowOptions += ",width="
+windowOptions += WD
+windowOptions += ",alwaysRaised="
+windowOptions += AR
+windowOptions += ",toolbar="
+windowOptions += TB 
+windowOptions += ",location="
+windowOptions += LC 
+windowOptions += ",scrollbars="
+windowOptions += SB 
+windowOptions += ",directories="
+windowOptions += DR 
+windowOptions += ",status="
+windowOptions += ST
+windowOptions += ",menubar="
+windowOptions += MB 
+windowOptions += ",resizable="
+windowOptions += RS 
+windowOptions += ",copyhistory="
+windowOptions += CH
+windowOptions += ",screenX="
+windowOptions += PX
+windowOptions += ",screenY="
+windowOptions += PY
+windowOptions += ",left="
+windowOptions += PX
+windowOptions += ",top="
+windowOptions += PY
+if( ! windowNameArray ) {
+windowNameArray = new Array()
+windowPntrArray = new Array()
+}
+for( index=0; index < windowNameArray.length; ++index ) {
+if( windowNameArray[index] == WN ) {
+break
+}
+}
+
+var msieBrowser = navigator.appName.indexOf("Microsoft") != -1 
+if( !(windowPntrArray[index]) || (windowPntrArray[index].closed) ) {
+windowNameArray[index] = WN
+windowPntrArray[index] = window.open( myLocation, WN ,windowOptions )
+} else {
+if( msieBrowser ) {
+windowPntrArray[index].close()
+while( ! windowPntrArray[index].closed )
+{}
+windowPntrArray[index] = window.open( myLocation, WN ,windowOptions )
+} else {
+windowPntrArray[index].close()
+windowNameArray[index] = WN
+windowPntrArray[index] = window.open( myLocation, WN ,windowOptions )
+windowPntrArray[index].focus()
+}
+}
+}
+
+function closeLaunchedWindows() {
+var msieBrowser = navigator.appName.indexOf("Microsoft") != -1 
+for( index=0; index < windowNameArray.length; ++index ) {
+windowPntrArray[index].close()
+if( msieBrowser ) {
+while( ! windowPntrArray[index].closed )
+{}
+}
+}
+windowPntrArray.length = 0
+windowNameArray.length = 0
+}
+//-->
+</script>
+<style type="text/css">
+<!--
+th {font-family:arial,helvetica;}
+
+#instr_txt {color:#6699cc}
+#notice {color:#0066cc}
+#blue {color:#0066cc}
+#white {color:#ffffff}
+#hilite {color:#ff9933;font-weight:bold;}
+#unavail {color:#cc0000;font-weight:bold;}
+.content {font-family:arial,helvetica;color:#000000;font-size:small;}
+.content-lg {font-family:arial,helvetica;color:#000000;font-size:medium;}
+.content-sm {font-family:arial,helvetica;color:#000000;font-size:x-small;}
+.content-fxd {font-family:arial,helvetica;color:#000000;font-size:10pt;}
+.content-fxd-sm {font-family:arial,helvetica;color:#000000;font-size:10px;}
+.content-fxd-lg {font-family:arial,helvetica;color:#000000;font-size:18px;}
+.category-head-sm-wht {font-family:arial,helvetica;color:#ffffff;font-size:10px;}
+.category-head-wht {font-family:arial,helvetica;color:#ffffff;font-size:13px;font-weight:bold;}
+.category-head {font-family:arial,helvetica;color:#000000;font-size:13px;font-weight:bold;}
+.category-head-bg {font-family: arial,helvetica; color: #000000; font-size: 10pt; font-weight: bold; background-color:#ffcc66;} 
+.head {font-family:arial,helvetica;color:#0066cc;font-size:17px;font-weight:bold;}
+.subhead {font-family:arial,helvetica;color:#6699cc;font-size:15px;font-weight:bold;}
+.form {font-family:courier,monospace;color:#000000;font-size:15px;}
+.tabs {font-family:arial,helvetica;color:#003399;font-size:12px;font-weight:bold;background-color:#ffcc66;}
+.pr_price {font-family: arial,helvetica; color: #000000; font-size: 13px;}
+.pr_terms {font-family: arial,helvetica; color: #000000; font-size: 11px;}
+.pr_orange {font-family: arial,helvetica; color: #FF9900; font-size: 21px; font-weight: bold;}
+.pr_blue {font-family: arial,helvetica; color: #0066CC; font-size: 21px; font-weight: bold;}
+.content-md {font-family: arial,helvetica; color: #000000; font-size: 13px;}
+#subtabs {font-family:arial,helvetica;color:#ffffff;font-size:12px;background-color:#0066cc;}
+#tab-lit {color:#ffffff;background-color:#0066cc;}
+B {font-weight:bold}
+A:visited {color:#0066CC}
+A:active {color:#FF6600}
+A {color:#003399}
+.nav_tabText {font-family: arial,helvetica; font-size:12px; font-weight:bold;}
+.nav_notab {font-family: arial,helvetica; font-size:12px; font-weight:bold;}
+.nav_subDivider {font-size:10px; color:#ffffff;}
+#nav_sub {font-family: arial,helvetica; color: #ffffff; font-size: 11px;}
+#nav_off {color:#666666; text-decoration:none;}
+#nav_off:hover {text-decoration:underline;}
+#nav_on {color:#ffffff; background-color:#0066cc; text-decoration:none;}
+#footerLink {padding-left:6px; padding-right:6px;}
+
+.footerlinks {font-size:11px;font-family:arial,helvetica;}
+.plus2 {font-size:21px;color:#000000;font-family:arial,helvetica;}
+.plus1 {font-size:19px;color:#000000;font-family:arial,helvetica;}
+.default {font-size:17px;color:#000000;font-family:arial,helvetica;}
+.minus1 {font-size:14px;color:#000000;font-family:arial,helvetica;}
+.minus2 {font-size:11px;color:#000000;font-family:arial,helvetica;}
+.plus1blue {font-size:19px;color:#6699cc;font-family:arial,helvetica;}
+.defaultblue {font-size:17px;color:#6699cc;font-family:arial,helvetica;}
+.minus1blue {font-size:14px;color:#6699cc;font-family:arial,helvetica;}
+.plus1red {font-size:19px;color:#cc0000;font-family:arial,helvetica;}
+.defaultred {font-size:17px;color:#cc0000;font-family:arial,helvetica;}
+.minus1red {font-size:14px;color:#cc0000;font-family:arial,helvetica;}
+.minus2red {font-size:11px;color:#cc0000;font-family:arial,helvetica;}
+.plus1white {font-size:19px;color:#ffffff;font-family:arial,helvetica;}
+.defaultwhite {font-size:17px;color:#ffffff;font-family:arial,helvetica;}
+.minus1white {font-size:14px;color:#ffffff;font-family:arial,helvetica;}
+.whitehead {font-size:14px;font-weight:bold;color:#ffffff;font-family:arial,helvetica;}
+.valrateminus1 {font-size:14px;color:#0066cc;font-family:arial,helvetica;}
+.oldtoplinks {font-size:10px;font-family:arial,helvetica;}
+.pagetitle {font-size:19px;font-weight:bold;color:#000000;font-family:arial,helvetica;}
+.monospace {font-family:courier,monospace;color:#000000;font-size:15px;}
+
+td {font-family:arial,helvetica;}
+
+-->
+</style>
+</head>
+<body text="#000000" bgcolor="#FFFFFF" link="#000080" vlink="#000080" alink="#000080" onload="launchWindow (&quot;https://eval.bizrate.com/popup.pl?id=18151&quot;,&quot;160&quot;,&quot;425&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;no&quot;,&quot;no&quot;,&quot;no&quot;,&quot;no&quot;,&quot;1&quot;,&quot;1&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;)" leftmargin="0" marginwidth="0" topmargin="3" marginheight="3">
+&nbsp;
+<table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="100%" name="logo_banner" >
+<tr>
+<td COLSPAN="3" HEIGHT="7"></td>
+</tr>
+
+<tr>
+<td VALIGN=BOTTOM><a href="http://www.travelocity.com"><img SRC="tcy_logo_hrz.gif" ALT="Travelocity.com logo" BORDER=0 height=40 width=256></a></td>
+
+<td ALIGN=LEFT VALIGN=BOTTOM COLSPAN="2" WIDTH="100%" HEIGHT="60">&nbsp;</td>
+
+<td ALIGN=RIGHT VALIGN=BOTTOM style="padding-right:10px;"><a href="https://ad.travelocity.com/accipiter/adclick.html/site=travelocity.TRAVELOCITY/cobrand=TRAVELOCITY/aamsz=468x60SECURE/area=travelres.generic.glblreview/grorig=JFK/grdest=TPA/air_seg=1/car_seg=0/hot_seg=0/paxcount=2/paxtype=/dma=495456/pageid=070519/acc_random=070510/"><img ISMAP SRC="https://ad.travelocity.com/accipiter/adserver.html/site=travelocity.TRAVELOCITY/cobrand=TRAVELOCITY/aamsz=468x60SECURE/area=travelres.generic.glblreview/grorig=JFK/grdest=TPA/air_seg=1/car_seg=0/hot_seg=0/paxcount=2/paxtype=/dma=495456/pageid=070519/acc_random=070510/" ALT="" BORDER=0 height=60 width=468></a></td>
+</tr>
+
+<tr>
+<td COLSPAN="2" HEIGHT="15"></td>
+</tr>
+</table>
+
+<table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="100%" HEIGHT="25" name="nav" >
+<tr>
+<td WIDTH="778" BACKGROUND="nav_bg.gif">
+<table BORDER=0 CELLSPACING=0 CELLPADDING=0 HEIGHT="25" name="tabs" >
+<tr>
+<td NOWRAP WIDTH="13" BACKGROUND="tab_leftHomeOff.gif">&nbsp;</td>
+
+<td NOWRAP BACKGROUND="tab_bgOff.gif"><a href="http://dps1.travelocity.com:80/glblwhere.ctl?go_to_ctl=HOME&go=HOME&SEQ=104609922065580902242003&LANG=EN&last_pgd_page=glblreview.pgd" class="nav_tabText" id="nav_off">Home</a></td>
+
+<td NOWRAP WIDTH="8" BACKGROUND="tab_rightOff.gif">&nbsp;</td>
+
+<td NOWRAP WIDTH="8" BACKGROUND="tab_leftOff.gif">&nbsp;</td>
+
+<td NOWRAP BACKGROUND="tab_bgOff.gif"><a href="http://dps1.travelocity.com:80/glblwhere.ctl?go_to_ctl=flightshome&tr_module=AIRG&SEQ=104609922065674502242003&LANG=EN&last_pgd_page=glblreview.pgd" class="nav_tabText" id="nav_off">Flights</a></td>
+
+<td NOWRAP WIDTH="8" BACKGROUND="tab_rightOff.gif">&nbsp;</td>
+
+<td NOWRAP WIDTH="8" BACKGROUND="tab_leftOff.gif">&nbsp;</td>
+
+<td NOWRAP BACKGROUND="tab_bgOff.gif"><a href="http://dps1.travelocity.com:80/glblwhere.ctl?go_to_ctl=hotshome&tr_module=HOTL&SEQ=104609922065762902242003&LANG=EN&last_pgd_page=glblreview.pgd" class="nav_tabText" id="nav_off">Hotels</a></td>
+
+<td NOWRAP WIDTH="8" BACKGROUND="tab_rightOff.gif">&nbsp;</td>
+
+<td NOWRAP WIDTH="8" BACKGROUND="tab_leftOff.gif">&nbsp;</td>
+
+<td NOWRAP BACKGROUND="tab_bgOff.gif"><a href="http://dps1.travelocity.com:80/glblwhere.ctl?go_to_ctl=carshome&tr_module=CARS&SEQ=104609922065851202242003&LANG=EN&last_pgd_page=glblreview.pgd" class="nav_tabText" id="nav_off">Cars/Rail</a></td>
+
+<td NOWRAP WIDTH="8" BACKGROUND="tab_rightOff.gif">&nbsp;</td>
+
+<td NOWRAP WIDTH="8" BACKGROUND="tab_leftOff.gif">&nbsp;</td>
+
+<td NOWRAP BACKGROUND="tab_bgOff.gif"><a href="http://dps1.travelocity.com:80/glblwhere.ctl?go_to_ctl=vacations&SEQ=104609922065930402242003&LANG=EN&last_pgd_page=glblreview.pgd" class="nav_tabText" id="nav_off">Vacations</a></td>
+
+<td NOWRAP WIDTH="8" BACKGROUND="tab_rightOff.gif">&nbsp;</td>
+
+<td NOWRAP WIDTH="8" BACKGROUND="tab_leftOff.gif">&nbsp;</td>
+
+<td NOWRAP BACKGROUND="tab_bgOff.gif"><a href="http://dps1.travelocity.com:80/glblwhere.ctl?go_to_ctl=cruises&SEQ=104609922066010102242003&LANG=EN&last_pgd_page=glblreview.pgd" class="nav_tabText" id="nav_off">Cruises</a></td>
+
+<td NOWRAP WIDTH="8" BACKGROUND="tab_rightOff.gif">&nbsp;</td>
+
+<td NOWRAP WIDTH="8" BACKGROUND="tab_leftOff.gif">&nbsp;</td>
+
+<td NOWRAP BACKGROUND="tab_bgOff.gif"><a href="http://dps1.travelocity.com:80/glblwhere.ctl?go_to_ctl=realdeals&SEQ=104609922066089102242003&LANG=EN&last_pgd_page=glblreview.pgd" class="nav_tabText" id="nav_off">Last
+Minute Deals</a></td>
+
+<td NOWRAP WIDTH="8" BACKGROUND="tab_rightOff.gif">&nbsp;</td>
+
+<td NOWRAP WIDTH="8" BACKGROUND="tab_leftOff.gif">&nbsp;</td>
+
+<td NOWRAP BACKGROUND="tab_bgOff.gif"><a href="http://dps1.travelocity.com:80/glblwhere.ctl?go_to_ctl=dest&SEQ=104609922066167402242003&LANG=EN&last_pgd_page=glblreview.pgd" class="nav_tabText" id="nav_off">Guides
+&amp; Advice</a></td>
+
+<td NOWRAP WIDTH="8" BACKGROUND="tab_rightOff.gif">&nbsp;</td>
+
+<td NOWRAP BACKGROUND="nav_bg.gif" class="nav_notab"><a href="https://dps1.travelocity.com:443/glblwhere.ctl?go_to_ctl=retrrqst.ctl&tr_module=RETR&SEQ=104609922066266302242003&LANG=EN&last_pgd_page=glblreview.pgd"><img SRC="icon_mystuff.gif" ALT="My Stuff" HSPACE=3 BORDER=0 height=10 width=4></a><b><a href="https://dps1.travelocity.com:443/glblwhere.ctl?go_to_ctl=retrrqst.ctl&tr_module=RETR&SEQ=104609922066266302242003&LANG=EN&last_pgd_page=glblreview.pgd">My
+Stuff<a href="http://dps1.travelocity.com:80/glblhelp.ctl?pgdName=glblreview&SEQ=104609922066345702242003&LANG=EN&last_pgd_page=glblreview.pgd"><img SRC="icon_help.gif" ALT="Help" HSPACE=3 BORDER=0 height=11 width=10></a></a><a href="http://dps1.travelocity.com:80/glblhelp.ctl?pgdName=glblreview&SEQ=104609922066345702242003&LANG=EN&last_pgd_page=glblreview.pgd">Help</a></b></td>
+</tr>
+</table>
+</td>
+
+<td BACKGROUND="nav_bg.gif">&nbsp;</td>
+</tr>
+</table>
+
+<table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="100%" HEIGHT="23" BGCOLOR="#0066CC" name="subnav" >
+<tr>
+<td NOWRAP id="white"><img SRC="nav_subnavCt.gif" BORDER=0 height=10 width=10 align=ABSCENTER><a href="https://dps1.travelocity.com:443/glblwhere.ctl?go_to_ctl=retrrqst.ctl&tr_module=RETR&SEQ=104609922068724502242003&LANG=EN&last_pgd_page=glblreview.pgd" id="nav_sub">My
+Trips<span class=nav_subDivider></a>&nbsp; |&nbsp;</span><a href="https://dps1.travelocity.com:443/glblwhere.ctl?go_to_ctl=profentry.ctl&tr_module=PROF&SEQ=104609922067935502242003&LANG=EN&last_pgd_page=glblreview.pgd" id="nav_sub">My
+Account<span class=nav_subDivider></a>&nbsp; |&nbsp;</span><a href="http://dps1.travelocity.com:80/glblwhere.ctl?go_to_ctl=fwemmain.ctl&tr_module=FWEM&SEQ=104609922068038402242003&LANG=EN&last_pgd_page=glblreview.pgd" id="nav_sub">My
+Fare Watcher<span class=nav_subDivider></a>&nbsp; |&nbsp;</span><a href="http://dps1.travelocity.com:80/glblwhere.ctl?go_to_ctl=ptra&SEQ=104609922068523802242003&LANG=EN&last_pgd_page=glblreview.pgd" id="nav_sub">Travelocity
+Preferred Program<span class=nav_subDivider></a>&nbsp; |&nbsp;</span><a href="http://dps1.travelocity.com:80/glblwhere.ctl?go_to_ctl=rwrdmain.ctl&SEQ=104609922068310602242003&LANG=EN&last_pgd_page=glblreview.pgd" id="nav_sub">My
+Rewards<span class=nav_subDivider></a>&nbsp; |&nbsp;</span><a href="http://dps1.travelocity.com:80/glblwhere.ctl?go_to_ctl=mymgcontinue.ctl&SEQ=104609922068420802242003&LANG=EN&last_pgd_page=glblreview.pgd" id="nav_sub">My
+Messaging<span class=nav_subDivider></a>&nbsp; |&nbsp;</span><a href="http://dps1.travelocity.com:80/glblwhere.ctl?go_to_ctl=tcymc&SEQ=104609922068625102242003&LANG=EN&last_pgd_page=glblreview.pgd" id="nav_sub">Travelocity
+World MasterCard</a></td>
+</tr>
+
+<tr>
+<td HEIGHT="1" BGCOLOR="#003399"></td>
+</tr>
+</table>
+<style type="text/css">
+<!--
+td {font-family:arial,helvetica;color:#000000;font-size:small;}
+-->
+</style>
+
+<center><table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="100%" name="fill" >
+<tr>
+<td><img SRC="spacer.gif" ALT="" BORDER=0 height=5 width=1></td>
+</tr>
+</table></center>
+
+<center><!-- END OF HEADER --></center>
+
+<center><table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="100%" name="new_container" >
+<tr>
+<td><img SRC="spacer.gif" ALT="" BORDER=0 height=5 width=5></td>
+
+<td><img SRC="spacer.gif" ALT="" BORDER=0 height=1 width=125></td>
+
+<td><img SRC="spacer.gif" ALT="" BORDER=0 height=1 width=12></td>
+
+<td><img SRC="spacer.gif" ALT="" BORDER=0 height=1 width=100%></td>
+
+<td><img SRC="spacer.gif" ALT="" BORDER=0 height=1 width=5></td>
+</tr>
+
+<tr>
+<td><img SRC="spacer.gif" ALT="" BORDER=0 height=1 width=5></td>
+
+<td ALIGN=CENTER VALIGN=TOP>
+<table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="100%" name="destinfo" >
+<tr>
+<td ALIGN=CENTER COLSPAN="4" HEIGHT="22" BGCOLOR="#FFCC66" class="category-head">&nbsp;<b>Tools
+for your Trip</b></td>
+</tr>
+
+<tr>
+<td COLSPAN="2" HEIGHT="3"></td>
+</tr>
+
+<tr>
+<td><a href="http://dest.travelocity.com/DestGuides/geo_frontdoor/0,,TRAVELOCITY,00.html"><img SRC="20x20destg.gif" ALT="Destination Guide" BORDER=0 height=20 width=20 align=TOP></a></td>
+
+<td class="content-sm"><b><a href="http://dest.travelocity.com/DestGuides/geo_frontdoor/0,,TRAVELOCITY,00.html">Destination
+Guide</a></b></td>
+</tr>
+
+<tr>
+<td><a href="http://svc.travelocity.com/mapit/maps/0,,TRAVELOCITY,00.html"><img SRC="20x20maps.gif" ALT="" BORDER=0  align=TOP></a></td>
+
+<td class="content-sm"><b><a href="http://svc.travelocity.com/mapit/maps/0,,TRAVELOCITY,00.html">Maps</a></b></td>
+</tr>
+
+<tr>
+<td><a href="http://dest.travelocity.com/DestGuides/weather_region/0,,TRAVELOCITY,00.html"><img SRC="20x20weather.gif" ALT="Weather" BORDER=0 height=20 width=20 align=TOP></a></td>
+
+<td class="content-sm"><b><a href="http://dest.travelocity.com/DestGuides/weather_region/0,,TRAVELOCITY,00.html">Weather</a></b></td>
+</tr>
+
+<tr>
+<td><a href="http://leisure.travelocity.com/Concierge/0,,TRAVELOCITY,0.html"><img SRC="20x20_conc.gif" ALT="Concierge" BORDER=0 height=20 width=20 align=TOP></a></td>
+
+<td class="content-sm"><b><a href="http://leisure.travelocity.com/Concierge/0,,TRAVELOCITY,0.html">Concierge
+Services</a></b></td>
+</tr>
+
+<tr>
+<td><a href="http://www.travelocity.viator.com/"><img SRC="20x20_shuttle.gif" ALT="Tours and Activities" BORDER=0 height=20 width=20 align=TOP></a></td>
+
+<td class="content-sm"><b><a href="http://www.travelocity.viator.com/">Tours
+&amp; Activities</a></b></td>
+</tr>
+
+<tr>
+<td><a href="http://travelocity.golfswitch.com/"><img SRC="20x20_golf.gif" ALT="Sports and Leisure" BORDER=0 height=20 width=20 align=TOP></a></td>
+
+<td class="content-sm"><b><a href="http://travelocity.golfswitch.com/">Sports
+&amp; Leisure</a></b></td>
+</tr>
+
+<tr>
+<td><a href="http://travelocity.iseatz.com"><img SRC="20x20_dining.gif" ALT="Restaurant Reservations" BORDER=0 height=20 width=20 align=TOP></a></td>
+
+<td class="content-sm"><b><a href="http://travelocity.iseatz.com">Restaurant
+Reservations</a></b></td>
+</tr>
+</table>
+
+<p><a href="https://ad.travelocity.com/accipiter/adclick.html/site=travelocity.TRAVELOCITY/cobrand=TRAVELOCITY/aamsz=125x250SECURE/area=travelres.generic.glblreview/grorig=JFK/grdest=TPA/air_seg=1/car_seg=0/hot_seg=0/paxcount=2/paxtype=/dma=495456/pageid=073639/acc_random=070510"><img SRC="acc_random=070510" ALT="special" BORDER=0 height=250 width=125></a>
+<p><a href="https://ad.travelocity.com/accipiter/adclick.html/site=travelocity.TRAVELOCITY/cobrand=TRAVELOCITY/aamsz=125x400SECURE/area=travelres.generic.glblreview/grorig=JFK/grdest=TPA/air_seg=1/car_seg=0/hot_seg=0/paxcount=2/paxtype=/dma=495456/pageid=073639/acc_random=070510"><img SRC="acc_random=070510" ALT="special" BORDER=0 height=400 width=125></a></td>
+
+<td WIDTH="11" BACKGROUND="sidebar_border.gif"><img SRC="spacer.gif" ALT="" BORDER=0 height=1 width=12></td>
+
+<td VALIGN=TOP WIDTH="100%">
+<table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="100%" name="container_tbl" >
+<tr>
+<td><img SRC="spacer.gif" ALT="" BORDER=0 height=1 width=5></td>
+
+<td><img SRC="spacer.gif" ALT="" BORDER=0 height=1 width=100%></td>
+
+<td><img SRC="spacer.gif" ALT="" BORDER=0 height=1 width=5></td>
+</tr>
+
+<tr>
+<td></td>
+
+<td>
+<table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="100%" name="page_title" >
+<tr>
+<td WIDTH="100%" class="head"><img SRC="caret.gif" ALT="" BORDER=0 height=13 width=13>
+Trip Details</td>
+</tr>
+
+<tr>
+<td HEIGHT="3"></td>
+</tr>
+
+<tr>
+<td BGCOLOR="#CCCCCC"><img SRC="spacer.gif" ALT="" BORDER=0 height=1 width=1></td>
+</tr>
+
+<tr>
+<td HEIGHT="8"></td>
+</tr>
+</table>
+
+<table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="100%" name="printtxt" >
+<tr>
+<td HEIGHT="8"></td>
+</tr>
+
+<tr>
+<td><b>Please print this page for your records.</b></td>
+
+<td ALIGN=RIGHT><a href="http://dps1.travelocity.com:80/glblreview.ctl?previous_page=retrrqst&tripid=717271728275&res_loc=GHGHRK&showing_faxemail_version=1&net_fare_ind=0&opaque_ind=0&brand_ind=1&SEQ=104609922071653202242003&LANG=EN&last_pgd_page=glblreview.pgd">E-mail/Fax
+to friend</a></td>
+</tr>
+</table>
+
+<table BORDER=0 CELLSPACING=0 CELLPADDING=0 name="namestable" >
+<tr>
+<td HEIGHT="8"></td>
+</tr>
+
+<tr>
+<td COLSPAN="2">This itinerary has been e-mailed to you at: <b>VSTEIN@MATH.PSU.EDU&nbsp;</b>
+<br><!--END SUPPRESS--><!--^<EMAILPARSE INCLUDE--><b>Your Travelocity Trip
+ID is:&nbsp;<span id=notice>717271728275</b></span></td>
+
+<td><!--STARTFAXTEXT_1--></td>
+</tr>
+
+<tr>
+<td COLSPAN="2" HEIGHT="8"></td>
+</tr>
+
+<tr>
+<td ALIGN=LEFT VALIGN=TOP NOWRAP><b>Itinerary for:</b></td>
+</tr>
+
+<tr>
+<td VALIGN=TOP NOWRAP WIDTH="99%">LEONID VASERSTEIN</td>
+</tr>
+
+<tr>
+<td VALIGN=TOP NOWRAP WIDTH="99%">ANNA LEVY</td>
+</tr>
+</table>
+<!--END INCLUDE>^--><!--ENDFAXTEXT_1--><!--^<EMAILPARSE INCLUDE-->
+<table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="100%" name="textdisplays" >
+<tr>
+<td HEIGHT="8"></td>
+</tr>
+
+<tr>
+<td class="content"><b>We are in the process of issuing your ticket(s).
+You will receive an e-mail when your ticket(s) have been issued.</b> After
+that time use the <b>My Trips</b> link to access this reservation, then
+use the <b>View/Print Receipt</b> button to print legal notices, conditions
+of travel, and passenger receipts that document your purchase and take
+the place of tickets.&nbsp;
+<p><span id=unavail>Note: The FAA will require all passengers to show their
+electronic ticket receipt as well as a photo ID. Those who fail to show
+their electronic ticket receipt will be directed to the ticket counter.</span>
+<p><b>Delta Air Lines</b> will be able to access your electronic ticket(s)
+at the airport when you check in. All passengers must have a picture ID
+to obtain boarding passes.&nbsp;
+<p>Due to increased security measures you should plan to arrive at the
+airport two hours prior to departure. Additionally, you should expect that:
+<ul>&nbsp;
+<table BORDER=0 CELLSPACING=0 CELLPADDING=0 >
+<tr>
+<td>
+<li>
+Only ticketed passengers will be allowed past security</li>
+
+<li>
+All carry-on baggage will be subject to search</li>
+
+<li>
+No knives of any kind will be allowed on airplane</li>
+</td>
+</tr>
+</table>
+</ul>
+Please reference the Trip ID <b>717271728275</b> anytime you contact the
+Customer Service Center. There may be a penalty and/or an additional charge
+for changing a reservation, if your ticket is eligible for changes.<!--END INCLUDE>^--><!--^<EMAILPARSE SUPPRESS--><!--END SUPPRESS--><!--^<EMAILPARSE INCLUDE-->
+<p><a href="http://svc.travelocity.com/custsvc/0,,TRAVELOCITY:EN,00.html">Customer
+Service Center</a>: In the United States call 888-709-5983 (En Espa&ntilde;ol
+7am-11pm: 866-828-3933, TDD/Hearing Impaired: 800-555-7585). Outside the
+United States call 210-521-5871.<Z></td>
+</tr>
+</table>
+<!--END INCLUDE>^--><!--^<EMAILPARSE SUPPRESS-->
+<table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="100%" name="xselltitlebar" >
+<tr>
+<td HEIGHT="18">&nbsp;</td>
+</tr>
+
+<tr>
+<td NOWRAP HEIGHT="22" BGCOLOR="#000066" class="category-head-wht">&nbsp;<b>Need
+a place to stay? Something to drive? Add a Hotel or Car to your trip.</b></td>
+</tr>
+</table>
+
+<table BORDER=0 CELLSPACING=0 WIDTH="100%" BGCOLOR="#000066" name="xsell_container" >
+<tr>
+<td>
+<table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="100%" BGCOLOR="#FFFFFF" name="xsellcontent" >
+<tr>
+<td VALIGN=CENTER><img SRC="caribbean_1.jpg" ALT="" HSPACE=8 VSPACE=8 BORDER=0 height=83 width=120></td>
+
+<td><!-- link 1 --></td>
+
+<td VALIGN=CENTER NOWRAP><img SRC="bullet_xsell.gif" ALT="*" BORDER=0 height=10 width=10><b><a href="http://dps1.travelocity.com:80/glblcrosssell.ctl?ctl_name=hotsrqst.ctl&previous_page=glblreview&seg_for_hot=&destCityName=Tampa%2fSt%20Petersb,%20FL&travel_date=20030528&replace=N&resloc=GHGHRK&SEQ=104609922153983702242003&LANG=EN&last_pgd_page=glblreview.pgd">Add
+a Hotel in Tampa/St Petersb, FL</a></b></td>
+
+<td><!-- link 2 --></td>
+
+<td WIDTH="50%">&nbsp;</td>
+
+<td VALIGN=CENTER NOWRAP><img SRC="bullet_xsell.gif" ALT="*" BORDER=0 height=10 width=10><b><a href="http://dps1.travelocity.com:80/glblcrosssell.ctl?ctl_name=carsrqst.ctl&previous_page=glblreview&mkch_car_seg=&mcpath_flag=Y&destCityName=Tampa%2fSt%20Petersb,%20FL&travel_date=20030528&mcpath_name=add&resloc=GHGHRK&SEQ=104609922155102202242003&LANG=EN&last_pgd_page=glblreview.pgd">Add
+a Car in Tampa/St Petersb, FL</a></b></td>
+
+<td WIDTH="50%">&nbsp;</td>
+</tr>
+</table>
+</td>
+</tr>
+
+<tr>
+<td BGCOLOR="#FFFFFF"></td>
+</tr>
+</table>
+<!--END SUPPRESS--><!--^<EMAILPARSE INCLUDE--><!--STARTFAXTEXT_2-->
+<table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="100%" name="destinfo" >
+<tr>
+<td COLSPAN="4">&nbsp;</td>
+</tr>
+
+<tr>
+<td COLSPAN="4" HEIGHT="22" BGCOLOR="#0066CC" class="category-head-wht">&nbsp;<b>Your
+Trip Details</b></td>
+</tr>
+
+<tr>
+<td COLSPAN="4" HEIGHT="7"></td>
+</tr>
+</table>
+<Z><Q><!--END INCLUDE--><!--^<EMAILPARSE SUPPRESS-->
+<table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="100%" name="itinheaderseg1" >
+<tr>
+<td BGCOLOR="#CCCCCC"><img SRC="spacer.gif" ALT="" BORDER=0 height=1 width=1></td>
+</tr>
+
+<tr>
+<td HEIGHT="20" BGCOLOR="#EAEAEA">&nbsp;<b>Flight(s): Wed, May 28, 2003</b></td>
+</tr>
+
+<tr>
+<td BGCOLOR="#CCCCCC"><img SRC="spacer.gif" ALT="" BORDER=0 height=1 width=1></td>
+</tr>
+</table>
+<!--END SUPPRESS--><!--^<EMAILPARSE INCLUDE-->
+<table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="100%" name="flightitinseg1" >
+<tr>
+<td COLSPAN="4" HEIGHT="5"><img SRC="activity;src=551711;type=pv1;cat=air;ord=165581" BORDER=0 height=1 width=1><img SRC="activity;src=726425;type=trave285;cat=trave596;ord=1;num=165581" BORDER=0 height=1 width=1><img SRC="activity;src=737820;type=trave172;cat=trave478;ord=1;num=165581" BORDER=0 height=1 width=1></td>
+</tr>
+
+<tr>
+<td ALIGN=CENTER VALIGN=TOP ROWSPAN="10"><img SRC="ag_dllogo_35x35.gif" ALT="Airline Logo" BORDER=0 height=35 width=35>
+<br><img SRC="spacer.gif" ALT="" BORDER=0 height=5 width=75></td>
+
+<td ALIGN=RIGHT VALIGN=TOP NOWRAP><b>Flight:&nbsp;</b></td>
+
+<td WIDTH="100%"><b>Delta Air Lines flight 2417 operated by DELTA EXPRESS</b>
+(Non-Stop)&nbsp;</td>
+
+<td ALIGN=RIGHT NOWRAP><a href="http://dps1.travelocity.com:80/airgdetails.ctl?aln_code=DL&dep_dt=20030528&dep_arp_code=JFK&arr_arp_code=TPA&flt_num=2417&aln_name=Delta%20Air%20Lines&rqs_dow=Wednesday&SEQ=104609922168943802242003&LANG=EN&last_pgd_page=glblreview.pgd">Flight
+Details</a></td>
+</tr>
+
+<tr>
+<td ALIGN=RIGHT NOWRAP><b>Depart:&nbsp;</b></td>
+
+<td COLSPAN="2">New York-Kennedy (JFK) - TERMINAL 3</td>
+</tr>
+
+<tr>
+<td>&nbsp;</td>
+
+<td COLSPAN="2"><X><b>Wed, May 28 at 12:30pm</b></td>
+</tr>
+
+<tr>
+<td ALIGN=RIGHT NOWRAP><b>Arrive:&nbsp;</b></td>
+
+<td COLSPAN="2">Tampa/St Petersb, FL (TPA) - Terminal Information Unavailable</td>
+</tr>
+
+<tr>
+<td>&nbsp;</td>
+
+<td COLSPAN="2"><X><b>Wed, May 28 at 3:26pm</b></td>
+</tr>
+
+<tr>
+<td ALIGN=RIGHT NOWRAP><b>Seats:&nbsp;</b></td>
+
+<td COLSPAN="2">REQUESTED (Boeing 757 Jet)</td>
+</tr>
+
+<tr>
+<td ALIGN=RIGHT NOWRAP><b>Freq. Flyer:&nbsp;</b></td>
+
+<td COLSPAN="2">DL&nbsp; 4017408933, 2187875444</td>
+</tr>
+
+<tr>
+<td ALIGN=RIGHT NOWRAP><b>Meal:&nbsp;</b></td>
+
+<td COLSPAN="2">No Meal Served</td>
+</tr>
+
+<tr>
+<td ALIGN=RIGHT VALIGN=TOP NOWRAP><b><a href="http://dps1.travelocity.com:80/glblhelp.ctl?pgdName=glblreview&SEQ=104609922162242502242003&LANG=EN&last_pgd_page=glblreview.pgd#status">Status:&nbsp;</a></b></td>
+
+<td COLSPAN="2"><b>Confirmation Code&nbsp;<img SRC="caret_10x10.gif" ALT="" BORDER=0 height=10 width=10><span id=notice>5H64AZ</b></span></td>
+</tr>
+
+<tr>
+<td COLSPAN="3" HEIGHT="4"></td>
+</tr>
+</table>
+<Z><Q><!--END INCLUDE--><!--^<EMAILPARSE SUPPRESS-->
+<table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="100%" name="itinheaderseg2" >
+<tr>
+<td BGCOLOR="#CCCCCC"><img SRC="spacer.gif" ALT="" BORDER=0 height=1 width=1></td>
+</tr>
+
+<tr>
+<td HEIGHT="20" BGCOLOR="#EAEAEA">&nbsp;<b>Flight(s): Sun, June 08, 2003</b></td>
+</tr>
+
+<tr>
+<td BGCOLOR="#CCCCCC"><img SRC="spacer.gif" ALT="" BORDER=0 height=1 width=1></td>
+</tr>
+</table>
+<!--END SUPPRESS--><!--^<EMAILPARSE INCLUDE-->
+<table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="100%" name="flightitinseg2" >
+<tr>
+<td COLSPAN="4" HEIGHT="5"><img SRC="activity;src=551711;type=pv1;cat=air;ord=165581" BORDER=0 height=1 width=1><img SRC="activity;src=726425;type=trave285;cat=trave596;ord=1;num=165581" BORDER=0 height=1 width=1><img SRC="activity;src=737820;type=trave172;cat=trave478;ord=1;num=165581" BORDER=0 height=1 width=1></td>
+</tr>
+
+<tr>
+<td ALIGN=CENTER VALIGN=TOP ROWSPAN="10"><img SRC="ag_dllogo_35x35.gif" ALT="Airline Logo" BORDER=0 height=35 width=35>
+<br><img SRC="spacer.gif" ALT="" BORDER=0 height=5 width=75></td>
+
+<td ALIGN=RIGHT VALIGN=TOP NOWRAP><b>Flight:&nbsp;</b></td>
+
+<td WIDTH="100%"><b>Delta Air Lines flight 2376 operated by DELTA EXPRESS</b>
+(Non-Stop)&nbsp;</td>
+
+<td ALIGN=RIGHT NOWRAP><a href="http://dps1.travelocity.com:80/airgdetails.ctl?aln_code=DL&dep_dt=20030608&dep_arp_code=TPA&arr_arp_code=JFK&flt_num=2376&aln_name=Delta%20Air%20Lines&rqs_dow=Sunday&SEQ=104609922172727002242003&LANG=EN&last_pgd_page=glblreview.pgd">Flight
+Details</a></td>
+</tr>
+
+<tr>
+<td ALIGN=RIGHT NOWRAP><b>Depart:&nbsp;</b></td>
+
+<td COLSPAN="2">Tampa/St Petersb, FL (TPA) - Terminal Information Unavailable</td>
+</tr>
+
+<tr>
+<td>&nbsp;</td>
+
+<td COLSPAN="2"><X><b>Sun, Jun 08 at 4:30pm</b></td>
+</tr>
+
+<tr>
+<td ALIGN=RIGHT NOWRAP><b>Arrive:&nbsp;</b></td>
+
+<td COLSPAN="2">New York-Kennedy (JFK) - TERMINAL 3</td>
+</tr>
+
+<tr>
+<td>&nbsp;</td>
+
+<td COLSPAN="2"><X><b>Sun, Jun 08 at 7:16pm</b></td>
+</tr>
+
+<tr>
+<td ALIGN=RIGHT NOWRAP><b>Seats:&nbsp;</b></td>
+
+<td COLSPAN="2">REQUESTED (Boeing 757 Jet)</td>
+</tr>
+
+<tr>
+<td ALIGN=RIGHT NOWRAP><b>Freq. Flyer:&nbsp;</b></td>
+
+<td COLSPAN="2">DL&nbsp; 4017408933, 2187875444</td>
+</tr>
+
+<tr>
+<td ALIGN=RIGHT NOWRAP><b>Meal:&nbsp;</b></td>
+
+<td COLSPAN="2">No Meal Served</td>
+</tr>
+
+<tr>
+<td ALIGN=RIGHT VALIGN=TOP NOWRAP><b><a href="http://dps1.travelocity.com:80/glblhelp.ctl?pgdName=glblreview&SEQ=104609922162242502242003&LANG=EN&last_pgd_page=glblreview.pgd#status">Status:&nbsp;</a></b></td>
+
+<td COLSPAN="2"><b>Confirmation Code&nbsp;<img SRC="caret_10x10.gif" ALT="" BORDER=0 height=10 width=10><span id=notice>5H64AZ</b></span></td>
+</tr>
+
+<tr>
+<td COLSPAN="3" HEIGHT="4"></td>
+</tr>
+</table>
+<Q><!--END INCLUDE>^--><!--ENDFAXTEXT_2--><!--^<EMAILPARSE INCLUDE--><Q><a NAME="airfare"></a>
+<table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="100%" name="airfare" >
+<tr>
+<td COLSPAN="2" HEIGHT="5"></td>
+</tr>
+
+<tr>
+<td HEIGHT="22" BGCOLOR="#0066CC" class="category-head-wht">&nbsp;<b>Airfare
+Summary&nbsp; - Prices shown in U.S. dollars&nbsp;</b></td>
+
+<td ALIGN=RIGHT NOWRAP BGCOLOR="#0066CC" class="category-head-wht">Total:<span class=category-head-bg>
+USD 321.52</span></td>
+</tr>
+</table>
+
+<table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="100%" name="price_title" >
+<tr>
+<td COLSPAN="5" BGCOLOR="#CCCCCC"><img SRC="spacer.gif" ALT="" BORDER=0 height=1 width=1></td>
+</tr>
+
+<tr>
+<td NOWRAP WIDTH="145" HEIGHT="20" BGCOLOR="#EAEAEA">&nbsp;<b>Travelers</b></td>
+
+<td ALIGN=RIGHT NOWRAP WIDTH="120" BGCOLOR="#EAEAEA"><b>Price per person</b></td>
+
+<td ALIGN=RIGHT NOWRAP WIDTH="102" BGCOLOR="#EAEAEA"><b>Taxes &amp; Fees</b></td>
+
+<td ALIGN=RIGHT NOWRAP WIDTH="83" BGCOLOR="#EAEAEA"><b>Total Price</b></td>
+
+<td NOWRAP WIDTH="100%" BGCOLOR="#EAEAEA">&nbsp;</td>
+</tr>
+
+<tr>
+<td COLSPAN="5" BGCOLOR="#CCCCCC"><img SRC="spacer.gif" ALT="" BORDER=0 height=1 width=1></td>
+</tr>
+
+<tr>
+<td COLSPAN="5" HEIGHT="8"></td>
+</tr>
+</table>
+
+<table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="100%" name="price" >
+<tr>
+<td NOWRAP WIDTH="145" HEIGHT="22"><img SRC="caret_10x10.gif" ALT="" BORDER=0 height=10 width=10><b>2
+adults</b></td>
+
+<td ALIGN=RIGHT NOWRAP WIDTH="90">127.68&nbsp;</td>
+
+<td NOWRAP WIDTH="30"></td>
+
+<td ALIGN=RIGHT NOWRAP WIDTH="102">&nbsp;28.08&nbsp;</td>
+
+<td ALIGN=RIGHT NOWRAP WIDTH="83">311.52&nbsp;</td>
+
+<td WIDTH="100%">&nbsp;</td>
+</tr>
+
+<tr>
+<td COLSPAN="7" HEIGHT="5"></td>
+</tr>
+
+<tr>
+<td NOWRAP>&nbsp;<b>Service Fee&nbsp;</b></td>
+
+<td>&nbsp;</td>
+
+<td ALIGN=RIGHT NOWRAP>&nbsp;</td>
+
+<td ALIGN=RIGHT NOWRAP>&nbsp;5.00&nbsp;</td>
+
+<td ALIGN=RIGHT>&nbsp;10.00&nbsp;</td>
+
+<td WIDTH="100%">&nbsp;</td>
+</tr>
+
+<tr>
+<td COLSPAN="7" HEIGHT="8"></td>
+</tr>
+</table>
+<Q><Z><!--END INCLUDE>^--><!--^<EMAILPARSE SUPPRESS--></td>
+
+<td><img SRC="spacer.gif" ALT="" BORDER=0 height=1 width=5></td>
+</tr>
+</table>
+<!-- bottom line -->
+<table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="100%" name="bottom line" >
+<tr>
+<td COLSPAN="3" HEIGHT="10"></td>
+</tr>
+
+<tr>
+<td WIDTH="5"><img SRC="spacer.gif" ALT="" BORDER=0 height=1 width=5></td>
+
+<td WIDTH="100%" BGCOLOR="#CCCCCC"><img SRC="spacer.gif" NAME="1" ALT="" BORDER=0 height=1 width=1></td>
+
+<td WIDTH="5"><img SRC="spacer.gif" ALT="" BORDER=0 height=1 width=5></td>
+</tr>
+
+<tr>
+<td COLSPAN="3" HEIGHT="8"></td>
+</tr>
+</table>
+<!-- /bottom line -->
+<table BORDER=0 CELLSPACING=0 CELLPADDING=0 name="buttons" >
+<tr>
+<td COLSPAN="5" HEIGHT="20">&nbsp;</td>
+</tr>
+
+<tr>
+<td WIDTH="50%">&nbsp;</td>
+
+<td><a href="http://dps1.travelocity.com:80/lognlogout.ctl?SEQ=104609922182537802242003&LANG=EN&last_pgd_page=glblreview.pgd"><img SRC="bt_tcy_rv_exit.gif" ALT="" HSPACE=10 BORDER=0 ></a></td>
+
+<td WIDTH="50%">&nbsp;</td>
+</tr>
+
+<tr>
+<td COLSPAN="5" HEIGHT="20">&nbsp;</td>
+</tr>
+</table>
+
+<table BORDER=0 CELLSPACING=10 CELLPADDING=0 name="ADS" >
+<tr>
+<td ALIGN=CENTER><a href="https://ad.travelocity.com/accipiter/adclick.html/site=travelocity.TRAVELOCITY/cobrand=TRAVELOCITY/aamsz=125x125SECURE/exclusive=travelres.generic.glblreview.left/grorig=JFK/grdest=TPA/air_seg=1/car_seg=0/hot_seg=0/paxcount=2/paxtype=/dma=495456/pageid=073639/acc_random=182934/"><img ISMAP SRC="https://ad.travelocity.com/accipiter/adserver.html/site=travelocity.TRAVELOCITY/cobrand=TRAVELOCITY/aamsz=125x125SECURE/exclusive=travelres.generic.glblreview.left/grorig=JFK/grdest=TPA/air_seg=1/car_seg=0/hot_seg=0/paxcount=2/paxtype=/dma=495456/pageid=073639/acc_random=182934/" ALT="" height=125 width=125></a></td>
+
+<td ALIGN=CENTER><a href="https://ad.travelocity.com/accipiter/adclick.html/site=travelocity.TRAVELOCITY/cobrand=TRAVELOCITY/aamsz=125x125SECURE/exclusive=travelres.generic.glblreview.right/grorig=JFK/grdest=TPA/air_seg=1/car_seg=0/hot_seg=0/paxcount=2/paxtype=/dma=495456/pageid=073639/acc_random=182934/"><img ISMAP SRC="https://ad.travelocity.com/accipiter/adserver.html/site=travelocity.TRAVELOCITY/cobrand=TRAVELOCITY/aamsz=125x125SECURE/exclusive=travelres.generic.glblreview.right/grorig=JFK/grdest=TPA/air_seg=1/car_seg=0/hot_seg=0/paxcount=2/paxtype=/dma=495456/pageid=073639/acc_random=182934/" ALT="" height=125 width=125></a><img SRC="activity;src=339194;type=lastmin;cat=global;ord=182934" BORDER=0 height=1 width=1><img SRC="activity;src=551711;type=pv1;cat=glob;ord=182934" BORDER=0 height=1 width=1></td>
+</tr>
+</table>
+<noscript>
+<center><a href="https://eval.bizrate.com/popchoice.pl?id=18151" target="_blank"><img SRC="bizrate.gif" ALT="What do you think of this Merchant? Click here to participate." BORDER=0 height=95 width=350></a></center>
+</noscript></td>
+
+<td><img SRC="spacer.gif" ALT="" BORDER=0 height=1 width=5></td>
+</tr>
+</table></center>
+
+<center><!-- START OF FOOTER --><map name="TRAVRES"><area shape=rect coords="12,6,146,22"  href='javascript:launchWindow("http://svc.travelocity.com/info/info_window/0,,TRAVELOCITY:EN|GUARANTEE_WINDOW,00.html#", 325, 455, "", "yes", "no", "no", "yes")'><area shape=rect coords="146,6,254,22" href='javascript:launchWindow("http://svc.travelocity.com/info/info_window/0,,TRAVELOCITY:EN|PRIVACY_WINDOW,00.html#", 325, 455, "", "yes", "no", "no", "yes")'></map></center>
+
+<table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="100%" >
+<tr>
+<td COLSPAN="2" HEIGHT="1" BGCOLOR="#CCCCCC"></td>
+</tr>
+
+<tr>
+<td ALIGN=CENTER WIDTH="776" HEIGHT="23" BGCOLOR="#EAEAEA">
+<table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="776" >
+<tr>
+<td ALIGN=CENTER class="content-fxd-sm"><a href="http://dps1.travelocity.com:80/glblwhere.ctl?SEQ=104609922185087202242003&LANG=EN&last_pgd_page=glblreview.pgd#go HOME">Home</a>&nbsp;
+
+<a href="http://dps1.travelocity.com:80/glblwhere.ctl?go_to_ctl=flightshome&tr_module=AIRG&SEQ=104609922184440402242003&LANG=EN&last_pgd_page=glblreview.pgd">Flights</a>&nbsp;
+
+<a href="http://dps1.travelocity.com:80/glblwhere.ctl?go_to_ctl=hotshome&tr_module=HOTL&SEQ=104609922184548102242003&LANG=EN&last_pgd_page=glblreview.pgd">Hotels</a>&nbsp;
+
+<a href="http://dps1.travelocity.com:80/glblwhere.ctl?go_to_ctl=carshome&tr_module=CARS&SEQ=104609922184662602242003&LANG=EN&last_pgd_page=glblreview.pgd">Cars/Rail</a>&nbsp;
+
+<a href="http://dps1.travelocity.com:80/glblwhere.ctl?go_to_ctl=vacations&SEQ=104609922184755102242003&LANG=EN&last_pgd_page=glblreview.pgd">Vacations</a>&nbsp;
+
+<a href="http://dps1.travelocity.com:80/glblwhere.ctl?go_to_ctl=cruises&SEQ=104609922184837802242003&LANG=EN&last_pgd_page=glblreview.pgd">Cruises</a>&nbsp;
+
+<a href="http://dps1.travelocity.com:80/glblwhere.ctl?go_to_ctl=realdeals&SEQ=104609922184931502242003&LANG=EN&last_pgd_page=glblreview.pgd">Last
+Minute Deals</a>&nbsp;&nbsp; <a href="http://dps1.travelocity.com:80/glblwhere.ctl?go_to_ctl=dest&SEQ=104609922184337402242003&LANG=EN&last_pgd_page=glblreview.pgd">Guides
+&amp; Advice</a>&nbsp;&nbsp; <a href="http://svc.travelocity.com/custsvc/0,,TRAVELOCITY:EN,00.html">Customer
+Care</a></td>
+</tr>
+</table>
+</td>
+
+<td WIDTH="100%" BGCOLOR="#EAEAEA">&nbsp;</td>
+</tr>
+
+<tr>
+<td COLSPAN="2" HEIGHT="1" BGCOLOR="#CCCCCC"></td>
+</tr>
+</table>
+
+<table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="776" >
+<tr>
+<td COLSPAN="3">&nbsp;</td>
+</tr>
+
+<tr>
+<td WIDTH="100"><img SRC="sabrecon_88x28.gif" ALT="Sabre Connected" BORDER=0 height=28 width=88></td>
+
+<td VALIGN=TOP WIDTH="576" class="content-sm">&copy; 2002 - 2003 Travelocity.com
+LP. All rights reserved. Travelocity&reg;, Travelocity.com&reg; and the
+Travelocity skyline logo are trademarks and/or service marks of Travelocity.com
+LP. Use of this Web site constitutes acceptance of the Travelocity <a href="http://svc.travelocity.com/info/info_main/0,,TRAVELOCITY:EN|TERMS,00.html#">User
+Agreement</a> and <a href="javascript:launchWindow(&quot;http://svc.travelocity.com/info/info_window/0,,TRAVELOCITY:EN|PRIVACY_WINDOW,00.html#&quot;, 325, 455, &quot;&quot;, &quot;yes&quot;, &quot;no&quot;, &quot;no&quot;, &quot;yes&quot;)">Privacy
+Policy</a>.</td>
+
+<td WIDTH="100"><img SRC="bbb.gif" ALT="BBB Online Reliability Program" BORDER=0 height=31 width=90></td>
+</tr>
+
+<tr>
+<td COLSPAN="3">&nbsp;</td>
+</tr>
+</table>
+<!--FTR END-->
+<br><img SRC="activity;src=53425;type=lead;cat=glblrevi;ord=1046099221836914" height=1 width=1>
+</body>
+</html>

@@ -1,0 +1,1296 @@
+\documentclass[12pt]{amsart}
+\usepackage{amssymb}
+\usepackage{amsmath}
+
+\renewcommand{\theequation}{\thesection.\arabic{equation}}
+\renewcommand{\thesection}{\arabic{section}}
+\numberwithin{equation}{section}
+%\renewcommand{equation}{\arabic{subsection}}
+\def\pf{\hfill{$\square$}}
+\newcommand{\fr}{\frac}
+\theoremstyle{plain}
+\newtheorem{thm}{Theorem}
+\theoremstyle{remark}
+\newtheorem*{rem}{Remark}
+\newtheorem{prop}{Proposition}
+\newtheorem{cor}[equation]{Corollary}
+\newtheorem{lemma}[equation]{Lemma}
+\theoremstyle{definition}
+\newtheorem*{defn}{Definition}
+\renewcommand{\sf}{\tiny}%\scriptscriptstyle}
+
+\begin{document}
+
+\title{$a$-Gaussian Polynomials and Finite Rogers-Ramanujan
+Identities}
+
+\author[George E. Andrews]{George E. Andrews$^{(1)}$}
+
+\begin{abstract}
+Classical Gaussian polynomials are generalized to two variable
+polynomials.  The first half of the paper is devoted to a full
+account of this extension and its inherent properties.  The
+final part of the paper considers the role of these polynomials
+in finite identities of the Rogers-Ramanujan type.
+\vskip .1in
+\centerline{\it Dedicated to my friend, Mizan Rahman.}
+\end{abstract}
+
+%\keywords{$K$-theory cooperations, numerical polynomials, Gaussian 
+%polynomials}
+
+%\subjclass[2000]{%
+%Primary:   55S25; % K-theory operations and generalized cohomology operations
+%Secondary: 19L64, % Computations, geometric applications
+%	   11B65. % Binomial coefficients; factorials; q-identities
+%}
+
+%\date{December 2001}
+
+\maketitle
+
+\footnotetext[1]{Partially supported by National Science Foundation 
+Grant DMS9206993.}
+
+\section{Introduction}
+%\setcounter{equation}{1}
+\markboth{$a$-GAUSSIAN POLYNOMIALS}{GEORGE E. ANDREWS}
+Our object in this paper is to better understand certain classical
+generalizations of the Rogers-Ramanujan identities [2; p. 104]:
+\begin{equation}
+	\sum_{n=0}^{\infty} \frac{q^{n^2}}{(q;q)_n} = 
+	\frac1{(q;q^5)_{\infty} (q^4;q^5)_{\infty}}\;,
+\end{equation}
+and
+\begin{equation}
+	\sum_{n=0}^{\infty} \frac{q^{n^2+n}}{(q;q)_n} =
+	\frac1{(q^2;q^5)_{\infty}(q^3;q^5)_{\infty}}\;,
+\end{equation}
+where $|q| < 1$ and
+\begin{equation}
+	(A;q)_n = (A;q)_{\infty}/(Aq^n;q)_{\infty}\,,
+\end{equation}
+and
+\begin{equation}
+	(A;q)_{\infty} = \prod_{j=0}^{\infty} (1 - Aq^j)\,.
+\end{equation}
+
+The majority of early proofs of (1.2) and (1.3) were based on
+the following theorem which W. N. Bailey [7; p. 8, line 4]
+called an ``$a$-generalization.''
+\begin{equation}
+	\sum_{n=0}^{\infty} \frac{q^{n^2}a^n}{(q;q)_n} =
+	\frac1{(aq;q)_{\infty}} \left\{ 1 + \sum_{n=1}^{\infty}
+	\frac{(-1)^n a^{2n} q^{n(5n-1)/2}(1 - aq^{2n})(aq;q)_{n-1}}
+	{(q;q)_n}\right\}\,.
+\end{equation}
+
+There occur in the literature two refinements of (1.5) in
+which the series on the left of the identity is replaced by a
+polynomial.  Namely [1], [9], [10], [13].
+\begin{equation}
+	\sum_{n=0}^N a^n q^{n^2} \left[ \begin{array}{c} N \\ n
+	\end{array}; q \right] = \sum_{n=0}^N (-1)^n q^{n(5n-1)/2}
+	(1 - aq^{2n}) \left[ \begin{array}{c} N \\ n
+	\end{array}; q \right] \frac1{(aq^n;q)_{N+1}}
+\end{equation}
+and [8; eq. (3.5)].
+\begin{eqnarray}
+	& & \sum_{n=0}^N a^n q^{n^2} \left[ \begin{array}{c} N \\ n
+	\end{array}; q \right] = \sum_{N\geqq 2n = 0} (-1)^n
+	a^{2n} q^{n(5n-1)/2}(1 - aq^{2n})
+	\\
+	& & \qquad \left[ \begin{array}{c} N \\ n
+	\end{array}; q \right] \left[ \begin{array}{c} N - n \\ n
+	\end{array}; q \right] (q;q)_n \frac{(a^2 q^{N+2n+1};q)_{N-2n}}
+	{(aq^n;q)_{N+1-n}}\;,  \nonumber
+\end{eqnarray}
+where
+\begin{equation}
+	\left[ \begin{array}{c} N \\ n \end{array};q\right] = 
+	\left\{ \begin{array}{cl} 0 & \mbox{ if } n < 0 \mbox{ or }
+	n > N \\ \frac{(q;q)_N}{(q;q)_n(q;q)_{N-n}} & \mbox{ otherwise}
+	\end{array} \right.
+\end{equation}
+is the Gaussian polynomial or $q$-binomial coefficient.
+
+Now there is something rather surprising about (1.6) and (1.7) that is
+readily observed upon examination. The left sides of both (1.6) and
+(1.7) are polynomials term by term and consequently the sums are
+polynomials.  However it is not the case that the right-hand side of
+either (1.6) or (1.7) is obviously a polynomial in that the terms of
+the sums are mostly rational functions with non-trivial denominators.
+
+For example, when $N=2$, (1.6) asserts
+\begin{equation}
+	1 + aq(1+q) + a^2 q^4 = \frac1{(1-aq)(1-aq^2)} -
+	\frac{a^2 q^2 (1 + q)}{(1-aq)(1-aq^3)} + 
+	\frac{a^4 q^9}{(1 - aq^2)(1-aq^2)}
+\end{equation}
+and (1.7) asserts (after cancelling common factors)
+\begin{equation}
+	1 + aq(1 + q)+a^2 q^4 = \frac{(1 - a^2 q^3)(1 + aq^2)}
+	{(1 - aq)} - \frac{a^2 q^2(1 - q^2)}{(1 - aq)}
+\end{equation}
+
+On of the objects of this paper is to present a new representation for
+the polynomial on the left of (1.6) or (1.7) that converges to the
+right-hand side of (1.5) and is a polynomial term by term.  To
+accomplish this we shall require the development of an
+``$a$-generalization'' of Gaussian polynomials.
+
+Our new identity asserts
+
+\begin{eqnarray}
+	& & \qquad \sum_{n=0}^N a^n q^{n^2} 
+	\left[ \begin{array}{c} N \\ n \end{array};q,q\right] 
+	\\
+	& = & \sum_{0\leqq 2n \leqq N} (-1)^n a^{2n} q^{n(5n-1)/2}
+	\left[ \begin{array}{c} N \\ n \end{array};q,q\right]
+	\left[ \begin{array}{c} 2N + 1-2n \\ N-2n \end{array};q,aq^n\right]
+	\nonumber
+	\\
+	& & \sum_{0\leqq 2n \leqq N - 1} (-1)^n a^{2n+1} q^{n(5n+3)/2}
+	\left[ \begin{array}{c} N \\ n \end{array};q,q\right]
+	\left[ \begin{array}{c} 2N - 2n \\ N-2n - 1 \end{array};q,aq^n\right].
+	\nonumber
+\end{eqnarray}
+The $a$-Gaussian polynomial $\left[ \begin{array}{c} N \\ n
+\end{array};q,a\right]$ will be defined and studied in Sections 2 and
+3.  Propositions 8 and 9 show that (1.11) converges directly to (1.5).
+Now for $N=2$, (1.11) asserts
+\begin{eqnarray}
+	& & 1+ aq(1+q) + a^2 q^4 = 
+	\\ 
+	& & \qquad (1 + a + aq + aq^2 + a^2 + a^2 q
+	+ 2a^2 q^2 + a^2 q^3 + a^2 q^4)  \nonumber
+	\\
+	& & \qquad\quad- a^2 q^2 (1 + q) - a(1 + a + aq + aq^2)  \nonumber
+\end{eqnarray}
+
+As we shall see in Sections 2 and 3, the $a$-Gaussian polynomials have
+their own intrinsic surprises and appeal.  However, it is natural to
+ask why one would want (1.11) when it would seem that (1.6) and (1.7)
+would suffice as finitized versions of (1.5).  We shall discuss this
+question further in Section 6.  For now, we merely note that the long
+standing Borwein conjectures [5] are merely assertions about
+polynomials that are, in fact, finitizations of classical
+Rogers-Ramanujan type identities [5; Sec. 4].  Consequently, in depth
+studies of such polynomials is clearly in order, and it is to be hoped
+that $a$-Gaussian polynomials may add some insight in this area.
+
+In addition, our work here contributes to further elucidation of
+truncated Rogers-Ramanujan series, a topic suggested by Ramanujan
+and studied from the point of view of Bailey Chains in [4].
+
+\section{$a$-Gaussian polynomials}
+
+The definition for $a$-Gaussian polynomials is, at first
+glance, rather unilluminating.  So we preface it with a
+discussion of what we are striving for.
+
+To begin with, it is well-known [2; Ch. 3, Th. 3.1] that the
+Gaussian polynomial
+\[
+	\left[ \begin{array}{c} N + M \\ M \end{array}
+	;q\right]
+\]
+is the generating function for partitions with largest part
+$\leqq N$ and number of parts $\leqq M$.  So, for example
+\begin{eqnarray}
+	\left[ \begin{array}{c} 5 \\ 2 \end{array};q\right]
+	& = & 1 + q + 2q^2 + 2q^3 + 2q^4 + q^5 + q^6  \nonumber
+	\\
+	& = & 1 + q + q^2 + q^{1+1} + q^3 + q^{2+1} + q^{3+1}
+	+ q^{2+2} + q^{3+2} + q^{3+3}\,.  \nonumber
+\end{eqnarray}
+
+Now as is noted in [2; Ch. 2] often one needs a two variable 
+generating function in which a second variable records the number
+of parts of the partition being generated.  Thus one would like
+to generalize the above polynomial to
+\begin{eqnarray}
+	& & 1 + aq + aq^2 + a^2 q^{1+1} + aq^3 + a^2 q^{2+1} +
+	a^2 q^{3+1} + a^2 q^{3+1}  \nonumber
+	\\
+	& & \qquad\qquad  + a^2 q^{2+2} + a^2 q^{3+2}
+	+ a^2 q^{3+3}  \nonumber
+	\\
+	& & \quad = 1 + aq \left[ \begin{array}{c} 3 \\ 1 
+	\end{array};q\right] + a^2 q^2 \left[ \begin{array}{c} 4 \\ 
+	2 \end{array};q\right]\,.\nonumber
+\end{eqnarray}
+Proposition 5 below makes clear that our $a$-Gaussian polynomials
+achieve this initial objective.
+
+\begin{defn}
+For integers $N$ and $j$ with $N \geqq 0$
+\begin{equation}
+	\left[ \begin{array}{c} N \\ j \end{array} ; q,a \right]
+	= \left\{ \begin{array}{cl}  0 & \mbox{ if } j < 0  \\
+	1 & \mbox{ if } j = 0 \mbox{ or } N   \\ \displaystyle{\sum_{h=0}^j}
+	\quad a^h \left[ \begin{array}{c} N-j+h-1 \\ h \end{array} ; q \right]
+	& \mbox{ if } 0 < j < N  \\
+	(aq^{N-j};q)_{j-N} & \mbox{ if } j > N. \end{array}  \right.
+\end{equation}
+\end{defn}
+
+\begin{rem}
+The cases $j \leq N$ and $j \geq N$ actually coincide if one
+interprets $\left[\begin{array}{c} -A \\ m \end{array};q\right]$
+in the standard way.  We have chosen to use the several separate
+lines to emphasize that the polynomial is a finite product when
+$j > N$.  The more succinct representation would have sacrificed
+clarity.
+\end{rem}
+
+We shall now prove seven propositions about $a$-Gaussian polynomials.
+The first one establishes that we have truly generalized the classical
+Gaussian polynomials.  Propositions 2--4 are the natural extensions of
+the Pascal triangle recurrences for Gaussian polynomials.  Proposition
+5 establishes the connection with partitions that we described at the
+beginning of this section.  Proposition 6 is a naturally terminating
+representation of $a$-Gaussian polynomials.  Proposition 7 is the
+natural extension of the finite geometric series summation to
+$a$-Gaussian polynomials.
+
+\begin{prop}
+For integers $N$ and $j$ with $N \geqq 0$, $\left[\begin{array}{c} N
+\\ j \end{array};q,q\right] = \left[\begin{array}{c} N \\ j
+\end{array};q\right]$.
+\end{prop}
+
+\begin{proof}
+Clearly both sides are identically $0$ if $j < 0$ or $j > N$.  
+Also both sides equal $1$ when $j = 0$ or $N$.  Finally, for
+$0 < j < N$
+\begin{equation}
+	\left[\begin{array}{c} N \\ j \end{array};q,q\right]
+	= \sum_{h=0}^j q^h \left[\begin{array}{c} N-j+h-1 \\ h 
+	\end{array};q\right] = \left[\begin{array}{c} N \\ j 
+	\end{array};q\right]
+\end{equation}
+by [2; p. 37, eq. (3.3.9)].
+\end{proof}
+
+\begin{prop}
+For integers $N$ and $j$ with $N \geqq 1$,
+\begin{equation}
+	\left[\begin{array}{c} N \\ j \end{array};q,a\right]
+	= \left[\begin{array}{c} N-j \\ j \end{array};q,a\right]
+	+ aq^{N-j-1} \left[\begin{array}{c} N-1 \\ j-1 \end{array};
+	q,a\right]\,.
+\end{equation}
+\end{prop}
+
+\begin{proof}
+If $j < 0$, then both sides are $0$.  If $j = 0$, then both
+sides equal $1$.  If $0 < j < N - 1$, we see that
+\begin{eqnarray}
+	\left[\begin{array}{c} N \\ j \end{array};q,a\right]
+	& = & \sum_{h=0}^j \;a^h \left[\begin{array}{c} N-j+h-1 \\ h 
+	\end{array};q\right]  \nonumber
+	\\
+	& = & \sum_{h=0}^j \;a^h \left(\left[\begin{array}{c} N-1-j+h-1 \\ h 
+	\end{array};q\right]  \right. \nonumber
+	\\
+	& & \qquad + q^{N-j-1}\left. \left[\begin{array}{c} N-1-j+h-1 \\ 
+	h-1 \end{array};q,q\right]\right)  \nonumber
+	\\
+	& & \hbox{\hskip .3in} \mbox{(by [2; p. 35, eq. (3.3.3)])}  \nonumber
+	\\
+	& = & \left[\begin{array}{c} N - 1 \\ j \end{array};q,a\right]
+	+ aq^{N-j-1} \sum_{h=0}^{j-1} \;a^h \left[\begin{array}{c} N-1-j+h \\ 
+	h \end{array}\right]  \nonumber
+	\\
+	& = & \left[\begin{array}{c} N - 1 \\ j \end{array};q,a\right]
+	+ aq^{N-j-1} \left[\begin{array}{c} N-1 \\ j-1 \end{array};q,a
+	\right]  \nonumber
+\end{eqnarray}
+Noting that
+\begin{equation}
+	\left[\begin{array}{c} N \\ N-1 \end{array};q,a\right]
+	= \sum_{h=0}^j\;a^h = \frac{1 - a^{j+1}}{1 - a}\,,
+\end{equation}
+we see that the case $j = N - 1$ also falls into place because
+\begin{equation}
+	\left[\begin{array}{c} N \\ N-1 \end{array};q,a\right]
+	= 1 + a \sum_{h=0}^{j-1}\;a^h = \left[\begin{array}{c} N-1 \\ 
+	N-1 \end{array};q,a\right] + aq^{N-(N-1)-1}
+	\left[\begin{array}{c} N-1 \\ N-2 \end{array};q,a\right]\;.
+\end{equation}
+The case $j = N$ asserts
+\[
+	1 = (1 - aq^{-1}) + aq^{-1} \cdot 1
+\]
+which is obvious.
+
+Finally, if $j > N$
+\begin{eqnarray}
+	& & \left[\begin{array}{c} N - 1 \\ j \end{array};q,a\right]
+	+ aq^{N-j-1} \left[\begin{array}{c} N - 1 \\ j - 1 
+	\end{array};q,a\right]  \nonumber
+	\\
+	& & = (aq^{N-1-j};q)_{j-(N-1)} + aq^{N-j-1} (aq^{(N-1)-(j-1)}
+	;q)_{(j-1)-(N-1)}  \nonumber
+	\\
+	& & = (aq^{N-j};q)_{j-N} ((1 - aq^{N-1-j}) + aq^{N-j-1})
+	\nonumber
+	\\
+	& & = (aq^{N-j};q)_{j-N}   \nonumber
+	\\
+	& & = \left[\begin{array}{c} N \\ j \end{array};q,a\right]\,.
+	\nonumber
+\end{eqnarray}
+Thus Proposition 2 is established.
+\end{proof}
+
+\begin{prop}
+For integers $N$ and $j$ with $N \geqq 1$,
+\[
+	\left[\begin{array}{c} N \\ j \end{array};q,a\right]
+	= \left[\begin{array}{c} N - 1 \\ j \end{array};q,aq\right]
+	+ a \left[\begin{array}{c} N - 1 \\ j - 1 \end{array};q,a\right]
+\]
+\end{prop}
+
+\begin{proof}
+If $j < 0$, then both sides of this equation are identically $0$.
+If $j = 0$, then both sides equal 1.  If $0 < j < N - 1$, then
+\begin{eqnarray}
+	& & \left[\begin{array}{c} N \\ j \end{array};q,a\right]
+	= \sum_{h=0}^j \;a^h \left[\begin{array}{c} N - j + h - 1
+	\\ h \end{array};q\right]  \nonumber
+	\\
+	& = &  \sum_{h=0}^j \;a^h \left(\left[\begin{array}{c} N-j+h-2 \\ 
+	h-1 \end{array};q\right] + q^h \left[\begin{array}{c} N-j+h-2 \\ 
+	h \end{array};q\right]\right)  \nonumber
+	\\
+	& = & \sum_{h=0}^{j-1} \;a^{h+1} \left[\begin{array}{c} N-j+h-1 \\ 
+	h \end{array};q\right] + \sum_{h=0}^j (aq)^h 
+	\left[\begin{array}{c} N-1-j+h-1 \\ h \end{array};q\right]  \nonumber
+	\\
+	& = & a \left[\begin{array}{c} N-1 \\ j-1 \end{array};q,a\right]
+	+ \left[\begin{array}{c} N-1 \\ j \end{array};q,aq\right]\,.
+	\nonumber
+\end{eqnarray}
+
+If $j = N-1$, the assertion is
+\[
+	1 + a + \cdots a^{N-1} = a(1 + a + \cdots + a^{N-2}) + 1\,,
+\]
+which is immediate.
+
+If $j=N$, the assertion is
+\[
+	1 = (1 - a) + a
+\]
+which is obvious.
+
+Finally if $j > N$,
+\begin{eqnarray}
+	& & \left[\begin{array}{c} N - 1 \\ j \end{array};q,aq\right]
+	+ a \left[\begin{array}{c} N - 1  \\ j - 1 \end{array};q,a\right]
+	\nonumber
+	\\
+	& & = aqq^{(N-1)-j};q)_{j-n(N-1)} + a (aq^{(N-1)-(j-1)};
+	q)_{(j-1)-(N-1)}   \nonumber
+	\\
+	& & = (aq^{N-j};q)_{j-N}((1-a)+a)  \nonumber
+	\\
+	& & = (aq^{N-j};q)_{j-n}  \nonumber
+	\\
+	& & = \left[\begin{array}{c} N \\ j \end{array};q,a\right]\,.
+	\nonumber  
+\end{eqnarray}
+This proves Proposition 3.
+\end{proof}
+
+\begin{prop}
+For integers $N$ and $j$ with $N \geqq 1$,
+\[
+	\left[\begin{array}{c} N \\ j \end{array};q,a\right]
+	= \left[\begin{array}{c} N - 1 \\ j -1 \end{array};q,a\right]
+	+ a^j \left[\begin{array}{c} N - 1 \\ j \end{array};q\right]\,.
+\]
+\end{prop}
+
+\begin{proof}
+If $j < 0$, then both sides are $0$.  If $j = 0$, then both sides
+equal $1$.
+
+If $0 < j < N - 1$, then
+\begin{eqnarray}
+	& & \left[\begin{array}{c} N \\ j \end{array};q,a\right]
+	- \left[\begin{array}{c} N - 1 \\ j - 1 \end{array};q,a\right]
+	\nonumber
+	\\
+	& = & \sum_{h=0}^j \;a^h \left[\begin{array}{c} N - j+h - 1 \\ h 
+	\end{array};q\right] - \sum_{h=0}^{j-1} \;a^h \left[\begin{array}{c} 
+	(N - 1)-(j-1)+h-1 \\ h \end{array};q\right]  \nonumber
+	\\
+	& = & a^j \left[\begin{array}{c} N - 1 \\ j \end{array};q\right]\,.
+	\nonumber
+\end{eqnarray}
+
+If $j = N - 1$, the assertion is
+\[
+	1 + a + a^2 + \cdots + a^{N-1} = (1 + a + a^2 + \cdots +
+	a^{N-2}) + a^{N-1}\,.
+\]
+
+If $j = N$, the assertion is $1 = 1$.
+
+If $j > N$, then 
+\begin{eqnarray}
+	& & \left[\begin{array}{c} N \\ j \end{array};q,a\right]
+	- \left[\begin{array}{c} N - 1 \\ j - 1 \end{array};q,a\right]
+	\nonumber 
+	\\
+	& & = (aq^{N-j};q)_{j-N} - (aq^{(N-1)-(j-1)};q)_{(j-1)-(N-1)}
+	\nonumber
+	\\
+	& & = 0 = a^j \left[\begin{array}{c} N - 1 \\ j \end{array};q\right]\,.
+	\nonumber
+\end{eqnarray}
+Thus Proposition 4 is proved.
+\end{proof}
+
+\begin{prop}
+For nonnegative integers
+\[
+	\left[\begin{array}{c} N + M \\ N \end{array};q,aq\right]
+	= \sum_{n,m \geqq 0} p(N,M,n,m) a^m q^n\,,
+\]
+where $p(N,M,n,m)$ is the number of partitions of $n$ into
+$m$  parts with $m \leqq M$ and each part $\leqq N$.
+\end{prop}
+
+\begin{proof}
+It is well known [2; Th. 3.1, p. 33] that
+\[
+	\left[\begin{array}{c} N + M \\ M \end{array};q\right]
+\]
+is the generating function for partitions with $\leqq M$ parts
+each $\leqq N$.  Hence
+\[
+	q^h \; \left[\begin{array}{c} N + h - 1 \\ h \end{array}\right]
+\]
+is the generating function for partitions with exactly $h$ parts
+each $\leqq N$.  Consequently
+\begin{eqnarray}
+	& & \sum_{n,m \geqq 0} p(N,M,n,m) a^m q^n   \nonumber
+	\\
+	& & = \sum_{h=0}^M a^h q^h\left[\begin{array}{c} N + h - 1 \\ h 
+	\end{array}\right]  \nonumber
+	\\
+	& & = \left[\begin{array}{c} N + M \\ M \end{array};q,aq\right]\,, 
+	\nonumber
+\end{eqnarray}
+as desired
+\end{proof}
+
+\begin{prop}
+For nonnegative integers $N$ and $j$,
+\[
+	\left[\begin{array}{c} N \\ j \end{array};q,a\right]
+	= \frac1{(q;q)_j} \sum_{i=0}^j \left[\begin{array}{c} j \\ i 
+	\end{array};q\right] a^{j-i} (aq^{N-j};q)_i (q/a;q)_{j-i}\,.
+\]
+\end{prop}
+
+\begin{proof}
+	If $N = 0$, the sum on the right is
+\begin{eqnarray}
+	& &  \frac1{(q;q)_j} \sum_{i=0}^j \left[\begin{array}{c} j \\ i 
+	\end{array};q\right] a^{j-i} (-1)^i a^i q^{-ji+\left(
+	{\sf\begin{array}{c} i \\ 2\end{array}}\right)} (q/a;q)_j
+	\nonumber
+	\\
+	& & = \frac{a^j(q/a;q)_j}{(q;q)_j} \sum_{i=0}^j
+	\left[\begin{array}{c} j \\ i \end{array};q\right]
+	(-1)^i q^{\left({\sf\begin{array}{c} i \\ 2 \end{array}}\right)
+	-ji}  \nonumber
+	\\
+	& & = \frac{a^j(q/a;q)_j}{(q;q)_j} 
+	(q^{-j};q)_j \qquad\quad
+	\mbox{ (by [2; p. 35, eq. (3.3.6)]}   \nonumber
+	\\
+	& & = (-1)^j q^{-\left({\sf\begin{array}{c} j+1 \\ 
+	2 \end{array}}\right)}	a^j (q/a;q)_j   \nonumber
+	\\
+	& & = (aq^{-j};q)_j  \nonumber
+	\\
+	& & = \left[ \begin{array}{c} 0 \\ j \end{array}; q,a\right]
+	\nonumber
+\end{eqnarray}
+for all $j \geqq 0$.
+
+If, on the other hand, $j = 0$, the sum on the right is equal to
+$1$ which is $\left[ \begin{array}{c} N \\ 0 \end{array}; q,a\right]$.
+
+We can conclude the proof of the proposition by showing that the
+right-hand side of the asserted identity satisfies the recurrence
+given in Proposition 2 thus permitting a double induction on $N$
+and $j$ to conclude matters.
+
+We denote by $R(N,j)$ the right-hand side of the equation
+asserted in the proposition.
+\begin{eqnarray}
+	& & R(N,j) - R(N-1,j)  \nonumber  \\
+	& & = \frac1{(q;q)_j} \sum_{i=0}^j \left[\begin{array}{c}
+	j \\ i  \end{array} ; q\right] a^{j-i} (q/a;q)_{j-i}((aq^{N-j}
+	;q)_i - (aq^{N-1-j};q)_i)   \nonumber
+	\\
+	& & = \frac1{(q;q)_j} \sum_{i=0}^j \left[\begin{array}{c}
+	j \\ i  \end{array} ; q\right] a^{j-i} (q/a;q)_{j-i}(aq^{N-j}
+	;q)_i ((1 - aq^{N-j+i-1}) - (1 - aq^{N-1-j}))   \nonumber
+	\\
+	& & = \frac1{(q;q)_j} \sum_{i=0}^j \left[\begin{array}{c}
+	j \\ i  \end{array} ; q\right] a^{j-i} (q/a;q)_{j-i} (aq^{N-j};q)_{i-1}
+	aq^{N-1-j}(1 - q^i)  \nonumber
+	\\
+	& & = \frac{aq^{N-1-j}}{(q;q)_{j-1}} \sum_{i=0}^{j-1}
+	\left[\begin{array}{c} j-1 \\ i \end{array};q\right] 
+	a^{j-1-i}(q/a;q)_{j-1-i} (aq^{(N-1)-(j-1)};q)_i  \nonumber
+	\\
+	& & = aq^{N-1-j} R(N-1,j-1),  \nonumber
+\end{eqnarray}
+and Proposition 6 is proved.
+\end{proof}
+
+\begin{prop}
+For $N$ and $j$ nonnegative integers
+\[
+	\left[\begin{array}{c} N+j+1 \\ j \end{array};q,a\right] 
+	= \frac1{(q;q)_N} \sum_{i=0}^N \left[\begin{array}{c} N \\ i 
+	\end{array};q\right] \frac{(-1)^i q^{\left({\sf\begin{array}{c} i+1 \\
+	2\end{array}}\right)}(1 - a^{j+1} q^{i(j+1)})}{(1 - aq^i)}
+\]
+\end{prop}
+
+\begin{proof}
+\begin{eqnarray}
+	\left[\begin{array}{c} N+j+1 \\ j \end{array};q,a\right] 
+	& = & \sum_{h=0}^j \left[\begin{array}{c} N+h \\ h \end{array};
+	 q\right] \;a^h  \nonumber
+	\\
+	& = & \sum_{h=0}^j \frac{(q^{h+1};q)_N}{(q;q)_N}\;a^h
+	\nonumber
+	\\
+	& = & \frac1{(q;q)_N} \sum_{h=0}^j \sum_{i=0}^N 
+	\left[\begin{array}{c} N \\ i \end{array};q\right] 
+	(-1)^i q^{\left({\sf\begin{array}{c} i+1 \\ 2 \end{array}}\right) 
+	+hi} a^h  \nonumber
+	\\
+	& & \qquad\qquad \mbox{(by [2; p. 36, eq. (3.3.6)])}
+	\nonumber
+	\\
+	& = & \frac1{(q;q)_N} \sum_{i=0}^N \left[\begin{array}{c} N \\ 
+	i \end{array};q\right] (-1)^i q^{\left({\sf\begin{array}{c} i+1 \\ 
+	2 \end{array}}\right)} \frac{(1 - a^{j+1} q^{i(j+1)})}{(1 - aq^i)}\;,
+	\nonumber
+\end{eqnarray}
+by the finite geometric series summation.
+\end{proof}
+
+\section{Limiting Cases and Identities}
+
+The previous section described fundamental formulas and recurrences
+for the $a$-Gaussian polynomials.  In this section, we examine the
+limiting values of these polynomials (Propositions 8 and 9), and we
+show how they fit into a generalized Chu-Vandermonde summation
+(Proposition 10).  Proposition 11 provides a useful reduction formula.
+
+\begin{prop}
+For $|a| < 1$, $|q|< 1$,
+\[
+	\lim_{N\rightarrow \infty}\left[ \begin{array}{c} N + M
+	\\ N \end{array} ;q,a\right] = \frac1{(a;q)_M}\;.
+\]
+\end{prop}
+
+\begin{proof}
+\begin{eqnarray}
+	\lim_{N\rightarrow \infty}\left[ \begin{array}{c} N + M
+	\\ N \end{array} ;q,a\right] & = & \lim_{N\rightarrow\infty}
+	\sum_{h=0}^N \left[\begin{array}{c} M + h -1 \\ h\end{array}
+	;q\right] \;a^h  \nonumber
+	\\
+	& = & \frac1{(a;q)_M} \qquad\quad \mbox{(by [2; p. 36,
+	eq. (3.3.7)])}.  \nonumber
+\end{eqnarray}
+\end{proof}
+
+\begin{prop}
+If $|a| < 1$, $|q| < 1$, and $A,B,C$ and $D$ are integers with
+$A > C > 0$, then
+\[
+	\lim_{N\rightarrow\infty}  \left[\begin{array}{c} AN + B \\
+	CN + D \end{array};q,a\right] = \frac1{(a;q)_{\infty}}\;.
+\]
+\end{prop}
+
+\begin{proof}
+\begin{eqnarray}
+	& & \lim_{N\rightarrow\infty}\left[ \begin{array}{c} AN + B
+	\\ CN + D \end{array} ;q,a\right] = 
+	\lim_{N\rightarrow\infty}\sum_{h=0}^{CN+D}
+	\nonumber
+	\\
+	& & \qquad\qquad\qquad \left[ \begin{array}{c} (A-C)N + 
+	B-D+h-1	\\ h \end{array} ;q\right] \;a^h  \nonumber
+	\\
+	& & = \sum_{h=0}^{\infty} \frac{a^h}{(q;q)_h}  \nonumber
+	\\
+	& & = \frac1{(a;q)_{\infty}} \qquad\qquad\quad
+	\mbox{(by [2; p. 19, eq. (2.2.5)])}  \nonumber
+\end{eqnarray}
+\end{proof}
+
+\begin{prop}
+If $R,N$, and $j$ are non-negative integers then
+\[
+	\left[\begin{array}{c} n \\ j \end{array}; q,a\right]
+	= \sum_{i=0}^R a^i q^{i(n+i-j-R-1)} 
+	\left[\begin{array}{c} R \\ i \end{array}; q\right]
+	\left[\begin{array}{c} n - R \\ j - i \end{array}; q,a\right]\,.
+\]
+\end{prop}
+
+\begin{proof}
+We shall prove this result by showing that the right-hand side 
+does not depend on $R$ and is equal to the left-hand side when 
+$R = 0$ (the latter is immediately obvious).
+\begin{eqnarray}
+	& & \sum_{i=0}^R a^i q^{i(n+i-j-R-1)} \left[\begin{array}{c} R \\ 
+	i \end{array}; q\right] \left[\begin{array}{c} n-R \\ j-i \end{array};
+ 	q,a\right]  \nonumber
+	\\	
+	& & = \sum_{i=0}^R a^i q^{i(n+i-j-R-1)} \left[\begin{array}{c} R \\ 
+	i \end{array}; q\right] \left(\left[\begin{array}{c} n-R \\ j-i 
+	\end{array};q,a\right] + aq^{n-R-j+i-1}  \right.
+	\nonumber
+	\\
+	& & \qquad\quad \left.
+	\left[\begin{array}{c} n-R-1 \\ j-i-1 \end{array};q,a\right]
+	\right)   \nonumber
+	\\
+	& & = \sum_{i=0}^R a^i q^{i(n+i-j-R-1)} \left[\begin{array}{c} R \\ 
+	i \end{array}; q\right] \left[\begin{array}{c} n-(R+1) \\ j-i 
+	\end{array};q,a\right]  \nonumber
+\end{eqnarray}
+\begin{eqnarray}	
+	& & \quad + \sum_{i=0}^{R+1} a^i q^{(i-1)(n+i-1-j-R-1)} 
+	\left[\begin{array}{c} R \\ 
+	i - 1 \end{array}; q\right] q^{n-R-j+i-2}
+	\left[\begin{array}{c} n-(R+1) \\ j-i \end{array};
+ 	q,a\right]  \nonumber
+	\\	
+	& & = \sum_{i=0}^{R+1} a^i q^{i(n+i-j-(R+1)-1)}\left( 
+	q^i\left[\begin{array}{c} 
+	R \\ i \end{array}; q\right] + \left[\begin{array}{c} R \\ i-1 
+	\end{array};q\right]\right) \left[\begin{array}{c} n-(R+1) \\
+	j-i \end{array};q,a\right]  \nonumber
+	\\	
+	& & = \sum_{i=0}^{R+1} a^i q^{i(n+i-j-(R+1)-1)}
+	\left[\begin{array}{c} R + 1 \\ i \end{array};q\right]
+	\left[\begin{array}{c} n-(R + 1) \\ j - i \end{array};q,a\right]\;.
+	\nonumber
+\end{eqnarray}
+Thus the sum on the right-hand side of the asserted identity
+is unaltered when $R$ is replaced by $R+1$.  Consequently it is
+equal to its value at $R=0$ which is $\left[\begin{array}{c} n \\
+j \end{array};q,a\right]$ as asserted.
+\end{proof}
+
+\begin{prop}
+For nonnegative integers $r,n,m,$
+\[
+	\left[\begin{array}{c} n + m \\ n \end{array};q,aq^r\right]
+	= \sum_{j=0}^r  a^j(-1)^j q^{\left({\sf\begin{array}{c} j \\ 2
+	\end{array}}\right)} (q^m;q)_j \left[ \begin{array}{c} r \\ j
+	\end{array};q\right]\left[\begin{array}{c} n+m \\ n-j \end{array}
+	;q,a\right]\,.
+\]
+\end{prop}
+
+\begin{proof}
+We proceed by induction on $r$. When $r = 0$, the assertion
+is a tautology.  At $r + 1$,
+\begin{eqnarray}
+	& & \left[\begin{array}{c} n + m \\ n \end{array}
+	;q,aq^{r+1}\right]  \nonumber
+	\\
+	& & = \sum_{j=0}^n \left[ \begin{array}{c} m+j-1 \\ j
+	\end{array};q\right] a^j q^{(r+1)j}  \nonumber
+	\\
+	& & = \sum_{j=0}^n \left[ \begin{array}{c} m+j-1 \\ j
+	\end{array};q\right] a^j (q^{rj} - q^{rj}(1 - q^j))  \nonumber
+	\\
+	& & = \sum_{j=0}^n \left[ \begin{array}{c} m+j-1 \\ j
+	\end{array};q\right] a^j q^{rj} - \sum_{j=0}^n
+	(1 - q^m)\left[ \begin{array}{c} m+j-1 \\ j-1
+	\end{array};q\right] a^j q^{rj}   \nonumber
+	\\
+	& & = \sum_{j=0}^n \left[ \begin{array}{c} m+j-1 \\ j
+	\end{array};q\right] a^j q^{rj} - (1 - q^m) \sum_{j=0}^{n-1}
+	\left[\begin{array}{c} m+j \\ j \end{array} ;q \right]
+	a^{j+1} q^{r(j+1)}  \nonumber
+	\\
+	& & = \left[\begin{array}{c} n+m \\ n \end{array};q,
+	aq^r \right] - aq^r (1 - q^m) \left[\begin{array}{c} n+m \\ n 
+	\end{array};q,aq^r \right]  \nonumber
+	\\
+	& & = \sum_{j=0}^r a^j (-1)^j 
+	q^{\left({\sf\begin{array}{c} j \\ 2\end{array}}\right)} 
+	(q^m;q)_j \left[\begin{array}{c} r \\ j
+	\end{array};q\right]\left[\begin{array}{c} n+m \\ n-j \end{array}
+	;q,a\right]   \nonumber
+\end{eqnarray}
+\begin{eqnarray}
+	& & \quad + \sum_{j=0}^r a^{j+1} (-1)^{j+1} q^{\left(
+	{\sf\begin{array}{c} j \\ 2 \end{array}}\right)} q^r (q^m)_{j+1}
+	\left[\begin{array}{c} r \\ j \end{array};q\right]
+	\left[\begin{array}{c} n+m \\ n-1-j \end{array};q,a\right] 
+	\nonumber
+	\\
+	& & = \sum_{j=0}^{r+1} a^j (-1)^j q^{\left(
+	{\sf\begin{array}{c} j \\ 2	\end{array}}\right)} (q^m;q)_j
+	\left[\begin{array}{c} r \\ j	\end{array};q \right]
+	\left[\begin{array}{c} n+m \\ n-j \end{array};q,a \right]
+	\nonumber
+	\\
+	& & \quad \sum_{j=0}^{r+1} a^j (-1)^j q^{\left(
+	{\sf\begin{array}{c} j-1 \\ 2 \end{array}}\right)+r} (q^m;q)_j
+	\left[\begin{array}{c} r \\ j-1 \end{array};q \right]
+	\left[\begin{array}{c} n+m \\ n-j \end{array};q,a \right]
+	\nonumber
+	\\
+	& & = \sum_{j=0}^{r+1} a^j (-1)^j q^{\left(
+	{\sf\begin{array}{c} j \\ 2	\end{array}}\right)} (q^m;q)_j
+	\left[\begin{array}{c} n+m \\ n-j \end{array};q,a \right]
+	\left(\left[\begin{array}{c} r \\ j \end{array};q \right]
+	+ q^{r-j+1}\left[\begin{array}{c} r \\ j-1 \end{array};q \right]
+	\right) \nonumber
+	\\
+	& & = \sum_{j=0}^{r+1} a^j (-1)^j q^{\left(
+	{\sf\begin{array}{c} j \\ 2	\end{array}}\right)} (q^m;q)_j
+	\left[\begin{array}{c} r+1 \\ j \end{array};q \right]
+	\left[\begin{array}{c} n+m \\ n-j \end{array};q,a \right]
+	\nonumber
+	\\
+	& & \hbox{\hskip 3in} \mbox{(by [2; p. 35, eq.
+	(3.3.3)])}\,.  \nonumber
+\end{eqnarray}
+Hence Proposition 11 follows by induction on $r$.
+\end{proof}
+
+\section{$a$-Generalizations of Finite Rogers-Ramanujan Type
+Identities}
+
+In Section 1, equation (1.11) is the special case $k = 2$,
+$m = N$ of the following result:
+
+\begin{thm}
+For $m,N,k$ nonnegative integers with $k > 0$
+\begin{eqnarray}
+	& & \sum_{s\geqq 0} (-1)^s a^{ks} q^{s((2k+1)s-1)/2}\left[
+	\begin{array}{c} N \\ s \end{array};q\right]\left[
+	\begin{array}{c} N+m+1-ks \\ m - ks\end{array};q,aq^s\right]
+	\nonumber
+	\\
+	& & - \sum_{s\geqq 0} (-1)^s a^{ks+1} q^{s((2k+1)s+3)/2}
+	\left[\begin{array}{c} N \\ s \end{array};q\right]
+	\left[\begin{array}{c} N+m-ks \\ m-ks \end{array};q,aq^s\right]
+	\nonumber
+	\\
+	& & = \sum_{\sf{\begin{array}{c} n_1 \geqq n_2 \geqq \cdots 
+	\geqq n_{k-1} \geqq 0 \\ n_1 + n_2 + \cdots n_{k-1} \leqq m
+	\end{array}}} \frac{q^{n_1^2 + n_2^2 + \cdots + n_{k-1}^2}
+	a^{n_1+n_2+\cdots + n_{k-1}}(q;q)_N}{(q;q)_{N-n_1}
+	(q;q)_{n_1-n_2}(q;q)_{n_2-n_3}\cdots (q;q)_{n_{k-2}-n_{k-1}}
+	(q;q)_{n_{k-1}}} \nonumber
+\end{eqnarray}
+\end{thm}
+
+\begin{rem}
+	If we let $m,N \to \infty$ take $k = 1$ and invoke
+Propositions 8 and 9, we retrieve (1.5) term by term.
+\end{rem}
+
+\begin{proof}
+Call the left side of this identity $L(m)$ and the right side
+$R(m)$.  We proceed by induction on $m$.
+
+Clearly $L(0) = R(0) = 1$.
+
+Furthermore, it is immediate that 
+\begin{eqnarray}
+	& & R(m) - R(m-1)  \nonumber
+	\\
+	& & = a^m [a^m] \sum_{n_1 \geqq \cdots \geqq n_{k-1}\geqq 0}
+	\frac{a^{n_1^2 + n_2^2 + \cdots + n_{k-1}^2}a^{n_1 + n_2 +
+	\cdots + n_{k-1}}(q;q)_N}{(q;q)_{N-n_1}(q;q)_{n_1-n_2}
+	\cdots (q;q)_{n_{k-2}-n_{k-1}}(q;q)_{n_k-1}} \nonumber
+\end{eqnarray}
+where $[a^m] \displaystyle{\sum_{j=0}^{\infty}} c_j a^j = c_m$.
+
+On the other hand,
+\begin{eqnarray}
+	& & L(m) - L(m-1)  \nonumber   \\
+	& & = \sum_{s\geqq 0} (-1)^s a^{ks} q^{s((2k+1)s-1)/2}
+	\left[\begin{array}{c} N \\ s \end{array} ;q\right]
+	\nonumber
+	\\
+	& & \qquad \times \left(\left[\begin{array}{c} N+m+1-ks \\ 
+	m - ks	\end{array} ;q,aq^s\right] - \left[\begin{array}{c} 
+	N+m-ks \\ m-ks-1 \end{array} ;q,aq^s\right]\right)
+	\nonumber
+	\\
+	& & - \sum_{s\geqq 0} (-1)^s a^{ks+1} q^{s((2k=1)s+3)/2} 
+	\left[\begin{array}{c} N \\ s \end{array} ;q\right]
+	\nonumber
+	\\
+	& & \qquad \left(\left[\begin{array}{c} N+m-ks \\ 
+	m-ks-1 \end{array} ;q,aq^s\right] - \left[\begin{array}{c} 
+	N+m-ks-1 \\ m-ks-2 \end{array} ;q,aq^s\right]\right)
+	\nonumber
+	\\
+	& & = \sum_{s\geqq 0} (-1)^s a^{ks} q^{s((2k+1)s-1)/2}
+	\left[\begin{array}{c} N \\ s \end{array} ;q\right]
+	(aq^s)^{m-ks-1} \left[\begin{array}{c} N+m-ks \\ m-ks \end{array}
+	 ;q\right]
+	\nonumber
+	\\
+	& & - \sum_{s\geqq 0} (-1)^s a^{ks+1} q^{s((2k+1)s+3)/2}
+	\left[\begin{array}{c} N \\ s \end{array} ;q\right] (aq^s)^{m-ks-1}
+	\left[\begin{array}{c} N+m-ks-1 \\ m-ks-1 \end{array} ;q\right]
+	\nonumber
+	\\
+	& & \hbox{\hskip 1.5in} \mbox{(by Proposition 4)}
+	\nonumber
+	\\
+	& & = a^m \left\{ \sum_{s\geqq 0}(-1)^s q^{\left({\sf
+	\begin{array}{c} s \\
+	2 \end{array}}\right)+ms} \left[\begin{array}{c} N \\ s \end{array} 
+	;q\right] \left[\begin{array}{c} N+m-ks \\ m-ks \end{array} ;q\right]
+	\right.
+	\nonumber
+	\\
+	& & \qquad - \left.
+	\sum_{s\geqq 0} (-1)^s q^{\left({\sf\begin{array}{c} s+1 \\
+	2 \end{array}}\right)+ms} \left[\begin{array}{c} N \\ s \end{array} 
+	;q\right] \left[\begin{array}{c} N+m-ks-1 \\ m-ks-1 \end{array} 
+	;q\right]\right\}  \nonumber
+\end{eqnarray}
+Hence the object of proving
+\[
+	L(m) - L(m-1) = R(m) - R(m-1)
+\]
+reduces to proving.
+\begin{eqnarray}
+	& & \sum_{s\geqq 0} (-1)^s q^{\sf\left({\begin{array}{c}
+	s \\ 2 \end{array}}\right) + ms}\left[\begin{array}{c} N \\ 
+	s \end{array} ;q\right]\left[\begin{array}{c} N+m-ks \\ 
+	m-ks \end{array} ;q\right]   \nonumber
+	\\
+	& & \qquad - \sum_{s\geqq 0} (-1)^s q^{\left({\sf\begin{array}{c} 
+	s+1 \\ 2 \end{array}}\right)+ms} \left[\begin{array}{c} N \\ 
+	s \end{array} ;q\right]\left[\begin{array}{c} N+m-ks-1 \\ 
+	m-ks-1 \end{array} ;q\right]   \nonumber
+	\\
+	& & = [a^m] \sum_{n_1 \geqq \cdots \geqq n_{k-1}\geqq 0}
+	\frac{q^{n_1^2 + n_2^2 + \cdots + n_{k-1}^2} a^{n_1+n_2+
+	\cdots + n_{k-1}}(q;q)_N}{(q;q)_{N-n_1}(q;q)_{n_1-n_2}
+	\cdots (q;q)_{n_{k-2}-n_{k-1}}(q;q)_{n_{k-1}}}
+	\nonumber
+\end{eqnarray}
+
+This latter result is provable using an identity of J. Stembridge
+[12; Theorem 1.3 (b) with $k$ replaced by $k-1$ and $z$ replaced
+by $aq$].  Namely
+\begin{eqnarray}
+	& & [a^m] \sum_{n_1\geqq \cdots \geqq n_{k-1}\geqq 0}
+	\frac{q^{n_1^2+n_2^2 + \cdots + n_{k-1}^2}a^{n_1+\cdots+n_{k-1}}
+	(q;q)_N}{(q;q)_{N-n_1}(q;q)_{n_1-n_2}\cdots (q;q)_{n_{k-2}-n_{k-1}}
+	(q;q)_{n_{k-1}}}  \nonumber
+	\\
+	& & = [a^m] \sum_{n=0}^N )(-1)^n a^{kn} q^{kn^2+\left({\sf
+	\begin{array}{c}n \\ 2\end{array}}\right)} 
+	\left[ \begin{array}{c} N \\ n \end{array}
+	;q\right] \frac{(1 - aq^{2n})}{(aq^n;q)_{N+1}}   \nonumber
+	\\
+	& & = [a^m]\left\{ \sum_{n=0}^N (-1)^n a^{kn} q^{kn^2+
+	\left({\sf\begin{array}{c} n \\ 2\end{array}}\right)} \left[
+	\begin{array}{c} N \\ n\end{array};q \right](1 - aq^{2n})
+	\sum_{h=0}^{\infty}
+	\left[\begin{array}{c} N + h \\ h \end{array};q \right]
+	a^h q^{nh} \right\}   \nonumber
+	\\
+	& & = \sum_{n=0}^N (-1)^n q^{\left({\sf\begin{array}{c} n \\ 
+	2\end{array}}\right)+mn} 
+	\left[\begin{array}{c} N \\ n\end{array};q \right]
+	\left[\begin{array}{c} N+m-kn \\ m - kn  
+	\end{array};q \right]\;;   \nonumber
+	\\
+	& & \qquad - \sum_{n=0}^N (-1)^n q^{\left({\sf\begin{array}{c} 
+	n + 1 \\ 2\end{array}}\right)+ mn}\left[\begin{array}{c} N \\ n
+	\end{array};q \right]	\left[\begin{array}{c} N+m-kn-1 \\ m - kn - 1 
+	\end{array};q \right]\;;   \nonumber
+\end{eqnarray}
+thus the induction step is established, and Theorem 12 is proved.
+\end{proof}
+
+We conclude this section with two reductions of Theorem 12 using
+Proposition 11.  These results will allow us to obtain the single
+variable identities of the next section.
+
+\begin{cor}
+For $m,N,k$ nonnegative integers with $k > 0$
+\begin{eqnarray}
+	& & \sum_{\sf\begin{array}{c} n_1 \geqq \cdots \geqq n_{k-1} \\
+	n_1 + \cdots + n_{k-1}\leq m \end{array}}
+	\frac{q^{n_1^2 + n_2^2 + \cdots + n_{k-1}^2}a^{n_1+n_2+
+	\cdots + n_{k-1}}(q;q)_N}{(q;q)_{N-n_1} (q;q)_{n_1-n_2}
+	\cdots (q;q)_{n_{k-2}-n_{k-1}}(q)_{n_{k-1}}}
+	\nonumber
+	\\
+	& & = \left[\begin{array}{c} N+m \\ m \end{array};q,aq \right]
+	+ \sum_{s=1}^N (-1)^s a^{ks} q^{s((2k+1)s-1)/2}
+	\left[\begin{array}{c} N \\ s \end{array};q \right]
+	\nonumber
+	\\
+	& & \qquad\qquad \sum_{j=0}^{s-1} a^j (-1)^j 
+	q^{\left({\sf\begin{array}{c}
+	j+1 \\ 2\end{array}}\right)}(q^{n+1};q)_j
+	\left[\begin{array}{c} s-1 \\ j	\end{array};q \right]
+	\nonumber
+	\\
+	& & \quad \times \left(\left[\begin{array}{c} N+m+1-ks \\ 
+	m-ks-j	\end{array};q,aq \right] - aq^{2s} \left[\begin{array}{c} 
+	N + m - ks \\ m -ks-j-1	\end{array};q,aq \right]\right)
+	\nonumber
+\end{eqnarray}
+\end{cor}
+
+\begin{proof}
+Apply Proposition 11 (with $r=s-1$ and a replaced $aq$) to each 
+of the $a$-Gaussian polynomials in Theorem 12.  The terms with
+$s=0$ are instead combined using Proposition 3. 
+\end{proof}
+
+\begin{cor}
+For $m,N,k$ non-negative with $k>0$
+\begin{eqnarray}
+	& & \sum_{\sf\begin{array}{c} n_1 \geqq \cdots \geqq n_{k-1}\geqq 0 \\
+	n_1 + \cdots + n_{k-1} \leq m \end{array}} 
+	\frac{q^{n_1^2 + n_2^2	+ \cdots + n_{k-1}^2}a^{n_1+n_2+\cdots 
+	+ n_{k-1}}(q;q)_N (q;q)_{N-n_1}}
+	{(q;q)_{n_1-n_2}\cdots (q;q)_{n_1-n_2}\cdots
+	(q;q)_{n_{k-2}-n_{k-1}}(q;q)_{n_{k-1}}}
+	\nonumber
+	\\
+	& & = \sum_{s=0}^N (-1)^s a^{ks} q^{s((2k+1)s-1)/2}
+	\left[\begin{array}{c} N \\ s \end{array};q\right]
+	\sum_{j=0}^s a^j (-1)^j q^{\left({\sf\begin{array}{c} j \\ 
+	2 \end{array}}\right)} (q^{N+1};q)_j 
+	\left[\begin{array}{c} s \\ j \end{array};q\right]
+	\nonumber
+	\\
+	& & \qquad\quad \times \left(\left[\begin{array}{c} N+m+1-ks \\ 
+	m-ks-j \end{array};q,a\right] - aq^{2s}
+	\left[\begin{array}{c} N+m-ks \\ m-ks-j-1 \end{array};q,a\right]
+	\right)
+	\nonumber
+\end{eqnarray}
+\end{cor}
+
+\begin{proof}
+Apply Proposition 11 (with $r=s$) to each of the $a$-Gaussian
+polynomials in Theorem 12.
+\end{proof}
+
+\section{Single Variable Polynomial Rogers-Ramanujan
+Generalizations}
+
+Schur [11] was the first to prove the Rogers-Ramanujan
+identities as a limiting case of polynomial identities.
+Namely, he proved
+\begin{equation}
+	\sum_{0\leqq 2j \leqq n} q^{j^2} 
+	\left[\begin{array}{c} n-j \\ j \end{array};q \right]
+	= \sum_{j=-\infty}^{\infty} (-1)^j q^{j(5j+1)/2}
+	\left[\begin{array}{c} n \\ \left\lfloor\frac{n-5j}{2}
+	\right\rfloor\end{array};q \right]\;,
+\end{equation}
+and
+\begin{equation}
+	\sum_{0\leqq 2j \leqq n-1} q^{j^2+j} 
+	\left[\begin{array}{c} n-1-j \\ j \end{array};q \right]
+	= \sum_{j=-\infty}^{\infty} (-1)^j q^{j(5j-3)/2}
+	\left[\begin{array}{c} n \\ \left\lfloor\frac{n-5j}{2}
+	\right\rfloor + 1\end{array};q \right]\;.
+\end{equation}
+
+To everyone's surprise, David Bressoud [8] found a completely
+different polynomial refinement:
+\begin{equation}
+	\sum_{j=0}^n q^{j^2}
+	\left[\begin{array}{c} N \\ j \end{array};q \right]
+	= \sum_{j=-\infty}^{\infty} (-1)^j q^{j(5j+1)/2}
+	\left[\begin{array}{c} 2n \\ n+2j \end{array};q \right]\;,
+\end{equation}
+and
+\begin{equation}
+	(1-q^{n+1}) \sum_{j=0}^n \;q^{j^2+j}
+	\left[\begin{array}{c} n \\ j \end{array};q \right]
+	= \sum_{j=-\infty}^{\infty} (-1)^j q^{j(5j+3)/2}
+	\left[\begin{array}{c} 2n+2 \\ n+2j+2 \end{array};q \right]\;.
+\end{equation}
+
+The list does not stop here.  At least two further distinct
+polynomial refinements of the Rogers-Ramanujan identities have
+been found [1], [3; p. 3, eqs. (1.11) and (1.12)].
+
+It should be noted that in each of the examples given above 
+(and in the other two alluded to) all the sums terminate naturally.
+In other words, the index of summation is extended over all values
+that produce non-zero summands.
+
+As we shall see, we may set $a=1$ in Corollary 13 and $a=q$
+in Corollary 14 in order to obtain {\it partial sums} of the
+Rogers-Ramanujan polynomial.
+
+To this end we require a definition and a lemma.
+
+\begin{defn}
+\ $\displaystyle{E_n(x,q) = \lim_{N\rightarrow\infty} \left[
+\begin{array}{c} N \\ n \end{array};q,x\right] =
+\sum_{j=0}^n \frac{x^j}{(q;q)_j}}$.
+
+We remark in passing that Euler proved [2; p. 19, eq. (2.2.5)]
+$\displaystyle{E_{\infty} (x,q) = \frac1{(x;q)_{\infty}}}$.
+\end{defn}
+
+\begin{lemma}
+For non-negative integer $N,M$ and $t$
+\begin{eqnarray}
+	& & \sum_{j=0}^t (-1)^j q^{\left({\sf\begin{array}{c} j+1 \\ 
+	2 \end{array}}\right)}(q^{N+1};q)_j
+	\left[\begin{array}{c} t \\ j \end{array};q \right]	
+	\left[\begin{array}{c} N+M \\ M-j \end{array};q \right]
+	\nonumber 
+	\\
+	& & \qquad = \left[\begin{array}{c} N+M \\ M \end{array};q \right]
+	(q;q)_t E_t(q^{M+1},q)
+	\nonumber
+\end{eqnarray}
+\end{lemma}
+
+\begin{proof}
+\begin{eqnarray}
+	& & \sum_{j=0}^t (-1)^j q^{\sf\left(\begin{array}{c} j+1 \\ 
+	2 \end{array}\right)} (q^{N+1};q)_j 
+	\left[\begin{array}{c} t \\ j \end{array};q \right]	
+	\left[\begin{array}{c} N+M \\ M-j \end{array};q \right]
+	\nonumber
+	\\
+	& & = \left[\begin{array}{c} N+M \\ M \end{array};q \right]
+	\;\lim_{c\rightarrow\infty}\; \sum_{j=0}^t\;
+	\frac{(q^{-t};q)_j(q^{-M};q)_j c^j q^{(M+t+1)j}}{(q;q)_j(c;q)_j}
+	\nonumber
+	\\
+	& & = \left[\begin{array}{c} N+M \\ M \end{array};q \right]
+	(q;q)_t \sum_{j=0}^t \frac{q^{j(M+1)}}{(q)_j} =
+	\left[\begin{array}{c} N+M \\ M \end{array};q \right]
+	(q;q)_t E_t (q^{M+1},q)\,,
+	\nonumber
+\end{eqnarray}
+where the penultimate assertion follows from the last line on
+page 38 of [2] with $b \to q^{-t}$, $a \to q^{-M}$, and $t \to
+q^{M+t+1}$.
+\end{proof}
+
+\begin{thm}
+\begin{eqnarray}
+	& & \sum_{\sf\begin{array}{c} n_1 \geqq \cdots \geqq n_{k-1}
+	\geqq 0 \\ n_1 + \cdots + n_{k-1} \leqq m \end{array}}
+	\frac{q^{n_1^2 + n_2^2 + \cdots + n_{k-1}^2}(q;q)_N}
+	{(q;q)_{N-n_1}(q;q)_{n_1-n_2} \cdots (q;q)_{n_{k-2}-n_{k-1}}
+	(q;q)_{n_{k-1}}}
+	\nonumber
+	\\
+	& & = \left[\begin{array}{c} N+M \\ m \end{array};q \right]
+	+ \sum_{s=1}^N (-1)^s q^{s((2k+1)s-1)/2} 
+	\left[\begin{array}{c} N \\ s \end{array};q \right]
+	(q;q)_{s-1}   
+	\nonumber
+	\\
+	& & \qquad \quad \times \left(\left[\begin{array}{c} N+M+1-ks \\ 
+	m-ks \end{array};q \right] E_{s-1} (q^{m-ks+1},q) \right. \nonumber
+	\\
+	& & \qquad\qquad\quad \left. - q^{2s} \left[\begin{array}{c} N+M - 
+	ks \\ m-ks-1 \end{array};q \right] E_{s-1} (q^{m-ks},q)\right)
+	\nonumber
+\end{eqnarray}
+\end{thm}
+
+\begin{proof}
+Set $a = 1$ in Corollary 13 and invoke Lemma 15 for the inner 
+sum with $t = s -1$.
+\end{proof}
+
+\begin{thm}
+\begin{eqnarray}
+	& & \sum_{\sf\begin{array}{c} n_1 \geqq \cdots \geqq n_{k-1}  \\
+	n_1 + \cdots + n_{k-1} \leqq m \end{array}}   			
+	\frac{q^{n_1^2 + \cdots + n_{k-1}^2 + n_1 + \cdots + n_{k-1}}
+	(q;q)_N}{(q;q)_{N-n_1} (q;q)_{n_1 - n_2}\cdots (q;q)_{n_1}}
+	\nonumber
+	\\
+	& &  = \sum_{s=0}^N (-1)^s q^{s((2h+1)s+(2k-1))/2}\left[
+	\begin{array}{c} N \\ s \end{array} ;q\right] (q;q)_s  
+	\nonumber
+	\\
+	& & \qquad \times \left(\left[\begin{array}{c} N+m+1-ks \\ 
+	m - ks \end{array} ;q\right] \;E_s (q^{m-ks+1},q) \right.
+	\nonumber
+	\\
+	& & \qquad\qquad \left. - q^{2s+1} \left[\begin{array}{c} N+m-ks \\ 
+	m - ks - 1 \end{array} ;q\right] E_s(q^{m-k2};q)\right)
+	\nonumber
+\end{eqnarray}
+\end{thm}
+
+\begin{proof}
+Set $a=q$ in Corollary 14 and invoke Lemma 15 for the inner sum
+with $t = s$.
+\end{proof}
+
+\section{Conclusion}
+
+The primary object of this paper has been the development of
+$a$-Gaussian polynomials.  In light of their natural
+partition-theoretic interpretation (Proposition 5), it is surprising
+that they have not been studied previously.  It seems extremely likely
+that Proposition 5 has already suggested itself to many workers.  The
+first thing one notices is that for $a$-Gaussian polynomials there is
+no lovely product formula like (1.8) only a less satisfying sum
+(Proposition 6) which reduces to (1.8) when $a=q$.  In addition, the
+symmetry identity [2; p. 35, eq. (3.3.2)]
+\[
+	\left[\begin{array}{c} N \\ m \end{array} ;q\right] =  
+		\left[\begin{array}{c} N \\ N-m \end{array} ;q\right]   
+\]
+has no simple analog for $a$-Gaussian polynomials.  It may well be
+that these two deficits discouraged further investigation especially
+in light of the fact that the definition of $a$-Gaussian polynomials
+contains a sum that is not naturally terminating.
+
+A secondary object of this paper has been the study of the 
+polynomial refinements of ``$a$-generalizations'' of Rogers-Ramanujan
+type identities.  Such studies almost always have in mind (or, at
+least, in the back of their mind) the famous Borwein conjecture
+[5].  Namely, if
+\begin{equation}
+	(q;q^3)_n (q^2;q^3)_n = A_n(q^3) - q B_n(q^3) - q^2 C_n(q^3),
+\end{equation}
+then each of $A_n(q)$, $B_n(q)$ and $C_n(q)$ has non-negative 
+coefficients.
+
+It is not hard to show [5; p. 491] that
+\begin{equation}
+	A_n(q) = \sum_{j=-\infty}^{\infty} (-1)^j q^{j(9j+1)/2}
+	\left[\begin{array}{c} 2n \\ n+3j \end{array};q\right]\,,
+\end{equation}
+\begin{equation}
+	B_n(q) = \sum_{j=-\infty}^{\infty} (-1)^j q^{j(9j-5)/2}
+	\left[\begin{array}{c} 2n \\ n+3j-1 \end{array};q\right]\,,
+\end{equation}
+\begin{equation}
+	C_n(q) = \sum_{j=-\infty}^{\infty} (-1)^j q^{j(9j+7)/2}
+	\left[\begin{array}{c} 2n \\ n+3j+1 \end{array};q\right]\,,
+\end{equation} 
+
+Much is known about polynomials of this general nature.  Indeed
+the main theorem in [6] shows that many such polynomials must
+have non-negative coefficients.
+
+However, the right-hand side of (5.3) is {\it not} covered by [6],
+but nonetheless, we see easily that it has non-negative coefficient
+by inspection of the left-hand side of (5.3).
+
+While the investigation of polynomial ``$a$-generalizations'' has not
+here led to further information on the Borwein conjecture, it should
+be pointed out that it has provided new insights on truncated
+Rogers-Ramanujan identities, a topic treated from a wholly different
+viewpoint in [4].
+
+\begin{thebibliography}{99}
+
+\item G. E. Andrews, Problem 74--12, S.I.A.M. Review, 16 (1974),
+	390.
+	
+\item G. E. Andrews, The Theory of Partitions, Addison-Wesley,
+	Reading, 1976 (Reissued:  Cambridge University Press,
+	Cambridge, 1984, 1998).
+
+\item G. E. Andrews, $q$-Trinominial coefficients and the
+	Rogers-Ramanujan identities, from Analytic Number Theory,
+	pp. 1--11, B. Berndt et al. eds., Birkhauser, Boston, 1990.
+
+\item G. E. Andrews, On Ramanujan's empirical calculation for the
+	Rogers-Ramanujan identities, Contemp. Math., 143 (1993),
+	27--35.
+
+\item G. E. Andrews, On a conjecture of Peter Borwein, J. Symbolic
+	Computation, 20 (1995), 487--501.
+
+\item G. E. Andrews, D. M. Bressoud, R. J. Baxter, W. Burge,
+	P. J. Forrester and G. Viennot, Partitions with prescribed
+	hook differences, Europ. J. Math., 8 (1987), 341--350.
+
+\item W. N Bailey, Identities of the Rogers-Ramanujan type, Proc.
+	London Math. Soc. (2), 50 (1949), 1--10.
+
+\item D. M. Bressoud, Some identities for terminating $q$-series,
+	Math. Proc. Camb. Phil. Soc., 89 (1981), 211--223.
+	
+\item D. M. Bressoud, Solution to Problem 74--12, SIAM Review,
+	23 (1981), 101--104.
+	
+\item P. Paule, Short and easy computer proofs of the 
+	Rogers-Ramanujan identities and identities of similar
+	type, Electronic J. Combin., 1 (1994), \#R10.
+	
+\item I. Schur, Ein Beitrag zur additiven Zahlentheorie, S.-B.
+	Preuss. Akad. Wiss., Phys.-Math. Klasse, (1917), 
+	pp. 302--321.  (Reprinted:  Gesamm, Abhand., Vol. 2,
+	Springer, Berlin, 1973, pp. 117--136).
+
+\item J. Stembridge, Hall-Littlewood functions, plane partitions,
+	and the Rogers-Ramanujan identities, Trans. Amer. Math.
+	Soc., 319 (1990), 469--498.
+	
+\item D. Zeilberger, (a.k.a. S. B. Ekhad and S. Tre) A purely
+	verification proof of the first Rogers-Ramanujan identity,
+	J. Comb. Th. (A), 54 (1990), 309--311.
+	
+\end{thebibliography}
+\vskip .3in
+
+\noindent The Pennsylvania State University  \newline
+University Park, PA  16802  \newline
+andrews@math.psu.edu
+
+\end{document}
+
+
+
+
+
+
+
+
+

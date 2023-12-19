@@ -1,0 +1,1640 @@
+%From ono@ultra2.math.wisc.edu Mon Jul 24 21:59 EDT 2000
+%Submitted to Duke on June 29, 2000.
+
+
+\openup.8\jot
+\magnification=1200
+\input amstex
+\hfuzz=3pt
+\documentstyle{amsppt}
+\NoBlackBoxes
+\pagewidth{142mm}
+\pageheight{180mm}
+\font \cyr=wncyr10
+\def\qed{\line{\null \hfill Q.E.D.}}
+\define\Sh{\hbox{\cyr Sh}}
+\define\Q{{\Bbb{Q}}}
+\define\Z{{\Bbb{Z}}}
+\define\N{{\Bbb{N}}}
+\define\C{{\Bbb{C}}}
+\define\lcm{\text {\rm lcm}}
+\define\ord{\text {\rm ord}}
+\topmatter
+\title Bizarre $q$-series identities and
+values of certain $L$-functions
+\endtitle
+\author George E. Andrews, Jorge Jim\'enez-Urroz and Ken Ono
+\endauthor
+\date May 2, 2000. \enddate
+\rightheadtext{bizarre identities}
+\address Department of Mathematics, Penn State University,
+University Park, Pa. 16802
+\endaddress
+\email andrews\@math.psu.edu \endemail
+
+\address Dept. Matem\'aticas, Facultad de Ciencias,
+Universidad Aut\'onoma de Madrid,
+28049, Madrid, Espa\~na.
+\endaddress
+\email jorge.jimenez\@uam.es \endemail
+
+
+\address Department of Mathematics, Penn State University,
+University Park, Pa. 16802
+\endaddress
+\email ono\@math.psu.edu \endemail
+
+\address Department of Mathematics, University of Wisconsin,
+Madison, Wisconsin 53706
+\endaddress
+\email ono\@math.wisc.edu
+\endemail
+
+\thanks The first and third  authors
+thank the National Science Foundation
+for its generous research support.
+The second author thanks PB98-0067 for their support.
+The third author thanks
+the Alfred P. Sloan Foundation and the David and Lucile Packard
+Foundation for their support.
+\endthanks
+
+\endtopmatter
+\document
+\head 1. Introduction and Statement of Results.\endhead
+
+\medskip
+Dedekind's eta function $\eta(z)$, defined by the infinite
+product
+$$
+\eta(z):=q^{1/24}\prod_{n=1}^{\infty} (1-q^n), \tag{1.1}
+$$
+where $q:=e^{2\pi i z}$, is one of most fundamental modular forms.
+For example,  Ramanujan's $\Delta(z)$ function
+and the classical
+Eisenstein series $E_4(z)$ and $E_6(z)$
+have the following well known expressions in terms of the eta-function:
+$$\align
+&\Delta(z)=\eta^{24}(z)=q-24q^2+252q^3-1472q^4+4830q^5+\dots,\\
+&E_4(z)=1+240\sum_{n=1}^{\infty} \sum_{d\mid n}d^3q^n=
+\frac{\eta^{16}(z)}{\eta^8(2z)}+256 \frac{\eta^{16}(2z)}{\eta^8(z)},\\
+&E_6(z)=1-504\sum_{n=1}^{\infty}\sum_{d\mid n}d^5q^n=\frac{\eta^{24}(z)}
+{\eta^{12}(2z)}-480\eta^{12}(2z) -16896\frac{\eta^{12}(2z)\eta^8(4z)}
+{\eta^8(z)}+8192\frac{\eta^{24}(4z)}{\eta^{12}(2z)}.
+\endalign
+$$
+
+In a recent paper,  Zagier [Z; Theorem 2]
+proved that (note. empty products equal 1
+throughout)
+$$
+\sum_{n=0}^{\infty} \left (\eta(24z)-q(1-q^{24})(1-q^{48})\cdots (1-q^{24n})
+\right )
+=\eta(24z)D(q)+E(q) \tag{1.2}
+$$
+where the series $D(q)$ and $E(q)$ are defined by
+$$
+\align
+&D(q)=-\frac{1}{2}+\sum_{n=1}^{\infty}
+\frac{q^{24n}}{1-q^{24n}}=
+-\frac{1}{2}+\sum_{n=1}^{\infty}d(n)q^{24n}=-\frac{1}{2}
++q^{24}+2q^{48}+2q^{72}+3q^{96}+\dots,\\
+&E(q)=\frac{1}{2}\sum_{n=1}^{\infty}\fracwithdelims(){12}{n}nq^{n^2}
+=\frac{1}{2}q-\frac{5}{2}q^{25}-\frac{7}{2}q^{49}+\frac{11}{2}q^{121}+\dots.
+\endalign
+$$
+Here $d(n)$ denotes the number of positive divisors of $n$.
+
+The series appearing in
+(1.2), as well as some related series,
+are interesting for a variety of reasons (see [Z]).
+For instance, (1.2)
+plays an important role in Zagier's
+work on Vassiliev invariants in knot theory [Z].
+We find the identity
+interesting because it is an identity which
+relates a
+bizarre series, the left hand side,
+to two well known series which appear naturally in
+the theory of modular forms and partitions.
+In particular, the right hand side consists of
+the series $D(q)$, which is ``essentially" a weight 1 Eisenstein series,
+and $E(q)$, the ``half-derivative" of $\eta(24z)$.
+Therefore, the right hand side of (1.2) is not far from being
+a weight 3/2 modular form.
+
+Two other similar identities were known, and they were
+noticed by the first author in connection
+with one of Ramanujan's mock theta functions.
+In [A2], the first author proved that
+$$
+\sum_{n=0}^{\infty}\left ( \frac{\eta(48z)}{\eta(24z)}-q(1+q^{24})
+(1+q^{48})\cdots (1+q^{24n})\right )
+=\frac{\eta(48z)}{\eta(24z)}D(q)+\frac{M_1(q)}{2}, \tag{1.3}
+$$
+$$
+\sum_{n=0}^{\infty}\left ( \frac{\eta(48z)}{\eta(24z)}-
+ \frac{q}{(1-q^{24})(1-q^{72})\cdots
+ (1-q^{24(2n+1)})}\right )
+ =\frac{\eta(48z)}{\eta(24z)}D(q^{2})+\frac{M_1(q)}{2}\tag{1.4}
+$$
+where $M_1(q)$ is the mock theta function given by
+$$
+  M_1(q)=q+\sum_{n=1}^{\infty}\frac{q^{12n^2+12n+1}}{(1+q^{24})(1+q^{48})
+\cdots (1+q^{24n})}=
+  q+q^{25}-q^{49}+2q^{73}-\cdots. \tag{1.5}
+$$
+The $q$-series of the function $M_1(q)$ was the focus of two
+extensive studies
+[A-D-H, C]. Although $M_1(q)$ is not the Fourier expansion of a modular
+form, these works show that
+the coefficients of $M_1(q)$ are given by a Hecke character
+for the quadratic field $\Q(\sqrt{6})$. In particular, 
+$M_1(q)$ enjoys nice properties that one expects
+for certain weight 1 cusp forms.
+For these reasons, we shall refer to $M_1(q)$
+and $M_2(q)$ (defined in (1.8)) as mock theta functions
+although they do not exactly fit Ramanujan's original
+definition [A3; p. 291].
+
+In view of identities (1.2-4), it is natural to investigate
+the general behavior of $q$-series which are obtained by
+summing the iterated differences between an infinite product
+and its truncated products.
+Here we establish two general theorems
+which yield infinitely many such identities, and we illustrate
+how such identities are useful in determining the
+values at negative integers for certain $L$-functions.
+ 
+We shall employ the standard notation
+$$
+(A;q)_n=\prod_{j=0}^{\infty}\frac{(1-Aq^j)}{(1-Aq^{n+j})}, \tag{1.6}
+$$
+and
+throughout we assume that $|q|<1$ and that the other
+parameters are restricted to domains that do not contain any singularities
+of the series or products under consideration.
+
+\medskip
+\proclaim{Theorem 1}
+$$\align
+\sum_{n=0}^{\infty}& \left ( \frac{(t;q)_{\infty}}{(a;q)_{\infty}}
+-\frac{(t;q)_n}{(a;q)_n}\right ) \\
+&=\sum_{n=1}^{\infty}\frac{(q/a;q)_n (a/t)^n}{(q/t;q)_n}
+\\
+&\ \ \ \ \ +
+\frac{(t;q)_{\infty}}{(a;q)_{\infty}}
+\left (\sum_{n=1}^{\infty}\frac{q^n}{1-q^n}+\sum_{n=1}^{\infty}
+\frac{q^nt^{-1}}{1-q^nt^{-1}}-\sum_{n=0}^{\infty}\frac{tq^n}{
+1-tq^n}-\sum_{n=0}^{\infty}\frac{aq^nt^{-1}}{1-aq^nt^{-1}}\right ).
+\endalign
+$$
+\endproclaim
+
+\medskip
+\proclaim{Theorem 2}
+$$
+\align
+\sum_{n=0}^{\infty}& \left  ( 
+\frac{(a;q)_{\infty}(b;q)_{\infty}}
+{(q;q)_{\infty}(c;q)_{\infty}}
+-\frac{(a;q)_n (b;q)_n}
+{(q;q)_n (c;q)_n}
+\right )\\
+&\ \ \ \ \ =\frac{(b;q)_{\infty}(a;q)_{\infty}}
+{(c;q)_{\infty}(q;q)_{\infty}} \left (
+\sum_{n=1}^{\infty}\frac{q^n}{1-q^n}-\sum_{n=0}^{\infty}
+\frac{aq^n}{1-aq^n}-\sum_{n=1}^{\infty}\frac{(c/b;q)_n b^n}
+{(a;q)_n(1-q^n)} \right ). 
+\endalign
+$$
+\endproclaim
+
+Many interesting specializations of these two theorems
+yield identities for modular forms that are eta-products
+(including
+identities (1.2-4)).
+Here we highlight ten of these identities.
+First we fix notation. We let $\sqrt{\Theta}$ be the
+operator defined by
+$$
+\sqrt{\Theta}\left (\sum_{n=0}^{\infty}a(n)q^n\right )
+=\sum_{n=0}^{\infty}\sqrt{n}a(n)q^n. \tag{1.7}
+$$
+It is easy to see that the series $E(q)$ in (1.2) is given by
+$$
+ E(q)=\sqrt{\Theta}\left (\eta(24z)\right )/2.
+$$
+In addition to the mock theta function $M_1(q)$, we shall require
+the mock theta function $M_2(q)$ defined by
+$$
+  M_2(q)=\sum_{n=1}^{\infty}\frac{(-1)^nq^{24n^2-1}}{
+(1-q^{24})(1-q^{72})\cdots (1-q^{24(2n-1)})}=-q^{23}-q^{47}-\cdots.
+\tag{1.8}
+$$
+See [A-D-H] for a detailed study of this function.
+
+The ten eta-products $F_1(z), F_2(z),\dots, F_{10}(z)$
+we consider are of the form
+$$
+F_i(z)=\eta^{a_i}(\delta_i z) \eta^{b_i}(2\delta_iz)
+$$
+with $a_i\neq 0$.
+Obviously, each $F_i(z)$ is a modular form of weight $(a_i+b_i)/2$. 
+For each $F_i(z)$ we define quantities
+$c_i$ and $f_i(j)$, which are not necessarily unique,
+for which
+$$
+   F_i(z)=c_i\prod_{j=1}^{\infty}f_i(j). \tag{1.9}
+$$
+These are listed in the table below.
+\medskip
+\centerline{Table 1.}
+\medskip
+
+\hfil
+{\vbox{\offinterlineskip
+\hrule
+\halign{&\vrule#&\strut\quad#\hfil\quad\cr
+height2pt&\omit&&\omit&&\omit&&\omit&&\omit&\cr
+&\hfil $i$ \hfil&&\hfil $F_i(z)$ \hfil&&\hfil $\delta_i$\hfil &&
+\hfil $c_i$ \hfil &&\hfil $f_i(j)$ \hfil & \cr
+ height2.0pt&\omit&&\omit&&\omit&&\omit&&\omit&\cr
+\noalign{\hrule}
+%
+%
+& \hfil 1 \hfil
+&& \hfil  $1/\eta(24z)$ \hfil
+&& \hfil 24 \hfil
+&& \hfil $q^{-1}$ \hfil
+&& \hfil $1/(1-q^{24j})$ \hfil
+&\cr
+%
+%
+&  \hfil 2 \hfil 
+&&  \hfil $\eta(2z)/\eta^2(z)$   \hfil 
+&&  \hfil 1  \hfil 
+&&  \hfil 1 \hfil
+&& \hfil $(1+q^j)/(1-q^j)$ \hfil
+&\cr
+%
+%
+&  \hfil 3  \hfil 
+&&  \hfil $\eta(8z)/\eta^2(16z)$ \hfil 
+&& \hfil  8 \hfil
+&& \hfil $q^{-1}$ \hfil
+&& \hfil $(1-q^{16j-8})/(1-q^{16j})$ \hfil
+&\cr
+%
+%
+&  \hfil 4  \hfil 
+&&  \hfil $\eta(48z)/\eta(24z)$ \hfil 
+&& \hfil 24 \hfil
+&& \hfil $q$ \hfil
+&& \hfil $1+q^{24j}$ \hfil
+&\cr
+%
+%
+&  \hfil 5  \hfil 
+&&  \hfil $\eta(48z)/\eta(24z)$ \hfil 
+&& \hfil  24 \hfil
+&& \hfil $q/(1-q^{24})$ \hfil
+&& \hfil $1/(1-q^{24(2j+1)})$ \hfil
+&\cr
+%
+%
+&  \hfil 6  \hfil 
+&&  \hfil $\eta(24z)/\eta(48z)$ \hfil 
+&& \hfil 24 \hfil
+&& \hfil $q^{-1}$ \hfil
+&&\hfil $1/(1+q^{24j})$ \hfil
+&\cr
+%
+%
+&  \hfil 7  \hfil 
+&& \hfil $\eta(24z)/\eta(48z)$ \hfil 
+&&\hfil 24 \hfil
+&&\hfil $q^{-1}$\hfil
+&& \hfil $1-q^{24(2j-1)}$ \hfil
+&\cr
+%
+%
+&\hfil 8 \hfil
+&& \hfil $\eta(24z)$\hfil
+&& \hfil 24 \hfil
+&& \hfil $q$ \hfil
+&& \hfil $1-q^{24j}$\hfil
+&\cr
+%
+%
+&\hfil 9 \hfil
+&& \hfil $\eta^2(z)/\eta(2z)$\hfil
+&&\hfil 1 \hfil
+&& \hfil 1 \hfil
+&& $(1-q^j)/(1+q^j)$\hfil
+&\cr
+%
+%
+&\hfil 10 \hfil
+&& \hfil $\eta^2(16z)/\eta(8z)$\hfil
+&& 8\hfil
+&& $q/(1-q^8)$\hfil
+&& $(1-q^{16j})/(1-q^{16j+8})$\hfil
+&\cr
+height2pt&\omit&&\omit&&\omit&&\omit&&\omit&\cr}
+\hrule}\hfil}
+\medskip
+
+If $\delta \in \{ 1, 8, 24\}$, then let $d_{\delta}(n)$
+be the divisor function defined by
+$$
+  d_{\delta}(n)=\cases  d(n)=\sum_{d\mid n} 1 \ \ \ \ \ \ &{\text {\rm if}}\ 
+ \delta=24,\\
+   \sum_{d\mid n} (-1)^d \ \ \ \ \ \ &{\text {\rm if}}\ 
+\delta=8,\\
+\sum_{d\mid n\ {\text {\rm odd}}} 1 \ \ \ \ \ \ &{\text {\rm
+if}}\ \delta=1.
+\endcases \tag{1.10}
+$$
+Also, for each $i$ define $\alpha_i$ by
+$$
+  \alpha_i=\cases -\frac{1}{2}\ \ \ \ \ &{\text {\rm if}}\
+(a_i+2b_i)\delta_i=24,\\      
+0 \ \ \ \ \ &{\text {\rm otherwise.}}
+\endcases \tag{1.11}
+$$
+Notice that $\alpha_i=-1/2$ if and only if the order of
+vanishing of $F_i(z)$ at $\infty$ is 1.
+The last quantity we require is $\gamma_i$ which is defined by
+$$
+  \gamma_i=\cases  2 \ \ \ \ \ &{\text {\rm if}}\ i=5, 7,\\
+                   1 \ \ \ \ \ &{\text {\rm otherwise.}}
+\endcases \tag{1.12}
+$$
+\medskip
+
+\proclaim{Theorem 3}
+If $1\leq i\leq 10$, then
+$$
+\sum_{n=0}^{\infty} \left ( F_i(z)-c_i\prod_{j=1}^{n}f_i(j)\right ) 
+=\left (1+[1/\delta_i]\right )F_i(z) D_i(q)+G_i(q)
+$$
+where $[\bullet]$ denotes the greatest integer function,
+$$
+  D_i(q)=\alpha_i+\sum_{n=1}^{\infty}d_{\delta_i}(n)q^{\delta_i \gamma_i n}
+$$
+and
+$$
+  G_i(q)=\cases 0 \ \ \ \ \ \ \ &{\text {\rm if}}\ i=1, 2, 3,\\
+                M_1(q)/2 \ \ \ \ \ \ \ &{\text {\rm if}}\ i=4, 5,\\
+                2M_2(q)/\gamma_i\ \ \ \ \ \ \ &{\text {\rm if}}\ i=6, 7,\\
+         \left (-\alpha_i+[2/\delta_i]\right ) \sqrt{\Theta}\left (
+         F_i(z)\right ) \ \ \ \ \ \ \ &{\text {\rm if}}\ i=8, 9, 10.
+\endcases
+$$
+\endproclaim
+\medskip
+
+The three forms $F_1(z), F_2(z)$ and $F_3(z)$
+have weight -1/2 and the four forms $F_4(z),$ $ F_5(z), $ $
+F_6(z)$ and $F_7(z)$ have weight 0.  The remaining three
+forms have weight 1/2.
+The series $G_4(z),$ $ G_5(z), $ $ G_6(z)$ and $G_7(z)$ are
+mock theta functions, whereas
+$G_8(q), G_9(q)$ and $G_{10}(q)$
+are weight 3/2 holomorphic modular forms that are the
+half-derivatives of $F_8(z), F_9(z)$ and $F_{10}(z)$.
+In other words, the ``error series" $G_i(q)$ in Theorem 3
+satisfy
+$$
+  F_i(z) \ \ \longrightarrow \ \ G_i(q)\sim \cases
+0\ \ \ \ \ &{\text {\rm if }}\ F_i(z)\ {\text {\rm has weight -1/2,}}\\
+{\text {\rm Mock Theta function}}\ \ \ \ \ &{\text {\rm if}}\ F_i(z)\ 
+{\text {\rm has weight 0,}}\\
+\sqrt{\Theta}(F_i(z))\ \ \ \ \ &{\text {\rm if}}\ F_i(z) \ {\text
+{\rm has weight 1/2}}.
+\endcases
+$$
+
+Although these identities are elegant in their own right,
+they are also often
+useful in calculating the values of $L$-functions at negative integers.
+In particular, they lead to analogs of the 
+classical result 
+$$
+\frac{t}{e^t-1}=
+1+\sum_{n=1}^{\infty} (-1)^{n+1}\zeta(1-n) \cdot \frac{t^n}{(n-1)!},
+$$
+where $\zeta(s)$ is the Riemann zeta-function.
+In this direction,
+Zagier used (1.2) to show that  
+$$
+-e^{-t/24}\sum_{n=0}^{\infty}(1-e^{-t})(1-e^{-2t})\cdots
+(1-e^{-nt})=\frac{1}{2}\sum_{n=0}^{\infty}(-1/24)^n\cdot
+L(\chi_{12},-2n-1)\cdot \frac{t^n}{n!}, \tag{1.13}
+$$
+where $\chi_{12}$ is the Dirichlet character with modulus 12
+defined by
+$$
+  \chi_{12}(n):=\cases 1 \ \ \ \ \ &{\text {\rm if}}\ n\equiv 1, 11\pmod{12},\\
+                     -1 \ \ \ \ \ &{\text {\rm if}}\ n\equiv 5, 7\pmod{12},\\
+                      0 \ \ \ \ \ &{\text {\rm otherwise}}.
+\endcases
+$$
+Here we illustrate the generality of this phenomenon by proving
+the following theorems.
+
+\medskip
+\proclaim{Theorem 4} As a power series in $t$, we have
+$$
+-\frac{1}{4}\cdot \sum_{n=0}^{\infty} \left (
+\frac{(1-e^{-t})(1-e^{-2t})\cdots(1-e^{-nt})}
+{(1+e^{-t})(1+e^{-2t})\cdots(1+e^{-nt})}\right )=
+\sum_{n=0}^{\infty}(-1)^{n}(4^{n+1}-1)\cdot
+\zeta(-2n-1)\cdot \frac{t^n}{n!}.
+$$
+\endproclaim
+
+\medskip
+In addition to $\zeta(s)$, we shall 
+consider the Dirichlet $L$-function
+$$
+  L(\chi_2,s):=\sum_{n=1}^{\infty}\frac{\chi_2(n)}{n^s}, \tag{1.14}
+$$
+where 
+$$
+  \chi_2(n):=\cases 1 \ \ \ \ \ &{\text {\rm if}}\ n\equiv 1, 7\pmod 8,\\
+                   -1\ \ \ \ \ &{\text {\rm if}}\ n\equiv 3, 5\pmod 8,\\
+                   0 \ \ \ \ \ &{\text {\rm otherwise.}}
+\endcases
+\tag{1.15}
+$$
+
+\medskip
+\proclaim{Theorem 5} As a power series in $t$, we have
+$$
+-2e^{-t/8}\sum_{n=0}^{\infty}
+\left (\frac{(1-e^{-2t})(1-e^{-4t})\cdots(1-e^{-2nt})}
+{(1+e^{-t})(1+e^{-3t})\cdots(1+e^{-(2n+1)t})}\right )
+=\sum_{n=0}^{\infty}(-1/8)^n\cdot L(\chi_2,-2n-1)\cdot
+\frac{t^n}{n!}.
+$$
+\endproclaim
+
+\medskip
+We shall also consider the Hecke $L$-function
+$$
+L(\rho,s)=\sum_{n=1}^{\infty}\frac{a(n)}{n^s}:=
+\sum_{\frak{a}\subseteq \Z[\sqrt{6}]}
+\chi(\frak{a})N\frak{a}^{-s} \tag{1.16}
+$$
+where $\chi$ is the order 2 character of conductor
+$4(3+\sqrt{6})$ on ideals in $\Z[\sqrt{6}]$ defined by
+$$
+\chi(\frak{a}):=\cases i^{yx}\fracwithdelims(){12}{x}\ \ \ \ &{\text
+{\rm if}}\ y\ {\text {\rm is even}},\\
+i^{yx+1}\fracwithdelims(){12}{x}\ \ \ \ &{\text {\rm if}}\ 
+y \ {\text {\rm is odd}},
+\endcases \tag{1.17}
+$$
+when $\frak{a}=(x+y\sqrt{6})$.
+If $1\leq r< 48$ is an integer, then let $L_r(\rho,s)$ be the partial
+$L$-function defined by
+$$
+  L_r(\rho,s):=\sum_{n\equiv r\pmod{48}}\frac{a(n)}{n^s}. \tag{1.18}
+$$
+By the orthogonality of the Dirichlet characters modulo 48 and
+the analytic continuation of the associated twists of
+$L(\rho,s)$,
+each $L_r(\rho,s)$ has an analytic continuation
+to $\C$.
+
+\medskip
+\proclaim{Theorem 6} As a power series in $t$, we have
+$$
+-2e^{t/24}\sum_{n=0}^{\infty}
+(1-e^{-t})(1-e^{-3t})\cdots(1-e^{-(2n-1)t})=
+\sum_{n=0}^{\infty}(-1/24)^n\cdot \left (L_{23}(\rho,-n)+L_{47}(\rho,-n)
+\right )\cdot
+\frac{t^n}{n!}.
+$$
+\endproclaim 
+
+
+\medskip
+\proclaim{Theorem 7} As a power series in $t$, we have
+$$\align
+-2e^{-t/24}&\sum_{n=0}^{\infty}
+(1-e^{-t})(1+e^{-2t})\cdots(1+(-1)^ne^{-nt})
+\\
+&\hskip.75in 
+=\sum_{n=0}^{\infty}(-1/24)^n\cdot \left (L_1(\rho,-n)-
+L_{25}(\rho,-n)\right ) \cdot \frac{t^n}{n!}.
+\endalign
+$$
+\endproclaim
+
+\medskip
+In \S 2 we recall certain facts about $q$-series and
+basic hypergeometric series, and we prove Theorems 1 and 2.
+In \S 3 we prove Theorem 3 and in \S 4 we prove Theorems 4, 5, 6,
+and 7.
+In \S 5 we examine the partition theoretic
+consequences of the identities for $F_1(z)$ and $F_8(z)$.
+In \S 6 we give a few more
+identities which are related to eta-products.
+The most interesting of these
+is
+$$
+\sum_{n=0}^{\infty} \left (\frac{1}{\eta^2(24z)}-\frac{1}
+{q^2(1-q^{24})^2(1-q^{48})^2\cdots (1-q^{24n})^2}\right )=
+\frac{1}{\eta^2(24z)}\sum_{n=1}^{\infty}\left (d(n)+m(n)\right ) q^{24n},
+$$
+where
+$m(n)$
+denotes the number of {\it middle divisors} of $n$. A divisor
+is a middle divisor if it lies in the interval
+$[\sqrt{n/2},\sqrt{2n})$.
+
+\medskip
+\head Acknoweledgements\endhead
+\medskip
+\noindent
+The authors thank Scott Ahlgren and Don Zagier for their helpful comments.
+
+\medskip
+\head 2. Preliminaries and important facts.
+\endhead
+
+
+\medskip
+The ten identities in Theorem 3 rely on Theorems 1 and 2.
+Here we prove Theorems 1 and 2, and we begin with the following
+crucial observation.
+
+\medskip
+\proclaim{Theorem 2.1} Suppose that $f(z)=\sum_{n=0}^{\infty}
+\alpha(n)z^n$ is analytic for $|z|<1$.
+If the two sums below converge
+$$
+\align
+&\sum_{n=0}^{\infty} (n+1)(\alpha(n+1)-\alpha(n))\\
+&\sum_{n=0}^{\infty} (\alpha-\alpha(n)),
+\endalign
+$$
+where $\alpha$ is a fixed complex number, and
+$$
+ \lim_{n\rightarrow +\infty} n(\alpha-\alpha(n))=0,
+$$
+then
+$$
+\lim_{z\rightarrow 1^{-}} \frac{d}{dz}(1-z)f(z)=\sum_{n=0}^{\infty}
+(\alpha-\alpha(n)). \tag{2.1}
+$$
+\endproclaim
+\demo{Proof}
+It is simple to check that
+$$
+\align
+\lim_{z\rightarrow 1^{-}} \frac{d}{dz} (1-z)f(z)&=\\
+&=\lim_{z\rightarrow 1^{-}} \frac{d}{dz} (1-z)\sum_{n=0}^{\infty}
+ \alpha(n)z^n\\
+&=\lim_{z\rightarrow 1^{-}} \left [
+ (1-z)\sum_{n=0}^{\infty}n\alpha(n)z^{n-1}-\sum_{n=0}^{\infty}
+  \alpha(n)z^n \right ]\\
+&=\lim_{z\rightarrow 1^{-}} \left [ \sum_{n=0}^{\infty}
+(n+1)\alpha(n+1)z^n-\sum_{n=0}^{\infty}(n+1)\alpha(n)z^n \right ] \\
+&=\lim_{z\rightarrow 1^{-}} \sum_{n=0}^{\infty} (n+1)(\alpha(n+1)-
+\alpha(n))z^n.
+\endalign
+$$
+
+
+\noindent
+By Abel's Theorem, this implies that
+$$
+\align
+\lim_{z\rightarrow 1^{-}}& \frac{d}{dz}(1-z)f(z)=\\
+&=\sum_{n=0}^{\infty}(n+1)(\alpha(n+1)-\alpha(n))\\
+&=\sum_{n=0}^{N}(n+1)(\alpha(n+1)-\alpha(n))+
+  \sum_{n=N+1}^{\infty}(n+1)(\alpha(n+1)-\alpha(n))\\
+&=(N+1)\alpha(N+1)-\alpha(0)-\alpha(1)-\cdots -\alpha(N)+
+\sum_{n=N+1}^{\infty}(n+1)(\alpha(n+1)-\alpha(n))\\
+&=\sum_{n=0}^{N} (\alpha(N+1)-\alpha(n))+\sum_{n=N+1}^{\infty}
+(n+1)(\alpha(n+1)-\alpha(n))\\
+&=\sum_{n=0}^{N}(\alpha-\alpha(n))+\sum_{n=0}^{N}
+(\alpha(N+1)-\alpha)+\sum_{n=N+1}^{\infty}(n+1)(\alpha(n+1)-\alpha(n))\\
+&=\sum_{n=0}^{N}(\alpha-\alpha(n))+(N+1)(\alpha(N+1)-\alpha)+
+\sum_{n=N+1}^{\infty}(n+1)(\alpha(n+1)-\alpha(n)). 
+\endalign 
+$$
+The two terms on right  tend to zero as $N\rightarrow +\infty$,
+therefore we find that
+$$
+\lim_{z\rightarrow 1^{-}} \frac{d}{dz} (1-z)f(z)=\sum_{n=0}^{\infty}(\alpha-\alpha(n)).
+$$
+\enddemo \qed
+
+\medskip
+In all of our applications, $f(z)$ will have a pole of order 1 at
+$z=1$, so the $\lim_{z\rightarrow 1^{-}}$ can be replaced by a simple
+evaluation.
+We shall employ the standard notation of basic
+hypergeometric series [G-R; pp. 3-4, 125]:
+$$
+ _{r+1}\phi_r \left ( \matrix a_0,  a_1,\dots, a_r;\\
+                               \  \ \ b_1,\dots, b_r \endmatrix
+\   q,z\right )=
+\sum_{j=0}^{\infty}
+\frac{(a_0;q)_j (a_1;q)_j\cdots (a_r;q)_j z^j}
+     {(q;q)_j (b_1;q)_j\cdots (b_r;q)_j}, \tag{2.2}
+$$
+$$
+ _r\psi_r \left ( \matrix a_1, a_2, \dots, a_r;\\
+            b_1, b_2, \dots, b_r \endmatrix \  q,z \right )=
+\sum_{j=-\infty}^{\infty}\frac{(a_1;q)_j (a_2;q)_j \cdots (a_r;q)_j z^j}
+{(b_1;q)_j (b_2;q)_j \cdots (b_r;q)_j}. \tag{2.3}
+$$
+
+\noindent
+We shall also require Heine's transformation [G-R; p. 9]:
+$$
+ _2\phi_1 \left ( \matrix a, b; \\
+                 \ \ c \endmatrix \ q,z \right )=
+\frac{(b;q)_{\infty} (az;q)_{\infty}}{(c;q)_{\infty} (z;q)_{\infty}}
+  \ \times \ _2\phi_1 \left ( \matrix c/b, z;\\
+    \ \ az \endmatrix \ q, b \right ); \tag{2.4}
+$$
+Ramanujan's summation [G-R; p. 126]:
+$$
+ _1\psi_1 \left ( \matrix a; \\ b \endmatrix \ 
+q,z \right )=\frac{(q;q)_{\infty}(b/a,q)_{\infty}
+(az;q)_{\infty}(q/az;q)_{\infty}}
+{(b;q)_{\infty}(q/a;q)_{\infty} (z;q)_{\infty}
+(b/az;q)_{\infty}}, \tag{2.5}
+$$
+and the Rogers-Fine identity [F; p. 15]:
+$$
+(1-t)\sum_{n=0}^{\infty}\frac{(a;q)_n t^n}{(b;q)_n}=
+\sum_{n=0}^{\infty}\frac{(a;q)_n (atq/b;q)_n (1-atq^{2n})b^n t^nq^{n^2-n}}
+{(b;q)_n (tq;q)_n}. \tag{2.6}
+$$  
+
+Throughout we assume that $|q|<1$ and that the other
+parameters are restricted to domains that do not contain any singularities
+of the series or products under consideration.
+For succinctness of notation, we define the differential operator
+$\epsilon$ by
+$$
+\epsilon f(z)=f'(1). \tag{2.7}
+$$
+\medskip
+\demo{Proof of Theorem 1}
+By Theorem 2.1, we have that
+$$
+\sum_{n=0}^{\infty}\left (\frac{(t;q)_{\infty}}{(a;q)_{\infty}}-
+\frac{(t;q)_n}{(a;q)_n}\right )=\epsilon (1-z)\sum_{n=0}^{\infty}
+\frac{(t;q)_n z^n}{(a;q)_n}.
+$$
+By (2.2-6), this equals
+$$
+\align
+&=\epsilon(1-z)\left ( _1\psi_1 \left ( \matrix t;\\ z \endmatrix
+\ q,z\right )-\sum_{n=-\infty}^{-1}\frac{(t;q)_nz^n}{(a;q)_n}\right )\\
+&=\epsilon \left  ( \frac{(q;q)_{\infty}(a/t;q)_{\infty}(tz;q)_{\infty}
+(q/tz;q)_{\infty}}{(a;q)_{\infty}(q/t;q)_{\infty}(zq;q)_{\infty}
+(a/tz;q)_{\infty}}-(1-z)\sum_{n=1}^{\infty}\frac{(q/a;q)_n (a/(tz))^n}
+{(q/t;q)_n}\right ).
+\endalign
+$$ 
+Differentiating this last expression with respect to $z$ and then setting
+$z=1$ yields the result. 
+\enddemo \qed
+\medskip
+
+\demo{Proof of Theorem 2}
+By Theorem 2.1, (2.2) and (2.4), we have that
+$$
+\align
+&\sum_{n=0}^{\infty}\left ( \frac{(a;q)_{\infty}(b;q)_{\infty}}
+{(q;q)_{\infty}(c;q)_{\infty}}-\frac{(a;q)_n(b;q)_n}{
+(q;q)_n(c;q)_n}\right )\\
+&\ \ \ \ \ \ \ \ \ \ =\epsilon (1-z)\ \ \ _2\phi_1 \left
+(\matrix a, b; \\
+\ \ c\endmatrix \ q,z\right )\\
+&\ \ \ \ \ \ \ \ \ \  =\epsilon \left  (
+\frac{(b;q)_{\infty}(az;q)_{\infty}}{(c;q)_{\infty}(zq;q)_{\infty}}
+\left (1+\sum_{n=1}^{\infty}\frac{(c/b;q)_n (z;q)_n b^n}
+{(q;q)_n (az;q)_n}\right ) \right ).
+\endalign
+$$
+Noting that $\epsilon(z;q)_n=-(q;q)_{n-1}$ when
+$n>0$, we differentiate this last expression
+with respect to $z$ and then set $z=1$.
+This yields the result.
+\enddemo \qed
+
+
+\medskip
+\head 3. Proof of Theorem 3. \endhead
+\medskip
+
+In this section we prove each of the ten identities using
+the facts in \S 2.
+
+\medskip
+\noindent
+{\bf Case of $F_1(z)$:}
+This appears implicitly in [F; p. 14]. It is the instance of Theorem 2
+where $a=0$ and $b=c$.
+
+\medskip
+\noindent
+{\bf Case of $F_2(z)$:}
+This is the instance of $a=-q$ and $b=c$ in Theorem 2.
+
+\medskip
+\noindent
+{\bf Case of $F_3(z)$:} In Theorem 2, replace $q$ by $q^2$, then
+set $b=c$ and $a=q$.
+
+\medskip
+\noindent
+{\bf Case of $F_4(z)$:} This result was proved in [A2; eq. (1.4)].
+It follows from Theorem 1 with $t=-q$ with $a\rightarrow 0$.
+
+\medskip
+\noindent
+{\bf Case of $F_5(z)$:} This result was proved in [A2; eq. (1.5)].
+In Theorem 2 replace $q$ by $q^2$, then set $a=q^2$,
+$b=0$ and $c=q^3$. This yields, after multiplication by
+$(1-q)^{-1}$,
+$$
+\align
+\sum_{n=0}^{\infty}& \left (\frac{1}{(q;q^2)_{\infty}}-\frac{1}{(q;q^2)_{n+1}}
+\right )\\
+&\ \ \ \ \ =\frac{1}{(q;q^2)_{\infty}}\sum_{n=1}^{\infty}\frac{(-1)^{n-1}
+q^{n^2+2n}}{(q^2;q^2)_n(1-q^{2n)}}\\
+&\ \ \ \ \ =\frac{1}{(q;q^2)_{\infty}}
+\sum_{n=1}^{\infty}\frac{(-1)^{n-1}q^{n^2+2n}((1-q^{-n})+q^{-n})}
+{(q^2;q^2)_n(1-q^{2n})}\\
+&\ \ \ \ \ =\frac{1}{(q;q^2)_{\infty}}
+\left ( \sum_{n=1}^{\infty}\frac{(-1)^nq^{n^2+n}}{(q^2;q^2)_n(1+q^n)}
++\sum_{n=1}^{\infty}\frac{(-1)^{n-1}q^{n^2+n}}{(q^2;q^2)_n(1-q^{2n})}\right ).
+\endalign
+$$
+By [F; p. 14, eq. (12.42)], we find that this equals
+$$
+\ \ \ \ \ =\frac{1}{2(q;q^2)_{\infty}}
+\lim_{\tau\rightarrow 0} \ _3\phi_2 \left (
+\matrix q/\tau, q/\tau, -1;\\ 
+\ \ -q, -q \endmatrix \ q, -\tau^2 \right )+
+\frac{1}{(q;q^2)_{\infty}} \left ( -\frac{1}{2}+\sum_{n=1}^{\infty}
+\frac{q^n}{1-q^n}\right ).
+$$
+By [G-R; p. 241, eq. (III.9)] with
+$a=b=q/\tau$, $c=-1$ and $d=e=-q$, this equals
+$$\align
+&\ \ \ \ \ =\frac{1}{2(q;q^2)_{\infty}(-q;q)_{\infty}}
+\lim_{\tau\rightarrow 0} \ _3\phi_2 \left ( \matrix
+q/\tau, -\tau, q; \\
+\ \ -q, -q\tau \endmatrix \ q, -\tau \right )
++
+\frac{1}{(q;q^2)_{\infty}} \left (-\frac{1}{2}+\sum_{n=1}^{\infty}
+\frac{q^n}{1-q^n}\right ) \\
+&\ \ \ \ \ =\frac{1}{2}\sum_{n=0}^{\infty}\frac{q^{n^2+n}
+}{(-q;q)_n}+
+\frac{1}{(q;q^2)}\left (-\frac{1}{2}+\sum_{n=1}^{\infty}\frac{q^n}
+{1-q^n}\right ).
+\endalign
+$$
+This is the identity.
+
+
+
+\medskip
+\noindent
+{\bf Case of $F_6(z)$:} In Theorem 2 let $a=q$, $b=0$ and $c=-q$.
+This yields
+$$
+\align
+\sum_{n=0}^{\infty}& \left (\frac{1}{(-q;q)_{\infty}}-\frac{1}{(-q;q)_n}
+\right )\\
+&\ \ \ \ \ =\frac{1}{(-q;q)_{\infty}}\sum_{n=1}^{\infty}
+\frac{q^{(n^2+n)/2}}
+{(q;q)_n (1-q^n)}\\
+&\ \ \ \ \ =\frac{1}{(-q;q)_{\infty}}\sum_{n=1}^{\infty}
+\frac{q^{(n^2+n)/2}
+(1-(-1)^{n-1}+(-1)^{n-1})}
+{(q;q)_n(1-q^n)}.
+\endalign
+$$
+By [F; p. 14, eq. (12.42)], this equals
+$$
+\align
+&\ \ \ \ \ =\frac{2}{(-q;q)_{\infty}}\sum_{n=0}^{\infty}
+\frac{q^{2n^2+3n+1}}
+{(q;q)_{2n+1}(1-q^{2n+1})}+\frac{1}{(-q;q)_{\infty}}
+\sum_{n=1}^{\infty}\frac{q^n}{1-q^n}\\
+&\ \ \ \ \ =\frac{2q}{(-q;q)_{\infty}(1-q)^2}
+\lim_{\tau\rightarrow 0}\ _3\phi_2 \left ( \matrix
+q/\tau, q/\tau, q; \\ \ \ q^3, q^3
+\endmatrix \ \ q^2,\tau^2 q^3\right )
++\frac{1}{(-q;q)_{\infty}}\sum_{n=1}^{\infty}\frac{q^n}{1-q^n}\\
+\endalign
+$$
+By [G-R; p. 241, eq. (III.10)] with
+$q$ replaced by $q^2$ followed by letting $a=c=-q/\tau,$
+$b=q$ and $d=e=q^3$, this equals
+$$\align
+&\ \ \ \ \ =\frac{2q(q;q^2)_{\infty}}{(-q;q)_{\infty}
+(q^3;q^2)_{\infty}^2(1-q)^2}\sum_{m=0}^{\infty}
+(q^2;q^2)_mq^m+\frac{1}{(q;q^2)_{\infty}}
+\left (-\frac{1}{2}+\sum_{n=1}^{\infty}\frac{q^n}{1-q^n}\right ).
+\\ 
+&\ \ \ \ \ =2\sum_{m=0}^{\infty}(q^2;q^2)_mq^m+\frac{1}{(q;q^2)_{\infty}}
+\left (-\frac{1}{2}+\sum_{n=1}^{\infty}\frac{q^n}{1-q^n}\right )\\
+&\ \ \ \ \ =2\sum_{n=1}^{\infty}\frac{(-1)^{n-1}q^{n^2}}{(q;q^2)_n}+
+\frac{1}{(q;q^2)_{\infty}}\left ( -\frac{1}{2}+\sum_{n=1}^{\infty}
+\frac{q^n}{1-q^n}\right ).
+\endalign
+$$
+This is the identity for $F_6(z)$.
+
+
+\medskip
+\noindent
+{\bf Case of $F_7(z):$} In Theorem 1 replace $q$ by $q^2$, and
+then set $a=0$ and $t=q$.
+
+\medskip
+\noindent
+{\bf Case of $F_8(z):$} This is identity (1.2), and it is Theorem 2
+in [Z]. We include a proof for completeness.
+In Theorem 2.1 set $\alpha=(q;q)_{\infty}$ and let $\alpha(n):=
+(q;q)_n$. This yields
+$$
+\align
+\sum_{n=0}^{\infty} \left ( (q;q)_{\infty}-(q;q)_n \right )&=
+\epsilon (1-z)\sum_{n=0}^{\infty}(q;q)_n z^n\\
+&=-\epsilon \sum_{n=1}^{\infty}(q;q)_{n-1}q^nz^n\\
+&=-\sum_{n=1}^{\infty}(q;q)_{n-1}nq^n. \tag{3.1}
+\endalign
+$$
+Now it is immediate (because the  partial sums equal the partial products) that
+$$
+1-\sum_{n=1}^{\infty}zq^n(zq;q)_{n-1}=(zq;q)_{\infty}
+\tag{3.2},
+$$
+and applying $\epsilon$ to (3.2) we find that
+$$
+-\sum_{n=1}^{\infty}q^n\left ( \epsilon (zq;q)_{n-1} \right )
+=-1-(q;q)_{\infty}\left ( -1+\sum_{j=1}^{\infty}
+\frac{q^j}{1-q^j}\right ). \tag{3.3}
+$$
+Now set $b=0$, $a=z^2q$ and $t=z^2$ in (2.6), and after simplification
+we obtain upon multiplication by $z$
+$$
+z-z^3\sum_{n=1}^{\infty}(z^2q;q)_{n-1}(z^2q)^n=z+
+\sum_{n=1}^{\infty}(-1)^n\left (q^{(3n^2-3n)/2}z^{6n-1}+
+q^{(3n^2+n)/2}z^{6n+1}\right ). 
+\tag{3.4}
+$$
+Noting that $\epsilon \left (zf(z^2)\right )=f(1)+2\epsilon f(z)$
+we apply $\epsilon$ to (3.4) and find that
+$$
+\align
+1+&\sum_{n=1}^{\infty}(-1)^n(6n-1)q^{(3n^2-n)/2}+\sum_{n=1}^{\infty}
+(-1)^n(6n+1)q^{(3n^2+n)/2}\\
+&=(q;q)_{\infty}+2\epsilon \left (1-z\sum_{n=1}^{\infty}(zq;q)_{n-1}
+z^nq^n
+\right )\\
+&=(q;q)_{\infty}-2\left ((q;q)_{\infty}-1\right )-2
+\sum_{n=1}^{\infty}(q;q)_{n-1}nq^n-2\sum_{n=1}^{\infty}
+q^n\left (\epsilon(zq;q)_{n-1}\right )\\
+&=2-(q;q)_{\infty}+2\sum_{n=0}^{\infty} \left (
+(q;q)_{\infty}-(q;q)_n\right )+2\left (-1
+-(q;q)_{\infty} \left (-1+\sum_{j=1}^{\infty}\frac{q^j}{
+1-q^j}\right ) \right ), \tag{3.5}
+\endalign
+$$
+by (3.1) and (3.3).
+This is the identity.
+
+\medskip
+\noindent
+{\bf Case of $F_9(z)$:} In Theorem 2, let $a=b=q$ and
+$c=-q$. This yields
+$$
+\sum_{n=0}^{\infty} \left (\frac{(q;q)_{\infty}}{(-q;q)_{\infty}}
+-\frac{(q;q)_n}{(-q;q)_n}\right )=-2\frac{(q;q)_{\infty}}
+{(-q;q)_{\infty}}\sum_{n=1}^{\infty}\frac{(-q;q)_{n-1}q^n}
+{(q;q)_n(1-q^n)}. \tag{3.6} 
+$$
+
+Now in (2.6) set $t=z$, $a=zq$, $b=-zq$
+(cf. [F; p. 15, eq. (14.31)]). This yields after simplification
+$$
+(1-z)\sum_{n=0}^{\infty}\frac{(zq;q)_nz^n}{(-zq;q)_n}=1+2\sum_{n=1}^{\infty}
+(-z^2)^nq^{n^2}. \tag{3.7}
+$$
+Applying $\epsilon$ to (3.7) yields
+$$
+\align
+4\sum_{n=1}^{\infty}(-1)^n nq^{n^2}&=\\
+&=\epsilon(1-z) _2\phi_1 \left ( \matrix q, zq;\\ \ \ -zq
+\endmatrix \ q,z \right ).
+\endalign
+$$
+By (2.4) with $a=q$, $b=zq$ and $c=-zq$, and also (3.6),
+we find that this equals
+$$
+\align
+&=\epsilon \frac{(zq;q)_{\infty}}{(-zq;q)_{\infty}}
+\ _2\phi_1 \left ( \matrix -1, z;\\ \ \ zq \endmatrix \
+q,zq \right ). \tag{3.8}
+\\ 
+&=\frac{(q;q)_{\infty}}{(-q;q)_{\infty}}\left (\sum_{j=1}^{\infty}
+\frac{-q^j}{1-q^j}-\sum_{j=1}^{\infty}\frac{q^j}{1+q^j}\right )
+-2\frac{(q;q)_{\infty}}{(-q;q)_{\infty}}\sum_{n=1}^{\infty}
+\frac{(-q;q)_{n-1}q^n}{(q;q)_n(1-q^n)}\\
+&=-2\frac{(q;q)_{\infty}}{(-q;q)_{\infty}}
+\sum_{j=1}^{\infty}\frac{q^j}{1-q^{2j}}+\sum_{n=0}^{\infty}
+\left (\frac{(q;q)_{\infty}}{(-q;q)_{\infty}}-\frac{(q;q)_n}
+{(-q;q)_n}\right ).
+\endalign
+$$
+
+
+\medskip
+\noindent
+{\bf Case of $F_{10}(z)$:}
+In Theorem 2 replace $q$ by $q^2$, and then set
+$a=b=q^2$ and $c=q^3$. This yields, after multiplication
+by $(1-q)^{-1}$
+$$
+\sum_{n=0}^{\infty} \left ( \frac{(q^2;q^2)_{\infty}}{(q;q^2)_{\infty}}
+-\frac{(q^2;q^2)_n}{(q;q^2)_{n+1}}\right )=
+-\frac{(q^2;q^2)_{\infty}}{(q;q^2)_{\infty}}\sum_{n=1}^{\infty}
+\frac{(q;q^2)_{n}q^{2n}}{(q^2;q^2)_n(1-q^{2n})}. \tag{3.9}
+$$
+Now in (2.6) replace $q$ by $q^2$, then set $a=zq$ and
+$b=zq^2$ (cf. [F; p. 16, eq. (14.4)]). This yields, after simplification,
+$$
+\sum_{n=0}^{\infty}\frac{(zq;q^2)_n z^nq^n}{(zq^2;q^2)_n}=\sum_{n=0}
+^{\infty}z^nq^{(n^2+n)/2}. \tag{3.10}
+$$
+Applying $\epsilon$ to (3.10), we find that
+$$
+\align
+\sum_{n=1}^{\infty}nq^{(n^2+n)/2}
+&=\epsilon \ _2\phi_1 \left ( \matrix zq, q^2; \\ \ \ zq^2
+\endmatrix \ q^2,zq \right ).
+\endalign
+$$
+This equals,
+by (2.4) with $q$ replaced by $q^2$ and $z$ replaced by $zq$
+with $a=zq$, $b=q^2$ and $c=zq^2$,
+$$
+\align
+&=\epsilon \frac{(q^2;q^2)_{\infty}(z^2q^2;q^2)_{\infty}}
+{(zq^2;q^2)_{\infty}(zq;q^2)_{\infty}}\ _2\phi_1\left (
+\matrix z, zq;\\ \ \ z^2q^2 \endmatrix \ 
+q^2, q^2\right ) \tag{3.11}\\
+&=\epsilon (q^2;q^2)_{\infty}(-zq;q)_{\infty} \ _2\phi_1 \left ( \matrix
+z, zq;\\ z^2q^2 \endmatrix \ q^2, q^2\right )\\
+&=\frac{(q^2;q^2)_{\infty}}{(q;q^2)_{\infty}}\sum_{j=1}^{\infty}
+\frac{q^j}{1+q^j}-\frac{(q^2;q^2)_{\infty}}{(q;q^2)_{\infty}}
+\sum_{n=1}^{\infty}\frac{(q;q^2)_n q^{2n}}
+{(q^2;q^2)_n (1-q^{2n})}\\
+&=\frac{(q^2;q^2)_{\infty}}{(q;q^2)_{\infty}}\sum_{j=1}^{\infty}
+\frac{(-1)^jq^j}{1-q^j}+\sum_{n=0}^{\infty}\left (
+\frac{(q^2;q^2)_{\infty}}{(q;q^2)_{\infty}}-\frac{(q^2;q^2)_n}
+{(q;q^2)_{n+1}}\right ).
+\endalign
+$$
+We use (3.9) in the last step above.
+
+
+\medskip
+\head 4. Proof of Theorems 4, 5, 6, and 7.
+\endhead
+\medskip
+
+In this section we prove Theorems 4, 5, 6, and 7. The proofs
+are similar to the proof of [Th. 3, Z], and so we give a brief proof
+of Theorem 4 and we give sketches of the remaining cases.
+In each case, it is well known that the relevant $L$-function
+has an analytic continuation to $\C$ (with the exception of a simple
+pole at $s=1$ for $\zeta(s)$) and a functional equation 
+via a Mellin transformation.
+
+\medskip
+\demo{Proof of Theorems 4, 5, 6, and 7}
+\smallskip
+
+
+\noindent
+{\bf Case of Theorem 4:}
+The identity for $F_9(z)$ in Theorem 3 is
+$$
+\sum_{n=0}^{\infty}\left ( F_9(z)-\frac{(1-q)(1-q^2)\cdots(1-q^n)}
+{(1+q)(1+q^2)\cdots(1+q^n)}\right )=2F_9(z)\left (\sum_{n=1}^{\infty}
+d_1(n)q^n\right )+2\sqrt{\Theta}\left (F_9(z)\right ).
+\tag{4.1}
+$$
+It is well known that
+$$F_9(z)=1+2\sum_{n=1}^{\infty}(-1)^nq^{n^2}. \tag{4.2}
+$$
+Notice that $F_9(z)$ vanishes to infinite order as $q\rightarrow 1$.
+Therefore, we replace $q$ by $e^{-t}$ with $t\searrow 0$.
+Now define coefficients $c_9(n)$ and $b_9(n)$ by the asymptotic expansions
+$$
+-\sum_{n=0}^{\infty} \frac{(1-e^{-t})(1-e^{-2t})\cdots
+(1-e^{-nt})}{(1+e^{-t})(1+e^{-2t})\cdots(1+e^{-nt})}=
+\sum_{n=0}^{\infty}c_9(n)t^n
+\tag{4.3}
+$$
+and
+$$
+H_9\left(e^{-t}\right)=4\sum_{n=1}^{\infty}(-1)^{n}ne^{-n^2t}\sim
+\sum_{n=0}^{\infty}b_9(n)t^n \ \ \ \ \ \ {\text {\rm as}}\ t\searrow 0.
+$$
+Now we observe, by (4.1) and (4.2), that $c_9(n)=b_9(n)$ for all $n$. On
+the other hand
+$$
+\int_{0}^{\infty}H_9\left(e^{-t}\right)t^{s-1} dt=
+4\sum_{n=1}^{\infty}(-1)^{n}n \int_{0}^{\infty}e^{-n^2t}t^{s-1} dt.
+$$
+By replacing $T$ by $n^2t$, we find that 
+$$
+\int_{0}^{\infty}H_9\left(e^{-t}\right) t^{s-1} dt=
+4\Gamma(s)\sum_{n=1}^{\infty}\frac{(-1)^{n}}{n^{2s-1}}
+=4\Gamma(s)(4^{1-s}-1) \zeta(2s-1). \tag{4.4}
+$$
+To compute the coefficients $b_9(n)$, notice that
+$$
+\int_{0}^{\infty}H_9\left(e^{-t}\right)t^{s-1}dt
+   =\int_0^{\infty}\left(\sum_{n=0}^{N-1}b_9(n)t^n+O(t^N)\right)t^{s-1}dt
+=\sum_{n=0}^{N-1}\frac{c_9(n)}{s+n}+\frak{F}_9(s), \tag{4.5}
+$$
+where $\frak{F}_9(s)$ is analytic for $Re(s) > -N$.
+The residue at $s=-n$ of (4.4)
+is 
+$$
+b_9(n)=\frac{(-1)^{n}}{n!}\cdot 4(4^{1+n}-1)\cdot \zeta(-2n-1).
+$$
+This completes the proof of Theorem 4.
+
+\medskip
+\noindent
+{\bf Case of Theorem 5:}
+It is well known that
+$$
+F_{10}(z)=\sum_{n=0}^{\infty}q^{(2n+1)^2}. \tag{4.6}
+$$
+It is easy to see that the identity in Theorem 3 for $F_{10}(z)$
+is equivalent to
+$$
+\align
+&\sum_{n=0}^{\infty}\left (F_{10}(z/8)-\frac{q^{1/8}}{1-q}\times
+\frac{(1-q^{2})(1-q^{4})\cdots(1-q^{2n})}
+{(1-q^{3})(1-q^{5})\cdots(1-q^{2n+1})} \right )
+\\
+&\hskip1.5in 
+=F_{10}(z/8)\left (-\frac{1}{2}+\sum_{n=1}^{\infty}d_8(n)q^{n}\right )
++\frac{1}{2}\sum_{n=0}^{\infty}(2n+1)q^{(2n+1)^2/8}.
+\tag{4.7}
+\endalign
+$$
+Observe that $F_{10}(z/8)$ vanishes to infinite order as $q
+\rightarrow -1$.
+Define the coefficients $c_{10}(n)$ and $b_{10}(n)$ by the asymptotic 
+expansions
+$$
+-e^{-t/8}\sum_{n=0}^{\infty}
+\frac{(1-e^{-2t})(1-e^{-4t})\cdots(1-e^{-2nt})}
+{(1+e^{-t})(1+e^{-3t})\cdots(1+e^{-(2n+1)t})}=
+\sum_{n=0}^{\infty}c_{10}(n)t^n
+$$
+and
+$$
+H_{10}\left(e^{-t}\right)=
+\frac12\sum_{n=0}^{\infty}(2n+1)(-1)^{n(n+1)/2}e^{-t(2n+1)^2/8}\sim
+\sum_{n=0}^{\infty}b_{10}(n)t^n \ \ \ \ \ \ {\text {\rm as}}\ 
+t\searrow 0.
+$$
+
+Therefore, by replacing $q$ by $-e^{-t}$ with $t\searrow 0$  and
+$\zeta_8:=e^{\pi i/8}$, (4.6) and (4.7) imply that $c_{10}(n)=b_{10}(n)$ for
+all $n$ and, on the other hand
+$$
+\align
+\int_{0}^{\infty}H_{10}\left(e^{-t}\right) t^{s-1} dt
+%&=\frac{1}{2}\sum_{n=0}^{\infty}(2n+1)\int_{0}^{\infty}
+%(-e)^{-(2n+1)^2 t/8}t^{s-1} dt\\%hskip2.5in
+&
+=\frac{1}{2}\sum_{n=0}^{\infty}(2n+1)(-1)^{n(n+1)/2}\int_{0}^{\infty}
+e^{-(2n+1)^2 t/8}t^{s-1}dt\\%\hskip2.5in
+&
+=\frac{1}{2}\sum_{n=1}^{\infty}\chi_2(n)n\int_{0}^{\infty}
+e^{-n^2 t/8}t^{s-1}dt \\%&\hskip2.5in
+&
+=\frac12 8^s \Gamma(s)L(\chi_2,2s-1).
+\tag{4.8}
+\endalign
+$$
+The rest of the proof is identical to the proof of Theorem 4. 
+\medskip
+\noindent
+{\bf Case of Theorem 6:} 
+By [C], it is known that the coefficients $a(n)$ defining
+$L(\rho,s)$ in (1.16) are defined by
+$$
+  \sum_{n=1}^{\infty}a(n)q^n=M_1(q)+2M_2(q). \tag{4.9}
+$$
+In this case we use the identity for $F_7(z)$ in Theorem 3
+$$
+\sum_{n=0}^{\infty} \left (F_7(z)-q^{-1}(1-q^{24})(1-q^{72})
+\cdots(1-q^{24(2n-1)})\right )=F_7(z)\left (\sum_{n=1}^{\infty}
+d(n)q^{24n}\right ) +M_2(q).
+\tag{4.10}
+$$
+Moreover, notice in (1.8)  that the non-zero coefficients
+of $M_2(q)$ are supported on those exponents $n\equiv 23\pmod{24}$.
+Now observe that $F_{7}(z/24)$ vanishes
+to infinite order as $q\rightarrow 1$.
+The rest of the argument is virtually identical to those above.
+
+\medskip
+\noindent
+{\bf Case of Theorem 7:}
+In this case we consider the identity for $F_4(z)$ in Theorem 3
+$$
+\sum_{n=0}^{\infty}\left (F_4(z)-q(1+q^{24})(1+q^{48})\cdots
+(1+q^{24n})\right )=
+F_4(z)\left (-\frac{1}{2}+\sum_{n=1}^{\infty}d(n)q^{24n}\right )+\frac{1}
+{2}M_1(q). \tag{4.11}
+$$
+Notice that $F_4(z/24)$ vanishes to infinite order as $q\rightarrow -1$.
+Arguing as before, we consider the asymptotic
+$t$-series expansion of
+$$
+-\zeta_{24}e^{-t/24}\sum_{n=0}^{\infty} (1-e^{-t})(1+e^{-2t})\cdots
+(1+(-1)^ne^{-nt})
+$$
+where $\zeta_{24}=e^{\pi i/24}$.
+The rest of the proof is a routine exercise using $\zeta_{24}$, the Mellin
+transform, and the fact that the non-zero coefficients of $M_1(q)$
+are supported on those exponents $n\equiv 1\pmod{24}$.
+\enddemo \qed
+
+
+
+
+\medskip
+\head 5. Partition theoretic consequences.\endhead
+\medskip
+
+
+Recall that a {\it partition} of a non-negative integer $N$
+is any nonincreasing
+sequence of positive integers whose sum is $N$. 
+If $p(N)$ denotes the number of partitions of $N$,
+then we have
+$$
+\frac{1}{\eta(24z)}=
+\sum_{N=0}^{\infty}p(N)q^{24N-1}=q^{-1}\prod_{n=1}^{\infty}\frac{1}{1-q^{24n}}=
+q^{-1}+q^{23}+2q^{47}+3q^{71}+\cdots . \tag{5.1}
+$$
+If $p_e(N)$ (resp. $p_o(N)$) denote the number of partitions
+of $N$ into an even (resp. odd) number of distinct parts, then
+Euler's Pentagonal Number Theorem asserts that
+the Fourier expansion of 
+$\eta(24z)\in S_{1/2}(\Gamma_0(576),\chi)$
+is
+$$
+\eta(24z)=\sum_{N=0}^{\infty}\left ( p_e(N)-p_o(N)\right )
+q^{24N+1}=q-q^{25}-q^{49}+\cdots = \sum_{n=1}^{\infty}\chi(n)q^{n^2}\tag{5.2}
+$$
+where
+$$
+\chi(n):=\cases 1\ \ \ \ &{\text {\rm if}}\  n\equiv \pm 1\pmod{12},\\
+               -1\ \ \ \ &{\text {\rm if}}\ n\equiv \pm 5\pmod{12},\\
+                0 \ \ \ \ &{\text {\rm otherwise.}}
+\endcases
+\tag{5.3}
+$$
+
+As a consequence for our identity for
+$F_1(z)=1/\eta(24z)$, we obtain the following partition theoretic
+result which is equivalent to the observation made
+by Erd\"os [E] in the beginning of his study of
+the asymptotics of $p(N)$ by elementary
+means.
+
+\medskip
+\proclaim{Theorem 5.1}
+If $n$ is a positive integer, then let $a_n(N)$ denote the number
+of partitions of $N$ into parts not exceeding $n$.
+For every positive integer $N$ we have
+$$
+(N+1)p(N)=\sum_{n=1}^{N}p(N-n)d(n)+\sum_{n=1}^{N}a_n(N).
+$$
+\endproclaim
+\medskip
+\demo{Proof}
+Here we use the identity for $F_1(z)=1/\eta(24z)$ in the form
+$$
+\sum_{n=0}^{\infty}\left ( P(q)-\frac{1}{(1-q)(1-q^2)\cdots(1-q^n)} \right )
+=P(q)\Cal{D}(q), \tag{5.4}
+$$
+where
+$$
+\align
+&P(q)=\sum_{n=0}^{\infty}p(n)q^n=\prod_{n=1}^{\infty}\frac{1}{1-q^n},\\
+&\Cal{D}(q)=\sum_{n=1}^{\infty}d(n)q^n.
+\endalign
+$$
+If $m$ is a non-negative integer, then the series
+$$
+P(q)-\frac{1}{(1-q)(1-q^2)\cdots(1-q^m)}=q^{m+1}+\sum_{n=m+2}^{\infty}
+b_m(n)q^n \tag{5.5}
+$$
+for some sequence of integers $b_m(n)$.
+
+Now let $N$ be a positive integer, then it is easy to see that
+the coefficient of $N$ on the right hand side of (5.4) is
+$$
+\sum_{n=1}^{N}p(N-n)d(n).
+$$
+Therefore, to prove the result
+it suffices to show that the coefficient of $q^N$
+on the left hand side of
+of (5.4) is
+$$
+(N+1)p(N)-\sum_{n=1}^{N}a_n(N). \tag{5.6}
+$$
+
+By letting $m=N$ as in (5.5), it is easy to see that the coefficient
+of $q^N$ on the left hand side of (5.4) is the coefficient of $q^N$
+in
+$$\sum_{n=0}^{N}\left (P(q)-\frac{1}{(1-q)(1-q^2)\cdots(1-q^n)}\right ).
+$$
+Claim (5.6) follows from the obvious fact that
+$$
+\sum_{N=0}^{\infty}a_n(N)q^n=\frac{1}{(1-q)(1-q^2)\cdots(1-q^n)}.
+$$
+This completes the proof.
+\enddemo \qed
+\medskip
+
+
+
+As with Theorem 5.1, Zagier's identity for $F_8(z)=\eta(24z)$
+has an interesting partition theoretic
+consequence which is similar in flavor to Euler's
+Pentagonal Number Theorem
+(5.2).
+We require some notation.
+If $\pi$ is a partition, then let $m_{\pi}$ denote its largest part.
+Moreover, if $N$ is an integer, then let $S_e(N)$ (resp. $S_o(N)$)
+denote the set of partitions of $N$ into an even (resp. odd) number
+of distinct parts. Using this notation, define the two partition functions
+$A_e(N)$ and $A_o(N)$ by
+$$
+\align
+&A_e(N):=\sum_{\pi \in S_e(N)}m_{\pi},\tag{5.7}\\
+&A_o(N):=\sum_{\pi \in S_o(N)}m_{\pi}\tag{5.8}
+\endalign
+$$
+
+\proclaim{Theorem 5.2}
+If $N$ is a positive integer, then
+$$
+\align
+&A_e(N)-A_o(N)= \\
+& \ \ \ \ \ \ \ \ \ \ =\sum_{k\in \Z} (-1)^kd \left (N- (3k^2+k)/2 \right )
++\cases (-1)^k(3k) &{\text {\rm if}}\ N=\frac{3k^2+k}{2} \
+{\text {\rm with}}\ k\geq 0,\\
+      (-1)^k(3k-1) &{\text {\rm if}}\ N=\frac{3k^2-k}{2}\ 
+{\text {\rm with}}\ k\geq 1,\\
+       0     &{\text {\rm otherwise.}}
+\endcases
+\endalign
+$$
+\endproclaim
+\demo{Proof}
+If $\Cal{E}(q)$ is the $q$-series defined by
+$$
+\Cal{E}(q)=\prod_{n=1}^{\infty}(1-q^n)=1-q-q^2+\cdots,
+$$
+then we claim that
+$$
+\sum_{n=0}^{\infty} \left (\Cal{E}(q)-(1-q)(1-q^2)\cdots (1-q^n)\right )=
+-\sum_{n=1}^{\infty}nq^n(1-q)(1-q^2)\cdots (1-q^{n-1}). \tag{5.9}
+$$
+As described above, we have that
+$$
+\Cal{E}(q)=\prod_{n=1}^{\infty}(1-q^n)=\sum_{n=0}^{\infty}
+\left ( p_e(n)-p_o(n)\right )q^n.
+$$
+Since $\Cal{E}(q)$ is the generating function for the number of
+partitions into an even number of distinct parts minus the number
+into an odd number of distinct parts,
+it is easy to see that
+$$\Cal{E}(q)-(1-q)(1-q^2)\cdots(1-q^n)
+$$
+is the generating function whose
+coefficient of $q^N$ is the number of partitions of $N$ 
+into an
+even number of distinct parts where at least one part exceeds $n$
+minus the number of partitions of $N$ into an odd number of distinct
+parts where at least one part exceeds $n$.
+Consequently, each partition $\pi$ into distinct parts is counted
+with multiplicity $(-1)^{n_{\pi}} m_{\pi}$ 
+where $n_{\pi}$ is the number of parts in $\pi$.
+This implies (5.9).
+
+It is an easy exercise to deduce Theorem 5.2 from the identity
+in Theorem 1 for $F_8(z)=\eta(24z)$.
+\enddemo \qed
+
+\medskip
+\head 6. Related Results \endhead
+\medskip
+
+The uniform nature of the ten results proved in Theorem 3 makes
+it natural to group those identities together. There are, however, a
+variety of results that can be deduced from Theorems 1 and 2.
+Here we record a number of these bizarre identities.
+
+\medskip
+\proclaim{Theorem 6.1}
+Let $m(n)$ denote the number of divisors of $n$ in the interval
+$[\sqrt{n/2},\sqrt{2n})$.
+Moreover, let $d_e(n)$ (resp. $d_o(n)$)
+denote the number of even (resp. odd) divisors of $n$.
+The following identities are true:
+$$
+\sum_{n=0}^{\infty} \left ( \frac{1}{\eta^2(24z)}-\frac{1}{q^2(q^{24};
+q^{24})_{n}^2}\right )=\frac{1}{\eta^2(24z)}\sum_{n=1}^{\infty} \left (
+d(n)+m(n)\right )q^{24n}, \tag{6.1}
+$$
+$$
+\sum_{n=0}^{\infty} \left (\frac{\eta^2(2z)}{\eta^4(z)}-\frac{(-q;q)^2_n}
+{(q;q)^2_n}\right )=\frac{4\eta^2(2z)}{\eta^4(z)}\sum_{m=0}^{\infty}
+d_o(2m+1)q^{2m+1}, \tag{6.2}
+$$
+$$
+\sum_{n=0}^{\infty} \left ( \frac{\eta^2(8z)}{\eta^4(16z)}-\frac{
+(q^8;q^{16})_n^2}{q^2(q^{16};q^{16})_n^2}\right )=
+\frac{\eta^2(8z)}{\eta^4(16z)}\sum_{n=1}^{\infty}\left (
+d_e(n)-2d_o(n)\right )q^{8n}, \tag{6.3}
+$$
+$$
+\sum_{n=0}^{\infty} \left (\frac{1}{\eta(24z)}-\frac{1}{q(q^{24};q^{24})_{2n}}
+\right )=\frac{1}{\eta(24z)}\left ( \sum_{n=1}^{\infty}d(n)q^{48n}+\sum_{n=1}^{\infty}
+\frac{(-1)^{n-1}q^{24n^2}}{1-q^{48n}}\right ), \tag{6.4}
+$$
+$$
+\sum_{n=0}^{\infty} \left ( \frac{\eta(2z)}{\eta^2(z)}-\frac{(-q;q)_{2n}}
+{(q;q)_{2n}}\right )=\frac{2\eta(2z)}{\eta^2(z)}\sum_{n=1}^{\infty}
+\frac{q^{2n}-(-q)^n}{1-q^{4n}}, \tag{6.5}
+$$
+$$
+\sum_{n=0}^{\infty}\left
+ ( \frac{\eta(8z)}{\eta^2(16z)}-\frac{(q^8;q^{16})_{2n}}
+{q(q^{16};q^{16})_{2n}}\right )=\frac{\eta(8z)}{4\eta^2(16z)}
+\left (1-\sum_{n=-\infty}^{\infty}q^{8n^2}+2\sum_{n=1}^{\infty}
+\left (d_e(n)-d_o(n)\right )q^{8n}\right ).
+\tag{6.6}
+$$
+\endproclaim
+\demo{Proof}
+Here we prove these identities.
+
+\medskip
+\noindent
+{\bf Case of} (6.1): Let $a=b=0$ and $c=q$ in Theorem 2.
+This yields
+$$
+\sum_{n=0}^{\infty} \left ( \frac{1}{(q;q)_{\infty}^2}-\frac{1}{(q;q)^2_n}
+\right )=\frac{1}{(q;q)_{\infty}^2}\left (\sum_{n=1}^{\infty}
+\frac{q^n}{1-q^n}+\sum_{n=1}^{\infty}\frac{(-1)^{n-1}q^{(n^2+n)/2}}
+{1-q^n}\right ).
+\tag{6.7}
+$$
+In order to complete the proof of (6.1), we must establish that
+$$
+\sum_{n=1}^{\infty}m(n)q^n=\sum_{n=1}^{\infty}
+\frac{(-1)^{n-1}q^{(n^2+n)/2}}{1-q^n}. \tag{6.8}
+$$
+To see (6.8), we first note that $m(n)$ equals
+$d(n)$ minus the number of divisors in the two intervals
+$[1,\sqrt{n/2})$ and $[\sqrt{2n},n]$.
+Hence, we have that
+$$\align
+\sum_{n=1}^{\infty}m(n)q^n&=\sum_{n=1}^{\infty}\frac{q^n}{1-q^n}
+-\sum_{n=1}^{\infty}q^{(n)(2n)}\left (1+2q^n+2q^{2n}+2q^{3n}+\cdots \right )
+\\
+&=\sum_{n=1}^{\infty}\frac{q^n}{1-q^n}-\sum_{n=1}^{\infty}\frac{(1+q^n)
+q^{2n^2}}{1-q^n}. \tag{6.9}
+\endalign
+$$
+Next in [G-R, eq. (III.17), p. 242] set $a=e=z$ and
+let $b, c, d$ and $f\rightarrow +\infty$. This yields
+$$
+\frac{(q;q)_{\infty}}{(zq;q)_{\infty}}\left (1+\sum_{n=1}^{\infty}
+\frac{(z;q)_n^2(1-zq^{2n})q^{2n^2}z^n}{(q;q)^2_n(1-z)}\right )=
+\sum_{n=0}^{\infty}\frac{(z;q)_n(-1)^nq^{(n^2+n)/2}}{(q;q)_n}.
+$$
+Hence we get
+$$
+\align
+\sum_{n=1}^{\infty}\frac{(-1)^{n-1}q^{(n^2+n)/2}}{1-q^n}&=\\
+&=\epsilon \sum_{n=0}^{\infty}\frac{(z;q)_n (-1)^nq^{(n^2+n)/2}}{(q;q)_n}\\
+&=\epsilon \frac{(q;q)_{\infty}}{(zq;q)_{\infty}}\left (1+
+\sum_{n=1}^{\infty}\frac{(z;q)_n^2(1-zq^{2n})q^{2n^2}z^n}
+{(q;q)_n^2(1-z)}\right )\\
+&=\sum_{n=1}^{\infty}\frac{q^n}{1-q^n}-\sum_{n=1}^{\infty}\frac
+{(1+q^n)q^{2n^2}}{1-q^n}\\
+&=\sum_{n=1}^{\infty}m(n)q^n, \tag{6.10}
+\endalign
+$$
+which proves (6.8) and therefore (6.1).
+
+
+\medskip
+\noindent
+{\bf Case of} (6.2): To prove this identity let
+$a=b=-q$ and $c=q$ in Theorem 2. The result now follows
+easily by combining the resulting Lambert series.
+
+\medskip
+\noindent
+{\bf Case of} (6.3):
+To prove this identity replace
+$q$ by $q^2$ and set $a=b=q$ and $c=q^2$ in Theorem 2.
+The result now follows easily by combining the resulting
+Lambert series.
+
+\medskip
+\noindent
+{\bf Case of} (6.4): To prove this identity replace
+$q$ by $q^2$ and set $a=b=0$ and $c=q^2$ in Theorem 2.
+
+\medskip
+\noindent
+{\bf Case of} (6.5): This identity follows from Theorem 2
+by replacing $q$ by $q^2$ and the setting $a=-q, b=-q^2$ and $c=q$.
+
+\medskip
+\noindent
+{\bf Case of} (6.6):
+Surprisingly, (6.6) is more intricate. Here we use Theorem 2.1 with
+$$
+\alpha(n)=(q;q^2)_{2n}/(q^2;q^2)_{2n}.
+$$
+Consequently (noting that $\epsilon f(z)=\frac{1}{2}\epsilon f(z^2)$),
+we find that
+$$\align
+\sum_{n=0}^{\infty}&\left (\frac{(q;q^2)_{\infty}}{(q^2;q^2)_{\infty}}
+-\frac{(q;q^2)_{2n}}{(q^2;q^2)_{2n}}\right )\\
+&=\epsilon (1-z)\sum_{n=0}^{\infty} \frac{(q;q^2)_{2n} z^n}{(q^2;q^2)_{2n}}\\
+&=\frac{1}{2}\epsilon (1-z^2)\sum_{n=0}^{\infty}\frac{z^n(q;q^2)_n (1+(-1)^n)}
+{2(q^2;q^2)_n}\\
+&=\frac{1}{4}\epsilon \left \{ (1+z)\frac{(qz;q^2)_{\infty}}
+{(zq^2;q^2)_{\infty}}+(1-z)\cdot
+\frac{(-zq;q^2)_{\infty}}{(-zq^2;q^2)_{\infty}}\right \}\\
+&=\frac{1}{4}\left \{ \frac{(q;q^2)_{\infty}}{(q^2;q^2)_{\infty}}
+-\frac{(-q;q^2)_{\infty}}{(-q^2;q^2)_{\infty}}+\frac{2(q;q^2)_{\infty}}
+{(q^2;q^2)_{\infty}}\sum_{n=1}^{\infty}\left (\frac{q^{2n}}{1-q^{2n}}
+-\frac{q^{2n-1}}{1-q^{2n-1}}\right ) \right \}.
+\endalign
+$$
+Identity (6.6) now follows by recalling [A1; p. 21, eq. (2.2.10)],
+with $z=1$, that
+$$
+\frac{(-q;q^2)_{\infty}(q^2;q^2)_{\infty}}
+{(q;q^2)_{\infty}(-q^2;q^2)_{\infty}}=\sum_{n=-\infty}^{\infty}q^{n^2}.
+$$ 
+
+\enddemo
+\qed
+
+\bigskip
+Finally, we recall the following attractive and very elementary
+result on partitions into consecutive integers (cf. [L, p. 85, Problem 4]).
+
+\medskip
+\proclaim{Proposition 6.2}
+The number of partitions of $n$ into consecutive integers equals
+the number of odd divisors of $n$.
+\endproclaim
+\demo{Proof} This result is easily deduced from the formula
+for the sum of an arithmetic progression. It is also directly
+deduced from the generating function identity [M, p. 28]
+$$
+\sum_{m=1}^{\infty}\frac{q^{2m-1}}{1-q^{2m-1}}=\sum_{m=1}^{\infty}
+\frac{q^{(m^2+m)/2}}{1-q^m}.
+$$
+\enddemo \qed
+
+\bigskip
+{}From our proof of (6.1), we may easily deduce the following
+result for $c_e(n)$ (resp. $c_o(n)$) the number
+of partitions of $n$ into an even (resp. odd) number of consecutive
+integers.
+
+\medskip
+\proclaim{Theorem 6.3} For every positive integer $n$ we have
+$$
+ c_o(n)-c_e(n)=m(n).
+$$
+\endproclaim
+\demo{Proof}
+This is immediate from (6.10):
+$$
+\sum_{n=1}^{\infty} m(n)q^n=\sum_{n=1}^{\infty}\frac{(-1)^{n-1}q^{(n^2+n)/2}}
+{1-q^n}=\sum_{n=1}^{\infty}\left ( c_o(n)-c_e(n)\right )q^n.
+$$
+\enddemo \qed
+
+
+
+
+\bigskip
+\Refs
+\widestnumber\key{DDDDDD}
+
+\ref \key A1 \by G. E. Andrews \book The theory of partitions
+\publ Cambridge University Press
+\yr 1984
+\endref
+
+\ref \key A2 \by G. E. Andrews \paper Ramanujan's ``Lost" Notebook V:
+Euler's partition identity
+\jour Advances in Mathematics \vol 61 \yr 1986 \pages 156-164
+\endref
+
+\ref \key A3 \by G. E. Andrews \paper Mock theta functions
+\jour Proc. Symp. Pure Math. \vol 49
+\yr 1989 \pages 283-298
+\endref
+
+\ref \key A-D-H \by G. E. Andrews, F. Dyson and D. Hickerson
+\paper Partitions and indefinite quadratic forms
+\jour Inventiones Mathematicae \vol 91 \yr 1988 \pages 391-407
+\endref
+
+
+\ref \key C \by H. Cohen \paper $q$-identities for Maass waveforms
+\jour Inventiones Mathematicae \vol 91 \yr 1988
+\pages 409-422
+\endref
+
+\ref \key E \by P. Erd\"os \paper On an elementary proof of some
+asymptotic formulas in the theory of partitions
+\jour Annals of Mathematics
+\vol 43 \yr 1942
+\pages 437-450
+\endref
+
+ \ref \key F \by N. J. Fine
+\book Basic hypergeometric series and applications 
+\publ Math. Sruveys and Monographs, Vol. 27, Amer. Math.Soc.,
+Providence \yr 1988
+\endref 
+
+\ref \key G-R \by G. Gasper and M. Rahman
+\book Basic hypergeometric series
+\publ Ency. of Math. and its Appl., Vol. 2, Addison-Wesley,
+Reading
+\yr 1976
+\endref
+
+\ref \key L \by W. J. Leveque \book Topics in Number Theory,
+Vol. 1 \publ Addison-Wesley, Reading
+\yr 1956
+\endref
+
+\ref \key M \by P. A. MacMahon \book Combinatory Analysis, Vol. 2
+\publ Cambridge Univ. Press, Cambridge \yr 1916
+(reissued by Chelsea, New York, 1960)
+\endref
+
+
+\ref \key Z \by D. Zagier \paper Vassiliev invariants and a strange identity
+related to the Dedekind eta-function
+\jour Topology \paperinfo to appear
+\endref
+
+\endRefs\enddocument
+
+
+
+
+--------------4C95408D68A76C0A2DC37213--
+
+

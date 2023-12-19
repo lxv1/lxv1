@@ -1,0 +1,612 @@
+<!DOCTYPE doctype PUBLIC "-//w3c//dtd html 4.0 transitional//en"><html><head>
+    
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+    
+  <meta name="GENERATOR" content="Mozilla/4.77 [en] (X11; U; SunOS 5.8 sun4u) [Netscape]"><title>midterm2,section 1</title></head><body>
+ Math 484.1&nbsp; October 23, 2003.&nbsp;&nbsp; Name:______L. Vaserstein__________________________ 
+<p>Midterm 2,&nbsp; 5 problems, 15 points each. </p>
+<p>Solve linear programs where all&nbsp; <i>x<sub>i</sub></i> &gt;= 0: </p>
+<p>1. 
+<table border="1" cols="5" width="100%" nosave="">
+ <tbody>
+    <tr>
+ <td>-2</td>
+  <td><i>x</i><sub>2</sub></td>
+  <td>3</td>
+  <td>-<i>x</i><sub>3</sub></td>
+  <td><br>
+      </td>
+ </tr>
+  <tr>
+ <td>1</td>
+  <td>2</td>
+  <td>3</td>
+  <td>4</td>
+  <td>= <i>x</i><sub>1</sub></td>
+ </tr>
+  <tr>
+ <td>5</td>
+  <td>6</td>
+  <td>7</td>
+  <td>8</td>
+  <td>= <i>x</i><sub>4</sub></td>
+ </tr>
+  <tr>
+ <td>0</td>
+  <td>1</td>
+  <td>2</td>
+  <td>3</td>
+  <td>-&gt; min</td>
+ </tr>
+ 
+  </tbody>
+</table>
+  </p>
+<p>combine two columns with constants on top&nbsp; together&nbsp; and multiply 
+a column by -1. <br>
+standard&nbsp; feasible tableau: 
+<table border="1" cols="4" width="100%" nosave="">
+ <tbody>
+    <tr>
+ <td><i>x</i><sub>2</sub></td>
+  <td><i>x</i><sub>3</sub></td>
+  <td>1</td>
+  <td><br>
+      </td>
+ </tr>
+  <tr>
+ <td>2</td>
+  <td>-4</td>
+  <td>7</td>
+  <td>= <i>x</i><sub>1</sub></td>
+ </tr>
+  <tr>
+ <td>6</td>
+  <td>-8*</td>
+  <td>11</td>
+  <td>= <i>x</i><sub>4</sub></td>
+ </tr>
+  <tr>
+ <td>1</td>
+  <td>-3</td>
+  <td>6</td>
+  <td>-&gt; min</td>
+ </tr>
+ 
+  </tbody>
+</table>
+ pivot step according to Phase 2 of simplex method 
+<table border="1" cols="4" width="100%" nosave="">
+ <tbody>
+    <tr>
+ <td><i>x</i><sub>2</sub></td>
+  <td><i>x</i><sub>4</sub></td>
+  <td>1</td>
+  <td><br>
+      </td>
+ </tr>
+  <tr>
+ <td>-1*</td>
+  <td>1/2</td>
+  <td>3/2</td>
+  <td>= <i>x</i><sub>1</sub></td>
+ </tr>
+  <tr>
+ <td>3/4</td>
+  <td>-1/8</td>
+  <td>11/8</td>
+  <td>= <i>x</i><sub>3</sub></td>
+ </tr>
+  <tr>
+ <td>-5/4</td>
+  <td>3/8</td>
+  <td>15/8</td>
+  <td>-&gt; min</td>
+ </tr>
+ 
+  </tbody>
+</table>
+ pivot step according to Phase 2 of simplex method 
+<table border="1" cols="4" width="100%" nosave="">
+ <tbody>
+    <tr>
+ <td><i>x</i><sub>1</sub></td>
+  <td><i>x</i><sub>4</sub></td>
+  <td>1</td>
+  <td><br>
+      </td>
+ </tr>
+  <tr>
+ <td>-1</td>
+  <td>1/2</td>
+  <td>3/2</td>
+  <td>= <i>x</i><sub>2</sub></td>
+ </tr>
+  <tr>
+ <td>-3/4</td>
+  <td>1/4</td>
+  <td>5/2</td>
+  <td>= <i>x</i><sub>3</sub></td>
+ </tr>
+  <tr>
+ <td>5/4</td>
+  <td>-1/4</td>
+  <td>0</td>
+  <td>-&gt; min</td>
+ </tr>
+ 
+  </tbody>
+</table>
+ The <i>x</i><sub>4</sub>-column is bad, so the program is unbounded. </p>
+<p>2. 
+<table border="1" cols="5" width="100%" nosave="">
+ <tbody>
+    <tr>
+ <td>-2</td>
+  <td><i>x</i><sub>2</sub></td>
+  <td>3</td>
+  <td>-<i>x</i><sub>1</sub></td>
+  <td><br>
+      </td>
+ </tr>
+  <tr>
+ <td>1</td>
+  <td>2</td>
+  <td>3</td>
+  <td>4</td>
+  <td>= <i>x</i><sub>1</sub></td>
+ </tr>
+  <tr>
+ <td>5</td>
+  <td>6</td>
+  <td>7</td>
+  <td>8</td>
+  <td>= <i>x</i><sub>4</sub></td>
+ </tr>
+  <tr>
+ <td>0</td>
+  <td>1</td>
+  <td>2</td>
+  <td>3</td>
+  <td>-&gt; min</td>
+ </tr>
+ 
+  </tbody>
+</table>
+  </p>
+<p>combine two columns with constants on top&nbsp; together 
+<table border="1" cols="4" width="100%" nosave="">
+ <tbody>
+    <tr>
+ <td><i>x</i><sub>2</sub></td>
+  <td><i>-x</i><sub>1</sub></td>
+  <td>1</td>
+  <td><br>
+      </td>
+ </tr>
+  <tr>
+ <td>2*</td>
+  <td>4</td>
+  <td>7</td>
+  <td>= <i>x</i><sub>1</sub></td>
+ </tr>
+  <tr>
+ <td>6</td>
+  <td>8</td>
+  <td>11</td>
+  <td>= <i>x</i><sub>4</sub></td>
+ </tr>
+  <tr>
+ <td>1</td>
+  <td>3</td>
+  <td>6</td>
+  <td>-&gt; min</td>
+ </tr>
+ 
+  </tbody>
+</table>
+ pivot step 
+<table border="1" cols="4" width="100%" nosave="">
+ <tbody>
+    <tr>
+ <td><i>x</i><sub>1</sub></td>
+  <td><i>-x</i><sub>1</sub></td>
+  <td>1</td>
+  <td><br>
+      </td>
+ </tr>
+  <tr>
+ <td>1/2</td>
+  <td>-2</td>
+  <td>-7/2</td>
+  <td>= <i>x</i><sub>2</sub></td>
+ </tr>
+  <tr>
+ <td>3</td>
+  <td>-4</td>
+  <td>-10</td>
+  <td>= <i>x</i><sub>4</sub></td>
+ </tr>
+  <tr>
+ <td>1/2</td>
+  <td>1</td>
+  <td>5/2</td>
+  <td>-&gt; min</td>
+ </tr>
+ 
+  </tbody>
+</table>
+ combine the first two columns.&nbsp; standard tableau: <br>
+&nbsp; 
+<table border="1" cols="3" width="100%" nosave="">
+ <tbody>
+    <tr>
+ <td><i>x</i><sub>1</sub></td>
+  <td>1</td>
+  <td><br>
+      </td>
+ </tr>
+  <tr>
+ <td>5/2</td>
+  <td>-7/2</td>
+  <td>= <i>x</i><sub>2</sub></td>
+ </tr>
+  <tr>
+ <td>7</td>
+  <td>-10</td>
+  <td>= <i>x</i><sub>4</sub></td>
+ </tr>
+  <tr>
+ <td>-1/2</td>
+  <td>5/2</td>
+  <td>-&gt; min</td>
+ </tr>
+ 
+  </tbody>
+</table>
+ &nbsp;<i>x</i><sub>1</sub>-column is bad,. As <i>x</i><sub>1</sub>-&gt;
+infinity, the objective function&nbsp; -&gt; -infinity,&nbsp;&nbsp;&nbsp;
+while&nbsp;&nbsp; <i>x</i><sub>2</sub> and&nbsp; <i>x</i><sub>4 </sub>become
+positive. <br>
+The program is unbounded. <br>
+&nbsp; </p>
+<p>3. 
+<table border="1" cols="5" width="100%" nosave="">
+ <tbody>
+    <tr>
+ <td>-2</td>
+  <td><i>x</i><sub>2</sub></td>
+  <td>3</td>
+  <td>-<i>x</i><sub>3</sub></td>
+  <td><br>
+      </td>
+ </tr>
+  <tr>
+ <td>1</td>
+  <td>2</td>
+  <td>3</td>
+  <td>4</td>
+  <td>= <i>x</i><sub>1</sub></td>
+ </tr>
+  <tr>
+ <td>5</td>
+  <td>6</td>
+  <td>7</td>
+  <td>8</td>
+  <td>= <i>x</i><sub>1</sub></td>
+ </tr>
+  <tr>
+ <td>0</td>
+  <td>1</td>
+  <td>2</td>
+  <td>3</td>
+  <td>-&gt; max</td>
+ </tr>
+ 
+  </tbody>
+</table>
+  </p>
+<p>combine two columns with constants on top&nbsp; together&nbsp; and multiply 
+a column by -1. 
+<table border="1" cols="4" width="100%" nosave="">
+ <tbody>
+    <tr>
+ <td><i>x</i><sub>2</sub></td>
+  <td><i>x</i><sub>3</sub></td>
+  <td>1</td>
+  <td><br>
+      </td>
+ </tr>
+  <tr>
+ <td>2</td>
+  <td>-4</td>
+  <td>7</td>
+  <td>= <i>x</i><sub>1</sub></td>
+ </tr>
+  <tr>
+ <td>6</td>
+  <td>-8</td>
+  <td>11</td>
+  <td>= <i>x</i><sub>1</sub></td>
+ </tr>
+  <tr>
+ <td>1</td>
+  <td>-3</td>
+  <td>6</td>
+  <td>-&gt; max</td>
+ </tr>
+ 
+  </tbody>
+</table>
+ subtract the first row from the second row and multiply the third row by 
+-1 
+<table border="1" cols="4" width="100%" nosave="">
+ <tbody>
+    <tr>
+ <td><i>x</i><sub>2</sub></td>
+  <td><i>x</i><sub>3</sub></td>
+  <td>1</td>
+  <td><br>
+      </td>
+ </tr>
+  <tr>
+ <td>2</td>
+  <td>-4</td>
+  <td>7</td>
+  <td>= <i>x</i><sub>1</sub></td>
+ </tr>
+  <tr>
+ <td>4</td>
+  <td>-4*</td>
+  <td>4</td>
+  <td>= 0</td>
+ </tr>
+  <tr>
+ <td>-1</td>
+  <td>3</td>
+  <td>-6</td>
+  <td>-&gt; min</td>
+ </tr>
+ 
+  </tbody>
+</table>
+ pivot on -4 and drop the second column to obtain standard tableau 
+<table border="1" cols="3" width="100%" nosave="">
+ <tbody>
+    <tr>
+ <td><i>x</i><sub>2</sub></td>
+  <td>1</td>
+  <td><br>
+      </td>
+ </tr>
+  <tr>
+ <td>-2</td>
+  <td>3</td>
+  <td>= <i>x</i><sub>1</sub></td>
+ </tr>
+  <tr>
+ <td>1</td>
+  <td>1</td>
+  <td>=<i>x</i><sub>3</sub></td>
+ </tr>
+  <tr>
+ <td>2</td>
+  <td>-3</td>
+  <td>-&gt; min</td>
+ </tr>
+ 
+  </tbody>
+</table>
+ This is an optimal tableau, so min = -3&nbsp; at&nbsp; <i>x</i><sub>1  </sub>= 
+3, <i>x</i><sub>2 </sub>= 0, <i>x</i><sub>3</sub>= 1. For the origional maximization
+program, <br>
+max = 3&nbsp; at&nbsp; <i>x</i><sub>1  </sub>= 3, <i>x</i><sub>2 </sub>= 0,
+<i>x</i><sub>3</sub>= 1. (The optimal solution is unique.) </p>
+<p>4. 
+<table border="1" cols="5" width="100%" nosave="">
+ <tbody>
+    <tr>
+ <td><i>x</i><sub>3</sub></td>
+  <td><i>x</i><sub>2</sub></td>
+  <td>3</td>
+  <td>-<i>x</i><sub>3</sub></td>
+  <td><br>
+      </td>
+ </tr>
+  <tr>
+ <td>1</td>
+  <td>2</td>
+  <td>3</td>
+  <td>4</td>
+  <td>= <i>x</i><sub>1</sub></td>
+ </tr>
+  <tr>
+ <td>5</td>
+  <td>6</td>
+  <td>7</td>
+  <td>8</td>
+  <td>= <i>x</i><sub>4</sub></td>
+ </tr>
+  <tr>
+ <td>0</td>
+  <td>1</td>
+  <td>2</td>
+  <td>3</td>
+  <td>-&gt; min</td>
+ </tr>
+ 
+  </tbody>
+</table>
+  </p>
+<p>combine the first and the last column and scale the third column to obtain
+standard tableau 
+<table border="1" cols="4" width="100%" nosave="">
+ <tbody>
+    <tr>
+ <td><i>x</i><sub>3</sub></td>
+  <td><i>x</i><sub>2</sub></td>
+  <td>1</td>
+  <td><br>
+      </td>
+ </tr>
+  <tr>
+ <td>-3*</td>
+  <td>2</td>
+  <td>9</td>
+  <td>= <i>x</i><sub>1</sub></td>
+ </tr>
+  <tr>
+ <td>-3</td>
+  <td>6</td>
+  <td>21</td>
+  <td>= <i>x</i><sub>4</sub></td>
+ </tr>
+  <tr>
+ <td>-3</td>
+  <td>1</td>
+  <td>6</td>
+  <td>-&gt; min</td>
+ </tr>
+ 
+  </tbody>
+</table>
+ pivot step according to Phase 2 of simplex method 
+<table border="1" cols="4" width="100%" nosave="">
+ <tbody>
+    <tr>
+ <td>&nbsp;<i>x</i><sub>1</sub></td>
+  <td><i>x</i><sub>2</sub></td>
+  <td>1</td>
+  <td><br>
+      </td>
+ </tr>
+  <tr>
+ <td>-1/3</td>
+  <td>2/3</td>
+  <td>3</td>
+  <td>= <i>x</i><sub>3</sub></td>
+ </tr>
+  <tr>
+ <td>1</td>
+  <td>4</td>
+  <td>12</td>
+  <td>= <i>x</i><sub>4</sub></td>
+ </tr>
+  <tr>
+ <td>1</td>
+  <td>-1</td>
+  <td>-3</td>
+  <td>-&gt; min</td>
+ </tr>
+ 
+  </tbody>
+</table>
+ &nbsp;<i>x</i><sub>2</sub>-column is bad,&nbsp; so the program is unbounded. 
+<br>
+&nbsp; </p>
+<p>5. 
+<table border="1" cols="5" width="100%" nosave="">
+ <tbody>
+    <tr>
+ <td>0</td>
+  <td><i>x</i><sub>2</sub></td>
+  <td>1</td>
+  <td>-<i>x</i><sub>3</sub></td>
+  <td><br>
+      </td>
+ </tr>
+  <tr>
+ <td>1</td>
+  <td>2</td>
+  <td>3</td>
+  <td>4</td>
+  <td>= <i>x</i><sub>1</sub></td>
+ </tr>
+  <tr>
+ <td>5</td>
+  <td>6</td>
+  <td>7</td>
+  <td>8</td>
+  <td>= <i>x</i><sub>4</sub></td>
+ </tr>
+  <tr>
+ <td>0</td>
+  <td>1</td>
+  <td>2</td>
+  <td>3</td>
+  <td>-&gt; min</td>
+ </tr>
+ 
+  </tbody>
+</table>
+  </p>
+<p>drop the first column, switch two columns, and multiply a column by -1
+to obtain standard tableau 
+<table border="1" cols="4" width="100%" nosave="">
+ <tbody>
+    <tr>
+ <td><i>x</i><sub>2</sub></td>
+  <td><i>x</i><sub>3</sub></td>
+  <td>1</td>
+  <td><br>
+      </td>
+ </tr>
+  <tr>
+ <td>2</td>
+  <td>-4*</td>
+  <td>3</td>
+  <td>= <i>x</i><sub>1</sub></td>
+ </tr>
+  <tr>
+ <td>6</td>
+  <td>-8</td>
+  <td>7</td>
+  <td>= <i>x</i><sub>4</sub></td>
+ </tr>
+  <tr>
+ <td>1</td>
+  <td>-3</td>
+  <td>2</td>
+  <td>-&gt; min</td>
+ </tr>
+ 
+  </tbody>
+</table>
+ &nbsp;pivot step according to Phase 2 of simplex method 
+<table border="1" cols="4" width="100%" nosave="">
+ <tbody>
+    <tr>
+ <td><i>x</i><sub>2</sub></td>
+  <td><i>x</i><sub>1</sub></td>
+  <td>1</td>
+  <td><br>
+      </td>
+ </tr>
+  <tr>
+ <td>1/2</td>
+  <td>-1/4</td>
+  <td>3/4</td>
+  <td>=<i>x</i><sub>3</sub></td>
+ </tr>
+  <tr>
+ <td>&nbsp;2</td>
+  <td>2</td>
+  <td>1</td>
+  <td>= <i>x</i><sub>4</sub></td>
+ </tr>
+  <tr>
+ <td>-1/2</td>
+  <td>3/4</td>
+  <td>-1/4</td>
+  <td>-&gt; min</td>
+ </tr>
+ 
+  </tbody>
+</table>
+ &nbsp;<i>x</i><sub>2</sub>-column is bad,&nbsp; so the program is unbounded. 
+<br>
+&nbsp; </p>
+<br>
+<br>
+<br>
+</body></html>

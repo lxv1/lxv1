@@ -1,0 +1,122 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="GENERATOR" content="Mozilla/4.77 [en] (X11; U; SunOS 5.8 sun4u) [Netscape]">
+</head>
+<body>
+Math 436.&nbsp; September 25, 2002. Midterm 1.&nbsp;&nbsp; Name__________________________________
+<br>5 problems, 10 pts each.
+<p>1. Solve for x,y
+<br><i>a</i>x + y = 1, x + <i>a</i>y = <i>a</i><sup>2</sup>
+<br>where <i>a</i> is a given number.
+<p>the augmented matrix is
+<br><i>a</i>&nbsp;&nbsp; 1&nbsp; 1
+<br>1&nbsp; <i>a</i>&nbsp; <i>a</i><sup>2</sup>
+<br>Adding the second row to the fist one with coeeficient&nbsp; -a we
+obtain
+<br>0&nbsp;&nbsp; 1- <i>a</i><sup>2</sup>&nbsp;&nbsp;&nbsp; 1 - <i>a</i><sup>3</sup>
+<br>1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <i>a</i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+<i>a</i><sup>2</sup>
+<br>Switching&nbsp; the rows, we obtain
+<br>1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <i>a</i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+<i>a</i><sup>2</sup>
+<br>0&nbsp;&nbsp; 1- <i>a</i><sup>2</sup>&nbsp;&nbsp;&nbsp; 1 - <i>a</i><sup>3</sup>
+<br>If&nbsp;&nbsp; 1- <i>a</i><sup>2</sup>&nbsp;&nbsp;&nbsp; is not 0,&nbsp;&nbsp;&nbsp;&nbsp;
+we multiply the second row by 1/(1- <i>a</i><sup>2</sup> ) and obtain
+<br>1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <i>a</i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+<i>a</i><sup>2</sup>
+<br>0&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; (1 +<i>a</i> + <i>a</i><sup>2</sup>)
+/(1+ <i>a</i>).
+<br>A row addition&nbsp; operation gives
+<br>1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp;&nbsp; (-1 -<i>a</i>
++ <i>a</i><sup>3</sup>) /(1+ <i>a</i>)
+<br>0&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (1
++<i>a</i> + <i>a</i><sup>2</sup>) /(1+ <i>a</i>).
+<br>So when&nbsp; <i>a</i> is not 1 or -1, the answer is
+<br>x =&nbsp; (-1 -<i>a</i> + <i>a</i><sup>3</sup>) /(1+ <i>a</i>), y =
+(1 +<i>a</i> + <i>a</i><sup>2</sup>) /(1+ <i>a</i>).
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; When <i>a</i> = 1, the answer is&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+x =1 -y.
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; When <i>a</i> = -1, the answer is&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+0 = 1.
+<br>&nbsp;
+<p>2. Solve the system
+<br>x<sub>1</sub> + 2x<sub>2</sub>+ x<sub>3</sub>= 3,&nbsp; -x<sub>1</sub>+
+3x<sub>2</sub> + x<sub>4</sub> = -2.
+<p>x<sub>3</sub>= 3&nbsp; - x<sub>1</sub> - 2x<sub>2</sub> ,
+<br>x<sub>4</sub> = -2&nbsp; +x<sub>1&nbsp; </sub>- 3x<sub>2</sub> .
+<br>&nbsp;
+<br>&nbsp;
+<p>3. Find the rank of the matrix&nbsp;&nbsp;&nbsp; A=
+<br>1&nbsp;&nbsp; 2&nbsp;&nbsp; 3&nbsp;&nbsp; 4
+<br>5&nbsp;&nbsp; 6&nbsp;&nbsp; 7&nbsp;&nbsp; 8
+<br>9 10 11 12 .
+<br>Row and column operations do not change the rank.
+<br>By two row addition operations we obtain
+<br>1&nbsp;&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp;&nbsp; 3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+4
+<br>0&nbsp;&nbsp; -4&nbsp;&nbsp; -8&nbsp;&nbsp; -12
+<br>0&nbsp;&nbsp; -8&nbsp; -16&nbsp; -24 .
+<br>By two row multiplication operations we obtain
+<br>1&nbsp;&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp; 3&nbsp;&nbsp;&nbsp;&nbsp;
+4
+<br>0&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp;&nbsp;
+3
+<br>0&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp;&nbsp;
+3 .
+<br>By&nbsp; a row addition operation, we obtain
+<br>1&nbsp;&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp; 3&nbsp;&nbsp;&nbsp;&nbsp;
+4
+<br>0&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp;&nbsp;
+3
+<br>0&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp;&nbsp;
+0 .
+<br>By&nbsp; a row addition operation, we obtain
+<br>1&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp;&nbsp;
+1
+<br>0&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp;&nbsp;
+3
+<br>0&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp;&nbsp;
+0 .
+<br>By 4 column addition operations we obtain
+<br>1&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp;&nbsp;
+0
+<br>0&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp;&nbsp;
+0
+<br>0&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp;&nbsp;
+0 .
+<br>So the rank is 2.
+<p>4. Find a basis for the column space of&nbsp; A.
+<br>By row operations we obtain
+<br>1&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp;&nbsp;
+1
+<br>0&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp;&nbsp;
+3
+<br>0&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp;&nbsp;
+0 .
+<br>So the first two columns are linearly independent and they span the
+column space.
+<br>Answer: the first two columns of A form a basis for the column space.
+<br>There are other correct answers. For example, any two distinct columns
+of A form a basis.
+<p>5. Find a basis for the row space of&nbsp; A.
+<br>By row operations we obtain
+<br>1&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp;&nbsp;
+1
+<br>0&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp;&nbsp;
+3
+<br>0&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp;&nbsp;
+0 .
+<br>Row operations do not change the row space. So the rows
+<br>[1&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp;&nbsp;
+1] and&nbsp; [0&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp;&nbsp;
+3] form a basis for the row space.
+<br>There are other correct answers and other ways to find a basis..
+<br>For example, any two distinct rows of A form a basis.
+<br>&nbsp;
+</body>
+</html>

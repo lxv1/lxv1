@@ -1,0 +1,72 @@
+<HTML>
+<HEAD>
+<TITLE>Feedback form</TITLE>
+
+<H1>Feedback to the Professor</H1>
+<link rel=stylesheet type=text/css href="/psumathstyle.css">
+
+</head>
+<body>
+<!--#include virtual="/logo.html"-->
+<P>This form is intended to make it easy for you to supply feedback to
+me. Send it in as often as you like to comment on the course. The last
+box is open-ended, so you can make any comments you wish. Unless you choose
+to disclose your name, this feedback will arrive to me anonymously.</P>
+
+<P>
+<HR><FORM METHOD="POST" ACTION="http:/bin/sendform">
+
+<INPUT TYPE="hidden" NAME="recipient" VALUE="vstein@math.psu.edu">
+
+</P>
+
+<OL>
+<LI><B>How much are you learning?</B> From what you have seen so far, how
+would you rate this course in terms of how much you learn in it?</LI>
+
+<P><TEXTAREA NAME="learning" COLS=60 ROWS=3></TEXTAREA></P>
+
+<LI><B>Lectures.</B> How helpful do you find the classroom lectures? How
+appropriate is the level and speed at which the material is presented for
+you? Do you have any suggestions for improving the classroom lectures?</LI>
+
+<P><TEXTAREA NAME="lectures" COLS=60 ROWS=3></TEXTAREA></P>
+
+<LI><B>Textbook.</B> How helpful do you find the text?</LI>
+
+<P><TEXTAREA NAME="textbook" COLS=60 ROWS=3></TEXTAREA></P>
+
+<LI><B>Out of class work.</B> Do you feel that the work expected of you
+in the course so far has been too much, too little, or about right? What
+kind of assignments are most helpful for you?</LI>
+
+<P><TEXTAREA NAME="work" COLS=60 ROWS=3></TEXTAREA></P>
+
+<LI><B>Everything else.</B> All suggestions, comments, and constructive
+criticism are welcome.</LI>
+
+<P><TEXTAREA NAME="comments" COLS=60 ROWS=8></TEXTAREA></P>
+
+<LI>This form will be transmitted anonymously unless you fill this box.
+(Of course, if you want a reply, you must fill it out.)</LI>
+<B></B>
+<TABLE ALIGN=ABSCENTER CELLSPACING=10 CELLPADDING=0 >
+<TR>
+<TD><B>Name</B> <I>(optional)</I>:</TD>
+
+<TD><INPUT TYPE="text" NAME="name" SIZE=40></INPUT></TD>
+</TR>
+
+<TR>
+<TD><B>Email address</B> <I>(optional)</I>:</TD>
+
+<TD><INPUT TYPE="text" NAME="email" SIZE=40></INPUT></TD>
+</TR>
+</TABLE>
+<I></I></OL>
+
+<P><INPUT TYPE="submit" VALUE="Press here to submit form"></INPUT><INPUT TYPE="reset" VALUE="Press here to clear form"></INPUT></FORM>
+<HR></P>
+
+</BODY>
+</HTML>

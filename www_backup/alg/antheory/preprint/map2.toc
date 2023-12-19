@@ -1,0 +1,43 @@
+\contentsline {section}{\tocsection {}{1}{Introduction and Statement of Results}}{1}
+\contentsline {subsection}{\tocsubsection {}{1.1}{Transcendence of Gamma values}}{1}
+\contentsline {subsection}{\tocsubsection {}{1.2}{Dependence of Gamma Values}}{2}
+\contentsline {subsection}{\tocsubsection {}{1.3}{Main Theorem}}{3}
+\contentsline {subsection}{\tocsubsection {}{1.4}{Outline of the Paper}}{4}
+\contentsline {subsection}{\tocsubsection {}{}{Acknowledgements}}{5}
+\contentsline {section}{\tocsection {}{2}{$t$-modules and $t$-motives of CM-Type}}{5}
+\contentsline {subsection}{\tocsubsection {}{2.1}{General Definitions}}{5}
+\contentsline {subsubsection}{\tocsubsubsection {}{2.1.1}{$t$-modules and $t$-motives}}{6}
+\contentsline {subsubsection}{\tocsubsubsection {}{2.1.2}{Exponential Function and Uniformization}}{7}
+\contentsline {subsubsection}{\tocsubsubsection {}{2.1.3}{Abelian $t$-modules and Uniformization}}{8}
+\contentsline {subsection}{\tocsubsection {}{2.2}{Hilbert-Blumenthal-Drinfeld Modules}}{8}
+\contentsline {subsection}{\tocsubsection {}{2.3}{$t$-modules of CM-type}}{9}
+\contentsline {subsection}{\tocsubsection {}{2.4}{Endomorphism Rings}}{10}
+\contentsline {subsection}{\tocsubsection {}{2.5}{Sub-$t$-modules and Isogenies}}{11}
+\contentsline {section}{\tocsection {}{3}{Biderivations and Quasi-Periodic Extensions of $t$-Modules}}{16}
+\contentsline {subsection}{\tocsubsection {}{3.1}{Biderivations}}{17}
+\contentsline {subsection}{\tocsubsection {}{3.2}{Quasi-Periodic Functions}}{18}
+\contentsline {subsection}{\tocsubsection {}{3.3}{Quasi-Periodic Extensions}}{20}
+\contentsline {subsection}{\tocsubsection {}{3.4}{Minimality of Quasi-Periodic Extensions}}{22}
+\contentsline {subsection}{\tocsubsection {}{3.5}{Cohomology under Isogeny of Abelian $t$-modules}}{24}
+\contentsline {section}{\tocsection {}{4}{$t$-modules Arising from Solitons}}{26}
+\contentsline {subsection}{\tocsubsection {}{4.1}{Soliton Functions}}{27}
+\contentsline {subsection}{\tocsubsection {}{4.2}{Soliton $t$-modules}}{29}
+\contentsline {subsubsection}{\tocsubsubsection {}{4.2.1}{Divisors of Solitons}}{29}
+\contentsline {subsubsection}{\tocsubsubsection {}{4.2.2}{Soliton $t$-motives}}{29}
+\contentsline {subsubsection}{\tocsubsubsection {}{4.2.3}{Exponential Functions of Soliton $t$-modules}}{30}
+\contentsline {subsection}{\tocsubsection {}{4.3}{Periods of Soliton $t$-modules}}{33}
+\contentsline {subsection}{\tocsubsection {}{4.4}{Quasi-periodic Soliton $t$-modules and Quasi-periods}}{34}
+\contentsline {subsubsection}{\tocsubsubsection {}{4.4.1}{Quasi-periodic Functions}}{35}
+\contentsline {subsubsection}{\tocsubsubsection {}{4.4.2}{Quasi-periods}}{37}
+\contentsline {subsection}{\tocsubsection {}{4.5}{Sub-$t$-modules and Connections with Bracket Relations}}{39}
+\contentsline {section}{\tocsection {}{5}{Linear Independence Results}}{41}
+\contentsline {subsection}{\tocsubsection {}{5.1}{Proofs of Results}}{41}
+\contentsline {subsection}{\tocsubsection {}{5.2}{Proof of Corollary 1.3.4\hbox {}}}{45}
+\contentsline {subsubsection}{\tocsubsubsection {}{5.2.1}{Case $f= f_1$}}{45}
+\contentsline {subsubsection}{\tocsubsubsection {}{5.2.2}{Case $f = f_1^{e_1}$, $e_1 \ge 2$}}{45}
+\contentsline {subsubsection}{\tocsubsubsection {}{5.2.3}{General case $f= f_1^{e_1}\dots f_m^{e_m}$.}}{46}
+\contentsline {section}{\tocsection {}{6}{Examples}}{46}
+\contentsline {subsection}{\tocsubsection {}{6.1}{The Simplest Case}}{46}
+\contentsline {subsection}{\tocsubsection {}{6.2}{A Non-Uniform Example: $f= t(t-1)$}}{47}
+\contentsline {subsection}{\tocsubsection {}{6.3}{Another Example}}{48}
+\contentsline {section}{\tocsection {}{}{References}}{48}

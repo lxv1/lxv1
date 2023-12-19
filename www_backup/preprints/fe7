@@ -1,0 +1,1226 @@
+\magnification=1200
+% P{\sevenrm ROPOSITION}
+%\def\blackbox{\vrule height 1.2ex width 1.0ex depth -.2ex}
+\font\sevenit=cmti7
+\font\twelvebf=cmbx12
+%\font\sevenbf=cmbx7
+
+\noindent {\sevenit COMMUNICATIONS IN ALGEBRA}
+
+
+
+ \bigskip
+\centerline {\twelvebf   VANISHING POLYNOMIAL SUMS }   
+ \medskip
+\centerline {\bf Leonid N. Vaserstein$^1$ and   Ethel R. Wheland$^2$ }
+\medskip
+\centerline { $^1$ Department of Mathematics, The Pennsylvania State University}
+\centerline { University Park, PA 16802, USA}
+\centerline {E-mail: vstein@math.psu.edu}
+\medskip 
+\centerline {$^2$ Department of Mathematics and Computer Science}
+\centerline  {  The University of Akron, Akron, OH 44325, USA} 
+ \centerline {E-mail: wheland@deneka.cs.uakron.edu}
+\bigskip
+
+\centerline {\bf ABSTRACT}
+ \medskip
+\ \ \  If a sum of univariate polynomials is zero, then there are 
+
+\ \ \  restrictions 
+on the multiplicities of zeros of the polynomials.
+
+\bigskip
+
+\centerline  {\bf 1 INTRODUCTION}
+\medskip
+The  Euler-Fermat equations are
+  $$x_1^n+\cdots.+x_m^n=x_0^n \eqno(1.1) $$
+  with unknown   $x_i.$  In 1769 Euler conjectured that  (1.1) has no positive integral solutions when $m <  n.$ This generalizes both his result for $n = 3$ and
+  Fermat's Last  Theorem. However his conjecture was refuted for $m+1=n = 5$ [LP]  and
+then  for $m+1=n = 4$ [E].
+  It is still unknown whether  (1.1) has solutions with $ m+1=n \ge 6$ or with  $m=3=n-2.$
+On the other hand,  (1.1) has positive
+integral solutions for  $m \ge G(n)$ where $G(n)$ is a number related with the Waring problem,
+whose best known bound for large $n$ is   $G(n) \le n(\log n + \log \log n + O(1))$ [Wo].
+
+	   In this paper, we are looking for solutions 
+in  $F[t]$ rather than in the integers. Here
+    $F$ is a field of  characteristic    $p \ge 0$  and
+   $F[t]$  is the polynomial ring in a variable $t$  with coefficients in  $F.$
+% and  F(t)   the field of rational functions.
+    
+\smallskip
+When char($F$) = 0, it is known that  (1.1) has no nontrivial solutions in $F[t]$ when  $m < (n/8)^{1/2}$   [NS]. {\it Nontrivial} here means  primitive, indecomposable, nonconstant.
+A solution to  (1.1) (or to  the more general equation  (1.2) below)  is called
+primitive if
+gcd$(x_0,x_1,...,x_m)$ = 1. We call it indecomposable if no partial sum on the left hand side is 0. We call it nonconstant if not all $x_i$ belong to $F.$
+
+\smallskip
+When $p$ = char$(F) \ne 0,$ given any solution of  (1.1) we can obtain  solutions of a similar equation
+with the same $m$ but $n$ replaced by $np,$ by taking the $p$-th  power. So in the case
+of finite characteristic  we can have nontrivial solutions of  (1.1) with a 
+small $m$  
+and arbitrarily large $n.$ Moreover,  it is known that  (1.1) may
+have  nontrivial solutions with $m = 3$ and all $n$ 
+(including all $n$ coprime with $p$) [P]. 
+Furthermore, even for any fixed   $x_0,$
+ (1.1) with $m = 3$ may have nontrivial solutions with arbitrarily
+large $n$ coprime with $p$ [V2]. See Section 5.
+
+\smallskip
+
+Returning to the case $p=0,$ we consider equations more general than (1.1),
+  the generalized Fermat equations
+  $$ c_0x_0^{n_0}+\cdots.+c_mx_m^{n_m}=0, \eqno (1.2) $$
+ in $m+1$ unknowns $x_i$ with given  $n_i \ge 2$ and nonzero $c_i \in F.$ 
+ Our goal  is to prove that  (1.2)
+has no nontrivial solutions in $F[t]$ when $n_i$ are `large' in a certain sense.
+   
+It is stated in [NS, p.486]  where $F$ = {\bf C}, the complex numbers, that
+when $m  \le (n/8)^{1/2},$ the equation
+ (1.1)  has no solutions in $F[t]$ with nonconstant $x_i$ which are pairwise coprime.
+ Actually, the method of [NS]  works when we  relax the above condition to the following condition:
+ the solution must be be primitive, indecomposable and nonconstant.  
+Moreover, this method, involving the Wronskian of $x_i,$ works to prove the following:
+
+\smallskip
+\noindent {\bf Theorem 1.3.}  {\it Let} char($F$) = 0.  {\it Then 
+ $(1.2)$ has no nontrivial solutions in $F[t]$  when  $\sum 1/n_j \le 1/(m-1)$ and
+$0 \ne c_j \in F.$ In particular,  $(1.1)$ has no nontrivial solutions in $F[t]$  when
+$n \ge  m^2 - 1.$}
+\smallskip
+
+Thus, this  relaxes  the condition $m  \le (n/8)^{1/2}$ of [NS]
+to the condition $m  \le (n +1)^{1/2}.$ Proposition 5.2 of [DG] is our
+Theorem 1.3 with the redundant condition that all $x_i$ are pairwise coprime.
+
+
+On the other hand, it is shown in [NS, p.486] (with attribution to Molluzzo)
+that  (1.1) has  a primitive nonconstant solution with an arbitrary $x_{0}$
+when $m = [(4n + 1)^{1/2}]$ and $F = $ {\bf C}.
+  Moreover, this solution works for any algebraically closed
+field $F$ of any characteristic. It is still unknown even for  $F$ =  {\bf C}  whether  (1.1)   may have
+nontrivial solutions when    $(n +1)^{1/2} <  m <[(4n + 1)^{1/2}].$
+
+       We prove Theorem 1.3 after improving upon   results  of  [Vo], [BM], and [Z]  generalizing the   (abc)-theorem (see the next section). 
+An interesting question outside the scope of the present paper is to 
+establish a bound on the number of
+nontrivial solutions of  (1.2) with given $c_i \in F[t]$
+ for `large' $n_i.$ Results in this direction are known
+when char($F$) = 0  (see [B], [BS], [Mu1], [Mu2])  or  char($F) \ne 0$ and  $m = 2$ [Vo2].
+
+\bigskip
+\centerline  {\bf 2  THE (abc)-THEOREM AND ITS GENERALIZATIONS}
+\medskip
+
+ For any nonzero polynomial  $f=f(t) \in F[t]$ let $\nu(f)$ denote the
+number of $\alpha \in \bar F,$  an algebraic closure of $F,$ whose multiplicity in $f$ is not divisible by 
+$p.$  When $p = $ char$(F) = 0, \nu(f)$ is just the number of distinct zeros 
+of $f.$
+ 
+\smallskip
+\noindent {\bf Theorem 2.1.} {\it If   $a +b = c$ in $A = F[t]$ with $p=0,
+\gcd(a, b) = 1$ and  $(abc)' \ne 0$ then $\deg(c) \le  \nu (abc) -1.$}
+\smallskip
+ 
+  This well-known theorem (see [Ma], [L]) implies that the Fermat equation $x^n + y^n = z^n$  has no nontrivial solutions in  $A=F[t]$ when $p =0$ and $n \ge 3$ (this was known before [NS], but in [NS] it was proved for $n \ge 32$).  It also has other applications [Mu1]. 
+
+For $a,b, c$ as in Theorem 2.1, one can ask whether there are restrictions on  $N= \nu (abc), s= $ deg$(c) $
+other than
+the restrictions $s \le N-1$  given by the theorem and the obvious restrictions
+$0 \le s$ and  $N \ge 2.$ It can be shown by examples that the answer is ``no"
+when  char($F$) = 0, while the complete description of all possible pairs $(s,N$) in the case of $p \ne 0$ seems to be a difficult open problem.
+
+Since we can switch $a$ or $b$ with -$c$ in Theorem 2.1, its conclusion can
+be written  as follows:
+max(deg($a$), deg($b$), deg($c))  \le  \nu (abc) -1.$
+It follows from our Theorem 3.1 that
+min(deg($a$), deg($b$), deg($c))  \le  \nu (abc) -2.$
+On the other hand, it is clear that
+
+$ \nu (abc) \le  \deg(a) + \deg(b)+ \deg(c)) \le 3\,$max(deg($a$), deg($b$), deg($c$)).
+
+When char($F) = 0$, it can be shown by examples that  for any given integers
+$M,s,N$ such that   $0 \le s \le M \le N-1$ and $s \le N-2 \le s +2M -2$
+there are $a,b,c \in F[t]$ such that  deg($a$) = $s$, deg($b$) = deg($c) =M,$
+$a+b=c,$ and $\nu(abc) = \nu(a) + \nu(b) + \nu(c) = N.$
+A more general open problem is to describe all possible  6-tuples
+(deg($a), \nu(a),$ deg($b), \nu(b),$ deg($c), \nu(c)$). This seems
+to be a difficult problem even when  char($F$) = 0.
+
+Here is our generalization of Theorem 2.1 in the case char($F$) = 0:
+
+\smallskip
+\noindent {\bf Theorem 2.2.}  {\it Let} $m \ge 2, y_j \in A= F[t],  y_1+\cdots+y_m = y_0,\gcd(y_1,..., y_m) = 1, $   char($F) = 0,$   {\it  not all}  $y_j$ {\it are constants, and no nonempty  subsum  of}
+$y_1,..., y_m$
+{\it vanishes. Then:}
+
+(a) deg$(y_0) <  (m-1)(\sum_{j=0}^m \nu (y_j)),$
+
+(b) deg$(y_0) \le  (\nu(y_0...y_m)-1)m(m-1)/2 .$
+\smallskip
+
+We will obtain the theorem in Sections 3  and 4 below as a corollary of more precise results.  Namely, 
+we  will prove the theorem first in the case when  $y_1,..., y_m$ are linearly
+independent over $F$ (see Theorem 3.1 below which is an improved version
+of Theorem 2.2 in this case) and then in the case when 
+ $y_1,..., y_m$ are linearly
+dependent over $F$ (see Theorem 4.1 below which is a more precise version of Theorem  2.2(b) and  Corollary 4.8  below which is a more precise version of Theorem  2.2(a)).
+
+Part (b) was  first stated   in [Ma], first proved  in [BM, Theorem B]
+(with $\nu(y_0...y_m)$ instead of $\nu(y_0...y_m)-1$)
+ and then  proved in a more  precise form  in [Z].  In the case when  $y_1,..., y_m$ are linearly
+independent over $F,$  Theorem 2.2 is a particular case (with $g=0$) of results
+of [BM] and [Vo1] (although part(a) is not stated there explicitly).
+It is unknown whether the number  $m(m-1)/2$ in (b) can be replaced by a smaller number when $m \ge 4.$ It is proved in [BB] that the correct number must be
+at least $2m-3$ and conjectured   (and proved for $m=3$) that the  number is $2m-3$.
+
+In the case $m = 2$ then both (a) and (b) coincide with
+Theorem 2.1 with $p=0,$ because in this case we have   $\nu(y_0y_1y_2) =
+\nu(y_0) +\nu(y_1) +\nu(y_2)$ and  $1 = m-1=m(m-1)/2.$
+
+Note also that (a) implies Theorem 1.3. Indeed,
+  by obvious symmetry of the equation $y_1+\cdots+y_m = y_0,$
+the number  deg$(y_0)$ in Theorem 2.2 can be replaced by  deg$(y_j)$ for 
+any $j$ and hence by $M$ = max$_j\deg(y_j).$ 
+Dividing (a) by $M,$ we obtain that
+$$1 <(m-1)\sum_{i=0}^m \nu(y_i)/M \le  (m-1)\sum_{j=0}^m \nu(y_j)/\deg(y_j).$$
+
+The number  deg($y_j)/\nu(y_j)$ is the arithmetic mean of multiplicities of zeros of $y_i$ while $(m+1)/\sum_{i=0}^m \nu(y_i)/\deg(y_i)$ is 
+the harmonic average 
+of deg($y_j)/\nu(y_j).$  
+
+\smallskip
+\noindent {\bf Corollary 2.3.} {\it Under the conditions of Theorem $2.2,$
+the harmonic mean of 
+
+\noindent $\deg(y_j)/\nu(y_j)$ is less than $m^2 -1.$}  
+\smallskip
+
+This corollary generalizes Theorem 1.3. (Applying the corollary to the case  $y_0=-c_0x^{n_0},
+y_i=c_jx_j^{n_j}$ for $j \ge 1,$ we obtain Theorem 1.3.)
+\bigskip
+\centerline  {\bf 3 IMPROVING UPON THEOREM 2.2 }
+\centerline  {\bf IN THE LINEARLY INDEPENDENT CASE}            
+ \medskip
+In this section we assume that char($F$) = 0. Our main goal is to prove 
+Theorem  2.2 in the case when  $y_1,..., y_m$ are linearly
+independent over $F.$ 
+ In fact we state and prove  a more  precise version of  Theorem  2.2, Theorem 3.1, involving the orders  ord$_{\alpha}(y_j)$ 
+We also obtain some known results as corollaries of Theorem 3.1.
+
+   First of all, for any integer $d \ge 1$ and any sequence  $k_1,...., k_d$  of integers we will define its ``diversity" $\Delta(k_1,...,k_d)$,
+which is an integer between 0 and  $(d-1)d/2.$ 
+Namely, we consider the set  $X$ of all
+sequences  $l_1,...., l_d$ of distinct integers such that $l_j \ge k_j$ for all
+$j$s. Then   $\Delta(k_1,...,k_d)$, our
+diversity of  $ k_1,...., k_d,$ is the maximal value
+of  $(d-1)d/2 -\sum_{j=1}^d (l_j-k_j).$ In other words, we compute the minimal total increase to make all  $k_j$ distinct and then subtract it from
+its maximal possible value,  $(d-1)d/2.$ 
+ It is clear that 
+$0 \le   \Delta(k_1,...,k_d) \le (d-1)d/2.$
+(To see the first inequality, note that  $\{k_j+j\} \in X$ when 
+$\{k_j\}$ is nondecreasing.) It is also clear that      $\Delta(k_1,...,k_d)
+=0$  if and only if  $\{k_j\} $ is a constant sequence and that 
+ $\Delta(k_1,...,k_d) = (d-1)d/2$  if and only if all $k_j$ are distinct. Here 
+are  two other  easy
+upper bounds for $\Delta(k_1,...,k_d)$:
+  $$\Delta(k_1,...,k_d) \le \sum_{j=1}^d \min(j-1,k_j-k_1)$$
+ when  $k_1 \le... \le k_d$ and 
+  $$\Delta(k_1,...,k_d) \le (d-1)d/2 - \sum _s(m_s-1)m_s/2,$$
+ where  $m_s$ is the total number of $j$s such that  $k_j = s.$
+ 
+    Now let  $y_1,..., y_d \in F[t]$ be linearly independent over $F,$
+and we set $y_0 = y_1+\cdots+ y_d.$  For every    $\alpha \in \bar F$ let $k_0 \le ... \le k_d$ be the numbers 
+ord$_{\alpha}(y_j) \  (0 \le j \le d)$ written in  nondecreasing order. We set
+$$\Delta_{\alpha}(y_1,..., y_d) = \Delta(k_1,...,k_d).$$  
+
+Similarly,
+let    $k_0 \le ... \le k_d$ be the numbers 
+$\{$ord$_{\infty}(y_j) = -\deg(y_j): 0 \le j \le d\}$ 
+ written in  nondecreasing order. We set
+$$\Delta_{\infty}(y_1,..., y_d) = \Delta(k_1,...,k_d). $$
+
+Thus, $\Delta_{\alpha}(y_1,..., y_d)$ is defined for all $\alpha \in 
+ P^1(\bar F) = \bar F \cup \{\infty\}$. For almost all $\alpha$ (all but finitely many)  ord$_{\alpha}(y_j)  = 0$ hence   $\Delta_{\alpha}(y_1,..., y_d)$ = 0.
+
+
+\smallskip
+\noindent {\bf Theorem 3.1.} {\it Let} $m \ge 2, y_j \in A= F[t],  y_1+\cdots+y_m = y_0,\gcd(y_1,..., y_m) = 1, $   char($F) = 0,$ {\it and assume that
+$y_1,...., y_m$ are linearly independent over $F.$
+Then }  
+$$\deg(y_0) \le -(m-1)m +\sum_{\alpha \in  P^1(\bar F)} \Delta_{\alpha}(y_1,..., y_m)$$
+$$ \le -(m-1)m/2 + (m-1)\min(\nu(y_0...y_m)m/2, \sum_{j=0}^m\nu(y_j)).$$
+ 
+    Note that  $\Delta_{\alpha}(y_1,..., y_m) \ne 0$ if and only if 
+either  $\alpha$ is a zero of $y_0...y_m$ (recall that gcd($y_1,...,y_m)=1$)
+or $ \alpha = \infty$ and 
+not all deg($y_j$) are the same. Therefore 
+
+$$\deg(y_0) \le ({\rm card}(S) -2)m(m-1)/2$$ 
+ when $S$ is a finite subset in $P^1(\bar F)$
+and all $y_j$ are units outside $S.$ Thus, our Theorem 3.1 contains Theorem 4 of [Vo] (which is essentially  the same as Corollary 1 of [BM]) with $g=0.$
+Moreover   $\Delta_{\alpha}(y_1,..., y_m) \le (m-1)m/2 - (l-2)(l-1)/2$ where
+$l$ is the number of $j$s with ord$_{\alpha}(y_j)$ taking a fixed value.  (In the case when
+this value is not minimal, $(l-2)(l-1)/2$ can be replaced by $(l-1)l/2.$)
+Therefore
+ our Theorem 3.1 contains Theorem A of [BM] with $g=0.$ Moreover, the number $S$ of places $\alpha$ where not all ord$_{\alpha}(y_j)$  are 0 in [BM] and [Vo] can be replaced
+by the number $S' \le S$  of places $\alpha$ where not all ord$_{\alpha}(y_j)$ 
+  are the same.
+
+ Theorem 3.1 gives Theorem 2.2
+in the case when  the polynomials $y_1,...., y_m $ in Theorem 2.2 are linearly independent (just use that $\Delta_{\alpha}(y_1,..., y_m)  \le  m(m-1)/2$
+for all  $\alpha$ to get Theorem 2.2 (b) and that
+$\Delta_{\alpha}(y_1,..., y_m)  \le  (m-1)\{\# j: $ord$_{\alpha}(y_j)  \ne 0\}).$
+
+
+ After   Theorem 3.1 is proved we will obtain some known results as its consequences, and then, in the next section, we use
+it to prove   an improved version of Theorem 2.2, Theorem 4.1.
+
+
+To prove Theorem 3.1, we introduce orders of finite-dimensional $F$-subspaces of
+$F[t].$
+
+Let $V$ be an $F$-vector subspace of $A=F[t]$ of dimension  $d.$ Assume that $1 \le d < \infty.$
+For any $\alpha \in \bar F,$ we can choose a basis   $v_1,...., v_d$ of $V$ such that
+ord$_{\alpha}(v_1)  <... < $ord$_{\alpha}(v_d).$ These numbers    ord$_{\alpha}(v_i)$ 
+are independent of the choice of such a basis. 
+We define   ord$_{\alpha}(V)$  by
+
+ \centerline{ord$_{\alpha}(V) = -(d-1)d/2 +\sum_{i=1}^d  $ord$_{\alpha}(v_j).$}
+
+Clearly,  ord$_{\alpha}(V) \ge 0.$ 
+For any basis $y_1,...., y_d$ of $V$ we have
+
+\centerline{ord$_{\alpha}(V) \ge  -(d-1)d/2 +\sum_{i=1}^d  $ord$_{\alpha}(y_i).$}
+
+This is because by addition operations with  the polynomials  $y_j$
+we can make all ord$_{\alpha}(y_j)$ distinct while increasing them
+or keeping them the same. To get a better bound, we can replace one of
+$y_j$ with minimal ord$_{\alpha}(y_j)$     
+by  $y_0=y_1+\cdots+y_d.$ This proves
+a  more precise inequality: 
+
+\smallskip
+\noindent {\bf Lemma 3.2.} {\it Let  $V$ be as above and  $y_1,...., y_d$ a basis of $V$ over $F.$
+Then, for all  $\alpha \in \bar F,$}
+
+ord$_{\alpha}(V)  \ge  -\Delta($ord$_{\alpha}(y_1),..., $ord$_{\alpha}(y_d)) + \sum_{j=1}^d $ord$_{\alpha}(y_j)$
+
+\noindent $and$
+
+ord$_{\alpha}(V)  \ge  -\Delta_{\alpha}(y_1,..., y_d) + \sum_{j=1}^d    $ord$_{\alpha}(y_j) - \min($ord$_{\alpha}(y_0),..., $ord$_{\alpha}(y_d)).$
+\smallskip
+
+
+   Also we can choose a basis $v_1,...., v_d$ of $V$ such that
+deg$(v_1) <...< $ deg$(v_d).$  The numbers  deg$(v_i)$
+are independent of the choice of such a basis. 
+We set
+$$\deg(V) = -d(d-1)/2 +\sum_{i=1}^d  \deg(v_i)$$
+and
+$$ {\rm ord}_{\infty}(V) = -d(d-1)/2 +\sum_{i=1}^d  {\rm ord}_{\infty}(v_i),$$
+ where  ord$_{\infty}(v_i) = -\deg(v_i).$
+
+Clearly, deg$(V) \ge 0$  and   deg$(V) + $ord$_{\infty}(V) = -d(d-1).$
+For any basis $v_1,...., v_d$ of $V$ we have
+  deg$(V) \le -d(d-1)/2 +\sum_{i=1}^d   \deg(v_i).$ Moreover, we
+have the following analogue of Lemma 3.2:
+
+\smallskip
+\noindent {\bf Lemma 3.3.} {\it The conclusions of  Lemma $3.2$ also hold  for $\alpha = \infty.$}
+\smallskip
+\noindent {\it Proof.} It is similar to that of Lemma 3.2. Also Lemma 3.3 can be reduced to Lemma 3.2 by a change of variable.
+\smallskip
+\noindent {\bf Proposition 3.4. }  deg$(V) =  \sum_{\alpha \in \bar F}  $ord$_{\alpha}(V).$
+\smallskip
+
+\noindent {\it Proof.} We pick a basis   $v_1,...., v_d$ of $V$ and consider the Wronskian
+$D =$ det$(v_i^{(j)}).$
+It is a nonzero polynomial in $F[t],$ and it is determined by $V$  up to a nonzero scalar factor.
+Choosing $v_i$ as in the definition of deg($V$), we see that
+deg($D$) = deg($V$). Indeed, writing the determinant  $D$ as a sum of $d$! terms, we
+see that every nonzero term has degree deg($V$) and that the sum of 
+coefficients in this degree is, up to a nonzero scalar factor equal to the  product of leading terms in
+$v_i,$ the determinant
+of the matrix
+$({k_i\choose j-1})_{1 \le i,j \le d}$
+which is, up to the factor $(1!...(d-1)!)^d,$ the   Vandermonde determinant
+det$(k_i^j)$ = $\prod_{i<j}  (k_i - k_j) \ne 0$ where $k_i$ = deg$(v_i).$
+
+On the  other hand,
+choosing $v_i$ as in the definition of ord$_{\alpha}(V),$
+we see that ord$_{\alpha}(D$) = ord$_{\alpha}(V$) for all $\alpha \in \bar F.$ Indeed
+writing the determinant  $D$ as a sum of $d$! terms, we
+see that every term is divisible by  $(x - \alpha)^{{\rm ord}_{\alpha}(V)}$
+and that the sum of the terms of order  ord$_{\alpha}(V$) is, up to
+a factor of order 0 equal to the product of  $v_i/(x- \alpha)^{{\rm ord}_{\alpha}(v_i)},$
+the determinant of  the matrix
+$({k_i\choose j-1})_{1 \le i,j \le d}$
+which is, up to the factor $(1!...(d-1)!)^d,$ the  Vandermonde determinant
+det($k_i^j) = \prod_{i<j}  (k_i - k_j)$
+where $k_i = $de$g(v_i).$
+
+Now  deg($V$) = deg($D$) = $\prod_{\alpha \in \bar F} $ord$_{\alpha}(D) = \prod $ord$_{\alpha}(V).$ 
+
+$Remark.$  When $d = 1,$ the proposition says that deg($D$) = $\sum_{\alpha \in \bar F} $ord$_{\alpha}(D)$  for every nonzero polynomial $D \in F[t].$
+
+$Remark.$  As a corollary of the proposition,   $\sum _{\alpha} $ord$_{\alpha}(V) < \infty.$
+
+\smallskip
+Now we are ready to prove Theorem 3.1.
+Let  $d_0 \le d_1 \le ... \le d_m$ be the degrees of $y_j  (0\le j \le m)$ written in 
+nondecreasing order.
+Then 
+ $d_{m-1} = d_m \ge m.$
+By Lemma 3.3 with $d=m$,   
+$$\deg(V) = -m(m-1) - {\rm ord}_{\infty}(V) \le -m(m-1) + \Delta_{\infty}(y_1,..., y_m) -d_m + \sum_{j=0}^m d_j.$$
+
+On the other hand, since gcd($y_1,...., y_m$) = 1,  for any  $\alpha  \in \bar F$
+ we have  
+\smallskip
+
+\centerline{$ \min($ord$_{\alpha}(y_1),..., $ord$_{\alpha}(y_m)) = 0$}
+\smallskip
+
+\noindent  and, by Lemma 3.2 with $d=m,$
+
+ $${\rm ord}_{\alpha}(V) \ge  -\Delta_{\alpha}(y_1,..., y_m) + \sum_{j=1}^m {\rm ord}_{\alpha}(y_j).$$
+
+Switching, if neccessary,  $-y_0$ with a polynomial  $y_j$ such that $y_j(\alpha) \ne 0,$
+we have
+
+$${\rm ord}_{\alpha}(V) \ge  -\Delta_{\alpha}(y_1,..., y_m) + \sum_{j=0}^m {\rm ord}_{\alpha}(y_j).$$
+
+Taking the sum over all   $\alpha  \in \bar F$
+and    using Proposition 3.1 and the fact that 
+ deg$(y_j) = \sum $ord$_{\alpha}(y_j)$  for each $j,$ we obtain
+
+deg($V) =  \sum _{\alpha  \in \bar F} $ord$_{\alpha}(V) \ge
+- \sum _{\alpha  \in \bar F} \Delta_{\alpha}(y_1,..., y_m) + \sum_{j=0}^m d_j.$
+
+Comparing these upper and lower bounds for  deg($V$) and cancelling 
+$ \sum_{j=0}^m d_j$, we obtain the conclusion of Theorem 3.1.
+\smallskip
+
+Here are some  consequences of Theorem 3.1.
+
+\smallskip
+\noindent {\bf Corollary 3.5} (cf. Theorem on p.480 of [NS]). {\it Let $n \ge 3$ and 
+$ \sum_{j=1}^m x_j^n = t$
+in $F[t]$ with} char($F$) = 0. {\it Then $m^2 - m > n.$}
+\smallskip
+
+\noindent {\it Proof.}  Without loss of generality, we can assume that $F$ is algebraically
+closed and
+that  $x_1^n,..., x_m^n$  are linearly independent (otherwise,  $t$ is a sum of a smaller number of $n$-th powers).
+  Also gcd($x_1^n,...,x_m^n)
+=1$  because this is an $n$-th power dividing  $t$ and $n \ge 2.$
+Let  $M =  \max(\deg(x_1),..., \deg(x_m)).$
+By  Theorem 3.1,
+$$Mn \le -(m-1)m/2 + (m-1)(\nu(t)+\sum_{j=1}^m\nu(x_j))$$
+$$\le -(m-1)m/2  + (m-1)(1+Mm)  < Mm(m-1),$$
+ because $\nu(y_j)=\nu(x_j) \le \deg(x_j) \le M, \nu(t) = 1,$ and
+ $m \ge 3$   when  $n \ge 3.$ 
+
+$Remark.$ The condition  $n \ge 3$ is necessary, and it is implicit in the
+theorem on p.480 of [NS], see p.479 or 481 in [NS].
+
+\smallskip
+\noindent {\bf Corollary 3.6.}  {\it Let  $n \ge 2$ and 
+$ \sum_{j=1}^m x_j^n = tx_0^n$   
+in $F[t]$ with $x_0 \ne 0$ and}  char($F$) = 0. {\it Then $m^2  > n +1.$}
+\smallskip
+
+\noindent {\it Proof.}
+ Without loss of generality, we can assume
+ that $F$ is algebraically
+closed,
+that  $x_1^n,..., x_m^n$  are linearly independent,
+ and that gcd($x_1,..., x_m) = 1.$
+Let  
+$$M =  \max(\deg(x_1),..., \deg(x_m)).$$
+By  Theorem 3.1,
+$Mn <  (M(m +1 +1))(m-1)-m(m-1)/2,$ hence  $n < m^2 -1$ when $n \ge 3.$ When $n=2,$ notice that $m \ge 2.$
+
+$Remark.$ This improves upon the theorem on p.483 of [NS] which asserts that 
+$m^2 > n/8.$
+
+\smallskip
+Theorem 3.7. {\it Let $n \ge 2$ and  $x_1^n+\cdots+x_m^n = x_0$ in $F[t]$ with char($F$) = 0.
+ Assume that $m \ge 1$ and  $x_1^n,..., x_m^n$ are linearly independent over $F.$
+ Then  }
+ $$\deg(x_0) \ge M(n - m^2 +m) + (m-1)m/2,$$
+ {\it where } $M :=  \max(\deg(x_1),..., \deg(x_m)).$
+\smallskip
+
+	\noindent {\it Proof.}  Without loss of generality, we can assume that $F$ is algebraically
+closed, that $m \ge 2$ (the case $m =1$ is trivial), that  gcd($x_1,..., x_m$) = 1 (the general case follows easily from the primitive one), that $n >  m(m-1)/2$ (otherwise there is nothing to prove),  that   $x_1^n,..., x_m^n$ are linearly independent over $F$ (otherwise the number $m$ can be reduced), and that   	$M$ = deg($x_m$).  
+Using Theorem 3.1
+with $y_0= -x_m^n,  y_m=-x_0, y_j = x_j^n$ for $j \le m-1$
+and the fact that  
+
+$\Delta_{\alpha}(y_1,..., y_m) \le
+(m-1)(\sum_{j=0}^{m-1} $sign(ord$_{\alpha}(y_j)) + $ord$_{\alpha}(y_m)$
+
+\noindent for all $\alpha \in \bar F,$  we obtain that
+$$nM = \deg(y_0)  \le  \deg(x_0) + \sum_{j=0}^{m-1} \nu(y_j) -m(m-1)/2$$
+$$\le  \deg(x_0) + (m-1)mM  -m(m-1)/2,$$
+ hence
+   deg$(x_0) \ge M(n - m^2+m) +  m(m-1)/2.$
+ 
+$Remark.$
+Our theorem is close to the theorem on p.481
+of [NS] and has the same conclusion as the second conclusion of that theorem.
+ The condition that $n \ge 2$ is implicit in [NS] (without this condition
+the theorem is not true).
+We relaxed the condition of [NS] that all $x_j$  are nonconstant and nonlinear to the
+condition that not all of them are constant. 
+We imposed an additional condition that 
+ $x_1^n,..., x_m^n$ are linearly independent over $F$
+to prevent   counterexamples to the theorem of [MS] like the following two:
+
+(i) $m = 2$, any $n \ge  2$, any $M \ge  1, x_1= t^M, x_2= -t^M, x_0 = 0;$
+
+(ii) $m = 2,$ any $n \ge  3$, any $M \ge  1, x_1= t^M, x_2= t^M, x_0 = 2t^M.$
+
+The condition is missing in [NS] by mistake. When  $F = \bar F,$ this condition is weaker than the condition that $x_0$ is not a sum of a smaller than $m$ number of
+$n$-th powers in $F[t].$  It could also be  replaced by the condition that  $x_0$ is not divisible by any nonconstant $n$-th power in $F[t].$
+
+The first conclusion of the theorem of [NS] is that
+ deg($x_0) \ge n - (m-1)m/2. $ However, this conclusion 
+ is stated twice on the same page as deg($x_0) \ge n - (m-1)m,$
+which follows from our theorem because either $M=0$ and $m=1$ or $M \ge 1.$
+Also the theorem implies that deg($x_0) \ge n - (m-1)m$ when  either $n \ge m^2-m$  or  $M=1.$ By the way, when $M=1$ it is easy to prove that in fact
+deg($x_0) \ge n -m +1,$ and that this bound cannot be improved when 
+$n \ge m-1$ and $F = \bar F.$
+
+\smallskip
+Theorem 2.2(a) with linearly independent $y_1,...,y_m$ (which we have obtained from Theorem 3.1)
+  allows us  now to obtain Theorem 1.3 in the following two cases (in general,
+Theorem 1.3 follows from Theorem 2.2  which we will obtain from Theorem 4.4 below).
+
+\smallskip
+\noindent {\bf Corollary 3.8.} {\it The equation  $(1.1)$ has no nonconstant  indecomposable primitive
+solutions when $ n \ge m^2-1.$}
+\smallskip
+
+\noindent {\it Proof.} Consider  such a solution of  (1.1). 
+Let $M=\max(\deg(x_1),...,\deg(x_m)).$ If  $x_1^n,..., x_m^n$ are linearly independent,
+then Theorem 3.1 via Theorem 2.2 (a) gives that
+$Mn <  (m+1)M(m-1).$
+
+If  $x_1^n,..., x_m^n$ are linearly dependent, we consider a linear relation of minimal length.  Permuting terms, we can assume that
+this relation is $c_1x_1^n+\cdots +c_{d+1}x_{d+1}^n = 0.$ If not all
+terms here are colinear, we divide this equality by the gcd and pass
+  to  $\bar F$  to conclude that   $n < d^2 -1 < m^2 -1.$
+Otherwise, we also pass to  $\bar F$  and replace all terms by one term
+of the form $x'^n$ and after dividing by the gcd we obtain an equation of
+the form  (1.1) with not all terms constant and  with the same $n$ but $m$ replaced by  $m -d < m,$ hence we are done by induction on $m.$
+
+\smallskip
+\noindent {\bf Corollary 3.9.} {\it The equation  $(1.2$) has no nonconstant indecomposable
+solutions with pairwise coprime terms when $\sum 1/n_j \le 1(m-1).$}
+\smallskip
+
+\noindent {\it Proof.} Again  either the terms are linearly independent and we are done
+by Theorem 3.1 or we can obtain a shorter equation of the same form
+form (passing, if necessary, to   $\bar F).$  Here we cannot divide
+by the gcd because this produces nonconstant coefficients, but we do not
+need to do this because the terms are pairwise coprime.
+
+  
+  \bigskip
+\centerline  {\bf 4 IMPROVING  THEOREM 2.2 IN GENERAL}
+ \medskip
+
+ Now we drop the condition about linear independence and
+prove a  more  precise version of  Theorem  2.2
+involving the dimension $d \le m$ of  $Fy_1+\cdots+ F y_m$ and another number
+$d' \le d$ which is defined below.   
+
+First we introduce two definitions which make sense for any
+sequence (family, multiset)   $y_0,...,y_m$ of vectors in an $F$-vector space.
+Following [BM], a nonempty subset  $I \subset \{0,1,...,m\}$ is called
+$minimal$  if the corresponding family  $\{y_j : j \in I\}$ of
+vectors is linearly dependent
+over $F$ but   $\{y_j : j \in J\}$ is linearly independent
+over $F$ for any proper subset $J \subset I.$  A linear relation is called
+$minimal$  if the corresponding family of vectors is minimal.
+
+Clearly, card($I) \le d+1$ for any minimal set  $I$. We define $d'+1$  to be the   maximal cardinality of the minimal sets.
+  Thus,     $d' \le d = $ dim$(Fy_0+\cdots+Fy_m).$
+
+In general not every index $j$  needs   to be an element of a minimal set.  The condition $y_0 = y_1+\cdots+y_m$ in Theorem  2.2
+implies that every $j$ is contained in a minimal set. Namely, we can take a basis not involving  $j$,   write  $y_j$ with respect to this basis, and drop
+zero terms to obtain such a set.
+This condition,
+together with the condition of
+no vanishing subsums of Theorems 2.2 and 4.1, implies that all linear
+relations between  $y_0,y_1,..., y_m$ follow from minimal relations
+ (Lemma 4 of [BM]).
+
+We call a family (multiset)   $y_0,...,y_m$ of vectors $irreducible$ if for any  partition 
+$I\cup I' = \{0,1,...,m\}$ into nonempty parts,  the corresponding vector
+subspaces   $\sum_{j \in I} Fy_j$ and $\sum_{j \in I'} Fy_j$ have
+a nonzero intersection. For example, every minimal set gives an irreducible
+family of vectors. Under the conditions of Theorem 2.2, the family
+$y_0,...,y_m$ is irreducible. It can be shown that
+for every irreducible family     $z_0,...,z_m$ of vectors there are nonzero
+$c_j \in F$ such that  $y_j= c_jz_j$ satisfy the conditions of Theorem 2.2.
+So the conditions of the next two theorems are not really more general than
+those of Theorem 2.2 (but the conclusions are stronger).
+
+\smallskip
+\noindent {\bf Theorem 4.1. } {\it Let  $m \ge 2,    y_j \in F[t],
+\gcd(y_1,..., y_m) = 1,$ and  $y_0,y_1,...,y_m $    be  an  irreducible family.
+  Let  $ d$   be the dimension  of  $Fy_1+\cdots+Fy_m$   over   $F$    and  let   $d' \le d$    be as  above. 
+ Then: }
+
+(a) deg($y_0) \le     (\nu(y_0...y_m) -1)(d'-1)d/2.$
+
+ {\it Furthermore, if    $\deg(y_1) =...= \deg(y_m),$   then: }
+
+(b) deg($y_0) \le     (\nu(y_0...y_m) -2)(d'-1)d/2.$
+\smallskip
+
+\noindent {\it Proof.}  First we consider the special case when  $d=m.$
+Since  the family  $y_0,y_1,...,y_m $ is irreducible, $d'=d=m$ 
+and 
+$y_0 = \sum_{j=1}^m  c_jy_j $  with  $0 \ne c_j \in F.$ Applying Theorem 3.1, 
+we obtain that
+
+deg$(y_0) \le \deg(y_m) \le
+ -(m-1)m +\sum_{\alpha \in  P^1(\bar F)} \Delta_{\alpha}(c_1y_1,..., c_my_m).$
+
+Now we use that  $\Delta_{\alpha}(c_1y_1,..., c_my_m) \le (m-1)m/2$
+for all  $\alpha \in  P^1(\bar F)$ and that in the case
+$\deg(y_1) =\cdots  = \deg(y_m)$ we have
+$$\Delta_{\infty}(c_1y_1,..., c_my_m) =\min(\deg(y_m)- \deg(y_0), m-1) 
+\le \deg(y_m)- \deg(y_0)$$
+ to obtain  the theorem.
+
+ Now we consider the  general  case. Note that  $y_j \ne 0$ for all $j$s because 
+of the irreducibility condition.
+ We proceed by induction on  $m.$ If $m=2,$ then either
+$d=2$ and we are done by the special case above or  $d=1$ and all $y_j$ are constants,
+so both our  conclusions say that  $0 \le 0$ which is true. Assume now that  $d < m \ge 3.$
+
+   
+By the irreducibility condition, we can write  $y_0$ as a linear combination of
+$y_1,..., y_m.$  Dropping $j$s with zero coefficients, we obtain a 
+ minimal $I_0 \subset \{0,1,...,m\}$  containing 0 with $2 \le$ card($I_0) \le d'+1 \le d+1 \le m.$
+The corresponding family   $\{y_j': j \in I_0\}$   is an irreducible family.
+ Let 
+$\{y_j: j \in I_1\}$ be an irreducible  family  containing $I_0$ and with maximal possible
+card($I_1) \le m.$ Set  $m'  =$ card($I_1)-1,  V_1=\sum_{j \in I_1} Fy_j,
+  d_1 = \dim(V_1),$ and $z_1 = \gcd(V_1).$
+
+ By the induction hypothesis, 
+$$\eqalign   {\deg(y_0/z_1) &\le  (\nu(\prod_{j \in I_1}  (y_j/z_1) -e)d_1(d'-1)/2 \cr
+&\le    (\nu (y_0y_1...y_m)   -e)d_1(d'-1)/2}  \eqno (4.2) $$
+ where  $e= 2$ when   deg$(y_1) =...= \deg(y_m),$ and $e=1$ otherwise.
+
+When $z_1 =1,$ e.g., $d'=d,$ we are done.  In general, we need an upper bound for
+deg($z_1$) to finish the proof.
+      Let $I_2$ be the complement of $I_1$ in  $\{0,1,...,m\}$ and
+$ V_2=\sum_{j \in I_2} Fy_j.$
+By the irreducibility condition, $V_1 \cap V_2 \ne 0.$
+
+Let $0 \ne z = \sum_{j \in I'} c_jy_j  \in    V_1 \cap V_2$  be a vector with the least number of
+nonzero coefficients when written as
+   a linear combination of  $\{y_j: j \in I_2\}$
+with  minimal possible number card($I'$) of nonzero coefficients, where $I' \subset I_2$  and  $c_j \in F.$ This relation is minimal,
+hence  $I_1 \cup I'$ is irreducible.
+By the maximality of $I_1,$ we have $I' = I_2.$
+Thus, $m_2:= $ card$(I_2) = $ dim$(I_2) = d - d_1 = m - m_1 \le d'.$ 
+Set $z_2= $ gcd$(V_2).$
+Note that gcd($z_1,z_2) = 1.$
+
+Applying Theorem 3.1, 
+we obtain that
+$$ \eqalign {  \deg(z_1) &\le \deg(z/z_2) \le \max(\deg(y_j/z_2): j \in I_2)  \cr &\le  -(m_2-1)m_2 +\sum_{\alpha \in  P^1(\bar F)} \Delta_{\alpha}(c_jy_j/z_2: j \in I_2).} \eqno (4.3) $$
+
+Now we use different upper bounds for 
+$$\Delta_{\alpha}(c_jy_j/z_2: j \in I_2)= \Delta_{\alpha}(c_jy_j: j \in I_2 )$$
+
+\noindent in (4.3) for different  $\alpha \in  P^1(\bar F).$ When $\alpha$ is not a zero
+of $(z/z_2)y_0...y_m$ nor $\alpha = \infty,$ we have
+$\Delta_{\alpha}(c_jy_j: j \in I_2)  =0.$
+
+When  $\alpha$ is   a zero
+of $y_0...y_m$, we use that
+
+  $$\Delta_{\alpha}(c_jy_j: j \in I_2) \le (m_2-1)m_2/2 \le (d-d_1)(d'-1)/2.$$
+ We use the same bound when  $\alpha = \infty,$ unless
+deg$(y_1) =...=  $ deg$(y_m)$ in which case we use the following more precise bound:
+
+\smallskip
+$\Delta_{\infty}(c_jy_j: j \in I_2)  =  $ min$(m_2-1, $ max(deg$(y_j):j \in I_2)- \deg(z/z_2)) $
+
+$\le   $ max(deg$(y_j):j \in I_2)- $ deg$(z_1).$
+\smallskip
+
+Finally, 
+when $\alpha$ is   a zero
+of  $z/z_2$ but not a zero  of $y_0...y_m$, we use that 
+
+ $ \Delta_{\alpha}(c_jy_j: j \in I_2) \le $ ord$_{\alpha}(z/z_2)
+=   $ ord$_{\alpha}(z)- $ ord$_{\alpha}(z_1).$
+
+Substituting these bounds to (4.3), we obtain that
+
+ deg($z_1)  \le \deg(z/z_2) \le (\nu (y_0...y_m) -e) (d-d_1)(d'-1)/2.$
+
+Adding this to (4.2), we obtain the conclusions of the theorem.
+
+$Remark.$ Our Theorem 4.1(a)   improves the main result of  [Z], (see (4) on page 88 there) with $g = 0.$    The number $\mu$  in [Z] is our $d,$
+and we replaced $\mu(\mu-1)/2$ in the upper bound of [Z] by  $d'(d-1)/2 \le d(d-1)/2.$  The number $S$ in [Z] is
+our $\nu(y_0...y_m) +1$ when $S \ne 0;$ when  $S=0$ all terms are constant
+and    $\nu(y_0...y_m) =0.$  Our Theorem 4.1(b) shows that $S$ in [Z] can
+be replaced by  $S-1$ in the case when all degrees are the same. Our
+proof followed those of [BM] and [Z].
+% but it gives more details than [BM] and is shorter than the proof in [Z].
+
+We neither stated nor proved extensions of our results to the case of
+arbitrary genus $g$ although there are no difficulties in doing this. The number
+$S$ in [BM], [Z]  can be replaced by the number  $S' \le S$ of places where not
+all ord$_{\alpha}(y_j)$ are the same. 
+
+\smallskip
+
+Our next result is similar to Theorem B of [BM] (in the case $g =0$). For any
+nonzero polynomials  $y_0,..., y_m \in F[t]$ and any
+$\alpha \in P^1(\bar F)$ let  $\mu(\alpha)+1$ be the number of $j$s with
+minimal value of ord$_{\alpha}(y_j)$ (over $0 \le j \le m).$ Note
+that $1 \le \mu(\alpha) \le m.$ When  $m \ge 1$  and either  $y_0 = y_1+\cdots+y_m$   or a family  $y_0,...,y_m$ is irreducible, we have
+$1 \le \mu(\alpha) $ for all $\alpha.$  When gcd($y_0,...,y_m)=1,$ the minimal value is 0
+for all  $\alpha \in \bar F.$ For $\alpha = \infty, \mu(\infty)$ is the number of $j$s with maximal deg($y_j).$
+
+\smallskip
+\noindent {\bf Theorem 4.4.}
+{\it Let  $m \ge 2,    y_j \in F[t],
+\gcd(y_1,..., y_m) = 1,$ and  $y_0,y_1,...,y_m $    be  an  irreducible family.
+  Let  $ d$   be the dimension  of  $Fy_1+\cdots+Fy_m$   over   $F$    and  let   $d' \le d$    be as  above (i.e., $d' + 1$ is the maximal cardinality of the minimal sets). Then
+
+  $\deg(y_0) \le (d'-1) \sum_{j=0}^m \nu(y_j).$
+
+If either $d= m$ or the index $0$ belongs to a minimal set $I_0$ with
+{\rm card}($I_0) = d',$ then
+ $\deg(y_0) \le -d'(d'-1)/2+ (d'-1) \sum_{j=0}^m \nu(y_j).$}
+\smallskip
+
+\noindent {\it Proof.} We follow closely the proof of Theorem 4.1.
+
+  $Case \ 1: d=m.$ In this case
+  $d'=d=m$  and  $y_0 = \sum_{j=1}^m  c_jy_j $  with  $0 \ne c_j \in F.$ 
+So our statement follows from Theorem 3.1 because
+ 
+ $ \Delta_{\alpha}(c_1y_1,..., c_my_m) \le m(m-1)/2$  for    $\alpha = \infty$ and 
+
+$ \Delta_{\alpha}(c_1y_1,..., c_my_m) \le  (m-1) \sum_{j=0}^m  $ sign(ord$_{\alpha}(y_j))$   
+
+\noindent for all  $ \alpha \in \bar F.$
+
+ $ Case \ 2$: the index 0 belongs to a minimal set $I_0$ with
+card($I_0) = d'.$ 
+
+ We proceed by induction on  $m.$ If $m=2,$ then either
+$d=2$ and we are done by Case 1 or  $d=1$ and all $y_j$ are constants,
+so our conclusion is that    $0 \le 0.$ Assume now that  $d < m \ge 3.$
+
+Let   $I_0, I_1, I_2, d_1,m_1, z, z_1, z_2, m_2$  be as in the proof of Theorem 4.1 with the following additional condition: we choose  $I_0 \ni 0$ with card($I_0) = d',$
+so  card($I_1) \ge d'.$
+
+ By the induction hypothesis, 
+$$   \deg(y_0/z_1) \le -(d'-1)d'/2 +
+  (d'-1) \sum_{j\in I_1} \nu(y_j/z_1).\eqno (4.5) $$
+If  $z_1=1$, we are done because the right hand side in (4.5) is less than the right hand side in the conclusion of Theorem 4.4. 
+Let now  $z_1 \ne 1.$ Then  $d' \ge d_2  \ge 2.$  We set $I_3 = I_2 \cup \{m+1\}$ and  $y_{m+1} = z.$
+Applying Theorem 3.1, 
+we obtain that
+$$ \deg(z_1) \le \deg(z/z_2) \le  d_2\sum_{j \in I_3}\nu(y_j/z_2)
+\le (d'-1)\nu(z/z_2) +  (d'-1)\sum_{j \in I_2} \nu(y_j).\eqno (4.6) $$
+
+ Now  it remains to add (4.5) and (4.6) and to observe that    $\nu(z/z_2) \le \nu(z_1)$ and
+
+ $\sum_{j\in I_1} \nu(y_j/z_1)  + \nu(z_1) \le \sum_{j\in I_1} \nu(y_j).$
+ 
+ {\it General  case.}
+Set  $M$ = max(deg($y_1)$,..., deg($y_m))$. We pick a $\beta \in \bar F$  which is not a zero of  $y_o...y_m$ and   replace $ y_j = y_j(t) \in  F[t]$ by 
+   $z_j = t^My(1/t +\beta).$ 
+Note that the family
+$z_0,z_1,..., z_m \in F[t]$ is irreducible, gcd($z_1,..., z_m)=1,$ 
+ deg($z_j) = M$ for all $j, \nu(y_j) = \nu(z_j)$ for at least two $j$s, and
+$\nu(y_j) \le  \nu(z_j) \le \nu(y_j) +1$ for all $j.$
+
+
+Now we can use Case 2  with $y_j$ replaced by $z_j$ and obtain that
+
+ $\deg(y_0) \le M 
+= \deg(z_0)    \le  m-2-d'(d'-1)/2+ (d'-1) \sum_{j=0}^m \nu(z_j) $
+
+$= m-2-d'(d'-1)/2+ (d'-1) \sum_{j=0}^m \nu(y_j).$
+
+If $m-2-d'(d'-1)/2 \le 0,$ we are done. Otherwise we replace
+$z_j = z_j(t)$  by   $z_j(t^N)$ with a large integer $N$ and obtain that
+$MN \le  m-2-d'(d'-1)/2+ M(d'-1) \sum_{j=0}^m \nu(y_j).$
+
+Dividing   both sides by $N$ and sending $N$ to $\infty,$ we obtain the conclusion of the theorem.
+
+ \smallskip
+\noindent {\bf Corollary 4.7.}  {\it Under the conditions of Theorem $4.1, $
+
+\noindent $\deg(y_0) \le  (d-1)\sum_{j=0}^m \nu (y_j).$
+
+If not all
+$y_j$ are constant, then
+
+\noindent $\deg(y_0) <  (m-1)\sum_{j=0}^m \nu (y_j).$
+
+If not all
+$y_j$ are constant and they are pairwise coprime, then
+
+\noindent  $\deg(y_0) < (d'-1)\sum_{j=0}^m \nu (y_j).$}
+
+
+\noindent {\it Proof.} This follows from Theorem 4.1 using the following observations.
+If all $y_j$  are constant, i.e., $d=1,$ then
+the conclusion is that  $0 \le 0.$  When $y_j$ are constant and they are pairwise coprime we can apply Theorem 3.1  or Theorem 4.1   to a minimal set containing the index 0.
+
+Our next result is similar to Theorem B of [BM] (in the case $g=0$). For any
+nonzero polynomials  $y_0,..., y_m \in F[t]$ and any
+$\alpha \in P^1(\bar F)$ let  $\mu(\alpha)+1$ be the number of $j$s with
+minimal value of ord$_{\alpha}(y_j)$ (over $0 \le j \le m).$ Note
+that $1 \le \mu(\alpha) \le m.$ When  $m \ge 1$  and either  $y_0 = y_1+\cdots+y_m$   or a family  $y_0,...,y_m$ is irreducible, we have
+$1 \le \mu(\alpha) $ for all $\alpha.$  When gcd($y_0,...,y_m)=1,$ the minimal value is 0
+for all  $\alpha \in \bar F.$ For $\alpha = \infty, \mu(\infty)$ is the number of $j$s with maximal deg($y_j).$
+
+\smallskip
+\noindent {\bf Theorem 4.8.} {\it Under the conditions of Theorem 4.1,
+
+  deg($y_0) \le 2d'-d'^2 -d +
+  \sum_{\alpha \in P^1(\bar F)} (d(d-1)/2 - \mu'(\alpha)(\mu'(\alpha)-1)/2),$
+
+
+\noindent where $\mu'(\alpha) = $ max$(d-d', d-m+\mu(\alpha)).$}
+ 
+
+
+\noindent {\it Proof.} The proof is similar to those of Theorems 4.1 and 4.4 and we leave it to the reader.
+ 
+
+\bigskip
+\centerline  {\bf 5 NONZERO CHARACTERISTIC CASE}
+\medskip
+
+Now let  $p=$ char$(F) \ne 0.$ It was shown in [P, p.54]  that
+the equation
+$$ x_1^n + x_2^n = x_3^n + x_4^n \eqno (5.1) $$ 
+ has nontrivial solutions for every $n.$
+When $n$ is odd or $F$ is algebraically closed, (5.1) is essentially the same equation as (1.1) with $m = 3.$
+
+ 
+In [V2] it is shown that for every $n,$ every polynomial in $F[t]$ is the sum of
+at most $n_{(p)}$  $n$-th  powers 
+provided that $F$ is  an algebraically closed field  with char$(F) = p \ne 0$  and $n$ is coprime with $p.$ Here $n_{(p)} = \prod(a_i + 1) - 1 \le n,$ where the $a_i$ are the digits of $n$ in base $p.$  
+Moreover [V2] gives solutions with pairwise
+coprime $x_i.$
+ It follows that  (1.1) has nontrivial solutions
+(with an arbitrary $x_{0}$)
+when  $m \ge  S(n,p),$
+where  $S(n,p)$ is the minimum of $(nk)_{(p)}$ over all natural numbers $k.$
+Obviously,  $S(n,p)$ could be small for very large $n.$ For example,  $S(n, p) =3$ if $n>2$  divides $p^k +1$ for some  $k.$ So for  all such $n$ and any
+$x_0$, the equation  (1.1) with $m=3$ has nontrivial solutions in $\bar F[t],$
+ where $\bar F$ is an algebraic closure of $F.$
+ 
+ 
+Thus, when $p \ne 0,$ no upper bound on  $m$ prevents the existence of indecomposable primitive nonconstant solutions of  (1.1) in  $F[t],$ and one cannot
+place any    bound of the form  $m < f(n)$ with $f(n) \rightarrow \infty$ 
+as $n \rightarrow \infty$ 
+ to prevent pairwise  coprime
+nonconstant solutions. One can hope to obtain  a bound of the
+form  $n < f(S(n,p))$  (under additional conditions on solutions).
+
+  
+ The main trouble is that
+the determinant  $D$ in Section 3 may vanish even when  $y_1,...,y_m $ are linearly independent over
+$F.$ In fact [K] it vanishes if and only if $y_1,...,y_m $  are  linearly dependent over $F(t^p).$  If $D \ne 0,$ then it is easy to obtain   
+ much sharper conclusions (cf. the case $k=1$ of the next proposition).
+
+For any integer $k \ge 1,$ we set  $F_k = F(t^{p^k}).$
+For any natural number  $n= \sum s_ip^i$ written in base $p,$   we set
+   mod$(m,p^k) =
+\sum_{i=0}^{k-1} s_ip^i.$
+     For any nonzero polynomial  $z=z(t) = c\prod (t-\alpha)^{n(\alpha)}
+\in F[t],$  where  $0 \ne c \in F, \alpha \in \bar F, n(\alpha) = $ ord$_{\alpha}(z),$ and any integer $k \ge 1,$
+we define  deg$_k(z) = \sum_{\alpha} $ mod$(n(\alpha),p^k).$
+It is a nondecreasing function of $k$ and deg$_k(z) =$ deg$(z)$  when $p^k \ge $ deg$(z).$ 
+We denote by  $\nu_k(z)$ the number of exponents  $n(\alpha)$ which are not divisible by $p^k.$ In particular,  $\nu(z) = \nu_1(z).$
+
+\smallskip  
+\noindent {\bf Proposition 5.2.} {\it Let $m \ge 2$   and  $y_0 = y_1+\cdots+ y_m $ with    $y_j \in F[t].$ Suppose that    $\gcd(y_0,...,y_m)=1.$ For some integer $k \ge 1$
+assume that
+  $y_1,...,y_m$ are linearly independent over
+$F_k.$  
+Then
+
+$\deg(y_0) \le  -m(m-1)/2+ \sum_{j=0}^m \deg_k(y_j)
+\le  -m(m-1)/2+ (p^k-1)\sum_{j=0}^m \nu_k(y_j).$
+
+Moreover, in the case $k=1,$
+
+$\deg(y_0) \le  -m(m-1)/2+ (m-1)\sum_{j=0}^m\nu(y_j).$}
+
+
+\smallskip
+
+\noindent {\it Proof.}  
+ The condition of linear independence implies that
+$p^k \ge m.$ We write  $y_j=y_j(t) = \sum_{s=0}^{p^k-1}  y_{j,s}(t)^{p^k} t^s$
+with  $y_{j,s}(t) = y_{j,s}  \in F[t].$ Such a representation is unique
+which is easy to see by induction on $k.$ Also by induction on $k$ it is easy to see that
+
+ord$_{\alpha}(y_{j,s}) \ge ($ord$_{\alpha}(y_j) - $mod(ord$_{\alpha}(y_j),p^k))/p^k$
+
+\noindent for all $\alpha,j, s.$ Now we consider the matrix
+$(y_{j,s})_{1\le j \le m, 0 \le s \le p^k-1}.$ Its rank is $m.$ We choose a square $m$ by $m$ submatrix with nonzero determinant  $D_0 \in F[t].$
+Since  $p^k\deg(y_{j,s}) +s  \le $ deg$(y_j),$ we have
+deg$(y_{j,s}) \le $ (deg$(y_j)-s)/p^k$ and 
+
+deg($D_0)  \le (-m(m-1)/2 +\sum_{j=1}^m  $ deg$(y_j))/p^k.$   
+ 
+On the other hand, 
+
+ord$_{\alpha}(D_0) \ge \sum_{j=0}^m $(ord$_{\alpha}(y_j) - $mod(ord$_{\alpha}(y_j),p^k))/p^k$ 
+
+\noindent for every $\alpha \in \bar F$  which is not a zero of  $y_0.$
+Moreover this inequality also holds for every $\alpha \in \bar F$ which is
+a zero of $y_0,$ because  $D_0 = D_j,$  where $D_j$ is the determinant
+of the matrix obtained by replacing   $y_{j,s}$ by $y_{0,s},$ and $0 \ne
+c_j \in  F[t^{p^l}] \subset  F[t^{p^k}]$ for all $j.$
+
+  Thus,
+
+$\sum_{j=0}^m $ (deg$(y_j)- $ deg$_k(y_j))/p^k =
+ \sum_{j=0}^m \sum_{\alpha \in \bar F}  $(ord$_{\alpha}(y_j) - $mod(ord$_{\alpha}(y_j),p^k))/p^k$
+     
+$\le  \sum_{\alpha \in \bar F} $ ord$_{\alpha}D_0    =$ deg$(D_0) 
+\le    (-m(m-1)/2 +\sum_{j=1}^m  $ deg$(y_j))/p^k,$
+
+\noindent hence  we obtain the first conclusion.
+
+Now we consider the case $k = 1.$ Note that the linear independence implies that $m \le p$
+ and that the Wronskian
+$D_0 =$ det$(y_j^{(i)})_{0 \le j \le m, 1 \le i \le m-1} \ne 0.$
+It is clear that the row $j$ is divisible by  $(t - \alpha)^n$
+with 
+
+$n=$ ord$_{\alpha}(y_j) -$ (the last digit of  ord$_{\alpha}(y_j)$  in base $p)  \le $ ord$_{\alpha}(y_j)- p+1 $
+
+$\le $ ord$_{\alpha}(y_j)- m+1.$
+
+\noindent Since $c_0D_0=c_jD_j,$ where $D_j$ is the determinant obtained  when we replace   $y_j$ by $y_0,$ it follows that  
+
+deg$(D_0) \ge  - (m-1)\nu(y_j) + \sum_{j=0}^m  $ deg$(y_j).$
+
+On the other hand,
+
+deg$(D_0) \le  -m(m-1)/2+  \sum_{j=1}^m $ deg$(y_j).$
+
+\noindent Comparing this upper bound for deg$(D_0)$ with the above lower bound
+and taking into account that  deg$(y_j) =$ deg$_l(y_j),$
+we obtain the conclusion.
+
+$Remarks.$ We do not pursue in this paper improvements  of the proposition  similar to Theorem 3.1. 
+
+We could prove the proposition using divided derivatives (cf. [GV], [Wa]).
+
+  If  $y_1,...., y_m$ are linearly independent over $F$ then 
+they are  linearly independent over $F_k$ for all sufficiently large $k.$
+However  the proposition gives a meaningful  upper bound on deg($y_0)$ only when
+ $k$ is small.
+
+ The proposition can be easily  generalized to the situation when
+every linearly independent over $F$ subsequence in  $y_1,...,y_m$ stays
+linearly independent over $F_k.$  This is always true for sufficiently large
+$k,$ but the larger the $k$ the weaker the conclusion.
+
+\bigskip
+\centerline{\bf REFERENCES}
+\medskip
+
+
+
+ 
+
+{\settabs   \+   [BSSI] & Beukers, F.;   Schlickewei,  H.P.    The Equation $x+y=1$ in Finitely Generated Groups. \cr
+
+\+ [B] &  Beukers, F.   The Diophantine Equation $Ax\sp p+By\sp q=Cz\sp r$.   Duke Math. J. {\bf 1998,} {\it 91,}   \cr 
+\+ &  61--88. \cr
+
+\+ [BB] &  Browkin, J.; Brzezi\'nski J.    Some Remarks on the $abc$-Conjecture.    Mathematics of \cr
+\+ & Computation {\bf 1994,} {\it 62,}   931--939.  \cr  
+
+\+ [BM] &  Brownawell, D.;  Masser, D.   Vanishing Sums in Function Fields.  Math. Proc. \cr
+\+ & Cambbridge Philos. Soc. {\bf 1986,} {\it 100,}   427--434.\cr 
+
+\+   [BS] & Beukers, F.;   Schlickewei,  H.P.  
+  The Equation $x+y=1$ in Finitely Generated  \cr
+\+  & Groups.  Acta Arith. {\bf 1966,} {\it 78,}     189--199.   \cr
+
+\+ [DG] &  Darmon, H.; Granville, A.     On the Equations $z^m = F(x,y)$ and $Ax^p + By^q= Cz^r.$  \cr
+\+ & Bull. London Math. Soc.  {\bf 1995,} {\it 27,}  513--543. \cr
+
+\+ [E] &  Elkies, N. D.  On $A^4 + B^4 + C^4 = D^4.$   Mathematics of Computation  {\bf 1988,} {\it 51,}  \cr
+\+ &  825--836. \cr
+
+\+ [GV] & Garc{\'\i}a, A.;   Voloch, J. F.  Wronskians and Linear Independence in Fields of Prime \cr
+\+ &  Characteristic.   Manuscripta Math. {\bf 59}   (1987), 457--469. \cr
+
+\+ [K] &   Kaplansky, I.       {\it An Introduction to Differential Algebra.} Hermann: Paris,  1957. \cr
+ 
+\+ [LP] &  Lander, L. J.; Parkin, T. R.  Counterexamples to Euler's Conjecture on Sums  of
+\cr \+ & Like Powers.   Bull. Amer. Math. Soc. {\it 1996,}   {\it 72,}   1079. \cr
+
+\+ [L] &  Lang, S.    {\it  Math Talks for Undergraduates.} 
+Springer-Verlag: New York, 1999. \cr
+
+\+ [Ma] &  Mason,  R. C.   Norm Form Equations.   I. Journal of  Number Theory
+{\bf 1986,} {\it 22,}  
+\cr \+ &   190--207. \cr
+
+\+ [Mu1] & Mueller J.  The $abc$-Inequality and the Generalized Fermat Equation in Function 
+\cr \+ & Fields.   Acta Arithmetica {\bf 1993,} {\it LXIV.1,}   7--18. \cr
+
+\+ [Mu2]  &  Mueller J. $S$-Unit Equations in Function Fields via the $abc$-Theorem.   Bull.  
+\cr \+ & London Math. Soc. {\bf 2000,}  {\it 32,}     163--170.  \cr
+
+\+ [NS] & Newman, D. J.; Slater,  M.   Waring's Problem for the Ring of Polynomials. 
+\cr \+ & Journal of Number Theory {\bf 1979,}  {\it 11,}   477-487. \cr
+
+\+ [P] & Paley, R. E. A. C.   Theorems on Polynomials in a Galois Field.   Quarterly Journal 
+\cr \+ &
+of  Math. {\bf 1993,} {\it 4,}   52--63. \cr
+ 
+\+  [S] & Stepanov,  S.A.   Diophantine Equations over Function Fields. (in Russian)  Mat. 
+\cr \+ & Zametki 
+{\bf 1982,} {\it 32,}   753--764, 909.  \cr
+ 
+
+\+ [V1] & Vaserstein, L.    Waring's Problems for Algebras over Fields.  Journal of Number 
+\cr \+ &
+Theory  {\bf 1987,} {\it 26,}    286--298.\cr
+
+\+ [V2] & Vaserstein, L.    Ramsey's Theorem and Waring's Problem for Algebras over Fields.
+\cr \+ &
+In {\it Proceedings of the Workshop at The Ohio State University,} June 17-26, 1991, 
+\cr \+ &
+Walter de Gruyter: Berlin, New York 1992, 435--441. \cr
+
+\+ [Vo1]  & Voloch, J. F.    Diagonal Equations over Function Fields.   Bol. Soc. Brasil. Mat.  
+\cr \+ &
+ {\bf 1985,}  {\it 16,}  29--39.\cr
+
+\+ [Vo2] & Voloch, J. F.    The Equation $ax+by=1$ in Characteristic $p$.   Journal of Number 
+\cr \+ &
+Theory {\bf 1998,} {\it 73,}    195--200. \cr
+
+\+ [Wa] & Wang, J. T.-Y.   The Truncated Second Main Theorem of Function Fields.   Journal 
+\cr \+ &
+of Number Theory {\bf 1996,} {\it 58,}   139--157. \cr
+
+\+ [Wo] & Wooley,  T. D.   Large Improvement in Waring's Problem.  Ann. Math.     {\bf 1992,}
+\cr \+ &
+{\it 135:1,} 131--164. \cr
+
+\+ [Z]  & Zannier,  U.  
+Some Remarks on the $S$-Unit Equation in Function Fields. 
+  Acta Arith.    
+\cr \+ &
+ {\bf 1993,} {\it 64,}  87--98. \cr}
+
+
+
+
+
+
+\bye
+
+\noindent submitted
+
+ MANUSCRIPT PREPARATION
+
+    Formats
+    Journal contributors should model articles after the published articles in the journal to which they are submitting and may contact the Editor for
+    additional information. 
+
+    Word Processing
+    The preferred format for submitted manuscript is Microsoft Word for the PC. Submitting your manuscript in this format ensures it will be handled in the
+    most efficient manner. If you do not have access to this particular word processing program, or to a PC, please save your document as Rich Text Format
+    (RTF). RTF is available through the "Save As" option on most major word processing packages.
+
+    Please refer to the sections below titled Math and Chemical Structures for instructions on how to prepare manuscript containing these elements.
+
+    Use one typeface and size, even for the title of your article and headings (12-point Times Roman is good). For italicized text, you may either underscore
+    or use the italic font (be consistent in your choice). Do not use formatting (bold, italic and underline) to indicate article title and headings. Emphasis may
+    appear in these elements where appropriate (e.g., scientific names, etc.). Do not include any commands for page breaks or headers or footers. Do not use
+    an automatic numbering function to create numbered lists since the numbers may be lost when translated to typesetting software. 
+
+    File Names
+    Assign descriptive names to your files, e.g., TEXT, REFERENCES, OUTLINE, TABLE1, FIGURE1, FIG1_CHEM1, etc. Please use separate files for the
+    body of your article, references, outline and figures. Macintosh users, please append ".doc" to the end of Word filenames and ".xls" to the end of Excel
+    filenames.
+
+    Title of Your Article and Headings 
+    Use the same typeface and size as your text. Do not boldface, underscore or italicize your article title or headings. Place them flush left (not centered or
+    indented). Insert a double return (or double "Enter") above and below all headings. 
+    Title Style:
+            ALL CAPITAL LETTERS (chemical prefixes and elemental symbols may include lowercase letters)
+    First-Level Headings Style:
+            ALL CAPITAL LETTERS
+    Second-Level:
+            Initial Capital and Then Lowercase Letters for Each Main Word
+    Third-Level:
+            Capital letter for the first word only; all lowercase letters thereafter
+
+
+    Article Outline
+    Please submit both electronic and print copies of your article outline. The outline should include all section headings, as they appear in your article. Please
+    make the relationships between section headings obvious. The outline will be used in the production process to mark, tag, and check the subordination
+    (levels) of the section headings.
+
+    No Automatic Hyphenation or Justification
+    Let lines "wrap" from one to the next, inserting hard returns only at the ends of headings, paragraphs, entries in a numbered or bulleted list, and
+    references. Use a hyphen only when it connects part of a word. Do not divide syllables at the end of a line. 
+
+    Vertical Spacing
+    Your hard copy printout may be marked up, so please double-space throughout (including "References" and illustration legends) to make it easy to read
+    the final, edited manuscript. Double-space by using the appropriate line spacing command, not by using two returns. To indicate a required line
+    ending--such as at the end of a heading, paragraph, list entry, or references--use a double return (or double "Enter"); do not indent. Do not use any
+    additional vertical space beyond this. Double returns separating elements will convert into the final space you will see in typeset pages. 
+
+    Horizontal Spacing
+    Use only a single space after a period or other punctuation; do not use the old typewriter style of hitting the spacebar twice after a period. Do not indent;
+    new paragraphs are to be indicated by a double return (or double "Enter"). 
+
+    Numbers
+    Be careful not to type the letter "l" for the number one, or the letter "o" for the number zero. 
+
+    Dashes
+    For a dash, use two hyphens--with no spacing before or after.
+
+    Symbols
+    If you use a symbol in one place, continue to do so throughout. Example: If you use the symbol ý for multiplication, do not use the letter x later. 
+
+    Math
+    Manuscripts containing significant amounts of mathematical equations should be prepared in TeX/LaTeX. Please submit your TeX or LaTeX files either as
+    plain TeX or standard LaTeX2e languages with little or no customization. The Dekker LaTeX macro and instructions for its use will soon be available upon
+    request at mathguide@dekker.com. Simple math equations may be done in MathType4, if there are no suitable keyboard characters. Mathematical
+    equations, regardless of language, should not be located in the middle of a paragraph; they should be keyed between paragraphs, not inside. 
+
+  
+    INSTRUCTIONS FOR PREPARING REFERENCES
+    Dekker is standardizing our reference formats for all journal articles to facilitate reference linking. (For more information on reference linking initiatives,
+    please consult the CrossRef web site at www.crossref.org.) Compliance with reference format instructions will significantly reduce manuscript production
+    time. We understand that some information, e.g., an issue number, may not be available. Please include as much of the specified information as possible.
+    Note that there are different formats for periodicals, books, etc.; please follow the appropriate model for each type of reference. Typefaces, commas,
+    semicolons, and periods will serve as identifiers to a computer program for parsing and adding XML tags to the references.
+
+    Please cite references in the text by number only enclosed in parentheses. At the end of the article, list the references in the order they appear in the text.
+    Footnotes should be included in the list of references.
+
+    Recommended Format for Periodicals
+    Author, 1.; Author, 2.; ...Author, X. Title of Article. Standard Journal Abbreviation or Title Year, Volume (issue), Inclusive Pagination. 
+    Examples: 
+    Pimentel, D. Insect Population Responses to Environmental Stress and Pollutants. Environmental Reviews 1994, 2 (1), 1-15. 
+    Brown, P.R.; Lundie-Jenkins, G. Non-target Mortalities during Aerial Strychnine Baiting of House Mice. Wildl. Res. 1999, 26 (1), 117-128. 
+
+                     Author Names
+
+       Include the names of all authors. Do not use "et al." in place of author names. 
+       Separate author names with semicolons. 
+       End the author field with a period. 
+       <Last name>, <first initial or name> <middle initial or name>, <qualifiers> (e.g., Thomason, Donald L., II.) 
+
+                     Article Title
+
+       Do not use special formatting or quotation marks. 
+       End the article title field with a period. 
+
+                  Standard Journal Abbreviation or Title
+
+       Do not abbreviate one-word journal names. 
+       Use a period at the end of each abbreviated name. 
+       Do not end the standard journal abbreviation or title field with a period. 
+       Standard journal abbreviations are available on the web sites of abstracting services, including Chemical Abstracts, Biological Abstracts, ISI,
+       and Medline. 
+
+                    Publication Information
+
+       Year boldface type ending with a comma 
+       Volume italic type 
+       Issue number enclosed in parentheses, spaced from the volume number 
+       Volume (Issue) field ends with a comma 
+
+                    Pagination Information
+
+       Complete pagination range is recommended. 
+       May use only initial page number. 
+       End the pagination field with a period. 
+       Use of p. and pp. should be avoided to simplify the parsing code. 
+
+    Recommended Formats for Books 
+    Author, 1.; Author, 2.; ...Author, X. Chapter Title. Book Title, Edition Number; Series Information (if any); Publisher: Place of Publication, Year; Volume
+    Number, Inclusive Pagination.
+    Author, 1.; Author, 2.; ...Author, X. Chapter Title. In Book Title, Edition Number; Editor, 1.,...Editor, X., Eds.; Series Information (if any); Publisher: Place
+    of Publication, Year; Volume Number, Inclusive Pagination. 
+    Examples: 
+    Pimentel, D.; Kirby, C.; Shroff, A. The Relationship Between "Cosmetic" Standards for Foods and Pesticide Use. In The Pesticide Question: Environment,
+    Economics, and Ethics; Pimentel, D., Lehman, H., Eds.; Chapman and Hall: New York, 1993; 85-105. 
+    New, T.R. Insects As Predators; New South Wales Univ. Press: Kensington, Australia, 1991; 178 pp. Bowersock, Terry L.; Park, Kinam. Vaccines and
+    Other Immunological Products. In Encyclopedia of Pharmaceutical Technology, 1st Ed.; Swarbrick, James, Boylan, James C., Eds.; Marcel Dekker, Inc.: New
+    York, 1997; Vol. 16, 115-151. 
+
+                    Author and Editor Names
+
+       Editor names may appear in the author name field if the book has no primary author. 
+       Edition (as in 2nd Edition) and Ed. (as in Editor) should begin with a capital letter "E." 
+
+                     Book Title Field
+
+       Edition Number is optional. 
+       Please place a semicolon after the Book Title, instead of a comma, if the Edition Number is not included. 
+
+                    Publication Information
+
+       Place of publication format is <city>, <state or country>. 
+       May use city name only for cities like New York, London, and Paris. 
+
+                     Volume Number
+
+       The Volume Number is optional and should be preceded by "Vol.", e.g., Vol. 16. 
+       Volume numbers should be used for multi-volume works, including encyclopedias. 
+
+    Recommended Formats for Works Presented at Meetings and Conferences
+    Author, 1.; Author, 2.; ...Author, X. Title of Presentation. In Title of Collected Work, Name of Meeting or Proceedings, Location of Meeting, Date of
+    Meeting; Editor, 1.,...Editor, X., Eds.; Publisher: Place of Publication, Year; Abstract Number, Inclusive Pagination. 
+    Examples: 
+    Garrone, E.; Ugliengo, O. In Structure and Reactivity of Surfaces, Proceedings of the European Conference, Trieste, Italy, Sept 13-20, 1988; Zecchina,
+    A., Costa, G., Morterra, C., Eds.; Elsevier: Amsterdam, 1988. 
+    Prasad, A.; Jackson, P. Abstracts of Papers, Part 2, 212th National Meeting of the American Chemical Society, Orlando, FL, Aug 25-29, 1996; American
+    Chemical Society: Washington, DC, 1996; PMSE 189. 
+
+                    Meeting Date Information
+
+       Date of meeting format should be <month> space <date>, <year>, e.g., Nov 17, 1999. 
+       There should not be a period after the abbreviation or name of the month. 
+       The full name of the month may be used. 
+
+                     Abstract Numbers
+
+       Use the letter, number, or combination letter and number designator for the paper, e.g., INORG-275. 
+       Do not write the word abstract prior to the designator. 
+
+  

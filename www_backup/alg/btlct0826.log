@@ -1,0 +1,139 @@
+This is TeX, Version 3.14159 (Web2C 7.2) (format=tex 1998.11.21)  17 OCT 2000 15:55
+**btlct0826.tex
+(btlct0826.tex (/usr/local/lib/teTeX/texmf/tex/amstex/base/amstex.tex
+
+AmS-TeX- Version 2.1
+COPYRIGHT 1985, 1990, 1991 - AMERICAN MATHEMATICAL SOCIETY
+Use of this macro package is not restricted provided
+each use is acknowledged upon publication.
+
+Loading definitions for misc utility macros, page layout, accents/punctuation,
+line and page breaks, figures, comments, math spacing, fractions,
+smash commands, large operator symbols, integrals, operator names,
+multilevel sub/superscripts, matrices, multiline displays,
+continued fractions, compound symbols, various kinds of dots,
+special superscripts, \text, math font commands, \newsymbol,
+bold Greek and bold symbols, Euler fonts, math accents, roots,
+commutative diagrams, poor man's bold, syntax check, ... finished)
+
+(/usr/local/lib/teTeX/texmf/tex/amstex/base/amsppt.sty
+version 2.1h (1997/02/02): Loading utility definitions, more fonts,
+page dimension settings, top matter, section heads,
+theorems/proofs/definitions/remarks, rosters, footnotes, figures and captions,
+miscellaneous, references, end of document, output routine,
+\copyins=\insert252
+
+hyphenation exceptions (U.S. English)
+(/usr/local/lib/teTeX/texmf/tex/amstex/config/amsppt.sti symbol names
+(/usr/local/lib/teTeX/texmf/tex/amstex/base/amssym.tex) ,)
+
+) [1] [2] [3] [4] [5] [6] [7] [8] [9] [10] [11] [12]
+Overfull \hbox (25.21613pt too wide) detected at line 943
+[] []
+
+\hbox(235.82246+230.82246)x397.48499
+.\hbox(0.0+0.0)x0.0
+.\glue 1.66663
+.\vbox(235.82246+230.82246)x421.03448
+..\hbox(22.40009+18.76118)x421.03448
+...\glue(\tabskip) 0.0
+...\hbox(22.40009+18.76118)x34.12852 []
+...\glue(\tabskip) 0.0
+...\hbox(22.40009+18.76118)x386.90596, glue set 218.31592fil []
+...\glue(\tabskip) 0.0
+..\glue(\lineskip) 4.00444
+..\hbox(23.76118+18.76118)x421.03448
+...\glue(\tabskip) 0.0
+...\hbox(23.76118+18.76118)x34.12852, glue set 34.12852fil []
+...\glue(\tabskip) 0.0
+...\hbox(23.76118+18.76118)x386.90596, glue set 158.90875fil []
+...\glue(\tabskip) 0.0
+..\glue(\lineskip) 4.00444
+..\hbox(23.76118+12.79865)x421.03448
+...\glue(\tabskip) 0.0
+...\hbox(23.76118+12.79865)x34.12852, glue set 34.12852fil []
+...\glue(\tabskip) 0.0
+...\hbox(23.76118+12.79865)x386.90596, glue set 178.16766fil []
+...\glue(\tabskip) 0.0
+..etc.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active
+\vbox(523.025+2.5)x397.48499, glue set 4.84798
+.\glue(\topskip) 1.85997
+.\hbox(8.14003+2.5)x397.48499, glue set 313.20491fil
+..\tenrm w
+..\tenrm h
+..\tenrm e
+..\tenrm r
+..\tenrm e
+..etc.
+.\glue(\parskip) 0.0 plus 1.0
+.\glue(\baselineskip) 2.0
+.\hbox(7.5+2.5)x397.48499, glue set - 0.4132
+..\hbox(0.0+0.0)x12.0
+..\tenrm I
+..\tenrm f
+..\glue 3.33333 plus 1.66666 minus 1.11111
+..\tenrm w
+..etc.
+.etc.
+
+ [13]
+Underfull \vbox (badness 10000) has occurred while \output is active
+\vbox(523.025+4.0)x397.48499, glue set 11.6267
+.\glue(\topskip) 2.5
+.\hbox(7.5+2.5)x397.48499, glue set 290.1236fil
+..\tenrm (
+..\tenrm 6
+..\tenrm .
+..\tenrm 2
+..\tenrm )
+..etc.
+.\penalty 10000
+.\glue(\abovedisplayskip) 12.0 plus 3.0 minus 9.0
+.\glue(\lineskip) 1.0
+.etc.
+
+ [14]
+[15]
+Underfull \vbox (badness 1917) has occurred while \output is active
+\vbox(523.025+1.94444)x397.48499, glue set 2.67708
+.\glue(\topskip) 2.5
+.\hbox(7.5+2.5)x397.48499, glue set 0.11914
+..\tenbf C
+..\tenbf o
+..\tenbf r
+..\tenbf o
+..\tenbf l
+..etc.
+.\penalty 400
+.\glue(\baselineskip) 2.0
+.\hbox(7.5+2.5)x397.48499, glue set 317.4966fil
+..\tenit t
+..\tenit i
+..\tenit o
+..\tenit n
+..\glue 3.57774 plus 1.53333 minus 1.0222
+..etc.
+.etc.
+
+ [16]
+Underfull \vbox (badness 10000) has occurred while \output is active
+\vbox(523.025+2.5)x397.48499, glue set 9.79584
+.\glue(\topskip) 2.5
+.\hbox(7.5+2.5)x397.48499, glue set 41.23701fil
+..\tenit P
+..\tenit r
+..\kern-0.51112
+..\tenit o
+..\kern-0.51112
+..etc.
+.\penalty 10000
+.\glue(\abovedisplayskip) 12.0 plus 3.0 minus 9.0
+.\glue -4.00444
+.etc.
+
+ [17]
+[18] [19] )
+Output written on btlct0826.dvi (19 pages, 88964 bytes).

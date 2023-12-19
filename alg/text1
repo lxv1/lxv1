@@ -1,0 +1,1132 @@
+
+\documentclass{article}
+\usepackage{amssymb}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{graphicx}
+\usepackage{amsmath}
+
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Created=Mon Aug 28 22:32:08 2000}
+%TCIDATA{LastRevised=Thu Aug 31 03:39:51 2000}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{<META NAME="DocumentShell" CONTENT="General\Blank Document">}
+%TCIDATA{Language=American English}
+%TCIDATA{CSTFile=LaTeX article (bright).cst}
+%TCIDATA{PageSetup=72,72,72,72,0}
+%TCIDATA{Counters=arabic,1}
+%TCIDATA{AllPages=
+%H=36,\PARA{038<p type="texpara" tag="Body Text" > \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \thepage }
+%F=36
+%}
+
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{case}[theorem]{Case}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+\newenvironment{proof}[1][Proof]{\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
+\input{tcilatex}
+
+\begin{document}
+
+
+\begin{center}
+\bigskip 
+
+\bigskip 
+
+\bigskip 
+
+\bigskip 
+
+\bigskip 
+
+{\huge Some \textit{q}-orthogonal polynomials and related Hankel determinants%
+}
+
+\bigskip 
+
+\bigskip 
+
+\bigskip 
+
+\bigskip 
+
+{\LARGE George Andrews}$^{1}$
+
+{\LARGE and}
+
+{\LARGE Jet Wimp}$^{2}$
+
+{\LARGE \bigskip }
+\end{center}
+
+\bigskip 
+
+\bigskip 
+
+\bigskip 
+
+\bigskip 
+
+\bigskip 
+
+\bigskip 
+
+$^{1}$Department of Mathematics, Pennsylvania State University, University
+Park, PA \ 16802-6401
+
+$^{2}$Department of Mathematics and Computer Science, Drexel University,
+Philadelphia, PA \ 19104
+
+\bigskip 
+
+\textbf{1. Introduction}
+
+\qquad This paper grew out of some experiments using the computer algebra
+MAPLE. \ Let the function $f\left( t\right) $ \ have the Taylor series
+development
+
+\bigskip
+
+$f\left( t\right) =\dsum\limits_{n=0}^{\infty }f_{n}t^{n},$
+
+\bigskip
+
+which we assume converges in a neighborhood of the origin. \ The
+coefficients $f_{n}$ \ may be interpreted as the moments of a suitable
+function-- actually, the complex moments
+
+\bigskip
+
+$f_{n}=L\left( z^{n}\right) =\dfrac{1}{2\pi \text{i}}\doint z^{n}\left( 
+\dfrac{f\left( \dfrac{1}{z}\right) }{z}\right) dz,$
+
+\bigskip
+
+where the path of integration is, say, a circle centered at the origin with
+a suitably large radius. Using the construction given in [1, v. 2, section
+10.3] and the Gram determinants 
+
+\bigskip 
+
+$G_{N}=\left| 
+\begin{array}{cccc}
+f_{0} & f_{1} & .... & f_{N} \\ 
+f_{1} & f_{2} & .... & f_{N+1} \\ 
+\vdots  & \vdots  & \ddots  & \vdots  \\ 
+f_{N} & f_{N+1} & .... & f_{2N}
+\end{array}
+\right| $
+
+\bigskip 
+
+one may construct the monic polynomials, call them $P_{N}\left( x\right) ,$
+that are orthogonal to the distribution which gives these moments.
+
+\bigskip 
+
+$P_{N}\left( x\right) =\dfrac{1}{G_{N-1}}\left| 
+\begin{array}{cccc}
+f_{0} & f_{1} & ... & f_{N} \\ 
+f_{1} & f_{2} & ... & f_{N+1} \\ 
+\vdots  & \vdots  & \ddots  & \vdots  \\ 
+f_{N-1} & f_{N} & ... & f_{2N-1} \\ 
+1 & x & ... & x^{N}
+\end{array}
+\right| .$
+
+\bigskip 
+
+These polynomials satisfy a three term recurrence relation
+
+\bigskip 
+
+$P_{N+1}\left( x\right) =\left( x+B_{N}\right) P_{N}\left( x\right)
+-C_{N}P_{N-1}\left( x\right) .$
+
+\bigskip 
+
+The coefficients $B_{N},C_{N}$ can be found from the above determinantal
+expression for the polynomials. \ In particular
+
+\bigskip 
+
+$C_{N}=\dfrac{G_{N}G_{N-2}}{G_{N-1}^{2}}.$
+
+\bigskip 
+
+Conversely, by taking products in this expression, a formula for the
+determinant $G_{N}$ can be recovered:
+
+\bigskip 
+
+$G_{N}=f_{0}\dprod\limits_{j=1}^{N}C_{j}^{N+1-j}.$
+
+\bigskip 
+
+As usual, let
+
+$\left( A;q\right) _{n}=\dprod\limits_{j=0}^{n-1}\left( 1-Aq^{j}\right) ,N>0,
+$ $\ \left( A;q\right) _{0}=1;$\ \ \ \ $\QDATOPD[ ] {n}{j}=\dfrac{\left(
+q;q\right) _{n}}{\left( q;q\right) _{j}\left( q,q\right) _{n-j}}.$
+
+\bigskip 
+
+MAPLE experiments indicate that when one makes the choice
+
+\bigskip 
+
+$f(t)=\dfrac{t}{\sum\limits_{n=0}^{\infty }\dfrac{t^{n}\left( a;q\right) _{n}%
+}{\left( b;q\right) _{n}}-1}=\dfrac{1}{\sum\limits_{n=0}^{\infty }\dfrac{%
+t^{n}\left( a;q\right) _{n+1}}{\left( b;q\right) _{n+1}}},$
+
+\bigskip 
+
+then the formulas for the coefficients $B_{N},C_{N}$ turned out to be very
+simple. \ This paper presents a proof of the formulas suggested by MAPLE. \
+There are many interesting special cases of our results.
+
+\bigskip
+
+\textbf{2. Preliminary results}
+
+\qquad We prove here two preliminary results dealing with the evaluation of
+certain Hankel-type determinants.
+
+{\large Theorem 1.}
+
+\qquad Suppose we have two sequences $s_{n}$ and $t_{n}$ satisfying
+
+\bigskip
+
+$t_{0}=1,$ \ $\ s_{0}\neq 0$
+
+\bigskip
+
+and
+
+\bigskip
+
+$\dsum\limits_{j=0}^{N}t_{j}s_{N-j}=\left\{ 
+\begin{array}{c}
+s_{0},\text{ \ }N=0; \\ 
+0,\text{ \ }N>0
+\end{array}
+\right\} .$
+
+\bigskip
+
+Let
+
+\bigskip
+
+$S_{N}=\left| 
+\begin{array}{cccc}
+s_{0} & s_{1} & .... & s_{N} \\ 
+s_{1} & s_{2} & .... & s_{N+1} \\ 
+\vdots & \vdots & \ddots & \vdots \\ 
+s_{N} & s_{N+1} & .... & s_{2N}
+\end{array}
+\right| .$
+
+\bigskip
+
+Let $T_{0}=1$ and for $N>0,$
+
+\bigskip
+
+$T_{N}=\left| 
+\begin{array}{cccc}
+t_{2} & t_{3} & .... & t_{N+1} \\ 
+t_{3} & t_{4} & .... & t_{N+2} \\ 
+\vdots & \vdots & \ddots & \vdots \\ 
+t_{N+1} & t_{N+2} & .... & t_{2N}
+\end{array}
+\right| .$
+
+\bigskip
+
+\qquad Then
+
+\bigskip
+
+$S_{N}=\left( -1\right) ^{N}s_{0}^{N+1}T_{N}.$
+
+\bigskip
+
+{\large Proof:}
+
+\qquad When $N=0$ the assertion reduces to $s_{0}=s_{0}.$ \ When $N=1$ we
+use the fact that $t_{0}=1$ to get
+
+\bigskip
+
+$\left| 
+\begin{array}{cc}
+s_{0} & s_{1} \\ 
+s_{1} & s_{2}
+\end{array}
+\right| =\left| 
+\begin{array}{cc}
+s_{0} & t_{1}s_{0}+t_{0}s_{1} \\ 
+s_{1} & t_{1}s_{1}+t_{0}s_{2}
+\end{array}
+\right| =\left| 
+\begin{array}{cc}
+s_{0} & 0 \\ 
+s_{1} & -t_{2}s_{0}
+\end{array}
+\right| =-s_{0}^{2}t_{2}=-s_{0}^{2}T_{1}.$
+
+\bigskip
+
+We shall show how this same process, which we call ``O-reduction'' owing to
+the orthogonality of the sequences $s_{n}$ and $t_{n}$ , works in general. \
+We combine columns of the $S_{N}$ determinant using the orthogonality
+relation:
+
+\bigskip
+
+$S_{N}=\left| 
+\begin{array}{ccccc}
+s_{0} & t_{1}s_{0}+t_{0}s_{1} & t_{2}s_{0}+t_{1}s_{1}+t_{0}s_{2} & ... & 
+\sum\limits_{j=0}^{N}t_{N-j}s_{j} \\ 
+s_{1} & t_{1}s_{1}+t_{0}s_{2} & t_{2}s_{1}+t_{1}s_{2}+t_{0}s_{3} & ... & 
+\sum\limits_{j=0}^{N}t_{N-j}s_{j+1} \\ 
+s_{2} & t_{1}s_{2}+t_{0}s_{3} & t_{2}s_{2}+t_{1}s_{3}+t_{0}s_{4} & ... & 
+\sum\limits_{j=0}^{N}t_{N-j}s_{j+2} \\ 
+\vdots  & \vdots  & \vdots  & \ddots  & \vdots  \\ 
+s_{N} & t_{1}s_{N}+t_{0}s_{N+1} & t_{2}s_{N}+t_{1}s_{N+1}+t_{0}s_{N+2} & ...
+& \sum\limits_{j=0}^{N}t_{N-j}s_{j+N}
+\end{array}
+\right| $
+
+\bigskip
+
+$=\left| 
+\begin{array}{ccccc}
+s_{0} & 0 & 0 & ... & 0 \\ 
+s_{1} & -t_{2}s_{0} & -t_{3}s_{0} & ... & -t_{N+1}s_{0} \\ 
+s_{2} & -t_{3}s_{0}-t_{2}s_{1} & -t_{4}s_{0}-t_{3}s_{1} & ... & 
+-t_{N+2}s_{0}-t_{N+1}s_{1} \\ 
+\vdots & \vdots & \vdots & \ddots & \vdots \\ 
+s_{N} & -\sum\limits_{j=0}^{N-1}t_{N+1-j}s_{j} & -\sum%
+\limits_{j=0}^{N-1}t_{N+2-j}s_{j} & ...... & -\sum%
+\limits_{j=0}^{N-1}t_{2N-j}s_{j}
+\end{array}
+\right| $ .
+
+\bigskip
+
+\qquad We now multiply the second row by $\dfrac{s_{i}}{s_{0}}$ and subtract
+it from the $\left( i+2\right) ^{nd}$ row for \ $1\leq i\leq N-1$:
+
+\bigskip
+
+$S_{N}=\left| 
+\begin{array}{ccccc}
+s_{0} & 0 & 0 & .... & 0 \\ 
+s_{1} & -t_{2}s_{0} & -t_{3}s_{0} & ... & -t_{N+1}s_{0} \\ 
+s_{2}-\dfrac{s_{1}^{2}}{s_{0}} & -t_{3}s_{0} & -t_{4}s_{0} & ... & 
+-t_{N+2}s_{0} \\ 
+\vdots & \vdots & \vdots & \ddots & \vdots \\ 
+s_{N}-\dfrac{s_{N}s_{1}}{s_{0}} & -\sum\limits_{j=0}^{N-1}t_{N+1-j}s_{j} & 
+-\sum\limits_{j=0}^{N-2}t_{N+2-j}s_{j} & ...... & -\sum%
+\limits_{j=0}^{N-2}t_{2N-j}s_{j}
+\end{array}
+\right| .$
+
+\bigskip
+
+\qquad We continue this process. \ We multiply the third row by $\dfrac{s_{i}%
+}{s_{0}}$ and subtract it from the $\left( i+3\right) ^{rd}$ row for $1\leq
+i\leq N-2.$ \ Then we multiply the resulting fourth row by $\dfrac{s_{i}}{%
+s_{0}}$ and subtract it from the $\left( i+4\right) ^{th}$ row for $1\leq
+i\leq N-3$, \ etc. \ We find that
+
+\bigskip
+
+$S_{N}=\left| 
+\begin{array}{ccccc}
+s_{0} & 0 & 0 & ... & 0 \\ 
+(.) & -t_{2}s_{0} & -t_{3}s_{0} & ... & -t_{N+1}s_{0} \\ 
+(.) & -t_{3}s_{0} & -t_{4}s_{0} & ... & -t_{N+2}s_{0} \\ 
+\vdots & \vdots & \vdots & \ddots & \vdots \\ 
+(.) & -t_{N+1}s_{0} & -t_{N+2}s_{0} & ...... & -t_{2N}s_{0}
+\end{array}
+\right| =s_{0}^{N+1}\left( -1\right) ^{N}T_{N}.$
+
+$\blacksquare $
+
+\bigskip
+
+{\large Theorem 2}
+
+\qquad Let $S_{n}$, $T_{n}$, and the sequences $s_{n}$ and $t_{n}$ be as in
+the previous theorem and define
+
+\bigskip
+
+$\mathsf{S}_{N}\left( x\right) =\dfrac{1}{S_{N-1}}\left| 
+\begin{array}{cccc}
+s_{0} & s_{1} & ... & s_{N} \\ 
+s_{1} & s_{2} & ... & s_{N+1} \\ 
+\vdots & \vdots & \ddots & \vdots \\ 
+s_{N-1} & s_{N} & ... & s_{2N-1} \\ 
+1 & x & ... & x^{N}
+\end{array}
+\right| .$
+
+\bigskip
+
+\qquad Let
+
+\bigskip
+
+$\tau _{n}\left( x\right) =\dsum\limits_{j=0}^{n}t_{n-j}x^{j}.$
+
+\bigskip
+
+\qquad Then
+
+\bigskip
+
+$\mathsf{S}_{N}\left( x\right) =\dfrac{1}{T_{N-1}}\left| 
+\begin{array}{cccc}
+t_{2} & t_{3} & ... & t_{N+1} \\ 
+t_{3} & t_{4} & ... & t_{N+2} \\ 
+\vdots & \vdots & \ddots & \vdots \\ 
+t_{N} & t_{N+1} & ... & t_{2N-1} \\ 
+\tau _{1}\left( x\right) & \tau _{2}\left( x\right) & ... & \tau _{N}\left(
+x\right)
+\end{array}
+\right| .$
+
+\bigskip
+
+{\large Proof:}
+
+\qquad We proceed with the O-reduction as is Theorem 1. We carry out the
+column operations first.
+
+\bigskip
+
+$\mathsf{S}_{N}\left( x\right) =\dfrac{1}{S_{N-1}}\left| 
+\begin{array}{cccc}
+s_{0} & t_{1}s_{0}+t_{0}s_{1} & ... & \sum\limits_{j=0}^{N}t_{N-j}s_{j} \\ 
+s_{1} & t_{1}s_{1}+t_{0}s_{2} & ... & \sum\limits_{j=0}^{N}t_{N-j}s_{j+1} \\ 
+\vdots  & \vdots  & \ddots  & \vdots  \\ 
+s_{N-1} & t_{1}s_{N-1}+t_{0}s_{N} & ... & \sum%
+\limits_{j=0}^{N}t_{N-j}s_{j+N-1} \\ 
+1 & t_{1}+x & ... & \sum\limits_{j=0}^{N}t_{N-j}x^{j}
+\end{array}
+\right| .$
+
+\bigskip
+
+We now modify the row operations in the O-reduction by leaving the last row
+unaltered. \ We only treat the first $N$ rows. \ We find
+
+\bigskip
+
+$\mathsf{S}_{N}\left( x\right) =\dfrac{1}{S_{N-1}}\left| 
+\begin{array}{cccc}
+s_{0} & 0 & ... & 0 \\ 
+(.) & -t_{2}s_{0} & ... & -t_{N+1}s_{0} \\ 
+\vdots & \vdots & \ddots & \vdots \\ 
+(.) & -t_{N}s_{0} & ... & -t_{2N-1}s_{0} \\ 
+(.) & \tau _{1}\left( x\right) & ... & \tau _{N}\left( x\right)
+\end{array}
+\right| $
+
+\bigskip
+
+$=\dfrac{1}{S_{N-1}}s_{0}^{N}\left( -1\right) ^{N-1}\left| 
+\begin{array}{cccc}
+t_{2} & t_{3} & ... & t_{N+1} \\ 
+t_{3} & t_{4} & ... & t_{N+2} \\ 
+\vdots & \vdots & \ddots & \vdots \\ 
+t_{N} & t_{N+1} & ... & t_{2N-1} \\ 
+\tau _{1}\left( x\right) & \tau _{2}\left( x\right) & ... & \tau _{N}\left(
+x\right)
+\end{array}
+\right| $
+
+\bigskip
+
+=$\dfrac{1}{T_{N-1}}\left| 
+\begin{array}{cccc}
+t_{2} & t_{3} & ... & t_{N+1} \\ 
+t_{3} & t_{4} & ... & t_{N+2} \\ 
+\vdots & \vdots & \ddots & \vdots \\ 
+t_{N} & t_{N+1} & ... & t_{2N-1} \\ 
+\tau _{1}\left( x\right) & \tau _{2}\left( x\right) & ... & \tau _{N}\left(
+x\right)
+\end{array}
+\right| ,$
+
+\bigskip
+
+by Theorem 1.
+
+$\blacksquare $
+
+\bigskip \textbf{NOTE:} \ Strictly speaking, in the above definition we have
+to assume that $N>0,$ \ but here and in what follows, we adopt the
+convention that $\mathsf{S}_{0}\left( x\right) =1.$
+
+\bigskip
+
+\textbf{3. Some facts about the Little }$q$\textbf{-Jacobi polynomials.}
+
+\qquad A fairly full account of these polynomials is given in [3; sec. 7.3,
+pp.166-168]. Their moment generating function is given in [2; pp. 32-33]. \
+A nice summary of their properties and their relationships to other
+orthogonal polynomials of hypergeometric type is contained in the reference
+[4].
+
+\qquad The original polynomials were not monic, but we refer to deal with
+the monic polynomials, so we normalize them accordingly:
+
+\bigskip 
+
+\bigskip $\overline{p}\left( x;a;b;q\right) =\dsum\limits_{j=0}^{n}\QDATOPD[
+] {n}{j}\dfrac{\left( aq^{j+1};q\right) _{n-j}}{\left( bq^{n+j};q\right)
+_{n-j}}x^{j}q\,^{\tbinom{n-j}{2}}\left( -1\right) ^{n-j}.$
+
+\bigskip
+
+\qquad These polynomials are orthogonal with respect to a discrete
+distribution, consisting of weights $\omega _{i}$ at the points \ $q^{i},($ $%
+i=0,1,2,...),0<q<1,$with
+
+\bigskip
+
+$\omega _{i}=\dfrac{a^{i}q^{i}\left( q^{i+1};q\right) _{\infty }}{\left(
+bq^{i}/a;q\right) _{\infty }}.$
+
+\bigskip
+
+\qquad The $n$-th moment of this distribution is
+
+\bigskip
+
+$\dfrac{\left( q;q\right) _{\infty }\left( bq;q\right) _{\infty }}{\left(
+b/a;q\right) _{\infty }\left( aq;q\right) _{\infty }}\cdot \dfrac{\left(
+aq;q\right) _{n}}{\left( bq;q\right) _{n}}.$
+
+\bigskip
+
+\qquad We define a slightly modified moment by
+
+\bigskip
+
+$\mu _{n}\left( a,b\right) =\dfrac{\left( aq;q\right) _{n}}{\left(
+bq;q\right) _{n}},$
+
+\bigskip
+
+and
+
+\bigskip
+
+$M_{n}\left( a,b\right) =\left| 
+\begin{array}{cccc}
+\mu _{0}\left( a,b\right) & \mu _{1}\left( a,b\right) & ... & \mu _{n}\left(
+a,b\right) \\ 
+\mu _{1}\left( a,b\right) & \mu _{2}\left( a,b\right) & ... & \mu
+_{n+1}\left( a,b\right) \\ 
+\vdots & \vdots & \ddots & \vdots \\ 
+\mu _{n}\left( a,b\right) & \mu _{n+1}\left( a,b\right) & ... & \mu
+_{2n}\left( a,b\right)
+\end{array}
+\right| .$
+
+\bigskip
+
+We may then represent the $\overline{p}$ \ in terms of these moments as
+follows:
+
+\bigskip
+
+$\overline{p}_{n}\left( x;a;b;q\right) =\dfrac{1}{M_{n-1}\left( a,b\right) }%
+\left| 
+\begin{array}{cccc}
+\mu _{0}\left( a,b\right) & \mu _{1}\left( a,b\right) & ... & \mu _{n}\left(
+a,b\right) \\ 
+\mu _{1}\left( a,b\right) & \mu _{2}\left( a,b\right) & ... & \mu
+_{n+1}\left( a,b\right) \\ 
+\vdots & \vdots & \ddots & \vdots \\ 
+\begin{array}{c}
+\mu _{n-1}\left( a,b\right) \\ 
+1
+\end{array}
+& 
+\begin{array}{c}
+\mu _{n}\left( a,b\right) \\ 
+x
+\end{array}
+& 
+\begin{array}{c}
+... \\ 
+...
+\end{array}
+& 
+\begin{array}{c}
+\mu _{2n-1}\left( a,b\right) \\ 
+x^{n}
+\end{array}
+\end{array}
+\right| .$
+
+\bigskip
+
+\qquad We shall now apply our knowledge of the Little $q$-Jacobi polynomials
+plus Theorems 1 and 2 to the special case
+
+\bigskip
+
+$\dfrac{t}{\sum\limits_{n=0}^{\infty }\dfrac{t^{n}\left( a;q\right) _{n}}{%
+\left( b;q\right) _{n}}-1}=\dfrac{1}{\sum\limits_{n=1}^{\infty }\dfrac{%
+t^{n}\left( a;q\right) _{n+1}}{\left( b;q\right) _{n+1}}}:$ $%
+=\dsum\limits_{n=0}^{\infty }s_{n}t^{n}.$
+
+\bigskip
+
+Thus
+
+\bigskip
+
+$s_{0}=\dfrac{1-b}{1-a},$
+
+\bigskip
+
+and from the definition
+
+\bigskip
+
+$\dsum\limits_{j=0}^{n}\mu _{j}\left( a,b\right) s_{N-j}=\left\{ 
+\begin{array}{c}
+s_{0},\text{ \ }N=0; \\ 
+0,\text{  \ }N>0.
+\end{array}
+\right\} $
+
+\bigskip
+
+Thus Theorems 1 and 2 are applicable with $s_{n}$ as above and
+
+\bigskip
+
+$t_{n}=\mu _{n}\left( a,b\right) .$
+
+\bigskip
+
+\qquad We apply Theorem 2 to obtain a useful representation of $\mathsf{S}%
+_{N}\left( x\right) :$
+
+\bigskip
+
+$\mathsf{S}_{N}\left( x\right) =\dfrac{1}{T_{N-1}}\left| 
+\begin{array}{cccc}
+\mu _{2}\left( a,b\right) & \mu _{3}\left( a,b\right) & ... & \mu
+_{N+1}\left( a,b\right) \\ 
+\mu _{3}\left( a,b\right) & \mu _{4}\left( a,b\right) & ... & \mu
+_{N+2}\left( a,b\right) \\ 
+\vdots & \vdots & \ddots & \vdots \\ 
+\begin{array}{c}
+\mu _{N}\left( a,b\right) \\ 
+\tau _{1}\left( x\right)
+\end{array}
+& 
+\begin{array}{c}
+\mu _{N+1}\left( a,b\right) \\ 
+\tau _{2}\left( x\right)
+\end{array}
+& 
+\begin{array}{c}
+... \\ 
+...
+\end{array}
+& 
+\begin{array}{c}
+\mu _{2N-1}\left( a,b\right) \\ 
+\tau _{N}\left( x\right)
+\end{array}
+\end{array}
+\right| $
+
+\bigskip
+
+=$\dfrac{\left( 1-aq\right) ^{N-1}\left( 1-aq^{2}\right) ^{N-1}}{%
+T_{N-1}\left( 1-bq\right) ^{N-1}\left( 1-bq^{2}\right) ^{N-1}}$
+
+$\times \left| 
+\begin{array}{cccc}
+\mu _{0}\left( aq^{2},bq^{2}\right)  & \mu _{1}\left( aq^{2},bq^{2}\right) 
+& ... & \mu _{N-1}\left( aq^{2},bq^{2}\right)  \\ 
+\mu _{1}\left( aq^{2},bq^{2}\right)  & \mu _{2}\left( aq^{2},bq^{2}\right) 
+& ... & \mu _{N}\left( aq^{2},bq^{2}\right)  \\ 
+\vdots  & \vdots  & \ddots  & \vdots  \\ 
+\begin{array}{c}
+\mu _{N-2}\left( aq^{2},bq^{2}\right)  \\ 
+\tau _{1}\left( x\right) 
+\end{array}
+& 
+\begin{array}{c}
+\mu _{N-1}\left( aq^{2},bq^{2}\right)  \\ 
+\tau _{2}\left( x\right) 
+\end{array}
+& 
+\begin{array}{c}
+... \\ 
+...
+\end{array}
+& 
+\begin{array}{c}
+\mu _{2N-3}\left( aq^{2},bq^{2}\right)  \\ 
+\tau _{N}\left( x\right) 
+\end{array}
+\end{array}
+\right| $
+
+\bigskip
+
+$=\dfrac{\left( 1-aq\right) ^{N-1}\left( 1-aq^{2}\right) ^{N-1}}{%
+T_{N-1}\left( 1-bq\right) ^{N-1}\left( 1-bq^{2}\right) ^{N-1}}M_{N-2}\left(
+aq^{2},bq^{2}\right) $
+
+\bigskip $\times \dsum\limits_{j=0}^{N-1}\QDATOPD[ ] {N-1}{j}\dfrac{\left(
+aq^{j+3};q\right) _{N-1-j}}{\left( bq^{N+1+j};q\right) _{N-1-j}}\tau
+_{j+1}\left( x\right) q\,^{\tbinom{N-1-j}{2}}\left( -1\right) ^{N-1-j}.$
+
+\bigskip
+
+Finally we note that
+
+\bigskip
+
+$T_{N-1}=\left| 
+\begin{array}{cccc}
+t_{2} & t_{3} & .... & t_{N} \\ 
+t_{3} & t_{4} & .... & t_{N+1} \\ 
+\vdots & \vdots & \ddots & \vdots \\ 
+t_{N} & t_{N+1} & .... & t_{2N-2}
+\end{array}
+\right| =\left| 
+\begin{array}{cccc}
+\mu _{2}\left( a,b\right) & \mu _{3}\left( a,b\right) & ... & \mu _{N}\left(
+a,b\right) \\ 
+\mu _{3}\left( a,b\right) & \mu _{4}\left( a,b\right) & ... & \mu
+_{N+1}\left( a,b\right) \\ 
+\vdots & \vdots & \ddots & \vdots \\ 
+\mu _{N}\left( a,b\right) & \mu _{N+1}\left( a,b\right) & ... & \mu
+_{2N-2}\left( a,b\right)
+\end{array}
+\right| $
+
+\bigskip $=\dfrac{\left( 1-aq\right) ^{N-1}\left( 1-aq^{2}\right) ^{N-1}}{%
+\left( 1-bq\right) ^{N-1}\left( 1-bq^{2}\right) ^{N-1}}M_{N-2}\left(
+aq^{2},bq^{2}\right) .$
+
+\bigskip
+
+We have proved:
+
+\bigskip
+
+{\large Theorem 3.}
+
+\bigskip
+
+$\mathsf{S}_{N}\left( x\right) =\dsum\limits_{j=0}^{N-1}\QDATOPD[ ] {N-1}{j}%
+\dfrac{\left( aq^{j+3};q\right) _{N-1-j}}{\left( bq^{N+1+j};q\right) _{N-1-j}%
+}\tau _{j+1}\left( x\right) q\,^{\tbinom{N-1-j}{2}}\left( -1\right) ^{N-1-j},
+$ \ \ \ $N>0,$
+
+\bigskip 
+
+where
+
+\bigskip 
+
+$\tau _{n}\left( x\right) =\dsum\limits_{s=0}^{n}\dfrac{\left( aq;q\right)
+_{n-s}}{\left( bq;q\right) _{n-s}}x^{s}.$
+
+$\blacksquare $
+
+\bigskip {\large NOTE:} \ Recall our convention $\mathsf{S}_{0}\left(
+x\right) =1.$
+
+\qquad It follows from the work in [4, v. 2, section 10.3] and the
+definition in Theorem 2 that the polynomials $\mathsf{S}_{N}\left( x\right) $
+are orthogonal with respect to a distribution, namely, the one giving the
+moments $s_{n}.$ \ This distribution will be complex. \ In fact, the
+polynomials are orthogonal with respect to the distribution defined by
+
+\bigskip
+
+$L\left( h(z)\right) =\dfrac{1}{2\pi \text{i}}\doint h(z)\left( \dfrac{%
+f\left( \dfrac{1}{z}\right) }{z}\right) dz,$
+
+\bigskip
+
+where
+
+\bigskip
+
+$f(t)=\dfrac{1}{\sum\limits_{n=0}^{\infty }\dfrac{t^{n}\left( a;q\right)
+_{n+1}}{\left( b;q\right) _{n+1}}},$
+
+\bigskip
+
+and the path of integration is a simple closed curve encircling the origin
+which lies outside all singularities of the integrand. \ Thus the
+polynomials satisfy a three-term recurrence relation,
+
+\bigskip
+
+$\mathsf{S}_{N+1}\left( x\right) =\left( x+B_{N}\right) $ $\mathsf{S}%
+_{N}\left( x\right) -C_{N}$ $\mathsf{S}_{N-1}\left( x\right) .$
+
+\bigskip
+
+Our goal is to compute $B_{N}$ \ and $C_{N}.$ \ In order to do this we must
+compute $\alpha _{N}$ \ and $\beta _{N}$ \ in
+
+\bigskip
+
+$\mathsf{S}_{N}\left( x\right) =x^{N}+\alpha _{N}x^{N-1}+\beta
+_{N}x^{N-2}+...$ \ \ \ .
+
+\bigskip
+
+Comparing coefficients of $x^{N}$ gives
+
+\bigskip
+
+$B_{N}=\alpha _{N+1}-\alpha _{N},$
+
+\bigskip
+
+and comparing coefficients of $\ x^{N-1}$in the recurrence gives
+
+\bigskip
+
+$\beta _{N+1}=\beta _{N}+B_{N}\alpha _{N}-C_{N},$
+
+\bigskip
+
+so
+
+\bigskip
+
+$C_{N}=\beta _{N}-\beta _{N+1}+B_{N}\alpha _{N}.$
+
+\bigskip
+
+We have
+
+\bigskip
+
+$\mathsf{S}_{N}\left( x\right) =\tau _{N}\left( x\right) -\QDATOPD[ ] {N-1}{%
+N-2}\dfrac{\left( 1-aq^{N+1}\right) }{\left( 1-bq^{2N-1}\right) }\tau
+_{N-1}\left( x\right) $
+
+$+\QDATOPD[ ] {N-1}{N-3}\dfrac{\left( 1-aq^{N}\right) \left(
+1-aq^{N+1}\right) }{\left( 1-bq^{2N-2}\right) \left( 1-bq^{2N-1}\right) }%
+\tau _{N-2}\left( x\right) q+...$ \ \ \ \ 
+
+\bigskip $=\left\{ x^{N}+\dfrac{\left( 1-aq\right) }{\left( 1-bq\right) }%
+x^{N-1}+\dfrac{\left( 1-aq\right) }{\left( 1-bq\right) }\dfrac{\left(
+1-aq^{2}\right) }{\left( 1-bq^{2}\right) }x^{N-2}+...\right\} -\QDATOPD[ ] {%
+N-1}{1}\dfrac{\left( 1-aq^{N+1}\right) }{\left( 1-bq^{2N-1}\right) }$
+
+$\times \left\{ x^{N-1}+\dfrac{\left( 1-aq\right) }{\left( 1-bq\right) }%
+x^{N-2}+...\right\} +\QDATOPD[ ] {N-1}{2}\dfrac{\left( 1-aq^{N}\right) }{%
+\left( 1-bq^{2N-2}\right) }\dfrac{\left( 1-aq^{N+1}\right) q}{\left(
+1-bq^{2N-1}\right) }x^{N-2}+...$
+
+\bigskip
+
+Thus
+
+\bigskip
+
+$\alpha _{N}=\dfrac{\left( 1-aq\right) }{\left( 1-bq\right) }-\QDATOPD[ ] {%
+N-1}{1}\dfrac{\left( 1-aq^{N+1}\right) }{\left( 1-bq^{2N-1}\right) }.$
+
+\bigskip
+
+Returning to our expansion immediately above for $\mathsf{S}_{N}\left(
+x\right) $ \ we see that
+
+\bigskip
+
+$\beta _{N}=\dfrac{\left( 1-aq\right) \left( 1-aq^{2}\right) }{\left(
+1-bq\right) \left( 1-bq^{2}\right) }-\QDATOPD[ ] {N-1}{1}\dfrac{\left(
+1-aq\right) \left( 1-aq^{N+1}\right) }{\left( 1-bq\right) \left(
+1-bq^{2N-1}\right) }+\QDATOPD[ ] {N-1}{2}\dfrac{\left( 1-aq^{N}\right)
+\left( 1-aq^{N+1}\right) q}{\left( 1-bq^{2N-2}\right) \left(
+1-bq^{2N-1}\right) }.$
+
+\bigskip
+
+Using these expressions in the formulas for $B_{N}$ \ and $C_{N}$ and doing
+some fearsome algebraic rearranging and simplification give
+
+\bigskip
+
+{\large Theorem 4.}
+
+\bigskip \qquad In the three-term recurrence
+
+\bigskip
+
+$\mathsf{S}_{N+1}\left( x\right) =\left( x+B_{N}\right) $ $\mathsf{S}%
+_{N}\left( x\right) -C_{N}$ $\mathsf{S}_{N-1}\left( x\right) ,$
+
+\bigskip
+
+we have
+
+\bigskip
+
+$B_{N}=\dfrac{-q^{N-1}\left( 1-aq^{N+1}\right) \left( 1-bq^{N+1}\right)
+-q^{2}\left( a-bq^{N-2}\right) \left( 1-q^{N}\right) }{\left(
+1-bq^{2N-1}\right) \left( 1-bq^{2N+1}\right) };$
+
+\bigskip
+
+$C_{N}=\dfrac{q^{2N-1}\left( 1-q^{N-1}\right) \left( 1-aq^{N+1}\right)
+\left( 1-bq^{N}\right) \left( a-bq^{N-2}\right) }{\left( 1-bq^{2N-2}\right)
+\left( 1-bq^{2N-1}\right) ^{2}\left( 1-bq^{2N}\right) },$ \ $N>1;$
+
+\bigskip $C_{1}=-\dfrac{\left( 1-aq\right) \left( 1-aq^{2}\right) }{\left(
+1-bq\right) \left( 1-bq^{2}\right) }.$
+
+$\blacksquare $
+
+{\large NOTE:} \ $\mathsf{S}_{N}\left( x\right) $ gives an explicit
+evaluation of these polynomials. \ The formula for $C_{1}$ is obtained by a
+direct computation.
+
+\bigskip 
+
+{\large Corollary 1.}
+
+\qquad Let
+
+\bigskip 
+
+$f(t)=\dfrac{t}{\sum\limits_{n=0}^{\infty }\dfrac{t^{n}\left( a\right) _{n}}{%
+\left( b\right) _{n}}-1}=\dfrac{t}{_{2}F_{1}\left( a,1;b;t\right) -1}%
+=\dsum\limits_{n=0}^{\infty }s_{n}t^{n},$
+
+\bigskip 
+
+where we have used the standard notation for the symbol $\left( A\right) _{n}
+$ and the Gaussian hypergeometric function $_{2}F_{1}.$
+
+\qquad\ Then the coefficients in the recurrence relation satisfied by the
+polynomials in Theorem 4 are given by
+
+\bigskip 
+
+$B_{N}=-\dfrac{(a+1)(b+1)+2N(N+b)}{(b+2N-1)(b+2N+1)};$ \ \ \ \ $C_{N}=\dfrac{%
+(N-1)(a+N+1)(b+N)(N+b-a-2)}{(b+2N-2)(b+2N-1)^{2}(b+2N)},$ $N>1;$
+
+\bigskip $C_{1}=-\dfrac{(a+1)(a+2)}{(b+1)(b+2)}.$
+
+\bigskip 
+
+{\large Proof:}
+
+\qquad\ In Theorem 4 we let $a\rightarrow q^{a},b\rightarrow q^{b},$and take
+the limit as $q\rightarrow 1.$
+
+\bigskip 
+
+{\large Corollary 2.}
+
+\qquad Let
+
+\bigskip 
+
+$f(t)=\dfrac{1}{\Gamma \left( \nu +1\right) t^{-\nu /2}I_{\nu }\left( 2\sqrt{%
+t}\right) -1}=\dsum\limits_{n=0}^{\infty }s_{n}t^{n},$
+
+\bigskip 
+
+\ Then the polynomials $\mathsf{S}_{N}\left( x\right) $ satisfy a three term
+recurrence with
+
+\bigskip 
+
+$B_{N}=-\dfrac{\left( \nu +2\right) }{2(\nu +2N)(\nu +2N+2)};$ \ \ \ \ $%
+C_{N}=-\dfrac{(N-1)(\nu +N+1)}{(\nu +2N-1)(\nu +2N)^{2}(\nu +2N+1)},$ $N>1;$
+
+\bigskip $C_{1}=-\dfrac{1}{(\nu +2)(\nu +3)}.$
+
+\bigskip 
+
+{\large Proof:}
+
+\ \ \ In the previous corollary we replace $t$ by $t/a$ \  and let $%
+a\rightarrow \infty .$ \ To obtain the formula for $S_{N},$we use the fact
+that 
+
+\bigskip 
+
+$\left| a^{-i-j}s_{i+j}\right| _{i,j=0..n}=a^{-n(n+1)}\left| s_{i+j}\right|
+_{i,j=0..n}.$
+
+$\blacksquare $
+
+{\large Corollary 3.}
+
+\bigskip \qquad Let
+
+$\bigskip $
+
+$f(t)=\dfrac{t}{\text{e}^{t}-1}=\dsum\limits_{n=0}^{\infty }s_{n}t^{n},$
+
+\bigskip 
+
+so that
+
+\bigskip 
+
+$s_{n}=\dfrac{B_{n}}{n!},$
+
+\bigskip 
+
+the $B_{n}$ denoting the Bernoulli numbers in the standard notation. \ Then
+the polynomials
+
+\bigskip 
+
+$\mathsf{S}_{N}\left( x\right) =\dfrac{1}{S_{N-1}}\left| 
+\begin{array}{cccc}
+B_{0} & B_{1}/1! & ... & B_{N}/N! \\ 
+B_{1}/1! & B_{2}/2! & ... & B_{N+1}/(N+1)! \\ 
+\vdots  & \vdots  & \ddots  & \vdots  \\ 
+B_{N-1}/(N-1)! & B_{N}/N! & ... & B_{2N-1}/(2N-1)! \\ 
+1 & x & ... & x^{N}
+\end{array}
+\right| $
+
+\bigskip 
+
+are orthogonal with respect to the distribution defined by
+
+\bigskip 
+
+$L\left( h(z)\right) =\doint h(z)\left( \dfrac{z^{-2}}{\text{e}^{1/z}-1}%
+\right) dz,$
+
+\bigskip 
+
+the path of integration being a circle with center 0, radius $>\dfrac{1}{%
+2\pi }$, and the coefficients in the recurrence
+
+\bigskip are given by 
+
+\bigskip 
+
+$B_{N}=-\dfrac{1}{2N\left( N+1\right) };$ \ \ \ \ $C_{N}=-\dfrac{N^{2}-1}{%
+4N^{2}\left( 4N^{2}-1\right) },$ \ $N>1;$ \ $C_{1}=-\dfrac{1}{6}.$
+
+\bigskip 
+
+Furthermore
+
+\bigskip 
+
+$S_{N}=\left| 
+\begin{array}{cccc}
+B_{0} & B_{1}/1! & .... & B_{N}/N! \\ 
+B_{1}/1! & B_{2}/2! & .... & B_{N+1}/(N+!)! \\ 
+\vdots  & \vdots  & \ddots  & \vdots  \\ 
+B_{N}/N! & B_{N+1}/(N+1)! & .... & B_{2N}/(2N)!
+\end{array}
+\right| =\left( \dfrac{1}{6}\right) ^{N}\left( -1\right)
+^{N(N+1)/2}\dsum\limits_{j=2}^{N}\left[ \dfrac{j^{2}-1}{4j^{2}\left(
+4j^{2}-1\right) }\right] ^{N+1-j}$
+
+\bigskip {\large Proof:}
+
+\ \ \ We put $b=1$ in the previous Corollary and use the formula for $S_{N}$
+in section 1.
+
+$\blacksquare $
+
+\bigskip We make no claims that the above determinant involving the
+Bernoulli numbers is new, since it seems that almost any fact about the
+Bernoulli numbers can be found somewhere in the literature.
+
+\bigskip 
+
+\begin{center}
+{\large REFERENCES}
+\end{center}
+
+1. \ A. Erd\'{e}lyi et al, Higher transcendental functions, McGraw-Hill, New
+York (1953).
+
+2. N. J. Fine, Basic hypergeometric functions and applications, Amer. Math.
+Soc, Providence, RI (1988).
+
+3.G. Gasper and M. Rahman, Basic hypergeometric series, Cambridge University
+Press, Cambridge, UK (1990).
+
+4. R. Koekoek and R. F. Swarttouw, The Askey-scheme of hypergeometric
+orthogonal polynomials and its $q$-analog, Report 98-17,  Technische
+Universiteit Delft, Delft, The Netherlands (1998).
+
+\bigskip 
+
+\bigskip 
+
+\bigskip
+
+\bigskip
+
+\bigskip
+
+\bigskip
+
+\bigskip
+
+\bigskip
+
+\bigskip
+
+\bigskip
+
+\bigskip
+
+\bigskip
+
+\bigskip
+
+\end{document}

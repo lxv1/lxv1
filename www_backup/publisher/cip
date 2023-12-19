@@ -1,0 +1,132 @@
+   \hsize=4.5 true in
+  \vsize=7.5 true in
+% \magnification=1000
+\font\sm=cmbr9
+% at 18truept
+
+\parindent=0pt
+\headline=
+{\it Library of Congress Cataloging-in-Publication Data\hfill}
+\vskip-10pt
+\sm
+ \ Vaserstein, Leonid, N.
+
+  \ \    Introduction to linear programming/Leonid Nison Vaserstein in collaboration 
+
+  \ \ with   Christopher Cattelier Byrne.
+
+  \hskip1in	p.    cm. 
+
+   \ \   Includes bibliographical references and index
+
+  \ \    ISBN 0-13-035917-3
+\smallskip
+  \ \    1. Linear programming. I. Byrne, Christopher Cattelier.  II. Title
+\smallskip
+T57.74 . V365 2003	\hskip1in		2002070164
+
+519.7'2 --dc21			
+\smallskip
+
+
+Acquisitions Editor: {\it George Lobell}
+
+Editor in Chief: {\it  Sally Yagan}
+
+Production Editor: {\it  Lynn Savino Wendel}
+
+Vice President/Director of Production and Manufacturing: {\it  David W. Riccardi}
+
+Senior Managing Editor: {\it  Linda Mihatov Behrens}
+
+Assistant Managing Editor: {\it  Bayani Mendoza DeLeon}
+
+Executive Managing Editor: {\it  Kathleen Schiaparelli}
+
+Manufacturing Buyer: {\it  Michael Bell}
+
+Manufacturing Manager: {\it  Trudy Pisciotti}
+
+Editorial Assistant: {\it  Jennifer Brady}
+
+Marketing Manager: {\it  Halee Dinsey}
+
+Marketing Assistant: {\it  Rachel Beckman}
+
+Art Director: {\it  Jayne Conte}
+
+Cover Designer: {\it Kiwi Designs}
+
+Cover Photo Credits: {\it Vasily Kandinsky}  ``Points'' 1935, oil and lacquer on canvas, 
+
+\vskip-1pt
+ 32 in. $\times$ 39 3/8 in. (81.28 cm $\times$ 100.01 cm), Verso in black paint: K/No. 621/
+
+\vskip-1pt
+1935;
+  Recto lower left in grey 79-6.2. Long Beach Museum of Art , The Milton
+
+\vskip-1pt
+  Wichner Collection. \copyright\ 2002 Artists Rights Society (ARS), New York/ADAGP, 
+
+\vskip-1pt
+Paris.
+
+
+\smallskip
+\nopagenumbers % supress footlines
+\input psfig
+ 
+\psfig{figure=logomath..eps,height=1.5cm,width=2.3cm}
+%$$\psfig{figure=logomath.eps,height=1cm,width=0.5cm}$$
+\vskip-0.55in
+
+\hskip1.1in \copyright \ 2003 by Pearson Education, Inc.
+
+\hskip1.1in  Pearson Education, Inc.
+
+\hskip1.1in Upper Saddle River, New Jersey 07458
+\smallskip
+
+
+All rights reserved. No part of this book may be 
+reproduced, in any form or by any means,
+without permission in writing from the publisher.
+\smallskip
+
+Printed in the United States of America
+\smallskip
+10 9  8  7  6  5  4  3  2  1
+\smallskip
+ 
+
+
+ISBN 0-13-035917-3
+\smallskip
+
+
+Pearson Education, Ltd., London
+
+\vskip-1pt
+Pearson Education Australia Pty. Limited, Sydney
+
+\vskip-1pt
+Pearson Education Singapore, Pte., Ltd
+
+\vskip-1pt
+Pearson Education North Asia Ltd, Hong Kong
+
+\vskip-1pt
+Pearson Education Canada, Ltd., Toronto
+
+\vskip-1pt
+Pearson Educacion de Mexico, S.A. de C.V.
+
+\vskip-1pt
+Pearson Education -- Japan, Tokyo
+
+\vskip-1pt
+Pearson Education Malaysia, Pte. Ltd
+
+\parindent=20pt
+\end

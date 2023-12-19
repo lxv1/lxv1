@@ -1,0 +1,511 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="1265.21">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 12.0px 0.0px; font: 17.0px Times}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 17.0px Times}
+    p.p3 {margin: 0.0px 0.0px 0.0px 0.0px; font: 16.0px Times}
+    p.p4 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times}
+    p.p5 {margin: 0.0px 0.0px 0.0px 0.0px; font: 22.0px Times; min-height: 28.0px}
+    p.p6 {margin: 0.0px 0.0px 0.0px 0.0px; font: 19.0px Times}
+    p.p7 {margin: 0.0px 0.0px 0.0px 0.0px; font: 19.0px Times; min-height: 23.0px}
+    p.p8 {margin: 0.0px 0.0px 0.0px 0.0px; font: 19.0px Courier}
+    p.p9 {margin: 0.0px 0.0px 0.0px 0.0px; font: 16.0px Times; min-height: 19.0px}
+    p.p10 {margin: 0.0px 0.0px 0.0px 0.0px; font: 17.0px Times; min-height: 20.0px}
+    p.p11 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; min-height: 14.0px}
+    span.s1 {font: 17.0px 'Lucida Grande'}
+    span.s2 {font: 16.0px Symbol}
+    span.s3 {text-decoration: underline}
+    span.s4 {font: 3.0px Times}
+    span.s5 {font: 14.0px Times}
+    span.s6 {font: 4.0px Times}
+    span.s7 {font: 8.0px Times}
+    table.t1 {border-collapse: collapse}
+    td.td1 {width: 18.0px; border-style: solid; border-width: 1.0px 1.0px 1.0px 1.0px; border-color: #cbcbcb #cbcbcb #cbcbcb #cbcbcb; padding: 0.0px 5.0px 0.0px 5.0px}
+    td.td2 {width: 14.0px; border-style: solid; border-width: 1.0px 1.0px 1.0px 1.0px; border-color: #cbcbcb #cbcbcb #cbcbcb #cbcbcb; padding: 0.0px 5.0px 0.0px 5.0px}
+    td.td3 {width: 15.0px; border-style: solid; border-width: 1.0px 1.0px 1.0px 1.0px; border-color: #cbcbcb #cbcbcb #cbcbcb #cbcbcb; padding: 0.0px 5.0px 0.0px 5.0px}
+    td.td4 {width: 12.0px; border-style: solid; border-width: 1.0px 1.0px 1.0px 1.0px; border-color: #cbcbcb #cbcbcb #cbcbcb #cbcbcb; padding: 0.0px 5.0px 0.0px 5.0px}
+    td.td5 {width: 9.0px; border-style: solid; border-width: 1.0px 1.0px 1.0px 1.0px; border-color: #cbcbcb #cbcbcb #cbcbcb #cbcbcb; padding: 0.0px 5.0px 0.0px 5.0px}
+    td.td6 {width: 11.0px; border-style: solid; border-width: 1.0px 1.0px 1.0px 1.0px; border-color: #cbcbcb #cbcbcb #cbcbcb #cbcbcb; padding: 0.0px 5.0px 0.0px 5.0px}
+    td.td7 {width: 37.0px; border-style: solid; border-width: 1.0px 1.0px 1.0px 1.0px; border-color: #cbcbcb #cbcbcb #cbcbcb #cbcbcb; padding: 0.0px 5.0px 0.0px 5.0px}
+    td.td8 {width: 38.0px; border-style: solid; border-width: 1.0px 1.0px 1.0px 1.0px; border-color: #cbcbcb #cbcbcb #cbcbcb #cbcbcb; padding: 0.0px 5.0px 0.0px 5.0px}
+    td.td9 {width: 48.0px; border-style: solid; border-width: 1.0px 1.0px 1.0px 1.0px; border-color: #cbcbcb #cbcbcb #cbcbcb #cbcbcb; padding: 0.0px 5.0px 0.0px 5.0px}
+    td.td10 {width: 20.0px; border-style: solid; border-width: 1.0px 1.0px 1.0px 1.0px; border-color: #cbcbcb #cbcbcb #cbcbcb #cbcbcb; padding: 0.0px 5.0px 0.0px 5.0px}
+    td.td11 {width: 19.0px; border-style: solid; border-width: 1.0px 1.0px 1.0px 1.0px; border-color: #cbcbcb #cbcbcb #cbcbcb #cbcbcb; padding: 0.0px 5.0px 0.0px 5.0px}
+    td.td12 {width: 17.0px; border-style: solid; border-width: 1.0px 1.0px 1.0px 1.0px; border-color: #cbcbcb #cbcbcb #cbcbcb #cbcbcb; padding: 0.0px 5.0px 0.0px 5.0px}
+    td.td13 {width: 24.0px; border-style: solid; border-width: 1.0px 1.0px 1.0px 1.0px; border-color: #cbcbcb #cbcbcb #cbcbcb #cbcbcb; padding: 0.0px 5.0px 0.0px 5.0px}
+  </style>
+</head>
+<body>
+<p class="p1">Math 484.2.  Dec. 4, 2014.   Midterm 2.  <span class="s1"><br>
+</span>15 problems, 5 pts each. <span class="Apple-converted-space">  </span>Write your name here ____________________________  </p>
+<p class="p2">Return the scantron and this<span class="Apple-converted-space">  </span>page with both answers and details</p>
+<p class="p3">(how you got your answers). Do not talk with other students in class even after finishing your midterm.</p>
+<p class="p4">If you do not like the given answers, explain why here and choose (E) at scantron.</p>
+<p class="p5"><br></p>
+<p class="p6">26. The minimal value for the job assignment problem</p>
+<p class="p7"><br></p>
+<p class="p8">2<span class="Apple-converted-space">  </span>1<span class="Apple-converted-space">  </span>2<span class="Apple-converted-space">  </span>1</p>
+<p class="p8">1<span class="Apple-converted-space">  </span>3<span class="Apple-converted-space">  </span>0<span class="Apple-converted-space">  </span>1</p>
+<p class="p8">1<span class="Apple-converted-space">  </span>0<span class="Apple-converted-space">  </span>1<span class="Apple-converted-space">  </span>0</p>
+<p class="p8">3<span class="Apple-converted-space">  </span>0<span class="Apple-converted-space">  </span>0<span class="Apple-converted-space">  </span>2</p>
+<p class="p7"><br></p>
+<p class="p6">is (A) 0, (B) 2, (C) 4, (D) 6.</p>
+<p class="p7"><br></p>
+<p class="p6"><b>Solution.</b> Subtract 1 from the first row and column:</p>
+<p class="p8">0<span class="Apple-converted-space">  </span>0<span class="Apple-converted-space">  </span>1<span class="Apple-converted-space">  </span>0</p>
+<p class="p8">0<span class="Apple-converted-space">  </span>3<span class="Apple-converted-space">  </span>0<span class="Apple-converted-space">  </span>1</p>
+<p class="p8">0<span class="Apple-converted-space">  </span>0<span class="Apple-converted-space">  </span>1<span class="Apple-converted-space">  </span>0</p>
+<p class="p8">2<span class="Apple-converted-space">  </span>0<span class="Apple-converted-space">  </span>0<span class="Apple-converted-space">  </span>2</p>
+<p class="p6">Mow we can place the flow at positions with zero cost:</p>
+<p class="p7"><br></p>
+<p class="p8">0<span class="Apple-converted-space">  </span>0*<span class="Apple-converted-space">  </span>1<span class="Apple-converted-space">  </span>0</p>
+<p class="p8">0* 3 <span class="Apple-converted-space">  </span>0<span class="Apple-converted-space">  </span>1</p>
+<p class="p8">0<span class="Apple-converted-space">  </span>0 <span class="Apple-converted-space">  </span>1<span class="Apple-converted-space">  </span>0*</p>
+<p class="p8">2<span class="Apple-converted-space">  </span>0 <span class="Apple-converted-space">  </span>0* 2</p>
+<p class="p6">so min = 0. For the original problem, min = 2. (B).</p>
+<p class="p7"><br></p>
+<p class="p7"><br></p>
+<p class="p6">27. The minimal value for the transportation<span class="Apple-converted-space">  </span>problem</p>
+<p class="p6"><span class="Apple-converted-space">                                           </span>supply</p>
+<p class="p8">2<span class="Apple-converted-space">  </span>1<span class="Apple-converted-space">  </span>2<span class="Apple-converted-space">  </span>1<span class="Apple-converted-space">  </span>2<span class="Apple-converted-space">  </span>5 <span class="Apple-converted-space">  </span>1<span class="Apple-converted-space"> </span></p>
+<p class="p8">1<span class="Apple-converted-space">  </span>3<span class="Apple-converted-space">  </span>0<span class="Apple-converted-space">  </span>1<span class="Apple-converted-space">  </span>3<span class="Apple-converted-space">  </span>5 <span class="Apple-converted-space">  </span>1</p>
+<p class="p8">1<span class="Apple-converted-space">  </span>0<span class="Apple-converted-space">  </span>1<span class="Apple-converted-space">  </span>0<span class="Apple-converted-space">  </span>4<span class="Apple-converted-space">  </span>5 <span class="Apple-converted-space">  </span>1</p>
+<p class="p8">3<span class="Apple-converted-space">  </span>0<span class="Apple-converted-space">  </span>0<span class="Apple-converted-space">  </span>2<span class="Apple-converted-space">  </span>1<span class="Apple-converted-space">  </span>5 <span class="Apple-converted-space">  </span>1</p>
+<p class="p6">1 <span class="Apple-converted-space">    </span>1<span class="Apple-converted-space">      </span>1 <span class="Apple-converted-space">    </span>1<span class="Apple-converted-space">      </span>0 <span class="Apple-converted-space">    </span>0<span class="Apple-converted-space">      </span><span class="s2">←<span class="Apple-converted-space"> </span></span> demand</p>
+<p class="p7"><br></p>
+<p class="p6">is (A) 0, (B) 2, (C) 4, (D) 6.</p>
+<p class="p7"><br></p>
+<p class="p6"><b>Solution.</b> The flow in the last two columns is zero, so we are back to Problem 26. (B).</p>
+<p class="p7"><br></p>
+<p class="p6">28. For any numbers a, b, the system<span class="Apple-converted-space">  </span>x = a, x = b of two linear equations with one unknown x has no solutions.</p>
+<p class="p6">(A) true, (B) false.</p>
+<p class="p7"><br></p>
+<p class="p6"><b>Solution.</b> This is false when a = b =0. (B).</p>
+<p class="p7"><br></p>
+<p class="p3">29. An optimal solution (a, b, c, d)<span class="Apple-converted-space">  </span>for the linear program given by the standard<span class="Apple-converted-space">  </span>4 by 5 row tableau</p>
+<p class="p9"><br></p>
+<p class="p3"><span class="s3">a</span><span class="Apple-converted-space">  </span><span class="s3">b</span><span class="Apple-converted-space">  </span><span class="s3">c</span><span class="Apple-converted-space">  </span><span class="s3">d </span><span class="Apple-converted-space">    </span><span class="s3">1</span></p>
+<p class="p3">1<span class="Apple-converted-space">  </span>0 -1<span class="Apple-converted-space">  </span>2 <span class="Apple-converted-space">  </span>-1</p>
+<p class="p3">1 1 <span class="Apple-converted-space">  </span>1<span class="Apple-converted-space">  </span>1<span class="Apple-converted-space">  </span>-10</p>
+<p class="p3">-1 0 1 <span class="Apple-converted-space">  </span>0<span class="Apple-converted-space">    </span>-1</p>
+<p class="p3"><span class="Apple-converted-space"> </span>2<span class="Apple-converted-space">  </span>1<span class="Apple-converted-space">  </span>2 <span class="Apple-converted-space">  </span>1<span class="Apple-converted-space">    </span>9 -&gt; min</p>
+<p class="p9"><br></p>
+<p class="p3">is<span class="Apple-converted-space">    </span>(A) (1, 1, 1, 1), (B) (-1, 0, 1, 1), (C) (1,2, 3, 4), (D)<span class="Apple-converted-space">  </span>(0, 0, 0, 0).</p>
+<p class="p7"><br></p>
+<p class="p6"><b>Solution.</b><span class="Apple-converted-space">  </span>(A), (B) and (D) are not feasible.</p>
+<p class="p6">For (C),</p>
+<p class="p7"><br></p>
+<p class="p6">1 <span class="Apple-converted-space">  </span>2<span class="Apple-converted-space">  </span>3<span class="Apple-converted-space">  </span>4 <span class="Apple-converted-space">    </span>1</p>
+<p class="p6">1 <span class="Apple-converted-space">  </span>0 -1<span class="Apple-converted-space">  </span>2 <span class="Apple-converted-space">  </span>-1 = 5</p>
+<p class="p6">1 <span class="Apple-converted-space">  </span>1 <span class="Apple-converted-space">  </span>1<span class="Apple-converted-space">  </span>1<span class="Apple-converted-space">  </span>-10 = 0</p>
+<p class="p6">-1<span class="Apple-converted-space">  </span>0<span class="Apple-converted-space">  </span>1 <span class="Apple-converted-space">  </span>0<span class="Apple-converted-space">    </span>-1 = 1</p>
+<p class="p6"><span class="Apple-converted-space">  </span>2 <span class="Apple-converted-space">  </span>1 2<span class="Apple-converted-space">  </span>1<span class="Apple-converted-space">      </span>9 -&gt; min</p>
+<p class="p7"><br></p>
+<p class="p6">so (C) is feasible. For the dual variables<span class="Apple-converted-space"> </span></p>
+<p class="p7"><br></p>
+<p class="p6">0 <span class="Apple-converted-space">    </span>1 <span class="Apple-converted-space">  </span>0<span class="Apple-converted-space">  </span>-1<span class="Apple-converted-space">  </span>2 <span class="Apple-converted-space">  </span>-1 = 5</p>
+<p class="p6">-x2<span class="Apple-converted-space">  </span>1<span class="Apple-converted-space">  </span>1<span class="Apple-converted-space">    </span>1<span class="Apple-converted-space">  </span>1<span class="Apple-converted-space">  </span>-10 = 0</p>
+<p class="p6">0 <span class="Apple-converted-space">  </span>-1 <span class="Apple-converted-space">  </span>0 <span class="Apple-converted-space">  </span>1<span class="Apple-converted-space">  </span>0<span class="Apple-converted-space">    </span>-1 = 1</p>
+<p class="p6">1 <span class="Apple-converted-space">    </span>2<span class="Apple-converted-space">    </span>1 <span class="Apple-converted-space">  </span>2<span class="Apple-converted-space">  </span>1<span class="Apple-converted-space">    </span>9 -&gt; min</p>
+<p class="p6"><span class="Apple-converted-space">     </span>=0<span class="Apple-converted-space">  </span>=0<span class="Apple-converted-space">  </span>=0 =0</p>
+<p class="p7"><br></p>
+<p class="p6">we have<span class="Apple-converted-space">  </span>-x2<span class="Apple-converted-space">  </span>+ 2 = 0,<span class="Apple-converted-space">  </span>-x2 <span class="Apple-converted-space">  </span>+ 1 = 0,<span class="Apple-converted-space"> </span></p>
+<p class="p6">hence 0= 1. So there is no complementary feasible solution, hence (C) is not optimal.<span class="Apple-converted-space">  </span>(E).</p>
+<p class="p7"><br></p>
+<p class="p7"><br></p>
+<p class="p3">30 An optimal solution (a, b, c, d)<span class="Apple-converted-space">  </span>for the linear program given by the standard<span class="Apple-converted-space">  </span>row<span class="Apple-converted-space">  </span>4 by 5 row tableau</p>
+<p class="p9"><br></p>
+<p class="p3"><span class="s3">a</span><span class="Apple-converted-space">  </span><span class="s3">b</span><span class="Apple-converted-space">  </span><span class="s3">c</span><span class="Apple-converted-space">  </span><span class="s3">d </span><span class="Apple-converted-space">    </span><span class="s3">1</span></p>
+<p class="p3">1<span class="Apple-converted-space">  </span>0 -1<span class="Apple-converted-space">  </span>2<span class="Apple-converted-space">    </span>1</p>
+<p class="p3">1 1 <span class="Apple-converted-space">  </span>1<span class="Apple-converted-space">  </span>1<span class="Apple-converted-space">  </span>10</p>
+<p class="p3">-1 0 1 <span class="Apple-converted-space">  </span>1<span class="Apple-converted-space">    </span>1</p>
+<p class="p3"><span class="Apple-converted-space"> </span>2<span class="Apple-converted-space">  </span>1<span class="Apple-converted-space">  </span>2 -1 <span class="Apple-converted-space">  </span>9 -&gt; min</p>
+<p class="p9"><br></p>
+<p class="p3">is <span class="Apple-converted-space">  </span>(A) (1, 1, 1, 1), (B) (-1, 0, 1, 1), (C) (1,2, 3, 4), (D)<span class="Apple-converted-space">  </span>(0, 0, 0, 0).</p>
+<p class="p7"><br></p>
+<p class="p6"><b>Solution.</b><span class="Apple-converted-space">  </span>The tableau is row<span class="Apple-converted-space">  </span>feasible and d-column is bad, so there are no optimal solutions (for both row and column problems). (E).</p>
+<p class="p5"><br></p>
+<p class="p2">31.<span class="Apple-converted-space">  </span>The value of the matrix game<span class="Apple-converted-space">  </span>with payoff matrix</p>
+<p class="p10"><br></p>
+<table cellspacing="0" cellpadding="0" class="t1">
+  <tbody>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p2">1</p>
+      </td>
+      <td valign="middle" class="td2">
+        <p class="p2">5</p>
+      </td>
+      <td valign="middle" class="td3">
+        <p class="p2">0</p>
+      </td>
+      <td valign="middle" class="td2">
+        <p class="p2">4</p>
+      </td>
+      <td valign="middle" class="td4">
+        <p class="p2">1</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p2">6</p>
+      </td>
+      <td valign="middle" class="td2">
+        <p class="p2">0</p>
+      </td>
+      <td valign="middle" class="td3">
+        <p class="p2">5</p>
+      </td>
+      <td valign="middle" class="td2">
+        <p class="p2">1</p>
+      </td>
+      <td valign="middle" class="td4">
+        <p class="p2">5</p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<p class="p10"><br></p>
+<p class="p2">is<span class="Apple-converted-space">  </span>(A) 2.5, (B) 28/9,<span class="Apple-converted-space">  </span>(C) <span class="Apple-converted-space">  </span>11/3,<span class="Apple-converted-space">  </span>(D) 25/9.</p>
+<p class="p10"><br></p>
+<p class="p2"><b>Solution</b>. The first and last columns go by domination:</p>
+<p class="p10"><br></p>
+<table cellspacing="0" cellpadding="0" class="t1">
+  <tbody>
+    <tr>
+      <td valign="middle" class="td2">
+        <p class="p2">5</p>
+      </td>
+      <td valign="middle" class="td5">
+        <p class="p2">0</p>
+      </td>
+      <td valign="middle" class="td6">
+        <p class="p2">4</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td2">
+        <p class="p2">0</p>
+      </td>
+      <td valign="middle" class="td5">
+        <p class="p2">5</p>
+      </td>
+      <td valign="middle" class="td6">
+        <p class="p2">1</p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<p class="p10"><br></p>
+<p class="p2">By graphical method, we find an equilibrium</p>
+<p class="p2">(p, q) = ([1, 1]<span class="s4"><sup>T</sup></span>/9, [1, 1, 0]/2) with the value of game 2.5:</p>
+<p class="p10"><br></p>
+<table cellspacing="0" cellpadding="0" class="t1">
+  <tbody>
+    <tr>
+      <td valign="middle" class="td7">
+        <p class="p2">5</p>
+      </td>
+      <td valign="middle" class="td7">
+        <p class="p2">4</p>
+      </td>
+      <td valign="middle" class="td8">
+        <p class="p2">1</p>
+      </td>
+      <td valign="middle" class="td9">
+        <p class="p2">2.5*</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td7">
+        <p class="p2">0</p>
+      </td>
+      <td valign="middle" class="td7">
+        <p class="p2">2</p>
+      </td>
+      <td valign="middle" class="td8">
+        <p class="p2">5</p>
+      </td>
+      <td valign="middle" class="td9">
+        <p class="p2">2.5*</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td7">
+        <p class="p2">2.5’</p>
+      </td>
+      <td valign="middle" class="td7">
+        <p class="p2">2.5’</p>
+      </td>
+      <td valign="middle" class="td8">
+        <p class="p2">2.5’</p>
+      </td>
+      <td valign="middle" class="td9">
+        <p class="p2">2.5*'</p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<p class="p10"><br></p>
+<p class="p2">where p and q are added as the last row and the last column. (A)</p>
+<p class="p10"><br></p>
+<p class="p10"><br></p>
+<p class="p2">32.<span class="Apple-converted-space">  </span>Consider the matrix game with payoff matrix</p>
+<p class="p2">0<span class="Apple-converted-space">  </span>-2 <span class="Apple-converted-space">  </span>1<span class="Apple-converted-space">  </span>1</p>
+<p class="p2">2 <span class="Apple-converted-space">  </span>0<span class="Apple-converted-space">  </span>-3<span class="Apple-converted-space">  </span>1</p>
+<p class="p2">-1<span class="Apple-converted-space">  </span>3 <span class="Apple-converted-space">  </span>0 -1</p>
+<p class="p2">An optimal strategy for the column player is</p>
+<p class="p2">(A) [3, 1, 2, 0]/6,<span class="Apple-converted-space">  </span>(B)<span class="Apple-converted-space">  </span>[0, 1, 2, 1]/4 ,<span class="Apple-converted-space">    </span>(C)<span class="Apple-converted-space">  </span>[2, 0, 1, 1]/4,<span class="Apple-converted-space">    </span>(D) ]1, 1, 1, 1]/4..</p>
+<p class="p10"><br></p>
+<p class="p2"><b>Solution. </b>We compute payoff for the proposed strategies:</p>
+<p class="p10"><br></p>
+<p class="p2"><span class="Apple-converted-space">                       </span>A <span class="Apple-converted-space">  </span>B <span class="Apple-converted-space">    </span>C<span class="Apple-converted-space">        </span>D</p>
+<p class="p2">0<span class="Apple-converted-space">  </span>-2 <span class="Apple-converted-space">  </span>1 1 <span class="Apple-converted-space">      </span>0 <span class="Apple-converted-space">  </span>1/4 <span class="Apple-converted-space">  </span>1/2* <span class="Apple-converted-space">    </span>0</p>
+<p class="p2">2<span class="Apple-converted-space">  </span>0<span class="Apple-converted-space">  </span>-3 <span class="Apple-converted-space">  </span>1 <span class="Apple-converted-space">      </span>0<span class="Apple-converted-space">  </span>-5/4<span class="Apple-converted-space">  </span>1/2* <span class="Apple-converted-space">    </span>0</p>
+<p class="p2">-1 3 <span class="Apple-converted-space">  </span>0<span class="Apple-converted-space">  </span>-1<span class="Apple-converted-space">      </span>0 <span class="Apple-converted-space">  </span>1/2* -3/4 <span class="Apple-converted-space">  </span>1/4*</p>
+<p class="p10"><br></p>
+<p class="p2">So the value of game is ≤ 0 hence B, C<span class="Apple-converted-space">  </span>and D are not optimal.</p>
+<p class="p2">Using [3, 1, 2]<span class="s5"><sup>T</sup></span>/6, the row player gets 0 in the worst case, so the value of game<span class="Apple-converted-space">  </span>is ≥ 0.</p>
+<p class="p2">Therefore (A) is optimal.<span class="Apple-converted-space">  </span>(A).</p>
+<p class="p10"><br></p>
+<p class="p10"><br></p>
+<p class="p10"><br></p>
+<p class="p10"><br></p>
+<p class="p4">33. <span class="Apple-converted-space">  </span>A least-squares solution (x, y, z)<span class="Apple-converted-space">  </span>for the system</p>
+<p class="p4">x+y +z = 7,<span class="Apple-converted-space">  </span>2x + 2y<span class="Apple-converted-space">  </span>+ 2z = 7<span class="Apple-converted-space">      </span>is</p>
+<p class="p2">(A) (3,1, 11), (B) (6.5, 0, 4),<span class="Apple-converted-space">  </span>(C)<span class="Apple-converted-space">  </span>(19/3, 1/2, 5), (D) (10, 1, 1).</p>
+<p class="p10"><br></p>
+<p class="p2"><b>Solution. </b>Set<span class="Apple-converted-space">  </span>t = x +y + z. Then the system is <span class="Apple-converted-space">  </span>t = 7, 2t = 7. We want to minimize<span class="Apple-converted-space">  </span>(t- 7)<span class="s6"><sup>2 </sup></span>+<span class="Apple-converted-space">  </span>(2t- 7)<span class="s6"><sup>2 </sup></span>.</p>
+<p class="p2">Writing this as<span class="Apple-converted-space">  </span>(t- 7)<span class="s6"><sup>2 </sup></span>+<span class="Apple-converted-space">  </span>(t- 7/2)<span class="s6"><sup>2</sup></span><span class="s5"><span class="Apple-converted-space"> </span></span> +<span class="Apple-converted-space">  </span>(t- 7/2)<span class="s6"><sup>2 </sup></span>+<span class="Apple-converted-space">  </span>(t- 7/2)<span class="s6"><sup>2 </sup></span><span class="s7"><span class="Apple-converted-space">    </span></span>+<span class="Apple-converted-space">  </span>(t- 7/2)<span class="s6"><sup>2</sup></span><span class="s7"><span class="Apple-converted-space">        </span></span>we see that the minimum is at<span class="Apple-converted-space">  </span>the mean of <span class="Apple-converted-space">  </span>7, 7/2, 7/2,<span class="Apple-converted-space">  </span>7/2, and 7/2.</p>
+<p class="p2">The mean is <span class="Apple-converted-space">  </span>t = 21/5 = 4.2.<span class="Apple-converted-space">  </span>(E).</p>
+<p class="p10"><br></p>
+<p class="p10"><br></p>
+<p class="p2">34. <span class="Apple-converted-space">  </span>An<span class="Apple-converted-space">  </span>optimal solution<span class="Apple-converted-space">  </span>x<span class="Apple-converted-space">  </span>for<span class="Apple-converted-space">    </span>|2x|<span class="s4"><sup> </sup></span>+<span class="Apple-converted-space">  </span>|x-1| +<span class="Apple-converted-space">  </span>|x - 3|<span class="s4"><sup> </sup></span>+<span class="Apple-converted-space">  </span>|3x- 6|<span class="s4"><sup> </sup></span>-&gt;<span class="Apple-converted-space">  </span>min</p>
+<p class="p2">is<span class="Apple-converted-space">  </span>(A) 0, (B)<span class="Apple-converted-space">  </span>3,<span class="Apple-converted-space">  </span>(C) <span class="Apple-converted-space">  </span>5/3, (D) 1.5.</p>
+<p class="p10"><br></p>
+<p class="p2"><b>Solution. </b>The optimal solution is<span class="Apple-converted-space">  </span>the LAD fit<span class="Apple-converted-space">  </span>x<span class="Apple-converted-space">  </span>for<span class="Apple-converted-space">  </span>the numbers 0, 0, 1,3, 2, 2, 2, which is the median 2. (E)</p>
+<p class="p10"><br></p>
+<p class="p10"><br></p>
+<p class="p2">35. <span class="Apple-converted-space">  </span>max( |2x|, <span class="Apple-converted-space">  </span>|x-1|,<span class="Apple-converted-space">  </span>|x - 3|<span class="s4"><sup> </sup></span>,<span class="Apple-converted-space">  </span>|x- 2|<span class="s4"><sup> </sup></span>)<span class="Apple-converted-space"> </span><span class="s4"><sup> </sup></span>-&gt;<span class="Apple-converted-space">  </span>min.</p>
+<p class="p2">The optimal solution x is (A) 1, (B) 1.5,<span class="Apple-converted-space">  </span>(C) 1.8, (D) -100.</p>
+<p class="p10"><br></p>
+<p class="p2"><b>Solution.<span class="Apple-converted-space">  </span></b>The second and the last terms are never maximal, i.e.,</p>
+<p class="p2">max( |2x|, <span class="Apple-converted-space">  </span>|x-1| , <span class="Apple-converted-space">  </span>|x - 3|<span class="s4"><sup> </sup></span>,<span class="Apple-converted-space">  </span>|(x- 2|)<span class="s4"><sup> </sup></span>)<span class="s4"><sup> </sup><span class="Apple-converted-space"> </span></span> = max( |2x|,<span class="Apple-converted-space">    </span>|x - 3|<span class="s4"><sup> </sup></span>)<span class="s4"><sup> ..</sup></span></p>
+<p class="p2">The <span class="Apple-converted-space">    </span>max( |2x|,<span class="Apple-converted-space">    </span>|x - 3|<span class="s4"><sup> </sup></span>) <span class="Apple-converted-space">  </span>is minimal when<span class="Apple-converted-space">  </span>0<span class="Apple-converted-space">  </span>≤ x ≤ 3 and<span class="Apple-converted-space">  </span>|2x|=<span class="Apple-converted-space">  </span>|x - 3|<span class="s4"><sup> </sup></span>, i.e.,<span class="Apple-converted-space">  </span>2x = 3 - x, i.e.,<span class="Apple-converted-space">  </span>x = 1. (A)</p>
+<p class="p10"><br></p>
+<p class="p2">36.<span class="Apple-converted-space">  </span>The value of the matrix game<span class="Apple-converted-space">  </span>with payoff matrix</p>
+<p class="p10"><br></p>
+<table cellspacing="0" cellpadding="0" class="t1">
+  <tbody>
+    <tr>
+      <td valign="middle" class="td10">
+        <p class="p2">1</p>
+      </td>
+      <td valign="middle" class="td2">
+        <p class="p2">3</p>
+      </td>
+      <td valign="middle" class="td11">
+        <p class="p2">1</p>
+      </td>
+      <td valign="middle" class="td12">
+        <p class="p2">-4</p>
+      </td>
+      <td valign="middle" class="td13">
+        <p class="p2">6</p>
+      </td>
+      <td valign="middle" class="td3">
+        <p class="p2">1</p>
+      </td>
+      <td valign="middle" class="td10">
+        <p class="p2">-1</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td10">
+        <p class="p2">6</p>
+      </td>
+      <td valign="middle" class="td2">
+        <p class="p2">2</p>
+      </td>
+      <td valign="middle" class="td11">
+        <p class="p2">0</p>
+      </td>
+      <td valign="middle" class="td12">
+        <p class="p2">2</p>
+      </td>
+      <td valign="middle" class="td13">
+        <p class="p2">0</p>
+      </td>
+      <td valign="middle" class="td3">
+        <p class="p2">-1</p>
+      </td>
+      <td valign="middle" class="td10">
+        <p class="p2">1</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td10">
+        <p class="p2">1</p>
+      </td>
+      <td valign="middle" class="td2">
+        <p class="p2">2</p>
+      </td>
+      <td valign="middle" class="td11">
+        <p class="p2">0</p>
+      </td>
+      <td valign="middle" class="td12">
+        <p class="p2">1</p>
+      </td>
+      <td valign="middle" class="td13">
+        <p class="p2">2</p>
+      </td>
+      <td valign="middle" class="td3">
+        <p class="p2">0</p>
+      </td>
+      <td valign="middle" class="td10">
+        <p class="p2">0</p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<p class="p10"><br></p>
+<p class="p2">is<span class="Apple-converted-space">  </span>(A) 2.5, (B) 8/3,<span class="Apple-converted-space">  </span>(C)<span class="Apple-converted-space">  </span>0,<span class="Apple-converted-space">  </span>(D) 0.1.</p>
+<p class="p10"><br></p>
+<p class="p2"><b>Solution</b>.<span class="Apple-converted-space"> </span></p>
+<p class="p10"><br></p>
+<table cellspacing="0" cellpadding="0" class="t1">
+  <tbody>
+    <tr>
+      <td valign="middle" class="td10">
+        <p class="p2">1</p>
+      </td>
+      <td valign="middle" class="td2">
+        <p class="p2">3</p>
+      </td>
+      <td valign="middle" class="td11">
+        <p class="p2">1</p>
+      </td>
+      <td valign="middle" class="td12">
+        <p class="p2">-4</p>
+      </td>
+      <td valign="middle" class="td13">
+        <p class="p2">6</p>
+      </td>
+      <td valign="middle" class="td3">
+        <p class="p2">1</p>
+      </td>
+      <td valign="middle" class="td10">
+        <p class="p2">-1</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td10">
+        <p class="p2">6</p>
+      </td>
+      <td valign="middle" class="td2">
+        <p class="p2">2</p>
+      </td>
+      <td valign="middle" class="td11">
+        <p class="p2">0</p>
+      </td>
+      <td valign="middle" class="td12">
+        <p class="p2">2</p>
+      </td>
+      <td valign="middle" class="td13">
+        <p class="p2">0</p>
+      </td>
+      <td valign="middle" class="td3">
+        <p class="p2">-1</p>
+      </td>
+      <td valign="middle" class="td10">
+        <p class="p2">1</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td10">
+        <p class="p2">1</p>
+      </td>
+      <td valign="middle" class="td2">
+        <p class="p2">2</p>
+      </td>
+      <td valign="middle" class="td11">
+        <p class="p2">0’</p>
+      </td>
+      <td valign="middle" class="td12">
+        <p class="p2">1</p>
+      </td>
+      <td valign="middle" class="td13">
+        <p class="p2">2</p>
+      </td>
+      <td valign="middle" class="td3">
+        <p class="p2">0’</p>
+      </td>
+      <td valign="middle" class="td10">
+        <p class="p2">0’</p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<p class="p10"><br></p>
+<p class="p2">The best pure strategy for the row player is the last row.</p>
+<p class="p2">The worst case payoff for it<span class="Apple-converted-space">  </span>is 0. Can it be improved?<span class="Apple-converted-space"> </span></p>
+<p class="p2">If yes,<span class="Apple-converted-space">  </span>all 7 payoffs for any optimal strategy (for the row player)<span class="Apple-converted-space">  </span>are positive.</p>
+<p class="p2">Looking at the last 2 payoffs, we conclude that it not possible.<span class="Apple-converted-space"> </span></p>
+<p class="p2">An optimal strategy for the column player is [0, 0, 0, 0, 0,<span class="Apple-converted-space">  </span>0.5, 0.5].</p>
+<p class="p2">(The northeast 2 by 2 corner is the Heads &amp; Tails game. We know its value and the optimal strategies)</p>
+<p class="p2">(C).</p>
+<p class="p10"><br></p>
+<p class="p10"><br></p>
+<p class="p2">37. <span class="Apple-converted-space">  </span>Consider the matrix game with payoff matrix</p>
+<p class="p2">0<span class="Apple-converted-space">  </span>-2 <span class="Apple-converted-space">  </span>1 -1 <span class="Apple-converted-space">  </span>9</p>
+<p class="p2">2 <span class="Apple-converted-space">  </span>0<span class="Apple-converted-space">  </span>-3<span class="Apple-converted-space">  </span>1<span class="Apple-converted-space">  </span>-2</p>
+<p class="p2">-1<span class="Apple-converted-space">  </span>3<span class="Apple-converted-space">    </span>0 1<span class="Apple-converted-space">    </span>0</p>
+<p class="p2">An optimal strategy for the column player is</p>
+<p class="p2">(A) [3, 1, 2, 0, 0]/6,<span class="Apple-converted-space">  </span>(B) <span class="Apple-converted-space">  </span>[0, 1, 2, 1, 0]/4,<span class="Apple-converted-space">    </span>(C)<span class="Apple-converted-space">  </span>[2, 0, 1, 1, 1]/5,<span class="Apple-converted-space">    </span>(D) [1, 1, 1, 1, 1]/5.</p>
+<p class="p10"><br></p>
+<p class="p2"><b>Solution.<span class="Apple-converted-space"> </span></b> Here are the payoffs for the proposed strategies:</p>
+<p class="p2"><span class="Apple-converted-space">                            </span>A <span class="Apple-converted-space">    </span>B<span class="Apple-converted-space">    </span>C<span class="Apple-converted-space">    </span>D</p>
+<p class="p2">0<span class="Apple-converted-space">  </span>-2 <span class="Apple-converted-space">  </span>1 -1 <span class="Apple-converted-space">  </span>9<span class="Apple-converted-space">      </span>0 <span class="Apple-converted-space">          </span>9/5</p>
+<p class="p2">2 <span class="Apple-converted-space">  </span>0<span class="Apple-converted-space">  </span>-3<span class="Apple-converted-space">  </span>1<span class="Apple-converted-space">  </span>-2<span class="Apple-converted-space">      </span>0</p>
+<p class="p2">-1<span class="Apple-converted-space">  </span>3<span class="Apple-converted-space">    </span>0 1<span class="Apple-converted-space">    </span>0<span class="Apple-converted-space">      </span>0 <span class="Apple-converted-space">    </span>1<span class="Apple-converted-space">            </span>3/5</p>
+<p class="p2">So A is better (in the sense of the worst-case payoff)<span class="Apple-converted-space">  </span>than B, C, and D<span class="Apple-converted-space">  </span>hence<span class="Apple-converted-space">  </span>B, C, and D<span class="Apple-converted-space">  </span>are not optimal.</p>
+<p class="p2">When the row player uses<span class="Apple-converted-space">  </span>p = [3, 1, 2]/6<span class="s6"><sup>T</sup></span>, we have an equilibrium</p>
+<p class="p10"><br></p>
+<p class="p2"><span class="Apple-converted-space">                                 </span>A <span class="Apple-converted-space">   </span></p>
+<p class="p2"><span class="Apple-converted-space">      </span>0<span class="Apple-converted-space">  </span>-2<span class="Apple-converted-space">    </span>1 -1 <span class="Apple-converted-space">  </span>9<span class="Apple-converted-space">      </span>0 <span class="Apple-converted-space">       </span></p>
+<p class="p2"><span class="Apple-converted-space">      </span>2 <span class="Apple-converted-space">  </span>0<span class="Apple-converted-space">  </span>-3 <span class="Apple-converted-space">  </span>1<span class="Apple-converted-space">  </span>-2<span class="Apple-converted-space">      </span>0</p>
+<p class="p2"><span class="Apple-converted-space">     </span>-1 <span class="Apple-converted-space">  </span>3<span class="Apple-converted-space">    </span>0<span class="Apple-converted-space">  </span>1<span class="Apple-converted-space">    </span>0<span class="Apple-converted-space">      </span>0 <span class="Apple-converted-space">   </span></p>
+<p class="p2">p <span class="Apple-converted-space">    </span>0 <span class="Apple-converted-space">  </span>0 <span class="Apple-converted-space">  </span>0<span class="Apple-converted-space">  </span>0 25/6 <span class="Apple-converted-space">  </span>0*’</p>
+<p class="p10"><br></p>
+<p class="p2">(A).<span class="Apple-converted-space">   </span></p>
+<p class="p10"><br></p>
+<p class="p10"><br></p>
+<p class="p10"><br></p>
+<p class="p2">38. For any number t, the equation <span class="Apple-converted-space">  </span>(t+1)x = t has a solution x.</p>
+<p class="p2">(A) true, (B false.</p>
+<p class="p10"><br></p>
+<p class="p2"><b>Solutio</b>n.<span class="Apple-converted-space">  </span>This is false when t = -1.<span class="Apple-converted-space">  </span>(B).</p>
+<p class="p10"><br></p>
+<p class="p2">39. A median of the numbers 0,-1,-2, 1, 2, 3, 0, 0<span class="Apple-converted-space">    </span>is<span class="Apple-converted-space"> </span></p>
+<p class="p2">(A) 0.5, (B) 0, (C) 3/7, (D) 1.</p>
+<p class="p10"><br></p>
+<p class="p2"><b>Answer</b>. (B).</p>
+<p class="p10"><br></p>
+<p class="p2">40. The midrange of the numbers 0,-1,-2, 1, 2, 3, 3 <span class="Apple-converted-space">  </span>is<span class="Apple-converted-space"> </span></p>
+<p class="p2">(A) 0.5, (B) 0, (C) 3/7, (D) 1.5.</p>
+<p class="p10"><br></p>
+<p class="p2"><b>Answer.</b> (A).</p>
+<p class="p10"><br></p>
+<p class="p10"><br></p>
+<p class="p10"><br></p>
+<p class="p10"><br></p>
+<p class="p10"><br></p>
+<p class="p11"><br></p>
+</body>
+</html>

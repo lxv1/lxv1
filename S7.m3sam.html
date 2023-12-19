@@ -1,0 +1,908 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"><html xmlns:v="3D&quot;urn:schemas-microsoft-com:vml&quot;" xmlns:o="3D&quot;urn:schemas-microsoft-com:office:office&quot;" xmlns:w="3D&quot;urn:schemas-microsoft-com:office:word&quot;" xmlns="3D&quot;http://www.w3.org/TR/REC-html40&quot;"><head><meta http-equiv="3DContent-Type" content="3D&quot;text/html;" charset="3Dus-ascii&quot;"><meta name="3DProgId" content="3DWord.Document"><meta name="3DGenerator" content="3D&quot;Microsoft" word="" 11=""><meta name="3DOriginator" content="3D&quot;Microsoft" word="" 11=""><link rel="3DFile-List" href="3D%22Math486_files/filelist.xml%22"><title>Math 486 Game Theory Miderm 3 April 26, 2007</title><style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;
+	mso-font-charset:2;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:0 268435456 0 0 -2147483648 0;}
+@font-face
+	{font-family:SimSun;
+	panose-1:2 1 6 0 3 1 1 1 1 1;
+	mso-font-alt:\5B8B\4F53;
+	mso-font-charset:134;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:3 135135232 16 0 262145 0;}
+@font-face
+	{font-family:"\@SimSun";
+	panose-1:2 1 6 0 3 1 1 1 1 1;
+	mso-font-charset:134;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:3 135135232 16 0 262145 0;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-parent:"";
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:SimSun;}
+p
+	{mso-margin-top-alt:auto;
+	margin-right:0in;
+	mso-margin-bottom-alt:auto;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:SimSun;}
+span.SpellE
+	{mso-style-name:"";
+	mso-spl-e:yes;}
+span.GramE
+	{mso-style-name:"";
+	mso-gram-e:yes;}
+@page Section1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.25in 1.0in 1.25in;
+	mso-header-margin:.5in;
+	mso-footer-margin:.5in;
+	mso-paper-source:0;}
+div.Section1
+	{page:Section1;}
+-->
+</style></head><body lang="3DEN-US" style=""><!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>sov5001</o:Author>
+  <o:LastAuthor>sov5001</o:LastAuthor>
+  <o:Revision>1</o:Revision>
+  <o:TotalTime>17</o:TotalTime>
+  <o:Created>2007-04-26T13:08:00Z</o:Created>
+  <o:LastSaved>2007-04-26T13:25:00Z</o:LastSaved>
+  <o:Pages>1</o:Pages>
+  <o:Words>468</o:Words>
+  <o:Characters>2668</o:Characters>
+  <o:Company>The Pennsylvania State University</o:Company>
+  <o:Lines>22</o:Lines>
+  <o:Paragraphs>6</o:Paragraphs>
+  <o:CharactersWithSpaces>3130</o:CharactersWithSpaces>
+  <o:Version>11.8122</o:Version>
+ </o:DocumentProperties>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:SpellingState>Clean</w:SpellingState>
+  <w:GrammarState>Clean</w:GrammarState>
+  <w:PunctuationKerning/>
+  <w:ValidateAgainstSchemas/>
+  <w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
+  <w:IgnoreMixedContent>false</w:IgnoreMixedContent>
+  <w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
+  <w:Compatibility>
+   <w:BreakWrappedTables/>
+   <w:SnapToGridInCell/>
+   <w:WrapTextWithPunct/>
+   <w:UseAsianBreakRules/>
+   <w:DontGrowAutofit/>
+   <w:UseFELayout/>
+  </w:Compatibility>
+  <w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>
+ </w:WordDocument>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:LatentStyles DefLockedState=3D"false" LatentStyleCount=3D"156">
+ </w:LatentStyles>
+</xml><![endif]-->
+
+<!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:"Table Normal";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-parent:"";
+	mso-padding-alt:0in 5.4pt 0in 5.4pt;
+	mso-para-margin:0in;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-ansi-language:#0400;
+	mso-fareast-language:#0400;
+	mso-bidi-language:#0400;}
+</style>
+<![endif]--><!--[if gte mso 9]><xml>
+ <o:shapedefaults v:ext=3D"edit" spidmax=3D"2050"/>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <o:shapelayout v:ext=3D"edit">
+  <o:idmap v:ext=3D"edit" data=3D"1"/>
+ </o:shapelayout></xml><![endif]--> Math 486<span class="3DGramE">&nbsp; Game</span> Theory &nbsp;<span class="3DSpellE">Miderm</span> 3&nbsp; April 26, 2007.&nbsp; <br>
+<div class="3DSection1"><p class="3DMsoNormal">
+Name__________________SAMANVITHA________________ </p>
+
+<p class="3DMsoNormal" style="" :auto="">Find
+the <span class="3DSpellE">equilibria</span> in pure strategies, the Pareto o=
+ptimal
+solutions in pure strategies, <br>
+the characteristic function,<span class="3DGramE">&nbsp; the</span> Nash barg=
+aining
+solution, and the Shapley values. <br>
+&nbsp; </p>
+
+<p class="3DMsoNormal" style="" :auto="">1.&nbsp;&nbsp;
+Players: the row player Ann; the column player Bob. </p>
+
+<table class="3DMsoNormalTable" border="1" cellpadding="3D0" width="3D&quot;100%&quot;" style="">
+ <tbody><tr style="">
+  <td style="" .75pt="">
+  <p class="3DMsoNormal">0, 1</p>
+  </td>
+  <td style="" .75pt="">
+  <p class="3DMsoNormal">1, 0</p>
+  </td>
+  <td style="" .75pt="">
+  <p class="3DMsoNormal">0, 0</p>
+  </td>
+  <td style="" .75pt="">
+  <p class="3DMsoNormal">1, 1</p>
+  </td>
+ </tr>
+ <tr style="">
+  <td style="" .75pt="">
+  <p class="3DMsoNormal">1, 1</p>
+  </td>
+  <td style="" .75pt="">
+  <p class="3DMsoNormal">1, 3</p>
+  </td>
+  <td style="" .75pt="">
+  <p class="3DMsoNormal">2, 0</p>
+  </td>
+  <td style="" .75pt="">
+  <p class="3DMsoNormal">2, 2</p>
+  </td>
+ </tr>
+ <tr style="">
+  <td style="" .75pt="">
+  <p class="3DMsoNormal">0, 3</p>
+  </td>
+  <td style="" .75pt="">
+  <p class="3DMsoNormal">0, 0</p>
+  </td>
+  <td style="" .75pt="">
+  <p class="3DMsoNormal">1, 3</p>
+  </td>
+  <td style="" .75pt="">
+  <p class="3DMsoNormal">3, 2</p>
+  </td>
+ </tr>
+ <tr style="">
+  <td style="" .75pt="">
+  <p class="3DMsoNormal">1, 0</p>
+  </td>
+  <td style="" .75pt="">
+  <p class="3DMsoNormal">0, 0</p>
+  </td>
+  <td style="" .75pt="">
+  <p class="3DMsoNormal">0, 0</p>
+  </td>
+  <td style="" .75pt="">
+  <p class="3DMsoNormal">1, 4</p>
+  </td>
+ </tr>
+</tbody></table>
+
+<p class="3DMsoNormal" style="" :auto="">(<span class="3DGramE">payoffs</span> for&nbsp; Ann and Bob) </p>
+
+<p class="3DMsoNormal" style="" :auto=""><span class="3DGramE"><i>Solution.</i></span>&nbsp;&nbsp;<span class="3DGramE">equili=
+brium</span>:
+(1,3) </p>
+
+<table class="3DMsoNormalTable" border="1" cellpadding="3D0" width="3D&quot;100%&quot;" style="">
+ <tbody><tr style="">
+  <td style="" .75pt="">
+  <p class="3DMsoNormal">0, 1*</p>
+  </td>
+  <td style="" .75pt="">
+  <p class="3DMsoNormal">1*, 0</p>
+  </td>
+  <td style="" .75pt="">
+  <p class="3DMsoNormal">0, 0</p>
+  </td>
+  <td style="" .75pt="">
+  <p class="3DMsoNormal">1, 1*</p>
+  </td>
+ </tr>
+ <tr style="">
+  <td style="" .75pt="">
+  <p class="3DMsoNormal">1*, 1</p>
+  </td>
+  <td style="" .75pt="">
+  <p class="3DMsoNormal"><span style="">1=
+*, 3*</span></p>
+  </td>
+  <td style="" .75pt="">
+  <p class="3DMsoNormal">2*, 0</p>
+  </td>
+  <td style="" .75pt="">
+  <p class="3DMsoNormal">2, 2</p>
+  </td>
+ </tr>
+ <tr style="">
+  <td style="" .75pt="">
+  <p class="3DMsoNormal">0, 3*</p>
+  </td>
+  <td style="" .75pt="">
+  <p class="3DMsoNormal">0, 0</p>
+  </td>
+  <td style="" .75pt="">
+  <p class="3DMsoNormal">1, 3*</p>
+  </td>
+  <td style="" .75pt="">
+  <p class="3DMsoNormal">3*, 2</p>
+  </td>
+ </tr>
+ <tr style="">
+  <td style="" .75pt="">
+  <p class="3DMsoNormal">1*, 0</p>
+  </td>
+  <td style="" .75pt="">
+  <p class="3DMsoNormal">0, 0</p>
+  </td>
+  <td style="" .75pt="">
+  <p class="3DMsoNormal">0, 0</p>
+  </td>
+  <td style="" .75pt="">
+  <p class="3DMsoNormal">1, 4*</p>
+  </td>
+ </tr>
+</tbody></table>
+
+<p class="3DMsoNormal" style="" :auto="">Two
+Pareto optimal payoffs: (3, 2) and (1<span class="3DGramE">,4</span>). </p>
+
+<p class="3DMsoNormal" style="" :auto=""><span class="3DGramE">v(</span>Ann) =3D 1 =3D the value of the matrix game </p>
+
+<table class="3DMsoNormalTable" border="1" cellpadding="3D0" width="3D&quot;100%&quot;" style="">
+ <tbody><tr style="">
+  <td style="" .75pt="">
+  <p class="3DMsoNormal">0</p>
+  </td>
+  <td style="" .75pt="">
+  <p class="3DMsoNormal">1</p>
+  </td>
+  <td style="" .75pt="">
+  <p class="3DMsoNormal">0</p>
+  </td>
+  <td style="" .75pt="">
+  <p class="3DMsoNormal">1</p>
+  </td>
+ </tr>
+ <tr style="">
+  <td style="" .75pt="">
+  <p class="3DMsoNormal">1</p>
+  </td>
+  <td style="" .75pt="">
+  <p class="3DMsoNormal">1*&#8217;</p>
+  </td>
+  <td style="" .75pt="">
+  <p class="3DMsoNormal">2</p>
+  </td>
+  <td style="" .75pt="">
+  <p class="3DMsoNormal">2</p>
+  </td>
+ </tr>
+ <tr style="">
+  <td style="" .75pt="">
+  <p class="3DMsoNormal">0</p>
+  </td>
+  <td style="" .75pt="">
+  <p class="3DMsoNormal">0</p>
+  </td>
+  <td style="" .75pt="">
+  <p class="3DMsoNormal">1</p>
+  </td>
+  <td style="" .75pt="">
+  <p class="3DMsoNormal">3</p>
+  </td>
+ </tr>
+ <tr style="">
+  <td style="" .75pt="">
+  <p class="3DMsoNormal">1</p>
+  </td>
+  <td style="" .75pt="">
+  <p class="3DMsoNormal">0</p>
+  </td>
+  <td style="" .75pt="">
+  <p class="3DMsoNormal">0</p>
+  </td>
+  <td style="" .75pt="">
+  <p class="3DMsoNormal">1</p>
+  </td>
+ </tr>
+</tbody></table>
+
+<p class="3DMsoNormal" style="" :auto=""><span class="3DGramE">v(</span>Bob) =3D 1 =3D the value of the matrix game </p>
+
+<table class="3DMsoNormalTable" border="1" cellpadding="3D0" width="3D&quot;100%&quot;" style="">
+ <tbody><tr style="">
+  <td style="" .75pt="">
+  <p class="3DMsoNormal">1</p>
+  </td>
+  <td style="" .75pt="">
+  <p class="3DMsoNormal">1</p>
+  </td>
+  <td style="" .75pt="">
+  <p class="3DMsoNormal">3</p>
+  </td>
+  <td style="" .75pt="">
+  <p class="3DMsoNormal">0</p>
+  </td>
+ </tr>
+ <tr style="">
+  <td style="" .75pt="">
+  <p class="3DMsoNormal">0</p>
+  </td>
+  <td style="" .75pt="">
+  <p class="3DMsoNormal">3</p>
+  </td>
+  <td style="" .75pt="">
+  <p class="3DMsoNormal">0</p>
+  </td>
+  <td style="" .75pt="">
+  <p class="3DMsoNormal">0</p>
+  </td>
+ </tr>
+ <tr style="">
+  <td style="" .75pt="">
+  <p class="3DMsoNormal">0</p>
+  </td>
+  <td style="" .75pt="">
+  <p class="3DMsoNormal">0</p>
+  </td>
+  <td style="" .75pt="">
+  <p class="3DMsoNormal">1</p>
+  </td>
+  <td style="" .75pt="">
+  <p class="3DMsoNormal">0</p>
+  </td>
+ </tr>
+ <tr style="">
+  <td style="" .75pt="">
+  <p class="3DMsoNormal">1*&#8217;</p>
+  </td>
+  <td style="" .75pt="">
+  <p class="3DMsoNormal">2</p>
+  </td>
+  <td style="" .75pt="">
+  <p class="3DMsoNormal">2</p>
+  </td>
+  <td style="" .75pt="">
+  <p class="3DMsoNormal">4</p>
+  </td>
+ </tr>
+</tbody></table>
+
+<p class="3DMsoNormal" style="" :auto=""><span class="3DGramE">v(</span>empty)=3D0, v(<span class="3DSpellE">Ann,Bob</span>) =
+=3D 5. </p>
+
+<p class="3DMsoNormal" style="" :auto=""><o:p>&nbsp;</o:p></p>
+
+<p class="3DMsoNormal" style="" :auto="">Nash
+bargaining:&nbsp;&nbsp; (u &#8211; 1<span class="3DGramE">)(</span>v &#8211; =
+1) <span style="" new="" roman="" ;="" mso-hansi-font-family="" times="" ;mso-char-type:symbol;mso-symbol-fon="t-family:" wingdings=""><span style="" ings="">&agrave;</span></span>
+max , u &gt;=3D 1, V &gt;=3D 1. (<span class="3DSpellE"><span class="3DGramE">u=
+,</span>v</span>)
+is a mixture of (3,2) and (1,4). v + u =3D 5. u =3D 5/2, v =3D 5/2. <span class="3DGramE">therefore</span>, (2.5,2.5) is the arbitration pair. </p>
+
+<p class="3DMsoNormal" style="" :auto=""><span style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&amp;=
+nbsp;&nbsp;&nbsp; </span><span style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></p>
+
+<p class="3DMsoNormal" style="" :auto="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&amp;n=
+bsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Ann<span class="3DGramE">&nbsp; Bob</span> <br>
+Ann Bob&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 4 <br>
+Bob Ann&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 4&nbsp;=
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+1 <br>
+------------------ <br>
+Shapley values&nbsp;5/2<span style="">&nbsp;&nbsp; </span><span style="">&nbsp;&nbsp;</span><span class="3DSpellE">5/2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+&nbsp; <br>
+&nbsp; </span></p>
+
+<p class="3DMsoNormal" style="" :auto="">2.&nbsp;&nbsp;
+Players: A, B, C <br>
+<span style="">strategies&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&amp;nb=
+sp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&amp;nb=
+sp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=
+&nbsp;&nbsp;&nbsp;&nbsp;
+payoffs</span> <br>
+1&nbsp; 1&nbsp;
+1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&amp;n=
+bsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+0&nbsp; 1&nbsp; 2 <br>
+1&nbsp; 1&nbsp;
+2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&amp;n=
+bsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+1&nbsp; 0&nbsp; 1 <br>
+1&nbsp; 2&nbsp;
+1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&amp;n=
+bsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+2&nbsp; 3&nbsp; 3 <br>
+1&nbsp; 2&nbsp;
+2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&amp;n=
+bsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+1&nbsp; 2&nbsp; 3 <br>
+2&nbsp; 1&nbsp; 1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&amp;nbs=
+p;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+0&nbsp; 0&nbsp; 1 <br>
+2&nbsp; 1&nbsp;
+2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&amp;n=
+bsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+1&nbsp; 1&nbsp; 1 <br>
+2&nbsp; 2&nbsp;
+1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&amp;n=
+bsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+2&nbsp; 3&nbsp; 3 <br>
+2&nbsp; 2&nbsp;
+2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&amp;n=
+bsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+2&nbsp; 3&nbsp; 2 <br>
+3&nbsp; 1&nbsp;
+1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&amp;n=
+bsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+0&nbsp; 0&nbsp; 0 <br>
+3&nbsp; 1&nbsp;
+2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&amp;n=
+bsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+0&nbsp; 0&nbsp; 0 <br>
+3&nbsp; 2&nbsp;
+1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&amp;n=
+bsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+1&nbsp; 1&nbsp; 1 <br>
+3&nbsp; 2&nbsp; 2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&amp;nbs=
+p;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+2&nbsp; 4&nbsp; 3 </p>
+
+<p class="3DMsoNormal" style="" :auto=""><span class="3DGramE"><i>Solution.</i></span> <br>
+Three equilibria, one Pareto optimal: <br>
+<span style="">strategies&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&amp;nb=
+sp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&amp;nb=
+sp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=
+&nbsp;&nbsp;&nbsp;&nbsp;
+payoffs</span> <br>
+1&nbsp; 1&nbsp;
+1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&amp;n=
+bsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+0&nbsp; 1&nbsp; 2 <br>
+1&nbsp; 1&nbsp;
+2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&amp;n=
+bsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+1&nbsp; 0&nbsp; 1 <br>
+1&nbsp; 2&nbsp;
+1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&amp;n=
+bsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+2*&nbsp; 3*&nbsp; 3*&nbsp; equilibrium&nbsp; <br>
+1&nbsp; 2&nbsp;
+2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&amp;n=
+bsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+1&nbsp; 2&nbsp; 3 <br>
+2&nbsp; 1&nbsp;
+1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&amp;n=
+bsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+0&nbsp; 0&nbsp; 1 <br>
+2&nbsp; 1&nbsp;
+2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&amp;n=
+bsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+1&nbsp; 1&nbsp; 1 <br>
+2&nbsp; 2&nbsp;
+1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&amp;n=
+bsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+2*&nbsp; 3*&nbsp; 3*equilibrium <br>
+2&nbsp; 2&nbsp;
+2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&amp;n=
+bsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+2&nbsp; 3&nbsp; 2 <br>
+3&nbsp; 1&nbsp; 1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&amp;nbs=
+p;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+0&nbsp; 0&nbsp; 0 <br>
+3&nbsp; 1&nbsp;
+2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&amp;n=
+bsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+0&nbsp; 0&nbsp; 0 <br>
+3&nbsp; 2&nbsp;
+1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&amp;n=
+bsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+1&nbsp; 1&nbsp; 1 <br>
+3&nbsp; 2&nbsp;
+2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&amp;n=
+bsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+2*&nbsp; 4*&nbsp; 3*&nbsp; equilibrium&nbsp;&nbsp; Pareto optimal </p>
+
+<p class="3DMsoNormal" style="" :auto=""><o:p>&nbsp;</o:p></p>
+
+<p class="3DMsoNormal" style="" :auto=""><span class="3DGramE">v(</span>empty)=3D0, v(A,B,C)) =3D 9. <br>
+<span class="3DGramE">v(</span>A) =3D 0 =3D the value of the matrix game </p>
+
+<table class="3DMsoNormalTable" border="1" cellpadding="3D0" width="3D&quot;50%&quot;" style="">
+ <tbody><tr style="">
+  <td style="" .75pt="">
+  <p class="3DMsoNormal">0*'</p>
+  </td>
+  <td style="" .75pt="">
+  <p class="3DMsoNormal">1</p>
+  </td>
+  <td style="" .75pt="">
+  <p class="3DMsoNormal">2</p>
+  </td>
+  <td style="" .75pt="">
+  <p class="3DMsoNormal">1</p>
+  </td>
+ </tr>
+ <tr style="">
+  <td style="" .75pt="">
+  <p class="3DMsoNormal">0</p>
+  </td>
+  <td style="" .75pt="">
+  <p class="3DMsoNormal">1</p>
+  </td>
+  <td style="" .75pt="">
+  <p class="3DMsoNormal">2</p>
+  </td>
+  <td style="" .75pt="">
+  <p class="3DMsoNormal">2</p>
+  </td>
+ </tr>
+ <tr style="">
+  <td style="" .75pt="">
+  <p class="3DMsoNormal">0</p>
+  </td>
+  <td style="" .75pt="">
+  <p class="3DMsoNormal">0</p>
+  </td>
+  <td style="" .75pt="">
+  <p class="3DMsoNormal">1</p>
+  </td>
+  <td style="" .75pt="">
+  <p class="3DMsoNormal">2</p>
+  </td>
+ </tr>
+</tbody></table>
+
+<p class="3DMsoNormal" style="" :auto=""><span class="3DGramE">v(</span>B) =3D 1 =3D the value of the matrix game </p>
+
+<table class="3DMsoNormalTable" border="1" cellpadding="3D0" width="3D&quot;40%&quot;" style="">
+ <tbody><tr style="">
+  <td style="" .75pt="">
+  <p class="3DMsoNormal">1</p>
+  </td>
+  <td style="" .75pt="">
+  <p class="3DMsoNormal">0</p>
+  </td>
+  <td style="" .75pt="">
+  <p class="3DMsoNormal">0</p>
+  </td>
+  <td style="" .75pt="">
+  <p class="3DMsoNormal">1</p>
+  </td>
+  <td style="" .75pt="">
+  <p class="3DMsoNormal">0</p>
+  </td>
+  <td style="" .75pt="">
+  <p class="3DMsoNormal">0</p>
+  </td>
+ </tr>
+ <tr style="">
+  <td style="" .75pt="">
+  <p class="3DMsoNormal">3</p>
+  </td>
+  <td style="" .75pt="">
+  <p class="3DMsoNormal">2</p>
+  </td>
+  <td style="" .75pt="">
+  <p class="3DMsoNormal">3</p>
+  </td>
+  <td style="" .75pt="">
+  <p class="3DMsoNormal">3</p>
+  </td>
+  <td style="" .75pt="">
+  <p class="3DMsoNormal">1*'</p>
+  </td>
+  <td style="" .75pt="">
+  <p class="3DMsoNormal">4</p>
+  </td>
+ </tr>
+</tbody></table>
+
+<p class="3DMsoNormal" style="" :auto=""><span class="3DGramE">v(</span>C) =3D 0 =3D the value of the matrix game </p>
+
+<table class="3DMsoNormalTable" border="1" cellpadding="3D0" width="3D&quot;40%&quot;" style="">
+ <tbody><tr style="">
+  <td style="" .75pt="">
+  <p class="3DMsoNormal">2</p>
+  </td>
+  <td style="" .75pt="">
+  <p class="3DMsoNormal">3</p>
+  </td>
+  <td style="" .75pt="">
+  <p class="3DMsoNormal">1</p>
+  </td>
+  <td style="" .75pt="">
+  <p class="3DMsoNormal">3</p>
+  </td>
+  <td style="" .75pt="">
+  <p class="3DMsoNormal">0*'</p>
+  </td>
+  <td style="" .75pt="">
+  <p class="3DMsoNormal">1</p>
+  </td>
+ </tr>
+ <tr style="">
+  <td style="" .75pt="">
+  <p class="3DMsoNormal">1</p>
+  </td>
+  <td style="" .75pt="">
+  <p class="3DMsoNormal">3</p>
+  </td>
+  <td style="" .75pt="">
+  <p class="3DMsoNormal">1</p>
+  </td>
+  <td style="" .75pt="">
+  <p class="3DMsoNormal">2</p>
+  </td>
+  <td style="" .75pt="">
+  <p class="3DMsoNormal">0</p>
+  </td>
+  <td style="" .75pt="">
+  <p class="3DMsoNormal">3</p>
+  </td>
+ </tr>
+</tbody></table>
+
+<p class="3DMsoNormal" style="" :auto=""><span class="3DGramE">v(</span>A,B) =3D 5=3D the value of the matrix game </p>
+
+<table class="3DMsoNormalTable" border="1" cellpadding="3D0" width="3D&quot;40%&quot;" style="">
+ <tbody><tr style="">
+  <td style="" .75pt="">
+  <p class="3DMsoNormal">1</p>
+  </td>
+  <td style="" .75pt="">
+  <p class="3DMsoNormal">1</p>
+  </td>
+ </tr>
+ <tr style="">
+  <td style="" .75pt="">
+  <p class="3DMsoNormal">5</p>
+  </td>
+  <td style="" .75pt="">
+  <p class="3DMsoNormal">3</p>
+  </td>
+ </tr>
+ <tr style="">
+  <td style="" .75pt="">
+  <p class="3DMsoNormal">0</p>
+  </td>
+  <td style="" .75pt="">
+  <p class="3DMsoNormal">2</p>
+  </td>
+ </tr>
+ <tr style="">
+  <td style="" .75pt="">
+  <p class="3DMsoNormal">5*'</p>
+  </td>
+  <td style="" .75pt="">
+  <p class="3DMsoNormal">5</p>
+  </td>
+ </tr>
+ <tr style="">
+  <td style="" .75pt="">
+  <p class="3DMsoNormal">0</p>
+  </td>
+  <td style="" .75pt="">
+  <p class="3DMsoNormal">0</p>
+  </td>
+ </tr>
+ <tr style="">
+  <td style="" .75pt="">
+  <p class="3DMsoNormal">2</p>
+  </td>
+  <td style="" .75pt="">
+  <p class="3DMsoNormal">6</p>
+  </td>
+ </tr>
+</tbody></table>
+
+<p class="3DMsoNormal" style="" :auto=""><span class="3DGramE">v(</span>A,C) =3D 2=3D the value of the matrix game </p>
+
+<table class="3DMsoNormalTable" border="1" cellpadding="3D0" width="3D&quot;30%&quot;" style="">
+ <tbody><tr style="">
+  <td style="" .75pt="">
+  <p class="3DMsoNormal">2*'</p>
+  </td>
+  <td style="" .75pt="">
+  <p class="3DMsoNormal">5</p>
+  </td>
+ </tr>
+ <tr style="">
+  <td style="" .75pt="">
+  <p class="3DMsoNormal">2</p>
+  </td>
+  <td style="" .75pt="">
+  <p class="3DMsoNormal">4</p>
+  </td>
+ </tr>
+ <tr style="">
+  <td style="" .75pt="">
+  <p class="3DMsoNormal">1</p>
+  </td>
+  <td style="" .75pt="">
+  <p class="3DMsoNormal">5</p>
+  </td>
+ </tr>
+ <tr style="">
+  <td style="" .75pt="">
+  <p class="3DMsoNormal">2</p>
+  </td>
+  <td style="" .75pt="">
+  <p class="3DMsoNormal">4</p>
+  </td>
+ </tr>
+ <tr style="">
+  <td style="" .75pt="">
+  <p class="3DMsoNormal">0</p>
+  </td>
+  <td style="" .75pt="">
+  <p class="3DMsoNormal">2</p>
+  </td>
+ </tr>
+ <tr style="">
+  <td style="" .75pt="">
+  <p class="3DMsoNormal">0</p>
+  </td>
+  <td style="" .75pt="">
+  <p class="3DMsoNormal">5</p>
+  </td>
+ </tr>
+</tbody></table>
+
+<p class="3DMsoNormal" style="" :auto=""><span class="3DGramE">v(</span>B,C) =3D 16/3 =3D the value of the matrix game </p>
+
+<p class="3DMsoNormal" style="" :auto=""><o:p>&nbsp;</o:p></p>
+
+<p class="3DMsoNormal" style="" :auto=""><o:p>&nbsp;</o:p></p>
+
+<table class="3DMsoNormalTable" border="1" cellpadding="3D0" width="3D&quot;60%&quot;" style="">
+ <tbody><tr style="">
+  <td style="" .75pt="">
+  <p class="3DMsoNormal">B$C <span class="3DSpellE">vs</span> A</p>
+  </td>
+  <td style="" .75pt="">
+  <p class="3DMsoNormal"><s>c1</s></p>
+  </td>
+  <td style="" .75pt="">
+  <p class="3DMsoNormal">c2</p>
+  </td>
+  <td style="" .75pt="">
+  <p class="3DMsoNormal">c3</p>
+  </td>
+  <td style="" .75pt="">
+  <p class="3DMsoNormal">(5c2+c3)/6</p>
+  </td>
+ </tr>
+ <tr style="">
+  <td style="" .75pt="">
+  <p class="3DMsoNormal"><s>r11</s></p>
+  </td>
+  <td style="" .75pt="">
+  <p class="3DMsoNormal">3</p>
+  </td>
+  <td style="" .75pt="">
+  <p class="3DMsoNormal">1</p>
+  </td>
+  <td style="" .75pt="">
+  <p class="3DMsoNormal">0</p>
+  </td>
+  <td style="" .75pt="">
+  <p class="3DMsoNormal"><o:p>&nbsp;</o:p></p>
+  </td>
+ </tr>
+ <tr style="">
+  <td style="" .75pt="">
+  <p class="3DMsoNormal"><s>r12</s></p>
+  </td>
+  <td style="" .75pt="">
+  <p class="3DMsoNormal">1</p>
+  </td>
+  <td style="" .75pt="">
+  <p class="3DMsoNormal">2</p>
+  </td>
+  <td style="" .75pt="">
+  <p class="3DMsoNormal">0</p>
+  </td>
+  <td style="" .75pt="">
+  <p class="3DMsoNormal"><o:p>&nbsp;</o:p></p>
+  </td>
+ </tr>
+ <tr style="">
+  <td style="" .75pt="">
+  <p class="3DMsoNormal">r21</p>
+  </td>
+  <td style="" .75pt="">
+  <p class="3DMsoNormal">6</p>
+  </td>
+  <td style="" .75pt="">
+  <p class="3DMsoNormal">6</p>
+  </td>
+  <td style="" .75pt="">
+  <p class="3DMsoNormal">2</p>
+  </td>
+  <td style="" .75pt="">
+  <p class="3DMsoNormal">16/3</p>
+  </td>
+ </tr>
+ <tr style="">
+  <td style="" .75pt="">
+  <p class="3DMsoNormal">r22</p>
+  </td>
+  <td style="" .75pt="">
+  <p class="3DMsoNormal">5</p>
+  </td>
+  <td style="" .75pt="">
+  <p class="3DMsoNormal">5</p>
+  </td>
+  <td style="" .75pt="">
+  <p class="3DMsoNormal">7</p>
+  </td>
+  <td style="" .75pt="">
+  <p class="3DMsoNormal">16/3</p>
+  </td>
+ </tr>
+ <tr style="">
+  <td style="" .75pt="">
+  <p class="3DMsoNormal">(r21+2r22)/3</p>
+  </td>
+  <td style="" .75pt="">
+  <p class="3DMsoNormal"><o:p>&nbsp;</o:p></p>
+  </td>
+  <td style="" .75pt="">
+  <p class="3DMsoNormal">16/3</p>
+  </td>
+  <td style="" .75pt="">
+  <p class="3DMsoNormal">16/3</p>
+  </td>
+  <td style="" .75pt="">
+  <p class="3DMsoNormal">16/3*'</p>
+  </td>
+ </tr>
+</tbody></table>
+
+<p class="3DMsoNormal" style="" :auto="">order&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+contribution <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&amp;nb=
+sp;&nbsp;&nbsp;&nbsp;
+A B C <br>
+ABC&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0 5 4 <br>
+ACB&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0 7 2 <br>
+BAC&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 4 1 4 <br>
+BCA&nbsp;&nbsp;&nbsp; 11/3 1 13/3 <br>
+CAB&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2 7 0 <br>
+CBA&nbsp; 11/3&nbsp; 16/3 0 <br>
+--------------- <br>
+&nbsp;&nbsp;&nbsp;&nbsp; 20/9&nbsp; 79/18&nbsp; 43/18&nbsp;&nbsp;&nbsp;&amp;nbs=
+p;
+Shapley values. </p>
+
+<p class="3DMsoNormal">Nash <span class="3DGramE">solution :</span> (2, 4 ,3)<!--=
+p-->
+
+</p></div>
+
+<br>
+</body></html>

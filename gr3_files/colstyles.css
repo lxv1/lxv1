@@ -1,0 +1,34 @@
+A {text-decoration:none; color: #000080;}
+A:link {text-decoration: none; color: #000080;}
+A:visited {text-decoration: none; color: #000080;} 
+A:active {text-decoration: underline;}	
+A:hover {text-decoration: underline; color: black;}
+A:hover{background-color:#84BD42; }
+body		   { 
+					scrollbar-face-color: #FFCCFF;
+				  	scrollbar-shadow-color: #fffff; 
+	            	scrollbar-highlight-color: #fffff;
+					scrollbar-3d-light-color: #fffff; 
+					scrollbar-dark-shadow-color: #fffff;
+					scrollbar-base-color: #fffff; 
+					scrollbar-arrow-color: #fffff;
+              }
+
+.dotted {
+	border: 1pt dashed #000000;
+	background-color: #eeeeee;
+}
+
+ItemAttributes {
+text-decoration:none; color: #000080;
+}
+A.news {text-decoration:none; color: #FF6600;}
+A.news:link {text-decoration: none; color: #FF6600;}
+A.news:visited {text-decoration: none; color: #FF6600;} 
+A.news:active {text-decoration: underline;}	
+A.news:hover {text-decoration: underline; color: black;}
+A.news:hover{background-color:#C0C0C0; }
+
+textarea     { color: black; font-family: Verdana; font-size: 8pt }
+input        { color: black; font-family: Verdana; font-size: 8pt }
+select       { color: black; font-family: Verdana; font-size: 8pt }

@@ -1,0 +1,58 @@
+This is TeX, Version 3.1415926 (TeX Live 2012) (format=tex 2012.7.9)  15 FEB 2013 13:11
+**ch4
+(./ch4 (/usr/local/texlive/2011/../texmf-local/tex/psfig/psfig.tex
+(/usr/local/texlive/2011/../texmf-local/tex/psfig/psfig.sty
+\@unused=\write0
+\fboxrule=\dimen16
+\fboxsep=\dimen17
+\ps@tempdima=\dimen18
+\ps@tempboxa=\box16
+\ps@stream=\read0
+\p@intvaluex=\dimen19
+\p@intvaluey=\dimen20
+
+psfig/tex 1.10-dvips
+))
+\p@renwd=\dimen21
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+[]
+
+\hbox(8.5+0.0)x295.6491
+.\vbox(8.5+0.0)x0.0
+
+[100] [101] [102] [103] [104] [105] [106] [107] [108] [109] [110] [111]
+[112] [113] [114] [115] [116] [117] [118] [119] [120]
+psfig: searching Fig8a.eps for bounding box
+psfig: including Fig8a.eps 
+[121]
+psfig: searching Fig8b.eps for bounding box
+psfig: including Fig8b.eps 
+[122] [123] [124] [125] [126]
+Underfull \vbox (badness 10000) has occurred while \output is active
+\vbox(492.74959+2.5)x295.6491, glue set 4.46022
+.\glue(\topskip) 3.05556
+.\hbox(6.94444+0.83333)x295.6491, glue set 0.37224
+..\tenrm w
+..\tenrm h
+..\tenrm e
+..\tenrm r
+..\tenrm e
+..etc.
+.\penalty 150
+.\glue(\baselineskip) 3.64885
+.\hbox(7.51782+2.5)x295.6491, glue set 0.06584
+..\tenrm o
+..\tenrm f
+..\glue 3.33333 plus 1.66666 minus 1.11111
+..\tenrm i
+..\tenrm n
+..etc.
+.etc.
+
+ [127]
+[128] [129]
+psfig: searching ex.12.9c.eps for bounding box
+psfig: including ex.12.9c.eps 
+[130] [131] [132] )
+Output written on ch4.dvi (33 pages, 108768 bytes).

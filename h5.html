@@ -1,0 +1,279 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="GENERATOR" content="Mozilla/4.61 [en] (X11; U; SunOS 5.7 sun4u) [Netscape]">
+</head>
+<body>
+
+<center>
+<h1>
+Homework 5</h1></center>
+P= 3x+4y -> max, 2x+2y&nbsp; &lt;= 200, x+3y &lt;= t, x,y >=0, t a given
+number.
+<center>
+<p>Solution by simplex method.</center>
+
+<p>We introduce two slack variables
+<br>u=100-x-y >= 0 and&nbsp; v= t-x-3y >= 0.
+<br>We write the problem in a standard row tableau
+<br>&nbsp;
+<table BORDER COLS=4 WIDTH="100%" NOSAVE >
+<tr>
+<td>x</td>
+
+<td>y</td>
+
+<td>1</td>
+
+<td></td>
+</tr>
+
+<tr>
+<td>-1</td>
+
+<td>-1</td>
+
+<td>100</td>
+
+<td>=u</td>
+</tr>
+
+<tr>
+<td>-1</td>
+
+<td>-3</td>
+
+<td>t</td>
+
+<td>=v</td>
+</tr>
+
+<tr>
+<td>-3</td>
+
+<td>-4</td>
+
+<td>0</td>
+
+<td>=-P->min</td>
+</tr>
+</table>
+
+<p><b>When t &lt; 0</b>, the v-row is bad, so t<b>he problem is infeasible.</b>
+<br>Assume now that t >0. The tableau is feasible, so we go to Phase 2.
+<br>We chose&nbsp; the y-column as the pivot column.
+<p><b>When&nbsp; t >= 300</b>,&nbsp; then we pivot on -1 and obtain
+<table BORDER COLS=4 WIDTH="100%" NOSAVE >
+<tr>
+<td>x</td>
+
+<td>u</td>
+
+<td>1</td>
+
+<td></td>
+</tr>
+
+<tr>
+<td>-1</td>
+
+<td>-1</td>
+
+<td>100</td>
+
+<td>=y</td>
+</tr>
+
+<tr>
+<td>2</td>
+
+<td>3</td>
+
+<td>t-300</td>
+
+<td>=v</td>
+</tr>
+
+<tr>
+<td>1</td>
+
+<td>4</td>
+
+<td>-400</td>
+
+<td>=-P->min</td>
+</tr>
+</table>
+which is an optimal tableau, hence <b>max = 400 at x= 0, y=100.</b>
+<p>Assume now that&nbsp; 0 &lt; t &lt; 300. Then according to the simplex
+method we pivot on -3 and obtain
+<table BORDER COLS=4 WIDTH="100%" NOSAVE >
+<tr>
+<td>x</td>
+
+<td>v</td>
+
+<td>1</td>
+
+<td></td>
+</tr>
+
+<tr>
+<td>-2/3</td>
+
+<td>1/3</td>
+
+<td>100-t/3</td>
+
+<td>=u</td>
+</tr>
+
+<tr>
+<td>-1/3</td>
+
+<td>-1/3</td>
+
+<td>t/3</td>
+
+<td>=y</td>
+</tr>
+
+<tr>
+<td>-5/3</td>
+
+<td>4/3</td>
+
+<td>-4t/3</td>
+
+<td>=-P->min</td>
+</tr>
+</table>
+
+<p>Now the x-column is the pivot column. We have to compare&nbsp;&nbsp;
+(100-t/3)/(-2/3) and&nbsp; (t/3)/(-1/3) to choose a pivot entry.
+<br><b>When 0 &lt; t &lt;=100,</b> we pivot on&nbsp; -1/3 and obtain
+<table BORDER COLS=4 WIDTH="100%" NOSAVE >
+<tr>
+<td>y</td>
+
+<td>v</td>
+
+<td>1</td>
+
+<td></td>
+</tr>
+
+<tr>
+<td>2</td>
+
+<td>1</td>
+
+<td>100-t</td>
+
+<td>=u</td>
+</tr>
+
+<tr>
+<td>-3</td>
+
+<td>-1</td>
+
+<td>t</td>
+
+<td>=x</td>
+</tr>
+
+<tr>
+<td>5</td>
+
+<td>3</td>
+
+<td>-3t</td>
+
+<td>=-P->min</td>
+</tr>
+</table>
+hence <b>max=3t at x=t, y = 0.</b>
+<br><b>When 100 &lt;= t &lt;=300,</b> we pivot on&nbsp; -2/3 and obtain
+<table BORDER COLS=4 WIDTH="100%" NOSAVE >
+<tr>
+<td>u</td>
+
+<td>v</td>
+
+<td>1</td>
+
+<td></td>
+</tr>
+
+<tr>
+<td>-3/2</td>
+
+<td>1/2</td>
+
+<td>150-t/2</td>
+
+<td>=x</td>
+</tr>
+
+<tr>
+<td>1/2</td>
+
+<td>-1</td>
+
+<td>t/2-50</td>
+
+<td>=y</td>
+</tr>
+
+<tr>
+<td>5/2</td>
+
+<td>1/2</td>
+
+<td>-t/2-250</td>
+
+<td>=-P->min</td>
+</tr>
+</table>
+hence <b>max=t /2+250 at x = 150-t/2, y= t/2-50.</b>
+<p>Note that the slope is decreasing (the law of diminishing return):
+<br>&nbsp;
+<table BORDER COLS=4 WIDTH="100%" NOSAVE >
+<tr>
+<td>interval</td>
+
+<td>0&lt;=t&lt;=100</td>
+
+<td>100 &lt;= t &lt;= 300</td>
+
+<td>300 &lt;= t</td>
+</tr>
+
+<tr>
+<td>slope</td>
+
+<td>3</td>
+
+<td>1/2</td>
+
+<td>0</td>
+</tr>
+</table>
+The last tableau is optimal when t = 200 (the case in the film), and the
+slope is the last entry in the v-column.
+<br>If we start to change the first limit&nbsp; 200 (instead of the second
+limit 200), then the slope would be 5/4.
+<center>
+<p>Graphical solution.</center>
+When t &lt;0, the feasible region is empty, so the problem is infeasible.
+<br>When 0 &lt;= t &lt;= 100,&nbsp; the first constraint is redundund,
+the feasible region is a triangle, max = 3t at&nbsp; x=t, y = 0.
+<br>When 100 &lt;=t &lt;= 300, the&nbsp; optimal solution is the intersection
+of the lines corresponding to the first two constraints:
+<br>2x+2y&nbsp; = 200, x+3y = t, hence x= 150-t/2, y=t/2 -50, max = 250+t/2.
+<br>When t >=300, the second constraint is redundand, the feasible region
+is a triangle, max = 400 at&nbsp; x=0, y = 100.
+</body>
+</html>

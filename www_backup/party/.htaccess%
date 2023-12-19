@@ -1,0 +1,8 @@
+AuthUserFile /afs/psu.edu/services/www/dept/math/party/.htpasswd
+AuthGroupFile /afs/psu.edu/services/www/dept/math/party/.htgroup
+      AuthName "my authentication name"
+      AuthType Basic
+
+      <Limit GET POST>
+      require group allowed
+      </Limit>

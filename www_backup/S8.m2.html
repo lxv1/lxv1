@@ -1,0 +1,431 @@
+<!DOCTYPE html PUBLIC "-//w3c//dtd html 4.0 transitional//en">
+<html><head>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+  <meta name="GENERATOR" content="Mozilla/4.77 [en] (X11; U; SunOS 5.8 sun4u) [Netscape]"><title>m2</title></head><body>
+<font size="-1">Math 486.&nbsp; March 20, 2008 .&nbsp; Midterm
+2.&nbsp;&nbsp;
+5 problems, 15 points each. Name:</font>
+<hr width="100%"><br>
+<font size="-1">1-3. Solve the linear programs, where&nbsp; all <i>x</i><sub>i</sub>
+&gt;=&nbsp; 0:</font>
+<br>
+<b><font size="-1">1.</font></b>
+<table nosave="" cols="7" width="100%">
+  <tbody>
+    <tr>
+      <td><font size="-1"><i>x</i><sub>1</sub></font></td>
+      <td><font size="-1"><i>x</i><sub>2</sub></font></td>
+      <td><font size="-1"><i>-x</i><sub>3</sub></font></td>
+      <td><font size="-1"><i>-x</i><sub>4</sub></font></td>
+      <td><font size="-1"><i>x</i><sub>5</sub></font></td>
+      <td><font size="-1">-1</font></td>
+      <td><br>
+      </td>
+    </tr>
+    <tr>
+      <td><font size="-1">10<sup>11</sup></font></td>
+      <td><font size="-1">2</font></td>
+      <td><font size="-1">3</font></td>
+      <td><font size="-1">5</font></td>
+      <td><font size="-1">6</font></td>
+      <td><small>10<sup>-12</sup></small><br>
+      </td>
+      <td><font size="-1">=- <i>x</i><sub>6</sub></font></td>
+    </tr>
+    <tr>
+      <td><font size="-1">0</font></td>
+      <td><font size="-1">-1</font></td>
+      <td><font size="-1">-2</font></td>
+      <td><font size="-1">0</font></td>
+      <td><font size="-1">3</font></td>
+      <td><font size="-1">10<sup>13</sup></font></td>
+      <td><font size="-1">= <i>-x</i><sub>7</sub></font></td>
+    </tr>
+    <tr>
+      <td><font size="-1">-1</font></td>
+      <td><font size="-1">0</font></td>
+      <td>0<br>
+      </td>
+      <td><font size="-1">4</font></td>
+      <td><font size="-1">-4</font></td>
+      <td><font size="-1">2<sup>300</sup></font></td>
+      <td><font size="-1">= -<i>x</i><sub>8</sub></font></td>
+    </tr>
+    <tr>
+      <td><font size="-1">2</font></td>
+      <td><font size="-1">0</font></td>
+      <td><font size="-1">3<sup>-300</sup></font></td>
+      <td><font size="-1">0</font></td>
+      <td><font size="-1">1</font></td>
+      <td><font size="-1">2</font></td>
+      <td><font size="-1">= <i>f</i> -&gt; min</font></td>
+    </tr>
+  </tbody>
+</table>
+<i><br><small><small>
+Solution. </small></small></i><small><small>We multiply&nbsp;&nbsp;&nbsp; the&nbsp; last row, the
+&nbsp;
+<span style="font-style: italic;">x</span><sub>3</sub>-column,&nbsp;
+and the <span style="font-style: italic;">x</span><sub>4</sub>-column
+by -1 to obtain a standard tableau.</small></small><br>
+<table nosave="" cols="7" width="100%">
+  <tbody>
+    <tr>
+      <td><font size="-1"><i>x</i><sub>1</sub></font></td>
+      <td><font size="-1"><i>x</i><sub>2</sub></font></td>
+      <td><font size="-1"><i>x</i><sub>3</sub></font></td>
+      <td><font size="-1"><i>x</i><sub>4</sub></font></td>
+      <td><font size="-1"><i>x</i><sub>5</sub></font></td>
+      <td><font size="-1">-1</font></td>
+      <td><br>
+      </td>
+    </tr>
+    <tr>
+      <td><font size="-1">10<sup>11</sup></font></td>
+      <td><font size="-1">2</font></td>
+      <td><font size="-1">-3</font></td>
+      <td><font size="-1">-5</font></td>
+      <td><font size="-1">6</font></td>
+      <td><small>10<sup>-12</sup></small><br>
+      </td>
+      <td><font size="-1">=- <i>x</i><sub>6</sub></font></td>
+    </tr>
+    <tr>
+      <td><font size="-1">0</font></td>
+      <td><font size="-1">-1</font></td>
+      <td><font size="-1">2</font></td>
+      <td><font size="-1">0</font></td>
+      <td><font size="-1">3</font></td>
+      <td><font size="-1">10<sup>13</sup></font></td>
+      <td><font size="-1">= <i>-x</i><sub>7</sub></font></td>
+    </tr>
+    <tr>
+      <td><font size="-1">-1</font></td>
+      <td><font size="-1">0</font></td>
+      <td>0<br>
+      </td>
+      <td><font size="-1">-4</font></td>
+      <td><font size="-1">-4</font></td>
+      <td><font size="-1">2<sup>300</sup></font></td>
+      <td><font size="-1">= -<i>x</i><sub>8</sub></font></td>
+    </tr>
+    <tr>
+      <td><font size="-1">-2</font></td>
+      <td><font size="-1">0</font></td>
+      <td><font size="-1">3<sup>-300</sup></font></td>
+      <td><font size="-1">0</font></td>
+      <td><font size="-1">1</font></td>
+      <td><font size="-1">2</font></td>
+      <td><font size="-1">= <i>-f</i> -&gt; max</font></td>
+    </tr>
+  </tbody>
+</table>
+<br><small><small><small>
+It is feasible. Setting&nbsp;&nbsp; <font size="-1"><small><small><small><i>x</i><sub>3 </sub></small></small></small></font>=&nbsp;
+<font size="-1"><small><small><small><i>x</i><sub>2</sub></small></small></small></font>/2&nbsp; and&nbsp; &nbsp; <font size="-1"><small><small><small><i>x</i><sub>4</sub></small></small></small></font>&nbsp;&nbsp; = &nbsp;&nbsp; <font size="-1"><small><small><small><i>x</i><sub>2</sub></small></small></small></font>, we obtain a smaller standard
+feasible tableau with a bad&nbsp;&nbsp; <font size="-1"><small><small><small><i>x</i><sub>2</sub></small></small></small></font>
+-column.&nbsp; So this smaller LP is unbounded, hence the original
+problem is also unbounded.</small></small></small><br>
+<hr width="100%">
+<br>
+2.
+<table nosave="" cols="7" width="100%">
+  <tbody>
+    <tr>
+      <td><font size="-1"><i>x</i><sub>1</sub></font></td>
+      <td><font size="-1"><i>x</i><sub>2</sub></font></td>
+      <td><font size="-1"><i>x</i><sub>3</sub></font></td>
+      <td><font size="-1"><i>x</i><sub>4</sub></font></td>
+      <td><font size="-1"><i>x</i><sub>5</sub></font></td>
+      <td><font size="-1">-1</font></td>
+      <td><br>
+      </td>
+    </tr>
+    <tr>
+      <td><font size="-1">1</font></td>
+      <td><font size="-1">2</font></td>
+      <td><font size="-1">-3</font></td>
+      <td><font size="-1">-5</font></td>
+      <td><font size="-1">6</font></td>
+      <td><font size="-1">2</font></td>
+      <td><font size="-1">= -<i>x</i><sub>6</sub></font></td>
+    </tr>
+    <tr>
+      <td><font size="-1">0</font></td>
+      <td><font size="-1">-10<sup>-100</sup></font></td>
+      <td><font size="-1">-2</font></td>
+      <td><font size="-1">0</font></td>
+      <td><font size="-1">-3</font></td>
+      <td><font size="-1">-10<sup>-300</sup></font></td>
+      <td><font size="-1">= <i>x</i><sub>7</sub></font></td>
+    </tr>
+    <tr>
+      <td><font size="-1">-1</font></td>
+      <td><font size="-1">0</font></td>
+      <td><font size="-1">2</font></td>
+      <td><font size="-1">4</font></td>
+      <td><font size="-1">-4</font></td>
+      <td><font size="-1">-2</font></td>
+      <td><font size="-1">= <i>x</i><sub>8</sub></font></td>
+    </tr>
+    <tr>
+      <td><font size="-1">2</font></td>
+      <td><font size="-1">0</font></td>
+      <td><font size="-1">3</font></td>
+      <td><font size="-1">1</font></td>
+      <td><font size="-1">1</font></td>
+      <td><small>0</small><br>
+      </td>
+      <td><font size="-1">= </font><font size="-1"><i>x</i><sub>9</sub></font></td>
+    </tr>
+    <tr>
+      <td><small>-1</small><br>
+      </td>
+      <td><small>-2</small><br>
+      </td>
+      <td><font size="-1">-10<sup>-100</sup></font> </td>
+      <td><small>0<br>
+      </small></td>
+      <td><small>0<br>
+      </small></td>
+      <td><small>0<br>
+      </small></td>
+      <td><font size="-1">= <i>f</i> -&gt; max</font> </td>
+    </tr>
+  </tbody>
+</table>
+<small><small><i>Solution. </i>We multiply&nbsp;&nbsp;&nbsp; the &nbsp; rows 2,
+3 and 4 &nbsp; by -1 to obtain a standard tableau. So max = 0 at&nbsp;&nbsp; <font size="-1"><small><small><i>x</i><sub>1</sub></small></small></font>= <font size="-1"><small><small><i>x</i><sub>2</sub></small></small></font>=&nbsp;&nbsp;
+<font size="-1"><small><small><i>x</i><sub>3 </sub></small></small></font>=&nbsp;&nbsp; <font size="-1"><small><small><i>x</i><sub>4 </sub></small></small></font>=&nbsp;&nbsp;&nbsp;&nbsp; <font size="-1"><small><small><i>x</i><sub>5 </sub></small></small></font>=&nbsp;&nbsp;&nbsp; 0<span style="font-style: italic;">,&nbsp; </span><font size="-1"><small><small><i>&nbsp; </i></small></small></font>&nbsp;
+<font size="-1"><small><small><i>x</i><sub>6</sub></small></small></font>= 2,&nbsp; <font size="-1"><small><small><i>x</i><sub>7</sub></small></small></font>=
+<font size="-1"><small><small>10<sup>-300</sup></small></small></font>, &nbsp;&nbsp; <font size="-1"><small><small><i>x</i><sub>8
+</sub></small></small></font>=2, &nbsp; <font size="-1"><small><small><i>x</i><sub>9 </sub></small></small></font>=&nbsp;
+0.<br>
+
+&nbsp;</small></small><br>
+&nbsp;
+<p><b><font size="-1">3.</font></b>
+<table nosave="" cols="7" width="100%">
+  <tbody>
+    <tr>
+      <td><font size="-1"><i>x</i><sub>1</sub></font><font size="-1">/30000001</font></td>
+      <td><font size="-1"><i>x</i></font><font size="-1"><sub>1</sub></font><font size="-1">/3000002</font></td>
+      <td><font size="-1"><i>x</i><sub>3</sub></font><font size="-1">/3000003</font></td>
+      <td><font size="-1"><i>x</i><sub>4</sub></font><font size="-1">/3000004</font></td>
+      <td><font size="-1"><i>x</i><sub>5</sub></font><font size="-1">/3000005</font></td>
+      <td><font size="-1">-1</font></td>
+      <td><br>
+      </td>
+    </tr>
+    <tr>
+      <td><font size="-1">1/300001</font></td>
+      <td><font size="-1">-1/3000002</font></td>
+      <td><font size="-1">1/300003</font></td>
+      <td><font size="-1">1/300004</font></td>
+      <td><font size="-1">0</font><font size="-1"></font></td>
+      <td><font size="-1">-2</font></td>
+      <td><font size="-1">= -<i>x</i><sub>6</sub></font></td>
+    </tr>
+    <tr>
+      <td><small><small><big>1/30001</big><br>
+      </small></small></td>
+      <td><small>-1/30002</small></td>
+      <td><font size="-1">-2/3003</font></td>
+      <td><font size="-1">0</font></td>
+      <td><small>0</small><br>
+      </td>
+      <td><font size="-1">-1</font></td>
+      <td><font size="-1">= -<i>x</i><sub>7</sub></font></td>
+    </tr>
+    <tr>
+      <td><font size="-1">1/3001</font></td>
+      <td><font size="-1">0</font></td>
+      <td><font size="-1">2/3003</font></td>
+      <td><small>3/3004</small><br>
+      </td>
+      <td><font size="-1">-4/3005</font></td>
+      <td><font size="-1">2</font></td>
+      <td><font size="-1">= <i>-x</i><sub>8</sub></font></td>
+    </tr>
+    <tr>
+      <td><font size="-1">2/301</font></td>
+      <td><font size="-1">0</font></td>
+      <td><font size="-1">-1/303</font></td>
+      <td><font size="-1">0</font></td>
+      <td><font size="-1">1/305</font></td>
+      <td><font size="-1">2</font></td>
+      <td><font size="-1">= <i>f</i> -&gt; max</font></td>
+    </tr>
+  </tbody>
+</table>
+</p>
+<p><small><small><i>Solution. </i>Combine the first two columns
+to obtain a standard tableau.&nbsp; The fifth column is bad.&nbsp; We set&nbsp; <font size="-1"><small><small><i>x</i><sub>1</sub></small></small></font>= <font size="-1"><small><small><i>x</i><sub>3</sub></small></small></font>= <font size="-1"><small><small><i>x</i><sub>4 </sub></small></small></font>= 0&nbsp; and send <font size="-1"><small><small><i>x</i><sub>5&nbsp;</sub></small></small></font> to infinity. Then f -&gt; infinity, while&nbsp;&nbsp;&nbsp; <font size="-1"><small><small><i>x</i><sub>6 </sub></small></small></font>= 2, <font size="-1"><small><small><i>x</i><sub>7</sub></small></small></font> = 1, and&nbsp; <font size="-1"><small><small><i>x</i><sub>8 </sub></small></small></font>= <font size="-1"><small><small><i>x</i><sub>5</sub></small></small></font><font size="-1"><small><small>/(3000005*305) -2 is positive for sufficiently large&nbsp;&nbsp; </small></small></font><font size="-1"><small><small><i>x</i><sub>5&nbsp;</sub></small></small></font> </small></small><font size="-1"><small><small>. Thus, the LP is unbounded.</small></small></font></p><hr width="100%"><br>
+<font size="-1">4-5. Solve matrix games:</font>
+<br>
+<b><font size="-1">4.</font></b>
+<table nosave="" style="width: 80%;" border="1" cols="7">
+  <tbody>
+    <tr>
+      <td><font size="-1">1</font></td>
+      <td><font size="-1">3</font></td>
+      <td><font size="-1">5</font><font size="-1">-</font><font size="-1">10<sup>-100</sup></font></td>
+      <td><font size="-1">7</font></td>
+      <td><font size="-1">1</font></td>
+      <td><font size="-1">3</font></td>
+      <td><font size="-1">2</font></td>
+    </tr>
+    <tr>
+      <td><font size="-1">8</font></td>
+      <td><font size="-1">8+10<sup>-100</sup></font></td>
+      <td><font size="-1">9</font></td>
+      <td><font size="-1">8+</font><font size="-1">10<sup>-100</sup></font></td>
+      <td><font size="-1">9</font></td>
+      <td><font size="-1">8</font></td>
+      <td><font size="-1">9</font></td>
+    </tr>
+    <tr>
+      <td><font size="-1">1</font></td>
+      <td><font size="-1">-5</font></td>
+      <td><font size="-1">4</font></td>
+      <td><font size="-1">3</font></td>
+      <td><font size="-1">4</font></td>
+      <td><font size="-1">9</font></td>
+      <td><font size="-1">10<sup>-100</sup></font></td>
+    </tr>
+    <tr>
+      <td><font size="-1">3</font></td>
+      <td><font size="-1">5</font></td>
+      <td><font size="-1">6</font></td>
+      <td><font size="-1">-3</font></td>
+      <td><font size="-1">-</font><font size="-1">10<sup>-100</sup></font></td>
+      <td><font size="-1">1</font></td>
+      <td><font size="-1">3</font></td>
+    </tr>
+    <tr>
+      <td><font size="-1">8+10<sup>-100</sup></font></td>
+      <td><small>9</small><br>
+      </td>
+      <td><small>9</small><br>
+      </td>
+      <td><font size="-1">8</font></td>
+      <td><small>9</small><br>
+      </td>
+      <td><font size="-1">8</font></td>
+      <td><small>9</small><font size="-1">-</font><font size="-1">10<sup>-100</sup></font></td>
+    </tr>
+  </tbody>
+</table>
+<small><small><i>Solution.&nbsp; </i>Set&nbsp; e =&nbsp; <font size="-1"><small><small>10<sup>-100</sup></small></small></font>.&nbsp; Using pure strategies (the 2nd row and
+the&nbsp;
+fourth column), &nbsp; 8 &lt;=&nbsp;&nbsp; the value of game&nbsp;
+&lt; =
+8+ <font size="-1"><small><small>e</small></small></font>. <br>
+The column player&nbsp; best pure strategies&nbsp; are the rows 2 and
+5. They gives him at least 8. So they&nbsp; are optimal up to 100
+digits.<br>
+If the column player chooses Column 1 or 4, she pays him at most 8+e. So these pure strategies are optimal up to 100 digits.<br>
+It is easy to improve c1 and c4 using mixed strategies (e..g, (c1+c4)/2
+improves both).&nbsp; It is easy to improve r2 and r5 (e.g. (r2+r5)/2
+improves both).<br>
+By domination, we can
+cross out&nbsp; the rows 1 and 4 and the columns 3, 5. Column 7 is dominated by (c2+2ec4)/(1+2e). <br>
+Optimal strategies are&nbsp;&nbsp; [0, 6, e, 0, 8]<sup>T</sup>/(14+e)
+and&nbsp;&nbsp;&nbsp; [1, 0, 0, 1,0,&nbsp; 12+e, 0 ]/(14+e) . The value of game is
+(112+9e)/(14+e).</small></small><br>
+&nbsp;
+<b><font size="-1">5.</font></b>
+<table nosave="" style="width: 80%;" border="1" cols="7">
+  <tbody>
+    <tr>
+      <td><font size="-1">0</font></td>
+      <td><font size="-1">0</font></td>
+      <td><font size="-1">0</font></td>
+      <td><font size="-1">-2</font></td>
+      <td><font size="-1">-2</font></td>
+      <td><font size="-1">-1</font></td>
+      <td><font size="-1">-2</font></td>
+    </tr>
+    <tr>
+      <td><font size="-1">0</font></td>
+      <td><font size="-1">2</font></td>
+      <td><font size="-1">0</font></td>
+      <td><font size="-1">-1</font></td>
+      <td><font size="-1">-2</font></td>
+      <td><font size="-1">-1</font></td>
+      <td><font size="-1">-1</font></td>
+    </tr>
+    <tr>
+      <td><font size="-1">0</font></td>
+      <td><font size="-1">3</font></td>
+      <td><font size="-1">3</font></td>
+      <td><font size="-1">0</font></td>
+      <td><font size="-1">-2</font></td>
+      <td><font size="-1">0</font></td>
+      <td><font size="-1">-1</font></td>
+    </tr>
+    <tr>
+      <td><font size="-1">3</font>+<font size="-1">10<sup>-100</sup></font></td>
+      <td><font size="-1">0</font></td>
+      <td><font size="-1">3</font></td>
+      <td><font size="-1">0</font></td>
+      <td><font size="-1">2</font></td>
+      <td><font size="-1">3</font></td>
+      <td><font size="-1">0</font></td>
+    </tr>
+    <tr>
+      <td><font size="-1">0</font></td>
+      <td><font size="-1">3</font></td>
+      <td><font size="-1">1</font></td>
+      <td><font size="-1">4</font></td>
+      <td><font size="-1">3</font></td>
+      <td><font size="-1">0</font></td>
+      <td><font size="-1">4</font></td>
+    </tr>
+  </tbody>
+</table>
+<p><small><i>Solution. </i>Rows 1 and 2 are domimated by&nbsp; Row 4, so we
+  cross them out. Column 3 is dominated&nbsp; by Column&nbsp; 6, so
+  Column 3 goes.<br>
+
+  Now the first remaining row is dominated by the last row, so it goes.
+  By additional dominations, <br>
+
+  &nbsp;we are reduced&nbsp; to</small> </p>
+ <table nosave="" border="1" cols="2" width="20%">
+  <tbody>
+    <tr>
+      <td>0<font size="-1"><sup></sup></font></td>
+      <td>3<br>
+      </td>
+    </tr>
+    <tr>
+      <td>3<br>
+      </td>
+      <td>0<br>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<p><small>Optimal strategies are [1/2, 1/2]<sup>T</sup>&nbsp;
+and&nbsp;&nbsp;
+[1/2, 1/2]<sup>&nbsp;</sup> &nbsp;
+and the value of game is 3/2.
+<br>
+
+For the original game, the value is the same, and&nbsp; optimal
+strategies
+are
+<br>
+
+[0,0,0, 1/2,1/2]<sup>T</sup>&nbsp;
+and&nbsp;&nbsp; [0, 1/2,0, 0, 0,&nbsp;
+1/2, 0].</small><br>
+<br>
+</p>
+<hr width="100%"><br>
+&nbsp;
+<br>
+&nbsp;
+</body></html>

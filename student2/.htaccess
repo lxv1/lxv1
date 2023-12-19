@@ -1,0 +1,8 @@
+AuthUserFile /home/fourier2/vstein/www/student2/.htpasswd
+AuthGroupFile /home/fourier2/vstein/www/student2/.htgroup
+      AuthName "vstein"
+      AuthType Basic
+
+      <Limit GET POST>
+      require group allowed
+      </Limit>

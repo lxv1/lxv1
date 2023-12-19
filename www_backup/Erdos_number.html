@@ -1,0 +1,754 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+	
+		<title>MR: 
+Collaboration Distance
+</title>
+		<script type="text/javascript" src="Erdos_number_files/msnAjax.js"></script>
+		<script type="text/javascript" src="Erdos_number_files/cookies.js"></script>
+		<script type="text/javascript">
+		<!--
+			if( getRequestObject() && getCookie('hasJavascript')==null ){
+				setCookie( 'hasJavascript', 1 );
+				if( getCookie('hasJavascript') )
+					window.location.reload();
+			}
+			function shrinkFontsForSmallScreens()
+			{
+				if( document.body.clientWidth <= 800 ){
+					document.body.style.fontSize = '14px';
+				}else{
+					document.body.style.fontSize = '16px';
+				}
+			}
+		-->
+		</script>
+
+		<link rel="stylesheet" type="text/css" href="Erdos_number_files/ns4.css">
+		
+			<style type="text/css" media="screen">
+				@import url(/mathscinet/css/msn.css);
+			</style>
+		
+		<link rel="stylesheet" type="text/css" media="print" href="Erdos_number_files/print.css">
+
+		<style type="text/css">
+			body, input, select {
+				font-family: Verdana, "Bitstream Vera Sans", Arial, Helvetica, sans-serif;
+			}
+			h3, ul.tabContainer, .erdosNumber, .helptopic, .helpsubtopic {
+				font-family: "Trebuchet MS", "Bitstream Vera Sans", "Lucida Grande", "Nimbus Sans L", Verdana, Arial, Helvetica, sans-serif;
+			}
+
+		</style>
+		<script type="text/javascript" src="Erdos_number_files/onload.js"></script>
+		<script type="text/javascript" src="Erdos_number_files/tabs.js"></script>
+		
+
+	</head><body style="font-size: 16px;">
+				<form name="backButtonTest">
+			<input name="dummy" value="0" type="hidden">
+		</form>
+		<script type="text/javascript">
+		<!--
+			var backStatus;
+			backStatus = ("1" != document.backButtonTest.dummy.value);
+			document.backButtonTest.dummy.value = 0;
+			document.backButtonTest.dummy.defaultValue = 0;
+		-->
+		</script>
+
+		
+		<div id="everything">
+
+		<a href="http://www.ams.org/mathscinet/index.html" id="logo" title="Go to the MathSciNet Search Page"><img src="Erdos_number_files/logo.png" alt="MathSciNet"></a>
+		<div id="menuWrap">
+		<ul id="menu">
+			<li class="first">
+			<div id="clipboard" class="clipboardHidden">
+				<a href="http://www.ams.org/mathscinet/clipboard.html">Clipboard</a>
+			</div>
+			</li>
+			<li class="first">
+	<a href="http://www.ams.org/mathscinet">Home</a>
+</li>
+			<li>
+	<a href="http://www.ams.org/mathscinet/preferences.html">Preferences</a>
+</li>
+			<li>
+	<strong>Free Tools</strong>
+</li>
+			<li>
+	<a href="http://www.ams.org/mathscinet/help/about.html" target="about">About</a>
+</li>
+			<li>
+	<a href="http://www.ams.org/mathscinet/help/librarians.html">Librarians</a>
+</li>
+		</ul>
+		</div>
+		
+
+
+
+
+
+		
+			
+			
+		<ul class="tabContainer">
+			
+			<li class="lowerTabEdge" id="tab1">
+	<div>
+		<div>
+			
+				<a href="http://www.ams.org/mathscinet/searchMSC.html" onclick="return toggleTab( 'freeTools', 'tab1', 'folder1' )" id="tab1link" title="Search MSC database" accesskey="">Search MSC</a>
+			
+		</div>
+	</div>
+</li>
+
+
+		
+			
+			<li class="upperTab" id="tab2">
+	<div>
+		<div>
+			
+				<a href="http://www.ams.org/mathscinet/collaborationDistance.html" onclick="return toggleTab( 'freeTools', 'tab2', 'folder2' )" id="tab2link" title="Collaboration Distance" accesskey="">Collaboration Distance</a>
+			
+		</div>
+	</div>
+</li>
+
+
+		
+			
+			<li class="lowerTab" id="tab3">
+	<div>
+		<div>
+			
+				<a href="http://www.ams.org/mathscinet/CurrentJournals.html" onclick="return toggleTab( 'freeTools', 'tab3', 'folder3' )" id="tab3link" title="Current Journal issues" accesskey="">Current Journals</a>
+			
+		</div>
+	</div>
+</li>
+
+
+		
+			
+			<li class="lowerTab" id="tab4">
+	<div>
+		<div>
+			
+				<a href="http://www.ams.org/mathscinet/CurrentPublications.html" onclick="return toggleTab( 'freeTools', 'tab4', 'folder4' )" id="tab4link" title="Current Publications" accesskey="">Current Publications</a>
+			
+		</div>
+	</div>
+</li>
+
+
+		
+		</ul>
+
+		
+		
+				<div class="bottomFolder" id="folder1">
+						
+
+	<div class="folderWrap1">
+		<div class="folderWrap2">
+				<div class="folderWrap4">
+					<div class="folderContent">
+							
+
+<ul class="help">
+	<li class="first"><a href="http://www.ams.org/mathscinet/help/search_msc_help.html" class="help">
+	Help</a></li>
+	<li><a href="http://www.ams.org/mathscinet/support_mail.html" class="help">
+	Support Mail</a></li>
+</ul>
+
+<div class="factsAndFigures">
+Free Tool
+</div>
+
+<form action="/mathscinet/search/mscbrowse.html">
+	<div class="searchTerm">
+		<h3>Classification</h3>
+		<select name="sk" tabindex="1">
+			<option selected="selected" value="default">Select a Mathematics Subject Classification</option>
+			<option value="00">00 General</option>
+			<option value="01">01 History and biography</option>
+			<option value="02">02 Logic and foundations (not currently valid)</option>
+			<option value="03">03 Mathematical logic and foundations</option>
+			<option value="04">04 Set theory (not currently valid)</option>
+
+			<option value="05">05 Combinatorics</option>
+			<option value="06">06 Order, lattices, ordered algebraic structures</option>
+			<option value="08">08 General algebraic systems</option>
+			<option value="09">09 Classical algebra (not currently valid)</option>
+			<option value="10">10 Number Theory (not currently valid)</option>
+			<option value="11">11 Number theory</option>
+			<option value="12">12 Field theory and polynomials</option>
+			<option value="13">13 Commutative rings and algebras</option>
+			<option value="14">14 Algebraic geometry</option>
+
+			<option value="15">15 Linear and multilinear algebra, matrix theory</option>
+			<option value="16">16 Associative rings and algebras</option>
+			<option value="17">17 Nonassociative rings and algebras</option>
+			<option value="18">18 Category theory, homological algebra</option>
+			<option value="19">19 K-theory</option>
+			<option value="20">20 Group theory and generalizations</option>
+			<option value="21">21 Topological algebraic structures (not currently valid)</option>
+			<option value="22">22 Topological groups, Lie groups</option>
+			<option value="26">26 Real functions</option>
+
+			<option value="27">27 Analysis (not currently valid)</option>
+			<option value="28">28 Measure and integration</option>
+			<option value="30">30 Functions of a complex variable</option>
+			<option value="31">31 Potential theory</option>
+			<option value="32">32 Several complex variables and analytic spaces</option>
+			<option value="33">33 Special Functions</option>
+			<option value="34">34 Ordinary differential equations</option>
+			<option value="35">35 Partial differential equations</option>
+			<option value="36">36 Differential equations, operational calculus</option>
+
+			<option value="37">37 Dynamical systems and ergodic theory</option>
+			<option value="39">39 Finite differences and functional equations</option>
+			<option value="40">40 Sequences, series, summability</option>
+			<option value="41">41 Approximations and expansions</option>
+			<option value="42">42 Fourier analysis</option>
+			<option value="43">43 Abstract harmonic analysis</option>
+			<option value="44">44 Integral transforms, operational calculus</option>
+			<option value="45">45 Integral equations</option>
+			<option value="46">46 Functional analysis</option>
+
+			<option value="47">47 Operator theory</option>
+			<option value="48">48 Geometry (not currently valid)</option>
+			<option value="49">49 Calculus of variations and optimal control</option>
+			<option value="50">50 Geometry (not currently valid)</option>
+			<option value="51">51 Geometry</option>
+			<option value="52">52 Convex and discrete geometry</option>
+			<option value="53">53 Differential geometry</option>
+			<option value="54">54 General topology</option>
+			<option value="55">55 Algebraic topology</option>
+
+			<option value="56">56 Topology (not currently valid)</option>
+			<option value="57">57 Manifolds and cell complexes</option>
+			<option value="58">58 Global analysis, analysis on manifolds</option>
+			<option value="60">60 Probability theory and stochastic processes</option>
+			<option value="62">62 Statistics</option>
+			<option value="65">65 Numerical analysis</option>
+			<option value="68">68 Computer science</option>
+			<option value="69">69 General applied mathematics (not currently valid)</option>
+			<option value="70">70 Mechanics of particles and systems</option>
+
+			<option value="71">71 Mechanics (not currently valid)</option>
+			<option value="73">73 Mechanics of solids (not currently valid)</option>
+			<option value="74">74 Mechanics of deformable solids</option>
+			<option value="76">76 Fluid mechanics</option>
+			<option value="78">78 Optics, electromagnetic theory</option>
+			<option value="79">79 Mathematical physics, physical applications</option>
+			<option value="80">80 Classical thermodynamics, heat transfer</option>
+			<option value="81">81 Quantum theory</option>
+			<option value="82">82 Statistical mechanics, structure of matter</option>
+
+			<option value="83">83 Relativity and gravitational theory</option>
+			<option value="84">84 Relativity, astronomy (not currently valid)</option>
+			<option value="85">85 Astronomy and astrophysics</option>
+			<option value="86">86 Geophysics</option>
+			<option value="90">90 Operations research, mathematical programming</option>
+			<option value="91">91 Game theory, economics, social and behavioral sciences</option>
+			<option value="92">92 Biology and other natural sciences, behavioral sciences</option>
+			<option value="93">93 Systems theory, control</option>
+			<option value="94">94 Information and communication, circuits</option>
+			<option value="97">97 Mathematics education</option>
+		</select>
+		<p class="directions">
+		Select a 2-digit classification</p>
+	</div>
+
+	<div class="searchTerm">
+	<h3>OR Search Classifications</h3>
+	<input size="40" name="sk">
+	<p class="directions">
+	Enter a keyword or phrase or a 2-, 3-, or 5-digit classification</p>
+	</div>
+
+	<div class="submitBox">
+		<input name="submit" value="Search" class="button" type="submit">
+		<input name="reset" value="Clear" class="button" type="reset">
+	</div>
+</form>
+
+
+					</div>
+				</div>
+		</div>
+	</div>
+
+	<div class="copyright">
+	<a href="http://www.ams.org/ams/copyright.html">© 
+	Copyright 2008, American Mathematical Society</a><br>
+	<a href="http://www.ams.org/ams/privacy.html">Privacy Statement</a>
+</div>
+
+<div class="amsAddress">
+	<a href="http://www.ams.org/"><img src="Erdos_number_files/ams-logo-sm.gif" alt="American Mathematical Society" height="31" width="40"></a>
+	<div>
+	American Mathematical Society<br>
+	201 Charles Street<br>
+	Providence, RI 02904-2294
+	</div>
+</div>
+
+
+
+
+
+
+
+
+
+				</div>
+		
+		
+				<div class="topFolder" id="folder2">
+					
+
+<div id="collaborationDistBlock">
+
+	
+
+<div id="collaborationDistBlock">
+
+	<div class="folderWrap1">
+		<div class="folderWrap2">
+				<div class="folderWrap4">
+					<div class="folderContent">
+							
+
+
+<ul class="help">
+	<li class="first"><a href="http://www.ams.org/mathscinet/help/collab_help_full.html" class="help">
+	Help</a></li>
+	<li><a href="http://www.ams.org/mathscinet/support_mail.html" class="help">
+	Support Mail</a></li>
+</ul>
+
+<div class="factsAndFigures">
+Free Tool
+</div>
+
+
+	<span class="erdosNumber">MR Erdos Number = 3</span>
+
+	<table class="cgd">
+	<tbody><tr>
+		<td class="cgd1">
+			<a href="http://www.ams.org/mathscinet/search/publications.html?s1=177365&amp;pg1=IID">Leonid N. Vaserstein</a>
+		</td>
+		<td class="cgd2">
+			<a href="http://www.ams.org/mathscinet/search/publications.html?pg1=INDI&amp;s1=177365&amp;co1=AND&amp;pg2=INDI&amp;s2=203797">coauthored with</a>
+		</td>
+		<td class="cgd3">
+			<a href="http://www.ams.org/mathscinet/search/publications.html?s1=203797&amp;pg1=IID">J\o rgen Cherly</a>
+		</td>
+		<td class="cgd4">
+			<a href="http://www.ams.org/mathscinet-getitem?mr=1628154">MR1628154 (99e:13030)</a>
+		</td>
+	</tr>
+	<tr>
+		<td class="cgd1">
+			<a href="http://www.ams.org/mathscinet/search/publications.html?s1=203797&amp;pg1=IID">J\o rgen Cherly</a>
+		</td>
+		<td class="cgd2">
+			<a href="http://www.ams.org/mathscinet/search/publications.html?pg1=INDI&amp;s1=203797&amp;co1=AND&amp;pg2=INDI&amp;s2=57075">coauthored with</a>
+		</td>
+		<td class="cgd3">
+			<a href="http://www.ams.org/mathscinet/search/publications.html?s1=57075&amp;pg1=IID">Jean-Marc Deshouillers</a>
+		</td>
+		<td class="cgd4">
+			<a href="http://www.ams.org/mathscinet-getitem?mr=1039772">MR1039772 (91b:11143)</a>
+		</td>
+	</tr>
+	<tr>
+		<td class="cgd1">
+			<a href="http://www.ams.org/mathscinet/search/publications.html?s1=57075&amp;pg1=IID">Jean-Marc Deshouillers</a>
+		</td>
+		<td class="cgd2">
+			<a href="http://www.ams.org/mathscinet/search/publications.html?pg1=INDI&amp;s1=57075&amp;co1=AND&amp;pg2=INDI&amp;s2=189017">coauthored with</a>
+		</td>
+		<td class="cgd3">
+			<a href="http://www.ams.org/mathscinet/search/publications.html?s1=189017&amp;pg1=IID">Paul Erdős<sup>1</sup></a>
+		</td>
+		<td class="cgd4">
+			<a href="http://www.ams.org/mathscinet-getitem?mr=417105">MR0417105 (54 #5165)</a>
+		</td>
+	</tr>
+</tbody></table>
+
+
+
+
+	<form>
+		<input class="button" value="Change First Author" onclick="collaborationJump( 0, 189017 );" type="button">
+		<input class="button" value="Change Second Author" onclick="collaborationJump( 177365, 0 );" type="button">
+		<input class="button" value="New Search" onclick="return collaborationSubmitIt();" type="button">
+	</form>
+
+
+
+					</div>
+				</div>
+		</div>
+	</div>
+
+	<div class="copyright">
+	<a href="http://www.ams.org/ams/copyright.html">© 
+	Copyright 2008, American Mathematical Society</a><br>
+	<a href="http://www.ams.org/ams/privacy.html">Privacy Statement</a>
+</div>
+
+<div class="amsAddress">
+	<a href="http://www.ams.org/"><img src="Erdos_number_files/ams-logo-sm.gif" alt="American Mathematical Society" height="31" width="40"></a>
+	<div>
+	American Mathematical Society<br>
+	201 Charles Street<br>
+	Providence, RI 02904-2294
+	</div>
+</div>
+
+
+
+
+
+
+
+
+</div>
+
+
+<!-- InstanceEndEditable --> 
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+<!-- InstanceEndEditable --> 
+
+
+
+				</div>
+				<script type="text/javascript">
+				<!--
+					setCurrentTab( 2 );
+					focusTab( document.getElementById('folder2') );
+				-->
+				</script>
+		
+		
+				<div class="bottomFolder" id="folder3">
+						
+
+	<div class="folderWrap1">
+		<div class="folderWrap2">
+				<div class="folderWrap4">
+					<div class="folderContent">
+							
+
+<ul class="help">
+	<li class="first"><a href="http://www.ams.org/mathscinet/help/current_jour_help.html" class="help">
+	Help</a></li>
+	<li><a href="http://www.ams.org/mathscinet/support_mail.html" class="help">
+	Support Mail</a></li>
+</ul>
+<div class="factsAndFigures">
+Free Tool
+</div>
+
+<form action="/mathscinet/search/recentIssues.html">
+	<div>
+	<h3>Indexed</h3>
+	<select name="cmpRange">
+		<option value="0">This week</option>
+		<option value="1">Last week</option>
+		<option value="2">2 weeks ago</option>
+		<option value="3">3 weeks ago</option>
+		<option value="4">4 weeks ago</option>
+		<option value="5">5 weeks ago</option>
+		<option value="6">6 weeks ago</option>
+	</select>
+
+	<div class="submitBox">
+		<input class="button" name="recentIssues" onclick="search.button.value=''" value="Search" type="submit">
+		<input class="button" value="Clear" type="reset">
+	</div>
+	</div>
+</form>
+
+
+					</div>
+				</div>
+		</div>
+	</div>
+
+	<div class="copyright">
+	<a href="http://www.ams.org/ams/copyright.html">© 
+	Copyright 2008, American Mathematical Society</a><br>
+	<a href="http://www.ams.org/ams/privacy.html">Privacy Statement</a>
+</div>
+
+<div class="amsAddress">
+	<a href="http://www.ams.org/"><img src="Erdos_number_files/ams-logo-sm.gif" alt="American Mathematical Society" height="31" width="40"></a>
+	<div>
+	American Mathematical Society<br>
+	201 Charles Street<br>
+	Providence, RI 02904-2294
+	</div>
+</div>
+
+
+
+
+
+
+
+
+
+				</div>
+		
+		
+				<div class="bottomFolder" id="folder4">
+						
+
+	<div class="folderWrap1">
+		<div class="folderWrap2">
+				<div class="folderWrap4">
+					<div class="folderContent">
+							
+
+<ul class="help">
+	<li class="first"><a href="http://www.ams.org/mathscinet/help/current_pubs_help.html" class="help">
+	Help</a></li>
+	<li><a href="http://www.ams.org/mathscinet/support_mail.html" class="help">
+	Support Mail</a></li>
+</ul>
+<div class="factsAndFigures">
+Free Tool
+</div>
+
+<form action="/mathscinet/search/publications.html">
+	<div class="searchTerm">
+	    <h3>Time Frame</h3>
+		<select name="range">
+			<option value="0">
+			This month</option>
+			<option value="1">
+			Last month</option>
+			<option value="2">
+			2 months ago</option>
+			<option value="3">
+			3 months ago</option>
+			<option value="4">
+			4 months ago</option>
+			<option value="5">
+			5 months ago</option>
+			<option value="6">
+			6 months ago</option>
+		</select>
+	</div>
+
+	<div class="searchTerm">
+		<h3>Classification</h3>
+
+		<select name="MRprimary">
+			<!--<option selected value="default">Select a Mathematics Subject Classification</option>-->
+			<option selected="selected" value="default">All Classifications</option>
+			<option value="00">00 General </option>
+			<option value="01">01 History and biography </option>
+			<option value="03">03 Mathematical logic and foundations </option>
+			<option value="05">05 Combinatorics </option>
+
+			<option value="06">06 Order, lattices, ordered algebraic structures 
+			</option>
+			<option value="08">08 General algebraic systems </option>
+			<option value="11">11 Number theory </option>
+			<option value="12">12 Field theory and polynomials </option>
+			<option value="13">13 Commutative rings and algebras </option>
+			<option value="14">14 Algebraic geometry </option>
+
+			<option value="15">15 Linear and multilinear algebra, matrix theory 
+			</option>
+			<option value="16">16 Associative rings and algebras </option>
+			<option value="17">17 Nonassociative rings and algebras </option>
+			<option value="18">18 Category theory, homological algebra </option>
+			<option value="19">19 K-theory </option>
+			<option value="20">20 Group theory and generalizations </option>
+
+			<option value="22">22 Topological groups, Lie groups </option>
+			<option value="26">26 Real functions </option>
+			<option value="28">28 Measure and integration </option>
+			<option value="30">30 Functions of a complex variable </option>
+			<option value="31">31 Potential theory </option>
+			<option value="32">32 Several complex variables and analytic spaces 
+			</option>
+
+			<option value="33">33 Special Functions </option>
+			<option value="34">34 Ordinary differential equations </option>
+			<option value="35">35 Partial differential equations </option>
+			<option value="37">37 Dynamical systems and ergodic theory </option>
+			<option value="39">39 Finite differences and functional equations 
+			</option>
+			<option value="40">40 Sequences, series, summability </option>
+
+			<option value="41">41 Approximations and expansions </option>
+			<option value="42">42 Fourier analysis </option>
+			<option value="43">43 Abstract harmonic analysis </option>
+			<option value="44">44 Integral transforms, operational calculus 
+			</option>
+			<option value="45">45 Integral equations </option>
+			<option value="46">46 Functional analysis </option>
+
+			<option value="47">47 Operator theory </option>
+			<option value="49">49 Calculus of variations and optimal control 
+			</option>
+			<option value="51">51 Geometry </option>
+			<option value="52">52 Convex and discrete geometry </option>
+			<option value="53">53 Differential geometry </option>
+			<option value="54">54 General topology </option>
+
+			<option value="55">55 Algebraic topology </option>
+			<option value="57">57 Manifolds and cell complexes </option>
+			<option value="58">58 Global analysis, analysis on manifolds </option>
+			<option value="60">60 Probability theory and stochastic processes 
+			</option>
+			<option value="62">62 Statistics </option>
+			<option value="65">65 Numerical analysis </option>
+
+			<option value="68">68 Computer science </option>
+			<option value="70">70 Mechanics of particles and systems </option>
+			<option value="74">74 Mechanics of deformable solids </option>
+			<option value="76">76 Fluid mechanics </option>
+			<option value="78">78 Optics, electromagnetic theory </option>
+			<option value="80">80 Classical thermodynamics, heat transfer 
+			</option>
+
+			<option value="81">81 Quantum theory </option>
+			<option value="82">82 Statistical mechanics, structure of matter 
+			</option>
+			<option value="83">83 Relativity and gravitational theory </option>
+			<option value="85">85 Astronomy and astrophysics </option>
+			<option value="86">86 Geophysics </option>
+			<option value="90">90 Economics, operations research, programming, 
+			games </option>
+
+			<option value="91">91 Game theory, economics, social and behavioral 
+			sciences </option>
+			<option value="92">92 Biology and other natural sciences, behavioral 
+			sciences </option>
+			<option value="93">93 Systems theory, control </option>
+			<option value="94">94 Information and communication, circuits</option>
+		</select>
+
+		<div class="searchTerm">
+			or
+			Enter a 2-, 3-, or 5-digit classification
+			<input name="pclass" size="35">
+		</div>
+
+	</div>
+
+	<div class="searchOptions">
+		<h3>Publication Type</h3>
+		<input name="publicationType" id="publicationTypeAll" value="All" checked="checked" type="radio">
+		<label for="publicationTypeAll">All</label>
+		<input name="publicationType" id="publicationTypeBooks" value="Books" type="radio">
+		<label for="publicationTypeBooks">Books</label>
+		<input name="publicationType" id="publicationTypeJournals" value="Journals" type="radio">
+		<label for="publicationTypeJournals">Journals</label>
+		<input name="publicationType" id="publicationTypeProceedings" value="Proceedings" type="radio">
+		<label for="publicationTypeProceedings">Proceedings</label>
+	</div>
+
+	<div class="searchOptions">
+		<h3>Status</h3>
+		<input name="Items" id="ItemsIndexed" value="Indexed" checked="checked" type="radio">
+		<label for="ItemsIndexed">Indexed</label>
+		<input name="Items" id="ItemsReviewed" value="Reviews" type="radio">
+		<label for="ItemsReviewed">Reviewed</label>
+	</div>
+
+	<div class="submitBox">
+		<input class="button" id="simpleSubmit" name="currentBooks" onclick="search.button.value=''" value="Search" type="submit">
+		<input class="button" value="Clear" type="reset">
+	</div>
+</form>
+
+
+					</div>
+				</div>
+		</div>
+	</div>
+
+	<div class="copyright">
+	<a href="http://www.ams.org/ams/copyright.html">© 
+	Copyright 2008, American Mathematical Society</a><br>
+	<a href="http://www.ams.org/ams/privacy.html">Privacy Statement</a>
+</div>
+
+<div class="amsAddress">
+	<a href="http://www.ams.org/"><img src="Erdos_number_files/ams-logo-sm.gif" alt="American Mathematical Society" height="31" width="40"></a>
+	<div>
+	American Mathematical Society<br>
+	201 Charles Street<br>
+	Providence, RI 02904-2294
+	</div>
+</div>
+
+
+
+
+
+
+
+
+
+				</div>
+		
+
+		
+		<script type="text/javascript">
+		<!--
+			if( 0 || backStatus ){
+				addLoadEvent( function() {
+					rememberTab( 'freeTools' );
+				} );
+			}
+		-->
+		</script>
+
+
+
+
+
+
+
+		
+
+
+
+		
+		</div>
+	</body></html>

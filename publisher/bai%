@@ -1,0 +1,2569 @@
+\magnification=1100
+\hsize=4.5 true in
+\vsize=7.5 true in
+
+\def\blackbox{\vrule height 1.2ex width 1.0ex depth -.2ex}
+\def\bb{\vrule height 0.6ex width 0.5ex depth -.1ex}
+
+\font\ch=cmbx10 at 18truept
+\font\fourteenbf=cmbx10 scaled\magstep2
+\font\sixteenbf=cmbx10 scaled\magstep3
+\font\twelvebf=cmbx10 scaled\magstep1
+%\magnification=\magstep1/2
+\catcode`\@=11
+\def\m@th{\mathsurround=0pt }
+
+\pageno=301
+\headline={\ifnum\pageno=301   \else\ifodd\pageno\rightheadline \else\leftheadline\fi\fi}
+
+%\nopagenumbers % suppress footlines
+ 
+\def\bmatrix#1{\left[\matrix{#1}\right]} %matrix with brackets []
+ 
+\def\rightheadline{\tenrm\hfil{\it  Bibliography}\quad {\bf\folio}}
+\def\leftheadline{\tenrm{\bf\folio}\quad{\it Bibliography} \hfil}
+\voffset=2\baselineskip
+
+% \relax
+
+
+
+
+\newdimen\p@renwd\setbox0=\hbox{\tenex B}\p@renwd=\wd0 
+\def\rowtab#1{\begingroup \m@th\setbox0=\vbox{\def\cr{\crcr\noalign{\kern2pt\global\let\cr=\endline}}
+\ialign{$##$\hfil\kern2pt\kern\p@renwd&\thinspace\hfil$##$\hfil
+&&\quad\hfil$##$\hfil\crcr
+\omit\strut\hfil\crcr\noalign{\kern-\baselineskip}
+#1\crcr\omit\strut\cr}}
+\setbox2=\vbox{\unvcopy0 \global\setbox1=\lastbox}
+\setbox2=\hbox{\unhbox1 \unskip \global\setbox1=\lastbox}
+\setbox2=\hbox{$\kern\wd1\kern-\p@renwd \left [ \kern-\wd1
+\global\setbox1=\vbox{\box1\kern2pt}
+\vcenter{\kern-\ht1 \unvbox0 \kern-\baselineskip} \,\right]$}
+\;\vbox{\kern\ht1\box2}\endgroup}
+
+ 
+\
+\bigskip
+\bigskip
+\bigskip
+
+\bigskip
+\noindent  {\ch  Bibliography}
+\smallskip
+\hrule
+ \bigskip
+\bigskip
+
+
+\noindent
+[B1]
+       Berkovitz, L. D., 
+              {\it Convexity and Optimization in $R^n$.} 
+             J. Wiley,    New York, 2002.
+
+\smallskip
+\noindent  
+[B2] Biegler, L. T., et al., 
+               {\it Large-Scale Optimization with Applications.}
+ Springer-Verlag, New York, 1997.
+  %    Lorenz T. Biegler ... [et al.].
+% QA402.5.L356 1997   (BOOK)
+
+\smallskip
+\noindent  
+ [BL]
+  Birge, J. R. and  F. Louveaux,  {\it  Introduction to Stochastic Programming.} Springer Series in
+Operations Research. Springer-Verlag, New York, 1997.
+%  xx+421 pp. ISBN: 0-387-98217-5 (Reviewer: Peter Kall)
+% 90-02 (90-01 90C15)
+
+\smallskip
+\noindent  
+[BV] Byrne C. and  L. N. Vaserstein,
+ An improved algorithm for finding saddlepoints of 
+ two-person  zero-sum games,  {\it Game Theory,}   20:2 (1991), 149--159.
+
+\smallskip
+\noindent
+ [C1]             Carlsson, C.,  {\it               Fuzzy reasoning in decision making and optimization.}    Physica-Verlag,            Heidelberg/New York, 2002. 
+
+
+
+\smallskip
+\noindent
+[C2] 
+Chazelle, B., 
+{\it The Discrepancy Method.  
+Randomness and Complexity.}
+Cambridge University Press, Cambridge, U.K., 2000. 
+% xviii+463 pp. \$64.95. ISBN 0-521-77093-9 
+% 1 779 341 (2000:17) 65-02 (65C50 65Y20 68Q25 68U05) 
+
+
+
+
+
+\smallskip
+\noindent  
+[CGT]    Conn, A. R., N. I. M.   Gould, and P. L. Toint,
+{\it Trust-Region methods.}  SIAM,  Philadelphia,   2000. 
+ % XX(2224766.1)   () 
+
+
+
+\smallskip
+\noindent  
+[CP1] Coope, I. D. and  C. J. Price,
+On the convergence of grid-based methods for unconstrained optimization.
+{\it SIAM J. Optim.}  11 (2000), no. 4, 859--869 
+%(electronic). 
+ % 1 855 211 (2002:01) 90C56 (65K05) 
+
+
+\smallskip
+\noindent  
+ [CP2]    Calude, C. S. and G. Paun, 
+   {\it Computing with Cells and Atoms: An
+               Introduction to Quantum,\  DNA, \ and Membrane
+               Computing.} \
+  Taylor \& Francis,    London/New York,  2001. 
+% / Cristian S. Calude, Gheorghe Paun.
+% QA76.889.C35 2001   (BOOK)
+
+\smallskip
+\noindent  
+[CVL]
+              Coello, C. C.  A.,   D.  A. Van Veldhuizen, and  G. B. Lamont,
+{\it
+              Evolutionary algorithms for solving multi-objective problems.}  
+   Kluwer Academic,
+    New York, 2002. 
+
+
+
+\smallskip
+\noindent  
+[D]  Dorn,  W. S.,   Duality in quadratic programming, {\it Quarterly of Applied Mathematics} 18  (1960), no. 2,  155--162. 
+
+\smallskip
+\noindent  
+[DL]
+Dreyfus, S. E. and A. M. Law,   
+{\it The Art and Theory of Dynamic Programming.}
+Mathematics in Science and Engineering, Vol. 130. 
+Academic Press [Harcourt Brace Jovanovich, Publishers], New York/London, 1977. % xv+284 pp. $18.50. 
+
+\smallskip
+\noindent  
+[DPW] Du, D.-Z., P. M. Pardalos, and     W. Wu (ed.),
+      Mathematical Theory of Optimization. Kluwer Academic,
+    Dordrecht/Boston, 2001. 
+
+
+\smallskip
+\noindent  
+[DZ1]
+Dor, D. and U. Zwick,   Selecting the median,  {\it SIAM J. Comput.}  28 (1999), no. 5, 1722--1758.
+% ] 2000g:68054 
+% (electronic). (Reviewer: Peter B. Gibbons) 68Q25 (68R05)
+
+
+\smallskip
+\noindent  
+[DZ2]
+Dor, D. and U. Zwick,  Median selection requires $(2+\epsilon)N$ comparisons. {\it SIAM J. Discrete
+Math.}  14 (2001), no. 3, 312--325. 
+% (electronic). 68Q25 (68P10)
+% [1] 1 857 348 
+
+\smallskip
+\noindent
+[ES]
+% 2001j:90001 
+Eiselt, H. A. and  C.-L. Sandblom, {\it Integer Programming and Network Models.} With contributions by
+K. Spielberg, E. Richards, B. T. Smith, G. Laporte and B. T. Boffey. Springer-Verlag, Berlin, 2000. 
+% xii+504 pp. ISBN: 3-540-67191-9 (Reviewer: Rainer Burkard) 90-02 (90B35 90C10 90C35)
+
+\smallskip
+\noindent
+[FMP] Ferris, M.C.,  O. L.
+              Mangasarian, and J.-S.  Pang (editors),
+{\it Complementarity: Applications, Algorithms, and Extensions.}                  Klu-wer Academic, Boston,   2001.
+
+
+\smallskip
+\noindent
+[FV] Florenzano, M. and  C. L.  Van 
+in
+         cooperation with P. Gourdel, {\it
+Finite Dimensional Convexity and Optimization .}      Springer-Verlag,
+           Berlin/New York, 2001.
+
+
+
+\smallskip
+\noindent
+[FSS]
+Forgó, F.,  J. Szép,  and F.  Szidarovszky,    {\it Introduction to the Theory of Games. Concepts,
+Methods, Applications.}  Revised and expanded version of the 1985 original. Nonconvex Optimization and its
+Applications, 32. Kluwer Academic,
+    Dordrecht/Boston, 1999. 
+% xii+339 pp. ISBN: 0-7923-5775-2 (Reviewer: Hans Peters) 91Axx (91-01)
+% 1] 2001g:91007 
+
+\smallskip
+\noindent
+[FW]
+% MR  19,619e 
+Frank, M. and  P. Wolfe,   An algorithm for quadratic programming. 
+{\it Naval Res. Logist. Quart.}  3
+(1956), 95--110.  
+
+\nopagenumbers
+
+\smallskip
+\noindent  
+[G] Gramss, T. et al., 
+              Non-Standard Computation: Molecular Computation,
+              Cellular Automata, Evolutionary Algorithms, Quantum
+              Computers.  Wiley-VCH, Weinheim/New York, 1998. 
+%    QA76.887.N56 1998   (BOOK)
+
+\smallskip
+\noindent  
+ [GP] Gutin G. and    A.  P.     Punnen (editors),
+{\it
+The Traveling Salesman Problem and its Variations}
+ Kluwer Academic,
+              Dordrecht/Boston,  2002. 
+
+
+
+\smallskip
+\noindent  
+[H1] Ha\v cijan, L. G.,  A polynomial algorithm in linear programming. (Russian)  {\it Dokl. Akad. Nauk SSSR}
+244 (1979), no. 5, 1093--1096. 
+%(Reviewer: M. Stef\u anescu) 90C05
+% [6] 80g:90071 
+
+\smallskip
+\noindent 
+[H2]
+Hertog, D. den., 
+              {\it Interior Point Approach to Linear, Quadratic, and Convex Programming: Algorithms and
+              Complexity.}
+             Kluwer Academic,
+    Dordrecht/Boston, 1994. 
+
+
+\smallskip
+\noindent
+[HT]
+Horst, R. and H. Tuy,  On the convergence of global methods in multiextremal optimization. {\it J. Optim. 
+Theory Appl.}  54 (1987), no. 2, 253--271.
+%(Reviewer: Petra Weidner) 90C31 (90C30) 
+% 88m:90139 
+
+\smallskip
+\noindent  
+[K1] Karmarkar, N.,  A new polynomial-time algorithm for linear programming. {\it Combinatorica}  4
+(1984), no. 4, 373--395.
+% (Reviewer: K. G. Murty) 90C05
+% [21] 86i:90072
+
+
+\smallskip
+\noindent  
+[K2]  Kelley, C. T.,
+{\it Iterative Methods for Optimization} (Frontiers in Applied Mathematics, 18)   SIAM,  Philadelphia,  1999.
+
+\smallskip
+\noindent
+[K3]
+Knuth, D. E.,  {\it The art of computer programming. Volume 3. Sorting and searching.}
+Addison-Wesley Series in Computer Science and Information Processing. Addison-Wesley Publishing Co.,
+Reading, Mass.,  1973. 
+% xi+722 pp. (1 foldout). (Reviewer: M. Muller) 68A50
+
+\smallskip
+\noindent
+[K4]   Klerk, E. de, 
+             {\it  Aspects of Semidefinite Programming: Interior Point Algorithms and Selected Applications.}           Kluwer Academic,
+    Dordrecht/Boston, 2002. 
+
+\smallskip
+\noindent
+[K5] Kalyanmoy D., {\it
+ Multi-Objective Optimization Using Evolutionary Algorithms.}
+  John Wiley \& Sons,    Chichester/ New York, 2001. 
+
+\smallskip
+\noindent
+ [KV]    Korte, B. H.  and J. Vygen,
+        {\it  Combinatorial Optimization: Theory and Algorithms,}
+              2nd ed. 
+              Springer-Verlag, New York, 2002. 
+
+
+
+
+\smallskip
+\noindent
+[KW]
+ Kall, P.  and  S. W.  Wallace,  {\it Stochastic programming.}  Wiley-Interscience Series in Systems and
+Optimization. John Wiley \& Sons, Ltd., Chichester, 1994. 
+% xii+307 pp. ISBN: 0-471-95158-7 (Reviewer: Alan J. King) 90-02 (90-01 90C15)
+ 
+
+
+\smallskip
+ \noindent  
+ [L] \  Luenberger, D.G.,  {\it Introduction to Linear and Nonlinear Programming}.
+Addison-Wesley, Reading, Mass., 1984. 
+% Updated version of an old standby. 
+% The author received the 1999 INFORMS Expository Writing Award. 
+%my book.
+ 
+\smallskip
+ \noindent  
+[LP]   Langdon, W. B. and R. Poli,   {\it   Foundations of Genetic Programming.}               Springer-Verlag, New York, 2002. 
+
+
+
+\smallskip
+ \noindent  
+[M]
+Morris, P.,  {\it Introduction to Game Theory.}  Springer-Verlag, New York, 1994.
+% ] 95k:90001 
+% xvi+230 pp. ISBN: 0-387-94284-X (Reviewer: James Bergin) 90-01 (90Dxx)
+
+\smallskip
+\noindent  
+[MCC] Marathe, A.,  A. E.  Condon,  and R. M. Corn,   
+ On combinatorial DNA word design. 
+{\it DNA Based Computers, V}
+(Cambridge, Mass, 1999), 75--89, 
+DIMACS Ser. Discrete Math. Theoret. Comput. Sci., 54, 
+Amer. Math. Soc., Providence, RI, 2000. 
+%1 801 812 (2001:06) 94B65 (68Q05 92C40 94B25) 
+
+\smallskip
+\noindent  
+[NC] Nielsen, M. A. and I. L.   Chuang,
+     {\it Quantum Computation and Quantum Information.}
+       Cambridge University Press, Cambridge, U. K., 2000. 
+
+\smallskip
+\noindent  
+[NN]   Nesterov, Yu. and A.  Nemirovskii,
+ {\it Interior-Point Polynomial Algorithms in Convex  Programming}.
+ SIAM, Philadelphia, 1994. 
+% QA402.5.N4615 1994 
+
+ \smallskip
+\noindent  
+[P]  Porembski, M., 
+Finitely convergent cutting planes for concave minimization,
+{\it Journal of Global Optimization,}   20,  no. 2 (June 2000),
+  113--136.
+
+ \smallskip
+\noindent  
+[R]
+   Renegar, J.,         A Mathematical View of Interior-Point Methods in Convex Optimization.      SIAM/Mathematical Programming
+              Society,  Philadelphia,  2001. 
+
+
+
+
+\smallskip
+\noindent  
+[RI] Ram\'ik, J. and M. Inuiguchi, 
+{\it Fuzzy Mathematical Programming.}  Papers from the session of the 7th Congress of the
+International Fuzzy Systems Association held in Prague, June 25--29, 1997. Edited by Jaroslav Ramík and
+Masahiro Inuiguchi. Fuzzy Sets and Systems 111 (2000), no. 1. North-Holland Publishing Co., Amsterdam, 2000.
+% pp. vii--viii and 1--116. 90-06 (90C70)
+% [33] 2000k:90003 
+
+\smallskip
+\noindent  
+[RV]
+Ram\'ik, J. and M. Vlach, {\it
+              Generalized Concavity in Fuzzy Optimization and Decision Analysis}.
+             Kluwer Academic,   Boston, 2002. 
+
+ 
+
+\smallskip
+\noindent
+ [S1]  Schniederjans, M. J.,
+   {\it Goal Programming: Methodology and
+               Applications.}
+Kluwer Academic,
+    Dordrecht/Boston, 1995. 
+% T57.7.S36 1995   (BOOK)
+ 
+\smallskip
+\noindent
+[S2]
+ Sierksma, G., 
+              {\it Linear and Integer Programming: Theory and Practice}.                2nd ed. 
+              Marcel Dekker,  New York,  2002. 
+
+\smallskip
+\noindent
+[S3] Stefanov S.M., 
+{\it Separable Programming: Theory and Methods.}    
+  Kluwer Academic,     Dordrecht/Boston, 2001. 
+
+
+\smallskip
+\noindent
+[S-M]
+Stancu-Minasian, I. M., 
+{\it  Fractional Programming:  Theory, Methods and Applications.}
+      Kluwer Academic,
+    Dordrecht/Boston, 1997.
+% viii+418 pp. ISBN: 0-7923-4580-0 (Reviewer: Alberto Cambini) 90C32 (90-02)
+% 98k:90120 
+
+\smallskip
+\noindent
+[SMY]  Sarker R., M. Mohammadian, and X. Yao (editors),
+{\it Evolutionary Optimization .}
+  Kluwer Academic Publishers, Boston,  2002. 
+ 
+
+
+\smallskip
+\noindent
+[T]
+Tsurkov, V.,  {\it Large-Scale Optimization: Problems and Methods.} Applied Optimization, 51.
+Kluwer Academic,
+    Dordrecht/Boston, 2001.
+% xii+307 pp. ISBN: 0-7923-6817-7 90-02 (90C06)
+%  Large-scale optimization : problems and      methods / by Vladimir Tsurkov.
+%    Dordrecht ; Boston : Kluwer Academic Publishers, c2001. 
+% QA402.2.T78 2001   (BOOK)
+% 1 823 070 
+
+\smallskip
+ 
+
+\noindent  
+ [VCS]
+  Vaserstein, L. N.,  V.I. Chmil', and E. B.  Sherman,   
+A multi-extremal problem for the growth and location of production with a concave objective function. (Russian), in  
+{\it Mathematical Methods in Economic Research}  (Russian), pp. 138--143. 
+Izdat. Nauka, Moscow, 1974. 
+%  Pavlova  ?  concave
+% 53 #15379 90C30
+
+
+
+\smallskip
+\noindent  
+[V]    Vaserstein,  L. V.,
+ On the best choice of a damping sequence in iterative optimization methods, 
+ {\it Publ. Matem.  Univ. Aut. Barcelona}  32 (1988), 275--287. 
+
+
+
+\smallskip
+\noindent   
+ [W1] Wolkowicz, H. et al (editors),  
+{\it  Handbook of Semidefinite Programming:   Theory, Algorithms, and Applications.}
+ International Series in Operations Research \& Management
+Science, 27. Kluwer Academic,
+    Dordrecht/Boston, 2000.
+% xxviii+654 pp. ISBN: 0-7923-7771-0 (Reviewer: K.G. Murty) 90-00 (90C22)
+ % T57.74.H355 2000   (BOOK)
+% / edited by    Henry Wolkowicz, Romesh Saigal, Lieven  Vandenberghe.
+
+\smallskip
+\noindent 
+% 5] 99f:90002 
+[W2]
+Wolsey, L. A. {\it Integer Programming.}  Wiley-Interscience Series in Discrete Mathematics and
+Optimization.  John Wiley \& Sons, New York, 1998.
+% xx+264 pp. ISBN: 0-471-28366-5 (Reviewer: Anton Volgenant) 90-01 (90C10)
+
+\filbreak
+
+
+
+  
+\
+\bigskip
+\bigskip
+\bigskip
+
+\noindent
+{\sixteenbf Answers to Selected Exercises}
+\smallskip
+\hrule
+\bigskip
+\bigskip
+
+% SEE tests
+
+
+\noindent
+\S 1.  What  Is  Linear  Programming?
+
+1. True
+
+3. True
+
+5. True. This is because for real numbers any square and any absolute value
+are nonnegative.
+
+7. False.  For $x=-1,\ 3(-1)^3 < 2(-1)^2.$
+
+8. 
+%A linear program should have at least one linear constraint.  
+False (see Definition  1.4).
+
+9.   
+%A linear program alwaye has an optimal solution.
+ False (see Example  1.9 or 1.10).
+
+11. False. For example, the linear program
+\smallskip
+\centerline{Minimize $x+y$ subject to $x+y = 1$}
+\smallskip
+\noindent
+has infinitely many opotimal solutions.
+
+13. True. It is a linear equation. A standard form is   $4x=8$ or $x=2.$
+
+15. No. This is not a linear form, but   an affine function.
+
+17. Yes if  $a$ and $z$ do not depend on $x,y.$
+
+18. 
+% The inequality $x > 2$  is a linear constraint for $ x. $
+No (see Definition 1.1).
+
+19. No. But it is equivalent to a system of two linear constraints.
+
+21. Yes.  We can write  $0 = 0\cdot x,$  which is a linear form.
+
+22. 
+% The equation  $xy^2 = 3$ is a linear constraint for x.  
+True if $y$ is independent of $x$ and hence can be considered as a given number; see Definition 1.3.
+
+23. Yes if $a,b$ are given numbers. In fact, this is a linear equation.
+
+25. No. We will see later that any system of linear constrains gives a convex set.
+But we can rewrite the constraint as follows $x \ge 1$ OR $x \le -1.$ Notice the difference between OR and AND.
+
+27. See Problem 6.7.
+
+29. $x=3-2y$ with an arbitrary $y.$
+
+31. min  = 0 at $x=y=0, z=-1.$ All optimal solutions are given as follows:
+ $x=-y, y$ is arbitrary, $ z=-1.$
+
+33. max = 1 at  $x=0.$ 
+
+% 35. Minimize  $|x + y| + (z + 1)^6 + (x-y+z)^2.$ 
+35. min = 0 at  $x=-y=1/2, z= -1.$
+
+37. No. This is a linear equation.
+
+39. No
+
+
+\def\rightheadline{\tenrm\hfil}
+\def\leftheadline{\tenrm{\bf\folio}\quad{\it Answers} \hfil}
+% \voffset=2\baselineskip
+ \footline={\hfil {\bf \folio} \hfil}
+
+ 
+
+41. Yes
+
+43. No
+
+45. Yes
+
+47. Yes
+
+49.  No
+
+51. Yes
+
+53.  Yes. In fact,  this is a linear equation.
+
+55. No.  This  is not even  equivalent to any linear constraint with
+rational coefficients.
+
+57. No.
+
+%corrected 59->60, corr Oct 2004. Corr Sept 1, 2005
+60. $\min = 2^{-100}-1$  at $ x= 0, y = 0,  z =  3\pi/2, u = -100, v = -100.$
+In every optimal solution,  $x,y,u,v$ are as before and  $z =  3\pi/2+ n\pi$
+with any integer  $n$ such that $-33 \le n  \le 30.$ So there are exactly
+64 optimal solutions.
+%N[3+Pi/2+31*Pi] 101.96 N[3+Pi/2+30*Pi] 98.8186. 
+%   N[3+Pi/2-33*Pi]  -99.1  N[3+Pi/2-34*Pi] -102.
+
+
+\bigskip
+\noindent
+\S 2. Examples of Linear Programs
+
+2. $\min =1.525$ at  $a= 0, b= 0.75, c = 0, d =  0.25$
+
+4. Let $x$ be the number of quarters and $y$ the number of dimes we pay.
+The program is
+
+\centerline{ $25x + 10y \to \min,$}
+
+\centerline{subject to}
+
+\centerline{$0 \le x \le 100, \  0 \le y \le 90, 25x + 10y \ge C $  (in cents), $ x, y $    integers.} 
+\smallskip
+This program is not linear because the  conditions that $ x, y $  are   integers.
+For $C=15,$ an optimal solution is $x=0, y= 2.$ For $C=102,$  an optimal solution is $x=3 y= 3$   or  $x=1, y= 8$. For $C=10000,$ the optimization problem is infeasible.
+\smallskip
+5.  Let $x,y$ be the sides of the  rectangle. Then the program is
+
+\centerline{ $xy \to \min,$}
+
+\centerline{subject to}
+
+\centerline{$x \ge0, \ y \ge 0, 2x+2y =100.$} 
+\smallskip
+Since $xy= x(50-x) = 625- (x-25)^2 \le 625,$
+$\max = 625$ at $x=y=25.$
+
+
+
+\smallskip
+% 7. corrected Da -> (dfirst)  Dd .
+7. We can compute the objective function at all  24 feasible solutions
+and find the following two optimal matchings:
+Ac, Ba, Cb, Dd    and Ac, Bb, Ca, Dd 
+with optimal value 7.
+
+% 8. corrected aa -> Aa .
+8.  Choosing a maximal number in each row and adding these numbers,
+we obtain an upper bound $9+9+7+9+9=43$ for the objective function. This bound cannot be achieved because of a conflict over c (the third column). So 
+$\max \le 42.$ On the other hand,  the matching Aa, Bb, Cc, De, Ed achieved 42,
+so this is an optimal matching.
+
+
+\def\rightheadline{\tenrm\hfil{\it  Answers}\quad {\bf\folio}}
+\nopagenumbers
+
+9.   Choosing a maximal number in each row and adding these numbers,
+we obtain an upper bound $9 + 9 + 9 + 9 + 8 +  9 + 6 = 59$  for the objective function.
+However looking at B and C, we see that they cannot get 9 + 9 = 18 because of the conflict over g. They cannot get more than  7 + 9 =16. Hence, we have the upper bound max $\le 57.$ On the other hand, we achieve this bound 57 in the matching
+Ac, Bf, Cg, De, Eb, Fd, Ga.
+
+11. Let $c_i$ be given numbers. Let  $c_j$ be an unknown 
+maximal number (with unknown $j$).     The linear program is
+
+  $c_1x_1+\cdots+c_nx_n \to \max, $ all $x_i \ge 0,$  $x_1+\cdots+x_n=1.$
+
+Answer: $\max = c_j$ at  $x_j=1, x_i = 0$ for $i \ne j.$
+
+\smallskip
+
+
+
+\bigskip
+\noindent
+\S 3. Graphical Method
+
+1. Let  SSN be  123456789. Then the program is
+
+$-x \to \max, 7x \le 5, 13x \ge -8, 11x \le 10.$ 
+
+Answer: $\max=8/13$ at $x=-8/13.$
+
+%corrected
+\smallskip
+3.  Let  SSN be  123456789. Then the program is
+
+$x+2y \to \min, |12x+4y| \le 10, |5x+15y| \le 10, |x+y| \le 24.$ 
+
+%ConstrainedMin[(a-10)+2(b-10),
+%{ 12(a-10)+4(b-10)  <= 10, 12(a-10)+4(b-10)  >= - 10,
+% 5(a-10)+15(b-10)<=10,  5(a-10)+15(b-10)>= -10, 
+%(a-10)+(b-10)  <= 24,(a-10)+(b-10)  >= -24},{a,b}]
+%{-25/16, {a -> 149/16, b -> 153/16}}
+Answer: $\min = -25/16$ at $x=-11/16, y=-7/16.$  
+
+\smallskip
+%corrected
+5.  
+$\min=-72$ at $x=0, y=-9$
+
+7. $\min = -1/4$ at $x=1/2, y = -1/2$ or $x=-1/2, y = 1/2$.
+
+6. The problem is unbounded (min = $-\infty).$
+
+9. max = 1 at $x=y=0$
+
+
+
+11. $\max = 22$ at $x=4, y=2$
+
+13. The program is unbounded.
+
+
+%corrected
+15. max = 3 at $x=y=0, z=1.$ See the answer to Exercise 11  of \S 2.
+
+\bigskip
+\noindent
+\S 4. Logic
+
+1. False.For $x=-1$,  $|-1|=1.$
+
+3. False. For $x=-10$, $|-10| > 1.$
+
+5. True. $1 \ge 0.$
+
+7. True. $2 \ge 0.$
+
+9. True. The same as  Exercise 7.
+
+11. False. $ 1 \ge 1.$
+
+13. True. $5 \ge 0.$
+
+15. False. For example,  $x=2.$
+
+17. True. Obvious.
+
+19. False.   For example,  $x=1.$
+
+21. True. $1 \ge 0.$
+
+
+
+22. Yes, we can.\hskip1.1in 
+23. Yes.  $10 \ge 0.$
+
+25. No, it does not. $(-5)^2 > 10.$ \ \ 
+27. True.
+
+29. False. The first condition is stronger than the second one.
+
+31. True.\hskip1.3in 
+33. (i) $\Rightarrow$ (ii), (iii), (iv)
+
+
+35.   (i) $\Rightarrow$   (iii) \hskip1in 
+37. (i) $\Leftrightarrow$ (ii)  $\Rightarrow$ (iv) $\Rightarrow$ (iii)
+
+41. ``only if". 
+
+42. This depends on the definition of {\ it linear function.}
+
+
+43. No. $x \ge 1, x \le 0$ are two feasible constraints, but the system is infeasible.
+
+44. False.\hskip0.2in 
+45. False.  Under our conditions, $|x| >|y|.$
+
+49. No, it does not follow.
+
+%corrected
+51.  Yes, it does.  Multiply the first equation by -2 and add to the second equation to obtain the third equation.
+
+
+\bigskip
+\noindent
+\S 5. Matrices
+
+1. $[2,1,-6,6]$  \hskip0.5in 3. $-14$  \hskip0.5in 
+
+ %corrected
+5.  $\bmatrix{ 0 & 0 & 0 & 0 \cr 
+              -1 & -2 & 0 & 3 \cr 
+               -2 & -4 & 0 & 6 \cr
+              4 & 8 & 0 &-12 \cr}$
+
+ %7 corrected 2744
+7. $(-14)^2 \cdot A^TB= \bmatrix{0 &-196 &-392 & 784 \cr
+ 0  & -392 & -784 & 1568 \cr
+ 0 & 0 & 0  & 0 \cr
+ 0  & 588  & 1176 & -2352 \cr}$ \hskip0.1in
+9.  No. $1 \ne 4.$
+\medskip
+10. $A =  \left[ \matrix {0 & 1 \cr 0 & 0} \right]$
+ \hskip0.5in 
+11.  $A =  \left[\matrix{1 & 0 \cr 0 & 0}\right],
+ B =  \left[\matrix{0 & 0 \cr 1 & 0}\right]$
+\medskip
+
+12.  $\left[\matrix{5 & 2 & 3 & -1 \cr 1 & -1 & -3 & 0 \cr
+0 & 0 & 3 & 0}\right] 
+\left[ \matrix {a \cr b \cr c  \cr d } \right] =
+\left[ \matrix {1 \cr 2 \cr -1} \right]$
+\smallskip
+
+
+15. $b= a-1,      c=-1/3,  d = 7a-4, a$ arbitrary. \ \ 
+19. $AB^T=5$
+\smallskip
+
+
+%corrected!!!
+21. $A^TB = \bmatrix{0 & 0 & 0 & 0 & 0 & 0 \cr
+                    -2 &1 &0 &0 &3 &2\cr
+                    2 &-1 &0 &0 &-3 &-2\cr
+0 & 0 & 0 & 0 & 0 & 0 \cr
+0 & 0 & 0 & 0 & 0 & 0 \cr
+-4 &2  &0 &0 &6  & 4 \cr                      
+    }$
+\smallskip
+
+
+%corrected
+23. $(A^TB)^2 =5A^TB$, and see Answer to 21.
+\smallskip
+
+ 
+%corrected
+25. $(A^TB)^{1000} =A^T(BA^T)^{999}B=5^{999}A^TB$, and see Answer to 21.
+
+%corrected
+27. $AB^T=4.$ 
+
+%corrected
+29. $A^TB=\bmatrix{ -1 &  1 &  0 &  3 &  3 &  2 &  -1 \cr -1 &  1 &  0 &  3 &  3 &  2 &  -1 \cr 1 &  -1 &  0 &  -3 &  -3 &  -2 &  
+    1 \cr 0 &  0 &  0 &  0 &  0 &  0 &  0 \cr 0 &  0 &  0 &  0 &  0 &  0 &  0 \cr -2 &  2 &  0 &  6 &  6 &  
+    4 &  -2 \cr 0 &  0 &  0 &  0 &  0 &  0 &  0}$
+\smallskip
+
+%corrected
+31. $(A^TB)^2=4A^4B,$ and see Answer to 29.
+\smallskip
+
+%corrected
+33. $(A^TB)^{1000}=4^{999}A^4B,$ and see Answer to 29.
+\smallskip
+
+\smallskip
+35. $E_1C=
+  \left[\matrix{3 & 6 & 9 \cr  -8 & -10 & -12}  \right]$
+$E_2C=
+  \left[\matrix{21 & 27 & 33 \cr  4 & 5 & 6}  \right]$
+\smallskip
+
+\smallskip
+$E_1^n = \left[\matrix{3^n & 0 \cr 0 & (-2)^n   }  \right]$
+$E_2^n = \left[\matrix{1 & 5n \cr  1 &0 }  \right]$
+\smallskip
+
+\smallskip
+37.  $\left[\matrix{\alpha & 0 \cr  0  &\delta -\gamma\alpha^{-1}\beta }  \right].$ \ 
+41. $ \left[\matrix{1 & 0 & 0 & 0 \cr 0 & 1 & 0 & 0}\right].$
+\ \ 
+43.$ \left[\matrix{1 & 0 & 0  \cr
+  0 & 1 & 0 \cr
+0 &0 & 1 \cr
+0 &0 & 0 \cr
+0 &0 & 0}\right]$
+ 
+
+\bigskip
+\noindent
+\S 6.  Systems of Linear Equations
+
+1.  $ \left[\matrix{1 & 0    \cr
+  0 & -4 }\right]$ is invertible; $\det(A)=-4$
+\smallskip
+
+\smallskip
+3.  The matrix is invertible if and only if $abc \ne 0;$
+$\det(A)=abc.$
+\smallskip
+
+%corrected
+\medskip
+5.  $ \left[\matrix{1 & 0& 0& 0    \cr
+0 & -1& 0& 0    \cr
+0 & 0& -1& 0    \cr
+0 & 0& 0& 2   }\right]$ is invertible; $\det(A)=2$
+
+
+\smallskip
+7.  $ \left[\matrix{
+1 & 0& 0     \cr
+0 & 13/7& 0     \cr
+0 & 0& 7  }\right]$ is invertible; $\det(A)=13$
+\smallskip
+
+9. $0=1$ (no solutions)
+
+%corrected
+11. $x= -z-3b+10,\  y= -z +2b-6.$
+\smallskip
+
+% corrected Dec 2004
+13. If $t \ne  6+2u,$ then  there are no solutions.  Otherwise,
+$x=-2y+ u+3,$ $y$ arbitrary.
+
+\smallskip
+15. If $t=1,$ then $x= 1-y,$  $y$ arbitrary.
+
+If $t=-1,$ there are no solutions.
+
+If $t \ne \pm 1,$ then $x= (t^2+t+1)/(t+1), y= -1/(t+1).$
+\smallskip
+
+17. $y=5b+x-16, z=-3b-x+10$
+
+19. No. The half-sum of solutions is a solution.
+\medskip
+
+% 21. Inverse[{{1,0,-1},{5,1,3},{2,4,5}}]
+21. $A^{-1}=\left[ \matrix {7/25& 4/25& -1/25 \cr  19/25& -7/25& 8/25 \cr -18/25& 4/25& -1/25} \right]$
+\smallskip
+
+\smallskip
+% 23.  InputForm[Inverse[A]]
+%A={{1,-2,-1,0},{5,1,3,1},{0,1,0,1}, {5,6,0,7}}
+
+23. $A^{-1}=\left[ \matrix {-3/22& -1/22& -41/22& 3/11\cr -15/22& -5/22& -51/22& 4/11\cr 
+5/22& 9/22& 61/22& -5/11\cr 15/22& 5/22& 73/22& -4/11}\right]$
+\smallskip
+
+% corrected 25 -> 24
+\smallskip
+24. $ A = \bmatrix{ 1 & 2 \cr 6 & 8}=
+\bmatrix{ 1 & 0 \cr 6 & 1}  \bmatrix{ 1 & 2 \cr 0 & -4}$
+\smallskip
+
+27. This cannot be done. We have  $0=A_{1,1}= L_{1,1}U_{1,1} \ne 0$
+since $A$ is invertible, hence  $U,V$ are invertible.
+
+\medskip
+29. $ A =  \bmatrix{1&0 &-1\cr5&1&3\cr2&4&5 } =
+\bmatrix{1&0 &0\cr5&1&0\cr2&4&1 }
+  \bmatrix{1&0 &-1\cr 0& 1 &8\cr0 &0&-25 }$
+\medskip
+
+
+30.
+  $A= \bmatrix{1&-2&-1\cr
+5&1&3\cr
+2&4&5 \cr }=\bmatrix{1&0&0\cr
+5&1&0\cr
+2& 8/11 &1 \cr } \bmatrix{1&-2&-1\cr
+0 &11&8  \cr
+0&0  & 13/11 \cr }$
+ \medskip
+
+33. $x=-3(19+2d)/8, y= (15+2d)/8, z=-(3+2d)/8$
+
+35. $ x=(15u+4v)/16, y=(11u+4v)/16, z=-3u/4$
+
+% corrected
+37. $x=y=1, z=0$
+
+39. $x=y=0, z=100$
+
+\bigskip
+\noindent
+\S 7. Standard and Canonical Forms for Linear Programs
+
+\smallskip
+ 
+
+% corrected
+1. Set $u=y+1 \ge 0.$ Then $f= 2x+3y=2x+3u-3$ and  $x+y= x+u-1.$
+A canonical form is
+
+\centerline{$-f =-2x-3u+3 \to \min, x+u \le 6, u,x \ge 0.$}
+
+A standard form is
+
+\centerline{ $-f =-2x-3u+3 \min, x+u +v =   6, u,v,x \ge 0$}
+
+\noindent
+with a slack variable  $v = 6 - x - u \ge 0.$
+
+
+\smallskip
+2. Excluding $y=x+1$ and using $y \ge 1,$ we obtain the canonical form
+\ $-x \to \min, \ 2x \le 8, x \ge 0.$ 
+
+Introducing a slack variable $z=8-2x,$ we obtain the standard form
+\ $-x \to \min, \ 2x +z= 8, x \ge 0, z \ge 0.$
+
+\smallskip
+% corrected
+3.
+% $x_1 -5x_2+x_3+3x_4  \to \min,$
+% $2x_2+x_3+3x_4 =3, \ x_1-x_2 +3x_4 \ge 3,$ \ 
+% all $x_i \ge 0$
+We solve the equation for $x_3$:
+
+$x_3=3-2x_2-3x_4$
+
+\noindent
+and exclude  $x_3$ from the LP:
+
+\centerline{$x_1 -7x_2+3  \to \min,   \ x_1-x_2 +3x_4 \ge 3,$\ all $x_i \ge 0.$}
+
+A canonical form is
+
+\centerline{$x_1 -7x_2+3  \to \min,   \ -x_1+x_2 -3x_4 \le -3,$ \ all $x_i \ge 0.$}
+
+A standard form is
+
+\centerline{$x_1 -7x_2+3  \to \min,   \ -x_1+x_2 -3x_4 + x_5= -3,\ $ all $x_i \ge 0$}
+
+\noindent
+with a slack variable $x_5= x_1-x_2 +3x_4-3.$
+
+\smallskip
+ 
+5. Set  $t=x+1 \ge 0, u=y-2 \ge 0, f=x=y+z= t+u+z+1 $ (the objective function).  Then a standard and canonical form for our problem is
+\smallskip
+\centerline{ $x+u+z+1 \to \min; t,u,z \ge 0.$}
+\smallskip
+
+7.  Using standard tricks, a canonical form is
+\smallskip
+\centerline{$-x \to \min,  x \le 3, -x \le -2, x \ge 0.$}
+\smallskip
+A standard form is
+\smallskip
+\centerline{$-x \to \min,  x + u + 3, -x +v = -2; x,u,v \ge 0$}
+\smallskip
+\noindent
+with two slack variables.
+\smallskip
+
+\smallskip
+9. One of the given equations reads
+
+$-5 -x - z = 0, $ 
+
+\noindent
+which is inconsistant with given constraints
+ $x,z \ge 0.$ So we can write very short canonical and standard forms:
+
+\centerline{$0 \to \min, 0 \le -1; x,y,z \ge 0$ and $0 \to \min, 0 = 1; x,y,z \ge 0.$}
+\smallskip
+ 
+
+11. Set $x=[x_1,x_2,x_3, x_4,x_5, x_6, x_7,x_8,x_9,x_{10},x_{11}]^T$
+and $c=[3, -1, 1, 3, 1, -5, 1, 3, 1].$
+Using standard tricks, we obtain the canonical form  
+
+$cx \to \min, Ax \le b, x \ge 0$
+
+\noindent
+with 
+
+$A = \bmatrix{ 1 & -1 & -1 & -1   &- 1 & 1  & 2 & -3  & -1  \cr
+-1 & 1& 1 & 1 & 1 & -1 & -2 & 3 & 1 \cr 
+2& -2& -2& 2&  3&-1 &  -2& 1 & 1 \cr 
+-2& 2& 2& -2&  -3& 1 &  2& -1 & -1 \cr 
+ 1 & 0 &0 & 0  &  3& -1 & -2& 0 &   -1 \cr  
+ -1 & 0 &0 & 0  &  -3& 1 & 2& 0 &   1 \cr }$
+\smallskip
+\noindent
+and 
+$b = [-3, -1, 2, -2, 0, 0]^T.$ 
+  
+ 
+Excluding  a couple of variables using the two given equations, we
+would get a canonical form with two variables and two constraints less.
+A standard form can be obtained from the canonical form by introducing
+a column $u$ of slack variables:
+\smallskip
+\centerline{$cx \to \min, Ax +u =  b, x \ge 0, u \ge 0.$}
+
+
+ 
+
+\filbreak
+\noindent
+\S 8.  Pivoting Tableaux
+
+1.
+
+$ \left[ \matrix {\cr\cr\cr\cr} \right.
+\matrix{a & b & c & d &  e& 1 \cr
+.3 & 1.2 & .7 & 3.5 & 5.5 & -50 \cr
+73 & 96 & 20253 & 890 & 279 & 4000 \cr
+9.6 & 7 & 19 & 57 & 22& -100 \cr
+10 & 15 & 5 & 60 & 8 &  0 \cr
+&&&&&}
+\left. \matrix {\cr\cr\cr\cr} \right]
+\matrix{=u_1 \cr =u_2 \cr =u_3 \cr =C \to \min}$
+
+3. $A= \bmatrix{3&-1&2&2\cr-1&0&0&2\cr-1&0&2&-2\cr0&0&1&-1}, 
+b=\bmatrix{0\cr-1\cr0\cr-2}$
+
+\medskip
+{\bf 11.}
+$\rowtab{&z &a&3&x\cr\omit&1&2&b+3&a+1\cr\omit&-1&2&3&1\cr}\quad\matrix{=y\cr =1\cr}$
+ 
+\medskip
+{\bf 12.} $\rowtab{&1&a&3&z\cr\omit&1+a&-2a&b-3a&a\cr\omit&1&-2&-3&1\cr}\quad\matrix{=y\cr =x\cr}$
+
+ 
+\medskip
+{\bf 13.} $\rowtab{&2\cr\omit&1/5\cr}\quad\matrix{=x\cr}$
+
+
+\bigskip
+\noindent
+\S 9. Standard Row Tableaux
+
+2. 
+$\rowtab{&x&y &1\cr\omit&-4&-5& 7\cr\omit& -2&-3&0\cr}\quad\matrix{=u\cr =-P\to\min\cr}$
+\smallskip
+\noindent with a slack variable $u=7-4x-5y$
+\medskip
+
+%corr Fall 2004:
+3.
+$\rowtab{&x' & x'' & y' & y''  &1\cr
+\omit&-1 & 1 &-1& 1 & 1\cr
+\omit&1&-1 & 1 & -1 & 1\cr
+\omit&1 & -1   &-1&  1 & 1\cr
+\omit& -1& 1 & 1& -1 & 1\cr
+\omit&-1& 1 & 0 & 0& 0\cr}\quad\matrix{=u_1\cr=u_2\cr=u_3\cr=u_4\cr =-x \to\min\cr}$
+\smallskip
+\noindent with $x=x'-x'',y=y'-y''$ and  slack variables $u_i.$
+
+
+\bigskip
+\noindent
+\S 10.  Simplex Method,  Phase 2
+
+4. False. The converse is true.
+
+5. True
+
+6. True
+
+13. If the row without the last entry is nonnegative, then the tableau is optimal;
+else the LP is unbounded.
+
+\bigskip
+\noindent
+\S 11.  Simplex Method,  Phase 1
+
+1. The second row ($v$-row) is bad, so the LP is infeasible.
+
+% corrected Dec  9,2004.
+2. The tableau is optimal, so
+
+$\min(w)= 0$ at $x=y=z= 0, u=2, v=0.$
+
+3. This is a feasible tableau with a bad column (the $z$-column).
+So the LP is unbounded ($z$ and hence $w$ can be arbitrary large).
+
+9. True
+
+10. False
+
+
+\bigskip
+\noindent
+\S 12.   Geometric Interpretation 
+
+
+1. The diamond can be given by four linear constraints $\pm x \pm y \le 1.$
+
+2. Any convex combination of convex combinations is a convex combination.
+
+
+
+7. Both  $x=1$ and $x=-1$ belong to the feasible region, but $0 = x/2+y/2$
+does not.
+
+8. $2tx+(1-t^2)y \le 1+t^2,$ where $t$ ranges over all rational numbers.
+
+9. A set $S$ is called closed if it contains the limit points of all sequences
+in $S$. Any system of linear constraints gives a closed set, but
+the interval $0 < x < 1$ is not closed. Its complement is closed.
+
+10. The rows of the identity matrix $1_6.$
+
+11. One
+
+\bigskip
+\noindent
+\S 13.  Dual Problems
+
+1.
+\vskip-0.2in
+$\matrix{\ \cr \cr -x \cr -y \cr -z \cr  1\cr\ \cr\ }
+\left[  \matrix{\cr\cr\cr \ } \right.
+\matrix{\ \cr \cr
+0 & -1 & -5 \cr 1 & -1 & -6 \cr 0 & 0 & -2 \cr 7 & -3 & 0 \cr
+\| & \| & \downarrow \cr
+ v_1 &  v_2     &  \max}
+\left.  \matrix{\cr\cr\cr\ } \right] $
+\medskip
+
+5. Let  $cx+d, cy+d$ be two feasible values, where  $x,y$ are two feasible solutions. We have to prove that
+
+$\alpha(cx+d) + (1-\alpha)(cy+d)$ 
+
+\noindent
+is a feasible value for any  $\alpha$ such that 
+$0  \alpha  \le 1.$ But
+
+$\alpha(cx+d) + (1-\alpha)(cy+d)=c(\alpha x + (1-\alpha)y)+d,$
+
+\noindent
+where $\alpha x + (1-\alpha)y$ is a feasible solution because the feasible region is convex.
+
+\bigskip
+\noindent
+\S 14.  Sensitivity Analysis and Parametric Programming
+
+3.  $\min=0$ at  $d=e=0, a \ge 0$  arbitrary
+
+
+\bigskip
+\noindent
+\S 15. More on Duality
+
+1. No, it is not redundant.
+
+
+ 2. Yes, it is   $2 \cdot$ (first equation ) + (second equation).
+
+3. No, it is not redundant.
+
+4. No, it is not redundant.
+
+
+
+5. No, it is not redundant.
+
+7. Yes, it is.
+
+\bigskip
+\noindent
+\S 16. Phase 1
+
+1.
+$$\vbox {\offinterlineskip
+\settabs 
+\+ $\vert$ & 11111              & $\vert$ & 22222            & $\vert$ & 33333            & $\vert$ & 44444            & $\vert$ & 555 \cr
+\hrule  
+\+  \hskip-1.5pt $\vert$ &                   & $\vert$ &                  & $\vert$ &                  & $\vert$ &                  & $\vert$ & \cr
+\+  \hskip-1.5pt $\vert$ &     20              & $\vert$ &     10             & $\vert$ &   5               & $\vert$ &                  & $\vert$ & \hfill 35 \cr
+\+  \hskip-1.5pt $\vert$ &                   & $\vert$ &                  & $\vert$ &                  & $\vert$ &                  & $\vert$ & \cr
+ \hrule    
+\+  \hskip-1.5pt $\vert$ &                   & $\vert$ &                  & $\vert$ &                  & $\vert$ &                  & $\vert$ & \cr
+\+  \hskip-1.5pt $\vert$ &                   & $\vert$ &                  & $\vert$ &   5               & $\vert$ &        15          & $\vert$ & \hfill 20 \cr
+\+  \hskip-1.5pt $\vert$ &                   & $\vert$ &                  & $\vert$ &                  & $\vert$ &                  & $\vert$ & \cr
+\hrule   
+\+  \hskip-1.5pt $\vert$ & \hfill 20 \hfill  & $\vert$ & \hfill 10 \hfill & $\vert$ & \hfill 10 \hfill & $\vert$ & \hfill 15 \hfill & $\vert$ & \cr}$$
+
+
+
+3.
+$$\vbox {\offinterlineskip
+\settabs 
+\+ $\vert$ & 11111              & $\vert$ & 22222            & $\vert$ & 33333            & $\vert$ & 44444            & $\vert$ & 555 \cr
+\hrule  
+\+  \hskip-1.3pt $\vert$ &                    & $\vert$ &                  & $\vert$ &                  & $\vert$ &                  & $\vert$ & \cr
+\+  \hskip-1.3pt $\vert$ &   30                 & $\vert$ &                  & $\vert$ &                  & $\vert$ &                  & $\vert$ & \hfill  35 \cr
+\+  \hskip-1.3pt $\vert$ &                    & $\vert$ &                  & $\vert$ &                  & $\vert$ &                  & $\vert$ & \cr
+ \hrule   
+\+  \hskip-1.3pt $\vert$ &                    & $\vert$ &                  & $\vert$ &                  & $\vert$ &                  & $\vert$ & \cr
+\+  \hskip-1.3pt $\vert$ &   90                 & $\vert$ &                  & $\vert$ &                  & $\vert$ &                  & $\vert$ & \hfill  90 \cr
+\+  \hskip-1.3pt $\vert$ &                    & $\vert$ &                  & $\vert$ &                  & $\vert$ &                  & $\vert$ & \cr
+\hrule  
+\+  \hskip-1.3pt $\vert$ &                    & $\vert$ &                  & $\vert$ &                  & $\vert$ &                  & $\vert$ & \cr
+\+  \hskip-1.3pt $\vert$ &    11                & $\vert$ &     91             & $\vert$ &  9                & $\vert$ &                  & $\vert$ & \hfill 111 \cr
+\+  \hskip-1.3pt $\vert$ &                    & $\vert$ &                  & $\vert$ &                  & $\vert$ &                  & $\vert$ & \cr
+ \hrule   
+\+  \hskip-1.3pt $\vert$ &                    & $\vert$ &                  & $\vert$ &                  & $\vert$ &                  & $\vert$ & \cr
+\+  \hskip-1.3pt $\vert$ &                    & $\vert$ &                  & $\vert$ &    1              & $\vert$ &       19           & $\vert$ & \hfill 20 \cr
+\+  \hskip-1.3pt $\vert$ &                    & $\vert$ &                   & $\vert$ &                  & $\vert$ &                  & $\vert$ & \cr
+\hrule   
+\+  \hskip-1.3pt $\vert$ & \hfill 140  \hfill & $\vert$ & \hfill 91 \hfill & $\vert$ & \hfill 10 \hfill & $\vert$ & \hfill 19 \hfill & $\vert$ & \cr}$$
+
+
+
+
+
+\filbreak
+\noindent
+\S 17.  Phase 2
+
+1.
+$$\vbox {\offinterlineskip
+\settabs 
+\+ &\hskip-1.1pt $\vert$ & 11111             & $\vert$ & 22222             & $\vert$ & 33333             & $\vert$ & 200 \cr
+\+ &\hskip-1.1pt $\vert$ &     \hfill  1 \hfill     & $\vert$ & \hfill  2 \hfill & $\vert$ & 2  & $\vert$ & \hfill   \hfill \cr
+\hrule  
+\+ &\hskip-1.1pt $\vert$ &          1 \hfill & $\vert$ &          2 \hfill & $\vert$ &          3 \hfill & $\vert$ & \cr
+\+ \hskip-10pt 0 & \hskip-1.1pt $\vert$ &     \hfill  175 \hfill     & $\vert$ & \hfill  25 \hfill & $\vert$ &(1)  & $\vert$ & \hfill 200 \hfill \cr
+\+ &\hskip-1.1pt $\vert$ &                   & $\vert$ &                   & $\vert$ &                   & $\vert$ & \cr
+ \hrule   
+\+ &\hskip-1.1pt $\vert$ &          1 \hfill & $\vert$ &          2 \hfill & $\vert$ &          2 \hfill & $\vert$ & \cr
+\+\hskip-10pt  0 &  \hskip-1.1pt  $\vert$ &  \hfill (0) \hfill & $\vert$ & \hfill  100 \hfill & $\vert$ &     \hfill   200 \hfill    & $\vert$ & \hfill 300\hfill  \cr
+\+ & \hskip-1.1pt $\vert$ &                   & $\vert$ &                   & $\vert$ &                   & $\vert$ &   \cr
+\hrule   
+\+ & \hskip-1.1pt $\vert$ & \hfill 175 \hfill & $\vert$ & \hfill 125 \hfill & $\vert$ & \hfill 200 \hfill & $\vert$ & \cr}$$
+
+
+\bigskip
+\noindent
+\S 18. Job Assignment Problem
+
+1. $\min=7$ at $x_{14}=x_{25}=x_{32}=x_{43}=x_{51}=1,$ all other $x_{ij}=0.$
+
+3. $\min=7$ at $x_{12}=x_{25}=x_{34}=x_{43}=x_{51}=x_{67}=x_{76}=1,$ all other $x_{ij}=0.$
+ 
+
+
+5.  $\max=14$ at $x_{15}=x_{21}=x_{34}=x_{43}=x_{52}=1,$ all other $x_{ij}=0.$
+ 
+%corrected
+7. $\max=30$ at $x_{15}=x_{26}=x_{33}=x_{41}=x_{54}=x_{62}=x_{77}=1,$ all other $x_{ij}=0.$
+
+ 
+
+
+\bigskip
+\noindent
+\S 19.   What are Matrix Games?
+
+1. max min = $-1.$  min max = 0. There are no saddle points.
+
+$[1/3,2/3,0]^T$ gives at least  $-2/3$ for the row player.
+
+$[1/2,0,0,0,1/2]$ gives at least  1/2 for the column player.
+
+So $-2/3\le  $ the value of the game $\le -1/2.$
+\smallskip
+
+3. max min = $-1.$  min max = 2. There are no saddle points.
+
+(second row   + $2\cdot$third row)/3 $\ge -1/3.$
+
+(third column   + sixth column)/2 $\le 1.$
+
+So $-1/3\le  $ the value of the game $\le 1.$
+\smallskip
+
+5.  We compute the max in each column (marked by *) and min in each
+row (marked by $^{\bb}$).
+
+% $\bullet$
+\smallskip
+$
+\matrix{ 
+-4 \cr -2 \cr -4 \cr 0^{*} \cr -9}
+\left[ \matrix{\cr   \cr \cr \cr \cr} \right.
+  \matrix{ 4&2&3&5&4&3^{\bb}&  7 & 6& 3^{\bb} \cr
+4^{*} & -4^{\bb} & 3^{*} & 0& 0& 0 & -1& 1& -2\cr  
+   -1 & 0 & 2& 1& -2^{\bb} & -2^{\bb}  & 1& 0 &-2^{\bb}\cr 
+ -4^{\bb} & 0 & -2& -2&  1& -1 & 1& 6^{*} & 2\cr 
+    1 & 2^{*} & 2& 5^{*} &  3 & 3^{*}  &  7^{*}  &2&0^{\bb}\cr 
+      -4 &-9^{\bb}&-8&0& 4^{*} & 2 & 2   & 0 & 3^{*} \cr
+&&&&&&&&
+}  \left.   \matrix{\cr   \cr \cr \cr \cr } \right] $
+
+Thus, max min = $0.$  min max = 3. There are no saddle points.
+
+
+
+\filbreak
+\noindent
+\S 20. Matrix Games and Linear Programming
+
+1. The optimal
+strategy for the row player is $[2/3, 1/3, 0]^T.$
+
+The optimal
+strategy for the column player is $[1/2, 1/2, 0].$
+
+The value of the game is 2.
+
+\smallskip
+3. The optimal
+strategy for the row player is $[0.2, 0, 0.8]^T.$
+
+An optimal
+strategy for the column player is $[0, 0.5, 05,0,0,0].$
+
+The value of the game is 1.
+
+\smallskip
+5. The optimal
+strategy for the row player is $[1/3, 2/3, 0]^T.$
+
+The optimal
+strategy for the column player is $[2/3, 0, 0,1/3].$
+
+The value of the game is $-2/3.$
+\smallskip
+
+%   7.   A={{4,5, 0, -1, 1, -2},{ 0, 2, 1, 2, 1, -2},
+ %     {  1, -1, 2, 5, 2,0},{ -4,-9,-8,0, 4, 2 }};
+%   ConstrainedMax[v,{4*p1 + p3 - 4*p4>v-2, 
+%    5*p1 + 2*p2 - p3 - 9*p4>v-2, p2 + 2*p3 - 8*p4>v-2,  
+%    -p1 + 2*p2 + 5*p3>v-2, p1 + p2 + 2*p3 + 4*p4>v-2, 
+%       -2*p1 - 2*p2 + 2*p4>v-2,p1+p2+p3+p4==1},{p1,p2,p3,p4,v}]
+%  InputForm[{p1,p2,p3,p4}.A]
+
+ 7.   The optimal
+strategy for the row player:  $[1/8, 0, 7/8,0]^T.$
+
+The optimal
+strategy for the column player: $[0, 1/4,0, 0,0,3/4].$
+
+The value of the game is $-0.25.$
+
+\smallskip
+
+% 9. A={{4, -4, 3, 0, 0, 0, -1, 1, -2}, {  
+%                  -1, 0, 2, 1, -2, -2, 1, 0,-2}, { 
+%   -4, 0, -2, -2,  1, -1, 1, 6, 2}, { 
+ %                 1, 2, 2, 5,  3, 3,  7,2,0}, { 
+ %                 -4,-9,-8,0, 4, 2, 2, 0, 3 }};
+%  InputForm[{p1,p2,p3,p4,p5}.A]
+
+% ConstrainedMax[v,{4*p1 - p2 - 4*p3 + p4 - 4*p5>v-2,  -4*p1 + 2*p4 - 
+%  9*p5>v-2,  
+% 3*p1 + 2*p2 - 2*p3 + 2*p4 - 8*p5>v-2,  p2 - 2*p3 + 5*p4>v-2,  
+% -2*p2 + p3 + 3*p4 + 4*p5>v-2,  -2*p2 - p3 + 3*p4 + 2*p5>v-2,  
+% -p1 + p2 + p3 + 7*p4 + 2*p5>v-2,  p1 + 6*p3 + 2*p4>v-2,  -2*p1 - 2*p2 % + 2*p3 + 3*p5>v-2,p1+p2+p3+p4+p5==1 },{p1,p2,p3,p4,p5,v}]
+
+%v=4+1/8,  p4=7/8, p5=1/8.
+
+%  InputForm[{0,0,0,7/8,1/8}.A]
+%  {3/8, 5/8, 3/4, 35/8, 25/8, 23/8, 51/8, 7/4, 3/8}
+
+
+
+\bigskip
+\noindent
+\S 21.  Other Methods 
+
+1.  The first row and column  are dominated. The optimal
+strategy for the row player is $[0, 0.5, 0.5]^T.$
+The optimal
+strategy for the column player is $[0, 0.25, 0.75].$
+The value of the  game is 2.5.
+\smallskip
+
+3.  The optimal
+strategy for the row  player is $[0, 0.4, 0, 0.6]^T.$
+The optimal
+strategy for the column player is $[0, 0.4, 0.6].$
+The value of the game is 2.8.
+\smallskip
+
+5.  The optimal
+strategy for the  row  player is $[1/3, 1/3, 1/3]^T.$
+The optimal
+strategy for the column player is $[0, 0, 2/7,3/7,2/7,0].$
+The value of the game is 0.
+\smallskip
+
+7. The value of the game is 0 because the game is symmetric.
+
+9. The first two columns and the first row go by domination.
+ The value of the game is 11/7.
+
+11. 0 at a saddle point.
+
+13. 0 at a saddle point.
+
+
+ \bigskip
+\noindent
+\S 22.  What is Linear Approximation?
+
+1. The mean is $-2/5=-0.4.$ The median is 1.
+The midrange is  $-5/2=-2.5.$
+\smallskip
+
+3. The mean is $5/9.$ The median is 0.
+The midrange is  $1/2=0.5.$
+
+5(b). 1, 2, 9.
+
+5(d). Exercise 1.
+
+5(f). Exercise 3.
+
+
+ \filbreak
+\noindent
+\S 23.  Linear Approximation and Linear Programming
+
+1. $\min = 0$  at  $a= -15, b= 50$ for $w=a+bh$
+
+\noindent
+and
+
+$\min \approx 19$  at  $a \approx  25.23$ for $w=ah^2$
+
+2. $x+y+0.3=0$
+
+3. $a= 0.9, b \approx  -0.23$
+ 
+ \bigskip
+\noindent
+\S 24.   More Examples
+
+1. The model is $w=ah+b,$  or  $w-x_2=a(h-1988)+b'$ with  
+$b=x_2+-1988a$ and $x_2=37753/45 \approx 838.96.$
+Predicted production $P$ in 1993 is $x_2+5a+b'.$
+
+For $p=1,$ we have  $a \approx 16.54, b' \approx 31, P \approx 953.$
+
+For $p=2,$  we have  $a \approx 0, b' \approx 32, P \approx 871.$
+
+For $p=\infty,$ we have $a \approx 17.59, b' \approx 32, x_5 \approx 959.$
+
+\noindent
+So in this example $l^{\infty}$-prediction is the best.
+\smallskip
+
+ 3.  $a= \$ 4875, b = \$1500$
+
+
+\filbreak
+
+
+
+
+
+
+
+\parindent=0pt
+\
+ \bigskip
+ \bigskip
+ \bigskip
+ 
+
+
+{\ch Index}
+\smallskip
+\hrule
+  \bigskip
+\bigskip
+
+{\hsize=2.25 true in \parindent=0pt
+\valign{#\strut&#\strut&#\strut&#\strut&#\strut&#\strut&#\strut&#\strut&
+#\strut&#\strut&#\strut&#\strut&#\strut&#\strut&#\strut&#\strut\cr
+$\Rightarrow$, 35
+
+   $\iff,$     35  
+
+$\forall$ = for all
+      
+ $\| \ \|_p,$  234, 238      
+    
+   $1_n,$  48  
+        
+  $l^p$-fit, 231    
+
+$\lfloor \rfloor,$ 231
+\smallskip  
+       
+active constraint, 101
+
+  adjacent  vertices, 127 
+ 
+affine function, 3  
+      
+\ \ \  transformation, 57, 71 
+   
+algebra, 58
+     
+alternatives, 140
+ 
+% approximation  
+
+Arnauld, 39
+ 
+artificial variables, 96
+  
+assignment problem, $see$ job 
+ 
+assignment problem, 21, 192
+
+  associative, 45   
+\smallskip
+
+   backward substitution, 55      
+
+ bad column, 102      
+
+\ \ \  row, 112    
+
+   balance condition, 167, 170     
+
+   basic solution,	101,  135    
+
+   \ \ \  variables,	100     
+
+ basis, 104      
+
+Benthan, 39
+
+  binding constraint, 101     
+% binding constraint = its removal changes the optimality region or the optimal value
+
+  blending problem, 15    
+
+  BMI = body-mass index, 234 
+
+boundary, 280
+\cr
+bounded  function, 132
+
+\ \ \  program, 5
+
+\ \ \  set, 132
+
+ branch-and-bound methods, 293  
+
+ Brown's method, 225	
+ \smallskip
+
+
+calculus of variations, 9
+ 
+   canonical form for a LP, 5,  68         
+  
+  central value, 230    
+
+closed set, 270
+
+   column generation,  298
+% dual to  cutting plane         
+  
+\ \ \   of  a matrix, 43  
+
+\ \ \  matrix or vector, 43 
+
+\ \ \  space, 238
+
+   commutative, 45  
+
+     complementary slackness, 141  
+
+     concave programs, 279 
+
+      constraint, 3
+
+       control theory, 9
+
+\ \ \ variables, 3
+
+% \quad = decision variables       
+ 
+ convex combination, 121 
+
+\ \ \ function, 152
+  
+\ \ \ programming, 270  
+  
+\ \ \ set, 121       
+
+  corner principle, 126 
+
+ cost matrix, 19   
+
+critical point, 260
+
+ cutting plane, 279
+
+ cycling, 107
+\smallskip
+
+     Dantzig, 1,  131
+
+  Dantzig-Wolfe, 298
+
+ data envelopment analysis, 299
+
+decision variables, 3
+
+ 
+
+ degenerate pivot step, 104
+      \cr}}
+
+
+
+  \def\leftheadline{\tenrm\hfil \hfil}
+%  \def\rightheadline{\tenrm\hfil \hfil}
+
+\filbreak
+
+\footline={\hfil  {\bf\folio}  \hfil}
+
+ % \def\leftheadline{\tenrm{\bf\folio}\quad{\it Index} \hfil}
+ 
+% \voffset=2\baselineskip
+
+{\hsize=2.25 true in 
+\parindent=0pt
+\valign{ #\cr
+ demand, 20
+% in transportation 
+
+%\ \ \ problem,
+
+Deighton, 2
+
+descent property, 259
+
+ diet problem,	12
+
+ 
+
+   
+
+diagonal entries, 48
+
+\ \ \  matrices, 48, 53
+
+dimension, 53, 57
+  %dimension of the set of solutions for a system of linear equations
+
+diminishing returns,	151 
+
+domination, 221
+%in game theory
+
+dual problem,	 136
+
+\ \ \ simplex method,	 136 
+
+\ \ \  variables,  138
+
+duality	theorem,  139
+
+dummy demand point, 167
+
+Dunsany, 39
+
+% \quad = fictitious store
+
+ dynamical programming, 213
+\smallskip
+
+economic interpretation 
+
+\quad of dual problems, 140
+
+% efficiency of simplex method
+
+elementary  operations, 49
+
+%row and 
+
+% \quad column operations
+
+\ \ \  matrices. 51
+
+endpoints, 121
+% of a line segment
+
+equilibrium,	201
+
+equality constraints, 4
+
+\ \ \  of matrices, 44
+
+excess variable, 71 
+
+% \quad = surplus variable
+
+extreme points, 124
+
+extremum, 2
+\smallskip
+
+feasible direction, 258, 274
+
+\quad  solution,	2
+
+\quad  tableau,	101
+
+\quad  region, 2
+
+
+\quad  value, 124
+%=  value of 
+
+% \quad objective function 
+
+% \quad on feasible region
+
+fictitious play,	225
+
+ \quad  store, 167
+
+
+flow, 167
+%  in transportation problem
+
+Fourier, 1, 9, 243
+
+
+
+
+forward substitution, 55
+
+\smallskip
+Galois, 208
+\cr
+
+
+game theory, 206
+
+ Gauss, 243
+
+Gauss-Jordan elimination, 55
+
+goal programming, 287  
+
+%multi- objective  penalty  
+
+golden section search, 262
+ 
+
+gradient, 257
+
+graphical method, 25 
+
+% \quad two-variable LPs
+
+graph, 172
+
+% greedy algorithms
+
+\smallskip
+
+Haramard, 39
+
+half-plane, 28
+
+half-space,	128
+
+Halmos, 51
+
+Heaviside, 39
+ 
+Hungarian method, 190
+
+hyperplane,	128
+
+ \smallskip
+
+identity matrices, 48
+
+inconsistant program, 5
+
+infeasible program, 5
+
+\ \ \  tableau, 101
+
+integer programming, 30,  292
+
+interior methods, 280
+
+inverse of a matrix, 49
+
+invertible matrix, 49 
+
+\smallskip
+
+job assignment, 21, 192
+\smallskip
+
+Kantorovich, 1, 9
+
+Kaplansky, 51
+
+Karmarkar, 226,  280
+
+Karush-Kuhn-Tucker, 280
+
+KKT conditions, 280
+
+klein, 39
+
+knapsack problems, 292
+
+Koopmans, 1
+
+
+
+\smallskip
+
+Lagrange multiplies, 260
+
+Laplace, 243
+
+Lawler, 22
+
+least squares, 230
+
+Legendre, 243
+\cr}}
+
+
+
+ 
+\filbreak
+\def\leftheadline{\tenrm{\bf\folio}\quad{\it Index} \hfil}
+
+   \nopagenumbers % suppress footlines
+
+ \def\rightheadline{\tenrm\hfil{\it  Index}\quad {\bf\folio}}
+% \def\leftheadline{\tenrm\hfil{\it  Index}\quad {\bf\folio}}
+
+
+
+
+
+{\hsize=2.25 true in \parindent=0pt
+\valign{ #\cr
+ 
+linear algebra, 9
+
+\ \ \ approximation, 229, 274
+
+\ \ \  combination of
+
+\quad\ \ \  equations,  37
+
+\quad \ \ \  vectors,  58
+
+\ \ \  constraint, 4
+
+\ \ \  dependence, 58
+
+\ \ \  equation, 4
+
+\ \ \ form, 3
+
+\ \ \  function,  4
+
+\ \ \  functional,  4
+
+\ \ \ program,	3, 5
+
+\ \ \ programming, 3
+
+line segments, 121
+
+Lipschitz condition, 259
+
+local minimizer, 257
+
+% \ \ \  optimum,
+
+% \quad (maximum, minimum)
+
+loop,		172
+
+lower triangular matrices, 53
+
+
+LP (linear program), 5
+
+\smallskip
+
+management science, 8
+
+marginal costs,	160
+
+matching pennies, 200
+
+% \quad = heads and tails,	137
+
+\quad  problem, 23
+
+
+mathematical program, 3
+
+\quad programming, 3, 257
+
+matrix, 43
+
+\quad  addition, 45
+
+\quad   multiplication, 45
+
+\quad  product and sum, 45
+
+\quad  game,	200
+
+\quad representation for 
+
+\quad  \quad  system of linear 
+
+\quad  \quad  \quad     equations, 47
+
+
+\quad \quad linear programs, 68
+ 
+
+max (maximum), 2
+
+maximal value, 2
+
+maximizer, 2
+
+maximum, 2
+
+mean, 229
+\cr
+median, 230
+
+midrange, 230
+
+min=minimum, 2
+
+minimal value= minimum, 2
+
+minimax theorem, 204
+
+ minimizer, 2
+
+mixed strategy, 203
+
+mixture, 121
+
+multiobjective programming, 287
+
+\smallskip
+
+Nash, 214
+
+network, 172
+
+Newton methods, 275
+
+nodes, 172
+
+
+nonbasic variables,	100
+
+% nonbinding constraints 
+
+
+
+\smallskip
+
+objective function,	2
+
+\quad variable,	2
+
+operations research, 8
+
+operational research, 8
+
+optimal solution, 2
+
+%basis,
+
+
+\quad strategy, 202
+
+\quad tableau,	101
+
+\quad value, 2
+
+optimality region, 2
+
+optimizer, 2
+
+optimum, 2
+
+optimization, 2
+\smallskip
+
+parametric programming,	143
+
+Pareto optima, 287
+
+payoff matrix	200
+
+perpendicular,  241
+
+perturbation method,	286
+
+
+
+Phase 1,	114, 166
+
+Phase 2,	103, 179
+
+piecewise 
+
+\quad affine functions, 151
+
+\quad linear functions, 151
+
+pivot  entry, 78
+
+%column
+
+% \quad  element (entry),	59
+
+% \quad  row
+
+\quad rules, 79
+
+\quad  step. 79
+\cr }}
+\vfill
+\eject
+
+{\hsize=2.25 true in \parindent=0pt
+\valign{#\strut&#\strut&#\strut&#\strut&#\strut&#\strut&#\strut&#\strut&
+#\strut&#\strut&#\strut&#\strut&#\strut&#\strut&#\strut&#\strut\cr
+
+points. 51
+
+polyhedron, 128
+%= bounded feasible sets for LPs
+
+polytope, 128
+
+potentials,	163, 173
+
+% premium 
+%(above and beyond the current price) = shadow price
+
+pure strategy,	203  
+
+quadratic  approximation, 275
+
+\ \ \ programming, 271
+
+Quesnay, 1
+
+\smallskip
+rank of a matrix, 57, 58
+
+
+% ratio test 
+
+redundant constraint, 17, 42
+ 
+\ \ \  strategy, 218
+
+restraint, 3
+
+revised simplex method, 298
+
+row matrix or vector, 43
+
+rows of a matrix, 43
+
+\smallskip
+
+saddle point,	201
+
+Samuelson, 1
+
+scalar, 51
+
+\ \ \ matrix, 51
+
+
+sensitivity analysis, 143
+
+separable programming, 298
+
+shadow prices,	1144, 146
+
+sign restrictions, 69
+
+simplex, 123, 273
+% ($n$-dimensional unit)  
+
+\quad  method,  
+
+\quad \quad  Phase 1, 114 
+
+\quad \quad Phase 2, 103
+
+slack variable,	70
+
+solutions to a system 
+
+\quad of linear equations, 57
+
+sorting, 291
+
+square matrix, 47
+
+stages   of simplex method, 	100
+
+
+standard form for 
+
+ \quad \quad  a linear equation, 4
+
+\quad \quad   a linear program, 68
+
+ \quad \quad  a  system of
+
+ \quad  \quad \quad linear equations, 47
+
+  
+ \quad \quad  solutions to a system
+
+ \quad \quad  \quad of linear equations, 57
+\cr
+
+
+standard tableau,	89, 135
+
+strong descent, 260
+
+supply in transportation 
+
+\ \ \ problem, 20
+
+surplus variables, 71
+
+symmetric game,	205 
+
+systems engineering, 8
+
+\smallskip
+tableau, 76
+
+tight constraint, 101
+
+transportation problem,	18
+
+\quad tables, 167
+
+traveling salesperson 
+
+\ \ \ problem (TCP), 292
+
+ 
+
+ 
+transpose of a matrix, 47
+
+tree,	  172
+
+two-person game, 206
+
+\smallskip
+
+unbounded  program, 5 
+
+
+\ \ \  set, 132
+
+unimodal function, 261
+
+univariate programming, 261
+
+% unrestricted in sign variables
+
+% upper-bound variables
+
+upper triangular matrices, 53
+
+\smallskip
+
+
+value of matrix game,	204
+
+van Dantzig, 40
+
+variable metric, 275
+
+Vaserstein's distance, 9
+
+vector, 51
+
+\ \ \ programming, 287
+
+vertices in convex sets, 124
+
+\ \ \  in a graph, 172
+
+von Neumann, 226
+
+Weyl, 39
+
+\smallskip
+
+Walras, 1
+
+weaker condition, 36
+
+% weights for convex combinations
+
+% weights for mixed strategies
+
+zero-sum games, 199
+
+zero matrices, 48
+ \cr}}
+ 
+\end
+
+Handbook of Global Optimization, vol. 2 ed. Pardalas
+
+
+
+ [1] 1 900 065 (Review) Achatz, H.; Paparrizos, K.; Samaras, N.; Tsiplidis, K. A forest exterior point algorithm for assignment problems. Combinatorial and global optimization (Chania, 1998), 1--10, Ser. Appl. Math., 14, World Sci. Publishing, River Edge, NJ, 2002.
+ 90C51 (90C27)
+----
+--------
+
+Robinson, 225
+Poincar\' e, 40
+
+
+[DPW]
+      Mathematical theory of optimization / edited by Ding-Zhu Du, Panos M. Pardalos, and     Weili Wu. 
+    Dordrecht ; Boston : Kluwer Academic, c2001. 
+ -----
+[R]
+new book on interior point method
+onal Author: 
+              Renegar, James, 1955- 
+         Title: 
+              A mathematical view of interior-point methods in convex optimization / James Renegar. 
+  Publication info: 
+              Philadelphia, PA : Society for Industrial and Applied Mathematics : Mathematical Programming
+              Society, 2001. 
+  Physical descrip: 
+              vii, 117 p. ; 26 cm. 
+     Series Title: 
+              (MPS-SIAM series on optimization) 
+         ISBN: 
+              0898715024 (pbk.) 
+ Bibliography note: 
+              Includes bibliographical references (p. 115-116) and index. 
+    Subject term: 
+              Interior-point methods. 
+    Subject term: 
+              Mathematical optimization. 
+    Subject term: 
+              Convex programming. 
+-------
+[S2]
+Personal Author: 
+              Sierksma, Gerard, 1945- 
+         Title: 
+              Linear and integer programming : theory and practice / Gerard Sierksma. 
+        Edition: 
+              2nd ed. 
+  Publication info: 
+              New York : Marcel Dekker, c2002. 
+  Physical descrip: 
+              xiv, 633 p. : ill. ; 27 cm. + 1 computer disk (3 1/2 in.) 
+     Series Title: 
+              (Monographs and textbooks in pure and applied mathematics ; 245) 
+         ISBN: 
+              0824706730 (alk. paper) 
+    General Note: 
+              Title on accompanying computer disk label: INTPM, a version of Karmarkar's interior point
+              method. 
+ Bibliography note: 
+              Includes bibliographic references (p. 603-609) and index. 
+ Technical details: 
+              System requirements for accompanying computer disk: IBM PC or compatible system. 
+    Subject term: 
+              Linear programming. 
+    Subject term: 
+              Integer programming. 
+     Added title: 
+              INTPM, a version of Karmarkar's interior point meth
+
+---------
+[LP]
+new book on genetic programming  by W B Langdon ...
+Personal Author: 
+              Langdon, W. B. (William B.) 
+         Title: 
+              Foundations of genetic programming / William B. Langdon, Riccardo Poli. 
+  Publication info: 
+              Berlin ; New York : Springer, c2002. 
+  Physical descrip: 
+              xv, 260 p. : ill. ; 25 cm. 
+         ISBN: 
+              3540424512 (alk. paper) 
+ Bibliography note: 
+              Includes bibliographical references (p. [225]-239) and index. 
+    Subject term: 
+              Genetic programming (Computer science) 
+   Added author: 
+              Poli, Riccardo, 1961- 
+-------------
+ [K4]
+Personal Author: 
+              Klerk, Etienne de. 
+         Title: 
+              Aspects of semidefinite programming : interior point algorithms and selected applications / by
+              Etienne de Klerk. 
+  Publication info: 
+              Dordrecht ; Boston : Kluwer Academic Publishers, c2002. 
+  Physical descrip: 
+              xvi, 283 p. : ill. ; 25 cm. 
+     Series Title: 
+              (Applied optimization ; v. 65) 
+         ISBN: 
+              1402005474 (alk. paper) 
+ Bibliography note: 
+              Includes bibliographical references (p. 265-277) and index. 
+    Subject term: 
+              Linear programming. 
+    Subject term: 
+              Mathematical optimization. 
+-----
+
+[KV]
+  Personal Author: 
+              Korte, B. H. (Bernhard H.), 1938- 
+         Title: 
+              Combinatorial optimization : theory and algorithms / Bernhard Korte, Jens Vygen. 
+        Edition: 
+              2nd ed. 
+  Publication info: 
+              Berlin ; New York : Springer, c2002. 
+  Physical descrip: 
+              xiii, 530 p. : ill. ; 25 cm. 
+     Series Title: 
+              (Algorithms and combinatorics ; 21) 
+         ISBN: 
+              3540431543 
+ Bibliography note: 
+              Includes bibliographical references and indexes. 
+      Contents: 
+              Graphs -- Linear programming -- Linear programming algorithms -- Integer programming
+              -- Spanning trees and arborescences -- Shortest paths -- Network flows -- Minimum cost
+              flows -- Maximum matchings -- Weighted matching -- B-matchings and T-joins -- Matroids
+              -- Generalizations of matroids -- NP-completeness -- Approximation algorithms -- The
+              knapsack problem -- Bin-packing -- Multicommodity flows and edge-disjoint paths --
+              Network design problems -- The traveling salesman problem 
+    Subject term: 
+              Combinatorial optimization. 
+   Added author: 
+              Vygen, Jens. 
+------
+
+  
+               International Conference on Multi-Criterion Optimization (1st : 2001 : Zurich,
+               Switzerland) 
+          Title: 
+               Evolutionary multi-criterion optimization : first international conference, EMO
+               2001, Zurich, Switzerland, March 2001 : proceedings / Eckart Zitzler ... [et al.] (eds.). 
+   Publication info: 
+               Berlin ; New York : Springer, 2001. 
+   Physical descrip: 
+               xiii, 712 p. : fig., tab. ; 24 cm. 
+      Series Title: 
+               (Lecture notes in computer science ; 1993) 
+          ISBN: 
+               3540417451 (softcover : alk. paper) 
+     Subject term: 
+               Multiple criteria decision making--Congresses. 
+     Subject term: 
+               Mathematical optimization--Congresses. 
+    Added author: 
+               Zitzler, Eckart. 
+
+[CVL]
+Personal Author: 
+              Coello Coello, Carlos A. 
+         Title: 
+              Evolutionary algorithms for solving multi-objective problems / Carlos A. Coello
+              Coello, David A. Van Veldhuizen, Gary B. Lamont. 
+  Publication info: 
+              New York : Kluwer Academic, c2002. 
+  Physical descrip: 
+              xxxiii, 576 p. : ill. ; 24 cm. 
+     Series Title: 
+              (Genetic algorithms and evolutionary computation ; 5) 
+         ISBN: 
+              0306467623 
+ Bibliography note: 
+              Includes bibliographical references (p. 515-576) and index. 
+    Subject term: 
+              Evolutionary programming (Computer science) 
+    Subject term: 
+              Evolutionary computation. 
+   Added author: 
+              Van Veldhuizen, David A. 
+   Added author: 
+              Lamont, Gary B. 
+--------
+J. Branke Evolutionary optimization book
+Personal Author: 
+              Branke, Jürgen, 1969- 
+         Title: 
+              Evolutionary optimization in dynamic environments / by Jürgen Branke. 
+  Publication info: 
+              Boston : Kluwer Academic Publishers, c2002. 
+  Physical descrip: 
+              xiv, 208 p. : ill. ; 25 cm. 
+     Series Title: 
+              Genetic algorithms and evolutionary computation ; 3 
+         ISBN: 
+              0792376315 
+ Bibliography note: 
+              Includes bibliographical references (p. [191]-206) and index. 
+    Subject term: 
+              Evolutionary programming (Computer science) 
+    Subject term: 
+              Genetic algorithms. 
+    Subject term: 
+              Mathematical optimization. 
+----
+A.Schrijver  Combinatorial optimization book
+Personal Author: 
+              Schrijver, A. 
+         Title: 
+              Combinatorial optimization : polyhedra and efficiency / Alexander Schrijver. 
+  Publication info: 
+              Berlin ; New York : Springer, c2003. 
+  Physical descrip: 
+              3 v. (xxxvii, 1881 p.) : ill. ; 24 cm. 
+     Series Title: 
+              Algorithms and combinatorics,ISSN0937-5511 ; 24 
+         ISBN: 
+              3540443894 (acid-free paper) 
+ Bibliography note: 
+              Includes bibliographical references (p. [1463]-1766) and indexes. 
+      Contents: 
+              v. A. Paths, flows, matchings -- v. B. Matroids, trees, stable sets -- v. C. Disjoint paths,
+              hypergraphs. 
+    Subject term: 
+              Combinatorial optimization. 
+-----------------------------------------
+
+tex bai
+
+dvips -o bai.ps bai.dvi
+
+ps2pdf bai.ps

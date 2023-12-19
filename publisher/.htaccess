@@ -1,0 +1,8 @@
+AuthUserFile /home/faculty/vstein/www/publisher/.htpasswd
+AuthGroupFile /home/faculty/vstein/www/publisher/.htgroup
+      AuthName "vstein"
+      AuthType Basic
+
+      <Limit GET POST>
+      require group allowed
+      </Limit>

@@ -1,0 +1,90 @@
+<!DOCTYPE doctype PUBLIC "-//w3c//dtd html 4.0 transitional//en"><html><head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="GENERATOR" content="Mozilla/4.77 [en] (X11; U; SunOS 5.8 sun4u) [Netscape]"><title></title></head>
+
+<body>
+
+<center>
+<h1>
+cubes</h1></center>
+
+http://www.asahi-net.or.jp/~KC2H-MSM/mathland/math04/cube01.htm
+
+<p><br>
+</p><hr width="100%" size="2">
+<p>http://www.mathpages.com/home/kmath071.htm
+<br>
+</p><hr width="100%" size="2">
+<br>&nbsp;
+<p>From andrew@sophie.math.uga.edu Fri Nov&nbsp; 3 11:40 EST 2000
+<br>Date: Fri, 3 Nov 2000 11:40:47 -0500 (EST)
+<br>From: Andrew Granville &lt;andrew@sophie.math.uga.edu&gt;
+<br>To: vstein@math.psu.edu
+<br>Subject: sums of three cubes
+<br>Content-Type: text
+<br>Content-Length: 223
+<br>&nbsp;
+</p><p>(-283,059,965&nbsp; ,&nbsp; -2,218,888,517&nbsp;&nbsp; ,&nbsp;&nbsp;
+2,220,422,932).
+<br>for 30
+</p><p>also
+</p><p>52 = 60702901317^3 + 23961292454^3 + (-61922712865)^3
+<br>&nbsp;
+</p><p>the students names are eric pine, mike beck, wayne tarrant and kim yarborough
+</p><p>andrew granville
+<br>-------
+<br>http://www.maths.nott.ac.uk/personal/pmxtow/maths.htm
+</p><p>Accordingly, my main interest is Diophantine equations, where, whilst
+the machinery required to obtain a result
+<br>like95800<sup>4</sup>+217519<sup>4</sup>+414560<sup>4</sup>=422481<sup>4</sup>
+or 2220422932<sup>3</sup> - 283059965<sup>3</sup> - 2218888517<sup>3</sup>
+= 30 can be quite complicated -
+<br>the first result comes from an existence proof by Elkies using elliptic
+curves and extending a result of Demjanenko,
+<br>followed by a search on a massively parallel supercomputer by Frye;
+the second was found by a fairly straightforward
+<br>search by four graduate students at the University of Georgia and separately
+by Elkies&amp;Bernstein by a more sophisticated
+<br>method involving approximating the surface x<sup>3</sup>=y<sup>3</sup>+z<sup>3</sup>
+by a series of cuboids and using lattice reduction - the result can be
+<br>explained to anyone capable of handling multiplication and addition.
+<br>-----------
+<br>-435203231<sup>3</sup> +&nbsp;&nbsp; 435203083<sup>3</sup> + 4381159<sup>3</sup>
+=75
+<br>(*http://mathworld.wolfram.com/CubicNumber.html&nbsp; Bau, pers. comm.,
+July 30, 1999*)
+</p><p>117367<sup>3</sup> +&nbsp;&nbsp; 134476<sup>3</sup>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+-159380<sup>3</sup> = 39
+<br>http://www.asahi-net.or.jp/~KC2H-MSM/mathland/math04/matb0100.htm
+<br>Hisanori Mishima<br>
+<font><font size="+1">
+<a href="http://www.asahi-net.or.jp/%7EKC2H-MSM/mathland/math04/cube01.htm" target="_blank">H.Mishima's page</a></font></font>
+</p><p>-2901096694<sup>3</sup>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -15550555555<sup>3</sup>&nbsp;&nbsp;&nbsp;
++ 15584139827<sup>3</sup> = 24
+<br>D. J. Bernstein (07/29/2001) http://cr.yp.to/threecubes.html
+<br>D. J. Bernstein. Enumerating solutions to p(a)+q(b)=r(c)+s(d). Mathematics
+of
+<br>Computation 70 (2001), 389-394
+<br>{-2901096694,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -15550555555,&nbsp;&nbsp;&nbsp;&nbsp;
+15584139827,&nbsp; -2}
+</p><p>39618451444<sup>3</sup>&nbsp; -8728408791<sup>3</sup>&nbsp; -39476727418<sup>3</sup>
+=81
+<br>http://cr.yp.to/threecubes/20010729
+<br>{-39476727418,&nbsp;&nbsp; -8728408791,&nbsp; 39618451444,&nbsp;&nbsp;
+-3}&nbsp;</p>
+<p>-------</p>
+<center>
+<font size="+1">w<sup>3</sup> + x<sup>3</sup> + y<sup>3</sup> + z<sup>3</sup> = 0 <a href="http://www.math.harvard.edu/%7Eelkies/4cubes.html">&nbsp;Elkies</a><br>
+--------------- </font></center>
+<p><br>
+<br>
+</p>
+<center>
+<font size="+1">&nbsp;&nbsp; </font></center>
+<center><font size="+1">&nbsp;
+</font></center>
+
+<p>
+</p>
+<br>
+</body></html>

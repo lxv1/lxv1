@@ -1,0 +1,1107 @@
+ 
+
+
+
+\documentclass[12pt,reqno]{amsart}
+%\usepackage{eufrak}
+
+
+\setlength{\textheight}{220mm} \setlength{\textwidth}{155mm}
+\setlength{\oddsidemargin}{1.25mm}
+\setlength{\evensidemargin}{1.25mm} \setlength{\topmargin}{0mm}
+
+\pagestyle{myheadings} \markboth{ANDREWS, BERNDT, SOHN,  YEE, AND
+ZAHARESCU} {A CONTINUED FRACTION OF RAMANUJAN}
+
+\setbox0=\hbox{$+$}
+\newdimen\plusheight
+\plusheight=\ht0
+\def\+{\;\lower\plusheight\hbox{$+$}\;}
+
+\setbox0=\hbox{$-$}
+\newdimen\minusheight
+\minusheight=\ht0
+\def\-{\;\lower\minusheight\hbox{$-$}\;}
+
+\setbox0=\hbox{$\cdots$}
+\newdimen\cdotsheight
+\cdotsheight=\plusheight%\ht0
+\def\cds{\lower\cdotsheight\hbox{$\cdots$}}
+
+
+\renewcommand{\Im}{\operatorname{Im}}
+\newcommand{\df}{\dfrac}
+\newcommand{\Arg}{\operatorname{Arg}}
+\newcommand{\Arctan}{\operatorname{Arctan}}
+\newcommand{\even}{\operatorname{even}}
+\newcommand{\Gal}{\operatorname{Gal}}
+\newcommand{\Res}{\operatorname{Res}}
+\renewcommand{\Re}{\operatorname{Re}}
+\renewcommand{\Im}{\operatorname{Im}}
+\newcommand{\s}{{\sigma}}
+\newcommand{\Sig}{{\Sigma}}
+\newcommand{\sss}{\sum^{\infty}_{\substack{
+c,d=-\infty\\(c,d)=1\\c,d\text{ odd }}}}
+ \renewcommand{\arctan}{\tan^{-1}}
+ \renewcommand{\a}{\alpha}
+%\renewcommand{\b}{\beta}
+\newcommand{\e}{\epsilon}
+\renewcommand{\d}{{\delta}}
+\newcommand{\g}{\gamma}
+\newcommand{\G}{\Gamma}
+\renewcommand{\l}{\lambda}
+\renewcommand{\L}{\Lambda}
+\renewcommand{\k}{\kappa}
+\renewcommand{\o}{{\omega}}
+\renewcommand{\O}{{\Omega}}
+\renewcommand{\r}{{\rho}}
+\renewcommand{\t}{\tau}
+\newcommand{\x}{\xi}
+\newcommand{\z}{\zeta}
+\newcommand{\CCal}{{\mathcal{C}}}
+\newcommand{\ECal}{{\mathcal{E}}}
+\newcommand{\HCal}{{\mathcal{H}}}
+\newcommand{\JCal}{{\mathcal{J}}}
+\newcommand{\ZBbb}{{\mathbf{Z}}}
+\newcommand{\CBbb}{{\mathbf{C}}}
+\newcommand{\PBbb}{{\mathbf{P}}}
+\newcommand{\qu}{{\underline{q}}}
+\newcommand{\thre}{{\sqrt{3}}}
+\newcommand{\qq}{{\(\dfrac q{\qu}\)^2}}
+\renewcommand{\(}{\left\(}
+\renewcommand{\)}{\right\)}
+\renewcommand{\[}{\left[}
+\renewcommand{\]}{\right]}
+\renewcommand{\i}{\infty}
+\renewcommand{\b}{\mathbf{B}}
+\renewcommand{\pmod}[1]{\,(\textup{mod}\,#1)}
+\numberwithin{equation}{section}
+ \theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remarks}[theorem]{Remarks}
+
+\newenvironment{pf}
+   {\par\noindent{\it Proof of}\hskip 0.5em\ignorespaces}
+   {\hfill $\Box$\par\medskip}
+
+
+
+\begin{document}
+
+\title[On Ramanujan's Continued Fraction for $(q^2;q^3)_{\i}/(q;q^3)_{\i}$]
+{On Ramanujan's Continued Fraction for
+$(q^2;q^3)_{\i}/(q;q^3)_{\i}$}
+\author{George E. Andrews1}
+\author{Bruce C. Berndt2}
+\author{Jaebum Sohn}
+\author{Ae Ja Yee3}
+\author{Alexandru Zaharescu}
+\address{Department of Mathematics, Pennsylvania State University,
+University Park, PA 16802, USA}\email{andrews@math.psu.edu}
+\address{Department of Mathematics, University of Illinois, 1409 West Green
+Street, Urbana, IL 61801, USA} \email{berndt@math.uiuc.edu}
+\address{Department of Mathematics, Ohio State University, Columbus, Ohio
+43210, USA}  \email{sohn@math.ohio-state.edu}
+\address{Department of Mathematics, University of Illinois, 1409 West Green
+Street, Urbana, IL 61801, USA} \email{yee@math.uiuc.edu}
+\address{Department of Mathematics, University of Illinois, 1409 West Green
+Street, Urbana, IL 61801, USA}
+\address{Institute of Mathematics of the Romanian
+Academy, P.O.~Box 1-764, Bucharest RO-70700, Romania}
+\email{zaharesc@math.uiuc.edu}
+
+
+%\maketitle
+
+\vspace*{0.5in}
+\begin{center}
+
+{\bf ON RAMANUJAN'S CONTINUED FRACTION
+FOR $(q^2;q^3)_{\i}/(q;q^3)_{\i}$}\\[5mm]
+
+{\footnotesize GEORGE E. ANDREWS\footnotemark[1], BRUCE C.
+BERNDT\footnotemark[2],
+JAEBUM SOHN, \\
+AE JA YEE\footnotemark[3], AND
+ALEXANDRU ZAHARESCU}\\[3mm]
+
+
+\end{center}
+\footnotetext[1]{Research partially supported by grant Grant
+DMS-9206993 from the National Science Foundation.}
+\footnotetext[2]{Research partially supported by  grant
+MDA904-00-1-0015
+  from the National Security Agency.}
+\footnotetext[3]{Research partially supported by the postdoctoral
+fellowship program from the Korea Science and
+Engineering Foundation, and by a grant from the
+Number Theory Foundation.}
+
+\vspace{0.5in}
+
+\section{Introduction}
+
+In his lost notebook \cite[p.~45]{lnb}, Ramanujan offers several
+interesting and deep theorems about the continued fraction
+\begin{equation}\label{b1}
+\df{(q^2;q^3)_{\i}}{(q;q^3)_{\i}}= \df{1}{1}\- \df{q}{1+q} \-
+\df{q^3}{1+q^2}\- \df{q^5}{1+q^3}\-\cds ,
+\end{equation}
+where $ |q| < 1 $ and where, here, and in the sequel, we use the
+standard notation
+\begin{equation*}
+(a)_0 := (a;q)_0 := 1, \qquad (a)_n := (a;q)_n :=
+\prod_{k=0}^{n-1}(1-aq^k), \qquad
+ \text{if } n \geq 1,
+\end{equation*}
+and
+\begin{equation*}
+ (a;q)_{\i} := \lim_{n\to\i}(a;q)_n, \qquad |q| < 1.
+\end{equation*}
+The continued fraction \eqref{b1} is due to Ramanujan and is found in his
+second notebook \cite[p.~290]{nb}.  Of the many $q$-continued
+fractions found by Ramanujan, \eqref{b1} is, by far, the most
+difficult to prove.  Up until the present, the only known proof was 
+found by Andrews,
+Berndt, L.~Jacobsen, and R.~L.~Lamphere \cite{abjl}, \cite[p.~46,
+Entry 19]{V} in 1992 and uses a deep theorem of Andrews
+\cite{gea}.  The many other $q$-continued fractions found by
+Ramanujan fall under a general hierarchy and have been
+established by several authors by using $q$-difference relations
+for basic hypergeometric series.  In 1936, A.~Selberg
+\cite{selberg} was the first mathematician to systematically
+derive several $q$-continued fractions (mostly due to Ramanujan
+but hidden from the public in his notebooks) from  general
+theorems. Ramanujan, himself, in his lost notebook \cite{lnb},
+stated such general theorems, with the most elegant one first
+established by Andrews \cite{lost}.  See \cite{geabcbI} for
+further citations to the literature. 
+ A primary purpose of this paper is to
+provide a new, short, and more direct proof of \eqref{b1}.
+
+One of the claims made by Ramanujan on page 45 of \cite{lnb} is
+an asymptotic
+ formula for \eqref{b1} as $ q\to 1^-$.  This and an asymptotic formula for
+ another continued fraction found on the same page were established by
+Berndt
+ and Sohn \cite{bs}, who deduced the results from a general theorem that 
+they established. The second major purpose of this paper is to prove another
+ asymptotic formula related to that for \eqref{b1} found on the same page.  
+In fact, the  continued fraction is slightly more general than \eqref{b1}.
+Although both \eqref{b1} and its generalization do not converge for $ q>1$,
+Ramanujan claims that his asymptotic formula is valid as $ q \to 1$  from
+both directions.  However, the continued
+ fraction satisfies a simple difference equation, which is given by Ramanujan
+immediately preceding the asymptotic formula. Thus, Ramanujan's asymptotic
+formula should be more properly interpreted as an asymptotic formula for
+solutions of this difference equation, which 
+does not have a unique solution. Therefore a sequence of arbitrary
+constants  arises in Ramanujan's asymptotic formula.
+
+On page 45 of \cite{lnb}, Ramanujan also claims that, for $ \o =
+e^{2\pi i/3}$ and $ |q| < 1$,
+\begin{equation}\label{b2}
+\lim_{n\to\i}\left( \df{1}{1}\-\df{1}{1+q} \-\df{1}{1+q^2}\-\cds\-
+\df{1}{1+q^n+a}\right) = -\omega^2\left(\df{\Omega -
+\omega^{n+1}}{\Omega - \omega^{n-1}}\right)
+ \, \cdot
+\df{(q^2;q^3)_{\i}}{(q;q^3)_{\i}},
+\end{equation}
+where
+\begin{equation}\label{b3}
+\Omega := \df{1-a\omega^2}{1-a\omega}\, \df{(\omega^2q;q)_{\i}}
+{(\omega q;q)_{\i}}.
+\end{equation}
+Note that, when $ a =0$ and $ q $ is replaced by $ q^{-1}$, the 
+continued fraction on the left side of \eqref{b2} equals
+\begin{equation}\label{b4}
+\df{1}{1}\- \df{1}{1+q^{-1}}\- \df{1}{1+q^{-2}}\-
+\df{1}{1+q^{-3}}\-\cds ,
+\end{equation}
+which, by an equivalence transformation, is equal to the
+continued fraction in \eqref{b1}. Because of the
+appearance of the limiting variable $ n $ on the right side of
+\eqref{b2}, Ramanujan's claim is meaningless as it stands.
+However, if we let $ n\to\i $ in each of the three residue
+classes modulo 3, then, in each of these three cases, the limit
+exists.  With this interpretation, the authors established  a
+proof of Ramanujan's claim in \cite{quintuple}. In particular, if
+$ q > 1$, the continued fraction in \eqref{b1} has three limit
+points, and so it would not be possible in any way to prescribe
+values to the constants mentioned at the close of the previous
+paragraph.
+
+\section{Preliminary Results}
+
+For our new proof of \eqref{b1}, we need the following result
+from Ramanujan's lost notebook \cite[p.~43]{lnb}, which was first
+proved by Andrews \cite{page}.
+
+\begin{lemma}\label{43lemma}
+Let $ \o = e^{2\pi i/3}$. Then
+\begin{equation*}
+\sum_{n=0}^\i \df{(-\o)^nq^{n(n+1)/2}(\o q)_n}{(q^3;q^3)_n} = (\o
+q)_\i (q^2;q^3)_\i.
+\end{equation*}
+\end{lemma}
+
+We also need an analogue of this result, \eqref{applic1} below, 
+which we will establish with the same tools as Andrews used to
+prove Lemma \ref{43lemma}.
+
+\begin{lemma}\label{lem:y5} For any complex numbers $ a, b$, with $ b \neq
+0$,
+\begin{align}\label{eq:y7}
+&\frac{1}{(aq)_{\infty}} \sum_{n=0}^{\infty} \frac{(-1)^n a^n
+q^{n(n+1)/2}}{(q)_n(aq/b)_n}-\frac{1}{(aq)_{\infty}}
+\sum_{n=0}^{\infty} \frac{(-1)^n a^n q^{n(n+1)/2+n}}{(q)_n
+(aq/b)_n}\notag \\=&\frac{b}{a} \sum_{n=0}^{\infty} \frac{(-1)^n
+a^{2n} b^{-n} q^{n(3n-1)/2}}{(q)_n(aq/b)_n(aq)_n} -\frac{b}{a}
+\sum_{n=0}^{\infty} \frac{(-1)^n a^{2n} b^{-n}
+q^{n(3n+1)/2}}{(q)_n(aq/b)_n(aq)_n}.
+\end{align}
+\end{lemma}
+
+\begin{proof}
+We need a limiting case of Watson's $q$-analogue of Whipple's
+theorem given in Andrews's paper \cite[eq.~(2.3)]{page},
+\begin{equation} \label{eq:y8}
+\sum_{n=0}^{\infty} \frac{(-1)^n a^{2n} b^{-n}
+q^{n(3n+1)/2}}{(q)_n (aq/b)_{n} (aq)_n}=\frac{1}{(aq)_{\infty}}
+\sum_{n=0}^{\infty} \frac{(-1)^n a^n q^{n(n+1)/2}}{(q)_n
+(aq/b)_n}.
+\end{equation}
+By replacing $b$ by $bq$ and multiplying both sides by $(1-a/b)$,
+we obtain
+\begin{equation*}
+\sum_{n=0}^{\infty} \frac{(-1)^n a^{2n} b^{-n}(1-a q^n/b)
+q^{n(3n-1)/2}}{(q)_n (aq/b)_{n} (aq)_n}=\frac{1}{(aq)_{\infty}}
+\sum_{n=0}^{\infty} \frac{(-1)^n a^n (1-a q^n/b) q^{n(n+1)/2}}
+{(q)_n (aq/b)_n},
+\end{equation*}
+or
+\begin{align}
+&\sum_{n=0}^{\infty} \frac{(-1)^n a^{2n} b^{-n}
+q^{n(3n-1)/2}}{(q)_n (aq/b)_{n}
+(aq)_n}-\frac{a}{b}\sum_{n=0}^{\infty} \frac{(-1)^n a^{2n} b^{-n}
+q^{n(3n+1)/2}}{(q)_n (aq/b)_{n} (aq)_n} \notag\\
+=&\frac{1}{(aq)_{\infty}} \sum_{n=0}^{\infty} \frac{(-1)^n a^n
+ q^{n(n+1)/2}} {(q)_n (aq/b)_n}-\frac{a}{b}\frac{1}{(aq)_{\infty}}
+\sum_{n=0}^{\infty} \frac{(-1)^n a^n
+ q^{n(n+1)/2+n}} {(q)_n (aq/b)_n}.\notag
+\end{align}
+Using (\ref{eq:y8}) above, we deduce \eqref{eq:y7}.
+%\begin{align}
+%&\sum_{n=0}^{\infty} \frac{(-1)^n a^{2n} b^{-n}
+%q^{n(3n-1)/2}}{(q)_n (aq/b)_{n} (aq)_n} \notag\\
+%=&\frac{1+a/b}{(aq)_{\infty}} \sum_{n=0}^{\infty} \frac{(-1)^n a^n
+% q^{n(n+1)/2}} {(q)_n (aq/b)_n}-\frac{a}{b}\frac{1}{(aq)_{\infty}}
+%\sum_{n=0}^{\infty} \frac{(-1)^n a^n
+% q^{n(n+1)/2+n}} {(q)_n (aq/b)_n}.\notag
+%\end{align}
+\end{proof}
+
+To maintain the flow of the proof of \eqref{b1}, we place here an
+application of Lemma \ref{lem:y5} which will be needed.
+
+If we set $ a = \o $ and $ b = \o^2 $ in \eqref{eq:y7}, we find
+that, after some simplification,
+\begin{align}\label{applic1}
+& \sum_{n=0}^{\i}\df{(-\o)^nq^{n(n+1)/2}}{(q)_n(\o^2q)_n} -
+ \sum_{n=0}^{\i}\df{(-\o)^nq^{n(n+1)/2+n}}{(q)_n(\o^2q)_n} \notag \\
+& = \o (\o q)_{\i}
+\left\{\sum_{n=0}^{\i}\df{(-1)^nq^{n(3n-1)/2}}{(q^3;q^3)_n}-
+\sum_{n=0}^{\i}\df{(-1)^nq^{n(3n+1)/2}}{(q^3;q^3)_n} \right\} \notag \\
+& = \o (\o q)_{\i} \left\{ (q;q^3)_{\i} - (q^2;q^3)_{\i}\right\},
+\end{align}
+by letting $ N \to \i $ in the $q$-binomial theorem, as found in
+\cite[pp.~35--36]{gea1},  with $ q $ replaced by $ q^3 $ and $ z $ replaced
+by $ q $ and $ q^2 $, respectively, in \cite{gea1}.
+
+%Next, if we set $ a = \o^2 $ and $ b = \o $ in \eqref{eq:y7}, we
+%find that, after some simplification,
+%\begin{align}\label{applic2}
+%-&\df{\o^2}{(\o^2
+% q)_{\i}}\left\{\sum_{n=0}^{\i}\df{(-\o^2)^nq^{n(n+1)/2}}{(q)_n(\o q)_n} +
+%\o \sum_{n=0}^{\i}\df{(-\o^2)^nq^{n(n+1)/2+n}}{(q)_n(\o q)_n}\right\}\notag
+%\\
+%=& \sum_{n=0}^{\i}\df{(-1)^nq^{n(3n-1)/2}}{(q^3;q^3)_n} =
+%(q;q^3)_{\i}.
+%\end{align}
+
+
+By employing an argument similar to that used by Andrews \cite{page} to prove 
+Lemma~\ref{43lemma}, we can utilize Lemma~\ref{lem:y5} to prove the following
+lemma, which we use in \cite{quintuple}.
+
+\begin{lemma}\label{lem:y6}
+Let $ \o = e^{2\pi i/3}$. Then
+\begin{equation}\label{applic2}
+-\df{\o}{(\o
+ q)_{\i}}\left\{\sum_{n=0}^{\i}\df{(-\o)^nq^{n(n+1)/2}}{(q)_n(\o^2q)_n} +
+\o
+\sum_{n=0}^{\i}\df{(-\o)^nq^{n(n+1)/2+n}}{(q)_n(\o^2q)_n}\right\}
+= (q;q^3)_{\i}.
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+Letting  $a= \o$ and $b=\o^2$ in Lemma~\ref{lem:y5}, we obtain
+\begin{align}
+& \sum_{n=0}^{\i}\df{(-\o)^nq^{n(n+1)/2}}{(q)_n(\o^2q)_n} -
+ \sum_{n=0}^{\i}\df{(-\o)^nq^{n(n+1)/2+n}}{(q)_n(\o^2q)_n} \notag \\
+ =& \o (\o q)_{\i}
+\left\{\sum_{n=0}^{\i}\df{(-1)^nq^{n(3n-1)/2}}{(q^3;q^3)_n}-
+\sum_{n=0}^{\i}\df{(-1)^nq^{n(3n+1)/2}}{(q^3;q^3)_n} \right\}.
+\label{eq:y9}
+\end{align}
+>From \eqref{eq:y8}, we see that
+\begin{equation} \label{eq:y10}
+\sum_{n=0}^{\infty} \frac{(-1)^n q^{n(3n+1)/2}}{(q)_n (\o q)_{n}
+(\o^2 q)_n}=\frac{1}{(\o q)_{\infty}} \sum_{n=0}^{\infty}
+\frac{(-1)^n \o^n q^{n(n+1)/2}}{(q)_n (\o^2 q)_n}.
+\end{equation}
+By combining \eqref{eq:y9} and \eqref{eq:y10}, we find that
+\begin{align}\label{eq:y8a}
+& -\frac{\o}{(\o q)_{\i}}\left\{
+\sum_{n=0}^{\i}\df{(-\o)^nq^{n(n+1)/2}}{(q)_n(\o^2q)_n} +
+ \o \sum_{n=0}^{\i}\df{(-\o)^nq^{n(n+1)/2+n}}{(q)_n(\o^2q)_n}\right\} 
+\notag \\
+ =& \sum_{n=0}^{\i}\df{(-1)^nq^{n(3n-1)/2}}{(q^3;q^3)_n}. 
+\end{align}
+By letting $ N \to \i $ in the $q$-binomial theorem, as found in
+\cite[pp.~35--36]{gea1},  with $ q $ replaced by $ q^3 $ and $ z
+= q$ in \cite{gea1}, we find that the right side of \eqref{eq:y8a} 
+equals $(q;q^3)_\i$, and so  \eqref{applic2} is established.
+\end{proof}
+
+
+\section{Proof of Ramanujan's Continued Fraction \eqref{b1}}
+
+\begin{lemma}\label{lem:y11}
+Let
+\begin{equation}\label{eq:y11}
+F(a,b)=\sum_{n=0}^{\infty} \frac{(-1)^n a^n
+q^{n(n+1)/2}}{(q)_n(aq/b)_n}.
+\end{equation}
+Then $F(a,b)$ satisfies the recurrence relations,
+\begin{align}
+\textup{(i)} \hspace{1in} F(a,b)&=(1-a/b) F(a,bq) +(a/b) F(aq,bq),
+\hspace{1in} \label{eq:y12}\\
+\textup{(ii)} \hspace{1in} F(a,b)&=F(aq,bq)-\frac{aq}{1-aq/b}
+F(aq,b). \hspace{1in} \label{eq:y13}
+\end{align}
+\end{lemma}
+
+\begin{proof}
+(i) We first show that $(1-a/b) F(a,bq)=F(a,b)-(a/b)F(aq,bq)$. To that end, 
+\begin{align*}
+(1-a/b)F(a,bq)&=(1-a/b)\sum_{n=0}^\i \frac{(-1)^n a^n
+q^{n(n+1)/2}}{(q)_n(a/b)_n}\\
+&=\sum_{n=0}^\i \frac{(-1)^n a^n
+q^{n(n+1)/2}(1-aq^n/b)}{(q)_n(aq/b)_n}\\
+&=\sum_{n=0}^\i \frac{(-1)^n a^n q^{n(n+1)/2}}{(q)_n(aq/b)_n}
+-\frac{a}{b}\sum_{n=0}^\i \frac{(-1)^n (aq)^n
+q^{n(n+1)/2}}{(q)_n(aq/b)_n}\\
+&=F(a,b)-(a/b)F(aq,bq).
+\end{align*}
+
+(ii) Next, we consider $F(a,b)-F(aq,bq)$.  Accordingly, 
+\begin{align*}
+F(a,b)-F(aq,bq)&=\sum_{n=0}^\i \frac{(-1)^n a^n
+q^{n(n+1)/2}}{(q)_n(aq/b)_n}-\sum_{n=0}^\i \frac{(-1)^n (aq)^n
+q^{n(n+1)/2}}{(q)_n(aq/b)_n}\\
+&=\sum_{n=0}^\i \frac{(-1)^n a^n
+q^{n(n+1)/2}(1-q^n)}{(q)_n(aq/b)_n}\\
+&=\sum_{n=1}^\i \frac{(-1)^n a^n
+q^{n(n+1)/2}}{(q)_{n-1}(aq/b)_n}\\
+&=\frac{-aq}{1-aq/b} \sum_{n=0}^\i \frac{(-1)^n (aq)^n
+q^{n(n+1)/2}}{(q)_n(aq^2/b)_n}\\
+&=\frac{-aq}{1-aq/b}F(aq,b).
+\end{align*}
+\end{proof}
+
+We are now ready to prove \eqref{b1}.
+
+\begin{theorem}\label{thm:y11} For $ |q| < 1$, 
+\begin{equation*}
+\df{(q^2;q^3)_{\i}}{(q;q^3)_{\i}}= \df{1}{1}\- \df{q}{1+q} \-
+\df{q^3}{1+q^2}\- \df{q^5}{1+q^3}\-\cds .
+\end{equation*}
+\end{theorem}
+
+\begin{proof}
+By replacing $a$ by $aq$ in \eqref{eq:y12} and \eqref{eq:y13}, we
+obtain
+\begin{align}
+F(aq,b)&=(1-aq/b) F(aq,bq) +(aq/b)F(aq^2,bq), \label{eq:y16}\\
+F(aq,b)&=F(aq^2,bq)-\frac{aq^2}{1-aq^2/b} F(aq^2,b).
+\label{eq:y17}
+\end{align}
+Solving \eqref{eq:y16} for $F(aq,bq)$ and substituting the resulting equality
+in \eqref{eq:y13}, we find that 
+\begin{equation}\label{eq:y18}
+F(a,b)=\frac{1-aq}{1-aq/b} F(aq,b) -\frac{aq/b}{1-aq/b}
+F(aq^2,bq).
+\end{equation}
+Solving \eqref{eq:y17} for $F(aq^2,bq)$ and substituting the result in 
+ \eqref{eq:y18}, we deduce that
+\begin{equation*}
+F(a,b)=\frac{1-aq-aq/b}{1-aq/b}F(aq,b)
+-\frac{aq/b}{(1-aq/b)}\frac{aq^2}{(1-aq^2/b)} F(aq^2,b).
+\end{equation*}
+Hence, from the last equality and iteration, we find that
+\begin{align}\label{key}
+\frac{(1-aq/b)F(a,b)}{F(aq,b)} &= (1-aq-aq/b)-
+\frac{aq}{b}\frac{aq^2}{(1-aq^2/b)}\frac{F(aq^2,b)}{F(aq,b)}\notag
+\\ &=(1-aq-aq/b)-
+\frac{a^2q^3}{b}\frac{1}{(1-aq^2/b) \dfrac{F(aq,b)}{F(aq^2,b)}}\\
+&= (1-aq-aq/b)- \frac{a^2q^3}{b} \frac{1}{1-aq^2-aq^2/b}\-
+\frac{a^2q^5}{b}\frac{1}{(1-aq^3/b)\dfrac{
+F(aq^2,b)}{F(aq^3,b)}}.\notag
+\end{align}
+We  now specialize the iterative process above by setting 
+ $a=\o$ and $b=\o^2$. Then the last equalities, upon simplification, 
+reduce to 
+\begin{align}
+\frac{(1-\o^2 q)F(\o,\o^2)}{F(\o q,\o^2)}
+% &= (1-\o q-\o
+%q/\o^2)+ \frac{\o q}{\o^2}\frac{-\o q^2}{(1-\o
+%q^2/\o^2)}\frac{F(\o q^2,\o^2)}{F(\o q,\o^2)}\notag
+%\\
+%&=1+q-\frac{q^3}{(1-\o^2 q^2)F(\o
+%q,\o^2)/F(\o q^2,\o^2)} 
+=&1-\o q-\o^2 q- \frac{q^3}{(1-\o^2q^2)\df{F(\o q,\o^2)}{F(\o q^2,\o^2)}}
+\notag \\
+=&1+q- \frac{q^3}{1-\o q^2- \o^2 q^2} \- \frac{
+q^5}{(1-\o^2 q^3)\df{F(\o
+q^2,\o^2)}{F(\o q^3,\o^2)}} \notag \\
+=&1+q-\frac{q^3}{1+q^2}\- \frac{q^5}{1-\o q^3 -\o^2 q^3}\-
+\frac{ q^7}{(1-\o^2 q^4)\dfrac{F(\o
+q^3,\o^2)}{F(\o q^4,\o^2)}} \notag \\
+=&1+q-\frac{q^3}{1+q^2}\- \frac{q^5}{1+q^3}\-
+\frac{q^7}{1+q^4}\- \cds.\label{eq:y15}
+\end{align}
+
+On the other hand, by \eqref{eq:y13} and \eqref{applic1}, we
+obtain
+\begin{align}
+-\frac{\o q}{1-\o^2 q} F(\o q,\o^2) &= F(\o,\o^2) - F(\o q, \o^2 q) \notag\\
+&= \o (\o q)_\i \{ (q;q^3)_\i -(q^2;q^3)_\i\},\notag
+\end{align}
+and from Lemma \ref{43lemma}, we see that
+\begin{equation*}
+F(\o, \o^2) = (\o q)_\i (q^2;q^3)_\i.
+\end{equation*}
+Hence,
+\begin{align}
+\frac{(1-\o^2 q)F(\o,\o^2)}{F(\o q,\o^2)} &=\frac{q (\o q)_\i
+(q^2;q^3)}{(\o q)_\i \{(q^2;q^3)_\i -(q;q^3)_\i\}} \notag \\
+&=\frac{q}{1-(q;q^3)_\i/(q^2;q^3)_\i}. \label{eq:y19}
+\end{align}
+By \eqref{eq:y15} and \eqref{eq:y19}, we conclude that, after some
+manipulation, 
+\begin{equation}\label{eq:y20}
+\frac{(q^2;q^3)_\i}{(q;q^3)_\i}=\frac{1}{1}\- \frac{q}{1+q} \-
+\frac{q^3}{1+q^2} \- \frac{q^5}{1+q^3} \- \cds.
+\end{equation}
+This completes the proof, except that it remains to show that the iterative
+process in \eqref{eq:y15} does indeed converge and that it converges to $
+(q^2;q^3)_\i/(q;q^3)_\i$. 
+
+First, the continued fraction in \eqref{b1}
+ is equivalent to a continued fraction of the form
+\begin{equation*}
+\mathop{\pmb{\mathbf{K}}}_{n=1}^\i \df{c_n}{1},
+\end{equation*}
+where, for $ n \geq 3$, 
+\begin{equation*}
+c_n = - q^{2n-3}(1+q^{n-2})^{-1}(1+q^{n-1})^{-1}.
+\end{equation*}
+By Worpitzky'z theorem \cite[p.~35]{lisa}, the continued fractions \eqref{b1}
+and \eqref{eq:y15} therefore converge. Second,
+\begin{equation*}
+(1-\o^2q^n)\df{F(\o q^{n-1},\o^2)}{F(\o q^{n},\o^2)} = 1 +O(q^n),
+\end{equation*}
+as $ n \to \i$, which is sufficient to show that the continued fraction
+\eqref{eq:y15} converges to what is claimed in \eqref{eq:y20}. 
+\end{proof}
+
+Theorem \ref{thm:y11} can, in fact, be generalized, as we demonstrate in the
+next corollary.  However, in contrast to Theorem \ref{thm:y11}, it does not
+seem possible to find a product representation for the continued fraction. 
+
+\begin{corollary}\label{ly1} 
+Let $|q| < 1$ and suppose that $ a $ is any complex number such that $ 1+aq^n
+\neq 0$ for any positive integer $ n$. Then, if $ F(a,b) $ is defined by
+\eqref{eq:y11}, 
+\begin{equation}\label{ey1}
+\df{a^2q\, F(a\o q,\o^2)}{(1-a\o^2q)F(a\o,\o^2)} = \df{a^2q}{1+aq}\- 
+\df{a^2q^3}{1+aq^2}\- \df{a^2q^5}{1+aq^3}\- \cds .
+\end{equation}
+\end{corollary}
+
+\begin{proof} In \eqref{key}, replace $ a $ by $ a\o $ and set $ b =
+\o^2$. Then take the reciprocal of both sides and multiply both sides of the
+resulting equality by $ a^2q$. Equality \eqref{ey1} then immediately
+follows. 
+\end{proof}
+
+Representations for the Rogers--Ramanujan continued fraction and the 
+ generalized Rogers--Ramanujan continued fraction also follow from
+ \eqref{key}. 
+
+\begin{corollary}\label{ly2}
+Let $|q| < 1$ and suppose that $ a $ is any complex number such that $ 1+aq^n
+\neq 0$ for any positive integer $ n$.  Then
+\begin{equation}\label{ey2}
+\df{\displaystyle{\sum_{n=0}^{\i}}\df{(-a)^nq^{n(n+3)/2}}{(q)_n(-aq)_{n+1}}}
+{\displaystyle{\sum_{n=0}^{\i}}\df{(-a)^nq^{n(n+1)/2}}{(q)_n(-aq)_{n}}}
+= \df{1}{1}\+\df{a^2q^3}{1}\+\df{a^2q^5}{1}\+\df{a^2q^7}{1}\+\cds .
+\end{equation}
+\end{corollary}
+
+\begin{proof} In \eqref{key}, set $ b = -1$. Taking the reciprocal of both
+sides, we complete the proof.
+\end{proof}
+
+To obtain from \eqref{ey2} the generalized Rogers--Ramanujan continued 
+fraction in its usual form, replace $a^2$ by $ a^2/q$ and then replace $ q^2$
+by $ q$. The Rogers--Ramanujan continued fraction is the special case $ a =1
+$ of the latter result. 
+
+
+
+\section{An Asymptotic Expansion}\label{unusual}
+
+In \cite{bs}, Berndt and Sohn established an asymptotic expansion,
+as $ q\to 1^-$,
+for the continued fraction \eqref{b1}; this asymptotic series is
+found on page 45 in Ramanujan's lost notebook \cite{lnb}.
+Elsewhere on page 45, Ramanujan gives an asymptotic expansion for
+a continued fraction which generalizes that of \eqref{b1}, but as we remarked
+in the Introduction, Ramanujan evidently
+derived his result from a recurrence relation, \eqref{s4.10} below,
+ satisfied by the
+continued fraction.  Since Ramanujan claims that his asymptotic formula is
+valid for both positive and negative values of $x$, where $ q=e^{-x}$, his
+assertion must be interpreted as an asymptotic expansion for solutions of
+\eqref{s4.10}. Because \eqref{s4.10} does not have a unique solution, his 
+asymptotic series includes a
+sequence $ \phi_0, \phi_1, \phi_2, \dots $ of arbitrary
+
+constants. In this section, we establish this unusual asymptotic series
+claimed by Ramanujan.
+
+\begin{theorem}\label{st4.2}
+Let
+\begin{equation}\label{s4.9}
+u_\l := \df{1}{1+e^{(\l +1)x}}\- \df{1}{1+e^{(\l +2)x}} \- \cds.
+\end{equation}
+Then, as $ x \to 0$, 
+\begin{equation}\label{s4.10}
+u_\l + \df{1}{u_{\l -1}} = 1 + e^{\l x}
+\end{equation}
+and
+\begin{align}\label{s4.11}
+u_\l =& 1 - \df{\phi_0}{1 - \l \phi_0} + x \left( \df{\l +1}{2} +
+\df{\phi_1 + (\l^2 -1)(\frac12 -\frac23 \l \phi_0 + \frac14
+\l^2\phi_0^2)}
+{(1-\l\phi_0)^2}\right) \notag\\
+&+ x^2\left(\df{\l(\l +1)(\l +2)}{12} - \df{\phi_2 + \l (\l^2
+-1)(\l^2 -4) \left(\frac{1}{45} -\frac{\l \phi_0}{36} +
+ \frac{(\l^2 +\frac13)\phi_0^2}{112}\right)}
+{(1-\l \phi_0)^2} \right. \notag\\
+&- \left. \df{\l}{(1-\l \phi_0)^3} \left(\phi_1 + \df{\l^2 -1}{6}
+(1-\df{1}{2} \l \phi_0) \right)^2 \right) + \cdots,
+\end{align}
+where $\phi_0, \phi_1, \phi_2, \dots $ are 
+independent of $\l $.
+% if
+%$x < 0. $ But if $q\ge 0$, then $\phi_1, \phi_2, \phi_3, \dots $
+%are all zero and
+%$$\phi_0 = \df{\Gamma(\frac23)}{\Gamma(\frac13)} (3q)^{1/3} e^{-G(q)}, $$
+%where
+%$$G(x) \sim  a_2 x^2 + a_4 x^4 + a_6 x^6 + \cdots, $$
+%with
+%$$a_{\nu} = \df{4\Gamma(\nu) \zeta(\nu) L(\nu +1,
+%\chi)}{(2\pi/\sqrt3)^{2\nu+1}}. $$
+\end{theorem}
+
+
+\begin{proof}
+>From \eqref{s4.9}, $$u_{\l -1} = \df{1}{1+e^{\l x}} \-
+\df{1}{1+e^{(\l+1)x}} \- \df{1}{1+e^{(\l+2)x}} \+ \cds. $$
+Hence, $$\df{1}{u_{\l-1}} = 1+e^{\l x} - \df{1}{1+e^{(\l+1)x}} \-
+\df{1}{1+e^{(\l+2)x}} \+ \cds = 1+e^{\l x} - u_{\l}, $$ which
+proves \eqref{s4.10}.
+
+To prove \eqref{s4.11}, we shall use the recurrence relation
+\eqref{s4.10} and the method of successive approximations. We restrict our
+attention to solutions of \eqref{s4.10} which have asymptotic expansions of
+the form 
+$$u_\l = c_0(\l) + c_1(\l) x + c_2(\l) x^2 + \cdots , $$
+an assumption evidently also made by Ramanujan.  We
+first calculate $c_0(\l). $ Now, from \eqref{s4.10}, the constant
+terms yield $$c_0(\l) + \df{1}{c_0(\l-1)} = 2. $$ Set $$c_0(\l) =
+1 + f(\l). $$ Then $$1+f(\l) + \df{1}{1+f(\l-1)} = 2, $$ or
+\begin{equation}\label{s4.12}
+f(\l)(1+f(\l-1)) = f(\l -1).
+\end{equation}
+Next put $$g(\l) = \df{1}{f(\l)}. $$ Then, from \eqref{s4.12}, we
+easily deduce that
+%$$\df{1}{g(\l)} \left(1+\df{1}{g(\l-1)}\right) = \df{1}{g(\l-1)}. $$
+%Hence, after multiplying both sides by $g(\l) g(\l-1), $ we have
+\begin{equation}\label{s4.13}
+g(\l) - g(\l-1) = 1.
+\end{equation}
+This is an inhomogeneous linear recurrence relation which has the
+characteristic root 1. Thus, the general homogeneous solution is
+$$g(\l) = c \cdot 1^{\l} = c. $$ As 1 is the characteristic root,
+a particular inhomogeneous solution has the form $k \l. $ Hence,
+from \eqref{s4.13}, $$k \l - k(\l -1) = 1. $$ Hence, $ k=1$, and
+the general solution for the linear recurrence relation
+\eqref{s4.13} is $g(\l) = c+ \l. $ Thus, $$f(\l) = \df{1}{c+\l}
+\quad \text{and} \quad c_0(\l) = 1 + \df{1}{c+\l}. $$ Ramanujan
+sets $c= -1/\phi_0. $ Thus,
+\begin{equation}\label{s4.14}
+c_0(\l) = 1 + \df{1}{\l - 1/\phi_0} = 1 - \df{\phi_0}{1- \phi_0
+\l}.
+\end{equation}
+
+For our second approximation, from \eqref{s4.10}, we have
+$$c_0(\l) + c_1(\l) x + \df{1}{c_0(\l-1) + c_1(\l -1)x} = 2 + \l
+x, $$ or $$(c_0(\l) +c_1(\l) x)(c_0(\l-1) + c_1(\l-1) x) + 1 =
+(2+\l x) (c_0(\l-1) + c_1(\l-1)x). $$ Equate coefficients of $x $
+to obtain
+\begin{equation}\label{s4.15}
+c_0(\l-1) c_1(\l) + c_0(\l) c_1(\l-1) = 2 c_1(\l -1) + \l c_0(\l
+-1).
+\end{equation}
+>From \eqref{s4.14} and \eqref{s4.15}, we have
+\begin{equation}\label{s4.16}
+\df{(1-\phi_0 \l) c_1(\l)}{1+\phi_0 - \phi_0 \l} + \df{(1-\phi_0
+\l -\phi_0)c_1(\l-1)}{1-\phi_0 \l} = \df{\l (1-\phi_0
+\l)}{1-\phi_0 \l + \phi_0} + 2 c_1(\l -1).
+\end{equation}
+Now
+\begin{equation}\label{s4.17}
+c_1(\l-1) \left( \df{1-\phi_0 \l -\phi_0}{1-\phi_0 \l} -2 \right)
+= c_1(\l-1) \left(\df{-1+\phi_0 \l - \phi_0}{1-\phi_0 \l} \right).
+\end{equation}
+Thus, from \eqref{s4.16} and \eqref{s4.17},
+\begin{equation}\label{s4.18}
+c_1(\l) \left(\df{1-\phi_0 \l}{1+\phi_0 - \phi_0 \l} \right) +
+c_1(\l -1) \left(\df{-1+\phi_0\l -\phi_0}{1-\phi_0 \l}\right) =
+\df{\l(1-\phi_0 \l)}{1-\phi_0 \l + \phi_0}.
+\end{equation}
+Set
+\begin{equation}\label{s4.19}
+f_1(\l) = (1-\phi_0 \l) c_1(\l).
+\end{equation}
+Then, from \eqref{s4.18} and \eqref{s4.19},
+$$\df{f_1(\l)}{1+\phi_0 - \phi_0 \l} - \df{f_1(\l-1)}{1-\phi_0
+\l} = \df{\l (1-\phi_0 \l)}{1-\phi_0 \l + \phi_0}. $$ Multiply
+both sides by $(1-\phi_0 \l)(1+\phi_0 - \phi_0 \l) $ to deduce
+that
+\begin{equation}\label{s4.20}
+(1-\phi_0 \l) f_1(\l) -(1+\phi_0 - \phi_0 \l) f_1(\l -1) = \l
+(1-\phi_0 \l)^2.
+\end{equation}
+Set
+\begin{equation}\label{s4.21}
+g_1(\l) = (1-\phi_0 \l) f_1(\l).
+\end{equation}
+Hence, from \eqref{s4.20} and \eqref{s4.21},
+\begin{equation}\label{613a}
+g_1(\l) - g_1(\l-1) = \l (1-\phi_0 \l)^2,
+\end{equation}
+%Setting $a_n = g_1(\l) $ and $a_{n-1}= g_1(\l-1) $, we rewrite
+%\eqref{613a} in  a more familiar notation
+%\begin{equation}\label{s4.22}
+%a_n - a_{n-1} = n (1-\phi_0 n)^2,
+%\end{equation}
+which has the characteristic root 1, and so the general
+homogeneous solution is $$\phi_1 \cdot 1^\lambda = \phi_1, $$ for an
+arbitrary constant $ \phi_1$. Since 1 is a homogeneous solution,
+a particular solution for the recurrence relation \eqref{613a}
+has the form
+\begin{equation}\label{s4.23}
+g_1(\l) = f_1 \lambda + f_2 \lambda^2 + f_3 \lambda^3 + f_4 \lambda^4.
+\end{equation}
+Substitute \eqref{s4.23} into \eqref{613a} to find that $$f_1 -
+f_2 + f_3 - f_4 + \lambda (2f_2 -3f_3 + 4f_4) + \l^2 (3f_3 - 6f_4) + \l^3
+(4f_4) = \l(1-2\phi_0 \l+ \phi_0^2 \l^2). $$ Equate coefficients of
+like powers of $\l $ to deduce that $$f_1 = \frac12 -\frac13
+\phi_0, \quad f_2 = \frac 12 -\phi_0 +\frac 14 \phi_0^2, \quad
+f_3 = -\frac23 \phi_0 + \frac 12 \phi_0^2, \quad \text{and} \quad
+f_4 = \frac 14 \phi_0^2. $$ Substitute these values into
+\eqref{s4.23} to find that
+\begin{align*}
+g_1(\l) &= \left(\frac12 -\frac13 \phi_0\right) \l + \left(\frac 12
+-\phi_0 +\frac 14 \phi_0^2\right) \l^2 + \left(-\frac23 \phi_0 +
+\frac 12 \phi_0^2\right) \l^3 +
+\frac 14 \phi_0^2\\
+&= \frac12 (\l+1)(1-2\phi_0 \l + \phi_0^2 \l^2) + \df{\l^2-1}{2}
+-\frac23 \phi_0 \l^3 + \frac 23 \l \phi_0 + \frac 14 \phi_0^2 \l^4 -
+ \frac14 \phi_0^2 \l^2\\
+&= \frac12 (\l+1)(1-\phi_0 \l)^2 + (\l^2-1) \left(\frac12 -\frac23 \l
+\phi_0 +\frac14 \phi_0^2 \l^2 \right),
+\end{align*}
+by elementary algebra. Hence, the general solution for the
+recurrence relation \eqref{613a} is 
+\begin{equation}\label{cd}
+ \phi_1 + \frac12
+(\l+1)(1-\phi_0 \l)^2 + (\l^2-1)
+ \left(\frac12 -\frac23 \l \phi_0
++\frac14 \phi_0^2 \l^2 \right).
+\end{equation}
+% The general solution is thus $g_1(\l) + \phi_1 $, and, f
+>From \eqref{s4.19}, \eqref{s4.21}, and \eqref{cd}, 
+$$c_1(\l) = \df{g_1(\l) }{(1-\phi_0 \l)^2} =
+\frac12(\l+1) + \df{\phi_1 + (\l^2-1)\left(\frac12
+-\frac23\l\phi_0 + \frac14 \phi_0^2 \l^2\right)}
+{(1-\phi_0\l)^2}, $$ as claimed by Ramanujan.
+
+To calculate the coefficient of $x^2$, write $u_\l = c_0(\l) +
+c_1(\l) x + c_2(\l) x^2. $ Then, from \eqref{s4.10}, $$c_0(\l) +
+c_1(\l) x + c_2(\l) x^2 + \df{1}{c_0(\l-1) + c_1(\l -1) x + c_2
+(\l -1) x^2} = 2 + \l x + \df{\l^2 x^2}{2}, $$ or
+\begin{multline}\label{s4.24}
+(c_0(\l) + c_1(\l) x + c_2(\l) x^2) \cdot (c_0(\l-1) + c_1(\l-1) x
++ c_2(\l-1)
+x^2 ) + 1 \\
+= \left( 2+\l x + \df{\l^2 x^2}{2} \right) (c_0(\l-1) + c_1(\l-1)
+x + c_2(\l -1) x^2).
+\end{multline}
+Equate  coefficients of $x^2 $ to deduce that $$c_0(\l) c_2(\l-1)
++ c_1(\l) c_1(\l-1) + c_2(\l) c_0(\l -1) = 2 c_2(\l-1) + \l
+c_1(\l-1) + \frac{\l^2}{2} c_0(\l-1) $$ or
+\begin{equation}\label{s4.25}
+c_2(\l) c_0(\l-1) + c_2(\l-1) (c_0(\l)-2) = c_0(\l-1)
+\frac{\l^2}{2} + c_1(\l-1) \l - c_1(\l) c_1(\l -1).
+\end{equation}
+Recall that
+\begin{equation}\label{s4.26}
+ c_0(\l) = \df{1-\phi_0 \l - \phi_0}{1-\phi_0 \l}
+%, \quad c_0(\l-1) = \df{1-\phi_0 \l}{1+\phi_0 - \phi_0 \l} ,
+\quad \text{and} \quad c_0(\l) -2 = \df{-1 + \phi_0 \l -
+\phi_0}{1-\phi_0 \l}.
+\end{equation}
+Set
+\begin{equation}\label{s4.27}
+c_2(\l) (1-\phi_0 \l) = f_2(\l).
+\end{equation}
+Now from \eqref{s4.25}, \eqref{s4.26}, and \eqref{s4.27},
+\begin{multline}\label{s4.28}
+c_2(\l) \df{1-\phi_0 \l}{1 + \phi_0 - \phi_0 \l} + c_2(\l-1)
+\df{-1+\phi_0 \l -\phi_0}{1-\phi_0 \l} = \df{f_2(\l)}{1+\phi_0
+-\phi_0 \l} - \df{f_2(\l-1)}{1-\phi_0\l}
+\\
+=\df{\l^2}{2} \df{1-\phi_0 \l}{1+\phi_0-\phi_0 \l} + \l c_1(\l-1)
+- c_1(\l) c_1(\l-1).
+\end{multline}
+Set
+\begin{equation}\label{s4.29}
+g_2(\l) = f_2(\l) (1-\phi_0 \l) = c_2(\l) (1-\phi_0 \l)^2.
+\end{equation}
+Then, after multiplying both sides of \eqref{s4.28} by $(1-\phi_0
+\l)(1+\phi_0-\phi_0\l) $ and using \eqref{s4.29}, we find that
+\begin{multline}\label{s4.30}
+g_2(\l) - g_2(\l-1) \\
+= (1-\phi_0 \l)(1+\phi_0 - \phi_0 \l) \left(\df{\l^2}{2}
+\df{1-\phi_0 \l}{1+\phi_0-\phi_0 \l} + \l c_1(\l-1) - c_1(\l)
+c_1(\l-1) \right). \end{multline} Recall that
+\begin{equation}\label{s4.31}
+c_1(\l) = \df{g_1(\l)}{(1-\phi_0 \l)^2}
+\end{equation}
+with
+\begin{equation}\label{s4.32}
+g_1(\l) = \frac12 (\l+1)(1-\phi_0\l)^2 + (\l^2-1)\left(\frac12 -
+\frac23 \l \phi_0 + \frac14 \phi_0^2 \l^2\right) + \phi_1.
+\end{equation}
+The right hand side of \eqref{s4.30} is not a polynomial in $\l.$
+However, by making a judicious change of variable, we will be
+able to determine the general solution of the recurrence relation
+\eqref{s4.30}.
+%Changing to a more comfortable notation
+%if $b_n = g_2(\l) $ and $b_{n-1} = g_2(\l-1) $ then,
+%The homogeneous recurrence relation
+%$$b_n - b_{n-1} =0, $$
+% has the characteristic root 1.
+Now multiply both sides of \eqref{s4.30} by $(1-\phi_0
+\l)(1+\phi_0 - \phi_0 \l). $ Then
+\begin{align}\label{s4.33}
+&g_2(\l) (1-\phi_0 \l)(1+\phi_0 - \phi_0 \l) - g_2(\l-1)
+(1-\phi_0 \l)(1+\phi_0 -
+\phi_0 \l)\notag \\
+=& (1-\phi_0 \l)^2 (1+\phi_0 - \phi_0 \l)^2
+ \left(\df{\l^2}{2} \df{1-\phi_0 \l}
+{1+\phi_0-\phi_0 \l} + \l c_1(\l-1) - c_1(\l) c_1(\l-1) \right) \notag\\
+=& \df{\l^2}{2} (1-\phi_0 \l)^3 (1+\phi_0 - \phi_0 \l) + \l
+c_1(\l-1)
+(1-\phi_0 \l)^2 (1+\phi_0 - \phi_0 \l)^2\notag \\
+& \quad - c_1(\l) c_1(\l-1) (1-\phi_0 \l)^2
+(1+\phi_0 - \phi_0 \l)^2 \notag\\
+=& \df{\l^2}{2} (1-\phi_0 \l)^3 (1+\phi_0 - \phi_0 \l) + \l
+(1-\phi_0 \l)^2 g_1(\l-1) - g_1(\l) g_1(\l-1),
+\end{align}
+where we have used \eqref{s4.31} in the last step. Set
+\begin{equation}\label{s4.34}
+h_2(\l) = g_2(\l) (1-\phi_0 \l).
+\end{equation}
+Then we can rewrite \eqref{s4.33} as
+\begin{align}\label{s4.35}
+&h_2(\l) (1-\phi_0 \l + \phi_0) - h_2(\l-1)(1-\phi_0 \l) \\
+=& \df{\l^2}{2} (1-\phi_0 \l)^3 (1+\phi_0 - \phi_0 \l) + \l
+(1-\phi_0 \l)^2 g_1(\l-1) - g_1(\l) g_1(\l-1). \notag
+\end{align}
+%Now set $d_n = h_2(\l) $ and $d_{n-1} = h_2(\l-1). $
+We see that the general solution of $$h_2(\l)(1-\phi_0 \l +
+\phi_0) - h_2(\l -1) (1-\phi_0 \l) = 0 $$ is $$c (1-\phi_0 \l), $$
+where $c $ is a constant, since the characteristic root for the
+corresponding homogeneous recurrence relation, $ g_2(\l) -
+g_2(\l-1) $, equals 1.
+%since $d_n =: b_n (1-\phi_0 n) $
+%and the characteristic
+%root of $b_n -b_{n-1} = 0 $ is 1.
+
+Note from \eqref{s4.32} that $g_1(\l) $ is a polynomial of degree
+4 in $\l, $ and so the right hand side of \eqref{s4.35} is a
+polynomial of degree 8 in $\l$. For a particular solution to the
+recurrence relation \eqref{s4.35}, let
+\begin{equation}\label{s4.36}
+h_2(\l) = \sum_{i=0}^8 g_i \l^i.
+\end{equation}
+Then the general solution is
+\begin{align}\label{s4.37}
+&c(1-\phi_0 \l) +  \sum_{i=0}^8 g_i \l^i\notag\\
+= & (c+g_0)(1-\phi_0 \l) + g_0 \phi_0 \l + \sum_{i=1}^8 g_i \l^i \notag\\
+= & (c+g_0) (1-\phi_0 \l) + (g_0 \phi_0 + g_1) \l + \sum_{i=2}^8
+g_i \l^i
+\notag \\
+= & \phi_2 (1-\phi_0 \l) + g_1^* \l + \sum_{i=2}^8 g_i \l^i,
+\end{align}
+where $\phi_2 = c+ g_0 $ and $g_1^*= g_0\phi_0 + g_1. $
+>From this observation, we do not need to consider the constant term, and
+so we only need to find a particular solution of the form
+\begin{equation}\label{s4.38}
+h_2(\l) = \sum_{i=1}^8 e_i \l^i.
+\end{equation}
+By \eqref{s4.38}, \eqref{s4.35}, and \eqref{s4.32}, we have the
+system of equations $$\phi_1^2 + e_1 - e_2 + e_3 - e_4 + e_5 -
+e_6 + e_7 - e_8 = 0, $$
+\begin{multline*}
+\l(-\phi_1  -\frac 23 \phi_0 \phi_1  + 2 e_2 + \phi_0 e_2 -3 e_3
+- \phi_0 e_3
++ 4 e_4 + \phi_0 e_4 - 5 e_5 - \phi_0 e_5 \\
++ 6 e_6 + \phi_0 e_6 - 7 e_7 - \phi_0 e_7 + 8 e_8 + \phi_0 e_8 )
+= 0, \end{multline*}
+\begin{multline*}
+\l^2(-\frac14 -\frac{\phi_0}{6} + \frac{\phi_0^2}{9} + \phi_1 + 2
+\phi_0 \phi_1
+ + \frac12 \phi_0^2 \phi_1 - \phi_0 e_2 + 3 e_3
++ 3 \phi_0 e_3 - 6 e_4 - 4 \phi_0
+ e_4 \\
+ + 10 e_5 + 5\phi_0 e_5 - 15 e_6 - 6\phi_0 e_6 + 21 e_7 + 7\phi_0 e_7 -
+ 28e_8 - 8\phi_0 e_8 ) =0 , \end{multline*}
+\begin{multline*}
+\l^3(-\frac12 + \frac23 \phi_0 + \frac{7\phi_0^2}{12} -
+\frac{\phi_0^3}{6} - \frac43 \phi_0 \phi_1 - \phi_0^2 \phi_1 - 2
+\phi_0 e_3 + 4 e_4 + 6 \phi_0 e_4
+\\
+- 10 e_5 - 10\phi_0 e_5 + 20 e_6 + 15\phi_0 e_6 - 35 e_7 - 21
+\phi_0 e_7 + 56 e_8 + 28 \phi_0 e_8) = 0, \end{multline*}
+\begin{multline*}
+\l^4(\frac14 + \frac{5\phi_0}{3} - \frac{29\phi_0^2}{36} -
+\frac{2\phi_0^3}{3} + \frac{\phi_0^4}{16} + \frac{1}{2} \phi_0^2
+\phi_1 - 3 \phi_0 e_4 +
+5 e_5 + 10 \phi_0 e_5 \\
+- 15 e_6 - 20 \phi_0 e_6 + 35 e_7 + 35 \phi_0 e_7 - 70 e_8 -
+56\phi_0 e_8 ) = 0, \end{multline*} $$\l^5(-\frac{2\phi_0}{3}
+-\frac{25\phi_0^2}{12} + \frac{\phi_0^3}{2} + \frac {\phi_0^4}{4}
+- 4 \phi_0 e_5 + 6 e_6 + 15 \phi_0 e_6 - 21 e_7 - 35 \phi_0 e_7 +
+56 e_8 + 70 \phi_0 e_8 ) = 0, $$ $$\l^6(\frac{25\phi_0^2}{36} +
+\frac{7\phi_0^3}{6} - \frac{\phi_0^4}{8} - 5\phi_0 e_6 + 7 e_7 +
+21 \phi_0 e_7 - 28 e_8 - 56 \phi_0 e_8 ) = 0,$$
+$$\l^7(-\frac{\phi_0^3}{3} -\frac{\phi_0^4}{4} - 6\phi_0 e_7 + 8
+e_8 + 28\phi_0 e_8) = 0, $$ and $$\l^8(\frac{\phi_0^4}{16} - 7
+\phi_0 e_8 ) = 0.$$ If we solve this system of equations by using
+{\it Mathematica}, we find that
+\begin{align*}
+& e_1 = \frac{1}{420} (21-5\phi_0^2 + 140 \phi_1 - 420 \phi_1^2),
+\quad
+e_2 = \frac{1}{1260} (315-343 \phi_0 + 15 \phi_0^3 - 210 \phi_0 \phi_1), \\
+& e_3 = \frac{1}{36} (9- 27\phi_0 + 13 \phi_0^2 - 12\phi_1), \quad
+e_4 = -\frac{1}{144} \phi_0 (80-108\phi_0 + 21 \phi_0^2 - 24 \phi_1), \\
+&e_5 = \frac{1}{180} (-9 80\phi_0^2 - 45 \phi_0^3), \quad e_6 =
+\frac{1}{360} (28\phi_0 - 45\phi_0^3), \quad e_7 =
+-\frac{11\phi_0^2}{252}, \quad \text{and} \quad e_8 =
+\frac{\phi_0^3}{112}.
+\end{align*}
+>From the equalities above, \eqref{s4.38}, \eqref{s4.37}, \eqref{s4.34},
+and \eqref{s4.29}, the coefficient of $x^2$, after rearrangement,
+is equal to
+\begin{multline*}
+\left(\df{\l(\l +1)(\l +2)}{12} - \df{\phi_2 + \l (\l^2 -1)(\l^2
+-4) \left(\frac{1}{45} -\frac{\l \phi_0}{36} + \frac{(\l^2
++\frac13)\phi_0^2}{112}
+\right)} {(1-\l \phi_0)^2} \right. \\
+- \left. \df{\l}{(1-\l \phi_0)^3} \left(\phi_1 + \df{\l^2 -1}{6}
+(1-\df{1}{2}
+ \l \phi_0) \right)^2 \right),
+ \end{multline*}
+as claimed by Ramanujan.
+\end{proof}
+
+Ramanujan  claims that if
+ $x < 0$, the coefficients  $ \phi_0, \phi_1, \phi_2, \phi_3, \dots $ are
+ arbitrary, but that if $ x > 0$, then $  \phi_1= \phi_2= \phi_3=  \cdots =
+ 0$ and 
+$$\phi_0 = \df{\Gamma(\frac23)}{\Gamma(\frac13)} (3x)^{1/3}
+e^{-G(x)}, $$ where $ G(x) $ has the asymptotic expansion, as $
+x\to 0^+$,
+ $$G(x) \sim  a_2 x^2 + a_4 x^4 + a_6 x^6 + \cdots, $$
+with the coefficients $ a_{\nu} $ given by
+ $$a_{\nu} = \df{4\Gamma(\nu) \zeta(\nu) L(\nu +1,
+\chi)}{(2\pi/\sqrt3)^{2\nu+1}}. $$ 
+Here $ L(s,\chi) $ denotes
+the Dirichlet $L$-function associated with the character $
+\chi(n) = \left(\tfrac{n}{3}\right), $ where $
+\left(\tfrac{n}{3}\right) $ denotes the Legendre symbol. By rearrangement,
+Ramanujan is asserting that 
+\begin{equation}\label{asympt}
+\df{1}{1-u_\l} \sim \df{1}{\phi_0},
+\end{equation}
+as $ x\to 0^+$. Note that, when $ \l =0$, the continued fraction in
+\eqref{b1} is equal to \linebreak
+$ 1/(1-u_0)$, with $ q= e^{-x}$. In this case, the
+asymptotic formula \eqref{asympt} is identical to the aforementioned
+asymptotic formula also found on page 45 of \cite{lnb} and proved by Berndt
+and Sohn in \cite{bs}.  However, if $ \l > 0$, the method of proof used in
+\cite{bs} does not generalize, and so in this particular
+situation we cannot verify Ramanujan's claim. Note that if we set $ q =
+e^{-x} $ and $ a = e^{-\l x} $ in Corollary \ref{ly1}, the continued fraction
+there is equivalent to the continued fraction $e^{-\lambda x} u_{\lambda}$,
+where $u_{\l}$ is defined by \eqref{s4.11}. 
+As remarked at the beginning of
+this section, the constants $ \phi_0, \phi_1, \phi_2, \dots $ are indeed
+arbitrary when $ x < 0$, because \eqref{s4.10} does not have a unique
+solution. 
+
+%``$\phi_0, \phi_1, \phi_2, \dots $ are arbitrary and independent of $\l $
+
+%$x < 0. $ But if $q\ge 0$, then $\phi_1, \phi_2, \phi_3, \dots $ are all
+%zero and
+%$$\phi_0 = \df{\Gamma(\frac23)}{\Gamma(\frac13)}
+% (3q)^{1/3} e^{-G(q)}\text{" }
+%$$
+%where $G(q) $ is defined in \eqref{s1.1}
+%$\phi_0, \phi_1, \phi_2, \dots $
+%are not clear. Actually, we can check that if $\l =0 $ and
+%$\phi_1, \phi_2, \phi_3, \dots $ are all zero then
+%$$\phi_0 = \df{\Gamma(\frac23)}{\Gamma(\frac13)} (3q)^{1/3} e^{-G(q)}. $$
+%where $G(q) $ is defined in \eqaref{s1.1}.
+%\end{proof}
+
+
+
+\begin{thebibliography}{99}
+
+\bibitem{gea}
+G.~E.~Andrews, \emph{On $q$-difference equations for certain
+well-poised basic hypergeometric series},
+Quart.~J.~Math.~(Oxford) \textbf{19} (1968), 433--447.
+
+\bibitem{gea1}
+G.~E.~Andrews, \emph{The Theory of Partitions},
+ Addison--Wesley,  Reading, MA,  1976.
+
+\bibitem{lost}
+G.~E.~Andrews, \emph{An introduction to Ramanujan's ``lost''
+notebook}, Amer. Math. Monthly \textbf{86} (1979), 89--108.
+
+\bibitem{page}
+G.~E.~Andrews, \emph{A page from Ramanujan's lost notebook},
+Indian J.~Math.~\textbf{32} (1990), 207--216.
+
+
+\bibitem{geabcbI}
+G.~E.~Andrews and B.~C.~Berndt, \emph{Ramanujan's Lost Notebook,
+Part I}, Springer--Verlag, New York, to appear.
+
+\bibitem{abjl}
+G.~E.~Andrews, B.~C.~Berndt, L.~Jacobsen, R.~L.~Lamphere,
+\emph{The Continued Fractions Found in the Unorganized Portions of
+Ramanujan's Notebooks}, Memoir Amer.~Math.~Soc.~No.~477, \textbf{99}
+(1992).
+
+\bibitem{quintuple}
+G.~E.~Andrews, B.~C.~Berndt, J.~Sohn, A.~J.~Yee, and A.~Zaharescu,
+\emph{Continued fractions with three limit points}, submitted for
+publication.
+
+%\bibitem{III}
+%B.~C.~Berndt, \emph{Ramanujan's Notebooks, Part III},
+%Springer--Verlag, New York, 1991.
+
+\bibitem{V}
+B.~C.~Berndt, \emph{Ramanujan's Notebooks, Part V},
+Springer--Verlag, New York, 1998.
+
+\bibitem{bs}
+B.~C.~Berndt and J.~Sohn, \emph{Asymptotic formulas for two
+continued fractions in Ramanujan's lost notebook}, J.~London
+Math.~Soc., to appear.
+
+
+
+
+%\bibitem{lisaj}
+%L.~Jacobsen, \emph{General convergence of continued fractions},
+%Trans.~Amer.~Math.~Soc.~\textbf{294} (1986), 477--485.
+
+
+\bibitem{lisa}
+L.~Lorentzen and H.~Waadeland, \emph{Continued Fractions with
+Applications}, North Holland, Amsterdam, 1992.
+
+%\bibitem{cp}
+%S.~Ramanujan, \emph{Collected Papers}, Cambridge University
+%Press, Cambridge, 1927; reprinted by Chelsea, New York, 1962;
+%reprinted by the American Mathematical Society, Providence, RI,
+%2000.
+
+\bibitem{nb}
+S.~Ramanujan, \emph{Notebooks} (2 volumes), Tata Institute of
+Fundamental Research, Bombay, 1957.
+
+\bibitem{lnb}
+S.~Ramanujan, \emph{The Lost Notebook and Other Unpublished
+Papers}, Narosa, New Delhi, 1988.
+
+\bibitem{selberg}
+A.~Selberg, \emph{\"Uber einige arithmetische Identit\"aten}
+Avh.~Norske Vid.--Akad.~Oslo I.~Mat.--Naturv.~Kl, No.~8, (1936),
+3--23.
+
+
+
+
+
+
+
+\end{thebibliography}
+
+
+
+
+
+
+
+\end{document}
+
+

@@ -1,0 +1,1795 @@
+ 
+
+\documentclass[12pt,reqno]{amsart}
+%\usepackage{eufrak}
+
+
+\setlength{\textheight}{220mm} \setlength{\textwidth}{155mm}
+\setlength{\oddsidemargin}{1.25mm}
+\setlength{\evensidemargin}{1.25mm} \setlength{\topmargin}{0mm}
+
+\pagestyle{myheadings} \markboth{ANDREWS, BERNDT, SOHN,  YEE, AND
+ZAHARESCU} {CONTINUED FRACTIONS WITH THREE LIMIT POINTS}
+
+\setbox0=\hbox{$+$}
+\newdimen\plusheight
+\plusheight=\ht0
+\def\+{\;\lower\plusheight\hbox{$+$}\;}
+
+\setbox0=\hbox{$-$}
+\newdimen\minusheight
+\minusheight=\ht0
+\def\-{\;\lower\minusheight\hbox{$-$}\;}
+
+\setbox0=\hbox{$\cdots$}
+\newdimen\cdotsheight
+\cdotsheight=\plusheight%\ht0
+\def\cds{\lower\cdotsheight\hbox{$\cdots$}}
+
+
+\renewcommand{\Im}{\operatorname{Im}}
+\newcommand{\df}{\dfrac}
+\newcommand{\Arg}{\operatorname{Arg}}
+\newcommand{\Arctan}{\operatorname{Arctan}}
+\newcommand{\even}{\operatorname{even}}
+\newcommand{\Gal}{\operatorname{Gal}}
+\newcommand{\Res}{\operatorname{Res}}
+\renewcommand{\Re}{\operatorname{Re}}
+\renewcommand{\Im}{\operatorname{Im}}
+\newcommand{\s}{{\sigma}}
+\newcommand{\Sig}{{\Sigma}}
+\newcommand{\sss}{\sum^{\infty}_{\substack{
+c,d=-\infty\\(c,d)=1\\c,d\text{ odd }}}}
+ \renewcommand{\arctan}{\tan^{-1}}
+ \renewcommand{\a}{\alpha}
+%\renewcommand{\b}{\beta}
+\newcommand{\e}{\epsilon}
+\renewcommand{\d}{{\delta}}
+\newcommand{\g}{\gamma}
+\newcommand{\G}{\Gamma}
+\renewcommand{\l}{\lambda}
+\renewcommand{\L}{\Lambda}
+\renewcommand{\k}{\kappa}
+\renewcommand{\o}{{\omega}}
+\renewcommand{\O}{{\Omega}}
+\renewcommand{\r}{{\rho}}
+\renewcommand{\t}{\tau}
+\newcommand{\x}{\xi}
+\newcommand{\z}{\zeta}
+\newcommand{\CCal}{{\mathcal{C}}}
+\newcommand{\ECal}{{\mathcal{E}}}
+\newcommand{\HCal}{{\mathcal{H}}}
+\newcommand{\JCal}{{\mathcal{J}}}
+\newcommand{\ZBbb}{{\mathbf{Z}}}
+\newcommand{\CBbb}{{\mathbf{C}}}
+\newcommand{\PBbb}{{\mathbf{P}}}
+\newcommand{\qu}{{\underline{q}}}
+\newcommand{\thre}{{\sqrt{3}}}
+\newcommand{\qq}{{\(\dfrac q{\qu}\)^2}}
+\renewcommand{\(}{\left\(}
+\renewcommand{\)}{\right\)}
+\renewcommand{\[}{\left[}
+\renewcommand{\]}{\right]}
+\renewcommand{\i}{\infty}
+\renewcommand{\b}{\mathbf{B}}
+\renewcommand{\pmod}[1]{\,(\textup{mod}\,#1)}
+\numberwithin{equation}{section}
+ \theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remarks}[theorem]{Remarks}
+
+\newenvironment{pf}
+   {\par\noindent{\it Proof of}\hskip 0.5em\ignorespaces}
+   {\hfill $\Box$\par\medskip}
+
+
+
+\begin{document}
+
+\title[Continued fractions with three limit points]
+{Continued Fractions with Three Limit Points}
+\author{George E. Andrews1}
+\author{Bruce C. Berndt2}
+\author{Jaebum Sohn}
+\author{Ae Ja Yee3}
+\author{Alexandru Zaharescu}
+\address{Department of Mathematics, Pennsylvania State University,
+University
+Park, PA 16802, USA}\email{andrews@math.psu.edu}
+\address{Department of Mathematics, University of Illinois, 1409 West Green
+Street, Urbana, IL 61801, USA} \email{berndt@math.uiuc.edu}
+\address{Department of Mathematics, Ohio State University, Columbus, Ohio
+43210, USA}  \email{sohn@math.ohio-state.edu}
+\address{Department of Mathematics, University of Illinois, 1409 West Green
+Street, Urbana, IL 61801, USA} \email{yee@math.uiuc.edu}
+\address{Department of Mathematics, University of Illinois, 1409 West Green
+Street, Urbana, IL 61801, USA}
+\address{Institute of Mathematics of the Romanian
+Academy, P.O.~Box 1-764, Bucharest RO-70700, Romania} 
+ \email{zaharesc@math.uiuc.edu}
+
+
+%\maketitle
+
+\vspace*{0.5in}
+\begin{center}
+
+{\bf CONTINUED FRACTIONS WITH THREE LIMIT POINTS}\\[5mm]
+
+{\footnotesize GEORGE E. ANDREWS\footnotemark[1], BRUCE C.
+BERNDT\footnotemark[2],
+JAEBUM SOHN, \\
+AE JA YEE\footnotemark[3], AND
+ALEXANDRU ZAHARESCU}\\[3mm]
+
+
+\end{center}
+\footnotetext[1]{Research partially supported by grant Grant DMS-9206993 from
+the National Science Foundation.} \footnotetext[2]{Research
+partially supported by  grant MDA904-00-1-0015
+  from the National Security Agency.}
+\footnotetext[3]{Research partially supported by the postdoctoral
+fellowship program from the Korea Science and
+Engineering Foundation, and  by a grant from the
+Number Theory Foundation.}
+
+\vspace{0.5in}
+
+\section{Introduction}
+
+The research described in this paper was motivated by an
+enigmatic entry in Ramanujan's lost notebook \cite[p.~45]{lnb} in which 
+he claimed,
+in an unorthodox fashion, that a certain $q$-continued fraction possesses
+ three limit points. More precisely, he claimed that as $ n $ tends to 
+$ \infty$ in the three residue classes modulo 3, the $n$th  partial quotients 
+tend, respectively, to three distinct limits, which he explicitly gives.  
+We think that
+there is no other example of this kind in the literature, and so we
+investigated the possibility of further analytic continued fractions having
+three distinct limit points. The purpose of this paper is to prove
+Ramanujan's elusive entry, to prove a general theorem giving a class of
+continued fractions with three limit points, and to explicitly give further
+examples. 
+
+To relate Ramanujan's entry, we first introduce the customary notation
+\begin{equation*}
+%\label{not}
+(a)_0 := (a;q)_0 := 1, \qquad (a)_n := (a;q)_n :=
+\prod_{k=0}^{n-1}(1-aq^k), \qquad
+ \text{if } n \geq 1,
+\end{equation*}
+and
+\begin{equation*}
+ (a;q)_{\i} := \prod_{k=0}^{\i}(1-aq^k), \qquad |q| < 1.
+\end{equation*}
+ Also, set $ \omega = e^{2\pi i/3}$.
+Then, except for the simplification of notation, Ramanujan
+\cite[p.~45]{lnb} claimed that, for $ |q| < 1$,
+\begin{equation}\label{b1}
+\lim_{n\to\i}\left( \df{1}{1}\-\df{1}{1+q} \-\df{1}{1+q^2}\-\cds\-
+\df{1}{1+q^n+a}\right) 
+= -\omega^2\left(\df{\Omega - \omega^{n+1}}{\Omega -
+\omega^{n-1}}\right)
+ \, \cdot
+\df{(q^2;q^3)_{\i}}{(q;q^3)_{\i}},
+\end{equation}
+where
+\begin{equation}\label{b2}
+\Omega := \df{1-a\omega^2}{1-a\omega}\, \df{(\omega^2q;q)_{\i}}
+{(\omega q;q)_{\i}}.
+\end{equation}
+After \eqref{b1}, Ramanujan appended the note, ``Numerators and
+Denominators can be equated separately.''
+
+Of course, because of the appearance of the limiting variable $ n
+$ on the right side of \eqref{b1}, Ramanujan's claim is
+meaningless as it stands. The authors conjectured that Ramanujan was
+indicating  that
+there are three distinct limits depending on the congruence class
+modulo 3 in which $ n \to \i$.  To confirm our instincts, 
+we calculated the $q$-expansions of both
+sides of \eqref{b1} on MAPLE for $ 1 \leq n \leq 25$, and found that 
+in each case,
+the two sides agreed up to $ O(q^n)$. In the note after \eqref{b2},
+Ramanujan is evidently indicating
+ that the limits can be obtained by determining separately the limits of
+both the partial numerators and denominators.
+
+Ramanujan's claim is very interesting for several reasons.
+
+First, if $ a =0$, the left side of \eqref{b1} is a continued
+fraction which diverges. We shall prove that the partial quotients tend to
+the required limits if $ n $ is restricted to any one of the three residue
+classes modulo 3.  This is in contrast to the classical result
+from the general theory of continued fractions, which asserts
+that if all the elements of a divergent continued fraction are
+positive, then the even and odd approximants approach distinct
+limits \cite[pp.~96--97]{lisa}. 
+
+Second, if $ a \neq 0$, we prove that the continued fraction in \eqref{b1}
+converges ``generally''  in the  sense that
+ when $ n $ is confined to any one of the three residue classes
+modulo 3, the limit of the left side indeed exists and is equal to that
+claimed on the right side of \eqref{b1} in each of the three cases.
+   The concept of  general convergence  is due to
+ L.~Jacobsen \cite{lisaj}  in 1986.  See also her book with
+ H.~Waadeland \cite[pp.~41--44]{lisa}. For some results of Ramanujan 
+of a different kind on general convergence, see a paper
+by S.--S.~Huang \cite{huang}.  Thus, we have one further example
+where Ramanujan had a fundamental concept long ahead of his time,
+before anyone else ever thought of it.
+
+
+Third, in his notebooks \cite[Vol.~2, p.~290]{nb}, for $ |q| < 1$,
+Ramanujan offered the continued fraction
+\begin{align}\label{b3}
+\df{(q^2;q^3)_{\i}}{(q;q^3)_{\i}}=& \df{1}{1}\- \df{q}{1+q}
+\- \df{q^3}{1+q^2}\- \df{q^5}{1+q^3}\-\cds \notag\\
+=& \df{1}{1}\- \df{1}{q^{-1}+1}\- \df{1}{q^{-2}+1}\-
+\df{1}{q^{-3}+1}\-\cds .
+\end{align}
+Thus, when $ a =0$, the continued fraction on the left side of
+\eqref{b1} is the same as the continued fraction on the far right
+side of \eqref{b3}, but with $ q $ replaced by $ 1/q$. Observe
+that, remarkably, $ {(q^2;q^3)_{\i}}/{(q;q^3)_{\i}} $ also
+appears in the three limits on the right side of \eqref{b1}.  In
+this sense, Ramanujan's result \eqref{b1} is analogous to his
+theorem on the divergence of the Rogers--Ramanujan continued
+fraction found on pages 374 and 382 in his third notebook
+\cite{nb}, which was first proved by Andrews, Berndt, Jacobsen,
+and Lamphere \cite{abjl}, \cite[p.~30, Entry 11]{V}.  In the
+latter result, Ramanujan explicitly determines the limits of the
+even and odd indexed approximants of the divergent
+Rogers--Ramanujan continued fraction for $ |q| > 1 $ and shows
+that these limits can be expessed in terms of the Rogers--Ramanujan 
+continued fraction itself, {\it
+but at different arguments}.
+
+Define 
+\begin{equation}\label{b4}
+P_0(a) = 0, \qquad P_1(a) = 1, \qquad Q_0(a) = 1, \qquad Q_1(a)
+=1,
+\end{equation}
+and, for $ N \geq 2$, set
+\begin{equation}\label{b5}
+\df{P_N(a)}{Q_N(a)} = \df{1}{1}\-\df{1}{1+q}
+\-\df{1}{1+q^2}\-\cds\- \df{1}{1+q^{N-1}+a}.
+\end{equation}
+>From the general theory of continued fractions \cite[p.~9,
+eq.~(1.2.9)]{lisa}, for $ N \geq 2$, the partial numerators $ P_N(0) $ and $
+Q_N(0) $  satisfy the recurrence relations
+\begin{equation}\label{b6}
+P_N(0) = (1+q^{N-1})P_{N-1}(0) - P_{N-2}(0) \quad \text{and} \quad
+Q_N(0) = (1+q^{N-1})Q_{N-1}(0) - Q_{N-2}(0),
+\end{equation}
+where $ P_0(0), P_1(0), Q_0(0), $ and $ Q_1(0) $ are defined by
+\eqref{b4}. After proving \eqref{b1} in Section \ref{p45}, 
+ we examine  in
+Section \ref{three} sequences $ \{x_n\} $ satisfying the more general
+recurrence relation,
+\begin{equation}\label{b7}
+ x_n = (1+a_{n-1})x_{n-1} - x_{n-2}, \qquad  n \geq 2, \qquad \text{with }
+x_0=v, \quad   x_1 = u.
+\end{equation}
+  For a large class of such sequences we show that
+they have exactly six limit points.  We then examine quotients of such
+sequences and prove that these quotient
+sequences have exactly three limit points. In Section \ref{threecf},
+we apply the theory developed in Section \ref{three} to continued
+fractions with numerators and denominators satisfying the recurrence relation
+\eqref{b7} and initial conditions like those in \eqref{b4}, and prove  
+that the continued fractions have three limit points. Thus, Ramanujan's
+example \eqref{b1} is not an isolated one. 
+ We conclude Section \ref{threecf} with two examples to illustrate our
+theory, one of which we briefly describe here.  Since neither example is a
+$q$-continued fraction, we use a more conventional letter $ z $ to denote
+a complex variable. If $ |z| < 1$, then
+\begin{align*}
+&\df{1}{1}\-\df{1}{(1-z)^{-1}}\-\df{1}{1-z^2}\-\df{1}{(1-z)^{-1}-z^2} \-
+\df{1}{(1-z^2)^{-1}}\-\df{1}{1-z^4}\-\df{1}{(1-z^2)^{-1}-z^3} \\
+&\-\cds\-\df{1}{(1-z^n)^{-1}}\-\df{1}{1-z^{2n}}\-\df{1}{(1-z^n)^{-1}
+-z^{n+1}} \-\cds 
+\end{align*}
+has three limit points, and they are given by
+\begin{equation*}
+L_0:=\df{z}{z^2+2z-1}, \qquad L_1 :=\df{1}{1+z}, \qquad L_2 := \df{1}{2z}.
+\end{equation*}
+
+Before recording his claim \eqref{b1}, at the top of page 45 in
+\cite{lnb}, Ramanujan states the special case when $ a =
+\omega$.  In Section \ref{omega}, we use the Bauer--Muir
+transformation to give a shorter and completely different proof of this
+special case of \eqref{b1}. 
+
+
+
+\section{A Proof of Ramanujan's Formula \eqref{b1}}\label{p45}
+
+Throughout the paper, $ |q|<1$. 
+
+To prove \eqref{b1}, our first task will be to derive explicit formulas for $
+P_N(0) $ and $ Q_N(0)$. To do so, we need to recall the definition of the
+Gaussian polynomials and two versions of the $q$-binomial theorem
+\cite[pp.~35--36]{gea1}. 
+%\begin{equation*}
+%\lim_{n\to\i}\left( \df{1}{1}\-\df{1}{1+q} \-\df{1}{1+q^2}\-\cds\-
+%\df{1}{1+q^n+a}\right) \\
+%= -\omega^2\left(\df{\Omega - \omega^{n+1}}{\Omega -
+%\omega^{n-1}}\right)
+% \, \cdot
+%\df{(q^2;q^3)_{\i}}{(q;q^3)_{\i}},
+%\end{equation*}
+%where
+%\begin{equation*}
+%\Omega := \df{1-a\omega^2}{1-a\omega}\, \df{(\omega^2q;q)_{\i}}
+%{(\omega q;q)_{\i}}.
+%\end{equation*}
+\begin{lemma}\label{binomial}
+If $ \left[\begin{matrix} n \\m \end{matrix}\right]$  denotes the Gaussian
+polynomial defined by 
+\begin{equation*}
+\left[\begin{matrix} n \\m \end{matrix}\right] :=
+\left[\begin{matrix} n \\m \end{matrix}\right]_q :=
+\begin{cases}\df{(q;q)_{n}}{(q;q)_m(q;q)_{n-m}}, &\text{if } 0 \leq m \leq n,
+\\ 0, &\text{otherwise}, \end{cases}
+\end{equation*}
+then, 
+\begin{align}
+(z;q)_N =& \sum_{j=0}^N \left[\begin{matrix} N \\j \end{matrix}\right]
+(-1)^jz^jq^{j(j-1)/2},\label{binomial1} \\
+\df{1}{(z;q)_N} =& \sum_{j=0}^\i \left[\begin{matrix} N +j-1 \\j 
+\end{matrix}\right]z^j.\label{binomial2}
+\end{align}
+\end{lemma}
+
+%We let
+%\begin{equation}\label{eq:y1}
+%\frac{P_{N}(a)}{Q_{N}(a)}:=\df{1}{1}\-\df{1}{1+q}
+%\-\df{1}{1+q^2}\-\cds\- \df{1}{1+q^{N-1}+a}
+%\end{equation}
+
+%Throughout this section, we denote $\r:=e^{\pi i/3}$ and
+%$\bar{\r}:=1/\r$. %, $\o:=\r^2$, and $\bar{\o}:=1/\o$.
+
+%In the following lemmas, we compute $P_N(0)$ and $Q_N(0)$.
+
+\begin{lemma}\label{lem:y1}
+Let $N-1=3v+\e$, where $\e=0,\pm 1$. Then
+\begin{equation}\label{eq:y4}
+(-1)^v P_N(0)=\sum_{\substack{n,r =0 \\ n+r\equiv \e
+\pmod {3}}}^{\i}
+  (-1)^{(\e-n-r)/3} q^{n(n+1)/2+r(r-1)/2} \[ \begin{matrix} n+1\\ r
+\end{matrix}
+\] \[ \begin{matrix} n+\frac{N-1-(n+r)}{3}\\ n
+\end{matrix}\]_{q^3} .
+\end{equation}
+\end{lemma}
+
+\begin{proof} Recall from \eqref{b6} and \eqref{b4} that
+$P_N(0)$ satisfies the recurrence relation,
+\begin{equation}\label{eq:y2}
+P_N(0)=(1+q^{N-1})P_{N-1}(0)-P_{N-2}(0), \qquad N \geq 2, 
+\end{equation}
+and the initial conditions $P_0(0)=0$ and $P_1(0)=1$.
+
+Define
+\begin{equation*}
+  F(t):=\sum_{N=1}^{\infty} P_N(0) t^N.
+\end{equation*}
+Multiplying the recurrence relation (\ref{eq:y2}) by $t^N$ and summing over
+$N\ge 2$, we obtain
+\begin{equation*}
+F(t)-t=t F(t)+t F(tq) -t^2 F(t).
+\end{equation*}
+So,
+\begin{equation*}
+F(t)=\frac{t}{1-t+t^2}+\frac{t}{1-t+t^2} F(tq).
+\end{equation*}
+Iterating and noting that $F(0)=0$, we find that, by \eqref{binomial1} and
+\eqref{binomial2}, 
+\begin{align}
+F(t)&=\sum_{n=0}^{\infty} \frac{t^{n+1}
+q^{n(n+1)/2}}{\prod_{j=0}^n (1-tq^j+t^2 q^{2j})} \notag \\
+&=\sum_{n=0}^{\infty} t^{n+1} q^{n(n+1)/2}
+\frac{(-t;q)_{n+1}}{(-t^3;q^3)_{n+1}} \notag \\
+&= \sum_{n,r,s= 0}^{\i} (-1)^s t^{n+1+r+3s} q^{n(n+1)/2+r(r-1)/2}
+\[ \begin{matrix} n+1\\ r
+\end{matrix}\] \[\begin{matrix} n+s\\ s
+\end{matrix}\]_{q^3}. \notag
+\end{align}
+Now we choose the terms $t^N$ by setting $s=(N-1-n-r)/3$. Hence, equating the
+coefficients of $ t^N $ on both sides, we find that
+\begin{equation*}
+P_N(0)=\sum_{\substack{n,r= 0 \\ n+r\equiv N-1 \pmod3}}^{\i}(-1)^{(N-1-n-r)/3}
+q^{n(n+1)/2+r(r-1)/2} \[ \begin{matrix} n+1\\ r
+\end{matrix}\] \[\begin{matrix} n+\frac{N-1-(n+r)}{3}\\ n
+\end{matrix}\]_{q^3} ,
+\end{equation*}
+or, with  $N-1=3v+\e$,
+\begin{equation*}
+(-1)^v P_N(0)=\sum_{\substack{n,r =0 \\ n+r\equiv \e \pmod3}}^{\i}
+(-1)^{(\e-n-r)/3}
+q^{n(n+1)/2+r(r-1)/2} \[ \begin{matrix} n+1\\ r
+\end{matrix}\] \[\begin{matrix} n+\frac{N-1-(n+r)}{3}\\ n
+\end{matrix}\]_{q^3} ,
+\end{equation*}
+as required. 
+\end{proof}
+
+\begin{lemma}\label{lem:y2}
+Let $N-1=3v+\e$, where $\e=0,\pm 1$. Then
+\begin{align}\label{eq:y5}
+(-1)^v& Q_N(0)=\sum_{\substack{n,r=0 \\ n+r\equiv \epsilon \pmod {3}}}^{\i}
+(-1)^{(\e-n-r)/3}q^{n(n+1)/2+r(r-1)/2} \[ \begin{matrix} n+1\\ r \end{matrix}
+\] \[ \begin{matrix} n+\frac{N-1-(n+r)}{3}\\ n
+\end{matrix}\]_{q^3}  \notag \\
+& -\sum_{\substack{n,r= 0 \\ n+r\equiv \epsilon-1 \pmod{3}}}^{\i}
+(-1)^{(\e-1-n-r)/3}q^{n(n+3)/2+r(r-1)/2} 
+\[ \begin{matrix} n+1\\ r \end{matrix}
+\] \[ \begin{matrix} n+\frac{N-2-(n+r)}{3}\\ n
+\end{matrix}\]_{q^3} .
+\end{align}
+\end{lemma}
+
+\begin{proof} Recall from \eqref{b6} and \eqref{b4} that
+$Q_N(0)$ satisfies the recurrence relation,
+\begin{equation}\label{eq:y3}
+Q_N(0)=(1+q^{N-1})Q_{N-1}(0)-Q_{N-2}(0), \qquad N \geq 2,
+\end{equation}
+and the initial conditions $Q_0(0)=1$ and $Q_1(0)=1$.
+
+Define
+\begin{equation*}
+  G(t):=\sum_{N=1}^{\infty} Q_N(0) t^N.
+\end{equation*}
+Multiplying the recurrence relation (\ref{eq:y3}) by $t^N$ and summing over
+$N\ge 2$, we obtain
+\begin{equation*}
+G(t)-t=t G(t)+t G(tq) -t^2 G(t)-t^2.
+\end{equation*}
+So,
+\begin{equation*}
+G(t)=\frac{t-t^2}{1-t+t^2}+\frac{t}{1-t+t^2} G(tq).
+\end{equation*}
+Iterating and noting that $G(0)=0$, we arrive at, by \eqref{binomial1} and
+\eqref{binomial2}, 
+\begin{align}
+G(t)&=\sum_{n=0}^{\infty} \frac{t^{n+1}(1-tq^n)
+q^{n(n+1)/2}}{\prod_{j=0}^n (1-tq^j+t^2 q^{2j})} \notag\\
+&=\sum_{n=0}^{\infty} t^{n+1} (1-tq^n) q^{n(n+1)/2}
+\frac{(-t;q)_{n+1}}{(-t^3;q^3)_{n+1}} \notag\\
+&= \sum_{n,r,s= 0}^{\i}
+ (-1)^st^{n+1+r+3s} (1-tq^n) q^{n(n+1)/2+r(r-1)/2}
+\[ \begin{matrix} n+1\\ r
+\end{matrix}\] \[\begin{matrix} n+s\\ s
+\end{matrix}\]_{q^3} . \notag
+\end{align}
+Separating the sum above into two parts, we set $s=(N-1-n-r)/3$ and
+$s=(N-2-n-r)/3$, respectively, in the two sums.  Hence, equating coefficients
+of $ t^N $ on both sides, we find that
+\begin{align}
+Q_N(0)&=\sum_{\substack{n,r=0 \\ n+r\equiv N-1 \pmod{3}}}^{\i}
+(-1)^{(N-1-n-r)/3}q^{n(n+1)/2+r(r-1)/2} \[ \begin{matrix} n+1\\ r
+\end{matrix}\] \[\begin{matrix} n+\frac{N-1-(n+r)}{3}\\ n
+\end{matrix}\]_{q^3}  \notag\\
+& \quad -\sum_{\substack{n,r= 0 \\ n+r\equiv N-2 \pmod{3}}}^{\i}
+(-1)^{(N-2-n-r)/3}q^{n(n+1)/2+n+r(r-1)/2} \[ \begin{matrix} n+1\\ r
+\end{matrix}\] \[\begin{matrix} n+\frac{N-2-(n+r)}{3}\\ n
+\end{matrix}\]_{q^3} . \notag
+\end{align}
+If $N-1=3v+\e$, then,
+\begin{align}
+(-1)^v& Q_N(0)=\sum_{\substack{n,r= 0 \\ n+r\equiv \e \pmod{3}}}^{\i}
+(-1)^{(\e-n-r)/3}q^{n(n+1)/2+r(r-1)/2} \[ \begin{matrix} n+1\\ r
+\end{matrix}\] \[\begin{matrix} n+\frac{N-1-(n+r)}{3}\\ n
+\end{matrix}\]_{q^3}  \notag\\
+&-\sum_{\substack{n,r= 0 \\ n+r\equiv \e-1 \pmod{3}}}^{\i}
+(-1)^{(\e-1-n-r)/3}q^{n(n+1)/2+n+r(r-1)/2} \[ \begin{matrix} n+1\\ r
+\end{matrix}\] \[\begin{matrix} n+\frac{N-2-(n+r)}{3}\\ n
+\end{matrix}\]_{q^3} , \notag
+\end{align}
+as required.
+\end{proof}
+
+The previous two lemmas are actually special cases of a theorem due to 
+M.~D.~Hirsch-\linebreak
+horn \cite{mdh74}, who used a more difficult proof. 
+
+To calculate the limits of $ P_N(0) $ and $ Q_N(0) $ as $ N \to \i $ in the
+three residue classes modulo 3, we need the following result from Ramanujan's
+lost notebook, which was first proved by Andrews \cite{page}. 
+
+\begin{lemma}\label{43lemma}
+Let $ \o = e^{2\pi i/3}$. Then
+\begin{equation*}
+\sum_{n=0}^\i \df{(-\o)^nq^{n(n+1)/2}(\o q)_n}{(q^3;q^3)_n} =
+(\o q)_\i (q^2;q^3)_\i.
+\end{equation*}
+\end{lemma}
+
+Note that, by conjugation, Lemma \ref{43lemma} also holds if $ \o $ is
+replaced by $ \o^2$. 
+
+\begin{lemma}\label{lem:y3}
+Let $N-1=3v+\e$, where $\e=0,\pm 1$. Then
+\begin{equation}
+\lim_{v\to \infty} (-1)^v P_N(0)=\frac{1}{3}(-\o)^{\e}
+(1-\o^2)\left( \frac{(\o^2 q)_{\infty}}{(\o q)_{\infty}}
+-\o^{\e+1}\right) (\o q)_{\infty} (q^2;q^3)_{\infty}.
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+Let $N\to \infty$ through values such that $N-1\equiv \e
+\pmod{3}$. Then, from (\ref{eq:y4}),
+\begin{align}
+\lim_{v\to \infty} (-1)^v P_N(0)& =\sum_{\substack{n,r= 0 \\ n+r\equiv
+\e
+\pmod {3}}}^{\i}(-1)^{(\e-n-r)/3}q^{n(n+1)/2+r(r-1)/2} 
+\[ \begin{matrix} n+1 \\r
+\end{matrix}
+\] \frac{1}{(q^3;q^3)_n} \notag\\
+&= \sum_{n=0}^{\infty} \frac{q^{n(n+1)/2}}{(q^3;q^3)_n}
+\sum_{\substack{r=0 \\ r\equiv \e-n \pmod{3}}}^{\i} q^{r(r-1)/2}
+\[ \begin{matrix} n+1\\r
+\end{matrix}\] \r^{\e-n-r}, \notag
+\end{align}
+where $\r= e^{\pi i/3}$. Recall that  $\o=\r^2$. Using the elementary fact,
+\begin{equation}\label{eq:y6}
+\frac{1+\o^a+\bar{\o}^a}{3}=\begin{cases} 1, &\text{if }
+a\equiv 0 \pmod{3},\\ 0, & \text{otherwise}, \end{cases}
+\end{equation}
+we find, by \eqref{binomial1}, Lemma \ref{43lemma}, and Lemma \ref{43lemma}
+with $ \o $ replaced by $\o^2$, that
+\begin{align}
+&\lim_{v\to \infty} (-1)^v P_N(0) \notag \\ =& \sum_{n=0}^{\infty}
+\frac{q^{n(n+1)/2}}{(q^3;q^3)_n} \sum_{r= 0}^\i q^{r(r-1)/2}
+\[ \begin{matrix} n+1\\r\end{matrix}\] \r^{\e-n-r}
+\frac{1+\o^{\e-n-r}+\bar{\o}^{\e-n-r}}{3} \notag\\
+=&\frac{1}{3} \sum_{n=0}^{\infty} \frac{q^{n(n+1)/2}}{(q^3;q^3)_n}
+\bigg\{ \r^{\e-n} (-\bar{\r};q)_{n+1}+(-1)^{\e-n}(1;q)_{n+1}
++\r^{n-\e}(-\r;q)_{n+1} \bigg\} \notag\\
+=&\frac{1}{3}(-\o^2)^{\e} \sum_{n=0}^{\infty}
+\frac{q^{n(n+1)/2}(-\o)^n}{(q^3;q^3)_n} (\o;q)_{n+1}
++\frac{1}{3}(-\o)^{\e} \sum_{n=0}^{\infty}
+\frac{q^{n(n+1)/2}(-\o^2)^n}{(q^3;q^3)_n} (\o^2;q)_{n+1} \notag\\
+=&\frac{1}{3}(-\o^2)^{\e}(1-\o) \sum_{n=0}^{\infty}
+\frac{q^{n(n+1)/2}(-\o)^n}{(q^3;q^3)_n} (\o q;q)_{n}\notag\\
+&+\frac{1}{3}(-\o)^{\e}(1-\o^2) \sum_{n=0}^{\infty}
+\frac{q^{n(n+1)/2}(-\o^2)^n}{(q^3;q^3)_n} (\o^2 q;q)_{n} \notag\\
+=&\frac{1}{3}(-\o^2)^{\e}(1-\o)(\o q)_{\infty}
+(q^2;q^3)_{\infty}+ \frac{1}{3}(-\o)^{\e}(1-\o^2)(\o^2 q)_{\infty}
+(q^2;q^3)_{\infty} \notag\\
+=&\frac{1}{3}(-\o)^{\e}(1-\o^2)\bigg\{\frac{(\o^2
+q)_{\infty}}{(\o q)_{\infty}}-\o^{\e+1}\bigg\} (\o q)_{\infty}
+(q^2;q^3)_{\infty}. \notag
+\end{align}
+\end{proof}
+
+To establish the corresponding lemma for $ Q_N(0)$, we need  
+an analogue of Lemma \ref{43lemma}, which was established in 
+\cite[Lemma 2.3]{quintuple}.    
+
+\begin{lemma}\label{lem:y5} Let $ \o = e^{2\pi i/3}$. Then
+\begin{equation}\label{applic1}
+-\df{\o}{(\o
+ q)_{\i}}\left\{\sum_{n=0}^{\i}\df{(-\o)^nq^{n(n+1)/2}}{(q)_n(\o^2q)_n} +
+\o \sum_{n=0}^{\i}\df{(-\o)^nq^{n(n+1)/2+n}}{(q)_n(\o^2q)_n}\right\}
+= (q;q^3)_{\i}.
+\end{equation}
+\end{lemma}
+%and
+%\begin{equation}\label{applic2}
+%-\df{\o^2}{(\o^2
+% q)_{\i}}\left\{\sum_{n=0}^{\i}\df{(-\o^2)^nq^{n(n+1)/2}}{(q)_n(\o q)_n} +
+%\o \sum_{n=0}^{\i}\df{(-\o^2)^nq^{n(n+1)/2+n}}{(q)_n(\o q)_n}\right\}
+%= (q;q^3)_{\i}.
+%\end{equation}
+%\end{lemma}
+
+Note that, by conjugation, \eqref{applic1} is also valid with $ \o $ replaced
+by $\o^2$. 
+
+\begin{lemma}\label{lem:y4}
+Let $N-1=3v+\e$, where $\e=0,\pm 1$. Then
+\begin{equation}
+\lim_{v\to \infty} (-1)^v Q_N(0)=\frac{1}{3}(-\o)^{\e+1}
+(1-\o^2) \left( \frac{(\o^2 q)_{\infty}}{(\o q)_{\infty}}
+-\o^{\e-1}\right) (\o q)_{\infty} (q;q^3)_{\infty}.
+\end{equation}
+\end{lemma}
+
+
+\begin{proof} Since the details are similar to those in the proof of Lemma
+\ref{lem:y3}, we suppress some of them. 
+
+Let $N\to \infty$ through values such that $N-1\equiv \e
+\pmod{3}$. Then, from (\ref{eq:y5}),
+\begin{align}
+\lim_{v\to \infty} (-1)^v Q_N(0) 
+%=&\sum_{\substack{n,r= 0 \\ n+r\equiv
+%\epsilon
+%\pmod {3}}}^\i (-1)^{(\e-n-r)/3}q^{n(n+1)/2+r(r-1)/2} \[ \begin{matrix} n+1\\
+%r\end{matrix}
+%\] \frac{1}{(q^3;q^3)_n} \notag\\
+%&-\sum_{\substack{n,r=0 \\ n+r\equiv \e-1 \pmod {3}}}^\i
+%(-1)^{(\e-1-n-r)/3}q^{n(n+1)/2+n+r(r-1)/2} \[ \begin{matrix} n+1\\r
+%\end{matrix}
+%\] \frac{1}{(q^3;q^3)_n} \notag\\
+=& \sum_{n=0}^{\infty} \frac{q^{n(n+1)/2}}{(q^3;q^3)_n}
+\sum_{\substack{r= 0 \\ r\equiv \e-n \pmod{3}}}^\i q^{r(r-1)/2}
+\[ \begin{matrix} n+1\\r
+\end{matrix}\] \r^{\e-n-r} \notag\\
+&-\sum_{n=0}^{\infty} \frac{q^{n(n+1)/2+n}}{(q^3;q^3)_n}
+\sum_{\substack{r= 0 \\ r\equiv \e-n-1 \pmod{3}}}^\i q^{r(r-1)/2}
+\[ \begin{matrix} n+1\\r
+\end{matrix}\] \r^{\e-1-n-r}, \notag
+\end{align}
+where $\r= e^{\pi i/3}$. By (\ref{eq:y6}), \eqref{binomial1},
+\eqref{applic1}, 
+%\eqref{applic2}, 
+the remark following \eqref{applic1}, and calculations analogous 
+to whose  used in the proof of Lemma \ref{lem:y3}, 
+\begin{align}
+&\lim_{v\to \infty} (-1)^v Q_N(0) \notag\\ =& \sum_{n=0}^{\infty}
+\frac{q^{n(n+1)/2}}{(q^3;q^3)_n} \sum_{r= 0}^\i q^{r(r-1)/2}
+\[ \begin{matrix} n+1\\r\end{matrix}\] \r^{\e-n-r}
+\frac{1+\o^{\e-n-r}+\bar{\o}^{\e-n-r}}{3} \notag\\
+&- \sum_{n=0}^{\infty} \frac{q^{n(n+1)/2+n}}{(q^3;q^3)_n}
+\sum_{r= 0}^\i q^{r(r-1)/2}
+\[ \begin{matrix} n+1\\r\end{matrix}\] \r^{\e-1-n-r}
+\frac{1+\o^{\e-1-n-r}+\bar{\o}^{\e-1-n-r}}{3} \notag\\
+%=&\frac{1}{3} \sum_{n=0}^{\infty} \frac{q^{n(n+1)/2}}{(q^3;q^3)_n}
+%\bigg\{ \r^{\e-n} (-\bar{\r};q)_{n+1}+(-1)^{\e-n-r}(1;q)_{n+1}
+%+\r^{n-\e}(-\r;q)_{n+1} \bigg\} \notag\\
+%&-\frac{1}{3} \sum_{n=0}^{\infty}
+%\frac{q^{n(n+1)/2+n}}{(q^3;q^3)_n} \bigg\{ \r^{\e-1-n}
+%(-\bar{\r};q)_{n+1}+(-1)^{\e-1-n-r}(1;q)_{n+1}
+%+\r^{n+1-\e}(-\r;q)_{n+1} \bigg\} \notag\\
+%=&\frac{1}{3}(-\o^2)^{\e} \sum_{n=0}^{\infty}
+%\frac{q^{n(n+1)/2}(-\o)^n}{(q^3;q^3)_n} (\o;q)_{n+1}
+%+\frac{1}{3}(-\o)^{\e} \sum_{n=0}^{\infty}
+%\frac{q^{n(n+1)/2}(-\o^2)^n}{(q^3;q^3)_n} (\o^2;q)_{n+1} \notag\\
+%&-\frac{1}{3}(-\o^2)^{\e-1} \sum_{n=0}^{\infty}
+%\frac{q^{n(n+1)/2+n}(-\o)^n}{(q^3;q^3)_n} (\o;q)_{n+1}\notag\\
+%&-\frac{1}{3}(-\o)^{\e-1} \sum_{n=0}^{\infty}
+%\frac{q^{n(n+1)/2+n}(-\o^2)^n}{(q^3;q^3)_n} (\o^2;q)_{n+1} \notag\\
+=&\frac{1}{3}(-\o^2)^{\e}(1-\o) \bigg\{ \sum_{n=0}^{\infty}
+\frac{q^{n(n+1)/2}(-\o)^n}{(q^3;q^3)_n} (\o q;q)_{n} + \o
+\sum_{n=0}^{\infty} \frac{q^{n(n+1)/2+n}(-\o)^n}{(q^3;q^3)_n} (\o
+q;q)_{n} \bigg \} \notag \\
+&+\frac{1}{3}(-\o)^{\e}(1-\o^2)\left\{ \sum_{n=0}^{\infty}
+\frac{q^{n(n+1)/2}(-\o^2)^n}{(q^3;q^3)_n} (\o^2 q;q)_{n}\right.\notag\\ 
+&\left. +\o^2
+\sum_{n=0}^{\infty}
+\frac{q^{n(n+1)/2+n}(-\o^2)^n}{(q^3;q^3)_n} (\o^2 q;q)_{n} \right\} \notag\\
+=&\frac{1}{3}(-\o^2)^{\e+1} (1-\o)(\o q)_{\infty}
+(q;q^3)_{\infty}+ \frac{1}{3}(-\o)^{\e+1}(1-\o^2) (\o^2
+q)_{\infty}
+(q;q^3)_{\infty}  \notag\\
+=&\frac{1}{3}(-\o)^{\e+1}(1-\o^2)\bigg\{\frac{(\o^2
+q)_{\infty}}{(\o q)_{\infty}}-\o^{\e-1}\bigg\} (\o q)_{\infty}
+(q;q^3)_{\infty}. \notag
+\end{align}
+\end{proof}
+
+
+
+\begin{theorem} Let $ N-1=3v+\e$, where $ \e = 0$ or $\pm 1$. Then  
+\begin{equation}
+\lim_{N\to\i}\left( \df{1}{1}\-\df{1}{1+q} \-\df{1}{1+q^2}\-\cds\-
+\df{1}{1+q^{N-1}}\right) 
+= -\o^2\frac{\df{(\o^2q;q)_{\infty}}{(\o q;q)_{\infty}} -\o^{\e+1}}
+{\df{(\o^2q;q)_{\infty}}{(\o q;q)_{\infty}}-\o^{\e-1}}\,
+\frac{(q^2;q^3)_{\infty}}{(q;q^3)_{\infty}}.
+\end{equation}
+\end{theorem}
+
+
+\begin{proof}
+The result follows immediately from \eqref{b5} and  Lemmas~\ref{lem:y3} 
+and \ref{lem:y4}.
+\end{proof}
+
+
+\begin{theorem}\label{main}
+ Let $ N-1=3v+\e$, where $ \e = 0$ or $\pm 1$. Then 
+\begin{equation}
+\lim_{N\to\i}\left( \df{1}{1}\-\df{1}{1+q} \-\df{1}{1+q^2}\-\cds\-
+\df{1}{1+q^{N-1}+a}\right) 
+ = -\o^2\frac{\O
+-\o^{\e+1}}{\O-\o^{\e-1}} \frac{(q^2;q^3)_{\infty}}{(q;q^3)_{\infty}},
+\end{equation}
+where  
+\begin{equation*}
+\O= \df{1-a\o^2}{1-a\o}\, \df{(\o^2 q)_{\infty}}{(\o q)_{\infty}}.
+\end{equation*}
+\end{theorem}
+
+\begin{proof} Recall that the partial numerators $ P_N(a) $ and partial
+denominators $ Q_N(a) $ are defined in \eqref{b4} and \eqref{b5}. 
+It is easily shown by induction that, for $ N \geq 2$, 
+\begin{align}
+P_N(a)&=P_N(0)+a P_{N-1}(0), \notag\\
+Q_N(a)&=Q_N(0)+a Q_{N-1}(0). \notag
+\end{align}
+For example, see \cite[p.~8]{lisa}.
+Hence
+\begin{align}
+\lim_{N\to \infty} P_N(a)&= \lim_{N\to \infty} P_N(0)+a \lim_{N\to
+\infty}P_{N-1}(0),\notag \\
+\lim_{N\to \infty} Q_N(a)&= \lim_{N\to \infty}Q_N(0)+a \lim_{N\to
+\infty} Q_{N-1}(0). \notag
+\end{align}
+Let $N=3v+\e+1$, where $\e=0,\pm 1$; we consider two cases:
+$\e=0, 1$ and $\e=-1$.
+
+Suppose that $\e=0$ or $1$. From Lemma~\ref{lem:y3},
+\begin{align}
+\lim_{N\to \infty} (-1)^v &P_N(a)= \lim_{N\to \infty} (-1)^v
+P_N(0)+a
+\lim_{N\to \infty} (-1)^v P_{N-1}(0) \notag \\
+=& \frac{1}{3}(-\o)^{\e} (1-\o^2)\bigg\{ \frac{(\o^2
+q)_{\infty}}{(\o q)_{\infty}} -\o^{\e+1}\bigg\}
+ (\o q)_{\infty} (q^2;q^3)_{\infty} \notag\\
+& +a \frac{1}{3}(-\o)^{\e-1} (1-\o^2)\bigg\{ \frac{(\o^2
+q)_{\infty}}{(\o q)_{\infty}} -\o^{\e}\bigg\}(\o q)_{\infty}
+(q^2;q^3)_{\infty} \notag \\
+=&\frac{1}{3}(-\o)^{\e} (1-\o^2)\bigg\{ \frac{(\o^2
+q)_{\infty}}{(\o q)_{\infty}} -\o^{\e+1} -a\o^2 \frac{(\o^2
+q)_{\infty}}{(\o q)_{\infty}} +a \o^{\e-1}\bigg\}
+ (\o q)_{\infty} (q^2;q^3)_{\infty} \notag\\
+=&\frac{1}{3}(-\o)^{\e} (1-\o^2)\bigg\{\frac{1-a\o^2}{1-a\o}
+\frac{(\o^2 q)_{\infty}}{(\o q)_{\infty}} -\o^{\e+1}\bigg\}
+(1-a\o)  (\o q)_{\infty} (q^2;q^3)_{\infty}.\notag
+\end{align}
+On the other hand, if $\e=-1$, then
+\begin{align}
+\lim_{N\to \infty} (-1)^v& P_N(a)= \lim_{N\to \infty}(-1)^v
+P_N(0)+a
+\lim_{N\to \infty} (-1)^v P_{N-1}(0) \notag \\
+=& \frac{1}{3}(-\o)^{\e} (1-\o^2)\bigg\{ \frac{(\o^2
+q)_{\infty}}{(\o q)_{\infty}} -\o^{\e+1}\bigg\}
+(\o q)_{\infty}(q^2;q^3)_{\infty} \notag \\
+& - a \frac{1}{3}(-\o)^{\e+2} (1-\o^2)\bigg\{ \frac{(\o^2
+q)_{\infty}}{(\o q)_{\infty}} -\o^{\e+3}\bigg\} (\o q)_{\infty}
+(q^2;q^3)_{\infty}\notag \\
+=&\frac{1}{3}(-\o)^{\e} (1-\o^2)\bigg\{ \frac{(\o^2
+q)_{\infty}}{(\o q)_{\infty}} -\o^{\e+1} -a\o^2 \frac{(\o^2
+q)_{\infty}}{(\o q)_{\infty}} +a \o^{\e+2}\bigg\}
+ (\o q)_{\infty} (q^2;q^3)_{\infty} \notag \\
+=&\frac{1}{3}(-\o)^{\e} (1-\o^2)\bigg\{\frac{1-a\o^2}{1-a\o}
+\frac{(\o^2 q)_{\infty}}{(\o q)_{\infty}} -\o^{\e+1}\bigg\}
+(1-a\o) (\o q)_{\infty} (q^2;q^3)_{\infty} . \notag
+\end{align}
+Therefore, in both cases, 
+\begin{equation} \label{eq:y9}
+\lim_{N\to \infty} (-1)^v P_N(a) = \frac{1}{3}(-\o)^{\e}
+(1-\o^2)\bigg\{\frac{1-a\o^2}{1-a\o} \frac{(\o^2 q)_{\infty}}{(\o
+q)_{\infty}} -\o^{\e+1}\bigg\} (1-a\o) (\o q)_{\infty}
+(q^2;q^3)_{\infty}.
+\end{equation}
+
+Similarly, we can determine the limits of the denominator $Q_N(a)$.
+Suppose that $\e=0$ or $1$. Then, from Lemma~\ref{lem:y4},
+\begin{align}
+\lim_{N\to \infty} (-1)^v& Q_N(a)= \lim_{N\to \infty} (-1)^v
+Q_N(0)+a
+\lim_{N\to \infty} (-1)^v Q_{N-1}(0) \notag \\
+%=& \frac{1}{3}(-\o)^{\e+1} (1-\o^2) \bigg\{ \frac{(\o^2
+%q)_{\infty}}{(\o q)_{\infty}} -\o^{\e-1}\bigg\}
+% (\o q)_{\infty} (q;q^3)_{\infty} \notag\\
+%& +a \frac{1}{3}(-\o)^{\e} (1-\o^2)  \bigg\{ \frac{(\o^2
+%q)_{\infty}}{(\o q)_{\infty}} -\o^{\e-2}\bigg\} (\o q)_{\infty}
+%(q;q^3)_{\infty}
+%\notag \\
+=&\frac{1}{3}(-\o)^{\e+1} (1-\o^2) \bigg\{ \frac{(\o^2
+q)_{\infty}}{(\o q)_{\infty}} -\o^{\e-1} -a\o^2 \frac{(\o^2
+q)_{\infty}}{(\o q)_{\infty}} +a \o^{\e}\bigg\}
+(\o q)_{\infty} (q;q^3)_{\infty}  \notag\\
+=&\frac{1}{3}(-\o)^{\e+1} (1-\o^2) 
+\bigg\{\frac{1-a\o^2}{1-a\o} \frac{(\o^2 q)_{\infty}}{(\o
+q)_{\infty}} -\o^{\e-1}\bigg\} (1-a\o)  (\o q)_{\infty}
+(q;q^3)_{\infty}.\notag
+\end{align}
+On the other hand, if $\e=-1$, then
+\begin{align}
+\lim_{N\to \infty} (-1)^v& Q_N(a)= \lim_{N\to \infty}(-1)^v
+Q_N(0)+a
+\lim_{N\to \infty} (-1)^v Q_{N-1}(0) \notag \\
+%=& \frac{1}{3}(-\o)^{\e+1} (1-\o^2)  \bigg\{ \frac{(\o^2
+%q)_{\infty}}{(\o q)_{\infty}} -\o^{\e-1}\bigg\}
+%(\o q)_{\infty} (q;q^3)_{\infty} \notag \\
+%& - a \frac{1}{3}(-\o)^{\e+3} (1-\o^2)  \bigg\{ \frac{(\o^2
+%q)_{\infty}}{(\o q)_{\infty}} -\o^{\e+1}\bigg\} (\o q)_{\infty}
+%(q;q^3)_{\infty}
+%\notag \\
+=&\frac{1}{3}(-\o)^{\e+1} (1-\o^2)  \bigg\{ \frac{(\o^2
+q)_{\infty}}{(\o q)_{\infty}} -\o^{\e-1} -a\o^2 \frac{(\o^2
+q)_{\infty}}{(\o q)_{\infty}} +a \o^{\e}\bigg\}
+ (\o q)_{\infty} (q;q^3)_{\infty} \notag \\
+=&\frac{1}{3}(-\o)^{\e+1} (1-\o^2)
+\bigg\{\frac{1-a\o^2}{1-a\o} \frac{(\o^2 q)_{\infty}}{(\o
+q)_{\infty}} -\o^{\e-1}\bigg\} (1-a\o)  (\o q)_{\infty}
+(q;q^3)_{\infty}. \notag
+\end{align}
+Therefore, in both cases, 
+\begin{equation} \label{eq:y10}
+\lim_{N\to \infty} (-1)^v Q_N(a) = \frac{1}{3}(-\o)^{\e+1}
+(1-\o^2) \bigg\{\frac{1-a\o^2}{1-a\o} \frac{(\o^2
+q)_{\infty}}{(\o q)_{\infty}} -\o^{\e-1}\bigg\} (1-a\o)
+ (\o q)_{\infty} (q;q^3)_{\infty}.
+\end{equation}
+
+Combining (\ref{eq:y9}) and (\ref{eq:y10}) with \eqref{b5}, 
+we complete the proof.
+%\begin{equation}
+%\lim_{n\to \infty} \frac{P_n(a)}{Q_n(a)}= -\o^2 \left( \frac{\O-
+%\o^n}{\O- \o^{n-2}}\right)\cdot
+%\frac{(q^2;q^3)_{\infty}}{(q;q^3)_{\infty}},
+%\end{equation}
+%where $\O= \{(1-a\o^2)(\o^2 q)_{\infty}\}/\{(1-a\o)(\o
+%q)_{\infty}\}$.
+\end{proof}
+
+Observe that our proof of Theorem \ref{main} justifies the addendum made by
+Ramanujan after his statement of \eqref{b1}. 
+
+\section{A Class of Sequences with Three Distinct Limit Points}\label{three}
+
+
+Let $u$ and $v$ be complex numbers, and let $\{a_n\}_{n\geq 1}$ be a
+sequence of complex numbers such that
+\begin{equation}\label{a3}
+\sum_{n= 1}^\i|a_n| <\infty.
+\end{equation}
+Generalizing the recurrence relations \eqref{b6}, we study the limit 
+points of the sequence  $\{x_n\}_{n\geq 0}$ given by
+\begin{equation}\label{a1}
+x_0 = v, \qquad x_1=u,
+\end{equation}
+and
+\begin{equation}\label{a2}
+x_n=(1+a_{n-1})x_{n-1}-x_{n-2}.
+\end{equation}
+We show that any such sequence has at most six limit points.
+Precisely, we have the following theorem. 
+
+\begin{theorem}\label{thma1}
+Let $u$ and $v$ be complex numbers not both zero, and let $\{a_n\}_{n\geq
+1}$ be a sequence of complex numbers satisfying \eqref{a3}. Then:
+
+\begin{tabular}{  r  l } 
+\textup{(i)} & For any $j\in\{0,\dots,5\}$ the sequence  $\{x_{6n+j}\}_{n\geq
+0}$ is convergent.\\
+\textup{(ii)} & If we denote $l_j=\lim_{n\rightarrow\infty}x_{6n+j},$ $0\leq
+j\leq5,$ then \\&\qquad \qquad \qquad$ l_2=l_1-l_0,\,\,
+l_3=-l_0,\,\, l_4=-l_1,\,\, l_5=-l_2. $\\
+\textup{(iii)} & At most one of the numbers $l_0,l_1,l_2$ is zero.
+\end{tabular}
+\end{theorem}
+
+\begin{proof} If we assume (i), then (ii) follows imediately, since
+the equality \eqref{a2} gives, as  $n=6m+j \to \i$, 
+\begin{equation}\label{a4}
+l_j=l_{j-1}-l_{j-2}.
+\end{equation}
+Let us now prove (i). We first show that the sequence
+$\{x_n\}_{n\geq 0}$ is bounded. In order to do this, denote
+\begin{equation}\label{a5}
+M_n:=\max\{|x_0|,|x_1|,\dots,|x_n|\}
+\end{equation}
+for any $n\geq0.$ By applying \eqref{a2} twice we obtain
+\begin{align}\label{a6}
+x_n=&(1+a_{n-1})x_{n-1}-x_{n-2}\notag\\=&(1+a_{n-1})\left(
+(1+a_{n-2})x_{n-2}-x_{n-3}\right)-x_{n-2}\notag \\
+ =&(a_{n-1}+a_{n-2}+a_{n-1}a_{n-2})x_{n-2}-(1+a_{n-1})x_{n-3}. 
+\end{align}
+The sequence $\{M_n\}_{n\geq0}$ is increasing, and we want to show
+that it does not tend to infinity. Since $|x_{n-2}|$ and $|x_{n-3}|$
+are bounded by $M_{n-2},$  from \eqref{a6}, we deduce that
+\begin{equation}\label{a7}
+|x_n|\leq(1+2|a_{n-1}|+|a_{n-2}|+|a_{n-1}a_{n-2}|)M_{n-2}.
+\end{equation}
+This implies that
+\begin{equation}\label{a8}
+M_n\leq(1+2|a_{n-1}|+|a_{n-2}|+|a_{n-1}a_{n-2}|)M_{n-1}.
+\end{equation}
+Define $b_n :=2|a_n|+|a_{n-1}|+|a_na_{n-1}|.$ For large $n$ it follows that
+$b_n\le 2(|a_n|+|a_{n-1}|)$. Thus,
+\begin{equation}\label{a9}
+\sum_{n= 2}^\i|b_n| <\infty,
+\end{equation}
+by \eqref{a3}. Relation \eqref{a9} further implies
+\begin{equation}\label{a10}
+\prod_{n= 2}^\i(1+|b_n|) <\infty.
+\end{equation}
+We conclude from \eqref{a8} and \eqref{a10} that the sequence
+$\{M_n\}_{n\geq0}$ is bounded.
+
+Choose $M>0$ so that $|x_n|\leq M$ for any $n$. We write
+\eqref{a6} in the form
+\begin{equation}\label{a11}
+x_n+x_{n-3}=(a_{n-1}+a_{n-2}+
+a_{n-1}a_{n-2})x_{n-2}-a_{n-1}x_{n-3}.
+\end{equation}
+It follows that
+\begin{equation}\label{a12}
+|x_n+x_{n-3}|\leq (2|a_{n-1}|+|a_{n-2}|
++|a_{n-1}a_{n-2}|)M=b_{n-1}M.
+\end{equation}
+Using \eqref{a12} twice, we find that
+\begin{equation}\label{a13}
+|x_n-x_{n-6}|\leq |x_n+x_{n-3}|+|x_{n-3}+x_{n-6}|\leq
+(b_{n-1}+b_{n-4})M.
+\end{equation}
+Since $\sum_n(b_{n-1}+b_{n-4})M<\infty,$ it follows that for any
+$j\in\{0,1,\dots,5\}$ the sequence $\{x_{6n+j}\}_{n\geq 0}$ is a
+Cauchy sequence, and hence it converges. This proves (i).
+
+It remains to prove (iii). If more than one of the numbers
+$l_0,l_1,l_2$ is zero, then from (ii) we deduce that all six
+numbers $l_0,l_1,\dots,l_5$ are zero. In other words, the sequence
+$\{x_n\}_{n\geq0}$ is convergent and has limit zero. We will show
+that this cannot happen under our assumption that
+$(u,v)\neq(0,0)$. Let us  first remark that no two consecutive
+elements in the sequence $\{x_n\}_{n\geq0}$ are zero. Indeed, if
+$x_{n-1}=x_{n}=0$ for some $n,$ then, using \eqref{a2} repeatedly, we
+see that $0=x_{n-2}=x_{n-3}=\cdots=u=v,$ which contradicts the
+above assumption on $u,v$. Thus, for any $n$, at least one of
+$x_{n-1},x_{n}$ is not zero. We now look at the maximum of any
+three consecutive elements in the sequence. The point is to show
+that this maximum does not approach zero. More precisely, for any
+$n\geq 2$, we first set 
+\begin{equation}\label{a14}
+D_n:=\max\{|x_n|,|x_{n-1}|,|x_{n-2}|\}.
+\end{equation}
+By the remark above, we know that $D_n>0$ for any $n.$ Let us
+compare $D_n$ and $D_{n-1}$ for large $n$. By definition,
+\begin{equation}\label{a15}
+D_{n-1}=\max\{|x_{n-1}|,|x_{n-2}|,|x_{n-3}|\}.
+\end{equation}
+If $|x_{n-3}|$ is not the largest of the three numbers on  the
+right side of \eqref{a15}, then obviously
+\begin{equation}\label{a16}
+D_n\geq D_{n-1}.
+\end{equation}
+Assume now that $|x_{n-3}|$ is the largest of the three numbers,
+so that
+\begin{equation}\label{a17}
+|x_{n-1}|,|x_{n-2}|\leq |x_{n-3}|=D_{n-1}.
+\end{equation}
+Write $x_{n-3}$ in the form $x_{n-3}=D_{n-1}e^{it}$ for some real
+number $t.$ Then from \eqref{a11} it follows that
+\begin{align}\label{a18}
+|e^{-it}x_n+D_{n-1}|=&|x_n+e^{it}D_{n-1}|=|x_n+x_{n-3}|\\
+ \leq & (|a_{n-1}|+|a_{n-2}|+|a_{n-1}a_{n-2}|)|x_{n-2}|+
+|a_{n-1}|D_{n-1}\leq b_{n-1}D_{n-1}. \notag
+\end{align}
+ We deduce that
+\begin{equation}\label{a19}
+|x_n|=|e^{-it}x_n|\geq D_{n-1}-b_{n-1}D_{n-1}=(1-b_{n-1})D_{n-1}.
+\end{equation}
+By \eqref{a16} and \eqref{a19}, in all cases,
+\begin{equation}\label{a20}
+D_n\geq (1-b_{n-1})D_{n-1}.
+\end{equation}
+Of course, the inequality \eqref{a20} is only nontrivial when
+$b_{n-1}<1.$ Choose $n_0$ so that $b_n<1$ for all $n\geq n_0.$
+We know that $D_{n_0}>0.$ Also, from  \eqref{a20} we know that
+for any $n>n_0$,
+\begin{equation}\label{a21}
+D_n\geq (1-b_{n-1})(1-b_{n-2})\cdots (1-b_{n_0})D_{n_0}.
+\end{equation}
+Now the product $\prod_{n>n_0}(1-b_n)$ is convergent to a {\it
+{nonzero}} number $D$, since $1-b_n>0$ for $n\geq n_0$ and
+$\sum_{n>n_0}b_n<\infty.$ Thus $D_n\geq DD_{n_0}$ for any
+$n>n_0$, and so
+\begin{equation}\label{a22}
+\max \{|l_0|,|l_1|,|l_2|\}\geq DD_{n_0}>0,
+\end{equation}
+which completes the proof of the theorem.
+\end{proof}
+
+Next we derive some consequences of the above result. First, if
+we fix the sequence $\{a_n\}_{n\geq 1}$ satisfying  \eqref{a3} and
+allow $u,v$ to vary in $\CBbb,$ we obtain a map from $\CBbb^2$ to
+$\CBbb^6$ which sends the pair $(u,v)$ to the 6-tuple
+$(l_0,l_1,\dots,l_5).$ Clearly this map is linear, so it is given
+by a matrix $A$ which depends on the sequence $\{a_n\}_{n\geq 1}.$
+By (iii) we know moreover that this linear map is injective,
+and hence rank $A=2.$ We summarize these observations in the next corollary.
+
+\begin{corollary}
+For any sequence of complex numbers  $\{a_n\}_{n\geq 1}$ satisfying
+\eqref{a3}, there is a $6\times 2$ matrix $A$ such that for any
+$u,v\in\CBbb$,
+\begin{equation}\label{a23}
+\lim_{n\rightarrow\infty} \left(\begin{array}{c}
+x_{6n}\\
+x_{6n+1}\\
+\vdots\\
+x_{6n+5}
+\end{array}
+\right ) =A \left(\begin{array}{c}
+u\\
+v
+\end{array}
+\right ),
+\end{equation}
+where the sequence $\{x_n\}_{n\geq 0}$ is given by \eqref{a1} and
+\eqref{a2}. Moreover, the rank of $ A $ equals 2. 
+%{\rm {rank}} $A=2.$
+\end{corollary}
+
+Given such a sequence  $\{a_n\}_{n\geq 1}$ and the associated
+matrix $A,$ consider the $6\times 2$ matrix $B$ given by
+\begin{equation}\label{a24}
+B=A \left(\begin{array}{ll}
+1 & 1\\
+0 & 1
+\end{array}
+\right ) .
+\end{equation}
+Thus the first column of $B$ consists of the six limit points
+$b_{01},b_{11},\dots,b_{51}$ of the sequence $\{P_n\}_{n\geq 0}$
+defined by
+\begin{equation}\label{a25}
+P_n=(1+a_{n-1})P_{n-1}-P_{n-2}
+\end{equation}
+and
+\begin{equation}\label{a26}
+P_0=0,\qquad P_1=1.
+\end{equation}
+The second column of $B$ consists of the six limit points
+$b_{02},b_{12},\dots,b_{52}$ of the sequence $\{Q_n\}_{n\geq 0}$
+defined by
+\begin{equation}\label{a27}
+Q_n=(1+a_{n-1})Q_{n-1}-Q_{n-2}
+\end{equation}
+and
+\begin{equation}\label{a28}
+Q_0=1,\qquad Q_1=1.
+\end{equation}
+We are interested in the limit points of the sequence
+$\{P_n/Q_n\}_{n\geq 0}$, and for this we examine the quotients
+\begin{equation}\label{a29}
+b_j:=\frac {b_{j1}}{b_{j2}},\qquad 0\leq j\leq 5.
+\end{equation}
+Since $b_{(j+3),1}=-b_{j,1}$ and
+ $b_{(j+3),2}=-b_{j,2}$ for $j=0,1,2,$ it follows that
+$b_3=b_0,$ $b_4=b_1$, and $b_5=b_2.$ This is not enough 
+to conclude that the sequence $\{P_n/Q_n\}_{n\geq 0}$ has at most
+three limit points in $\CBbb \cup\{\infty\}.$ The reason is
+that each of the two columns of the matrix B might have a
+component equal to zero for some $j\in\{0,1,2\}.$ And if
+$b_{j1}=b_{j2}=0$, the sequence
+ $\{P_{6n+j}/Q_{6n+j}\}_{n\geq 0}$ may very well have
+infinitely many limit points. We now show that this cannot happen,
+that is, there is no $j$ for which $b_{j1}=b_{j2}=0.$ Indeed, let
+us assume that for some $j\in\{0,1,2\}$ one has $b_{j1}=b_{j2}=0.$
+Then from (iii), with $(u,v)=(1,0)$ and, respectively,
+$(u,v)=(1,1),$ we know that, except for $b_{j1}$ and $b_{j2},$ the
+other four numbers in the set
+$\{b_{01},b_{11},b_{21},b_{02},b_{12},b_{22}\}$ are nonzero. If
+we choose $i\in\{0,1,2\},$ $i\neq j,$ and let $\lambda\in\CBbb$
+be such that $b_{i1}=\lambda b_{i2},$ then the following happens.
+The sequence  $\{x_n\}_{n\geq 0}$ associated with the vector
+\begin{equation}\label{a30}
+\left(\begin{array}{c}
+u\\
+v
+\end{array}
+\right )= \left(\begin{array}{c}
+1\\
+0
+\end{array}
+\right )-\lambda \left(\begin{array}{c}
+1\\
+1
+\end{array}
+\right )
+\end{equation}
+and the same  $\{a_n\}_{n\geq 1}$ will have two of its limit
+points, namely $l_j$ and $l_i,$ equal to zero, which contradicts
+(iii). In conclusion, if both columns of $B$ have components
+equal to zero, these components belong to different rows.
+Therefore, the sequence  $\{P_n/Q_n\}_{n\geq 0}$ has at most three
+limit points in $\CBbb \cup\{\infty\}.$ Moreover,
+since at most one of $b_{02},b_{12},b_{22}$ is zero, it follows
+that at most one of $b_0,b_1,b_2$ equals $\infty.$ Similarly, at
+most one of $b_0,b_1,b_2$ is zero. We claim that the numbers
+$b_0,b_1,b_2$ are distinct. If not, say $b_1=b_2=\lambda.$ Thus,
+$\lambda\neq\infty.$ Again if we define $u,v$ by \eqref{a30},
+then the associated sequence  $\{x_n\}_{n\geq 0}$ will have two
+limit points $l_1,l_2$ equal to zero, contradicting (iii). We
+have therefore proved the following theorem.
+
+\begin{theorem}\label{thma2}
+For any sequence of complex numbers  $\{a_n\}_{n\geq 1}$ satisfying
+\eqref{a3}, the sequence  $\{P_n/Q_n\}_{n\geq 0}$, with $P_n$ and $Q_n$
+given by \eqref{a25}--\eqref{a28}, has exactly three distinct
+limit points in $\CBbb \cup\{\infty\}.$
+\end{theorem}
+
+\section{Continued Fractions with Three Distinct 
+Limit Points}\label{threecf}
+
+In this section, we establish a general class of continued fractions which
+have exactly three limit points. 
+
+Let $ F $ and $ G $ be two meromorphic functions which are defined on the 
+unit disc, $U := \{z\in\CBbb: |z| < 1\}$, are analytic at the origin, and
+satisfy the functional equation,
+\begin{equation}\label{bc1}
+F(z)+G(z)+zF(z)G(z) = 1.
+\end{equation}
+For instance, we may take any analytic function $ F $  on $ U $ and set
+\begin{equation}\label{bc2}
+G(z) := \df{1-F(z)}{1+zF(z)}. 
+\end{equation}
+Consider the continued fraction
+\begin{align}\label{bc3}
+&\df{1}{1}\-\df{1}{1+zF(z)}\-\df{1}{1+zG(z)}\-\df{1}{F(z)+G(z^2)}
+\-\df{1}{1+z^2F(z^2)}\-\df{1}{1+z^2G(z^2)}\\ &\-\df{1}{F(z^2)+G(z^3)}
+\-\cds \-\df{1}{1+z^nF(z^n)}
+\-\df{1}{1+z^nG(z^n)}\-\df{1}{F(z^n)+G(z^{n+1})}\-\cds .\notag
+\end{align}
+So that the values $ F(z), F(z^2), \dots, F(z^n), \dots $ and 
+$ G(z), G(z^2), \dots, G(z^n), \dots $ are defined, we need to assume that $
+z^n, n \geq 1$, is not a pole of either $ F $ or $ G$.  Our main theorem is
+as follows. 
+ 
+\begin{theorem}\label{tbc1}
+Let $ F $ and $ G $ denote meromorphic functions which are defined on $ U,$
+as given above, which are analytic at the origin, and which satisfy the
+condition \eqref{bc1}.   Then
+the continued fraction \eqref{bc3} has exactly three limit points, $ L_0$, $
+L_1$, and $ L_2$. Moreover, 
+\begin{align}
+L_0 =& \df{z}{2z-zG(z)-1}, \label{bc4a}\\
+L_1 =& \df{z+zG(0)-1}{(z+zG(0)-1)(1-G(z))+(z-1)G(0)}, \label{bc4b} \\
+L_2 =& \df{1-zG(0)}{(1-zG(0))(1-G(z))+(z-1)(1-G(0))}. \label{bc4c}
+\end{align}
+\end{theorem}
+
+\begin{proof} The continued fraction \eqref{bc3} is of the type considered in
+Section \ref{three}, with the coefficients $ a_n $ given by
+\begin{align}
+a_{3n-2} =& z^nF(z^n), \label{bc5a} \\
+a_{3n-1} =& z^nG(z^n), \label{bc5b} \\
+a_{3n} =& F(z^n)+G(z^{n+1})-1, \label{bc5c}
+\end{align}
+for each $ n \geq 1$. Clearly, the sub-sequences $ \{a_{3n-2}\} $ and 
+$ \{a_{3n-1}\} $ are exponentially decreasing. As for $
+a_{3n}$, it has the Taylor expansion about $ z =0$, 
+$$
+a_{3n} = F(0)+G(0)-1 + F^{\prime}(0)z^n+G^{\prime}(0)z^{n+1}+\cdots .
+$$
+Since, by \eqref{bc1}, $ F(0)+G(0) =1$, 
+it follows that $ a_{3n} =O(z^n)$, as $
+n \to \i. $ Hence, \eqref{a3} is satisfied. We may then apply Theorem
+\ref{thma2} to conclude that the continued fraction \eqref{bc3} has exactly
+three distinct limit points, $ L_0$, $ L_1$, and $ L_2$.  We also know from
+Theorem \ref{thma1} that the sequences $\{P_{6n+j}\}$ and $\{Q_{6n+j}\}$, 
+defined
+by \eqref{a25} and \eqref{a27}, respectively, with initial conditions
+\eqref{a26} and \eqref{a28}, respectively, are convergent, where $ a_n $ is
+defined by \eqref{bc5a}--\eqref{bc5c}. For each $ j, 0 \leq j \leq 5$, let
+\begin{equation}\label{bc8}
+l_j = \lim_{n\to\i}P_{6n+j} \qquad \text{and} \qquad
+l_j^{\prime} = \lim_{n\to\i}Q_{6n+j}.
+\end{equation}
+By Theorem \ref{thma1}, we also know that
+\begin{equation}\label{bc9}
+\begin{cases} l_2=l_1-l_0,\,\, l_3=-l_0,\,\, l_4=-l_1,\,\, l_5=-l_2 ,\\
+l_2^{\prime}=l_1^{\prime}-l_0^{\prime},\,\,
+ l_3^{\prime}=-l_0^{\prime},\,\, l_4^{\prime}=-l_1^{\prime},\,\,
+ l_5^{\prime}=-l_2^{\prime}. 
+\end{cases}
+\end{equation} 
+>From the proof of Theorem \ref{thma2}, the three limit points of the continued
+fraction \eqref{bc3} are given by
+\begin{equation}\label{bc10}
+L_0 = \df{l_0}{l_0^{\prime}}, \qquad L_1 = \df{l_1}{l_1^{\prime}}, \qquad
+\text{and} \qquad L_2 = \df{l_2}{l_2^{\prime}}.  
+\end{equation}
+The key idea is to use the
+recurrence relations \eqref{a25} and \eqref{a27} to explicitly calculate $
+P_n $ and $ Q_n $ along  a subsequence and then subsequently for any $ n \geq
+0$. 
+
+Consider a general sequence $ \{x_n\}_{n\geq 0} $ satisfying the recurrence
+relation 
+\begin{equation}\label{bc11}
+x_n=(1+a_{n-1})x_{n-1}-x_{n-2}, \qquad n \geq 2, 
+\end{equation}
+where the coefficients $ a_n $ are given by \eqref{bc5a}--\eqref{bc5c}. 
+By successively applying \eqref{bc11}, we may write $ x_n $ as a linear
+combination of any two previous members of the sequence $ \{x_n\}_{n\geq 0}. $
+We shall write $ x_n $ in terms of $ x_{n-3} $ and $ x_{n-6}$. Applying
+\eqref{bc11}, we find that
+\begin{equation}\label{bc12}
+x_n=\left(a_{n-1}+a_{n-2}+a_{n-1}a_{n-2}\right)x_{n-2} - (1+a_{n-1})x_{n-3}. 
+\end{equation}
+Next, from the equalities
+\begin{equation*}
+x_{n-6}=(1+a_{n-5})x_{n-5}-x_{n-4} \qquad \text{and} \qquad
+x_{n-5}=(1+a_{n-4})x_{n-4}-x_{n-3},
+\end{equation*}
+we deduce that
+\begin{align}\label{bc13}
+x_{n-6} =& (1+a_{n-5})\{(1+a_{n-4})x_{n-4}-x_{n-3}\} - x_{n-4} \notag \\
+=&(a_{n-4}+a_{n-5}+a_{n-4}a_{n-5})x_{n-4} -(1+a_{n-5})x_{n-3}.
+\end{align}
+Multiply both sides of \eqref{bc13} by
+$$ \df{a_{n-1}+a_{n-2}+a_{n-1}a_{n-2}}{a_{n-4}+a_{n-5}+a_{n-4}a_{n-5}} $$
+to obtain
+\begin{align}\label{bc14}
+0 =& (a_{n-1}+a_{n-2}+a_{n-1}a_{n-2})x_{n-4} - 
+\df{(a_{n-1}+a_{n-2}+a_{n-1}a_{n-2})(1+a_{n-5})}
+{a_{n-4}+a_{n-5}+a_{n-4}a_{n-5}}x_{n-3}\notag\\ &-
+\df{a_{n-1}+a_{n-2}+a_{n-1}a_{n-2}}{a_{n-4}+a_{n-5}+a_{n-4}a_{n-5}}x_{n-6}.
+\end{align}
+We now add \eqref{bc12} and \eqref{bc14} and use the equality $ x_{n-2} +
+x_{n-4} = (1+a_{n-3})x_{n-3} $ to  deduce that
+\begin{align}\label{bc15}
+x_n =& (a_{n-1}+a_{n-2}+a_{n-1}a_{n-2})(1+a_{n-3})x_{n-3} -
+\df{(a_{n-1}+a_{n-2}+a_{n-1}a_{n-2})(1+a_{n-5})}
+{a_{n-4}+a_{n-5}+a_{n-4}a_{n-5}}x_{n-3}\notag\\ &-
+(1+a_{n-1})x_{n-3}-
+\df{a_{n-1}+a_{n-2}+a_{n-1}a_{n-2}}{a_{n-4}+a_{n-5}+a_{n-4}a_{n-5}}x_{n-6}.
+\end{align}
+This is the general recurrence for $ x_n $ in terms of $ x_{n-3} $ and $
+x_{n-6} $ which we sought. Set now $ y_0 = x_0, y_1 =-x_3, y_2=x_6$, and, more
+generally, $ y_k = (-1)^kx_{3k}$, for each nonnegative integer $k$. We know
+from our discussion after \eqref{bc5c} that the sequence $ \{y_k\} $
+converges. Furthermore, from \eqref{bc15}, 
+\begin{align}\label{bc16}
+y_{k} =& \bigg\{\df{(a_{3k-1}+a_{3k-2}+a_{3k-1}a_{3k-2})(1+a_{3k-5})}
+{a_{3k-4}+a_{3k-5}+a_{3k-4}a_{3k-5}}\phantom{\bigg\}}\notag
+\\&\phantom{\bigg\{}
+ - 
+(a_{3k-1}+a_{3k-2}+a_{3k-1}a_{3k-2})(1+a_{3k-3}) + 1 +a_{3k-1}\bigg\}
+y_{k-1}\notag\\ &-
+\df{a_{3k-1}+a_{3k-2}+a_{3k-1}a_{3k-2}}{a_{3k-4}
++a_{3k-5}+a_{3k-4}a_{3k-5}}y_{k-2}. 
+\end{align}
+For $ k \geq 1$, by \eqref{bc5a} and \eqref{bc5b}, 
+\begin{equation}\label{bc17}
+a_{3k-1}+a_{3k-2}+a_{3k-1}a_{3k-2} =
+z^kG(z^k)+z^kF(z^k)+z^{2k}F(z^k)G(z^k) = z^k, 
+\end{equation}
+by \eqref{bc1}. Using \eqref{bc17} with $ k $ replaced by $ k-1$, we also
+have, for $ k \geq 2$,  
+\begin{equation}\label{bc18}
+a_{3k-4}+a_{3k-5}+a_{3k-4}a_{3k-5} = z^{k-1}.
+\end{equation}
+Thus, for $ k \geq 2$, \eqref{bc16} reduces to 
+\begin{equation}\label{bc19}
+y_k=\left(1+a_{3k-1}+z(1+a_{3k-5})-z^k(1+a_{3k-3})\right)y_{k-1}
+-zy_{k-2}.
+\end{equation}
+Also, for $  k \geq 2$, by \eqref{bc5a}--\eqref{bc5c}, we find that
+\begin{equation}\label{bc20}
+ a_{3k-5} = z^{k-1}F(z^{k-1}), \quad a_{3k-3}=F(z^{k-1})+G(z^k)-1, \quad 
+a_{3k-1}=z^kG(z^k).
+\end{equation}
+Hence,
+\begin{align*}
+1+a_{3k-1}+z(1+a_{3k-5})-z^k(1+a_{3k-3}) =& 1+z^kG(z^k) + 
+z\left(1+z^{k-1}F(z^{k-1})\right)  \\
+&-z^k\left(1+F(z^{k-1})+G(z^k)-1\right) \\
+=& 1+z.
+\end{align*}
+Thus, \eqref{bc19} simplifies to
+\begin{equation}\label{bc21}
+y_k=(1+z)y_{k-1}-zy_{k-2}, \qquad k \geq 2.
+\end{equation}
+The roots of the associated characteristic equation
+\begin{equation}\label{T}
+T^2-(1+z)T+z=0
+\end{equation} 
+are $ T=1, z$. Thus, with $ c_1$ and $ c_2$ complex numbers, the general
+solution of \eqref{T} is
+\begin{equation}\label{sol}
+y_k = c_1+c_2z^k, \qquad k \geq 0.
+\end{equation}
+
+We now apply our theory to the sequences $\{P_{n}\}$ and $\{Q_{n}\}$, 
+defined
+by \eqref{a25} and \eqref{a27}, respectively, with initial conditions
+\eqref{a26} and \eqref{a28}, respectively. By \eqref{sol}, for $ n \geq 0$,
+for some constants, $ c_1, c_2, c_1^{\prime}, c_2^{\prime}$, 
+\begin{equation}\label{PQ}
+(-1)^nP_{3n} = c_1 + c_2z^n \qquad \text{and} \qquad
+ (-1)^nQ_{3n} = c_1^{\prime} +  
+c_2^{\prime}z^n.
+\end{equation}
+>From \eqref{a26} and \eqref{a28}, respectively, $ c_1+c_2 = P_0 = 0 $ and 
+$ c_1^{\prime}+c_2^{\prime}= Q_0 = 1$. Thus, $ c_2 = -c_1 =: -c $ and $
+c_2^{\prime} = 1-c_1^{\prime} =: 1-c^{\prime}$. Hence, from \eqref{PQ}, for $
+n \geq 0$,  
+\begin{equation}\label{bc22}
+(-1)^nP_{3n} = c(1-z^n) \qquad \text{and} \qquad (-1)^nQ_{3n} =
+c^{\prime}(1-z^n) + z^n. 
+\end{equation}
+We can determine $ c $ and $ c^{\prime} $ by setting $ n = 1 $ in
+\eqref{bc22}. By \eqref{bc22}, \eqref{a25}, and \eqref{a26}, 
+\begin{equation*}
+c(1-z) = -P_3 = -(1+a_2)P_2 +P_1 = -(1+a_2)((1+a_1)P_1-P_0)+P_1 =
+-(1+a_2)(1+a_1) +1. 
+\end{equation*}
+Hence, using \eqref{bc5a}, \eqref{bc5b}, and \eqref{bc1}, we find that
+\begin{align}\label{bc23}
+c =& \df{1-(1+a_1)(1+a_2)}{1-z} = \df{1-(1+zF(z))(1+zG(z))}{1-z} \notag \\
+=&-\df{z(F(z)+G(z)+zF(z)G(z))}{1-z} = -\df{z}{1-z}. 
+\end{align}
+Next, by \eqref{bc22}, \eqref{a27}, and \eqref{a28}, 
+\begin{equation*}
+c^{\prime}(1-z)+z=-Q_3 = -(1+a_2)Q_2+Q_1 = -(1+a_2)((1+a_1)Q_1-Q_0)+1 = 
+-(1+a_2)a_1+1,
+\end{equation*}
+or, by \eqref{bc5a}, \eqref{bc5b}, and \eqref{bc1}, 
+\begin{align*}
+c^{\prime}(1-z)+z=& 1-(1+zG(z))zF(z)\\ =& 1-(zF(z)+z^2F(z)G(z)) 
+= 1-(z-zG(z)).
+\end{align*}
+Hence,
+\begin{equation}\label{bc24}
+c^{\prime}= \df{1-2z+zG(z)}{1-z}.
+\end{equation}
+It follows from \eqref{bc8} and \eqref{bc22}--\eqref{bc24} that
+\begin{align}
+l_0 =& \lim_{n\to\i}P_{6n} = c = \df{z}{z-1},\label{bc32}\\
+l_0^{\prime} =& \lim_{n\to\i}Q_{6n} = c^{\prime} =\df{2z-zG(z)-1}{z-1},
+\label{bc33}
+\end{align}
+and from \eqref{bc10} we further deduce that
+\begin{equation}\label{bc26}
+L_0=\df{l_0}{l_0^{\prime}} = \df{z}{2z -zG(z)-1},
+\end{equation}
+as claimed in Theorem \ref{tbc1}. 
+
+Next, we compute $ l_1, l_2, l_1^{\prime}$, and $ l_2^{\prime}$.  To find $ 
+l_1$, first return to \eqref{bc12} and set $ n = 6k+3$ to obtain
+\begin{equation}\label{bc27}
+P_{6k+3} = (a_{6k+2}+a_{6k+1}+a_{6k+2}a_{6k+1})P_{6k+1} -(1+a_{6k+2})P_{6k}.
+\end{equation}
+Since, by \eqref{bc22}, $ P_{6k} = c(1-z^{2k}) $ and $ P_{6k+3} =
+-c(1-z^{2k+1})$, since, by \eqref{bc5b}, 
+\begin{equation}\label{bc29}
+ a_{6k+2} = z^{2k+1}G(z^{2k+1}), 
+\end{equation} 
+and since, by \eqref{bc17}, 
+\begin{equation}\label{bc30}
+ a_{6k+2}+a_{6k+1}+a_{6k+2}a_{6k+1} = z^{2k+1},
+\end{equation}
+we find that, by \eqref{bc27}, 
+\begin{align*}
+P_{6k+1}=& \df{-c(1-z^{2k+1}) +
+ (1+z^{2k+1}G(z^{2k+1}))c(1-z^{2k})}{z^{2k+1}} \\
+=& c\left(1+G(z^{2k+1})-\df{1}{z}-z^{2k}G(z^{2k+1})\right). 
+\end{align*}
+It follows from \eqref{bc8} and \eqref{bc23} that
+\begin{equation}\label{bc28}
+l_1=\lim_{k\to\i}P_{6k+1} = c\left(1+G(0)-\df{1}{z}\right) =
+\df{z+zG(0)-1}{z-1}.
+\end{equation}
+By \eqref{bc22}, $ Q_{6k} = c^{\prime}(1-z^{2k})+z^{2k} $ and 
+$ Q_{6k+3}=-c^{\prime}(1-z^{2k+1})-z^{2k+1}$. Using also \eqref{bc29} and
+\eqref{bc30} in \eqref{bc27}, with $ P $ replaced by $ Q$, we find that
+\begin{align*}
+Q_{6k+1} =& \df{-c^{\prime}(1-z^{2k+1})-z^{2k+1} + (1+z^{2k+1}G(z^{2k+1}))
+(c^{\prime}(1-z^{2k})+z^{2k})}{z^{2k+1}} \\
+=&c^{\prime}-1-\df{c^{\prime}}{z}+\df{1}{z}+c^{\prime}G(z^{2k+1})
++O(z^{2k}). 
+\end{align*}
+It follows from \eqref{bc8} that
+\begin{align}\label{bc31}
+l_1^{\prime} =& \lim_{k\to\i}Q_{6k+1} = 
+c^{\prime}-1-\df{c^{\prime}}{z}+\df{1}{z}+c^{\prime}G(0)\notag\\
+=&\df{(c^{\prime}-1)(z-1)}{z} +c^{\prime}G(0)\notag\\
+=&1-G(z)+\df{1-2z+zG(z)}{1-z}G(0), 
+\end{align}
+by two applications of \eqref{bc24}. Hence, by \eqref{bc28} and \eqref{bc31},
+we deduce, by \eqref{bc10}, that
+\begin{equation*}
+L_1=\df{l_1}{l_1^{\prime}} = \df{z+zG(0)-1}{z-1} \cdot
+\df{1-z}{(1-G(z))(1-z)+G(0)(1-2z+zG(z))}, 
+\end{equation*}
+which, upon simplification, yields \eqref{bc4b}. 
+
+Finally, we calculate $ L_2$. By \eqref{bc9}, \eqref{bc28}, and \eqref{bc32}, 
+\begin{equation}\label{bc34}
+l_2 = l_1-l_0 = \df{z+zG(0)-1}{z-1} -\df{z}{z-1} = \df{zG(0)-1}{z-1},
+\end{equation}
+and by \eqref{bc9}, \eqref{bc31}, and \eqref{bc33},
+\begin{align}\label{bc35}
+l_2^{\prime}=l_1^{\prime}-l_0^{\prime} =&1-G(z)+\df{1-2z+zG(z)}{1-z}G(0)-
+\df{2z-zG(z)-1}{z-1}\notag \\
+=&\df{G(0)(1-2z+zG(z))+z-G(z)}{1-z},
+\end{align}
+upon simplification. Using \eqref{bc34} and \eqref{bc35} in conjunction with
+\eqref{bc10}, we conclude that
+\begin{equation*}
+L_2 = \df{l_2}{l_2^{\prime}} = \df{zG(0)-1}{z-1} \cdot
+\df{1-z}{G(0)(1-2z+zG(z))+z-G(z)},
+\end{equation*}
+which, after simplification, yields \eqref{bc4c}. 
+
+This then completes the proof of Theorem \ref{tbc1}. 
+\end{proof}
+
+ Under certain conditions, the formulas of Theorem \ref{tbc1}
+greatly simplify.  If $ G(0) = 0$, then 
+\begin{equation}\label{bc36}
+L_1 = \df{1}{1-G(z)},
+\end{equation}
+while, if $ F(0)=0$, then, by \eqref{bc1}, $ G(0) =1$ and
+\begin{equation}\label{bc37}
+L_2 = \df{1}{1-G(z)}.
+\end{equation}
+Also, if $ G(0) =0$, then
+\begin{equation}\label{bc38}
+L_2= \df{1}{z-G(z)},
+\end{equation}
+while, if $ G(0)=-1$, then
+\begin{equation*}
+L_1=\df{1}{z-G(z)}.
+\end{equation*}
+
+We conclude this section by offering two interesting examples to illustrate
+Theorem \ref{tbc1}. 
+
+\begin{corollary}\label{cbc1} 
+For any complex number $z$, with $ |z| < 1$, the continued fraction 
+\begin{align*}
+&\df{1}{1}\-\df{1}{(1-z)^{-1}}\-\df{1}{1-z^2}\-\df{1}{(1-z)^{-1}-z^2} \-
+\df{1}{(1-z^2)^{-1}}\-\df{1}{1-z^4}\-\df{1}{(1-z^2)^{-1}-z^3} \\
+&\-\cds\-\df{1}{(1-z^n)^{-1}}\-\df{1}{1-z^{2n}}\-\df{1}{(1-z^n)^{-1}
+-z^{n+1}} \-\cds 
+\end{align*}
+has three limit points, and they are given by
+\begin{equation*}
+L_0=\df{z}{z^2+2z-1}, \quad L_1 =\df{1}{1+z}, \quad L_2 = \df{1}{2z}.
+\end{equation*}
+\end{corollary}
+
+\begin{proof} Set
+\begin{equation*}
+F(z) = \df{1}{1-z} \qquad \text{and} \qquad G(z) = -z.
+\end{equation*}
+It is easily checked that $ F $ and $ G $ satisfy \eqref{bc1} and the
+conditions of Theorem \ref{tbc1}, and so the desired result readily follows. 
+\end{proof}
+
+\begin{corollary}\label{cbc2} 
+For any complex number $z$, with $ |z| < 1$, the continued fraction 
+\begin{align*}
+&\df{1}{1}\-\df{1}{\sqrt{1+z}}\-\df{1}{\sqrt{1+z}}\-
+\df{1}{z^{-1}\left(\sqrt{1+z}-1\right)+z^{-2}\left(\sqrt{1+z^2}-1\right)}\\
+&\-\df{1}{\sqrt{1+z^2}}\-\df{1}{\sqrt{1+z^2}}\-
+\df{1}{z^{-2}\left(\sqrt{1+z^2}-1\right)+z^{-3}\left(\sqrt{1+z^3}-1\right)}
+\\ &\-\cds\-\df{1}{\sqrt{1+z^n}}\-\df{1}{\sqrt{1+z^n}}\-
+\df{1}{z^{-n}\left(\sqrt{1+z^n}-1\right)+z^{-n-1}\left(\sqrt{1+z^{n+1}}
+-1\right)}\-\cds 
+\end{align*}
+has the three limit points
+\begin{equation*}
+L_0 = \df{z}{2z-\sqrt{1+z}}, \qquad L_1
+=\df{z(3z-2)}{(3z-2)\left(1+z-\sqrt{1+z}\right)+z(z-1)}, 
+\end{equation*}
+and
+\begin{equation*}
+L_2 = \df{z(2-z)}{(2-z)\left(1+z-\sqrt{1+z}\right)+z(z-1)}.
+\end{equation*}
+\end{corollary}
+
+\begin{proof}
+In Theorem \ref{tbc1}, take
+\begin{equation*}
+F(z) = G(z) = \df{\sqrt{1+z}-1}{z}.
+\end{equation*}
+The functions $ F $ and $ G $ clearly satisfy the condition \eqref{bc1},
+ as well as  the other conditions of the theorem.  The desired result now
+ readily follows. 
+\end{proof}
+
+
+
+
+\section{The Special Case $ a = \omega $ of \eqref{b1}}\label{omega}
+
+It is interesting to note that in this special case $ \O = 0$, and so the
+three limits in \eqref{b1} are identical. 
+
+A Bauer--Muir transformation \cite[pp.~76--77]{lisa} 
+of a continued fraction $b_0+${\bf K}$\left( 
+{a_n}/{b_n}\right) $
+is a (new) continued fraction whose approximants 
+have the values 
+\begin{equation}\label{s4.1}
+S_k(w_k):= b_0+ \frac{a_1}{b_1} \+ \frac{a_2}{b_2} \+ \cds \+ 
+\frac{a_k}{b_k+w_k}, \quad k=0,1,2,\dots. 
+\end{equation}
+Such a transformation exists if 
+\begin{equation}\label{s4.2}
+\lambda_k:= a_k -w_{k-1} (b_k+w_k) \neq 0, \quad k\geq 1, 
+\end{equation}
+and it is given by
+\begin{equation}\label{s4.3}
+b_0+w_0+\frac{\lambda_1}{b_1+w_1} \+ \frac{a_1 \lambda_2/\lambda_1}
+{b_2+w_2-w_0\lambda_2/\lambda_1} \+ \frac{a_2\lambda_3/\lambda_2}
+{b_3+w_3-w_1\lambda_3/\lambda_2} \+ \cds . 
+\end{equation}
+
+
+\begin{theorem}\label{st4.1}
+For a cube root of unity $\o, $ 
+\begin{equation}\label{s4.4}
+\lim_{n \to \i} \left(\df{1}{1} \- \df{1}{1+q} \- \df{1}{1+q^2} \- \cds \- 
+\df{1}{1+q^n +\o}\right) = -\o\df{(q^2;q^3)_{\i}}{(q;q^3)_{\i}}. 
+\end{equation}
+\end{theorem}
+
+\begin{proof}
+Let $L_n $ denote the reciprocal of the continued fraction on the left hand 
+side of \eqref{s4.4}, and if we employ the notation of \eqref{s4.1}, 
+then $b_0 =1, a_n = -1, 
+$ and $b_n = 1 + q^n, $ for $n \ge 1, $ and $\o_n = \o, $ for $n \ge 0.$  
+
+If $q=0$, then \eqref{s4.4} reduces to a tautology. Hence assume 
+that $q \ne 0.$ 
+Then, 
+from \eqref{s4.2}, for $n\ge 1,$
+$$\l_n = -1 -\o (1+q^n +\o) = -1-\o -\o^2 -\o q^n = -\o q^n \ne 0. $$
+Thus, by \eqref{s4.3},
+\begin{align}\label{s4.5}
+L_n &= 1 +\o + \df{-\o q}{1+q+\o} \+ \df{-q}{1+q^2+\o -\o q} \+ 
+\df{-q}{1+q^3 +\o -\o q} \+ \cds \notag\\
+&= -\o^2 + \df{\o^2 q}{1-\o q} \+ \df{\o q}{1+q^2 +\o -\o q} \+ 
+\df{-q}{1+q^3 +\o -\o q} \+ \cds \notag\\
+& =: -\o^2 + \df{\o^2 q}{C_1}, 
+\end{align}
+after using an equivalence transformation for the continued fraction. 
+
+For the continued fraction $C_1$, in the notation of \eqref{s4.1}, 
+$$b_0 = 1-\o q, \quad a_1 = \o q, \quad a_n = -q, \quad n\ge 2, 
+\quad \text{and} 
+\quad b_n = 1 +q^{n+1} + \o -\o q, \quad n\ge 1. $$
+We apply the Bauer--Muir transformation a second time. 
+Set $\o_0 = -\o^2 q $ and 
+$\o_i = \o q, $ for $ i \ge 1.$  A brief calculation shows that, by
+\eqref{s4.2},  
+$$\l_1 = q^3 \o^2 \ne 0 \quad \text{and} \quad \l_k=-q^{k+2} \o \ne 0 \quad 
+\text{for } \quad  k\ge 2. $$
+Hence, from \eqref{s4.3}, after applying the Bauer--Muir transformation 
+to $C_1$, we have 
+\begin{align}\label{s4.6}
+C_1 &= 1+q + \df{\o^2 q^3}{1+q^2+\o} \+ \df{-q^2}{1+q^3+\o-\o q^2} \+ 
+\df{-q^2}{1+q^4+\o - \o q^2} \+ \cds \notag\\
+&= 1+q + \df{-q^3}{1-\o q^2} \+ \df{\o q^2}{1+q^3 + \o -\o q^2} \+ 
+\df{-q^2}{1+q^4+\o -\o q^2} \+ \cds, 
+\end{align}
+after applying an equivalence transformation. Combining \eqref{s4.5} and
+\eqref{s4.6}, we have   
+\begin{align}\label{s4.7}
+L_n &= -\o^2 + \df{\o^2 q}{1+q} \+ \df{-q^3}{1-\o q^2} \+ \df{\o q^2}
+{1+q^3 +\o -\o q^2} \+ \df{-q^2}{1+q^4 +\o -\o q^2} \+ \cds \notag\\
+%\df{-q^2}{1+q^5+\o -\o q^2} \+ \cds \\
+&=: -\o^2 + \df{\o^2 q}{1+q} \+ \df{-q^3}{C_2}. 
+\end{align}
+Applying the Bauer--Muir transformation to $C_2 $ and 
+proceeding as in the two 
+previous applications, we find that if $\o_0 = -\o^2 q^2 $ 
+and $\o_i = \o q^2, $
+ for $i\ge 1, $ then 
+$$\l_1 = \o^2 q^5 \ne 0 \quad \text{and} \quad \l_k = -q^{k+4}
+\o \ne 0, \quad k\ge 2. $$
+Thus, $b_0 + \o_0 = 1 + q^2, $ $b_1 + \o_1 = 1 + q^3 + \o, $ 
+$b_n + \o_n - \o_0 \l_n/\l_{n-1} = 1 + q^ {n+2} + \o - q^3 \o, $ and 
+$a_n \l_{n+1}/\l_n = -q^3, $ for $n \ge 1. $ 
+Hence, from \eqref{s4.7}, after using an equivalence transformation, we have 
+\begin{align}\label{s4.8}
+L_n &= -\o^2 + \df{\o^2 q}{1+q} \+ \df{-q^3}{1+q^2}
+ \+ \df{\o^2 q^5}{1+q^3 + \o} 
+\+ \df{-q^3}{1+q^4+\o -\o q^3} \+ \df{-q^3}{1+q^5 +\o -\o q^3} \+\cds\notag \\
+&= -\o^2 + \df{\o^2 q}{1+q} \+ \df{-q^3}{1+q^2} \+ \df{-q^5}{1-\o q^3} \+ 
+\df{\o q^3}{1+q^4 +\o -\o q^3} \+ \df{-q^3}{1+q^5 +\o -\o q^3} 
+\+ \cds\notag \\
+%\df{-q^3}{1+q^6 +\o -\o q^3} \+ \cds \\
+&= \cdots \notag\\
+&= -\o^2 + \df{\o^2 q}{1+q} \+ \df{-q^3}{1+q^2}
+ \+ \df{-q^5}{1+q^3} \+ \cds \+ 
+\df{-q^{2n-1}}{C_n}, 
+\end{align} 
+where 
+$$C_n = 1 - \o q^n + \df{\o q^n }{1+q^{n+1} + \o - \o q^n } \+ 
+\df{-q^n}{1+q^{n+2} +\o -\o q^n} \+ \df{-q^n}{1+q^{n+3} +\o -\o q^n} 
+\+ \cds $$
+after an easy inductive argument on $n $ with $\o_0 = -\o^2 q^n $ and 
+$\o_i = \o q^n, $ for $ i\ge 1 $ after the $n$-th step. Upon taking the 
+reciprocal in \eqref{s4.8}, 
+ letting $n $ tend to $\i, $ and using \eqref{b3}, we deduce \eqref{s4.4}.
+\end{proof}
+
+The authors are grateful to Lisa Lorentzen for several very helpful
+comments. 
+
+\begin{thebibliography}{99}
+
+\bibitem{gea1}
+G.~E.~Andrews, \emph{The Theory of Partitions},
+ Addison--Wesley,  Reading, MA,  1976.
+
+%\bibitem{lost}
+%G.~E.~Andrews, \emph{An introduction to Ramanujan's ``lost''
+%notebook}, Amer. Math. Monthly \textbf{86} (1979), 89--108.
+
+\bibitem{page}
+G.~E.~Andrews, \emph{A page from Ramanujan's lost notebook},
+Indian J.~Math.~\textbf{32} (1990), 207--216.
+
+
+%\bibitem{geabcbI}
+%G.~E.~Andrews and B.~C.~Berndt, \emph{Ramanujan's Lost Notebook,
+%Part I}, Springer--Verlag, New York, to appear.
+
+\bibitem{abjl}
+G.~E.~Andrews, B.~C.~Berndt, L.~Jacobsen, R.~L.~Lamphere,
+\emph{The Continued Fractions Found in the Unorganized Portions of
+Ramanujan's Notebooks}, Memoir Amer.~Math.~Soc., No.~477, \textbf{99}
+(1992).
+
+\bibitem{quintuple}
+G.~E.~Andrews, B.~C.~Berndt, J.~Sohn, A.~J.~Yee, and A.~Zaharescu, 
+\emph{On Ramanujan's continued fraction for $(q^2;q^3)_{\i}/(q;q^3)_{\i}$}, 
+submitted for publication.
+
+%\bibitem{III}
+%B.~C.~Berndt, \emph{Ramanujan's Notebooks, Part III},
+%Springer--Verlag, New York, 1991.
+
+\bibitem{V}
+B.~C.~Berndt, \emph{Ramanujan's Notebooks, Part V},
+Springer--Verlag, New York, 1998.
+
+%\bibitem{bs}
+%B.~C.~Berndt and J.~Sohn, \emph{Asymptotic formulas for two
+%continued fractions in Ramanujan's lost notebook}, J.~London
+%Math.~Soc., to appear.
+
+\bibitem{mdh74}
+M.~D.~Hirschhorn,
+\emph{A continued fraction}, 
+Duke Math.~J. \textbf{41} (1974), 27--33.
+
+\bibitem{huang}
+S.--S. Huang, \emph{Ramanujan's evaluations of Rogers--Ramanujan
+type continued fractions at primitive roots of unity}, Acta
+Arith. \textbf{80} (1997), 49--60.
+
+\bibitem{lisaj}
+L.~Jacobsen, \emph{General convergence of continued fractions},
+Trans.~Amer.~Math.~Soc.~\textbf{294} (1986), 477--485.
+
+
+\bibitem{lisa}
+L.~Lorentzen and H.~Waadeland, \emph{Continued Fractions with
+Applications}, North Holland, Amsterdam, 1992.
+
+%\bibitem{cp}
+%S.~Ramanujan, \emph{Collected Papers}, Cambridge University
+%Press, Cambridge, 1927; reprinted by Chelsea, New York, 1962;
+%reprinted by the American Mathematical Society, Providence, RI,
+%2000.
+
+\bibitem{nb}
+S.~Ramanujan, \emph{Notebooks} (2 volumes), Tata Institute of
+Fundamental Research, Bombay, 1957.
+
+\bibitem{lnb}
+S.~Ramanujan, \emph{The Lost Notebook and Other Unpublished
+Papers}, Narosa, New Delhi, 1988.
+
+%\bibitem{selberg}
+%A.~Selberg, \emph{\"Uber einige arithmetische Identit\"aten}
+%Avh.~Norske Vid.--Akad.~Oslo I.~Mat.--Naturv.~Kl, No.~8, (1936),
+%3--23.
+
+
+
+
+
+
+
+\end{thebibliography}
+
+
+
+
+
+
+
+\end{document}
+
+\begin{lemma}\label{lem:y5} For any complex numbers $ a, b$, with $ b \neq
+0$, 
+\begin{align}\label{eq:y7}
+&\frac{(1+a/b)}{(aq)_{\infty}}
+\sum_{n=0}^{\infty} \frac{(-1)^n a^n
+q^{n(n+1)/2}}{(q)_n(aq/b)_n}-\frac{a}{b}\frac{1}{(aq)_{\infty}}
+\sum_{n=0}^{\infty} \frac{(-1)^n a^n q^{n(n+1)/2+n}}{(q)_n
+(aq/b)_n}\notag \\=&\sum_{n=0}^{\infty} \frac{(-1)^n a^{2n} b^{-n}
+q^{n(3n-1)/2}}{(q)_n(aq/b)_n(aq)_n}.
+\end{align}
+\end{lemma}
+
+\begin{proof}
+We need a limiting case of Watson's $q$-analogue of Whipple's theorem 
+given in 
+Andrews's paper \cite[eq.~(2.3)]{page},
+\begin{equation} \label{eq:y8}
+\sum_{n=0}^{\infty} \frac{(-1)^n a^{2n} b^{-n}
+q^{n(3n+1)/2}}{(q)_n (aq/b)_{n} (aq)_n}=\frac{1}{(aq)_{\infty}}
+\sum_{n=0}^{\infty} \frac{(-1)^n a^n q^{n(n+1)/2}}{(q)_n (aq/b)_n}.
+\end{equation}
+By replacing $b$ by $bq$ and multiplying both sides by $(1-a/b)$,
+we obtain
+\begin{equation*}
+\sum_{n=0}^{\infty} \frac{(-1)^n a^{2n} b^{-n}(1-a q^n/b)
+q^{n(3n-1)/2}}{(q)_n (aq/b)_{n} (aq)_n}=\frac{1}{(aq)_{\infty}}
+\sum_{n=0}^{\infty} \frac{(-1)^n a^n (1-a q^n/b) q^{n(n+1)/2}}
+{(q)_n (aq/b)_n},
+\end{equation*}
+or,
+\begin{align}
+&\sum_{n=0}^{\infty} \frac{(-1)^n a^{2n} b^{-n}
+q^{n(3n-1)/2}}{(q)_n (aq/b)_{n}
+(aq)_n}-\frac{a}{b}\sum_{n=0}^{\infty} \frac{(-1)^n a^{2n} b^{-n}
+q^{n(3n+1)/2}}{(q)_n (aq/b)_{n} (aq)_n} \notag\\
+=&\frac{1}{(aq)_{\infty}} \sum_{n=0}^{\infty} \frac{(-1)^n a^n
+ q^{n(n+1)/2}} {(q)_n (aq/b)_n}-\frac{a}{b}\frac{1}{(aq)_{\infty}}
+\sum_{n=0}^{\infty} \frac{(-1)^n a^n
+ q^{n(n+1)/2+n}} {(q)_n (aq/b)_n}.\notag
+\end{align}
+Using (\ref{eq:y8}) above, we deduce \eqref{eq:y7}. 
+%\begin{align}
+%&\sum_{n=0}^{\infty} \frac{(-1)^n a^{2n} b^{-n}
+%q^{n(3n-1)/2}}{(q)_n (aq/b)_{n} (aq)_n} \notag\\
+%=&\frac{1+a/b}{(aq)_{\infty}} \sum_{n=0}^{\infty} \frac{(-1)^n a^n
+% q^{n(n+1)/2}} {(q)_n (aq/b)_n}-\frac{a}{b}\frac{1}{(aq)_{\infty}}
+%\sum_{n=0}^{\infty} \frac{(-1)^n a^n
+% q^{n(n+1)/2+n}} {(q)_n (aq/b)_n}.\notag
+%\end{align}
+\end{proof}
+
+To maintain the flow of the next proof, we place here the two applications of
+Lemma \ref{lem:y5} which will be needed.
+
+If we set $ a = \o $ and $ b = \o^2 $ in \eqref{eq:y7}, we find that, after
+some simplification,
+\begin{align}\label{applic1}
+&-\df{\o}{(\o
+ q)_{\i}}\left\{\sum_{n=0}^{\i}\df{(-\o)^nq^{n(n+1)/2}}{(q)_n(\o^2q)_n} +
+\o \sum_{n=0}^{\i}\df{(-\o)^nq^{n(n+1)/2+n}}{(q)_n(\o^2q)_n}\right\}\notag \\
+=& \sum_{n=0}^{\i}\df{(-1)^nq^{n(3n-1)/2}}{(q^3;q^3)_n} = (q;q^3)_{\i},
+\end{align}
+by letting $ N \to \i $ in \eqref{binomial1}, with $ q $ replaced by $ q^3 $
+and $ z = q$. 
+
+Next, if we set $ a = \o^2 $ and $ b = \o $ in \eqref{eq:y7}, we find 
+that, after some simplification,
+\begin{align}\label{applic2}
+&-\df{\o^2}{(\o^2
+ q)_{\i}}\left\{\sum_{n=0}^{\i}\df{(-\o^2)^nq^{n(n+1)/2}}{(q)_n(\o q)_n} +
+\o \sum_{n=0}^{\i}\df{(-\o^2)^nq^{n(n+1)/2+n}}{(q)_n(\o q)_n}\right\}\notag \\
+=& \sum_{n=0}^{\i}\df{(-1)^nq^{n(3n-1)/2}}{(q^3;q^3)_n} = (q;q^3)_{\i}.
+\end{align}
+
+

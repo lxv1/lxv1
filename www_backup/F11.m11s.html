@@ -1,0 +1,303 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title>Math 484</title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="1038.36">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 17.0px 'Lucida Grande'}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 16.0px 'Times New Roman'}
+    p.p3 {margin: 0.0px 0.0px 0.0px 0.0px; font: 16.0px 'Times New Roman'; min-height: 18.0px}
+    p.p4 {margin: 0.0px 0.0px 0.0px 0.0px; font: 17.0px 'Lucida Grande'; min-height: 20.0px}
+    span.s1 {font: 13.0px 'Times New Roman'}
+    span.s2 {font: 14.0px 'Lucida Grande'}
+    span.s3 {text-decoration: underline}
+    span.s4 {font: 17.0px 'Hiragino Kaku Gothic ProN'}
+    table.t1 {border-collapse: collapse}
+    td.td1 {width: 14.0px; border-style: solid; border-width: 1.0px 1.0px 1.0px 1.0px; border-color: #000000 #000000 #000000 #000000; padding: 0.0px 7.0px 0.0px 7.0px}
+    td.td2 {width: 14.0px; border-style: solid; border-width: 1.0px 1.0px 1.0px 0.0px; border-color: #000000 #000000 #000000 #000000; padding: 0.0px 7.0px 0.0px 7.0px}
+    td.td3 {width: 13.0px; border-style: solid; border-width: 1.0px 1.0px 1.0px 0.0px; border-color: #000000 #000000 #000000 #000000; padding: 0.0px 7.0px 0.0px 7.0px}
+    td.td4 {width: 65.0px; border-style: solid; border-width: 1.0px 1.0px 1.0px 0.0px; border-color: #000000 #000000 #000000 #000000; padding: 0.0px 7.0px 0.0px 7.0px}
+    td.td5 {width: 14.0px; border-style: solid; border-width: 0.0px 1.0px 1.0px 1.0px; border-color: #000000 #000000 #000000 #000000; padding: 0.0px 7.0px 0.0px 7.0px}
+    td.td6 {width: 14.0px; border-style: solid; border-width: 0.0px 1.0px 1.0px 0.0px; border-color: #000000 #000000 #000000 #000000; padding: 0.0px 7.0px 0.0px 7.0px}
+    td.td7 {width: 13.0px; border-style: solid; border-width: 0.0px 1.0px 1.0px 0.0px; border-color: #000000 #000000 #000000 #000000; padding: 0.0px 7.0px 0.0px 7.0px}
+    td.td8 {width: 65.0px; border-style: solid; border-width: 0.0px 1.0px 1.0px 0.0px; border-color: #000000 #000000 #000000 #000000; padding: 0.0px 7.0px 0.0px 7.0px}
+    td.td9 {width: 14.0px; border-style: solid; border-width: 1.0px 1.0px 1.0px 0.0px; border-color: #000000 #000000 #000000 transparent; padding: 0.0px 7.0px 0.0px 7.0px}
+    td.td10 {width: 13.0px; border-style: solid; border-width: 1.0px 1.0px 1.0px 0.0px; border-color: #000000 #000000 #000000 transparent; padding: 0.0px 7.0px 0.0px 7.0px}
+    td.td11 {width: 65.0px; border-style: solid; border-width: 1.0px 1.0px 1.0px 0.0px; border-color: #000000 #000000 #000000 transparent; padding: 0.0px 7.0px 0.0px 7.0px}
+    td.td12 {width: 14.0px; border-style: solid; border-width: 0.0px 1.0px 1.0px 1.0px; border-color: transparent #000000 #000000 #000000; padding: 0.0px 7.0px 0.0px 7.0px}
+    td.td13 {width: 14.0px; border-style: solid; border-width: 0.0px 1.0px 1.0px 0.0px; border-color: transparent #000000 #000000 transparent; padding: 0.0px 7.0px 0.0px 7.0px}
+    td.td14 {width: 13.0px; border-style: solid; border-width: 0.0px 1.0px 1.0px 0.0px; border-color: transparent #000000 #000000 transparent; padding: 0.0px 7.0px 0.0px 7.0px}
+    td.td15 {width: 65.0px; border-style: solid; border-width: 0.0px 1.0px 1.0px 0.0px; border-color: transparent #000000 #000000 transparent; padding: 0.0px 7.0px 0.0px 7.0px}
+    td.td16 {width: 19.0px; border-style: solid; border-width: 1.0px 1.0px 1.0px 0.0px; border-color: #000000 #000000 #000000 #000000; padding: 0.0px 7.0px 0.0px 7.0px}
+    td.td17 {width: 19.0px; border-style: solid; border-width: 0.0px 1.0px 1.0px 0.0px; border-color: #000000 #000000 #000000 #000000; padding: 0.0px 7.0px 0.0px 7.0px}
+    td.td18 {width: 19.0px; border-style: solid; border-width: 1.0px 1.0px 1.0px 0.0px; border-color: #000000 #000000 #000000 transparent; padding: 0.0px 7.0px 0.0px 7.0px}
+    td.td19 {width: 19.0px; border-style: solid; border-width: 0.0px 1.0px 1.0px 0.0px; border-color: transparent #000000 #000000 transparent; padding: 0.0px 7.0px 0.0px 7.0px}
+  </style>
+</head>
+<body>
+<p class="p1">Math 484.1  September 29, 2011  Name:_________Dr.V.________________________________</p>
+<p class="p1">Midterm 1,  5 problems, 15 points each.  Return this page with your name on both sides.</p>
+<p class="p2"> </p>
+<p class="p2"> 1. Solve for <i>x</i> and <i>y</i> where <i>a</i> is a given number:</p>
+<p class="p2"><i>a</i><span class="s1"><sup>2</sup></span><i>x</i> + <i>y</i>= <i>a</i><span class="s1"><sup>2</sup></span>,</p>
+<p class="p2"><i>ax</i> +<i>ay</i> = 1<i>.</i></p>
+<p class="p2"> </p>
+<p class="p2">Solution. A row addition operation gives</p>
+<p class="p2"><i>a</i><span class="s1"><sup>2</sup></span><i>x</i> + <i>y</i>= <i>a</i><span class="s1"><sup>2</sup></span>,</p>
+<p class="p2">(<i>a - a</i><span class="s1"><sup>3</sup></span><i> </i>)<i>x</i> = 1 <i>- a</i><span class="s1"><sup>3</sup></span><i>.</i></p>
+<p class="p2">If <i>a</i><span class="Apple-converted-space">  </span>≠ 0 , ±1, then<span class="Apple-converted-space">  </span><i>x </i>= (1<i> - a</i><span class="s1"><sup>3</sup></span><i> </i>)/(<i>a - a</i><span class="s1"><sup>3</sup></span><i> </i>)=<span class="Apple-converted-space">  </span>(1<i>+ a +a</i><span class="s1"><sup>2</sup></span><i> </i>)/(<i>a + a</i><span class="s1"><sup>2</sup></span><i> </i>) and</p>
+<p class="p2">y = (1-<i>x</i>)<i>a</i><span class="s1"><sup>2</sup></span> =<span class="Apple-converted-space">  </span>-<i>a</i>/(1+<i>a</i>).</p>
+<p class="p2">If<span class="Apple-converted-space">  </span><i>a </i>= 0 or -1, then<span class="Apple-converted-space">  </span>there are no solutions.</p>
+<p class="p2">If <i>a</i> = 1, then <i>y </i>= 1 - <i>x </i>(<i>x </i>arbitrary).</p>
+<p class="p3"><br></p>
+<p class="p2">  2. 4<i>x</i> + <i>y</i><span class="s1"><sup> 2</sup></span> -&gt; min,</p>
+<p class="p2"> <i>x</i><span class="s1"><sup>2 </sup></span>+  <i>y</i><span class="s1"><sup> 2 </sup></span>= 10; <i>x</i> and <i>y</i> integers.</p>
+<p class="p3"><br></p>
+<p class="p2">Solution There are 8 feasible solutions: (x, y) = (±1, ±3), (±3, ±1).</p>
+<p class="p2">min =- -11 at<span class="Apple-converted-space">  </span><i>x</i> = -3, <i>y</i> = ±1 (two optimal solutions).</p>
+<p class="p2"> </p>
+<p class="p2">3, 4. Solve the linear programs given by the following tableaux with all decision variables <i>x</i><span class="s1"><i><sub>i</sub></i></span><i> </i>≥ 0:</p>
+<p class="p2"> </p>
+<table cellspacing="0" cellpadding="0" class="t1">
+  <tbody>
+    <tr>
+      <td valign="top" class="td1">
+        <p class="p2"><i>x</i><span class="s1"><sub>1</sub></span></p>
+      </td>
+      <td valign="top" class="td2">
+        <p class="p2"><i>x</i><span class="s1"><sub>2</sub></span></p>
+      </td>
+      <td valign="top" class="td2">
+        <p class="p2"><i>x</i><span class="s1"><sub>3</sub></span></p>
+      </td>
+      <td valign="top" class="td3">
+        <p class="p2">-1</p>
+      </td>
+      <td valign="top" class="td4">
+        <p class="p2">Problem 3</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td5">
+        <p class="p2">-1</p>
+      </td>
+      <td valign="top" class="td6">
+        <p class="p2">0</p>
+      </td>
+      <td valign="top" class="td6">
+        <p class="p2">-1</p>
+      </td>
+      <td valign="top" class="td7">
+        <p class="p2">2</p>
+      </td>
+      <td valign="top" class="td8">
+        <p class="p2">= <i>x</i><span class="s1"><sub>4</sub></span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td5">
+        <p class="p2">1</p>
+      </td>
+      <td valign="top" class="td6">
+        <p class="p2">0</p>
+      </td>
+      <td valign="top" class="td6">
+        <p class="p2">-1</p>
+      </td>
+      <td valign="top" class="td7">
+        <p class="p2">-1</p>
+      </td>
+      <td valign="top" class="td8">
+        <p class="p2">-&gt; min</p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<p class="p2"> </p>
+<p class="p2">Solution. The standard tableau is</p>
+<table cellspacing="0" cellpadding="0" class="t1">
+  <tbody>
+    <tr>
+      <td valign="top" class="td1">
+        <p class="p2"><i>x</i><span class="s1"><sub>1</sub></span></p>
+      </td>
+      <td valign="top" class="td9">
+        <p class="p2"><i>x</i><span class="s1"><sub>2</sub></span></p>
+      </td>
+      <td valign="top" class="td9">
+        <p class="p2"><i>x</i><span class="s1"><sub>3</sub></span></p>
+      </td>
+      <td valign="top" class="td10">
+        <p class="p2">1</p>
+      </td>
+      <td valign="top" class="td11">
+        <p class="p2">Problem 3</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td12">
+        <p class="p2">-1</p>
+      </td>
+      <td valign="top" class="td13">
+        <p class="p2">0</p>
+      </td>
+      <td valign="top" class="td13">
+        <p class="p2">-1</p>
+      </td>
+      <td valign="top" class="td14">
+        <p class="p2">-2</p>
+      </td>
+      <td valign="top" class="td15">
+        <p class="p2">= <i>x</i><span class="s1"><sub>4</sub></span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td12">
+        <p class="p2">1</p>
+      </td>
+      <td valign="top" class="td13">
+        <p class="p2">0</p>
+      </td>
+      <td valign="top" class="td13">
+        <p class="p2">-1</p>
+      </td>
+      <td valign="top" class="td14">
+        <p class="p2">1</p>
+      </td>
+      <td valign="top" class="td15">
+        <p class="p2">-&gt; min</p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<p class="p2"> The<span class="Apple-converted-space">  </span><i>x</i><span class="s1"><sub>4</sub></span>-row is bad, so LP is feasible.</p>
+<p class="p3"><br></p>
+<p class="p3"><br></p>
+<p class="p3"><br></p>
+<table cellspacing="0" cellpadding="0" class="t1">
+  <tbody>
+    <tr>
+      <td valign="top" class="td1">
+        <p class="p2"><i>x</i><span class="s1"><sub>1</sub></span></p>
+      </td>
+      <td valign="top" class="td2">
+        <p class="p2"><i>x</i><span class="s1"><sub>2</sub></span></p>
+      </td>
+      <td valign="top" class="td16">
+        <p class="p2"><i>-x</i><span class="s1"><sub>3</sub></span></p>
+      </td>
+      <td valign="top" class="td3">
+        <p class="p2">1</p>
+      </td>
+      <td valign="top" class="td4">
+        <p class="p2">Problem 4</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td5">
+        <p class="p2">1</p>
+      </td>
+      <td valign="top" class="td6">
+        <p class="p2">0</p>
+      </td>
+      <td valign="top" class="td17">
+        <p class="p2">1</p>
+      </td>
+      <td valign="top" class="td7">
+        <p class="p2">-2</p>
+      </td>
+      <td valign="top" class="td8">
+        <p class="p2">=- <i>x</i><span class="s1"><sub>4</sub></span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td5">
+        <p class="p2">1</p>
+      </td>
+      <td valign="top" class="td6">
+        <p class="p2">0</p>
+      </td>
+      <td valign="top" class="td17">
+        <p class="p2">-1</p>
+      </td>
+      <td valign="top" class="td7">
+        <p class="p2">-1</p>
+      </td>
+      <td valign="top" class="td8">
+        <p class="p2">-&gt; min</p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<p class="p2"> </p>
+<p class="p2">Solution. . The standard tableau is</p>
+<table cellspacing="0" cellpadding="0" class="t1">
+  <tbody>
+    <tr>
+      <td valign="top" class="td1">
+        <p class="p2"><i>x</i><span class="s1"><sub>1</sub></span></p>
+      </td>
+      <td valign="top" class="td9">
+        <p class="p2"><i>x</i><span class="s1"><sub>2</sub></span></p>
+      </td>
+      <td valign="top" class="td18">
+        <p class="p2"><i>x</i><span class="s1"><sub>3</sub></span></p>
+      </td>
+      <td valign="top" class="td10">
+        <p class="p2">1</p>
+      </td>
+      <td valign="top" class="td11">
+        <p class="p2">Problem 4</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td12">
+        <p class="p2">-1</p>
+      </td>
+      <td valign="top" class="td13">
+        <p class="p2">0</p>
+      </td>
+      <td valign="top" class="td19">
+        <p class="p2">1</p>
+      </td>
+      <td valign="top" class="td14">
+        <p class="p2">2</p>
+      </td>
+      <td valign="top" class="td15">
+        <p class="p2">= <i>x</i><span class="s1"><sub>4</sub></span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td12">
+        <p class="p2">1</p>
+      </td>
+      <td valign="top" class="td13">
+        <p class="p2">0</p>
+      </td>
+      <td valign="top" class="td19">
+        <p class="p2">1</p>
+      </td>
+      <td valign="top" class="td14">
+        <p class="p2">-1</p>
+      </td>
+      <td valign="top" class="td15">
+        <p class="p2">-&gt; min</p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<p class="p2"> It is optimal so<span class="Apple-converted-space">  </span>min = -1 at <span class="Apple-converted-space">  </span><i>x</i><span class="s1"><sub>1</sub></span><span class="Apple-converted-space">  </span>=<i>x</i><span class="s1"><sub>2</sub></span><span class="Apple-converted-space">  </span>=<span class="Apple-converted-space">  </span><i>x</i><span class="s1"><sub>3<span class="Apple-converted-space"> </span></sub></span> = 0,<span class="Apple-converted-space">  </span><i>x</i><span class="s1"><sub>4</sub></span> = 2.</p>
+<p class="p3"><br></p>
+<p class="p3"><br></p>
+<p class="p3"><br></p>
+<p class="p1">5. Find all logical implications between the following 5 constraints on  x, y:</p>
+<p class="p1"> </p>
+<p class="p1">(a)   x<span class="s2"><sup>2</sup></span> = y<span class="s2"><sup>2</sup></span>, (b) 0 &lt;   -2, (c) 0 <span class="s3">&lt;</span> 1, (d) x = -y, (e) x=y=0.</p>
+<p class="p4"><br></p>
+<p class="p1">Solution.</p>
+<p class="p1">(b) <span class="s4">⇒</span><span class="Apple-converted-space">  </span>(e) <span class="s4">⇒</span> <span class="Apple-converted-space">  </span>(d) <span class="s4">⇒</span><span class="Apple-converted-space">    </span>(a)<span class="Apple-converted-space">  </span><span class="s4">⇒</span><span class="Apple-converted-space">  </span>(c) .</p>
+</body>
+</html>

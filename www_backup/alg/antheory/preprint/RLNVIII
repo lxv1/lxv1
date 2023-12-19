@@ -1,0 +1,586 @@
+\documentclass[12pt]{article}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+
+\allowdisplaybreaks[1]
+
+\newcommand{\ds}{\displaystyle}
+
+\newcommand{\calF}{\mathcal{F}}
+\newcommand{\calG}{\mathcal{G}}
+
+\renewcommand{\frac}[2]{\genfrac{}{}{}{}{\ds{#1}}{\ds{#2}}}
+
+\newcommand{\abs}[1]{\lvert{#1}\rvert}
+\newcommand{\brackets}[3]{\genfrac{[}{]}{0pt}{}{#1}{#2}_{#3}}
+\newcommand{\pairs}[3]{\left({#1};{#2}\right)_{#3}}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}{Corollary}
+
+\numberwithin{equation}{section}
+\numberwithin{theorem}{section}
+\numberwithin{corollary}{section}
+
+
+\title{Ramanujan's ``Lost'' Notebook VIII: \\The entire Rogers-Ramanujan Function}
+
+
+\author{George E. Andrews
+\footnote{Partially supported by National Science Foundation Grant
+DMS-0200047}}
+
+\begin{document}
+
+\maketitle
+\vfil\eject
+
+\begin{abstract}
+In the Lost Notebook, Ramanujan presents a truly enigmatic infinite product expansion for the two variable Roger-Ramanujan series. In this paper, we prove this formula by a careful analysis of the Stieltjes-Wigert polynomials.
+\end{abstract}
+\pagebreak
+
+\section{Introduction}
+
+The third identity on page 57 of Ramanujan's ``Lost Notebook" \cite{Ramanujan} reads as follows (with $x$ replaced by $q$):
+
+\begin{equation}
+\sum_{n=0}^\infty\frac{a^nq^{n^2}}{(q;q)_n}=\prod_{n=1}^\infty\left(1+\frac
+{aq^{2n-1}}{1-q^ny_1-q^{2n}y_2-q^{3n}y_3-\ldots}\right),
+\end{equation}
+where
+\begin{equation}
+y_1=\frac{1}{(1-q)\psi^2(q)},
+\end{equation}
+\begin{equation}
+y_2=0,
+\end{equation}
+\begin{equation}
+y_3=\frac{q+q^3}{(1-q)(1-q^2)(1-q^3)\psi^2(q)}-\frac
+{\sum_{n=0}^\infty\frac{(2n+1)q^{2n+1}}{1-q^{2n+1}}}{(1-q)^3\psi^6(q)},
+\end{equation}
+\begin{equation}
+y_4=y_1y_3,
+\end{equation}
+\begin{equation}
+\psi(q)=\sum_{n=0}^\infty q^{n(n+1)/2} = \frac{\pairs{q^2}{q^2}{\infty}}{\pairs{q}{q^2}{\infty}},
+\end{equation}
+where \[ (A;q)_n = (1-A)(1-Aq)(1-Aq^2) \dots (1-Aq^{n-1}) \]
+and $0<q<1$ (as will be assumed throughout this paper).
+
+At first glance, this assertion is bizarre to say the least. In order to make clear why this is disturbing, let us recall the famous Rogers-Ramanujan identities \cite[p. 104]{Andrews1}
+
+\begin{equation}
+\sum_{n=0}^\infty\frac{q^{n^2}}{(q;q)_n}=\prod_{n=0}^\infty\frac{1}
+{(1-q^{5n+1)}(1-q^{5n+4})},
+\end{equation}
+and
+\begin{equation}
+\sum_{n=0}^\infty\frac{q^{n^2+n}}{(q;q)_n}=\prod_{n=0}^\infty\frac{1}
+{(1-q^{5n+2})(1-q^{5n+3})}.
+\end{equation}
+
+It is natural to expect that (1.7) and (1.8) should in some way be special cases of (1.1), but this is clearly not the case. The mystery is compounded when we recall the following formula \cite[p. 292]{Hardy} from which (1.7) and (1.8) are deduced:
+\begin{equation}
+\sum_{n=0}^\infty\frac{a^nq^{n^2}}{(q;q)_n}=\frac{1}{(aq;q)_\infty}
+\left(1+\sum_{n=1}^\infty\frac{(aq;q)_{n-1}(-1)^na^{2n}q^{n(5n-1)/2}(1-aq^{2n})}{(q;q)_n}\right).
+\end{equation}
+
+Now the mystery is even deeper because the left side of (1.9) is identical with the left side of (1.1), but the right side of (1.9) seems even further removed from the right side of (1.1).
+
+The key idea is that the series on the left side of (1.1) is an entire function of $a$ for fixed $q$ with $0<q<1$. Furthermore it is the limit of a sequence of orthogonal polynomials, the Stieltjes-Wigert polynomials (cf. \cite{Stieltjes}, \cite{Wigert}). In Section 2, we shall collect all the necessary background material. Section 3 is devoted to a more detailed account of where the zeros of this function lie. In Section 4, we develop expansions for the zeros; this will allow us to find the formulas (1.2)-(1.5) and finally to prove (1.1).
+
+
+\bigskip
+
+\section{The Szeg\H{o} Theorem}
+
+In \cite{Szego1}, G. Szeg\H{o} studied extensively the polynomial 
+\cite[p. 245 eq. (8)]{Szego1}, (c.f. \cite{Szego2}).
+\begin{equation}
+K_n(x)=\sum_{\nu=0}^n \brackets{n}{\nu}{} q^{\nu^2+\nu}x^\nu,
+\end{equation}
+with $q$ real, $0<q<1$, where
+\begin{equation*}
+\brackets{n}{\nu}{} =
+\begin{cases}
+   \frac{(1-q^n)(1-q^{n-1}) \dotsm (1-q^{n-\nu+1})}{(1-q^\nu)(1-q^{\nu-1}) \dotsm (1-q)} & \text{if $0 \leqq \nu \leqq n$} \\
+   0 & \text{otherwise.} \\
+\end{cases}
+\end{equation*}
+
+In \cite[\S 3]{Szego1}, he sets $q=e^{-1/2k^2}$ and quotes Wigert's proof that the polynomials
+\begin{equation}
+Q_n(x)=\frac{(-1)^nq^{\frac n2+\frac14}K_n(-q^{-\frac12}x)}{\sqrt{(1-q)(1-q^2)\ldots(1-q^n)}}
+\end{equation}
+are orthogonal on $[0,\infty)$ with weight function $p(x)$ given by
+\begin{equation}
+p(x)=\frac k{\sqrt\pi}e^{-k^2\log^2x};
+\end{equation}
+see \cite{Wigert}.
+
+From here, Szeg\H{o} applies standard arguments from the theory of orthogonal polynomials to deduce that \cite[p. 250, III]{Szego1} the zeros of each $K_n(x)$ are simple, real and negative. 
+
+We can add a little bit to Szeg\H{o}'s deductions from the general theory provided $q$ is small.
+
+\begin{theorem}
+For $0<q<\frac{1}4,\,\,(-1)^iK_n(-q^{-2i-1})>0$ for $i=0,1,2,\ldots,n$.
+\end{theorem}
+\begin{proof}
+\begin{align*}
+(-1)^iK_n(-q^{-2i-1})&=(-1)^i\sum_{\nu=0}^n(-1)^\nu q^{\nu^2-2i\nu}\brackets{n}{\nu}{}\\
+&=\sum_{\nu=-\infty}^\infty(-1)^{\nu-i} q^{(\nu-i)^2-i^2}\brackets{n}{\nu}{}\\
+&=q^{-i^2}\sum_{\nu=-\infty}^\infty (-1)^\nu q^{\nu^2} \brackets{n}{\nu+1}{}\\
+&=q^{-i^2}\left(\brackets{n}{i}{} + \sum_{\nu=1}^\infty(-1)^\nu q^{\nu^2} \left(\brackets{n}{\nu+1}{} + \brackets{n}{\nu+i}{}\right)\right).
+\end{align*}
+
+Now for $0<q<\frac{1}4$, we note that
+\begin{align*}
+0 & \leqq \brackets{A}{B}{} \leqq \frac{1}{(q;q)_\infty}= \frac{1}{1-q-q^2+q^5+q^7-\dotsb}\\
+& < \frac{1}{1-q-q^2}<\frac{1}{1-1/4-1/16}=\frac{16}{11},
+\end{align*}
+and since the coefficients of $\brackets{A}{B}{}$ are always non-negative, we see that for $0\leqq B\leqq A$,
+\begin{equation*}
+\brackets{A}{B}{} \geqq 1.
+\end{equation*}
+Therefore with $0\leqq i\leqq n$,
+\begin{align*}
+&(-1)^iK_n(-q^{-2i-1})\\
+&\geqq q^{-i^2}\left(1-2\cdot\frac{16}{11}\sum_{\nu=1}^\infty q^{\nu^2}\right)\\
+&\geqq q^{-i^2}\left(1-2\cdot\frac{16}{11}\cdot\frac{1}4-\frac{32}{11}
+\sum_{j=4}^\infty \big(\frac14\big)^j\right)\\
+&= q^{-i^2}\left(1-\frac{8}{11}-\frac{32}{11}\cdot\frac{(1/4)^4}{1-1/4}
+\right)\\
+&= 1-\frac{8}{11}-\frac{32}{11\cdot 3\cdot 4^3}\\
+&\geqq 1-\frac{8}{11}-\frac{1}{4^3}\\
+&\geqq 1-\frac{9}{11}=\frac{2}{11}.
+\end{align*}
+\end{proof}
+
+\begin{corollary}
+For $0<q<\frac{1}4$, the $i$th zero of $K_n(x)$ lies in the interval $\big(-q^{1-2i},-q^{-1-2i}\big),\,\,i=1,2,\ldots,n$.
+\end{corollary}
+\begin{proof}
+This follows immediately from Theorem 2.1 and the fact that $K_n(x)$ is a polynomial in $x$ of degree $n$ with alternating positive and negative values at $-q^{-1},-q^{-3},\dotsc,-q^{-2n-1}$.
+\end{proof}
+
+
+\bigskip
+
+\section{The Infinite Product Representation}
+
+We begin this section by recalling that if $f(z)$ is an entire function of order $\rho$ with zeros $z_1,z_2,\ldots$ and $f(0)\ne 0$, then \cite[p. 174]{Copson}
+\begin{equation}
+f(z)=e^{H(z)}\prod_{n=1}^\infty\left(1-\frac z{z_n}\right),
+\end{equation}
+where
+\begin{equation}
+\rho=\underset{n\to\infty}{\overline\lim}\frac{n\,\log n}{\log(\frac1{|a_n|})},
+\end{equation}
+and
+\begin{equation}
+f(z)=\sum_{n=0}^\infty a_nz^n.
+\end{equation}
+
+Let us apply this to $K_\infty(z)$. In this case
+\begin{align}
+0\leqq \rho&\leqq \underset{n\to\infty}{\overline\lim}\frac{n\,\log n}{\log\left(\frac{(1-q)(1-q^2)\ldots(1-q^n)}{q^{n^2}}\right)} \notag\\
+&\leqq \underset{n\to\infty}{\overline\lim}\frac{n\,\log n}
+{|\log(q;q)_\infty|-n^2\,\log q}=0.
+\end{align}
+Hence $e^{H(z)}$ is a constant, and since $K_\infty(0)=1$, we see that
+\begin{equation}
+K_\infty(z)=\prod_{n=1}^\infty\left(1-\frac z{z_n}\right).
+\end{equation}
+
+Furthermore it follows from Corollary 2.1 and the interlacing theorem \cite[p. 28]{Chihara} that $z_n$ lies in the interval $\left(-q^{-1-2n},-q^{1-2n}\right)$ for $n=1,2,3,\dotsc$
+
+Hence we have proved that for $0<q<\frac{1}4$
+\begin{equation}
+\sum_{n=0}^\infty\frac{a^n q^{n^2}}{(q;q)_n}=\prod_{n=1}^\infty\left(1-\frac a{q z_n}\right),
+\end{equation}
+with $-q^{1-2n}>z_n>-q^{-1-2n}$.
+
+What we need now is some way of obtaining explicit series for each $z_n$. If we write,
+\begin{equation}
+z_n=-q^{-2n}\omega_n(q),
+\end{equation}
+then for $0<q<1,\,\,-q<\omega_n(q)<-q^{-1}$.
+
+
+\bigskip
+
+\section{Some Theta Series}
+
+In the final sections we shall need information about
+\begin{equation}
+\theta_{m,k}=\theta_{m,k}(q)=\sum_{n=-\infty}^\infty(-1)^nq^{n^2+mn}n(n-1)\ldots(n-k+1).
+\end{equation}
+
+These series are closely tied to the classical theta series; indeed, in the notation of \cite[Ch. 21]{Whittaker},
+
+\begin{equation}
+\theta_{0,0}=\sum_{n=-\infty}^\infty(-1)^nq^{n^2} = \frac{ \pairs{q}{q}{\infty} }{ \pairs{-q}{q}{\infty} } =\theta_4,
+\end{equation}
+and
+\begin{equation}
+\theta_{1,1}=\sum_{n=-\infty}^\infty (-1)^n q^{n^2+n} n =(q^2;q^2)_\infty^3,
+\end{equation}
+an identity of Jacobi \cite[p. 472]{Whittaker}.
+
+The following identities (most of which are scattered in the literature) will be utilized in Section 5.
+\begin{align}
+\theta_{2m,0}&=(-1)^mq^{-m^2}\theta_4\\
+\theta_{2m+1,0}&=0\\
+\theta_{2m,1}&=(-1)^{m-1}q^{-m^2}m\theta_4\\
+\theta_{2m+1,1}&=(-1)^mq^{-m^2-m}\theta_{1,1}\\
+\theta_{2m,2}&=(-1)^mq^{-m^2+1}\theta_4^\prime+(-1)^mm(m+1)q^{-m^2}\theta_4\\
+\theta_{2m+1,2}&=2(-1)^{m+1}(m+1)q^{-m^2-m}\theta_{1,1}\\
+\theta_{2m,3}&=3(-1)^{m-1}q^{-m^2+1}\theta_4^\prime+m(m+1)(m+2)
+(-1)^{m-1}q^{-m^2}\theta_4\\
+\theta_{2m+1,3}&=(-1)^{m}q^{1-m-m^2}\theta_{1,1}^\prime+(-1)^mq^{-m^2-m}(m+1)(m+2)
+\theta_{1,1}\\
+\theta_{2m+1,4}&=4(-1)^{m+1}q^{1-m^2-m}\theta_{1,1}^\prime+4(-1)^{m+1}q^{-m^2-m}(m+1)(m+2)
+(m+3)\theta_{1,1}.
+\end{align}
+
+Each of these is proved in the same manner. We illustrate two proofs; the remainder are similar.
+\begin{align*}
+\theta_{2m+1,2}&=\sum_{n=-\infty}^\infty(-1)^nq^{n^2+n+2mn}n(n-1)\\
+&=(-1)^mq^{-m^2-m}\sum_{n=-\infty}^\infty(-1)^nq^{n^2+n}(n-m)(n-m-1)\\
+&=(-1)^mq^{-m^2-m}\sum_{n=-\infty}^\infty(-1)^nq^{n^2+n}\left(n^2+n-(2m+2)n+m(m+1)\right)\\
+&=0+2(-1)^{m+1}(m+1)q^{-m^2-m}\theta_{1,1}+0,
+\end{align*}
+and
+\begin{align*}
+\theta_{2m,3}&=\sum_{n=-\infty}^\infty(-1)^nq^{n^2+2mn}n(n-1)(n-2)\\
+&=(-1)^mq^{-m^2}\sum_{n=-\infty}^\infty(-1)^nq^{n^2}(n-m)(n-m-1)(n-m-2)\\
+&=(-1)^mq^{-m^2}\sum_{n=-\infty}^\infty(-1)^nq^{n^2}\left(n^3-3(m+1)n^2+(3m^2+6m+2)n-m(m+1)(m+2)
+\right)\\
+&=(-1)^mq^{-m^2}\left(0-3q\theta_4^\prime+0-m(m+1)(m+2)\theta_4\right).
+\end{align*}
+
+Comparable formulas can be found for all $\theta_{m,k}$, and elegant formulas for the coefficients can be produced using the methods of \cite[Sec. ??]{Andrews2}
+
+\begin{theorem}
+Both $q^{m^2}\theta_{2m,k}$ and $q^{m^2+m}\theta_{2m+1,k}$ are analytic functions of $q$ inside $\abs{q}<1$.
+\end{theorem}
+\begin{proof}
+\begin{align*}
+q^{m^2}\theta_{2m,k}&=\sum_{n=-\infty}^\infty(-1)^nq^{(n+m)^2}n(n-1)\dotsm(n-k+1)\\
+&=(-1)^m\sum_{n=-\infty}^\infty(-1)^nq^{n^2}(n-m)(n-m-1)\dotsm(n-m-k+1)
+\end{align*}
+and
+\begin{align*}
+q^{m^2+m}\theta_{2m+1,k}&=\sum_{n=-\infty}^\infty(-1)^nq^{(n+m)^2+(n+m)}n(n-1)\dotsm(n-k+1)\\
+&=(-1)^m\sum_{n=-\infty}^\infty(-1)^nq^{n^2+n}(n-m)(n-m-1)\dotsm(n-m-k+1).
+\end{align*}
+\end{proof}
+
+\begin{corollary}
+$q^{\binom{m+1}{2}}\theta_{m+1,k}$ is analytic in $q$ for $\abs{q}<1$.
+\end{corollary}
+\begin{proof}
+\begin{equation*}
+q^{\binom{2\mu+1}{2}}\theta_{2\mu+1,k}=q^{\mu^2}\big(q^{\mu^2+\mu}\theta_{2\mu+1,k}\big),
+\end{equation*}
+and
+\begin{equation*}
+q^{\binom{2\mu}{2}}\theta_{2\mu,k}=q^{\mu^2-\mu}\big(q^{\mu^2}\theta_{2\mu,k}\big).
+\end{equation*}
+So our assertion follows from Theorem 4.1.
+\end{proof}
+
+
+\bigskip
+
+\section{A Formal Power Series}
+
+\begin{theorem}
+Let $y_i=y_i(q),\,\,i=1,2,3,\ldots$ satisfy for each $N\geqq 0$,
+\begin{equation}
+\sum_{j=0}^N\frac{(-1)^{N-j}q^{\binom{N-j+1}{2}}}{(q;q)_{N-j}}
+\sum_{k_1+2k_2+\ldots+jk_j=j}\frac{(-1)^{k_1+\ldots+k_j}y_1^{k_1}\ldots y_j^{k_j}\theta_{N-j+1,k_1+\ldots+k_j}}{k_1!\ldots k_j!}=0.
+\end{equation}
+Then each $y_i$ is a uniquely defined function of $q$ analytic inside $\abs{q}<1$, and the following identity holds as a formal power series identity in $z$
+\begin{equation}
+\sum_{n=-\infty}^\infty(-1)^nq^{n^2+n}(1-zy_1-z^2y_2-z^3y_3-\ldots)^n(zq^{n+1};q)_\infty=0.
+\end{equation}
+\end{theorem}
+\begin{proof}
+We begin with $N=1$ in (5.1) which asserts
+\begin{equation*}
+0=\frac{-q\theta_{2,0}}{1-q}-y_1\theta_{1,1},
+\end{equation*}
+hence
+\begin{equation*}
+y_1=\frac{\theta_4}{(1-q)(q^2;q^2)_\infty^3}=\frac{1}{(1-q)\psi(q)^2},
+\end{equation*}
+which we observe in passing is identical with the $y_1$ appearing in (1.2).
+
+For $N=2$, in (5.1), we see that
+\begin{equation*}
+0=\frac{q^3}{(q;q)_2}\theta_{3,0}+\frac{q}{(1-q)}y_1\theta_{2,1}+\frac{y_1^2\theta_{1,2}}2 - y_2\theta_{1,1},
+\end{equation*}
+and by (4.5)
+\begin{align*}
+y_2&=\frac{y_1}{\theta_{1,1}}\bigg(\frac{y_1\theta_{1,2}}2-
+\frac{q\theta_{2,1}}{(1-q)}\bigg)\\
+&=\frac{y_1}{\theta_{1,1}}\bigg(-\frac{\theta_4\theta_{1,1}}{(1-q)\theta_{1,1}}+
+\frac{\theta_4}{(1-q)}\bigg)=0,
+\end{align*}
+coinciding with (1.3).
+
+For $N=3$, we find
+\begin{equation*}
+y_3=\frac{1}{\theta_{1,1}}\bigg(-\frac{q^6\theta_{4,0}}{(q;q)_3}-
+\frac{q^3y_1\theta_{3,1}}{(q;q)_2}-\frac{qy_1^2\theta_{2,2}}{2(1-q)}-
+\frac{y_1^3\theta_{1,3}}6\bigg)
+\end{equation*}
+and after simplification
+\begin{align*}
+y_3&=\frac{q+q^3}{(q;q)_3\psi(q)^2}+\frac{q}{(1-q)^3\psi(q)^6}
+\bigg(\frac{1}2\,\,\frac{\theta_4^\prime}{\theta_4}-\frac{1}6\,\,
+\frac{\theta_{1,1}^\prime}{\theta_{1,1}}\bigg)\\
+&=\frac{q+q^3}{(q;q)_3\psi(q)^2}-\frac{\sum_{n=1}^\infty\frac{(2n-1)q^{2n-1}}{1-q^{2n-1}}}
+{(1-q)^3\psi(q)^6},
+\end{align*}
+where the final step requires logarithmic differentiation of the product representations of $\theta_4$ and $\theta_{1,1}$. Again we have a result coinciding with the $y_3$ in (1.4).
+
+The case $N=4$ is the last we shall treat explicitly.
+\begin{gather}
+y_4=\frac{1}{\theta_{1,1}}\bigg(\frac{q^{10}\theta_{5,0}}{(q;q)_4}+
+\frac{q^{6}y_1\theta_{4,1}}{(q;q)_3}+\frac{q^{3}y_1^2\theta_{3,2}}{(q;q)_2\,\,2}\\
++\frac{qy_1^3\theta_{2,3}}{(1-q)6}+\frac{qy_3\theta_{2,1}}{1-q}
++\frac{y_1^4\theta_{1,4}}{24}+y_1y_3\theta_{1,2}\bigg).
+\end{gather}
+We may simplify this latter expression to one involving $\theta_4,\theta_4^\prime,\theta_{1,1}$ and $\theta_{1,1}$ involving (4.4)-(4.12). Thus after simplification
+\begin{align*}
+y_4&=\frac{2(q+q^3)}{(1-q^2)(1-q^3)}-y_1^2-y_1y_3+y_1^4
+\bigg(\frac{q\theta_4^\prime}{\theta_4}-\frac q3\,\,\frac{\theta_{1,1}^\prime}{\theta_{1,1}}\bigg)\\
+&=y_1y_3.
+\end{align*}
+
+For larger $N$, we see that $y_N$ always appears uniquely in (5.1). Indeed the only term containing $y_N$ has $k_1=\ldots=k_{N-1}=0$ and $k_N=1,\,\,j=N$. This term is therefore
+\begin{equation*}
+-y_N\theta_{1,1}.
+\end{equation*}
+Consequently for $N>1$, we see that
+\begin{equation*}
+y_N=\frac{1}{\theta_{1,1}}\sum_{j=0}^N\frac{(-1)^{N-j}q^{\binom{N-j+1}{2}}}{(q;q)_{N-j}}
+\underset{\underset{k_1=\ldots=k_{N-1}=0,k_N=1}{\underset{\text{excluding}}
+{\underset{(k:=k_1+\ldots+k_j)}{k_1+2k_2\ldots+jk_j=j}}}}\sum
+\frac{(-1)^ky_1^{k_1}\ldots y_j^{k_j}\theta_{N-j+1,k}}{k_1!k_2!\ldots k_j!},
+\end{equation*}
+and proceeding by mathematical induction on $N$ and involving Corollary 4.1, we see that each $y_N$ is analytic in $q$ inside the unit circle.
+
+Now we turn to (5.2). Clearly the left hand side of (5.2) defines a formal power series in $z$ and $q$. While it first appears that $(zq^{n+1};q)_\infty$ might contribute a negative power of $q$, we observe that by Euler's series
+\begin{equation*}
+(zq^{n+1};q)_\infty=\sum_{m=0}^\infty\frac{(-1)^mq^{\binom{m+1}{2}+mn}z^m}{(q;q)_m},
+\end{equation*}
+consequently the exponent on $q$ is
+\begin{equation*}
+n^2+n+\binom{m+1}{2}+mn=\binom{m+n+1}{2}+\binom{n+1}{2},
+\end{equation*}
+which is never negative.
+
+Now (5.2) is equivalent to
+\begin{equation*}
+0=[z^0]\frac{1}{N!}\,\,\frac{d^N}{dz^N}\,\,\sum_{n=-\infty}^\infty(-1)^nq^{n^2+n}
+(1-zy_1-z^2y_2-\ldots)^n(zq^{n+1};q)_\infty,
+\end{equation*}
+where
+\begin{equation*}
+[z^0]\underset{m=0}{\overset\infty\sum}a_mz^m=a_0.
+\end{equation*}
+
+To find this formal $N^{\text{th}}$ derivative, we need several facts. First
+\begin{align*}
+[z^0]\,\,\frac{d^H}{dz^H}(zq^{n+1};q)_\infty &= [z^0]\sum_{i=H}^\infty
+\frac{(-1)^i i(i-1)\dotsm(i-H+1)z^{i-H}q^{\binom{i+1}{2}+in}}{q;q)_i}\\
+&=\frac{H!q^{\binom{H+1}{2}+Hn}(-1)^H}{(q;q)_H}.
+\end{align*}
+Next the Faa di Bruno formula tells us that
+\begin{align*}
+[z^0]\frac{d^M}{dz^M} & (1-y_1z-y_2z^2-\ldots)^n \\
+& =\underset{k:=k_1+\ldots+k_M}{\underset{k_1+2k_2+\ldots+Mk_M=M}\sum}
+\frac{M!n(n-1)\ldots(n-k+1)(-1)^ky_1^{k_1}y_2^{k_2}\ldots y_M^{k_M}}
+{k_1!k_2!\ldots k_M!}.
+\end{align*}
+Also Leibniz's rule tells us that
+\begin{equation*}
+\frac{d^N}{dz^N}f(z)g(z)=\sum_{j=0}^N\binom{N}{j}f^{(N-j)}(z)g^{(j)}(z).
+\end{equation*}
+Therefore
+\begin{align*}
+0 & = [z^0]\frac{1}{N!}\,\,\frac{d^N}{dz^N}\,\,\sum_{n=-\infty}^\infty(-1)^nq^{n^2+n}
+(1-zy_1-z^2y_2-\ldots)^n(zq^{n+1};q)_\infty\\
+& =\frac{1}{N!}\sum_{n=-\infty}^\infty(-1)^nq^{n^2+n}\sum_{j=0}^N\binom{N}{j} \\
+& \qquad \times \negthickspace\negthickspace\negthickspace\negthickspace\negthickspace\negthickspace\negthickspace \underset{k:=k_1+\ldots+k_j}{\underset{k_1+2k_2+\ldots+jk_j=j}\sum}
+\negthickspace\negthickspace\negthickspace\negthickspace\negthickspace\negthickspace\negthickspace
+\frac{j!n(n-1)\ldots(n-k+1)(-1)^ky_1^{k_1}\ldots y_j^{k_j}}{k_1!k_2!\ldots k_j!}\\
+\frac{(N-j)!}{(q;q)_{N-j}} & q^{\binom{N-j+1}{2}+(N-j)n}(-1)^{N-j} \\
+& =\sum_{j=0}^N\frac{(-1)^{N-j}q^{\binom{N-j+1}{2}}}{(q;q)_{N-j}} \underset{k:=k_1+\ldots+k_j}{\underset{k_1+2k_2+\ldots+jk_j=j}\sum} \frac{(-1)^ky_1^{k_1}\ldots y_j^{k_j}\theta_{N-j+1,k}}{k_1!k_2!\ldots k_j!},\\
+\end{align*}
+and (5.2) is established.
+\end{proof}
+
+
+\bigskip
+
+\section{The Zeros of $K_\infty(zx)$}
+
+We know from Section 3 that $K_\infty(z)$ has real, simple, negative zeros $z_1,z_2,z_3,\ldots$ with
+\begin{equation}
+-q^{1-2n}>z_n>-q^{-1-2n}
+\end{equation}
+provided $0<q<\frac{1}4$.
+
+We shall sharpen this inequality.
+\begin{theorem}
+For $0<q<\frac{1}4$,
+\begin{equation}
+-q^{1-2n}>z_n>-q^{-2n}.
+\end{equation}
+\end{theorem}
+\begin{proof}
+We know that $(-1)^iK_\infty\big(-q^{-2i-1}\big)>0$ from the proof of Theorem 2.1. We need to show that $(-1)^iK_\infty\big(-q^{-2i}\big)>0$ also.
+We shall require Jacobi's Triple Product Identity\cite[p. 21, Theorem 2.8]{Andrews1}
+\begin{equation}
+\sum_{n=-\infty}^{\infty} q^{n^2} z^n = \pairs{q^2}{q^2}{\infty} \pairs{-zq}{q^2}{\infty} \pairs{-z^{-1}q}{q^2}{\infty}.
+\end{equation}
+
+Now
+\begin{align}
+K_\infty(z)&=\sum_{n=0}^\infty\,\,\frac{q^{n^2+n}z^n}{(q;q)_n} \notag\\
+&=\frac{1}{(q;q)_\infty}\sum_{n=-\infty}^\infty\,q^{n^2+n}z^n\big(q^{n+1};q\big)_\infty \notag\\
+&=\frac{1}{(q;q)_\infty}\sum_{n=-\infty}^\infty\,q^{n^2+n}z^n\sum_{m=0}^\infty
+\frac{(-1)^mq^{\binom{m+1}{2}+mn}}{(q;q)_m} \notag\\
+&=\frac{1}{(q;q)_\infty}\bigg\{\sum_{m=0}^\infty
+\frac{q^{\binom{2m+1}{2}-m^2-m}z^{-m}}{(q;q)_{2m}}\sum_{n=-\infty}^\infty
+q^{(n+m)^2+n+m}z^{n+m} \notag\\
+&\qquad-\sum_{m=1}^\infty\,
+\frac{q^{\binom{2m}{2}-m^2}z^{-m}}{(q;q)_{2m-1}}\sum_{n=-\infty}^\infty
+q^{(n+m)^2}z^{n+m}\bigg\} \qquad  \notag\\
+&=(-q;q)_\infty(-zq^2;q^2)_\infty(-z^{-1};q^2)_\infty\sum_{m=0}^\infty
+\frac{q^{m^2}z^{-m}}{(q;q)_{2m}} \notag\\
+&\qquad -(-q;q)_\infty(-zq;q^2)_\infty(-z^{-1}q;q^2)_\infty\sum_{m=1}^\infty
+\frac{q^{m^2-m}z^{-m}}{(q;q)_{2m-1}}.\\
+& \mbox{by Jacobi's Triple Product Identity~\cite[p. 21]{Andrews1}}\notag
+\end{align}
+Hence for any positive integer $i$
+\begin{align}
+(-1)^i & K_\infty\big(-q^{-2i}\big) \notag \\
+&=-(-1)^i(-q;q)_\infty\big(q^{1-2i};q^2\big)_\infty\big(q^{1+2i};q^2\big)_\infty
+\sum_{m=1}^\infty\,\frac{(-1)^mq^{m^2-m+2im}}{(q;q)_{2m-1}}\notag\\
+&=q^{-i^2}(q;q^2)_\infty\bigg(1-\frac{q^{2i}}{1-q}+
+\frac{q^{2+4i}}{(1-q)(1-q^2)(1-q^3)}-\ldots\bigg).
+\end{align}
+
+Now observing that $i\geqq 1$ and $0<q<\frac{1}4$, we see that the infinite series is an alternating series and is consequently $>1-\frac{q^2}{1-q}>1-\frac{1}{12}=\frac{11}{12}$.
+
+Hence
+\begin{equation}
+(-1)^iK_\infty\big(-q^{-2i}\big)>0\,\,\text{for positive integers $i$}.
+\end{equation}
+
+We already know that $z_n$ lies in the open interval $\big(-q^{-1-2n},-q^{1-2n}\big)$. Furthermore we have just established that $K_\infty(-q^{1-2n})$ and $K_\infty(-q^{-2n})$ are of opposite signs. Hence invoking Theorem 2.1 $K_\infty(z)$ must have a zero in $\big(-q^{-2n},-q^{1-2n}\big)$, and $z_n$ is the only candidate for this role. Thus Theorem 6.1 is proved.
+\end{proof}
+
+Next we note that the zeros of each $K_n(z)$ are algebraic functions of the coefficients of $K_n(z)$ which are in turn polynomials in $q$. Thus in turn the zeros of $K_n(z)$ are analytic functions of $q$ for $0<q<\frac{1}4$ (the domain specified in Theorem 2.1).  This is an immediate corollary of the Implicit Function Theorem \cite{Whittaker} whose hypotheses are fulfilled here.  Finally for $n\geqq N$ the $N^{\text{th}}$ zero of $K_n(z)$ say $\zeta_{n,N}$ forms a decreasing sequence in $n$ (by the interlacing theorem \cite[p. 28]{Chihara}). Consequently $\zeta_{\infty,N}=z_N$ is analytic in $q$. So as defined in (3.7)
+\begin{equation*}
+z_n=-q^{-2n}\omega_n(q),
+\end{equation*}
+and Theorem 6.1 tells us that $1>\omega_n(q)>q$. Therefore we conclude that
+\begin{equation*}
+z_n=-q^{-2n}\sum_{j=0}^\infty\,a_{n,j}q^j.
+\end{equation*}
+
+Hence $K_\infty(z_n)=0$ means
+\begin{align*}
+0&=\sum_{h=0}^\infty\,\frac{q^{h^2+h-2nh}(-1)^h}{(q;q)_h}
+\bigg(\sum_{j=0}^\infty\,a_{n,j}q^j\bigg)^h\\
+&=\frac{(-1)^nq^{-n^2+n}}{(q;q)_\infty}\sum_{h=-\infty}^\infty\,q^{(h-n)^2}(-q)^{h-n}
+\bigg(\sum_{j=0}^\infty\,a_{n,j}q^j\bigg)^h\big(q^{h+1};q\big)_\infty\\
+&=\frac{(-1)^nq^{-n^2+n}\big(\underset{j=0}{\overset\infty\sum}\,a_{n,j}q^j\big)^n}{(q;q)_\infty}
+\sum_{h=-\infty}^\infty\,q^{h^2+h}(-1)^h
+\bigg(\sum_{j=0}^\infty\,a_{n,j}q^j\bigg)^h\big(q^{h+n+1};q\big)_\infty.
+\end{align*}
+Therefore
+\begin{equation}
+0=\sum_{h=-\infty}^\infty\,q^{h^2+h}(-1)^h
+\bigg(\sum_{j=0}^\infty\,a_{n,j}q^j\bigg)^h\big(q^{h+n+1};q\big)_\infty,
+\end{equation}
+and the $a_{n,j}$ are uniquely determined from (6.7) in the same way that the $y_i$ were determined in Theorem 5.1; however this time we know in advance that the series $\underset{j=0}{\overset\infty\sum}\,a_{n,j}q^j$ converges in $0<q<\
+\frac{1}4$. The change over Theorem 5.1 is that now (6.7) is valid as an analytic assertion for $0<q<\frac{1}4$ as well as a formal power series identity in $q$ (again the derivation of (6.7) guarantees no negative powers of $q$).
+
+But the reduction of (5.2) to a formal power series in $q$ by the replacement of $z$ by $q^n$, means that we must have the formal series identity
+\begin{equation}
+\sum_{j=0}^\infty\,\,a_{n,j}\,q^j=1-\sum_{i=1}^\infty\,y_iq^{ni}.
+\end{equation}
+
+Substituting (6.8) and (3.7) back into (3.6), we conclude that
+\begin{theorem}
+Identity (1.1) holds for all complex $a$ and real $q$ with $0<q<\frac{1}4$.
+\end{theorem}
+
+
+\newpage
+
+\section{Conclusion}
+
+The main thing we have learned from this effort is the remarkable formulas (1.2)-(1.5) that provide the series expansions for the zeros $z_n$ of $K_\infty(z)$. For the record
+\begin{align*}
+z_1&=-q^{-2}(1-q+q^2-2q^3+4q^4-\dotsb)\\
+z_2&=-q^{-4}(1-q^2+q^3-2q^4+4q^5-7q^6+11q^7-18q^8+33q^9-\dotsb)\\
+z_3&=-q^{-6}(1-q^3+q^4-2q^5+4q^6-7q^7+11q^8-17q^9\\
+&\quad+27q^{10}-43q^{11}+68q^{12}-11q^{13}+196q^{14}-\dotsb)\\
+z_4&=-q^{-8}(1-q^4+q^5-2q^6+4q^7-7q^8+11q^9-17q^{10}\\
+&\quad+27q^{11}-42q^{12}+62q^{13}-91q^{14}+138q^{15}\\
+&\quad-213q^{16}+334q^{17}-549q^{18}+957q^{19}-\dotsb)\\
+z_5&=-q^{-10}(1-q^5+q^6-2q^7+4q^8+7q^9+11q^{10}-17q^{11}\\
+&\quad+27q^{12}-42q^{13}+62q^{14}-90q^{15}+132q^{16}\\
+&\quad-192q^{17}+275q^{18}-398q^{19}+591q^{20}-\dotsb)\\
+&\quad-900q^{21}+1417q^{22}-2327q^{23}+3971q^{24}-\dotsb).
+\end{align*}
+
+This interaction of the classical analytic theory of orthogonal polynomials and the Rogers-Ramanujan identities was a huge surprise to me even though I was well aware of Szeg\H{o}'s paper \cite{Szego1}.
+
+It remains to be seen if this state of affairs applies to other famous $q$-series with as striking consequences as (1.1).
+
+
+\bigskip
+
+\begin{thebibliography}{99}
+
+\bibitem{Andrews1} G.E. Andrews. {\it The Theory of Partitions}, Encycl. Math. and Its Appl., Vol.2, G.-C. Rota ed., Addison-Wesley, Reading, 1976 (reissued: Cambridge University Press, Cambridge, 1998).
+
+\bibitem{Andrews2} G.E. Andrews, D.M. Jackson, and T.Visentin. A hypergeometric analysis of the genus series for a class of 2-cell embeddings in oriental surfaces, {\it S.I.A.M. J. Math. Analysis}, $\bf{25}$ (1994), 243-255.
+
+\bibitem{Chihara} T.S. Chihara. {\it An Introduction to Orthogonal Polynomials}, Gordon and Breach, New York, 1974.
+
+\bibitem{Copson} E.T. Copson. {\it An Introduction to the Theory of Functions of a Complex Variable}, Oxford University Press, Oxford, 1935.
+
+\bibitem{Hardy} G.H. Hardy and E.M. Wright. {\it An Introduction to the Theory of Numbers}, 5 ed., Oxford University Press, Oxford, 1979.
+
+\bibitem{Ramanujan} S. Ramanujan. {\it The Lost Notebook and Other Unpublished Papers} (Intro by G.E. Andrews), Narosa, New Delhi, 1988.
+
+\bibitem{Stieltjes} T.J. Stieltjes. Recherches sur les fractions continues, {\it Annals de la Facult\'{e} des Sciences de Toulouse}, Vol.8 (1894), 122 pp.; Vol.9 (1895), 47pp. (Oeuvres Compl\'{e}tes, Vol. 2, pp.402-566).
+
+\bibitem{Szego1} G. Szeg\H{o}. {\it Ein Beitrag zur Theorie der Thetafunktionen}, Sitsungsberichte der Preussischen Akad. der Wissenschaften, phys.-math., 1926, 242-252 (Coll. Paper, Vol. 2, 795-805).
+
+\bibitem{Szego2} G. Szeg\H{o}. Orthogonal Polynomials, {\it Amer. Math. Soc.}, Colloq. Publ., Vol.23, Providence, 1967.
+
+\bibitem{Walter} W. Walter, A useful Banach algebra, El. Math., 47 (1992), 27-32.
+
+\bibitem{Whittaker} E.T. Whittaker and G.N. Watson. {\it A Course of Modern Analysis}, Cambridge University Press, Cambridge, 1935.
+
+\bibitem{Wigert} S. Wigert. Sur les polynomer orthogonaux et l'approximation des fonctions continues, {\it Arkiv f\"{o}r Matematik, Astronomi och Fysik}, 15 (1921), no. 25, 22 pp.
+
+
+
+\end{thebibliography}
+
+\end{document}

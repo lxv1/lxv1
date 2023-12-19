@@ -1,0 +1,51 @@
+This is TeX, Version 3.1415926 (TeX Live 2012) (format=tex 2012.7.9)  6 DEC 2012 09:16
+**ch7
+(./ch7 (/usr/local/texlive/2011/../texmf-local/tex/psfig/psfig.tex
+(/usr/local/texlive/2011/../texmf-local/tex/psfig/psfig.sty
+\@unused=\write0
+\fboxrule=\dimen16
+\fboxsep=\dimen17
+\ps@tempdima=\dimen18
+\ps@tempboxa=\box16
+\ps@stream=\read0
+\p@intvaluex=\dimen19
+\p@intvaluey=\dimen20
+
+psfig/tex 1.10-dvips
+))
+\p@renwd=\dimen21
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+[]
+
+\hbox(8.5+0.0)x295.6491
+.\vbox(8.5+0.0)x0.0
+
+[199] [200] [201] [202] [203] [204] [205] [206] [207] [208] [209] [210]
+Underfull \vbox (badness 1292) has occurred while \output is active
+\vbox(492.74959+2.5)x295.6491, glue set 2.34991
+.\glue(\topskip) 1.66667
+.\hbox(8.33333+2.33333)x295.6491, glue set 22.97108fil
+..\hbox(6.94444+1.94444)x4.44447
+...\mathon
+...\tensy x
+...\mathoff
+..\twelvebf 2
+..\twelvebf 0
+..\twelvebf .
+..\glue 6.1333 plus 6.89996 minus 0.51111
+..etc.
+.\glue 3.0 plus 1.0 minus 1.0
+.\glue(\parskip) 0.0 plus 1.0
+.\glue(\baselineskip) 2.72223
+.etc.
+
+ [211]
+[212] [213] [214] [215] [216] [217] [218] [219] [220] [221]
+psfig: searching Fig35b.eps for bounding box
+psfig: including Fig35b.eps 
+[222] [223]
+psfig: searching Fig36b.eps for bounding box
+psfig: including Fig36b.eps 
+[224] [225] [226] [227] [228] )
+Output written on ch7.dvi (30 pages, 96780 bytes).

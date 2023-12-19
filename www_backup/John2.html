@@ -1,0 +1,280 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="GENERATOR" content="Mozilla/4.61 [en] (X11; U; SunOS 5.7 sun4u) [Netscape]">
+   <title>  Factoring.nb
+</title>
+<!-- This HTML document was created by converting a Mathematica notebook using HTMLSave. -->
+</head>
+<body bgcolor="#FFFFFF">
+
+<h1>
+<font face="Sand">Factoring Invertible Matrices of Polynomials</font></h1>
+
+<h2>
+<font face="Century Schoolbook">John Jozwiak<br>
+May 20, 2000</font></h2>
+
+<h2>
+<font face="Century Schoolbook">Prerequisite Ideas and Notation</font></h2>
+<font face="Century Schoolbook"><font size=-1>We assume familiarity with
+algebraic rings, linear algebra, and the theory of Groebner Bases.&nbsp;
+We write <b>ZZ</b> for the integers and <b>gb</b> for the function which
+returns the unique reduced Groebner Basis of a set of polynomials over
+a commutative Noetherian ring.&nbsp; Our goal is to factor determinant
+1 matrices with entries from a polynomial ring in a finite number of variables
+and with coefficients from a Euclidean domain.</font></font>
+<p><i><font face="Century Schoolbook"><font size=-1>Change of Coordinates</font></font></i>
+<p><font face="Century Schoolbook"><font size=-1>We employ <i>changes of
+coordinates</i> in our polynomial rings, and emphasize that such are reversible
+changes of variables.&nbsp; They&nbsp; may therefore be denoted by an invertible
+matrix.&nbsp; The change of coordinates</font></font>
+<p><img SRC="status_gr_1.gif" ALT="[Graphics:Images/status_gr_1.gif]" BORDER=0 height=33 width=79 align=ABSCENTER>
+<p><font face="Century Schoolbook"><font size=-1>can be written as the
+equation</font></font>
+<p><img SRC="status_gr_2.gif" ALT="[Graphics:Images/status_gr_2.gif]" BORDER=0 height=39 width=183 align=ABSCENTER><font face="Century Schoolbook"><font size=-1>.</font></font>
+<p><font face="Century Schoolbook"><font size=-1>Because</font></font>
+<p><font face="Century Schoolbook"><font size=-1>det<img SRC="status_gr_3.gif" ALT="[Graphics:Images/status_gr_3.gif]" BORDER=0 height=39 width=71 align=ABSCENTER>
+= 1</font></font>
+<p><font face="Century Schoolbook"><font size=-1>the inverse change of
+variables is encoded by</font></font>
+<p><img SRC="status_gr_4.gif" ALT="[Graphics:Images/status_gr_4.gif]" BORDER=0 height=51 width=69 align=ABSCENTER><font face="Century Schoolbook"><font size=-1>=&nbsp;<img SRC="status_gr_5.gif" ALT="[Graphics:Images/status_gr_5.gif]" BORDER=0 height=39 width=57 align=ABSCENTER>.</font></font>
+<p><i><font face="Century Schoolbook"><font size=-1>Elementary Matrices</font></font></i>
+<p><font face="Century Schoolbook"><font size=-1>An elementary matrix over
+a ring with 1 is a matrix with 1s on the diagonal and zeros at all but
+one other position, which contains some element of the ring.&nbsp; An example
+elementary matrix is</font></font>
+<p><img SRC="status_gr_6.gif" ALT="[Graphics:Images/status_gr_6.gif]" BORDER=0 height=27 width=100 align=ABSCENTER>
+<p><font face="Century Schoolbook"><font size=-1>while</font></font>
+<p><img SRC="status_gr_7.gif" ALT="[Graphics:Images/status_gr_7.gif]" BORDER=0 height=33 width=48 align=ABSCENTER><font face="Century Schoolbook"><font size=-1>&nbsp;&nbsp;
+and&nbsp;</font></font><img SRC="status_gr_8.gif" ALT="[Graphics:Images/status_gr_8.gif]" BORDER=0 height=29 width=56 align=ABSCENTER>
+<p><font face="Century Schoolbook"><font size=-1>are not elementary matrices.</font></font>
+<p><i><font face="Century Schoolbook"><font size=-1>Monomial and Term Orders
+on Polynomial Rings</font></font></i>
+<p><font face="Century Schoolbook"><font size=-1>Given a polynomial ring
+in a set of ordered variables, monomials can be represented by integer
+vectors whose entries are the powers of corresponding variables in the
+known order.&nbsp; Such vectors can be fed to a function which returns
+integer vectors, which may compared lexicographically.&nbsp; Thus, monomials
+may be ordered.&nbsp; A term may be represented as a pair of coefficient
+and monomial, and various orders on terms may be defined as functions of
+monomial orders and coefficient orders (e.g., absolute value).&nbsp; The
+popular literature often doesn't use coefficients in defining term orders,
+so that in these cases term orders are monomial orders.&nbsp; Using term
+orders, the polynomials of a ring may be ordered by lexicographic comparison
+of the terms of a polynomial, listed in term order in avector.</font></font>
+<p><font face="Century Schoolbook"><font size=-1>Two common functions applied
+to vectors of integers representing encoding variable exponents from monomials
+are lexicographic order, which just returns the exponent vector itself,</font></font>
+<br><font face="Century Schoolbook"><font size=-1>and degreelexicographic
+order, which prepends the sum of the elements of an exponent vector to
+the vector itself, the idea being that the total degree of monomials should
+be compared</font></font>
+<br><font face="Century Schoolbook"><font size=-1>lexicographically before
+the powers of the monomials' variables.</font></font>
+<p><i><font face="Century Schoolbook"><font size=-1>Syzygy Polynomials</font></font></i>
+<p><font face="Century Schoolbook"><font size=-1>The syzy gy polynomial
+of a pair of polynomials <i>f</i>&nbsp; and <i>g</i>&nbsp; with leading
+terms ltf and ltg, respectively,&nbsp; is the linear combination</font></font>
+<p><font face="Century Schoolbook"><font size=+0>spoly(f,g) =&nbsp;<img SRC="status_gr_9.gif" ALT="[Graphics:Images/status_gr_9.gif]" BORDER=0 height=36 width=107 align=ABSCENTER>
+=&nbsp; (&nbsp;<img SRC="status_gr_10.gif" ALT="[Graphics:Images/status_gr_10.gif]" BORDER=0 height=32 width=22 align=ABSCENTER>&nbsp;
+-&nbsp;<img SRC="status_gr_11.gif" ALT="[Graphics:Images/status_gr_11.gif]" BORDER=0 height=36 width=23 align=ABSCENTER>)
+* LCM( ltf , ltg )</font></font>
+<p><font face="Century Schoolbook"><font size=-1>in which&nbsp; the multiples
+of the leading terms of <i>f </i>and of <i>g&nbsp;&nbsp;</i> cancel.</font></font>
+<p><i><font face="Century Schoolbook"><font size=-1>Reduction of Vectors
+and Matrices</font></font></i>
+<p><font face="Century Schoolbook"><font size=-1>For vectors or matrices
+A and B of equal shape with elements from a ring,&nbsp; we define <i>reduction</i>
+of A to B to mean the identification of suitable elementary matrices&nbsp;<img SRC="status_gr_12.gif" ALT="[Graphics:Images/status_gr_12.gif]" BORDER=0 height=18 width=44 align=ABSCENTER>
+so that</font></font>
+<p><font face="Century Schoolbook"><font size=-1>B&nbsp; =&nbsp;<img SRC="status_gr_13.gif" ALT="[Graphics:Images/status_gr_13.gif]" BORDER=0 height=18 width=13 align=ABSCENTER>&amp;CenterDot;&amp;CenterDot;&amp;CenterDot;&nbsp;<img SRC="status_gr_14.gif" ALT="[Graphics:Images/status_gr_14.gif]" BORDER=0 height=18 width=18 align=ABSCENTER>&amp;CenterDot;
+A.</font></font>
+<p><i><font face="Century Schoolbook"><font size=-1>Invertible Matrix Factorization
+over Polynomial Rings</font></font></i>
+<p><font face="Century Schoolbook"><font size=-1>Laplace's expansion of
+the determinant demonstrates that each column and each row of an invertible
+square matrix generates an ideal containing 1; that is, each column and
+each row of an invertible matrix is unimodular.&nbsp; The ability to make
+1s appear in unimodular vectors&nbsp; can therefore be useful in making
+1s appear in&nbsp; invertible matrices, and, as in Gauss-Jordan elimination,
+presence of 1s facilitates factorization.</font></font>
+<h2>
+<font face="Century Schoolbook">Intrareduction</font></h2>
+<i><font face="Century Schoolbook"><font size=-1>Intrareduction and Intrareduced
+Vectors</font></font></i>
+<p><font face="Century Schoolbook"><font size=-1>We say that a vector of
+polynomials is <i>intrareduced</i> with respect to a term order if each
+element of the vector is invariant modulo the ideal generated by its peers,
+that is, the elements of the vector other than itself.&nbsp; For this notion
+to be defined, a term order must be in mind.&nbsp; We define <i>intrareduction</i>
+to be the reduction of a given vector into an intrareduced form, and remark
+that the necessary elementary matrices may be&nbsp;<img SRC="status_gr_15.gif" ALT="[Graphics:Images/status_gr_15.gif]" BORDER=0 height=18 width=47 align=ABSCENTER>
+using Groebner Bases.</font></font>
+<p><font face="Century Schoolbook"><font size=-1>For examples, the vectors
+(1) and (0,1,0)&nbsp; and ( 1 - x y,&nbsp;<img SRC="status_gr_16.gif" ALT="[Graphics:Images/status_gr_16.gif]" BORDER=0 height=18 width=18 align=ABSCENTER>,0)
+are intrareduced and the vector (0,2,1) is not since both reduce to (0,0,1).</font></font>
+<p><font face="Century Schoolbook"><font size=-1>An important property
+of intrareduced vectors is that their number of unique leading monomials
+(and thus leading terms) equals the vector's length.</font></font>
+<p><i><font face="Century Schoolbook"><font size=-1>Catalyzing Vector Intrareduction
+Using Changes of Coordinates</font></font></i>
+<p><font face="Century Schoolbook"><font size=-1>The coordinate change
+{x -> x - 1 } applied to the intrareduced and unimodular vector</font></font>
+<p><img SRC="status_gr_17.gif" ALT="[Graphics:Images/status_gr_17.gif]" BORDER=0 height=14 width=192 align=ABSCENTER>
+<p><font face="Century Schoolbook"><font size=-1>yields</font></font>
+<p><img SRC="status_gr_18.gif" ALT="[Graphics:Images/status_gr_18.gif]" BORDER=0 height=14 width=198 align=ABSCENTER>
+<p><font face="Century Schoolbook"><font size=-1>which intrareduces to
+(0,1,0) and hence reduces to (0,0,1).&nbsp; Contrast this with&nbsp; the
+change of coordinates {x -> x + 1 }, under which the vector&nbsp;<img SRC="status_gr_19.gif" ALT="[Graphics:Images/status_gr_19.gif]" BORDER=0 height=14 width=192 align=ABSCENTER>
+arises, which itself intrareduces to&nbsp;<img SRC="status_gr_20.gif" ALT="[Graphics:Images/status_gr_20.gif]" BORDER=0 height=14 width=191 align=ABSCENTER>.</font></font>
+<p><font face="Century Schoolbook"><font size=-1>Applying the change of
+coordinates { x -> x - 1, y -> y - 1 } to the intrareduced and unimodular
+vector</font></font>
+<p><img SRC="status_gr_21.gif" ALT="[Graphics:Images/status_gr_21.gif]" BORDER=0 height=14 width=202 align=ABSCENTER>
+<p><font face="Century Schoolbook"><font size=-1>and subsequently intrareducing
+yields</font></font>
+<p><img SRC="status_gr_22.gif" ALT="[Graphics:Images/status_gr_22.gif]" BORDER=0 height=28 width=233 align=ABSCENTER><font face="Century Schoolbook"><font size=-1>.</font></font>
+<p><font face="Century Schoolbook"><font size=-1>Applying the change of
+coordinates { x -> x - 1 , y -> -x + y } to</font></font>
+<p><img SRC="status_gr_23.gif" ALT="[Graphics:Images/status_gr_23.gif]" BORDER=0 height=14 width=202 align=ABSCENTER>
+<p><font face="Century Schoolbook"><font size=-1>and subsequently intrareducing
+yields</font></font>
+<p><img SRC="status_gr_24.gif" ALT="[Graphics:Images/status_gr_24.gif]" BORDER=0 height=14 width=223 align=ABSCENTER><font face="Century Schoolbook"><font size=-1>
+=&nbsp; {&nbsp;<img SRC="status_gr_25.gif" ALT="[Graphics:Images/status_gr_25.gif]" BORDER=0 height=18 width=15 align=ABSCENTER>,&nbsp;<img SRC="status_gr_26.gif" ALT="[Graphics:Images/status_gr_26.gif]" BORDER=0 height=18 width=18 align=ABSCENTER><img SRC="status_gr_27.gif" ALT="[Graphics:Images/status_gr_27.gif]" BORDER=0 height=18 width=16 align=ABSCENTER>}
+.</font></font>
+<p><font face="Century Schoolbook"><font size=-1>Intrareduction of {&nbsp;<img SRC="status_gr_28.gif" ALT="[Graphics:Images/status_gr_28.gif]" BORDER=0 height=18 width=15 align=ABSCENTER>,&nbsp;<img SRC="status_gr_29.gif" ALT="[Graphics:Images/status_gr_29.gif]" BORDER=0 height=18 width=16 align=ABSCENTER>
++ spoly(&nbsp;<img SRC="status_gr_30.gif" ALT="[Graphics:Images/status_gr_30.gif]" BORDER=0 height=18 width=15 align=ABSCENTER>
+,&nbsp;<img SRC="status_gr_31.gif" ALT="[Graphics:Images/status_gr_31.gif]" BORDER=0 height=18 width=16 align=ABSCENTER>
+) ,&nbsp;<img SRC="status_gr_32.gif" ALT="[Graphics:Images/status_gr_32.gif]" BORDER=0 height=18 width=16 align=ABSCENTER>}
+yields (1,0,0) which reduces by permutation to (0,0,1).</font></font>
+<p><font face="Century Schoolbook"><font size=-1>It is conjectured that
+a change of coordinates exists for every intrareduced vector which lacks
+a 1 after&nbsp; which intrareduction is progressive lexicographically.</font></font>
+<p><i><font face="Century Schoolbook"><font size=-1>Catalyzing Vector Intrareduction
+Using Syzygy Polynomials</font></font></i>
+<p><font face="Century Schoolbook"><font size=-1>Cohn proved in a classic
+paper that no product of elementary matrices exists over any polynomial
+ring which can reduce ( 1 - x y ,&nbsp;<img SRC="status_gr_33.gif" ALT="[Graphics:Images/status_gr_33.gif]" BORDER=0 height=18 width=18 align=ABSCENTER>
+) to (0,1).&nbsp; Consequently, the intrareduced vector&nbsp; ( 1 - x y,&nbsp;<img SRC="status_gr_34.gif" ALT="[Graphics:Images/status_gr_34.gif]" BORDER=0 height=18 width=18 align=ABSCENTER>,0)
+does not intrareduce to (0,0,1) under any change of coordinates.&nbsp;
+Using two elementary matrices (1 - x y ,&nbsp;<img SRC="status_gr_35.gif" ALT="[Graphics:Images/status_gr_35.gif]" BORDER=0 height=18 width=18 align=ABSCENTER>,0)
+reduces to</font></font>
+<p><font face="Century Schoolbook"><font size=-1>(1 - x y ,&nbsp;<img SRC="status_gr_36.gif" ALT="[Graphics:Images/status_gr_36.gif]" BORDER=0 height=18 width=18 align=ABSCENTER>,
+(y)(1 - x y) + (x)(<img SRC="status_gr_37.gif" ALT="[Graphics:Images/status_gr_37.gif]" BORDER=0 height=18 width=18 align=ABSCENTER>
+)) = (1 - x y ,&nbsp;<img SRC="status_gr_38.gif" ALT="[Graphics:Images/status_gr_38.gif]" BORDER=0 height=18 width=18 align=ABSCENTER>,y)
+= ( 1 - x y ,&nbsp;<img SRC="status_gr_39.gif" ALT="[Graphics:Images/status_gr_39.gif]" BORDER=0 height=18 width=18 align=ABSCENTER>,
+spoly( 1 - x y ,&nbsp;<img SRC="status_gr_40.gif" ALT="[Graphics:Images/status_gr_40.gif]" BORDER=0 height=18 width=18 align=ABSCENTER>&nbsp;
+)&nbsp; )</font></font>
+<p><font face="Century Schoolbook"><font size=-1>which itself intrareduces&nbsp;
+to (0,0,1).</font></font>
+<p><font face="Century Schoolbook"><font size=-1>It is conjectured that
+every intrareduced vector becomes non-intrareduced upon addition of a syzygy
+polynomial to the lowest term-ordering entry, and subsequently intrareduces
+with net lexicographic progress with respect to term order.</font></font>
+<p><font face="Century Schoolbook"><font size=-1>It is conjectured that
+every intrareduced vector becomes non-intrareduced and subject to term-order-progressive
+intrareduction upon addition of an appropriate multiple of some element
+of the Groebner Basis generated by the higher term-ordering elements of
+the vector to a lower term-ordering entry.&nbsp; No counterexample is known
+after millions of experiments in summer 1999.&nbsp; Notice that this is
+the generalization of the idea of the paragraph above.</font></font>
+<p><i><font face="Century Schoolbook"><font size=-1>Conjecture Proof Ideas</font></font></i>
+<p><font face="Century Schoolbook"><font size=-1>Let (&nbsp;<img SRC="status_gr_41.gif" ALT="[Graphics:Images/status_gr_41.gif]" BORDER=0 height=18 width=17 align=ABSCENTER>,
+... ,&nbsp;<img SRC="status_gr_42.gif" ALT="[Graphics:Images/status_gr_42.gif]" BORDER=0 height=18 width=20 align=ABSCENTER>)
+be a list of polynomials in ZZ[&nbsp;<img SRC="status_gr_43.gif" ALT="[Graphics:Images/status_gr_43.gif]" BORDER=0 height=18 width=14 align=ABSCENTER>,
+... ,&nbsp;<img SRC="status_gr_44.gif" ALT="[Graphics:Images/status_gr_44.gif]" BORDER=0 height=18 width=19 align=ABSCENTER>]
+with gb{&nbsp;<img SRC="status_gr_45.gif" ALT="[Graphics:Images/status_gr_45.gif]" BORDER=0 height=18 width=17 align=ABSCENTER>,
+... ,&nbsp;<img SRC="status_gr_46.gif" ALT="[Graphics:Images/status_gr_46.gif]" BORDER=0 height=18 width=20 align=ABSCENTER>
+} = {1}.&nbsp; We intend to prove that intrareduction together with coordinate&nbsp;
+changes and syzygy polynomial deposition provide a simple algorithm for
+reduction of unimodular vectors to (0,...,0,1)&nbsp; for all&nbsp; n>2
+and, obviously,&nbsp; n=1.</font></font>
+<p><font face="Century Schoolbook"><font size=-1>Letting "&lt;" denote
+a chosen&nbsp; term order with no infinite descending chains, we WILL&nbsp;
+show that every intrareduced vector v not of length 2 permits a change
+of coordinates C, such that both</font></font>
+<p><font face="Century Schoolbook"><font size=-1>C(v) is NOT intrareduced</font></font>
+<p><font face="Century Schoolbook"><font size=-1>and</font></font>
+<p><font face="Century Schoolbook"><font size=-1>intrareduce(C(v)) &lt;
+v.</font></font>
+<p><font face="Century Schoolbook"><font size=-1>Iteration of intrareduction
+therefore produces a vector with at most 2 nonzero entries, and, as in
+the example (1-x y,&nbsp;<img SRC="status_gr_47.gif" ALT="[Graphics:Images/status_gr_47.gif]" BORDER=0 height=18 width=18 align=ABSCENTER>,0),
+deposition of the syzygy polynomial of the nonzero entries in such a case
+onto the present 0 catalyzes&nbsp; further&nbsp; intrareduction.&nbsp;
+Because our term order has no infinite descending chains, this process
+terminates, and because of unimodularity, with a permutation of (0,...,0,1).</font></font>
+<p><font face="Century Schoolbook"><font size=-1>We need to show, however,
+that for each intrareduced vector, lacking a 1 entry, there always exists
+a change of coordinates which produces a vector not violating term order
+and whose intrareduction improves term order.&nbsp; We aim to do this by
+showing that there are an infinite number of changes of coordinates respecting
+leading term order while the number of intrareduced vectors with the same
+leading terms is finite.</font></font>
+<h2>
+<font face="Century Schoolbook">Conjectures and Questions (from summer
+1999)</font></h2>
+<i><font face="Century Schoolbook"><font size=-1>Idea 1</font></font></i>
+<p><font face="Century Schoolbook"><font size=-1>Change coordinates and
+reattempt intrareduction, reattempting for all linear changes of coordinates
+until one works.</font></font>
+<p><i><font face="Century Schoolbook"><font size=-1>Idea 2</font></font></i>
+<p><font face="Century Schoolbook"><font size=-1>Prove that gb{vn,...,v2}
+doesn't contain all of {vn,...,v2}, which implies that the missing element
+vj is missing because another element p is present with LT(p) | LT(vj).&nbsp;
+add p to v1, which is a minor lexicographic step backwards with subsequent
+step more lexicographically significant forwards.</font></font>
+<p><i><font face="Century Schoolbook"><font size=-1>Idea 3</font></font></i>
+<p><font face="Century Schoolbook"><font size=-1>Define the covector of
+a unimodular vector U to be the vector V such that U&nbsp;<img SRC="status_gr_48.gif" ALT="[Graphics:Images/status_gr_48.gif]" BORDER=0 height=19 width=26 align=ABSCENTER>=
+1.&nbsp; If U is intrareduced then is V provably NOT intrareduced?&nbsp;
+Is reduction progress with V convertible to reduction progress with U ?</font></font>
+<p><i><font face="Century Schoolbook"><font size=-1>Idea 4</font></font></i>
+<p><font face="Century Schoolbook"><font size=-1>Is there a VS-Lemma-10.5-esque
+reason that the big-ass GB must contain a unitary polynomial of degree
+smaller than the leading degree in an intrareduced vector?</font></font>
+<p><i><font face="Century Schoolbook"><font size=-1>Idea 5</font></font></i>
+<p><font face="Century Schoolbook"><font size=-1>Is there a lemma about
+a proper ideal comaximal with a principal ideal necessarily containing
+a unitary polynomial of degree less than the leading generator's degree?</font></font>
+<p><i><font face="Century Schoolbook"><font size=-1>Idea 6</font></font></i>
+<p><font face="Century Schoolbook"><font size=-1>Is there an argument about
+the existence of a <i>linear</i> change of coordinates that will break
+the quality of being intrareduced?</font></font>
+<p><i><font face="Century Schoolbook"><font size=-1>Idea 7</font></font></i>
+<p><font face="Century Schoolbook"><font size=-1>Let p,q be coefficients
+of terms of polynomials P,Q in ZZ[x] with gcd(p,q)=1.&nbsp; Does the ideal
+&lt;P,Q> contain a unitary polynomial?&nbsp; beaucoup experiments suggest
+so, and generalized this to the well-documented ideas from the last year.&nbsp;
+Apparently one experiment set is called "poopy" from a while ago.</font></font>
+<p><i><font face="Century Schoolbook"><font size=-1>Idea 8</font></font></i>
+<p><font face="Century Schoolbook"><font size=-1>Does the ideal &lt;C(P),C(Q)>
+contain a unitary polynomial for C:x->&amp;MinusPlus;x+a for some a in
+ZZ ?</font></font>
+<p><i><font face="Century Schoolbook"><font size=-1>Idea 9</font></font></i>
+<p><font face="Century Schoolbook"><font size=-1>Let content(polynomial)
+be the gcd of the coefficients of polynomial.&nbsp;&nbsp; Let P,Q in ZZ[x1,...,xm],
+m finite, gcd(content(P),content(Q))=1.&nbsp; Then gb_degreelex({P,Q})
+contains a polynomial with a term of highest total degree with unit coefficient.</font></font>
+<p><i><font face="Century Schoolbook"><font size=-1>Idea 10</font></font></i>
+<p><font face="Century Schoolbook"><font size=-1>Serre's conjecture thing
+that grayson said would be the proper description of the assertion i made
+that GB computes serre's conjecture.</font></font>
+<p><i><font face="Century Schoolbook"><font size=-1>Idea 11</font></font></i>
+<p><font face="Century Schoolbook"><font size=-1>The explosion-implosion
+coprime 2-column move thing for the 2x2 in 3x3 case.</font></font>
+<p><i><font face="Century Schoolbook"><font size=-1>Idea 12</font></font></i>
+<p><font face="Century Schoolbook"><font size=-1>Look for counterexamples
+of the syzygy polynomial deposition catalysis.&nbsp; (EASY EXPERIMENT)</font></font>
+<p><i><font face="Century Schoolbook"><font size=-1>Idea 13</font></font></i>
+<p><font face="Century Schoolbook"><font size=-1>Look for how spoly(f,g)
+compares to f and to g in term order.&nbsp; (EASY EXPERIMENT)</font></font>
+<h2>
+<font face="Century Schoolbook">Scratch Paper</font></h2>
+
+<hr><font face="Helvetica, Arial"><font size=-2>Converted by <i><a href="http://www.wolfram.com">Mathematica</a></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+June 17, 2000</font></font>
+</body>
+</html>
